@@ -1,0 +1,419 @@
+<!doctype html public "-//w3c//dtd xhtml 1.0 transitional//en" "http://www.w3.org/tr/xhtml1/dtd/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-874" />
+<title>..แบบประเมินผล โครงการประชุมสัมมนาอาจารย์ มหาวิทยาลัยเกษตรศาสตร์ ประจำปี 2554...</title>
+<style type="text/css">
+.que_txt {
+	font-family: "cordia new";
+	font-size: 14pt;
+	color: #000000;
+	/*color: #3a4f6c;*/
+}
+.ans_txt {
+	font-size: 14pt;
+	color: #000000;
+}
+.tbl_cell {
+	background: #990000;border-top: 1px solid buttonhighlight;	border-left: 1px solid buttonhighlight;	border-bottom: 1px solid buttonshadow; border-right: 1px solid buttonshadow; padding: 2px; font: angsana new; font-size: 12px;
+}
+.box_text_cor {
+	font-family: "microsoft sans serif", "ms sans serif";
+	font-size: 14px;
+	background-color: #ffffff;
+	border: 1px ridge #f3f3f3;
+}
+.style2 {color: #000000}
+</style>
+<script language="javascript">
+function check()
+{
+     	var i
+	var checkflag = false;
+	var mychoice=new array("","5.1","5.2","6.1","6.1","6.1","6.2","6.2","6.2","6.3","6.4","6.5","6.6","6.7","6.8","6.9","6.10","6.11","6.12","6.13");
+	if(document.form1.hidtype.value == ""){
+		window.alert("กรุณาเลือกประเภท");
+		checkflag=true;
+		return false;
+} 
+ if(document.form1.hidgender.value == ""){
+		window.alert("กรุณาเลือกเพศ");
+		checkflag=true;
+		return false;
+	}if(document.form1.campus_id.value == ""){
+		window.alert("กรุณาเลือกวิทยาเขต");
+		checkflag=true;
+		return false;
+	} if(document.form1.facid.value == "0" && document.form1.other.value == ""){
+		window.alert("กรุณาเลือกหรือกรอกหน่วยงาน");
+		checkflag=true;
+		return false;
+	} 
+	/*  if(document.form1.hidcampus.value == ""){
+		window.alert("กรุณาเลือกวิทยาเขต");
+		checkflag=true;
+		return false;
+	}  if(document.form1.depart.value == ""){
+		window.alert("กรุณากรอกหน่วยงานที่สังกัด");
+		document.form1.depart.focus();
+		checkflag=true;
+		return false;
+	}  */
+	var num_mychoice=mychoice.length;
+	//alert(num_mychoice);
+ for( i=1;i<=num_mychoice;i++)
+			{
+				if(eval("document.form1.hidques"+i+".value") == "")
+				{
+						window.alert("กรุณาเลือกข้อ "+mychoice[i]);
+						 checkflag=true;
+						return false;
+				}
+			}
+			if(!checkflag){
+				   form1.submit();
+				}else{
+					return false;
+		 }
+}         // function check
+
+</script>
+</head>
+<!--bgcolor="#ffe4c4" background="bg_2007.gif"-->
+<body>
+<div align="center"  class="que_txt" ><strong>แบบประเมินผล  โครงการประชุมสัมมนาอาจารย์ฯ ประจำปี 2554 </strong> </div>
+<div align="center"  class="que_txt" ><strong>เรื่อง การเตรียมการอุดมศึกษาไทยเข้าสู่ประชาคมอาเซียน</strong> </div>
+<div align="center"  class="que_txt"><strong>ณ ห้องประชุมสุธรรม อารีกุล อาคารสารนิเทศ 50 ปี</strong> </div>
+<div align="center"  class="que_txt"><strong>มหาวิทยาลัยเกษตรศาสตร์  วิทยาเขตบางเขน</strong> </div>
+<div align="center"  class="que_txt"><strong>วันศุกร์ที่ 22 เมษายน 2554</strong> </div>
+<form name="form1" method="post" action="" >
+<div align="center">
+<table width="70%" align="center"  class="que_txt">
+<tr align="center"><td colspan="8" ><strong></strong></td>
+</tr>
+   <tr align="center">
+    <td colspan="8"><strong>-------------------------------------------------------------------------------------------------------------</strong></td>
+<tr align="left">
+    <td width="12%"><strong>&nbsp;1. เพศ </strong> <input type="hidden" name="hidgender"  value=""></td>
+    <td width="14%"><input name="gender" type="radio"  value="ชาย"  onclick="document.form1.hidgender.value='ชาย'">
+   &nbsp;1)&nbsp;ชาย</td>
+    <td colspan="6"><input name="gender" type="radio"  value="หญิง"  onclick="document.form1.hidgender.value='หญิง'">
+  &nbsp;2) หญิง</td>
+    </tr>
+<tr align="left">
+  <td><strong>&nbsp;2. ประเภท</strong><input type="hidden" name="hidtype"  value=""></td>
+  <td width="14%"><input name="type" type="radio"  value="1"  onclick="document.form1.hidtype.value=1">
+  &nbsp;1) ข้าราชการ</td>
+  <td colspan="2"><input name="type" type="radio"  value="2"  onclick="document.form1.hidtype.value=2">
+  &nbsp;2) พนักงานมหาวิทยาลัย</td>
+  <td width="25%"><input name="type" type="radio"  value="3"  onclick="document.form1.hidtype.value=3" />
+  &nbsp;3)พนักงานเงินรายได้</td>
+  <td width="24%" colspan="3"><input name="type" type="radio"  value="4"  onclick="document.form1.hidtype.value=4" />
+ &nbsp;4)ลูกจ้างชั่วคราว</td>
+</tr>
+<tr>
+<td colspan="8" align="left"><strong>&nbsp;3. หน่วยงานที่สังกัด  </strong>&nbsp;&nbsp;
+<select name="facid" id="facid"><option value="0">--- เลือกหน่วยงาน ---</option>
+ <option value="b02">คณะเกษตร</option>
+ <option value="k02">คณะเกษตร กำแพงแสน</option>
+ <option value="s02">คณะทรัพยากรธรรมชาติและอุตสาหกรรมเกษตร</option>
+ <option value="z02">คณะทรัพยากรและสิ่งแวดล้อม</option>
+ <option value="b38">คณะเทคนิคการสัตวแพทย์</option>
+ <option value="b03">คณะบริหารธุรกิจ</option>
+ <option value="b04">คณะประมง</option>
+ <option value="b05">คณะมนุษยศาสตร์</option>
+ <option value="b06">คณะวนศาสตร์</option>
+ <option value="z04">คณะวิทยาการจัดการ</option>
+ <option value="b07">คณะวิทยาศาสตร์</option>
+ <option value="k24">คณะวิทยาศาสตร์การกีฬา</option>
+ <option value="s03">คณะวิทยาศาสตร์และวิศวกรรมศาสตร์</option>
+ <option value="b08">คณะวิศวกรรมศาสตร์</option>
+ <option value="k08">คณะวิศวกรรมศาสตร์ กำแพงแสน</option>
+ <option value="z03">คณะวิศวกรรมศาสตร์ศรีราชา</option>
+ <option value="s04">คณะศิลปศาสตร์และวิทยาการจัดการ</option>
+ <option value="k09">คณะศิลปศาสตร์และวิทยาศาสตร์</option>
+ <option value="b10">คณะศึกษาศาสตร์</option>
+ <option value="k25">คณะศึกษาศาสตร์และพัฒนศาสตร์</option>
+ <option value="b11">คณะเศรษฐศาสตร์</option>
+ <option value="z10">คณะเศรษฐสตร์ ศรีราชา</option>
+ <option value="b43">คณะสถาปัตยกรรมศาสตร์</option>
+ <option value="b12">คณะสังคมศาสตร์</option>
+ <option value="b13">คณะสัตวแพทยศาสตร์</option>
+ <option value="b14">คณะอุตสาหกรรมเกษตร</option>
+ <option value="b15">บัณฑิตวิทยาลัย</option>
+ <option value="z09">วิทยาลัยพาณิชยนาวีนานาชาติ</option>
+ <option value="b71">วิทยาลัยสิ่งแวดล้อม</option>
+ <option value="b16">สถาบันค้นคว้าและพัฒนาผลิตผลทางการเกษตรและอุตสาหกรรมเกษตร</option>
+ <option value="b17">สถาบันค้นคว้าและพัฒนาผลิตภัณฑ์อาหาร</option>
+ <option value="b44">สถาบันค้นคว้าและพัฒนาระบบนิเวศเกษตร</option>
+ <option value="k18">สถาบันวิจัยและพัฒนา กำแพงแสน</option>
+ <option value="s18">สถาบันวิจัยและพัฒนา วิทยาเขตเฉลิมพระเกียรติ จังหวัดสกลนคร</option>
+ <option value="b18">สถาบันวิจัยและพัฒนาแห่งมหาวิทยาลัยเกษตรศาสตร์</option>
+ <option value="k26">สถาบันสุวรรณวาจกกสิกิจเพื่อการค้นคว้าและพัฒนาการผลิตปศุสัตว์และผลิตภัณฑ์สัตว์</option>
+ <option value="b26">สถาบันอินทรีจันทรสถิตย์เพื่อการค้นคว้าและพัฒนาพืชศาสตร์</option>
+ <option value="b19">สำนักทะเบียนและประมวลผล</option>
+ <option value="b20">สำนักบริการคอมพิวเตอร์</option>
+ <option value="b21">สำนักพิพิธภัณฑ์และวัฒนธรรมการเกษตร</option>
+ <option value="s05">สำนักวิทยบริการ วิทยาเขตเฉลิมพระเกียรติ จังหวัดสกลนคร</option>
+ <option value="z06">สำนักวิทยบริการ วิทยาเขตศรีราชา</option>
+ <option value="b22">สำนักส่งเสริมและฝึกอบรม</option>
+ <option value="k22">สำนักส่งเสริมและฝึกอบรม กำแพงแสน</option>
+ <option value="b23">สำนักหอสมุด</option>
+ <option value="k23">สำนักหอสมุด กำแพงแสน</option>
+</select>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;หน่วยงานอื่น ๆ &nbsp;<input type="text" name="other"  size="30"/>
+</td>
+  </tr>
+<tr align="left">
+  <td><strong>&nbsp;4. วิทยาเขต</strong></td>
+  <td colspan="4">&nbsp;<select name="campus_id"  id="campus_id" >
+  <option value="">--- เลือกวิทยาเขต ---</option>
+  <option value="b">บางเขน</option>
+  <option value="k">กำแพงแสน</option>
+  <option value="s">ศรีราชา</option>
+  <option value="c">เฉลิมพระเกียรติ  จังหวัดสกลนคร</option>
+  <option value="p">สุพรรณบุรี</option>
+  </select></td>
+</tr>
+</table>
+<br />
+<!--------------------------------------------------------------------------------------------------->
+<div align="left"  class="que_txt" style="margin-left:190px"><strong>5. ท่านมีความคาดหวังที่จะได้รับประโยชน์จากหัวข้อต่อไปนี้มากน้อยเพียงใด</strong> </div>
+<table width="70%" align="center"  class="que_txt" border="1" cellpadding="0" cellspacing="0">
+<tr  bgcolor="#00cc66">
+  <td width="64%" rowspan="2" valign="top"><div align="center">หัวข้อ</div></td>
+  <td colspan="5"><div align="center">ความคาดหวัง</div>    <div align="center"></div>    <div align="center"></div>    <div align="center"></div>    <div align="center"></div></td>
+  </tr>
+<tr  bgcolor="#00cc66">
+  <td width="8%"><div align="center"><span class="style2">มากที่สุด<br />
+    (5)</span></div></td>
+  <td width="7%"><div align="center"><span class="style2">มาก<br />
+    (4)</span></div></td>
+  <td width="7%"><div align="center"><span class="style2">ปานกลาง<br />
+    (3)</span></div></td>
+  <td width="7%"><div align="center"><span class="style2">น้อย<br />
+    (2)</span></div></td>
+  <td width="7%"><div align="center"><span class="style2">น้อยที่สุด<br />
+    (1)</span></div></td>
+</tr>
+<tr>
+  <td><div align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.1 นโยบายการพัฒนาด้านวิชาการของมหาวิทยาลัยเกษตรศาสตร์
+<input type="hidden" name="hidques1"  value=""></div></td>
+  <td width="8%"><div align="center"><input name="ques5_1" type="radio"  value="5"onclick="document.form1.hidques1.value=5"></div></td>
+  <td width="7%"><div align="center"><input name="ques5_1" type="radio"  value="4" onclick="document.form1.hidques1.value=4"></div></td>
+  <td width="7%"><div align="center"><input name="ques5_1" type="radio"  value="3" onclick="document.form1.hidques1.value=3"></div></td>
+  <td width="7%"><div align="center"><input name="ques5_1" type="radio"  value="2" onclick="document.form1.hidques1.value=2"></div></td>
+  <td width="7%"><div align="center"><input name="ques5_1" type="radio"  value="1" onclick="document.form1.hidques1.value=1"></div></td>
+</tr>
+<tr>
+  <td><div align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.2 การบรรยายพิเศษ เรื่องการเตรียมการอุดมศึกษาไทย
+     เข้าสู่ประชาคมอาเซียน</div> <input type="hidden" name="hidques2"  value=""></td>
+  <td width="8%"><input name="ques5_2" type="radio" value="5" onclick="document.form1.hidques2.value=5"></td>
+  <td width="7%"><input name="ques5_2" type="radio" value="4" onclick="document.form1.hidques2.value=4"></td>
+  <td width="7%"><input name="ques5_2" type="radio" value="3" onclick="document.form1.hidques2.value=3"></td>
+  <td width="7%"><input name="ques5_2" type="radio" value="2" onclick="document.form1.hidques2.value=2"></td>
+  <td width="7%"><input name="ques5_2" type="radio" value="1" onclick="document.form1.hidques2.value=4"></td>
+</tr>
+</table>
+<br />
+<div align="left"  class="que_txt" style="margin-left:190px"><strong>6. ความพึงพอใจที่มีต่อการจัดโครงการประชุมสัมมนาอาจารย์มหาวิทยาลัยเกษตรศาสตร์  ประจำปี 2554
+</strong> </div>
+<table width="70%" align="center"  class="que_txt" border="1" cellpadding="0" cellspacing="0">
+<tr  bgcolor="#00cc66">
+  <td width="64%" rowspan="2" valign="top"><div align="center">ประเด็น</div></td>
+  <td colspan="5"><div align="center">ความพึงพอใจ</div></td>
+  </tr>
+<tr  bgcolor="#00cc66">
+  <td width="8%"><div align="center"><span class="style2">มากที่สุด<br />
+    (5)</span></div></td>
+  <td width="7%"><div align="center"><span class="style2">มาก<br />
+   (4)</span></div></td>
+  <td width="7%"><div align="center"><span class="style2">ปานกลาง<br />
+    (3)</span></div></td>
+  <td width="7%"><div align="center"><span class="style2">น้อย<br />
+    (2)</span></div></td>
+  <td width="7%"><div align="center"><span class="style2">น้อยที่สุด<br />
+    (1)</span></div></td>
+</tr>
+<tr><!-- bgcolor="#66cc99"-->
+  <td colspan="6"><div align="left">&nbsp;<strong>6.1 ความรู้ที่ได้รับ</strong></div></td>
+  </tr>
+<tr>
+  <td><div align="left">&nbsp;&nbsp;&nbsp;&nbsp;- นโยบายการพัฒนาด้านวิชาการของมหาวิทยาลัยเกษตรศาสตร์
+<input type="hidden" name="hidques3"  value=""></div></td>
+  <td width="8%"><div align="center"><input name="ques6_1_1" type="radio"  value="5"onclick="document.form1.hidques3.value=5"></div></td>
+  <td width="7%"><div align="center"><input name="ques6_1_1" type="radio"  value="4" onclick="document.form1.hidques3.value=4"></div></td>
+  <td width="7%"><div align="center"><input name="ques6_1_1" type="radio"  value="3" onclick="document.form1.hidques3.value=3"></div></td>
+  <td width="7%"><div align="center"><input name="ques6_1_1" type="radio"  value="2" onclick="document.form1.hidques3.value=2"></div></td>
+  <td width="7%"><div align="center"><input name="ques6_1_1" type="radio"  value="1" onclick="document.form1.hidques3.value=1"></div></td>
+</tr>
+<tr>
+  <td><div align="left">&nbsp;&nbsp;&nbsp;&nbsp;- การบรรยายพิเศษ เรื่องการเตรียมการอุดมศึกษาไทยเข้าสู่
+     ประชาคมอาเซียน</div> <input type="hidden" name="hidques4"  value=""></td>
+  <td width="8%"><input name="ques6_1_2" type="radio" value="5" onclick="document.form1.hidques4.value=5"></td>
+  <td width="7%"><input name="ques6_1_2" type="radio" value="4" onclick="document.form1.hidques4.value=4"></td>
+  <td width="7%"><input name="ques6_1_2" type="radio" value="3" onclick="document.form1.hidques4.value=3"></td>
+  <td width="7%"><input name="ques6_1_2" type="radio" value="2" onclick="document.form1.hidques4.value=2"></td>
+  <td width="7%"><input name="ques6_1_2" type="radio" value="1" onclick="document.form1.hidques4.value=1"></td>
+</tr>
+
+<tr>
+  <td><div align="left">&nbsp;&nbsp;&nbsp;&nbsp;- การแลกเปลี่ยนข้อคิดเห็นและรับฟังข้อเสนอแนะในประเด็นการ
+     เตรียมการผลิตบัณฑิต มก.สู่ประชาคมอาเซียน
+</div><input type="hidden" name="hidques5"  value=""></td>
+  <td width="8%"><input name="ques6_1_3" type="radio" value="5" onclick="document.form1.hidques5.value=5"></td>
+  <td width="7%"><input name="ques6_1_3" type="radio" value="4" onclick="document.form1.hidques5.value=4"></td>
+  <td width="7%"><input name="ques6_1_3" type="radio" value="3" onclick="document.form1.hidques5.value=3"></td>
+  <td width="7%"><input name="ques6_1_3" type="radio" value="2" onclick="document.form1.hidques5.value=2"></td>
+  <td width="7%"><input name="ques6_1_3" type="radio" value="1" onclick="document.form1.hidques5.value=1"></td>
+</tr>
+
+<tr>
+  <td colspan="6"><div align="left">&nbsp;<strong>6.2 การนำความรู้ที่ได้รับมาประยุกต์ใช้ในการทำงาน</strong></div></td>
+  </tr>
+  <tr>
+  <td><div align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- นโยบายการพัฒนาด้านวิชาการของมหาวิทยาลัยเกษตรศาสตร์<input type="hidden" name="hidques6"  value=""></div></td>
+  <td width="8%"><div align="center"><input name="ques6_2_1" type="radio"  value="5" onclick="document.form1.hidques6.value=5"></div></td>
+  <td width="7%"><div align="center"><input name="ques6_2_1" type="radio"  value="4" onclick="document.form1.hidques6.value=4"></div></td>
+  <td width="7%"><div align="center"><input name="ques6_2_1" type="radio"  value="3" onclick="document.form1.hidques6.value=3"></div></td>
+  <td width="7%"><div align="center"><input name="ques6_2_1" type="radio"  value="2" onclick="document.form1.hidques6.value=2"></div></td>
+  <td width="7%"><div align="center"><input name="ques6_2_1" type="radio"  value="1" onclick="document.form1.hidques6.value=1"></div></td>
+</tr>
+  <tr>
+  <td><div align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- การบรรยายพิเศษ เรื่องการเตรียมการอุดมศึกษาไทยเข้าสู่
+     ประชาคมอาเซียน<input type="hidden" name="hidques7"  value=""></div></td>
+  <td width="8%"><div align="center"><input name="ques6_2_2" type="radio"  value="5"onclick="document.form1.hidques7.value=5"></div></td>
+  <td width="7%"><div align="center"><input name="ques6_2_2" type="radio"  value="4" onclick="document.form1.hidques7.value=4"></div></td>
+  <td width="7%"><div align="center"><input name="ques6_2_2" type="radio"  value="3" onclick="document.form1.hidques7.value=3"></div></td>
+  <td width="7%"><div align="center"><input name="ques6_2_2" type="radio"  value="2" onclick="document.form1.hidques7.value=2"></div></td>
+  <td width="7%"><div align="center"><input name="ques6_2_2" type="radio"  value="1" onclick="document.form1.hidques7.value=1"></div></td>
+</tr>
+  <tr>
+  <td><div align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- การแลกเปลี่ยนข้อคิดเห็นและรับฟังข้อเสนอแนะในประเด็นการ
+     เตรียมการผลิตบัณฑิต มก.สู่ประชาคมอาเซียน<input type="hidden" name="hidques8"  value=""></div></td>
+  <td width="8%"><div align="center"><input name="ques6_2_3" type="radio"  value="5" onclick="document.form1.hidques8.value=5"></div></td>
+  <td width="7%"><div align="center"><input name="ques6_2_3" type="radio"  value="4" onclick="document.form1.hidques8.value=4"></div></td>
+  <td width="7%"><div align="center"><input name="ques6_2_3" type="radio"  value="3" onclick="document.form1.hidques8.value=3"></div></td>
+  <td width="7%"><div align="center"><input name="ques6_2_3" type="radio"  value="2" onclick="document.form1.hidques8.value=2"></div></td>
+  <td width="7%"><div align="center"><input name="ques6_2_3" type="radio"  value="1" onclick="document.form1.hidques8.value=1"></div></td>
+</tr>
+ 
+<tr>
+  <td><div align="left">&nbsp;<strong>6.3การเปิดโอกาสให้ผู้ฟังมีส่วนร่วมในการแลกเปลี่ยน  ความคิดเห็น</strong><input type="hidden" name="hidques9"  value=""></div></td>
+    <td width="8%"><div align="center"><input name="ques6_3" type="radio"  value="5"onclick="document.form1.hidques9.value=5"></div></td>
+  <td width="7%"><div align="center"><input name="ques6_3" type="radio"  value="4" onclick="document.form1.hidques9.value=4"></div></td>
+  <td width="7%"><div align="center"><input name="ques6_3" type="radio"  value="3" onclick="document.form1.hidques9.value=3"></div></td>
+  <td width="7%"><div align="center"><input name="ques6_3" type="radio"  value="2" onclick="document.form1.hidques9.value=2"></td>
+  <td width="7%"><div align="center"><input name="ques6_3" type="radio"  value="1" onclick="document.form1.hidques9.value=1"></td>
+  </tr>
+<tr>  
+  <td><div align="left">&nbsp;<strong>6.4 ความเหมาะสมของระยะเวลาการจัดประชุมสัมมนา</strong><input type="hidden" name="hidques10"  value=""></div></td>
+   <td width="8%"><div align="center"><input name="ques6_4" type="radio"  value="5"onclick="document.form1.hidques10.value=5"></div></td>
+  <td width="7%"><div align="center"><input name="ques6_4" type="radio"  value="4" onclick="document.form1.hidques10.value=4"></div></td>
+  <td width="7%"><div align="center"><input name="ques6_4" type="radio"  value="3" onclick="document.form1.hidques10.value=3"></div></td>
+  <td width="7%"><div align="center"><input name="ques6_4" type="radio"  value="2" onclick="document.form1.hidques10.value=2"></div></td>
+  <td width="7%"><div align="center"><input name="ques6_4" type="radio"  value="1" onclick="document.form1.hidques10.value=1"></div></td>
+  </tr>
+  <tr>
+  <td><div align="left">&nbsp;<strong>6.5 ความเหมาะสมของสถานที่จัดงาน  และที่จอดรถ</strong> <input type="hidden" name="hidques11"  value=""></div></td>
+   <td width="8%"><div align="center"><input name="ques6_5" type="radio"  value="5"onclick="document.form1.hidques11.value=5"></div></td>
+  <td width="7%"><div align="center"><input name="ques6_5" type="radio"  value="4" onclick="document.form1.hidques11.value=4"></div></td>
+  <td width="7%"><div align="center"><input name="ques6_5" type="radio"  value="3" onclick="document.form1.hidques11.value=3"></div></td>
+  <td width="7%"><div align="center"><input name="ques6_5" type="radio"  value="2" onclick="document.form1.hidques11.value=2"></td>
+  <td width="7%"><div align="center"><input name="ques6_5" type="radio"  value="1" onclick="document.form1.hidques11.value=1"></td>
+  </tr>
+    <tr>
+  <td><div align="left">&nbsp;<strong>6.6 ความพร้อมของระบบแสง เสียง ระบบไฟ  การใช้โสต-
+       ทัศนูปกรณ์  รวมทั้งการจัดทำวีดิทัศน์  และอุปกรณ์ต่างๆ</strong><input type="hidden" name="hidques12"  value=""></div></td>
+   <td width="8%"><div align="center"><input name="ques6_6" type="radio"  value="5"onclick="document.form1.hidques12.value=5"></div></td>
+  <td width="7%"><div align="center"><input name="ques6_6" type="radio"  value="4" onclick="document.form1.hidques12.value=4"></div></td>
+  <td width="7%"><div align="center"><input name="ques6_6" type="radio"  value="3" onclick="document.form1.hidques12.value=3"></div></td>
+  <td width="7%"><div align="center"><input name="ques6_6" type="radio"  value="2" onclick="document.form1.hidques12.value=2"></td>
+  <td width="7%"><div align="center"><input name="ques6_6" type="radio"  value="1" onclick="document.form1.hidques12.value=1"></td>
+  </tr>
+      <tr>
+  <td><div align="left">&nbsp;<strong>6.7 ความพร้อมของระบบเทคโนโลยีสารสนเทศในการ   ถ่ายทอด  teleconference</strong><input type="hidden" name="hidques13"  value=""></div></td>
+   <td width="8%"><div align="center"><input name="ques6_7" type="radio"  value="5"onclick="document.form1.hidques13.value=5"></div></td>
+  <td width="7%"><div align="center"><input name="ques6_7" type="radio"  value="4" onclick="document.form1.hidques13.value=4"></div></td>
+  <td width="7%"><div align="center"><input name="ques6_7" type="radio"  value="3" onclick="document.form1.hidques13.value=3"></div></td>
+  <td width="7%"><div align="center"><input name="ques6_7" type="radio"  value="2" onclick="document.form1.hidques13.value=2"></td>
+  <td width="7%"><div align="center"><input name="ques6_7" type="radio"  value="1" onclick="document.form1.hidques13.value=1"></td>
+  </tr>
+ <tr>
+  <td><div align="left">&nbsp;<strong>6.8 ความเหมาะสมของวิทยากรในภาพรวม</strong><input type="hidden" name="hidques14"  value=""></div></td>
+   <td width="8%"><div align="center"><input name="ques6_8" type="radio"  value="5"onclick="document.form1.hidques14.value=5"></div></td>
+  <td width="7%"><div align="center"><input name="ques6_8" type="radio"  value="4" onclick="document.form1.hidques14.value=4"></div></td>
+  <td width="7%"><div align="center"><input name="ques6_8" type="radio"  value="3" onclick="document.form1.hidques14.value=3"></div></td>
+  <td width="7%"><div align="center"><input name="ques6_8" type="radio"  value="2" onclick="document.form1.hidques14.value=2"></td>
+  <td width="7%"><div align="center"><input name="ques6_8" type="radio"  value="1" onclick="document.form1.hidques14.value=1"></td>
+  </tr>
+   <tr>
+  <td><div align="left">&nbsp;<strong>6.9 ความเป็นระเบียบเรียบร้อยของการลงทะเบียนผู้ร่วมงาน</strong><input type="hidden" name="hidques15"  value=""></div></td>
+   <td width="8%"><div align="center"><input name="ques6_9" type="radio"  value="5"onclick="document.form1.hidques15.value=5"></div></td>
+  <td width="7%"><div align="center"><input name="ques6_9" type="radio"  value="4" onclick="document.form1.hidques15.value=4"></div></td>
+  <td width="7%"><div align="center"><input name="ques6_9" type="radio"  value="3" onclick="document.form1.hidques15.value=3"></div></td>
+  <td width="7%"><div align="center"><input name="ques6_9" type="radio"  value="2" onclick="document.form1.hidques15.value=2"></td>
+  <td width="7%"><div align="center"><input name="ques6_9" type="radio"  value="1" onclick="document.form1.hidques15.value=1"></td>
+  </tr>
+    <tr>
+  <td><div align="left">&nbsp;<strong>6.10 ความเป็นระเบียบเรียบร้อยของพิธีการบนเวที
+        ตลอดการจัดงาน </strong><input type="hidden" name="hidques16"  value=""></div></td>
+   <td width="8%"><div align="center"><input name="ques6_10" type="radio"  value="5"onclick="document.form1.hidques16.value=5"></div></td>
+  <td width="7%"><div align="center"><input name="ques6_10" type="radio"  value="4" onclick="document.form1.hidques16.value=4"></div></td>
+  <td width="7%"><div align="center"><input name="ques6_10" type="radio"  value="3" onclick="document.form1.hidques16.value=3"></div></td>
+  <td width="7%"><div align="center"><input name="ques6_10" type="radio"  value="2" onclick="document.form1.hidques16.value=2"></td>
+  <td width="7%"><div align="center"><input name="ques6_10" type="radio"  value="1" onclick="document.form1.hidques16.value=1"></td>
+  </tr>
+     <tr>
+  <td><div align="left">&nbsp;<strong>6.11 ความเหมาะสมด้านอาหารและเครื่องดื่ม</strong><input type="hidden" name="hidques17"  value=""></div></td>
+   <td width="8%"><div align="center"><input name="ques6_11" type="radio"  value="5"onclick="document.form1.hidques17.value=5"></div></td>
+  <td width="7%"><div align="center"><input name="ques6_11" type="radio"  value="4" onclick="document.form1.hidques17.value=4"></div></td>
+  <td width="7%"><div align="center"><input name="ques6_11" type="radio"  value="3" onclick="document.form1.hidques17.value=3"></div></td>
+  <td width="7%"><div align="center"><input name="ques6_11" type="radio"  value="2" onclick="document.form1.hidques17.value=2"></td>
+  <td width="7%"><div align="center"><input name="ques6_11" type="radio"  value="1" onclick="document.form1.hidques17.value=1"></td>
+  </tr>
+       <tr>
+  <td><div align="left">&nbsp;<strong>6.12 การประชาสัมพันธ์ข่าวการจัดงานทั้งในรูปของเอกสาร 
+        และจดหมายอิเล็กทรอนิคส์ ฯลฯ</strong><input type="hidden" name="hidques18"  value=""></div></td>
+ <td width="8%"><div align="center"><input name="ques6_12" type="radio"  value="5"onclick="document.form1.hidques18.value=5"></div></td>
+  <td width="7%"><div align="center"><input name="ques6_12" type="radio"  value="4" onclick="document.form1.hidques18.value=4"></div></td>
+  <td width="7%"><div align="center"><input name="ques6_12" type="radio"  value="3" onclick="document.form1.hidques18.value=3"></div></td>
+  <td width="7%"><div align="center"><input name="ques6_12" type="radio"  value="2" onclick="document.form1.hidques18.value=2"></td>
+  <td width="7%"><div align="center"><input name="ques6_12" type="radio"  value="1" onclick="document.form1.hidques18.value=1"></td>
+  </tr>
+     <tr>
+  <td><div align="left">&nbsp;<strong>6.13 ความพึงพอใจต่อการจัดประชุมสัมมนาอาจารย์ฯ ในภาพรวม</strong><input type="hidden" name="hidques19"  value=""></div></td>
+ <td width="8%"><div align="center"><input name="ques6_13" type="radio"  value="5" onclick="document.form1.hidques19.value=5"></div></td>
+  <td width="7%"><div align="center"><input name="ques6_13" type="radio"  value="4" onclick="document.form1.hidques19.value=4"></div></td>
+  <td width="7%"><div align="center"><input name="ques6_13" type="radio"  value="3" onclick="document.form1.hidques19.value=3"></div></td>
+  <td width="7%"><div align="center"><input name="ques6_13" type="radio"  value="2" onclick="document.form1.hidques19.value=2"></td>
+  <td width="7%"><div align="center"><input name="ques6_13" type="radio"  value="1" onclick="document.form1.hidques19.value=1"></td>
+  </tr>
+</table>
+<!---------------------------------------------------------------------------------------------------------------------------------->
+<br/><table width="70%" align="center"  class="que_txt">
+<tr><td width="100%" valign="top"><div align="left"><strong>&nbsp;7. ท่านต้องการให้มีการจัดโครงการประชุมสัมมนาอาจารย์มหาวิทยาลัยเกษตรศาสตร์ในครั้งต่อไปหรือไม่ </strong></div>
+</td></tr>
+<tr>
+  <td valign="top"><div align="left" style="margin-left:20px">&nbsp;<input name="ques7" type="radio"  value="1" onclick="document.form1.hidques20.value=1">&nbsp; 1.ต้องการ โปรดระบุหัวข้อและวิทยากร 
+  </div> </td></tr>
+<tr>  <td width="100%"><div align="left" style="margin-left:100px">&nbsp;&nbsp;1. <input type="text" name="person1"  size="50"/></div></td></tr>
+<tr>  <td width="100%"><div align="left" style="margin-left:100px">&nbsp;&nbsp;2. <input type="text" name="person2"  size="50"/></div></td></tr>
+<tr>  <td width="100%"><div align="left" style="margin-left:100px">&nbsp;&nbsp;3. <input type="text" name="person3"  size="50"/></div></td></tr>
+<tr>
+  <td valign="top"><div align="left" style="margin-left:20px">&nbsp;<input name="ques7" type="radio"  value="0"onclick="document.form1.hidques20.value=0">&nbsp; 2. ไม่ต้องการ
+  </div> </td></tr>
+<tr><td width="100%" valign="top"><div align="left"><strong>&nbsp; 8. ข้อเสนอแนะอื่นๆ</strong></div></td></tr>
+ <tr> <td width="100%"><div align="left" style=" margin-left:20px">&nbsp;&nbsp;<textarea name="opinion"  cols="60" rows="10"></textarea></div></td></tr>
+    <tr>
+    <td colspan="2"><div align="center"><input type="submit" name="submit" value="บันทึก" onclick="return check();"><input  type="reset" name="reset" value="ยกเลิก"></div></td>
+  </tr>
+
+  <tr><td colspan="2"><div align="center"><strong>---------------------------------------------------------------------------------------------------------------------------</strong></div></td></tr>
+</tr>
+  <td colspan="2"><div align="right">ขอขอบคุณที่กรุณาประเมินและแสดงความคิดเห็น&nbsp;&nbsp;</div></td>
+</tr>
+</tr> <td colspan="2"><div align="right">ฝ่ายสารสนเทศประเมินผลการจัดงาน&nbsp;&nbsp;</div></td></tr>
+</table>
+</div></form>
+</body>
+</html>

@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /preference/
+Disallow: /lms/
+Disallow: /maxlife/

@@ -1,0 +1,690 @@
+<html>
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+   <meta name="generator" content="mozilla/4.01 [en] (win95; i) [netscape]">
+   <title>feedback control and stability</title>
+</head>
+<body text="#000000" bgcolor="#c0d8c8">
+&nbsp;
+<center>
+<h1>
+<font face="browalliaupc"><font color="#000099">ãðºº<wbr>¤çº<wbr>¤øá<wbr>áºº
+feedback áåð<wbr>¡òã<wbr>¤ó¹ç³
+stability</font></font></h1></center>
+
+<center>
+<h3>
+¹ò§êòç¨µø¾ã ·í§¤§íèçá 37051224<br>
+¹òâíò¹¹·ì èãõà¨ãô­ªñâ 37056140
+</h3></center>
+
+<center>
+<hr></center>
+
+<h2>
+<font color="#993366">êòãºñ­</font></h2>
+
+<ul>
+<li>
+<a href="#begin">º·¹ó</a></li>
+
+<li>
+<a href="#open_loop">
+ãðºº¤çº¤øááººç§à»ô´ëã×íãðºº¤çº¤øá<wbr
+>áººäáè»éí¹¡åñº
+(open-loop control systems, nonfeedback control systems)</a></li>
+
+<li>
+<a href="#close_loop">
+ãðºº¤çº¤øááººç§»ô´ëã×íãðºº¤çº¤øá<wbr
+>áºº»éí¹¡åñº
+(closed-loop control systems, feedback control systems)</a></li>
+
+<li>
+<a href="#basic_component">
+êèç¹»ãð¡íº¾×é¹°ò¹¢í§ãðºº¤çº¤øááºº»éí¹<wbr
+>¡åñº</a></li>
+
+<li>
+<a href="#system_type">ª¹ô´¢í§ãðºº¤çº¤øááºº»éí¹<wbr
+>¡åñº</a></li>
+
+<ul>
+<li>
+<a href="#continuous">ãðºº¤çº¤øááºº»éí¹¡åñºª¹ô´·õè<wbr
+>áõêñ­­ò³µèíà¹×èí§
+(continuous-data feedback control system)</a></li>
+
+<li>
+<a href="#discrete">ãðºº¤çº¤øá·õèáõ¡òãêøèáµñç<wbr
+>íâèò§¢í§êñ­­ò³áåðãðºº¤çº¤øá·õèáõ<wbr
+>êñ­­ò³äáèµèíà¹×èí§
+(sampled-data and discrete-data control system)</a></li>
+</ul>
+
+<li>
+<a href="#time_domain_analysis">¡òãçôà¤ãòðëìâ´àá¹¢í§àçåòã¹<wbr
+>ãðºº¤çº¤øááºº»éí¹¡åñº</a></li>
+
+<li>
+<a href="#test_signal">êñ­­ò³íô¹¾ø··õèãªéçôà¤ãòðëì transient ã¹ãðºº<wbr
+>¤çº¤øááºº»éí¹¡åñº</a></li>
+
+<li>
+<a href="#performance_characteristic">åñ¡é³ð·õèãªéºè§ªõé»ãðêô·¸ôàò¾<wbr
+>¢í§ãðºº¤çº¤øááºº»éí¹¡åñº 
+(time domain performance characteristics of feedback control systems)</a></li>
+
+
+<li>
+<a href="#summary">º·êãø»</a></li>
+
+<li>
+<a href="#reference">àí¡êòãíéò§íô§</a></li>
+</ul>
+
+<a name="begin"></a>
+<h2>
+<font color="#993366">º·<wbr>¹ó</font></h2>
+ã¹<wbr>»ñ¨¨øºñ¹<wbr>¹õé<wbr>ãðºº<wbr>¤çº<wbr>¤øá<wbr>íñµâ¹áñµô<wbr>ä´é<wbr>à¢éò<wbr>áò<wbr
+>áõ<wbr>º·<wbr>ºò·<wbr>êó¤ñ­<wbr>µèí<wbr>¡òã<wbr>¾ñ²¹ò<wbr>¤çòá<wbr>à¨ãô­<wbr
+>¡éòçë¹éò<wbr>·ò§<wbr>à·¤â¹âåâõ<wbr>áò¡<wbr>áòâ¹ñ¡
+µñç<wbr>íâèò§<wbr>·õè<wbr>àëç¹<wbr>ä´é<wbr>ªñ´<wbr>ã¹<wbr>ªõçôµ<wbr>»ãð¨ó<wbr>çñ¹<wbr
+>ä´é<wbr>á¡è<wbr>ãðºº<wbr>¤çº<wbr>¤øá<wbr>ã¹à¤ã×èí§»ãñº<wbr>íò¡òè<wbr>«öè§<wbr>¨ð<wbr
+>¤íâ<wbr>¤çº<wbr>¤øá<wbr>íø³ëàùáô<wbr>àòâ<wbr>ã¹<wbr>ëéí§<wbr>ãëé<wbr>¤§<wbr>·õè
+ã¹<wbr>íøµêòë¡ããá<wbr>ä´é<wbr>áõ<wbr>¡òã<wbr>¹ó<wbr>ãðºº<wbr>¤çº<wbr>¤øá<wbr
+>íñµâ¹áñµô<wbr>ä»<wbr>ãªé<wbr>¤çº<wbr>¤øá<wbr>¤ø³àò¾<wbr>¢í§<wbr>¼åôµ<wbr>àñ³±ì<wbr>,
+¤çº<wbr>¤øá<wbr>¡òã<wbr>·ó<wbr>§ò¹<wbr>¢í§<wbr>à¤ã×èí§¨ñ¡ã
+áåð<wbr>í×è¹æíõ¡<wbr>áò¡<wbr>áòâ
+à·¤â¹âåâõ<wbr>·ò§´éò¹<wbr>íç¡òè<wbr>áåð<wbr>¡òã<wbr>¼åôµ<wbr>íòçø¸<wbr>âø·â¸»¡ã³ì<wbr
+>¡ç<wbr>ä´é<wbr>áõ<wbr>¡òã<wbr>¹ó<wbr>ãðºº<wbr>¤çº<wbr>¤øá<wbr>ä»<wbr>ãªé<wbr
+>ã¹<wbr>ãðºº<wbr>¹ó<wbr>çô¶õ<wbr>,
+ãðºº<wbr>¤çº<wbr>¤øá<wbr>¡òã<wbr>à¼ò<wbr>äëáé<wbr>¢í§<wbr>àª×éí<wbr>à¾åô§
+à»ç¹<wbr>µé¹
+<center><img src="pic1.gif" height=123 width=500></center>
+
+<center><b>ãù»<wbr>·õè 1</b></center>
+ãù»<wbr>·õè 1 áê´§<wbr>¶ö§<wbr>â¤ã§<wbr>êãéò§<wbr>¾×é¹<wbr>°ò¹<wbr>¢í§<wbr>ãðºº<wbr
+>¤çº<wbr>¤øá
+â´â<wbr>¼å<wbr>åñ¾¸ì<wbr>·õè<wbr>íí¡<wbr>·ò§<wbr>àíò·ì¾ø·
+(á·¹<wbr>â´â<wbr>µñç<wbr>á»ã c) ¨ð<wbr>¶ù¡<wbr>¤çº<wbr>¤øá<wbr>â´âêñ³­ò³<wbr>¡ãðµøé¹
+e ¼èò¹<wbr>·ò§<wbr>í§¤ì»ãð¡íº<wbr>µèò§æ<wbr>«öè§<wbr>íâùè<wbr>àòâ<wbr>ã¹
+controlled process
+
+<p>ã¹<wbr>¡òã<wbr>¤çº<wbr>¤øá<wbr>¾ç§<wbr>áòåñâ<wbr>¢í§<wbr>ã¶<wbr>â¹µì
+êñ­­ò³<wbr>¡ãðµøé¹
+e ä´é<wbr>á¡è µóáë¹è§<wbr>¢í§<wbr>¾ç§<wbr>áòåñâ
+êèç¹<wbr>µñç<wbr>á»ã<wbr>àíò·ì¾ø·
+c ä´é<wbr>á¡è ·ôè<wbr>·ò§¢í§<wbr>åéí<wbr>ë¹éò
+ã¹<wbr>êèç¹<wbr>¢í§
+controlled process ¨ð<wbr>»ãð¡íº<wbr>´éçâ<wbr>¡å<wbr>ä¡<wbr>µèò§æ¢í§<wbr>¾ç§<wbr>áòåñâ
+àªè¹ ¡òã<wbr>·´<wbr>à¿×í§
+áåð<wbr>ãçá<wbr>¶ö§<wbr>åñ¡é³ð<wbr>¡òã<wbr>à¤å×èí¹<wbr>·õè<wbr>¢í§<wbr>åéí<wbr>´éçâ
+
+<h2>
+<a name="open_loop"></a></h2>
+<h2>
+<font color="#993366">ãðºº<wbr>¤çº<wbr>¤øá<wbr>áºº<wbr>ç§<wbr>à»ô´<wbr>ëã×í<wbr
+>ãðºº<wbr>¤çº<wbr>¤øá<wbr>áºº<wbr>äáè<wbr>»éí¹<wbr>¡åñº
+(open-loop control systems, nonfeedback control systems)</font></h2>
+ãðºº<wbr>¤çº<wbr>¤øá<wbr>¾×é¹<wbr>°ò¹<wbr>·õè<wbr>¡åèòç<wbr>¶ö§<wbr>ã¹<wbr>ëñç<wbr
+>¢éí<wbr>·õè<wbr>áåéç<wbr>à»ç¹<wbr>ãðºº<wbr>¤çº<wbr>¤øá<wbr>áºº<wbr>ç§<wbr>à»ô´
+ã¹<wbr>ãðºº<wbr>¤çº<wbr>¤øá<wbr>áºº<wbr>ç§<wbr>à»ô´<wbr>¹õé<wbr
+>¡òã<wbr>¤çº<wbr>¤øá<wbr>êèç¹<wbr>ãë­è<wbr>µéí§<wbr>íòèñâ<wbr>¡òã<wbr>¤ò´<wbr>¤ðà¹<wbr
+>áåð<wbr>¡òã<wbr>µñ´<wbr>êô¹<wbr>ã¨<wbr>¢í§<wbr>á¹øéâì
+µñç<wbr>íâèò§<wbr>àªè¹ <wbr>¡òã<wbr>¤çº<wbr>¤øá<wbr>íø³ëàùáô<wbr>àòâ<wbr>ã¹<wbr>ëéí§<wbr
+>â´â<wbr>àµò<wbr>¼ô§
+¶éò<wbr>àµò<wbr>¼ô§<wbr>·õè<wbr>ãªé<wbr>áõ<wbr>à¾õâ§<wbr>íø»¡ã³ì<wbr>µñé§<wbr>àçåò<wbr
+>à»ô´<wbr><wbr>-»ô´<wbr>à·èò<wbr>¹ñé¹
+¼ùé<wbr>ãªé<wbr>ëã×í<wbr>¼ùé<wbr>¤çº<wbr>¤øá<wbr>¨ð<wbr>µéí§<wbr>¤ò´<wbr>¤ðà¹<wbr
+>áåð<wbr>µñé§<wbr>àçåò<wbr>ã¹<wbr>¡òã<wbr>à»ô´<wbr>àµò<wbr>¼ô§<wbr>·õè<wbr>¹ò¹<wbr
+>¾í<wbr>àëáòðà¾×èí<wbr>ãëé<wbr>íø³ëàùáô<wbr>ëéí§<wbr>íâùè<wbr>ã¹<wbr>ãð´ñº<wbr>·õè<wbr
+>µéí§<wbr>¡òã
+áµè<wbr>¡òã<wbr>¤çº<wbr>¤øá<wbr>â´â<wbr>á¹øéâì<wbr>àªè¹<wbr>¹õé<wbr>´ù<wbr>¨ð<wbr
+>äáè<wbr>ááè¹<wbr>âó<wbr>áåð<wbr>¹èò<wbr>àª×èí<wbr>¶×í<wbr>¹ñ¡
+à¹×èí§<wbr>¨ò¡<wbr>¼ùé<wbr>¤çº<wbr>¤øá<wbr>äáè<wbr>êòáòã¶<wbr>ãùé<wbr>¶ö§<wbr
+>¤ø³êáºñµô<wbr>à©¾òð<wbr>ã¹<wbr>¡òã<wbr>êãéò§<wbr>¤çòá<wbr>ãéí¹<wbr>¢í§<wbr
+>àµò<wbr>¼ô§<wbr>¹õé
+íõ¡<wbr>·ñé§<wbr>âñ§<wbr>áõ<wbr>»ñ¨¨ñâ<wbr>µèò§æ¨ò¡<wbr>àòâ<wbr>¹í¡
+àªè¹ íø³ëàùáô<wbr>àòâ<wbr>¹í¡<wbr>ëéí§<wbr>·õè<wbr>áõ<wbr>¼å<wbr>µèí<wbr
+>¡òã<wbr>à»åõèâ¹<wbr>á»å§<wbr>¢í§<wbr>íø³ëàùáô<wbr>àòâ<wbr>ã¹<wbr>ëéí§
+¨ð<wbr>àëç¹<wbr>ä´é<wbr>çèò<wbr>ãðºº<wbr>¤çº<wbr>¤øá<wbr>áºº<wbr>ç§<wbr>à»ô´<wbr
+>¹õé<wbr>äáè<wbr>êòáòã¶<wbr>»ãñº<wbr>µñç<wbr>µòá<wbr>¡òã<wbr>à»åõèâ¹<wbr>á»å§<wbr
+>¢í§<wbr>ãðºº<wbr>íñ¹<wbr>à¹×èí§áò<wbr>¨ò¡<wbr>»ñ¨¨ñâ<wbr>¨ò¡<wbr>àòâ<wbr>¹í¡<wbr>ä´é
+
+<p>à¤ã×èí§«ñ¡<wbr>¼éò<wbr>íñµâ¹áñµô<wbr>à»ç¹<wbr>ãðºº<wbr>·õè<wbr>áõ<wbr
+>¡òã<wbr>¤çº<wbr>¤øá<wbr>áºº<wbr>ç§<wbr>à»ô´<wbr>à¹×èí§<wbr>¨ò¡<wbr
+>¼ùé<wbr>¤çº<wbr>¤øá<wbr>·õè<wbr>à»ç¹<wbr>á¹øéâì¨ð<wbr>à»ç¹<wbr>¼ùé<wbr>¡óë¹´<wbr
+>àçåò<wbr>·õè<wbr>ãªé<wbr>ã¹<wbr>¡òã<wbr>«ñ¡<wbr>¼éò
+«öè§<wbr>¨ãô§æ<wbr>áåéç<wbr>à¤ã×èí§<wbr>«ñ¡<wbr>¼éò<wbr>íñµâ¹áñµô<wbr>·õè<wbr>á·é<wbr
+>¨ãô§<wbr>¤çã<wbr>¨ð<wbr>áõ<wbr>ãðºº<wbr>µãç¨<wbr>êíº<wbr>¤çòá<wbr>êðíò´<wbr
+>¢í§<wbr>¼éò<wbr>µåí´<wbr>àçåò<wbr>·õè<wbr>«ñ¡
+àá×èí<wbr>¼éò<wbr>áõ<wbr>¤çòá<wbr>êðíò´<wbr>¶ö§<wbr>ãð´ñº<wbr>·õè<wbr>µéí§<wbr>¡òã<wbr
+>áåéç<wbr>à¤ã×èí§<wbr>«ñ¡<wbr>¼éò<wbr>¡ç<wbr>¤çã<wbr>¨ð<wbr>ëâø´<wbr>¡òã<wbr>·ó<wbr
+>§ò¹<wbr>â´â<wbr>íñµâ¹áñµô
+<center><img src="pic2.gif" height=131 width=640></center>
+
+<center><b>ãù»<wbr>·õè 2</b></center>
+á¼¹<wbr>¼ñ§<wbr>¢í§<wbr>ãðºº<wbr>¤çº<wbr>¤øá<wbr>áºº<wbr>ç§<wbr>à»ô´<wbr
+>êòáòã¶<wbr>à¢õâ¹<wbr>ä´é<wbr>íõ¡<wbr>áºº<wbr>ë¹öè§<wbr>´ñ§<wbr>ãù»<wbr>·õè
+2 â´â<wbr>êñ­­ò³<wbr>íô¹¾ø·ëã×í<wbr>êñ­­ò³<wbr>êñè§<wbr>¡òã
+r êè§<wbr>¼èò¹ controller íí¡<wbr>áò<wbr>à»ç¹<wbr>êñ­­ò³<wbr>¡ãðµøé¹
+e à¾×èí<wbr>êñè§<wbr>ãëé
+controlled process ¢ñº<wbr>àíò·ì¾ø·
+c ·õè<wbr>µéí§<wbr>¡òã<wbr>íí¡<wbr>áò
+
+<h2>
+<a name="close_loop"></a></h2>
+<h2>
+<font color="#993366">ãðºº<wbr>¤çº<wbr>¤øá<wbr>áºº<wbr>ç§<wbr>»ô´<wbr>ëã×í<wbr
+>ãðºº<wbr>¤çº<wbr>¤øá<wbr>áºº<wbr>»éí¹<wbr>¡åñº
+(closed-loop control systems, feedback control systems)</font></h2>
+¨ò¡<wbr>ëñç<wbr>¢éí<wbr>·õè<wbr>áåéç<wbr>¨ð<wbr>àëç¹<wbr>çèò<wbr>àá×èí<wbr>»ñ¨¨ñâ<wbr
+>àòâ<wbr>¹í¡<wbr>áò<wbr>áõ<wbr>íô·¸ô¾å<wbr>µèí<wbr>ãðºº<wbr>¨ð<wbr>·ó<wbr>ãëé<wbr
+>¼ùé<wbr>¤çº<wbr>¤øá<wbr>äáè<wbr>êòáòã¶<wbr>¤çº<wbr>¤øá<wbr>àíò·ì¾ø·<wbr>ãëé<wbr>à»ç¹<wbr
+>ä»<wbr>µòá<wbr>µéí§<wbr>¡òã<wbr>ä´é
+ã¹<wbr>ëñç<wbr>¢éí<wbr>¹õé<wbr>ä´é<wbr>á¡é<wbr>ä¢<wbr>â´â<wbr>¡òã<wbr>êè§<wbr
+>êñ­­ò³<wbr>àíò·ì¾ø· c(t) »éí¹<wbr>¡åñº<wbr>áò<wbr>à»ãõâº<wbr>à·õâº<wbr>¡ñº<wbr
+>êñ­­ò³<wbr>êñè§<wbr>¡òã<wbr>ëã×í<wbr>êñ­­ò³<wbr>íéò§<wbr>íô§
+r ¨ð<wbr>ä´é<wbr>¤èò<wbr>¤çòá<wbr>¤åò´<wbr>à¤å×èí¹<wbr>ãðëçèò§<wbr>êñ­­ò³<wbr>àíò·ì¾ø·<wbr
+>¡ñº<wbr>êñ­­ò³<wbr>íéò§<wbr>íô§<wbr>·ò§<wbr>´éò¹<wbr>íô¹¾ø·<wbr>à¾×èí<wbr>¹ó<wbr
+>ä»<wbr>êãéò§<wbr>êñ­­ò³<wbr>¡ãðµøé¹ 
+e áåð<wbr>êè§<wbr>µèí<wbr>ä»<wbr>á¡é<wbr>ä¢<wbr>¤èò<wbr>¤çòá<wbr>¤åò´<wbr>à¤å×èí¹
+(error) ¢í§<wbr>àíò·ì¾ø·<wbr>ãëé<wbr>¹éíâ<wbr>å§
+ãðºº<wbr>·õè<wbr>¡åèòç<wbr>áò<wbr>¹õé<wbr>àãõâ¡<wbr>çèò<wbr>ãðºº<wbr>¤çº<wbr>¤øá<wbr
+>áºº<wbr>»éí¹<wbr>¡åñº
+¡ô¨¡ããá<wbr>êèç¹<wbr>ãë­è<wbr>·õè<wbr>á¹øéâì<wbr>»¯ôºñµô<wbr>ã¹<wbr>ªõçôµ<wbr>»ãð¨ó<wbr
+>çñ¹<wbr>¹ñé¹<wbr>à»ç¹<wbr>µñç<wbr>íâèò§<wbr>ë¹öè§<wbr>¢í§<wbr>ãðºº<wbr>¤çº<wbr
+>¤øá<wbr>áºº<wbr>»éí¹<wbr>¡åñº<wbr>·õè<wbr>«ñº<wbr>«éí¹
+àªè¹ ã¹<wbr>¡òã<wbr>ãªé<wbr>µðà¡õâº<wbr>¤õº<wbr>åù¡<wbr>ªôé¹<wbr>à¢éò<wbr>»ò¡
+êáí§<wbr>¢í§<wbr>á¹øéâì<wbr>¨ð<wbr>êñè§<wbr>¡òã<wbr>ãëé<wbr>á¢¹<wbr>¢éò§<wbr>·õè<wbr
+>¶×í<wbr>µðà¡õâº<wbr>¹ó<wbr>åù¡<wbr>ªôé¹<wbr>à¢éò<wbr>»ò¡
+µóáë¹è§<wbr>¢í§<wbr>åù¡<wbr>ªôé¹<wbr>·õè<wbr>à»ç¹<wbr>àíò·ì¾ø·¨ð<wbr>¶ù¡<wbr>»éí¹<wbr
+>¡åñº<wbr>áò<wbr>âñ§<wbr>µò<wbr>¢í§<wbr>á¹øéâì<wbr>à¾×èí<wbr>à»ãõâº<wbr>à·õâº<wbr
+>ãðâð<wbr>·ò§ãðëçèò§<wbr>åù¡<wbr>ªôé¹¡ñº»ò¡
+ã¹<wbr>·õè<wbr>¹õé<wbr>êñ­­ò³<wbr>íéò§<wbr>íô§
+r ¤×í<wbr>µóáë¹è§<wbr>¢í§<wbr>»ò¡
+êèç¹<wbr>êñ­­ò³<wbr>àíò·ì¾ø·
+c ¤×í<wbr>µóáë¹è§<wbr>¢í§<wbr>åù¡<wbr>ªôé¹
+¶éò<wbr>ãðâð<wbr>·ò§âñ§<wbr>áõ<wbr>¤èò<wbr>¤çòá<wbr>¤åò´<wbr>à¤å×èí¹<wbr>íâùè<wbr
+>êáí§<wbr>¡ç<wbr>¨ð<wbr>âñ§<wbr>¤§<wbr>êñè§<wbr>ãëé<wbr>á¢¹<wbr>à¤å×èí¹<wbr>·õè<wbr
+>µèí<wbr>ä»<wbr>à¾×èí<wbr>ãëé<wbr>åù¡<wbr>ªôé¹<wbr>à¢éò<wbr>ã¡åé<wbr>»ò¡<wbr>áò¡<wbr
+>âôè§<wbr>¢öé¹ 
+¨¹<wbr>¡ãð·ñè§<wbr>¤èò<wbr>¤çòá<wbr>¤åò´<wbr>à¤å×èí¹<wbr>à»ç¹<wbr>èù¹âì<wbr>¡ç<wbr
+>¨ð<wbr>êñè§<wbr>ãëé<wbr>á¢¹<wbr>ëâø´
+ãù»<wbr>·õè 3 
+áê´§<wbr>¶ö§<wbr>á¼¹<wbr>¼ñ§<wbr>¢í§<wbr>ãðºº<wbr>¤çº<wbr>¤øá<wbr>áºº<wbr
+>»éí¹<wbr>¡åñº<wbr>ã¹<wbr>¡òã<wbr>ãªé<wbr>µðà¡õâº<wbr>¤õº<wbr>åù¡<wbr>ªôé¹<wbr>à¢éò<wbr>»ò¡
+<center><img src="pic3.gif" height=221 width=640></center>
+
+<center><b>ãù»<wbr>·õè 3</b></center>
+
+<center>&nbsp;</center>
+
+<center><img src="pic4.gif" height=266 width=640></center>
+
+<center><b>ãù»<wbr>·õè 4</b></center>
+ãù»<wbr>·õè 4 à»ç¹<wbr>ãðºº<wbr>¤çº<wbr>¤øá<wbr>áºº<wbr>»éí¹<wbr>¡åñº<wbr>·õè<wbr
+>ãªé<wbr>ã¹<wbr>¡òã<wbr>ëáø¹<wbr>áíàµíãì<wbr>ä»<wbr>âñ§<wbr>µóáë¹è§<wbr>·õè<wbr
+>¼ùé<wbr>¤çº<wbr>¤øá<wbr>¡óë¹´
+ã¹<wbr>ãðºº<wbr>¹õé<wbr>¨ð<wbr>ãªé<wbr>â¾à·¹ªôâíáôàµíãì<wbr>µãç¨<wbr>¨ñº<wbr>¤èò<wbr
+>¤çòá<wbr>¤åò´<wbr>à¤å×èí¹<wbr>ãðëçèò§<wbr>µóáë¹è§<wbr>¢í§<wbr>áíàµíãì<wbr>¨ãô§æ·õè<wbr
+>à»ç¹<wbr>àíò·ì¾ø· 
+áåð<wbr>µóáë¹è§<wbr>¢í§<wbr>áíàµíãì<wbr>·õè<wbr>¡óë¹´<wbr>â´â<wbr>¼ùé<wbr>¤çº<wbr
+>¤øá<wbr>«öè§<wbr>à»ç¹<wbr>êñ­­ò³íô¹¾ø·íéò§<wbr>íô§
+¤èò<wbr>¤çòá<wbr>¤åò´<wbr>à¤å×èí¹<wbr>¨ð<wbr>à»åõèâ¹<wbr>à»ç¹<wbr>¤èò<wbr>áã§<wbr
+>´ñ¹<wbr>ä¿<wbr>¿éò e(t) 
+áåéç<wbr>¹ó<wbr>ä»<wbr>¢âòâ<wbr>áã§<wbr>´ñ¹<wbr>à¾×èí<wbr>¢ñº<wbr>áíàµíãì<wbr
+>ãëé<wbr>ëáø¹<wbr>ä»<wbr>âñ§<wbr>·ôè<wbr>·ò§·õè<wbr>·ó<wbr>ãëé<wbr>µóáë¹è§<wbr
+>¢í§<wbr>áíàµíãì<wbr>áõ<wbr>¤èò¤çòá<wbr>¤åò´<wbr>à¤å×èí¹<wbr>¹éíâ<wbr>å§
+<center><img src="pic5.gif" height=189 width=562></center>
+
+<center><b>ãù»<wbr>·õè 5</b></center>
+àá×èí<wbr>åí§<wbr>ãëé<wbr>êñ­­ò³íô¹¾ø·
+r(t) à»åõèâ¹<wbr>¤èò<wbr>¨ò¡<wbr>èù¹âì<wbr>ä»<wbr>à»ç¹
+r ã¹<wbr>·ñ¹<wbr>·õ<wbr>·ñ¹<wbr>ã´<wbr>´ñ§<wbr>ãù»<wbr>·õè
+5(a) ¤èò<wbr>êñ­­ò³<wbr>àíò·ì¾ø·¨ð<wbr>áõ<wbr>åñ¡é³ð<wbr>´ñ§<wbr>ãù»<wbr>·õè 5(b)&nbsp; 
+à¹×èí§<wbr>áò<wbr>¨ò¡<wbr>¤çòáà©×èíâ<wbr>·ò§¡å<wbr>áåð<wbr>·ò§<wbr>ä¿¿éò<wbr
+>¨ð<wbr>·ó<wbr>ãëé<wbr>µóáë¹è§<wbr>¢í§<wbr>àíò·ì¾ø·<wbr>äáè<wbr>à»åõèâ¹<wbr>á»å§<wbr
+>íâèò§<wbr>·ñ¹·õ<wbr>·ñ¹<wbr>ã´ 
+áµè<wbr>¨ð<wbr>¤èíâæ<wbr>çôè§<wbr>à¢éò<wbr>êùè<wbr>µóáë¹è§<wbr>·õè<wbr>¡óë¹´<wbr
+>â´â<wbr>íô¹¾ø·
+áåð<wbr>íò¨<wbr>¨ð<wbr>áõ<wbr>¡òã<wbr>á¡çè§<wbr>ä»<wbr>áò<wbr>ãíºæ<wbr
+>µóáë¹è§<wbr>·õè<wbr>¡óë¹´<wbr>â´â<wbr>íô¹¾ø·
+¡òã<wbr>á¡çè§<wbr>¹õé<wbr>¨ð<wbr>¤èíâæ<wbr>å´<wbr>¹éíâ<wbr>¶íâ<wbr>å§<wbr
+>¨¹<wbr>¡ãð·ñè§<wbr>àíò·ì¾ø·<wbr>íâùè<wbr>ã¹<wbr>µóáë¹è§<wbr>·õè<wbr>¡óë¹´<wbr>â´â<wbr
+>íô¹¾ø·<wbr>íâèò§<wbr>¤§<wbr>·õè<wbr>¤×í<wbr>íâùè<wbr>ã¹ steady state
+
+<p>êôè§<wbr>·õè<wbr>µéí§<wbr>ãðçñ§<wbr>ã¹<wbr>ãðºº<wbr>¤çº<wbr>¤øá<wbr>áºº<wbr
+>»éí¹<wbr>¡åñº<wbr>¤×í<wbr>¤çòá<wbr>äáè<wbr>àê¶õâã<wbr>¢í§<wbr>ãðºº
+¶éò<wbr>ëò¡<wbr>êñ­­ò³ e(t) 
+¶ù¡<wbr>¢âòâ<wbr>áò¡<wbr>à¡ô¹<wbr>ä»<wbr>¡ç<wbr>íò¨<wbr>¨ð<wbr>·ó<wbr>ãëé<wbr
+>à¡ô´<wbr>¡òã<wbr>á¡é<wbr>ä¢<wbr>¤èò<wbr>¤çòá<wbr>¤åò´<wbr>à¤å×èí¹<wbr>¢í§<wbr
+>àíò·ì¾ø·<wbr>áºº "overcorrect" áåð<wbr>àíò·ì¾ø·¨ð<wbr>á¡çè§<wbr>ã¹<wbr>åñ¡é³ð<wbr>·õè<wbr
+>åùè<wbr>íí¡<wbr>â´â<wbr>äáè<wbr>áõ<wbr>¢íº<wbr>à¢µ
+áµè<wbr>¶éò<wbr>êñ­­ò³ e(t) 
+¶ù¡<wbr>¢âòâ<wbr>¹éíâ<wbr>à¡ô¹<wbr>ä»<wbr>¡ç<wbr>¨ð<wbr>·ó<wbr>ãëé<wbr>àíò·ì¾ø·<wbr
+>áõ<wbr>¤èò<wbr>äáè<wbr>µã§<wbr>¡ñº<wbr>¤èò<wbr>·õè<wbr>¡óë¹´<wbr>â´â<wbr>íô¹¾ø·<wbr
+>àá×èí<wbr>àíò·ì¾ø·<wbr>à¢éò<wbr>êùè steady state&nbsp; 
+´ñ§<wbr>¹ñé¹<wbr>¼ùé<wbr>íí¡<wbr>áºº<wbr>ãðºº<wbr>¤çº<wbr>¤øá<wbr>áºº<wbr>»éí¹<wbr
+>¡åñº<wbr>¨ö§<wbr>µéí§<wbr>ëò<wbr>¨ø´<wbr>·õè<wbr>àëáòð<wbr>êá<wbr>ãðëçèò§<wbr>»ñ¨¨ñâ<wbr
+>êí§<wbr>íâèò§<wbr>¤×í
+¤çòá<wbr>à·õèâ§<wbr>µã§
+áåð<wbr>¤çòá<wbr>àê¶õâã
+«öè§<wbr>»ñ¨¨ñâ<wbr>·ñé§<wbr>êí§<wbr>¹õé<wbr>á»ã<wbr>¼¡¼ñ¹<wbr>¡ñ¹
+<h2>
+<a name="basic_component"></a></h2>
+
+<h2>
+<font color="#993366">êèç¹<wbr>»ãð¡íº<wbr>¾×é¹<wbr>°ò¹<wbr>¢í§<wbr>ãðºº<wbr
+>¤çº<wbr>¤øá<wbr>áºº<wbr>»éí¹<wbr>¡åñº</font><wbr><wbr></h2>
+¨ò¡<wbr>ëåñ¡<wbr>¡òã<wbr>¾×é¹<wbr>°ò¹<wbr>¢í§<wbr>ãðºº<wbr>¤çº<wbr>¤øá<wbr
+>áºº<wbr>»éí¹<wbr>¡åñº<wbr>êòáòã¶<wbr>¡åèòç<wbr>ä´é<wbr>çèò
+ãðºº<wbr>¤çº<wbr>¤øá<wbr>áºº<wbr>»éí¹<wbr>¡åñº<wbr>»ãð¡íº<wbr>´éçâ<wbr>àêé¹<wbr
+>·ò§<wbr>ëã×í<wbr>ç§<wbr>ãíº<wbr>¢í§<wbr>êñ­­ò³<wbr>»éí¹<wbr>¡åñº<wbr>«öè§<wbr
+>à»ç¹<wbr>êñ­­ò³<wbr>àíò·ì¾ø·
+c µñé§<wbr>áµè<wbr>ë¹öè§<wbr>ç§<wbr>ãíº<wbr>¢öé¹<wbr>ä»
+áåéç<wbr>¹ó<wbr>êñ­­ò³<wbr>»éí¹<wbr>¡åñº<wbr>¹õé<wbr>áò<wbr>à»ãõâº<wbr>à·õâº<wbr
+>¡ñº<wbr>êñ­­ò³<wbr>êñè§<wbr>¡òã<wbr>ëã×í<wbr>êñ­­ò³<wbr>íéò§<wbr>íô§
+r ¨ð<wbr>ä´é<wbr>¼å<wbr>µèò§<wbr>ãðëçèò§<wbr>êñ­­ò³<wbr>·ñé§<wbr>êí§<wbr>à»ç¹
+e = r - c à¾×èí<wbr>¹ó<wbr>ä»<wbr>¤çº<wbr>¤øá<wbr>êñ­­ò³<wbr>àíò·ì¾ø·
+c ãëé<wbr>áõ<wbr>¤èò<wbr>µòá<wbr>·õè<wbr>¡óë¹´<wbr>â´â<wbr>êñ­­ò³<wbr>íéò§<wbr>íô§ r
+<center><img src="pic6.gif" height=233 width=640></center>
+
+<center><b>ãù»<wbr>·õè 6</b></center>
+ãù»<wbr>·õè 6 áê´§<wbr>á¼¹<wbr>¼ñ§<wbr>¢í§<wbr>ãðºº<wbr>¤çº<wbr>¤øá<wbr>áºº<wbr
+>»éí¹<wbr>¡åñº
+ãðºº<wbr>¤çº<wbr>¤øá<wbr>¹õé<wbr>»ãð¡íº<wbr>´éçâ<wbr>êèç¹
+forward (forward path), êèç¹<wbr>»éí¹<wbr>¡åñº
+(feedback path) áåð<wbr>êèç¹<wbr>µãç¨<wbr>¨ñº<wbr>¤èò<wbr>¤çòá<wbr>¤åò´<wbr
+>à¤å×èí¹ (error-sensing device) 
+êèç¹<wbr>µãç¨<wbr>¨ñº<wbr>¤èò<wbr>¤çòá<wbr>¤åò´<wbr>à¤å×èí¹<wbr>¹õé<wbr>¨ð<wbr
+>à»ãõâº<wbr>à·õâº<wbr>¤èò<wbr>êñ­­ò³<wbr>íô¹¾ø·<wbr>íéò§<wbr>íô§<wbr>¡ñº<wbr>¤èò<wbr
+>êñ­­ò³<wbr>àíò·ì¾ø·<wbr>¨ãô§æ<wbr>ëã×í<wbr>¤èò<wbr>·õè<wbr>à»ç¹<wbr>¿ñ§¡ìªñ¹<wbr
+>¢í§<wbr>êñ­­ò³<wbr>àíò·ì¾ø·
+áåéç<wbr>êè§<wbr>êñ­­ò³<wbr>·õè<wbr>à¡ô´<wbr>¨ò¡<wbr>¼å<wbr>µèò§<wbr>¢í§<wbr
+>êñ­­ò³<wbr>·ñé§<wbr>êí§<wbr>¹õé<wbr>íí¡<wbr>ä»
+<h2>
+<a name="system_type"></a></h2>
+
+<h2>
+<font color="#993366">ª¹ô´<wbr>¢í§<wbr>ãðºº<wbr>¤çº<wbr>¤øá<wbr>áºº<wbr>»éí¹<wbr
+>¡åñº</font><wbr><wbr></h2>
+¶éò<wbr>¾ô¨òã³ò<wbr>ã¹<wbr>á§è<wbr>çô¸õ<wbr>¡òã<wbr>ã¹<wbr>¡òã<wbr>çôà¤ãòðëì<wbr>áåð<wbr
+>íí¡<wbr>áºº<wbr>ãðºº<wbr>áåéç
+ãðºº<wbr>¤çº<wbr>¤øá<wbr>áºº<wbr>»éí¹<wbr>¡åñº<wbr>êòáòã¶<wbr>áºè§<wbr>ä´é<wbr
+>à»ç¹<wbr>êí§<wbr>ª¹ô´ ¤×í ãðºº<wbr>¤çº<wbr>¤øá<wbr>»éí¹<wbr>¡åñº<wbr>áºº<wbr
+>àªô§<wbr>àêé¹ áåð<wbr>ãðºº<wbr>¤çº<wbr>¤øá<wbr>»éí¹<wbr>¡åñº<wbr>áºº<wbr
+>äáè<wbr>à»ç¹<wbr>àªô§<wbr>àêé¹
+ã¹<wbr>·ò§»¯ôºñµô<wbr>áåéç<wbr>ãðºº<wbr>·õè<wbr>à»ç¹<wbr>àªô§<wbr>àêé¹<wbr>¨ð<wbr
+>äáè<wbr>áõ<wbr>íâùè<wbr>¨ãô§<wbr>à¹×èí§<wbr>¨ò¡<wbr>åñ¡é³ð<wbr>·ò§<wbr>¡òâàò¾<wbr>¢í§<wbr
+>ãðºº<wbr>·ø¡<wbr>ãðºº<wbr>¨ð<wbr>à»ç¹<wbr>àªô§<wbr>àêé¹<wbr>ã¹<wbr>¢íº<wbr>à¢µ<wbr
+>ë¹öè§<wbr>à·èò<wbr>¹ñé¹
+´ñ§<wbr>¹ñé¹<wbr>ãðºº<wbr>áºº<wbr>àªô§<wbr>àêé¹<wbr>¨ö§<wbr>à»ç¹<wbr>à¾õâ§<wbr>ãðºº<wbr
+>·õè<wbr>êááøµô<wbr>¢öé¹<wbr>áò<wbr>à¾×èí<wbr>ãëé<wbr>§èòâµèí<wbr>¡òã<wbr>çôà¤ãòðëì<wbr>áåð<wbr
+>íí¡<wbr>áºº<wbr>à·èò<wbr>¹ñé¹
+ã¹<wbr>ãðºº<wbr>¤çº<wbr>¤øá<wbr>áºº<wbr>»éí¹<wbr>¡åñº<wbr>¨ð<wbr>áõ<wbr>¢íº<wbr
+>à¢µ<wbr>¡òã<wbr>·ó<wbr>§ò¹<wbr>·õè<wbr>à»ç¹<wbr>àªô§<wbr>àêé¹<wbr>¢í§<wbr>ãð´ñº<wbr
+>êñ­­ò³<wbr>¡ãðµøé¹
+e «öè§<wbr>êòáòã¶<wbr>¹ó<wbr>áò<wbr>ãªé<wbr>ã¹<wbr>áºº<wbr>¨óåí§<wbr>áºº<wbr
+>àªô§<wbr>àêé¹<wbr>ä´é
+àá×èí<wbr>ãð´ñº<wbr>êñ­­ò³<wbr>¡ãðµøé¹ e 
+íâùè<wbr>¹í¡<wbr>¢íº<wbr>à¢µ<wbr>·õè<wbr>à»ç¹<wbr>àªô§<wbr>àêé¹<wbr>¹õé<wbr>ãðºº<wbr
+>¤çº<wbr>¤øá<wbr>áºº<wbr>»éí¹<wbr>¡åñº<wbr>¡ç<wbr>¨ð<wbr>à¢éò<wbr>êùè<wbr>êàòçð<wbr
+>·õè<wbr>äáè<wbr>à»ç¹à<wbr>ªô§<wbr>àêé¹
+
+<p>áµè<wbr>¶éò<wbr>¾ô¨òã³ò<wbr>ã¹<wbr>á§è<wbr>¢í§<wbr>åñ¡é³ð<wbr>êñ­­ò³<wbr>·õè<wbr
+>à¡ô´<wbr>¢öé¹<wbr>àòâ<wbr>ã¹<wbr>ãðºº
+¡ç<wbr>¨ð<wbr>êòáòã¶<wbr>áºè§<wbr>ª¹ô´<wbr>¢í§<wbr>ãðºº<wbr>¤çº<wbr>¤øá<wbr>áºº<wbr
+>»éí¹<wbr>¡åñº<wbr>ä´é<wbr>à»ç¹
+ãðºº<wbr>·õè<wbr>áõ<wbr>êñ­­ò³<wbr>µèí<wbr>à¹×èí§
+(continuous-data system) áåð ãðºº<wbr>·õè<wbr>áõ<wbr>êñ­­ò³<wbr>äáè<wbr>µèí<wbr>à¹×èí§
+(discrete-data system) ëã×í<wbr>ãðºº<wbr>·õè<wbr>áõ<wbr>¡òã<wbr>êøèá<wbr>µñç<wbr>íâèò§<wbr
+>¢í§<wbr>êñ­­ò³ 
+(sampled-data system)
+<h2>
+<a name="continuous"></a></h2>
+
+<h2>
+<font color="#993366">ãðºº<wbr>¤çº<wbr>¤øá<wbr>áºº<wbr>»éí¹<wbr>¡åñº<wbr>ª¹ô´<wbr
+>·õè<wbr>áõ<wbr>êñ­­ò³<wbr>µèí<wbr>à¹×èí§
+(continuous-data feedback control system)</font></h2>
+ãðºº<wbr>¹õé<wbr>à»ç¹<wbr>ãðºº<wbr>·õè<wbr>êñ­­ò³<wbr>µèò§æàòâ<wbr>ã¹<wbr>ãðºº<wbr
+>à»ç¹<wbr>êñ­­ò³<wbr>·õè<wbr>à»ç¹<wbr>¿ñ§¡ìªñ¹<wbr>áºº<wbr>µèí<wbr>à¹×èí§<wbr>àá×èí<wbr
+>µñç<wbr>á»ã¢í§<wbr>¿ñ§¡ìªñ¹<wbr>à»ç¹<wbr>àçåò
+t&nbsp; ¶éò<wbr>êñ­­ò³<wbr>áºº<wbr>µèí<wbr>à¹×èí§<wbr>ã¹<wbr>ãðºº<wbr>¹õé<wbr>íâùè<wbr
+>ã¹<wbr>åñ¡é³ð<wbr>·õè<wbr>¶ù¡
+modulated ¨ð<wbr>àãõâ¡<wbr>ãðºº<wbr>¹õé<wbr>çèò
+ãðºº a-c carrier system áµè<wbr>¶éò<wbr>êñ­­ò³<wbr>íâùè<wbr>ã¹<wbr>åñ¡é³ð<wbr>·õè<wbr>à»ç¹
+unmodulated ¡ç<wbr>¨ð<wbr>à»ç¹<wbr>ãðºº
+d-c carrier system&nbsp; ãù»<wbr>·õè
+8 à»ç¹<wbr>µñç<wbr>íâèò§<wbr>¢í§<wbr>ãðºº
+servo ·õè<wbr>à»ç¹ d-c carrier system 
+¨ð<wbr>êñ§à¡µ<wbr>àëç¹<wbr>çèò<wbr>êñ­­ò³<wbr>µèò§æã¹<wbr>ãðºº<wbr>à»ç¹<wbr>êñ­­ò³<wbr
+>¤çòá<wbr>¶õè<wbr>µèó<wbr>áåð<wbr>íâùè<wbr>ã¹<wbr>åñ¡é³ð<wbr>·õè
+unmodulated&nbsp; ãù»<wbr>·õè
+9 à»ç¹<wbr>á¼¹<wbr>¼ñ§<wbr>¢í§<wbr>ãðºº
+servo ·õè<wbr>à»ç¹ a-c carrier system&nbsp; 
+êñ­­ò³<wbr>·õè<wbr>à¡ô´<wbr>¢öé¹<wbr>¨ãô§æã¹<wbr>ãðºº<wbr>¤çº<wbr>¤øá<wbr>¹õé<wbr>¨ð<wbr
+>»ãò¡¯<wbr>ã¹<wbr>åñ¡é³ð<wbr>·õè<wbr>à»ç¹<wbr>à»å×í¡<wbr>·õè<wbr>ëèí<wbr>ëøéá<wbr
+>êñ­­ò³<wbr>¾òëð<wbr>íõ¡<wbr>ªñé¹<wbr>ë¹öè§
+íø»¡ã³ì<wbr>·õè<wbr>àãõâ¡<wbr>çèò
+synchro ·ñé§<wbr>êí§<wbr>µñç<wbr>·ó<wbr>ë¹éò<wbr>·õè<wbr>à»ç¹
+modulator «öè§<wbr>·ó<wbr>ë¹éò<wbr>·õè
+modulate êñ­­ò³íô¹¾ø·íéò§<wbr>íô§
+r áåð<wbr>êñ­­ò³<wbr>»éí¹<wbr>¡åñº
+c&nbsp; êèç¹<wbr>áíàµíãì<wbr>·ó<wbr>ë¹éò<wbr>·õè<wbr>à»ç¹ demodulator 
+«öè§<wbr>á»å§<wbr>êñ­­ò³<wbr>ãëé<wbr>¡åñº<wbr>áò<wbr>íâùè<wbr>ã¹<wbr>åñ¡é³ð<wbr>·õè
+unmodulated
+<center><img src="pic8.gif" height=450 width=640></center>
+
+<center><b>ãù»<wbr>·õè 8</b></center>
+
+<center><b></b>&nbsp;</center>
+
+<center><b></b></center>
+
+<center><img src="pic9.gif" height=352 width=638></center>
+
+<center><b>ãù»<wbr>·õè 9</b></center>
+ã¹<wbr>·ò§»¯ôºñµô<wbr>¨ãô§æ¨ð<wbr>äáè<wbr>ãªé<wbr>ãðºº<wbr>·õè<wbr>à»ç¹
+d-c ëã×í a-c à¾õâ§<wbr>íâèò§<wbr>ã´<wbr>íâèò§<wbr>ë¹öè§
+áµè<wbr>¨ð<wbr>ãçá<wbr>êèç¹<wbr>»ãð¡íº<wbr>·ñé§<wbr>êí§<wbr>áºº<wbr>à¢éò<wbr>´éçâ<wbr
+>¡ñ¹<wbr>â´â<wbr>ãªé
+modulator áåð demodulator à¾×èí<wbr>á»å§<wbr>êñ­­ò³
+³ ¨ø´<wbr>µèò§æ<wbr>¢í§<wbr>ãðºº
+<h2>
+<a name="discrete"></a></h2>
+
+<h2>
+<font color="#993366">ãðºº<wbr>¤çº<wbr>¤øá<wbr>·õè<wbr>áõ<wbr>¡òã<wbr>êøèá<wbr>µñç<wbr
+>íâèò§<wbr>¢í§<wbr>êñ­­ò³<wbr>áåð<wbr>ãðºº<wbr>¤çº<wbr>¤øá<wbr>·õè<wbr>áõ<wbr
+>êñ­­ò³<wbr>äáè<wbr>µèí<wbr>à¹×èí§
+(sampled-data and discrete-data control system)</font></h2>
+ãðºº<wbr>¤çº<wbr>¤øá<wbr>·õè<wbr>áõ<wbr>¡òã<wbr>êøèá<wbr>µñç<wbr>íâèò§<wbr>¢í§<wbr
+>êñ­­ò³<wbr>áåð<wbr>ãðºº<wbr>¤çº<wbr>¤øá<wbr>áºº<wbr>êñ­­ò³´ô¨ôµíå<wbr>¨ð<wbr
+>áõ<wbr>êñ­­ò³<wbr>·õè<wbr>íâùè<wbr>ã¹<wbr>åñ¡é³ð<wbr>¢í§<wbr>¢ºç¹<wbr>¢í§<wbr
+>¾ñåêì<wbr>ëã×í<wbr>ãëñê<wbr>·õè<wbr>à»ç¹<wbr>àªô§<wbr>µñç<wbr>àå¢
+â´â<wbr>»¡µô<wbr>ãðºº<wbr>·õè<wbr>áõ<wbr>¡òã<wbr>êøèá<wbr>µñç<wbr>íâèò§<wbr>¢í§<wbr
+>êñ­­ò³<wbr>¨ð<wbr>ëáòâ<wbr>¶ö§<wbr>ãðºº<wbr>·õè<wbr>áõ<wbr>êñ­­ò³<wbr>ã¹<wbr
+>åñ¡é³ð<wbr>¢í§<wbr>¢ºç¹<wbr>¢í§¾ñåêì 
+êèç¹<wbr>ãðºº<wbr>¤çº<wbr>¤øá<wbr>áºº<wbr>êñ­­ò³<wbr>´ô¨ôµíå<wbr>¨ð<wbr>ëáòâ<wbr
+>¶ö§<wbr>ãðºº<wbr>·õè<wbr>áõ<wbr>¤íá¾ôçàµíãì<wbr>ëã×í<wbr>íø»¡ã³ì<wbr>µãç¨<wbr>¨ñº<wbr
+>êñ­­ò³<wbr>áºº<wbr>´ô¨ôµíå<wbr>à»ç¹<wbr>êèç¹<wbr>»ãð¡íº
+ã¹<wbr>·õè<wbr>¹õé<wbr>ãðºº<wbr>¤çº<wbr>¤øá<wbr>·õè<wbr>áõ<wbr>êñ­­ò³<wbr>äáè<wbr
+>µèí<wbr>à¹×èí§<wbr>¨ð<wbr>áõ<wbr>¤çòá<wbr>ëáòâ<wbr>¤ãíº<wbr>¤åøá<wbr>¶ö§<wbr>·ñé§<wbr
+>ãðºº<wbr>áºº<wbr>êøèá<wbr>µñç<wbr>íâèò§<wbr>¢í§<wbr>êñ­­ò³<wbr>áåð<wbr>ãðºº<wbr
+>áºº<wbr>´ô¨ôµíå
+<center><img src="pic10.gif" height=221 width=640></center>
+
+<center><b>ãù»<wbr>·õè 10</b></center>
+ãðºº<wbr>·õè<wbr>áõ<wbr>êñ­­ò³<wbr>äáè<wbr>µèí<wbr>à¹×èí§<wbr>¨ð<wbr>µãç¨<wbr>¨ñº<wbr
+>êñ­­ò³<wbr>à¢éò<wbr>áò<wbr>ã¹<wbr>åñ¡é³ð<wbr>¢í§<wbr>¾ñåêì<wbr>â´â<wbr>áµè<wbr>åð<wbr
+>¾ñåêì<wbr>¨ð<wbr>ãªé<wbr>àçåò<wbr>à¾õâ§<wbr>ªèç§<wbr>êñé¹æ<wbr>à·èò<wbr>¹ñé¹
+´ñ§<wbr>¹ñé¹<wbr>ãðºº<wbr>¨ð<wbr>äáè<wbr>ä´é<wbr>ãñº<wbr>¢éí<wbr>áùå<wbr>¢í§<wbr
+>êñ­­ò³<wbr>ã¹<wbr>ªèç§<wbr>àçåò<wbr>·õè<wbr>íâùè<wbr>ãðëçèò§<wbr>¾ñåêì<wbr>·õè<wbr
+>íâùè<wbr>µô´<wbr>¡ñ¹<wbr>àåâ
+ãù»<wbr>·õè 10 áê´§<wbr>¶ö§<wbr>¡òã<wbr>·ó<wbr>§ò¹<wbr>¢í§<wbr>ãðºº<wbr>¤çº<wbr
+>¤øá<wbr>·õè<wbr>áõ<wbr>¡òã<wbr>êøèá<wbr>µñç<wbr>íâèò§<wbr>¢í§<wbr>êñ­­ò³
+êñ­­ò³<wbr>íô¹¾ø·
+r(t) ·õè<wbr>à»ç¹<wbr>êñ­­ò³<wbr>áºº<wbr>µèí<wbr>à¹×èí§<wbr>¶ù¡<wbr>êè§<wbr>à¢éò<wbr
+>ãðºº<wbr>áåð<wbr>à»ãõâº<wbr>à·õâº¡ñºêñ­­ò³<wbr>»éí¹<wbr>¡åñº
+c(t) ·õè<wbr>à»ç¹<wbr>êñ­­ò³<wbr>áºº<wbr>µèí<wbr>à¹×èí§<wbr>àªè¹<wbr>¡ñ¹
+¨ð<wbr>ä´é<wbr>êñ­­ò³<wbr>¤èò<wbr>¤çòá<wbr>¤åò´<wbr>à¤å×èí¹
+e(t) ·õè<wbr>µèí<wbr>à¹×èí§
+áåð<wbr>êè§<wbr>µèí<wbr>ä»<wbr>à¾×èí<wbr>êøèá<wbr>µñç<wbr>íâèò§<wbr>êñ­­ò³<wbr>â´â<wbr
+>íø»¡ã³ì<wbr>êøèá<wbr>µñçíâèò§
+(sampler) ä´é<wbr>êñ­­ò³<wbr>·õè<wbr>à»ç¹<wbr>¢ºç¹<wbr>¢í§¾ñåêì<wbr>
+â´â<wbr>»¡µô<wbr>íø»¡ã³ì<wbr>êøèá<wbr>µñç<wbr>íâèò§<wbr>¨ð<wbr>êøèá<wbr>µñçíâèò§<wbr
+>êñ­­ò³<wbr>ã¹<wbr>íñµãò<wbr>·õè<wbr>¤§<wbr>·õè
+áµè<wbr>ã¹<wbr>ºò§<wbr>¡ã³õ<wbr>¡òã<wbr>êøèá<wbr>µñç<wbr>íâèò§<wbr>íò¨<wbr>¨ð<wbr
+>íâùè<wbr>ã¹<wbr>åñ¡é³ð<wbr>·õè<wbr>à»ç¹
+periodic, cyclic, multirate, skip-rate, random, áåð pulse-width modulated
+<center><img src="pic11.gif" height=233 width=640></center>
+
+<center><b>ãù»<wbr>·õè 11</b></center>
+ãù»<wbr>·õè 11 áê´§<wbr>á¼¹<wbr>¼ñ§<wbr>¢í§<wbr>ãðºº<wbr>¤çº<wbr>¤øá<wbr>áºº´ô¨ôµíå
+ã¹<wbr>ãðºº<wbr>¹õé<wbr>¨ó<wbr>à»ç¹<wbr>µéí§<wbr>áõ<wbr>µñç<wbr>á»å§<wbr>êñ­­ò³<wbr
+>¨ò¡<wbr>í¹òåçí¡<wbr>ä»<wbr>à»ç¹<wbr>´ô¨ôµíå
+áåð<wbr>µñç<wbr>á»å§<wbr>êñ­­ò³<wbr>¨ò¡<wbr>´ô¨ôµíå<wbr>¡åñº<wbr>áò<wbr>à»ç¹<wbr
+>í¹òåçí¡<wbr>à¹×èí§<wbr>¨ò¡<wbr>¤íá¾ôçàµíãì<wbr>êòáòã¶<wbr>»ãðáçå<wbr>¼å<wbr>¢éí<wbr
+>áùå<wbr>áåð<wbr>êè§<wbr>¼å<wbr>åñ¾¸ì<wbr>íí¡<wbr>áò<wbr>à»ç¹<wbr>¢éí<wbr>áùå<wbr
+>·õè<wbr>à»ç¹<wbr>´ô¨ôµíå<wbr>à·èò<wbr>¹ñé¹
+
+<p>àíò·ì¾ø·<wbr>¢í§<wbr>íø»¡ã³ì<wbr>êøèá<wbr>µñç<wbr>íâèò§<wbr>¨ð<wbr>à»ç¹<wbr>¢ºç¹<wbr
+>¢í§<wbr>¾ñåêì<wbr>â´â<wbr>·õè<wbr>áíá¾åô¨ù´<wbr>¢í§<wbr>áµè<wbr>åð<wbr>¾ñåêì<wbr>¨ð<wbr
+>à·èò<wbr>¡ñº<wbr>áíá¾åô¨ù´<wbr>¢í§<wbr>êñ­­ò³<wbr>íô¹¾ø·<wbr>·õè<wbr>µã§<wbr>¡ñº<wbr
+>ªèç§<wbr>àçåò<wbr>·õè<wbr>íâùè<wbr>ã¹<wbr>ªèç§<wbr>¤çòá<wbr>¡çéò§<wbr>¢í§<wbr>¾ñåêì<wbr>¹ñé¹
+áµè<wbr>¡òã<wbr>çôà¤ãòðëì<wbr>ãðºº<wbr>·õè<wbr>êøèá<wbr>µñç<wbr>íâèò§<wbr>êñ­­ò³<wbr>â´â<wbr
+>áõ<wbr>¤çòá<wbr>¡çéò§<wbr>¢í§<wbr>¾ñåêì<wbr>¹ñé¹<wbr>¨ð<wbr>µéí§<wbr>íòèñâ<wbr>¡ãðºç¹<wbr
+>¡òã<wbr>·õè<wbr>«ñº<wbr>«éí¹
+´ñ§<wbr>¹ñé¹<wbr>¶éò<wbr>àíò·ì¾ø·<wbr>¢í§<wbr>íø»¡ã³ì<wbr>êøèá<wbr>µñç<wbr>íâèò§<wbr>áõ<wbr
+>¤çòá<wbr>¡çéò§<wbr>¢í§<wbr>¾ñåêì<wbr>¹éíâ<wbr>áò¡<wbr>àá×èí<wbr>à·õâº¡ñº<wbr>¤èò
+time constant ¢í§<wbr>êèç¹<wbr>¢í§<wbr>ãðºº<wbr>·õè<wbr>áõ<wbr>êñ­­ò³<wbr>µèí<wbr
+>à¹×èí§<wbr>áåð<wbr>àá×èí<wbr>à·õâº<wbr>¡ñº<wbr>ªèç§<wbr>àçåò<wbr>ãðëçèò§<wbr>¡òã<wbr
+>êøèá<wbr>µñç<wbr>íâèò§<wbr>áµè<wbr>åð<wbr>¤ãñé§
+¡ç<wbr>¨ð<wbr>êòáòã¶<wbr>á·¹<wbr>·õè<wbr>¢ºç¹<wbr>¢í§<wbr>¾ñåêì<wbr>´éçâ<wbr>¢ºç¹<wbr
+>¢í§<wbr>íôá¾ñåêì
+áåð<wbr>ã¹<wbr>¡òã<wbr>çôà¤ãòðëì<wbr>ãðºº<wbr>¡ç<wbr>¨ð<wbr>êòáòã¶<wbr>á·¹<wbr>·õè<wbr
+>íø»¡ã³ì<wbr>êøèá<wbr>µñç<wbr>íâèò§<wbr>´éçâ<wbr>íø»¡ã³ì<wbr>êøèá<wbr>µñç<wbr>íâèò§<wbr>ã¹<wbr
+>íø´á¤µô (ideal sampler) «öè§<wbr>áõ<wbr>àíò·ì¾ø·<wbr>à»ç¹<wbr>¢ºç¹<wbr>¢í§<wbr>íôá¾ñåêì<wbr>ä´é
+
+<p>¶éò<wbr>íô¹¾ø·<wbr>¢í§<wbr>íø»¡ã³ì<wbr>êøèá<wbr>µñç<wbr>íâèò§<wbr>ã¹<wbr>íø´á¤µô<wbr
+>à»ç¹<wbr>¿ñ§¡ìªñ¹<wbr>·õè<wbr>µèí<wbr>à¹×èí§
+e(t) ¡ç<wbr>¨ð<wbr>ä´é<wbr>àíò·ì¾ø·<wbr>¢í§<wbr>íø»¡ã³ì<wbr>êøèá<wbr>µñç<wbr>íâèò§<wbr>à»ç¹
+e*(t) ´ñ§<wbr>êá¡òã<wbr>µèí<wbr>ä»<wbr>¹õé
+<center><img src="exp1.gif" height=56 width=176></center>
+â´â<wbr>·õè t à»ç¹<wbr>ªèç§<wbr>àçåò<wbr>ãðëçèò§<wbr>¡òã<wbr>êøèá<wbr>µñç<wbr>íâèò§<wbr>áµè<wbr
+>åð<wbr>¤ãñé§
+
+<p>¨ò¡<wbr>êá¡òã<wbr>¨ð<wbr>àëç¹<wbr>çèò<wbr>íôá¾ñåêì<wbr>áµè<wbr>åð<wbr>íôá¾ñåêì<wbr>¨ð<wbr
+>áõ<wbr>¾×é¹<wbr>·õè<wbr>à·èò<wbr>¡ñº<wbr>¤èò<wbr>¢í§<wbr>¿ñ§¡ìªñ¹
+e(t)&nbsp; ³ ¢³ð<wbr>àçåò<wbr>·õè
+t = nt ¢í§<wbr>íôá¾ñåêì<wbr>¹ñé¹
+<center><img src="pic12.gif" height=450 width=501></center>
+<center><b>ãù»<wbr>·õè 12</b></center>
+ã¹<wbr>ãðºº<wbr>¤çº<wbr>¤øá<wbr>·õè<wbr>áõ<wbr>¡òã<wbr>êøèá<wbr>µñçíâèò§<wbr>êñ­­ò³<wbr
+>áñ¡<wbr>¨ð<wbr>áõ<wbr>íø»¡ã³ì<wbr>·õè<wbr>àãõâ¡<wbr>çèò
+data hold device ´ñ§<wbr>áê´§<wbr>ã¹<wbr>ãù»<wbr>·õè
+10&nbsp; íø»¡ã³ì<wbr>¹õé<wbr>¨ð<wbr>êãéò§<wbr>êñ­­ò³<wbr>·õè<wbr>µèí<wbr>à¹×èí§<wbr>¢öé¹<wbr
+>áò<wbr>ãëáè<wbr>â´â<wbr>á»å§<wbr>¡åñº<wbr>¨ò¡<wbr>êñ­­ò³<wbr>·õè<wbr>¶ù¡<wbr>êøèá<wbr
+>µñçíâèò§<wbr>&nbsp;
+hold device ·õè<wbr>ãªé<wbr>â´â<wbr>·ñèç<wbr>ä»<wbr>¨ð<wbr>íâùè<wbr>ã¹<wbr>åñ¡é³ð<wbr>¢í§
+zero-order hold «öè§<wbr>áõ<wbr>¤çòá<wbr>êñá¾ñ¹¸ì<wbr>ãðëçèò§<wbr>íô¹¾ø·<wbr>¡ñº<wbr>àíò·ì¾ø·<wbr
+>´ñ§<wbr>áê´§<wbr>ã¹<wbr>ãù»<wbr>·õè 12 áåð<wbr>êòáòã¶<wbr>à¢õâ¹<wbr>à»ç¹<wbr>êá¡òã<wbr
+>·ò§<wbr>¤³ôµèòêµãì<wbr>ä´é<wbr>´ñ§<wbr>¹õé
+<center>h(t) = e(nt)&nbsp;&nbsp;&nbsp; for&nbsp;&nbsp; nt &lt; t &lt; (n+1)t</center>
+â´â<wbr>·õè t à»ç¹<wbr>ªèç§<wbr>àçåò<wbr>ãðëçèò§<wbr>¡òã<wbr>êøèá<wbr>µñç<wbr>íâèò§<wbr
+>áµè<wbr>åð<wbr>¤ãñé§
+
+<h2>
+<a name="time_domain_analysis"></a></h2>
+<h2>
+<font color="#993366">¡òã<wbr>çôà¤ãòðëì<wbr>â´àá¹<wbr>¢í§<wbr>àçåò<wbr>ã¹<wbr>ãðºº<wbr
+>¤çº<wbr>¤øá<wbr>áºº<wbr>»éí¹<wbr>¡åñº
+</font></h2>
+â´â<wbr>»¡µô<wbr>áåéç<wbr>¡òã<wbr>çôà¤ãòðëì<wbr>¡òã<wbr>µíº<wbr>ê¹í§<wbr>¢í§<wbr>ãðºº<wbr
+>¤çº<wbr>¤øá<wbr>áºº<wbr>»éí¹<wbr>¡åñº<wbr>·õè<wbr>áõ<wbr>µèí<wbr>íô¹¾ø·<wbr>áñ¡<wbr>¨ð<wbr
+>çôà¤ãòðëì<wbr>ã¹<wbr>â´àá¹<wbr>¢í§<wbr>àçåò<wbr>à¾×èí<wbr>à»ãõâº<wbr>à·õâº<wbr>¤çòá<wbr
+>ã¡åé<wbr>à¤õâ§<wbr>¡ñ¹<wbr>¢í§<wbr>êñ­­ò³<wbr>ãðëçèò§<wbr>êñ­­ò³<wbr>íô¹¾ø·<wbr>íéò§<wbr
+>íô§<wbr>áåð<wbr>êñ­­ò³<wbr>àíò·ì¾ø·
+<p>»¡µô<wbr>¨ð<wbr>áºè§<wbr>¿ñ§¡ìªñ¹<wbr>¢í§ time response íí¡<wbr>à»ç¹ 2 êèç¹<wbr
+>¤×í transient response áåð steady-state response ´ñ§<wbr>êá¡òã<wbr>µèí<wbr>ä»<wbr>¹õé
+<center>c(t) = c<sub>t</sub>(t) + c<sub>ss</sub>(t)</center>
+â´â<wbr>·õè c(t) ¤×í time response&nbsp;&nbsp; 
+c<sub>t</sub>(t) ¤×í transient response áåð c<sub>ss</sub>(t) ¤×í steady-state response
+<p>steady-state response ¡ç<wbr>¤×í<wbr>¿ñ§¡ìªñ¹<wbr>¢í§<wbr>¡òã<wbr>µíº<wbr>ê¹í§<wbr
+>àá×èí<wbr>àçåò<wbr>à¢éò<wbr>êùè infinity&nbsp;&nbsp; 
+´ñ§<wbr>¹ñé¹<wbr>àá×èí<wbr>àçåò<wbr>à¢éò<wbr>ã¡åé infinity ¨ð<wbr>ä´é<wbr>çèò transient response 
+à¢éò<wbr>ã¡åé<wbr>èù¹âì ã¹<wbr>ãðºº<wbr>¤çº<wbr>¤øá<wbr>áºº<wbr>»éí¹<wbr>¡åñº<wbr
+>¹ñé¹ transient response áñ¡<wbr>¨ð<wbr>à¡ô´<wbr>¨ò¡<wbr>¤çòá<wbr>à©×èíâ<wbr>ëã×í<wbr
+>¤çòá<wbr>àêõâ´<wbr>·ò¹<wbr>¢í§<wbr>ãðºº
+steady-state response ¨ð<wbr>ºí¡<wbr>¶ö§<wbr>¤çòá<wbr>à·õèâ§<wbr>µã§<wbr>ã¹<wbr
+>¡òã<wbr>µíº<wbr>ê¹í§<wbr>¢í§<wbr>ãðºº 
+¶éò steady-state response áõ<wbr>¤èò<wbr>äáè<wbr>µã§<wbr>¡ñº<wbr>íô¹¾ø·<wbr>¢í§<wbr>ãðºº<wbr
+>¨ð<wbr>àãõâ¡<wbr>çèò<wbr>ãðºº<wbr>¹ñé¹<wbr>áõ steady-state error
+
+<h2><a name="test_signal"></a></h2>
+<h2><font color="#993366">êñ­­ò³<wbr>íô¹¾ø·<wbr>·õè<wbr>ãªé<wbr>çôà¤ãòðëì transient 
+ã¹<wbr>ãðºº<wbr>¤çº<wbr>¤øá<wbr>áºº<wbr>»éí¹<wbr>¡åñº
+</font></h2>
+ã¹<wbr>¡òã<wbr>çôà¤ãòðëì<wbr>áåð<wbr>íí¡<wbr>áºº<wbr>ãðºº<wbr>¨ó<wbr>à»ç¹<wbr>µéí§<wbr
+>áõ<wbr>¿ñ§¡ìªñ¹<wbr>íô¹¾ø·<wbr>ã¹<wbr>ãù»<wbr>áºº<wbr>¾×é¹<wbr>°ò¹<wbr
+>íâèò§<wbr>¹éíâ 3 ãù»<wbr>áºº 
+à¾×èí<wbr>ãªé<wbr>·´êíº<wbr>»ãðêô·¸ôàò¾<wbr>¢í§<wbr>ãðºº â´â<wbr>ã¹<wbr>¡òã<wbr>çôà¤ãòðëì<wbr
+>ã¹<wbr>â´àá¹<wbr>¢í§<wbr>àçåò<wbr>áñ¡<wbr>¨ð<wbr>áõ<wbr>¿ñ§¡ìªñ¹<wbr>íô¹¾ø·<wbr
+>¾×é¹<wbr>°ò¹<wbr>·õè<wbr>ãªé<wbr>·´êíº 3 ãù»<wbr>áºº<wbr>´ñ§<wbr>µèí<wbr>ä»<wbr>¹õé
+<ol>
+<li>
+step displacement input
+<ul>r(t) = r&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; t &gt; 0<br>
+r(t) = 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; t &lt; 0<br>
+ëã×í&nbsp;&nbsp; r(t) = ru(t)</ul>
+â´â<wbr>·õè r à»ç¹<wbr>¤èò<wbr>¤§<wbr>·õè<wbr>áåð u(t) à»ç¹ unit step function<br>
+<br>
+</li>
+<li>
+step velocity input (ramp function)
+<ul>r(t) = rt&nbsp;&nbsp;&nbsp;&nbsp; t &gt; 0<br>
+r(t) = 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; t &lt; 0<br>
+ëã×í&nbsp;&nbsp; r(t) = rtu(t)<br></ul>
+<br>
+</li>
+<li>
+acceleration input (parabolic function)
+<ul>r(t) = rt<sup>2</sup>&nbsp;&nbsp;&nbsp; t &gt; 0<br>
+r(t) = 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; t &lt; 0<br>
+ëã×í&nbsp;&nbsp; r(t) = rt<sup>2</sup>u(t)</ul>
+<br>
+</li>
+</ol>
+ãù»<wbr>·õè 13 ¨ð<wbr>áê´§<wbr>ãù»<wbr>¡ãò¿<wbr>¢í§<wbr>¿ñ§¡ìªñ¹<wbr>¾×é¹<wbr>°ò¹<wbr
+>·ñé§ 3 ´ñ§<wbr>¡åèòç
+<center><img src="pic13.gif"></center>
+<center><b>ãù»<wbr>·õè 13</b></center>
+
+<h2><a name="performance_characteristic"></a></h2>
+<h2><font color="#993366">åñ¡é³ð<wbr>·õè<wbr>ãªé<wbr>ºè§<wbr>ªõé<wbr>»ãðêô·¸ôàò¾<wbr>¢í§<wbr
+>ãðºº<wbr>¤çº<wbr>¤øá<wbr>áºº<wbr>»éí¹<wbr>¡åñº
+(time domain performance characteristics of feedback control systems)
+</font></h2>
+<ol>
+<li>
+steady state performance<br>
+¤èò<wbr>¹õé<wbr>¨ð<wbr>ä´é<wbr>¨ò¡<wbr>¡òã<wbr>ëò<wbr>¤èò steady-state error ¢í§<wbr
+>¡òã<wbr>µíº<wbr>ê¹í§<wbr>µèí<wbr>¿ñ§¡ìªñ¹<wbr>íô¹¾ø·<wbr>¾×é¹<wbr>°ò¹ 3 áºº 
+´ñ§<wbr>¡åèòç<wbr>áò<wbr>ã¹<wbr>ëñç<wbr>¢éí<wbr>·õè<wbr>áåéç
+<br><br>
+</li>
+<li>transient performance<br>
+<center><img src="pic14.gif"><br>
+<b>ãù»·õè 14</b></center>
+¤èò<wbr>¹õé<wbr>¨ð<wbr>çôà¤ãòðëì<wbr>â´â<wbr>¡òã<wbr>ãêè unit-step function à»ç¹<wbr>íô¹¾ø·<wbr
+>íéò§<wbr>íô§<wbr>áåð<wbr>¨ð<wbr>ä´é<wbr>¼å<wbr>µíº<wbr>ê¹í§<wbr>´ñ§<wbr>ãù»<wbr
+>·õè 14 &nbsp
+åñ¡é³ð<wbr>·õè<wbr>êó¤ñ­<wbr>¢í§<wbr>¼å<wbr>µíº<wbr>ê¹í§<wbr>¹õé<wbr>ä´éá¡è
+<ul>
+<li>overshoot
+<ul>à»ç¹<wbr>¤èò error ·õè<wbr>áò¡<wbr>·õè<wbr>êø´<wbr>ãðëçèò§<wbr>íô¹¾ø·<wbr>áåð<wbr>àíò·ì¾ø· 
+¤èò<wbr>¹õé<wbr>¨ð<wbr>ãªé<wbr>ã¹<wbr>¡òã<wbr>»ãðáò³<wbr>¤çòá<wbr>àê¶õâã<wbr>¢í§<wbr>ãðºº 
+¤èò overshoot ¨ð<wbr>çñ´<wbr>à»ç¹<wbr>êñ´<wbr>êèç¹<wbr>à·õâº<wbr>¡ñº<wbr>¤èò<wbr>êø´<wbr
+>·éòâ<wbr>ëã×í<wbr>¤èò<wbr>íô¹¾ø·<wbr>íéò§<wbr>íô§<wbr>´ñ§<wbr>¹õé
+<ul>percent overshoot = maximum overshoot / final desired value x 100</ul></ul></li>
+<li>time delay
+<ul>¤èò time delay t<sub>d</sub> 
+à»ç¹<wbr>ªèç§<wbr>àçåò<wbr>·õè<wbr>ãªé<wbr>ã¹<wbr>¡òã<wbr>µíº<wbr>ê¹í§<wbr>¢í§<wbr
+>ãðºº<wbr>µñé§áµè<wbr>àãôèá<wbr>µé¹<wbr>¨¹<wbr>¡ãð·ñè§<wbr>àíò·ì¾ø·<wbr>áõ<wbr>¤èò<wbr>à»ç¹ 50 % 
+¢í§<wbr>¤èò<wbr>íô¹¾ø·<wbr>íéò§<wbr>íô§</ul></li>
+<li>rise time
+<ul>¤èò rise time t<sub>r</sub> 
+à»ç¹<wbr>ªèç§<wbr>àçåò<wbr>µñé§áµè<wbr>àíò·ì¾ø·<wbr>áõ<wbr>¤èò<wbr>à»ç¹ 10 % ¨¹<wbr>¶ö§ 90 % 
+¢í§<wbr>¤èò<wbr>íô¹¾ø·<wbr>íéò§<wbr>íô§</ul></li>
+<li>setting time
+<ul>¤èò setting time t<sub>s</sub> 
+à»ç¹<wbr>ªèç§<wbr>àçåò<wbr>µñé§áµè<wbr>àãôèá<wbr>µé¹<wbr>¨¹<wbr>¡ãð·ñè§<wbr>¡òã<wbr>á¡çè§<wbr
+>¢í§<wbr>àíò·ì¾ø·<wbr>å´<wbr>å§<wbr>íâùè<wbr>ã¹<wbr>¢íº<wbr>à¢µ<wbr>·õè<wbr>¡óë¹´ 
+â´â<wbr>»¡µô<wbr>áåéç<wbr>¢íº<wbr>à¢µ<wbr>¹õé<wbr>¨ð<wbr>íâùè<wbr>ã¹<wbr>ªèç§ 5 % 
+¢í§<wbr>íô¹¾ø·<wbr>íéò§<wbr>íô§</ul></li>
+</ul>
+¹í¡<wbr>¨ò¡<wbr>¹õé<wbr>âñ§<wbr>áõ<wbr>åñ¡é³ð<wbr>·õè<wbr>êó¤ñ­<wbr>í×è¹æ<wbr>íõ¡ 
+àªè¹ damping ratio, damping factor 
+áåð undamped natural frequency «öè§<wbr>äáè<wbr>êòáòã¶<wbr>áê´§<wbr>ã¹<wbr>ãù»<wbr>·õè 14 ä´é 
+áµè<wbr>¨ð<wbr>¡åèòç<wbr>¶ö§<wbr>ã¹<wbr>ëñç<wbr>¢éí<wbr>¶ñ´<wbr>ä»
+</li>
+</ol>
+
+<h2><a name="characteristic_equation"></a></h2>
+<h2>
+<font color="#993366">characteristic equation 
+¢í§<wbr>ãðºº<wbr>¤çº<wbr>¤øá<wbr>áºº<wbr>»éí¹<wbr>¡åñº</font></h2>
+ãù»<wbr>·õè 15 à»ç¹<wbr>á¼¹<wbr>¼ñ§<wbr>¢í§ transfer function ³ µóáë¹è§<wbr>µèò§æ<wbr>¢í§<wbr
+>ãðºº<wbr>¤çº<wbr>¤øá<wbr>áºº<wbr>»éí¹<wbr>¡åñº
+<center><img src="pic15.gif"><br>
+<b>ãù»·õè 15</b></center>
+¨ò¡<wbr>á¼¹<wbr>¼ñ§<wbr>¨ð<wbr>ä´é closed-loop transfer function à»ç¹<wbr>´ñ§<wbr>¹õé
+<center>m(s)&nbsp =&nbsp c(s) / r(s) = g(s) / [1 + g(s) h(s)]</center>
+characteristic equation ¢í§<wbr>ãðºº<wbr>¤çº<wbr>¤øá<wbr>áºº<wbr>»éí¹<wbr>¡åñº<wbr
+>¨ð<wbr>ä´é<wbr>áò<wbr>¨ò¡<wbr>¡òã<wbr>·ó<wbr>µñç<wbr>ëòã<wbr>¢í§ 
+closed-loop transfer function ãëé<wbr>à»ç¹<wbr>èù¹âì<wbr>´ñ§<wbr>¹õé
+<center>1 + g(s) h(s)&nbsp =&nbsp 0</center>
+<br>¾ô¨òã³ò closed-loop transfer function ´ñ§<wbr>µèí<wbr>ä»<wbr>¹õé
+<center>m(s)&nbsp =&nbsp c(s) / r(s)&nbsp =&nbsp 
+[ k (s + z<sub>1</sub>) (s + z<sub>2</sub>) . . . (s + z<sub>m</sub>) ] 
+/ [ (s + p<sub>1</sub>) (s + p<sub>2</sub>) . . . (s + p<sub>n</sub>) ]</center>
+¨ð<wbr>ä´é<wbr>çèò -z<sub>1</sub>, -z<sub>2</sub>, . . . , -z<sub>m</sub> à»ç¹ zero ¢í§ transfer function 
+áåð -p<sub>1</sub>, -p<sub>2</sub>, . . . , -p<sub>n</sub> à»ç¹ pole ¢í§ transfer function 
+íõ¡<wbr>·ñé§<wbr>âñ§<wbr>à»ç¹<wbr>ãò¡<wbr>¢í§ characteristic equation íõ¡<wbr>´éçâ 
+¶éò m(s) à»ç¹<wbr>¼å<wbr>ëòã<wbr>·õè<wbr>»ãð¡íº<wbr>´éçâ<wbr>àèé<wbr>áåð<wbr>êèç¹<wbr
+>·õè<wbr>à»ç¹ polynomial ¨ð<wbr>ä´é<wbr>çèò pole áåð zero ¢í§ m(s) 
+»ãð¡íº<wbr>´éçâ<wbr>¨ó¹ç¹<wbr>¨ãô§<wbr>ëã×í<wbr>¤ùè conjugate ¢í§<wbr
+>¨ó¹ç¹<wbr>àªô§<wbr>«éí¹<wbr>à·èò<wbr>¹ñé¹ 
+áåð<wbr>êòáòã¶<wbr>à¢õâ¹ closed-loop transfer function ä´é<wbr>íõ¡<wbr>áºº<wbr>ë¹öè§<wbr>´ñ§<wbr>¹õé
+<center><img src="exp2.gif"></center>
+â´â<wbr>·õè<img src="exp3.gif">à»ç¹ pole ·õè<wbr>à»ç¹<wbr>¨ó¹ç¹<wbr>¨ãô§ 
+áåð<img src="exp4.gif">à»ç¹ pole ·õè<wbr>à»ç¹<wbr>¤ùè conjugate ¢í§<wbr>¨ó¹ç¹<wbr>àªô§<wbr>«éí¹
+<br><br>¾ô¨òã³ò<wbr>¼å<wbr>µíº<wbr>ê¹í§<wbr>¢í§<wbr>ãðºº c(t) ¨ð<wbr>ä´é<wbr>çèò
+<center><img src="exp5.gif"></center>
+á·¹<wbr>¤èò r(s) áåð<wbr>¤èò m(s) â´â<wbr>·õè r(t) à»ç¹ unit step function ¨ð<wbr>ä´é<wbr
+>êá¡òã<wbr>´ñ§<wbr>¹õé
+<center><img src="exp6.gif"></center>
+áåéç<wbr>áºè§<wbr>àèé<wbr>êèç¹<wbr>âèíâ<wbr>´ñ§<wbr>¹õé
+<center><img src="exp7.gif"></center>
+â´â<wbr>·õè a, b<sub>i</sub>, c<sub>j</sub>, áåð d<sub>j</sub> 
+à»ç¹<wbr>¤èò<wbr>¤§<wbr>·õè ã¹<wbr>·õè<wbr>¹õé<wbr>êááøµô<wbr>çèò<wbr>äáè<wbr>áõ pole 
+µñç<wbr>ã´<wbr>áõ<wbr>¤èò<wbr>«éó<wbr>¡ñ¹ 
+¨ò¡<wbr>µòãò§<wbr>¢í§ laplace transform ¨ð<wbr>ä´é c(t) à»ç¹<wbr>´ñ§<wbr>¹õé
+<center><img src="exp8.gif"></center>
+
+
+<h2><a name="summary"></a></h2>
+<h2>
+<font color="#993366">º·<wbr>êãø»</font></h2>
+
+<h2>
+<a name="reference"></a></h2>
+<h2>
+<font color="#993366">àí¡<wbr>êòã<wbr>íéò§<wbr>íô§</font></h2>
+
+<ul>
+<li>
+àí¡<wbr>êòã<wbr>©ºñº<wbr>·õè
+1</li>
+
+<li>
+àí¡<wbr>êòã<wbr>©ºñº<wbr>·õè
+2</li>
+
+<li>
+àí¡<wbr>êòã<wbr>©ºñº<wbr>·õè
+3</li>
+</ul>
+
+<hr>[ <a href="http://www.cpe.ku.ac.th/course/204471/lesson.html">º·àãõâ¹</a>
+] [ <a href="http://www.cpe.ku.ac.th/course/204471/">204471</a> ] [ <a href="http://www.cpe.ku.ac.th/course/">ãòâçôªò</a>
+]
+<br>[ <a href="http://www.cpe.ku.ac.th">àò¤çôªòçôèç¡ããá¤íá¾ôçàµíãì</a>
+] [ <a href="http://www.eng.ku.ac.th">¤³ðçôèç¡ããáèòêµãì</a>
+] [ <a href="http://www.ku.ac.th">áëòçô·âòåñâà¡éµãèòêµãì</a>
+]
+</body>
+</html>

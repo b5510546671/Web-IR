@@ -1,0 +1,131 @@
+<!doctype html public "-//w3c//dtd xhtml 1.0 strict//en" "http://www.w3.org/tr/xhtml1/dtd/xhtml1-strict.dtd">
+<!-- saved from url=(0014)about:internet -->
+<html style="height:100%; width:100%; margin: 0; overflow: hidden;" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>คณะกรรมการต่างๆ</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="" />
+		<meta name="description" content="" />
+		<meta name="generator" content="[xflip version 2.0.5] at http://www.xflip.com" />
+		<script type="text/javascript" src="files/js/swfobject.js"></script>
+		<script type="text/javascript" src="files/js/swfaddress.js"></script>
+    <script type="text/javascript">
+
+		function setbookprop(name, value) {
+			var book = swfobject.getobjectbyid('magazine');
+			//alert('book:' + book + '   ' + name + '   ' + value);
+			book.setbookprop(name, value);
+		}	
+	
+		function test(){
+			var book = swfobject.getobjectbyid('magazine');
+			alert('2:' + book.setbookprop('pagethickness', 0));
+		}
+	
+	  var assetsfolder = 'res';
+	  var mobilefolder = 'mobile';
+
+ 	  var changeurl = function(){
+	  	if(document.getelementbyid('hrefmobile'))document.getelementbyid('hrefmobile').href =dir+mobilefolder+'/index.html';
+		delete changeurl;
+	  }
+	  if (document.addeventlistener){
+		document.addeventlistener("domcontentloaded", changeurl, false);
+	  } else {
+		document.attachevent("ondomcontentloaded", changeurl);
+	  }
+
+		function geturlparam()
+		{
+			var returnobject = {};
+      var href = window.location.href;
+      if ( href.indexof("?") > -1 )
+      {
+				var param = href.substr(href.indexof("?"));
+				var arrayparam = param.split("&");
+	  
+				for ( var i = 0; i < arrayparam.length; i++ )
+				{
+					var value = arrayparam[i].split("=");
+					returnobject[value[0]] = value[1];
+				}
+			}
+			returnobject['res'] = assetsfolder;
+			return returnobject;
+		}
+		
+		var dir = "./files/";
+	
+		 var geturi = function(){
+        		var uriarray = document.location.href.split('/');
+        
+       			 uriarray.length = uriarray.length-1;
+        		var uristr = uriarray.join('/');
+        
+        		uriarray = null;
+        
+        		var uriarr = dir.split('/');
+        		uriarr[0] = uriarr[0]=='.'?'':uriarr[0];
+        		var dirstr = uriarr.join('/');
+        
+        		uristr = uristr+dirstr;
+
+			return uristr;
+      		}
+			
+          var ua = navigator.useragent.tolowercase(),
+          platform = navigator.platform.tolowercase(),
+          ua = ua.match(/(opera|ie|firefox|chrome|version)[\s\/:]([\w\d\.]+)?.*?(safari|version[\s\/:]([\w\d\.]+)|$)/) || [null, 'unknown', 0],
+          mode = ua[1] == 'ie' && document.documentmode;
+
+          var browser = {
+          extend: function.prototype.extend,
+          name: (ua[1] == 'version') ? ua[3] : ua[1],
+          version: mode || parsefloat((ua[1] == 'opera' && ua[4]) ? ua[4] : ua[2]),
+          platform: {
+          name: ua.match(/ip(?:ad|od|hone)/) ? 'ios' : (ua.match(/(?:webos|android|bada|symbian|palm|blackberry)/) || platform.match(/mac|win|linux/) || ['other'])[0]
+          },
+          features: {
+          xpath: !!(document.evaluate),
+          air: !!(window.runtime),
+          query: !!(document.queryselector),
+          json: !!(window.json)
+          },
+          plugins: {}
+          };
+		
+          var page = parseint(window.location.hash.substring(2, window.location.hash.length-1));
+          page = page?'#'+page:'';
+          if(browser.platform.name == 'android' || browser.platform.name == 'ios') window.location =dir+mobilefolder+"/index.html"+page;
+          if(browser.platform.name == 'webos' || browser.platform.name == 'bada' || browser.platform.name == 'symbian' || browser.platform.name == 'palm' || browser.platform.name == 'blackberry') window.location = dir+'html/'+"/index.html"; 
+		
+    
+    	var dir = "./files/";
+    	var jsfolder = "js/";
+    	var swffile = "book.swf";
+    	
+			var flashvars = {};
+			var params = {
+				menu: "false",
+				scale: "noscale",
+				allowfullscreen: "true",
+				allowscriptaccess: "always",
+				bgcolor: "#ffffff",
+				wmode:"transparent"
+			};
+			var attributes = {id: "magazine", name:"magazine"};
+			swfobject.embedswf(dir+swffile, "magazine", "100%", "100%", "10.1.0", dir+jsfolder+"expressinstall.swf", flashvars, params, attributes);
+          </script>
+  </head>
+<body style="padding: 0px; margin: 0px; height:100%; width:100%;"> 
+	<div id="magazine">
+		<h1>requires flashplayer</h1>
+		<p><a href="http://get.adobe.com/flashplayer/"><img src="http://www.adobe.com/images/shared/download_buttons/get_adobe_flash_player.png" alt="get adobe flash player"/></a></p>
+		<p>please try the above link first. if you still encounter problems after installing the flash player, try this one:</p>
+		<p><a href="http://get.adobe.com/shockwave/"><img src="http://www.adobe.com/images/shared/download_buttons/get_adobe_shockwave_player.png" alt="get adobe shockwave player"/></a></p>
+		<p><a id="hrefmobile" href="files/mobile/index.html">mobile version</a></p>
+		<p><a href="files/html/index.html">html version</a></p>
+    <p>powered by xflip</p>
+	</div> 
+  </body>
+</html>

@@ -1,0 +1,125 @@
+<!-- saved from url=(0013)about:internet -->
+<!doctype html public "-//w3c//dtd xhtml 1.0 transitional//en" "http://www.w3.org/tr/xhtml1/dtd/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><title>à¸à¸¥à¸±à¸à¸£à¸¹à¸à¸ à¸²à¸à¸ªà¸³à¸à¸±à¸à¸à¸£à¸´à¸à¸²à¸£à¸à¸­à¸¡à¸à¸´à¸§à¹à¸à¸­à¸£à¹ à¸¡à¸«à¸²à¸§à¸´à¸à¸¢à¸²à¸¥à¸±à¸¢à¹à¸à¸©à¸à¸£à¸¨à¸²à¸ªà¸à¸£à¹</title><meta http-equiv="content-type" content="text/html; charset=utf-8" /><meta http-equiv="imagetoolbar" content="no" /><meta name="description" content="web gallery generated with web gallery wizard pro 1.5.3625.1"></meta><meta name="keywords" content="web gallery, web album, photo gallery, photo album, online album, online gallery, online photos, web generator, album generator, gallery generator, share photos, share photo" /><meta name="robots" content="all" /><meta name="wgw-effects" content="on" /><script language="javascript" src="site/script.js" type="text/javascript"></script><link rel="stylesheet" type="text/css" href="site/ssiex.css" title="iex" /><script language="javascript" src="site/themescript.js" type="text/javascript"></script><script language="javascript" type="text/javascript"><!--
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+// globals
+// major version of flash required
+var requiredmajorversion = 6;
+// minor version of flash required
+var requiredminorversion = 0;
+// revision of flash required
+var requiredrevision = 65;
+// the version of javascript supported
+var jsversion = 1.0;
+// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+--></script><script language="vbscript" type="text/vbscript"><!--
+// visual basic helper required to detect flash player activex control version information
+function vbgetswfver(i)
+  on error resume next
+  dim swcontrol, swversion
+  swversion = 0
+  
+  set swcontrol = createobject("shockwaveflash.shockwaveflash." + cstr(i))
+  if (isobject(swcontrol)) then
+    swversion = swcontrol.getvariable("$version")
+  end if
+  vbgetswfver = swversion
+end function
+--></script><script language="javascript1.1" type="text/javascript"><!--
+// detect client browser type
+var isie  = (navigator.appversion.indexof("msie") != -1) ? true : false;
+var iswin = (navigator.appversion.tolowercase().indexof("win") != -1) ? true : false;
+var isopera = (navigator.useragent.indexof("opera") != -1) ? true : false;
+jsversion = 1.1;
+// javascript helper required to detect flash player plugin version information
+function jsgetswfver(i){
+            // ns/opera version >= 3 check for flash plugin in plugin array
+            if (navigator.plugins != null && navigator.plugins.length > 0) {
+                        if (navigator.plugins["shockwave flash 2.0"] || navigator.plugins["shockwave flash"]) {
+                                    var swver2 = navigator.plugins["shockwave flash 2.0"] ? " 2.0" : "";
+                        var flashdescription = navigator.plugins["shockwave flash" + swver2].description;
+                                    descarray = flashdescription.split(" ");
+                                    temparraymajor = descarray[2].split(".");
+                                    versionmajor = temparraymajor[0];
+                                    versionminor = temparraymajor[1];
+                                    if ( descarray[3] != "" ) {
+                                                temparrayminor = descarray[3].split("r");
+                                    } else {
+                                                temparrayminor = descarray[4].split("r");
+                                    }
+                        versionrevision = temparrayminor[1] > 0 ? temparrayminor[1] : 0;
+            flashver = versionmajor + "." + versionminor + "." + versionrevision;
+            } else {
+                                    flashver = -1;
+                        }
+            }
+            // msn/webtv 2.6 supports flash 4
+            else if (navigator.useragent.tolowercase().indexof("webtv/2.6") != -1) flashver = 4;
+            // webtv 2.5 supports flash 3
+            else if (navigator.useragent.tolowercase().indexof("webtv/2.5") != -1) flashver = 3;
+            // older webtv supports flash 2
+            else if (navigator.useragent.tolowercase().indexof("webtv") != -1) flashver = 2;
+            // can't detect in all other cases
+            else {
+                        
+                        flashver = -1;
+            }
+            return flashver;
+} 
+// if called with no parameters this function returns a floating point value 
+// which should be the version of the flash player or 0.0 
+// ex: flash player 7r14 returns 7.14
+// if called with reqmajorver, reqminorver, reqrevision returns true if that version or greater is available
+function detectflashver(reqmajorver, reqminorver, reqrevision) 
+{
+            reqver = parsefloat(reqmajorver + "." + reqrevision);
+            // loop backwards through the versions until we find the newest version   
+            for (i=25;i>0; i=i-1) {           
+                        if (isie && iswin && !isopera) {
+                                    versionstr = vbgetswfver(i);
+                        } else {
+                                    versionstr = jsgetswfver(i);                 
+                        }
+                        if (versionstr == -1 ) { 
+                                    return false;
+                        } else if (versionstr != 0) {
+                                    if(isie && iswin && !isopera) {
+                                                temparray         = versionstr.split(" ");
+                                                tempstring        = temparray[1];
+                                                versionarray      = tempstring .split(",");                                      
+                                    } else {
+                                                versionarray      = versionstr.split(".");
+                                    }
+                                    versionmajor      = versionarray[0];
+                                    versionminor      = versionarray[1];
+                                    versionrevision   = versionarray[2];
+                                    
+                                    versionstring     = versionmajor + "." + versionrevision;   // 7.0r24 == 7.24
+                                    versionnum        = parsefloat(versionstring);
+            // is the major.revision >= requested major.revision and the minor version >= requested minor
+                                    if ( (versionmajor > reqmajorver) && (versionnum >= reqver) ) {
+                                                return true;
+                                    } else {
+                                                return ((versionnum >= reqver && versionminor >= reqminorver) ? true : false );   
+                                    }
+                        }
+            }           
+            return (reqver ? false : 0.0);
+}
+--></script><link rel="shortcut icon" href="favicon.ico" /></head><body bgcolor="#666666" text="#999999" link="#cccccc" vlink="#cccccc" alink="#ffffff" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" class="wgw-0000-body" onload="mm_preloadimages('site/images/webgallerywizard-footer_f2.gif');"><table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0" class="wgw-0000-table"><tr><td align="middle" valign="center" class="wgw-0100-td"></td><td align="middle" valign="bottom" class="wgw-0200-td"><p class="wgw-0200-pold">web browser cannot access all needed files. your gallery may not display 
+correctly.</p><p class="wgw-0200-pgecko"></p></td><td align="middle" valign="center" class="wgw-0300-td"></td></tr><tr><td align="middle" valign="center" class="wgw-0400-td"></td><td align="center" class="wgw-0500-td"><table border="0" cellpadding="0" cellspacing="0" class="wgw-0500-table"><tr><td width="512" height="62" class="wgw-0510-td"><p class="wgw-0510-p">â </p><div class="wgw-0510-div"><script language="javascript1.1"><!--
+var hasrightversion = detectflashver(requiredmajorversion, requiredminorversion, requiredrevision);
+if(hasrightversion) {  // if we've detected an acceptable version
+indexflash1();
+  } else {  // flash is too old or we can't detect the plugin
+    var alternatecontent = '<a href="http://www.macromedia.com/go/getflash/" target="_blank"><img src="site/images/wgw-topbanner.jpg" alt="this content requires the macromedia flash player to display correctly. click here to get flash now or click thumbnails to see the gallery." width="512" height="62" border="0"/></a>';
+    document.write(alternatecontent);  // insert non-flash content
+  }
+--></script><noscript><a href="http://www.macromedia.com/go/getflash/" target="_blank"><img src="site/images/wgw-topbanner.jpg" alt="this content requires the macromedia flash player to display correctly. click here to get flash now or click thumbnails to see the gallery." width="512" height="62" border="0" /></a></noscript></div></td><td width="259" height="62" class="wgw-0520-td"><p class="wgw-0520-p"><a href="index.htm">à¸à¸¥à¸±à¸à¸£à¸¹à¸à¸ à¸²à¸à¸ªà¸³à¸à¸±à¸à¸à¸£à¸´à¸à¸²à¸£à¸à¸­à¸¡à¸à¸´à¸§à¹à¸à¸­à¸£à¹ à¸¡à¸«à¸²à¸§à¸´à¸à¸¢à¸²à¸¥à¸±à¸¢à¹à¸à¸©à¸à¸£à¸¨à¸²à¸ªà¸à¸£à¹</a></p></td></tr><tr><td width="512" height="26" class="wgw-0530-td">â </td><td width="259" height="26" class="wgw-0540-td">â </td></tr><tr><td width="512" height="411" valign="top" class="wgw-0550-td"><p class="wgw-0550-p">click thumbnail to select album:</p><div class="wgw-0550-div"><script language="javascript1.1"><!--
+var hasrightversion = detectflashver(requiredmajorversion, requiredminorversion, requiredrevision);
+if(hasrightversion) {  // if we've detected an acceptable version
+indexflash2();
+  } else {  // flash is too old or we can't detect the plugin
+    var alternatecontent = '<a href="http://www.macromedia.com/go/getflash/" target="_blank"><img src="site/images/wgw-0550-td.jpg" alt="this content requires the macromedia flash player to display correctly. click here to get flash now or click thumbnails to see the gallery." width="512" height="411" border="0"/></a>';
+    document.write(alternatecontent);  // insert non-flash content
+  }
+--></script><noscript><a href="http://www.macromedia.com/go/getflash/" target="_blank"><img src="site/images/wgw-0550-td.jpg" alt="this content requires the macromedia flash player to display correctly. click here to get flash now or click thumbnails to see the gallery." width="512" height="411" border="0" /></a></noscript></div></td><td valign="top" class="wgw-0560-td"><div class="wgw-0560-div" id="odiv" style="overflow:auto"><p class="wgw-0560-ptop">â </p><div class="thumb0"><p><a href="album1.htm"><img class="rnalpha" width="67" height="50" border="0" onmouseover="applylightfilter();" onmouseout="removelightfilter();" onclick="setnormal();" src="albums/album1/thumb/img_4264.jpg"></img></a></p></div><p>â </p><p class="wgw-0560-pbottom">â <img src="site/images/spacer.gif" width="1" height="19" /></p></div></td></tr><tr><td height="30" colspan="2" class="wgw-0570-td"><p class="wgw-0570-p">â </p><div class="wgw-0570-div"><img src="site/images/webgallerywizard-pro.gif" width="771" height="30" /></div></td></tr></table></td><td align="middle" valign="center" class="wgw-0600-td"></td></tr><tr><td width="0" height="0" align="middle" valign="center" class="wgw-0700-td"></td><td align="middle" valign="top" class="wgw-0800-td"><p class="wgw-0800-p"><a href="http://www.webgallerywizard.com/web-gallery/wizard.htm" target="_blank">web gallery generated by web gallery wizard proâ¢</a>. </p></td><td align="middle" valign="center" class="wgw-0900-td"></td></tr></table></body></html>

@@ -1,0 +1,82 @@
+<html>
+
+<head>
+<meta http-equiv="content-type"
+content="text/html; charset=windows-874">
+<meta name="generator" content="microsoft frontpage express 2.0">
+<title>การหาระดับความเข้มเสียงในทางปฏิบัติ</title>
+</head>
+
+<body bgcolor="#ffffff">
+
+<h3 align="center"><strong><u>การ<wbr>หา<wbr>ระดับ<wbr>ความ<wbr>เข้ม<wbr>เสียง<wbr>ใน<wbr>ทางปฏิบัติ
+</u></strong></h3>
+
+<p align="left"><strong>การ<wbr>รวม<wbr>ระดับ<wbr>ความ<wbr>เข้ม<wbr>เสียง
+</strong></p>
+
+<p>เมื่อ<wbr>มี<wbr>แหล่ง<wbr>กำเนิด<wbr>เสียง
+2 แหล่ง ถ้า<wbr>เปิด<wbr>ให้<wbr>แหล่ง<wbr>กำเนิด<wbr>เสียง<wbr>ทั้ง
+2 แหล่ง<wbr>ทำ<wbr>งาน<wbr>พร้อม<wbr>กัน
+ระดับ<wbr>ความ<wbr>เข้ม<wbr>เสียง<wbr>รวม<wbr>จะ<wbr>เป็น<wbr>เท่า<wbr>ไร
+ใน<wbr>การ<wbr>หา<wbr>ระดับ<wbr>ความ<wbr>เข้ม<wbr>เสียง<wbr>รวม
+เรา<wbr>ไม่<wbr>สามารถ<wbr>จะ<wbr>นำ<wbr>ค่า<wbr>ระดับ<wbr>ความ<wbr>เข้ม<wbr>เสียง<wbr>มาบ<wbr>วก<wbr>กัน<wbr>ได้<wbr>โดย<wbr>ตรง
+วิธี<wbr>การ<wbr>รวม<wbr>ระดับ<wbr>ความ<wbr>เข้ม<wbr>เสียง<wbr>อาจ<wbr>ทำ<wbr>ได้<wbr>โดย<wbr>อาศัย<wbr>การ<wbr>คำนวณ
+(ดู<wbr>หนังสือ<wbr>เรียน<wbr>ฟิสิกส์
+3 ว 027 หน้า 90-91) แต่<wbr>ใน<wbr>ที่<wbr>นี้<wbr>เป็น<wbr>การ<wbr>หา<wbr>ระดับ<wbr>ความ<wbr>เข้ม<wbr>เสียง<wbr>รวม<wbr>ของ<wbr>เสียง<wbr>จาก<wbr>แหล่ง<wbr>กำเนิด<wbr>เสียง
+2 แหล่ง โดย<wbr>อาศัย<wbr>กราฟ ดัง<wbr>นี้
+</p>
+
+<p align="center"><img src="graph.jpg" width="283" height="170"></p>
+
+<p>&nbsp;</p>
+
+<p>1. วัด<wbr>ระดับ<wbr>ความ<wbr>เข้ม<wbr>เสียง<wbr>ของ<wbr>แหล่ง<wbr>กำเนิด<wbr>เสียง<wbr>ที่
+1 และ 2 สมมติ<wbr>เป็น <em>l</em>1 และ <em>l</em>2
+</p>
+
+<p>2. หา<wbr>ผล<wbr>ต่าง<wbr>ระดับ<wbr>ความ<wbr>เข้ม<wbr>เสียง<wbr>ของ<wbr>แหล่ง<wbr>กำเนิด<wbr>เสียง<wbr>ทั้ง<wbr>สอง
+คือ (<em>l</em>2-<em>l</em>1) </p>
+
+<p>3. ดู<wbr>ค่า<wbr>ผล<wbr>ต่าง (<font size="1"
+face="cordiaupc"><em>l</em></font>2-<font size="1"
+face="cordiaupc"><em>l</em></font>1<font size="1"
+face="cordiaupc">)</font> ที่<wbr>แกน x แล้ว<wbr>ลาก<wbr>เส้น<wbr>ตั้ง<wbr>ฉาก<wbr>ไป<wbr>ตัดกับเส้น<wbr>กราฟ
+ที่<wbr>จุด<wbr>ตัด<wbr>ให้<wbr>ลาก<wbr>เส้น<wbr>ขนานกับแกน
+x จน<wbr>ไป<wbr>ตัดกับแกน y ซึ่ง<wbr>จะ<wbr>ได้<wbr>ค่า
+<img src="delta.jpg" width="8" height="18"> <font size="1"
+face="cordiaupc"><em>l</em></font> ที่<wbr>จะ<wbr>นำ<wbr>มา<wbr>ปรับ<wbr>แก้
+</p>
+
+<p>4. นำ<wbr>ค่า <img src="delta.jpg" width="8" height="18">
+<font size="1" face="cordiaupc"><em>l</em></font> ที่<wbr>ได้<wbr>นี้<wbr>ไป<wbr>รวมกับระดับ<wbr>ความ<wbr>เข้ม<wbr>เสียง<wbr>ของ<wbr>แหล่ง<wbr>กำเนิด<wbr>เสียง<wbr>ที่<wbr>มี<wbr>ค่า<wbr>สูง
+ผล<wbr>ที่<wbr>ได้<wbr>เป็น<wbr>ระดับ<wbr>ความ<wbr>เข้ม<wbr>เสียง<wbr>รวม<wbr>จาก<wbr>แหล่ง<wbr>กำเนิด<wbr>เสียง<wbr>ทั้ง<wbr>สอง
+เมื่อ<wbr>เปิด<wbr>ทำ<wbr>งาน<wbr>พร้อม<wbr>กัน
+</p>
+
+<p><strong><u>ตัว<wbr>อย่าง </u></strong></p>
+
+<p>1. ระดับ<wbr>ความ<wbr>เข้ม<wbr>เสียง<wbr>ของ<wbr>แหล่ง<wbr>กำเนิด<wbr>เสียง<wbr>ที่
+1<font size="1"><em> </em></font><font size="1" face="cordiaupc"><em>l</em></font><font
+size="1"><em><wbr></em></font>1 = 85 db </p>
+
+<p>ระดับ<wbr>ความ<wbr>เข้ม<wbr>เสียง<wbr>ของ<wbr>แหล่ง<wbr>กำเนิด<wbr>เสียง<wbr>ที่
+2 <font size="1" face="cordiaupc"><em>l</em></font><font size="1"><em><wbr></em></font>2
+= 82 db </p>
+
+<p>2. ผล<wbr>ต่าง<wbr>ระดับ<wbr>ความ<wbr>เข้ม<wbr>เสียง
+(<font size="1" face="cordiaupc"><em>l</em></font><font size="1"><em><wbr></em></font>2
+- <font size="1" face="cordiaupc"><em>l</em></font><font size="1"><em><wbr></em></font>1<font
+size="1" face="cordiaupc">)</font> = 3 db </p>
+
+<p>3. ค่า<wbr>ที่<wbr>ต้อง<wbr>การ<wbr>นำ<wbr>มาบ<wbr>วก<wbr>เพิ่ม
+(จาก<wbr>กราฟ) <img src="delta.jpg" width="8"
+height="18"><font face="times new roman"> </font><font size="1"
+face="cordiaupc"><em>l</em></font> = 1.7 db </p>
+
+<p>4. ผล<wbr>รวม<wbr>ของ<wbr>ระดับ<wbr>ความ<wbr>เข้ม<wbr>เสียง
+= 85 db + 1.7 db = 86.7 db </p>
+
+<hr>
+</body>
+</html>

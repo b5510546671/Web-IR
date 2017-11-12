@@ -1,0 +1,135 @@
+<html> 
+<head>
+<title>คณิตศาสตร์ - ความสัมพันธ์ในข้อมูลสองตัวแปร : การถดถอยและการคาดคะเนค่า - 26  กค. 42</title>
+</head>
+<style>a {text-decoration: none}</style>
+<body>
+<p>
+<table border=7  width=30% cellpadding=7 align=right>
+<tr><td bgcolor=#808040><a href="relate.htm#relation"><font face="ms sans serif" size=-1 color=white><center><b>ความ<wbr>สัมพันธ์<wbr>ใน<wbr>ข้อ<wbr>มูล<wbr>สอง<wbr>ตัว<wbr>แปร<wbr></b></center></a>
+</table>
+<br clear=all>
+
+<p>
+<table border=7  width=50% cellpadding=7 align=left>
+<tr><td bgcolor=#ffffe7><a href="relate3.htm#create"><font face="ms sans serif" size=-1 color=#c80040><center><b>การ<wbr>ถด<wbr>ถอย<wbr>และ<wbr>การ<wbr>คาด<wbr>คะเน<wbr>ค่า</a> -  <font  color=#0080ff>การ<wbr>สร้าง<wbr>สมการ<wbr>ถด<wbr>ถอย</b></center>
+</table>
+<br clear=all>
+<p><br>
+<center><table width=90%>
+<tr>
+<td><dd><font face="ms sans serif" size=-1 color=black>แน่<wbr>นอน<wbr>ว่า<wbr>โดย<wbr>ปกติ<wbr>เส้น<wbr>ถด<wbr>ถอย<wbr>ไม่<wbr>สามารถ<wbr>จะ<wbr>ลาก<wbr>ผ่าน<wbr>ค่า<wbr>ข้อ<wbr>มูล<wbr>ทุก<wbr>ค่า<wbr>ใน<wbr>แผน<wbr>ภาพ<wbr>การ<wbr>กระจาย<wbr> นั่น<wbr>คือ<wbr> สมการ<wbr>ถด<wbr>ถอย<wbr>ไม่<wbr>สามารถ<wbr>ใช้<wbr>คาด<wbr>คะเน<wbr>ค่า<wbr>ตัว<wbr>แปร<wbr>ตาม<wbr> y ทุก<wbr>ค่า<wbr>ได้<wbr>ถูก<wbr>ต้อง<wbr>จาก<wbr>ค่า<wbr>ตัว<wbr>แปร<wbr>อิสระ<wbr> x อย่าง<wbr>ไร<wbr>ก็<wbr>ตาม<wbr> เรา<wbr>ต้อง<wbr>การ<wbr>สมการ<wbr>ถด<wbr>ถอย<wbr> หรือ<wbr>ค่า<wbr> a และ<wbr> b ที่<wbr>ทำ<wbr>ให้<wbr>คาด<wbr>คะเน<wbr>ค่า<wbr>ตัว<wbr>แปร<wbr>ตาม<wbr>ได้<wbr>ดี<wbr>ที่<wbr>สุด<wbr>หรือ<wbr>ผิด<wbr>พลาด<wbr>น้อย<wbr>ที่<wbr>สุด<wbr>
+<p>
+<dd>การ<wbr>ประมาณ<wbr>ค่า<wbr> a และ<wbr> b จาก<wbr>ข้อ<wbr>มูล<wbr> (x<sub>1</sub> , y<sub>1</sub>) , (x<sub>2</sub> , y<sub>2</sub>) , … , (x<sub>n</sub> , y<sub>n</sub>) เพื่อ<wbr>ให้<wbr>ได้<wbr>เส้น<wbr>ตรง<wbr>ที่<wbr>เข้า<wbr>กับ<wbr>ข้อ<wbr>มูล<wbr>ได้<wbr>ดี<wbr>ที่<wbr>สุด<wbr> มี<wbr>วิธี<wbr>การ<wbr>ที่<wbr>เป็น<wbr>ที่<wbr>นิยม<wbr>ใช้<wbr>คือ<wbr> <font color=brown>วิธี<wbr>กำลัง<wbr>สอง<wbr>น้อย<wbr>ที่<wbr>สุด<wbr> (least squares method) <font color=black>วิธี<wbr>นี้<wbr>จะ<wbr>ให้<wbr>ค่า<wbr>ประมาณ<wbr> a และ<wbr> b ที่<wbr>ทำ<wbr>ให้<wbr>ความ<wbr>แตก<wbr>ต่าง<wbr>ของ<wbr>ค่า<wbr>ตัว<wbr>แปร<wbr>ตาม<wbr>กับ<wbr>ค่า<wbr>ที่<wbr>คาด<wbr>คะเน<wbr>ได้<wbr>จาก<wbr>สมการ<wbr>ถด<wbr>ถอย<wbr>มี<wbr>ค่า<wbr>น้อย<wbr>ที่<wbr>สุด<wbr> ดัง<wbr>นั้น<wbr> ถ้า<wbr>ใช้<wbr>สัญลักษณ์<wbr> &nbsp;<img src="y_hat.gif" align=texttop>&nbsp;   (อ่าน<wbr>ว่า<wbr> y hat) แทน<wbr>ค่า<wbr>คาด<wbr>คะเน<wbr>ของ<wbr>ตัว<wbr>แปร<wbr>ตาม<wbr> สมการ<wbr>ถด<wbr>ถอย<wbr>ที่<wbr>จะ<wbr>ประมาณ<wbr>ขึ้น<wbr>คือ
+<p>
+<center><img src="picc4.gif"></center>
+<p>
+<dd>และ<wbr>ต้อง<wbr>การ<wbr>ให้<wbr>ค่า<wbr> y ต่าง<wbr>จาก<wbr>   &nbsp;<img src="y_hat.gif" align=texttop>&nbsp; น้อย<wbr>ที่<wbr>สุด<wbr>ที่<wbr>ทุก<wbr>จุด<wbr>ของ<wbr>ค่า<wbr>ข้อ<wbr>มูล<wbr>  ใน<wbr>ภาพ<wbr> 2 แสดง<wbr>ให้<wbr>เห็น<wbr>แผน<wbr>ภาพ<wbr>การ<wbr>กระจาย<wbr>และ<wbr>เส้น<wbr>ถด<wbr>ถอย<wbr>ที่<wbr>ดี<wbr> และ<wbr>เส้น<wbr>ที่<wbr>ไม่<wbr>ดี<wbr>  พร้อม<wbr>ทั้ง<wbr>ความ<wbr>แตก<wbr>ต่าง<wbr>ของ<wbr>ค่า<wbr> y และ<wbr>ค่า   &nbsp;<img src="y_hat.gif" align=texttop>&nbsp; ที่<wbr>จุด<wbr>ต่าง ๆ
+<p>
+<center><img src="picc2.gif"></center>
+<center><font color=#c80040>ภาพ<wbr>&nbsp; 2.&nbsp;&nbsp;   แผน<wbr>ภาพ<wbr>การ<wbr>กระจาย<wbr>ของ<wbr>จุด<wbr>รอบ<wbr>เส้น<wbr>ถด<wbr>ถอย</center>
+<p><br>
+<dd><font color=black>ค่า<wbr> intercept และ<wbr>ความ<wbr>ชัน<wbr>ของ<wbr>เส้น<wbr>ถด<wbr>ถอย<wbr>ที่<wbr>ประมาณ<wbr>ด้วย<wbr>วิธี<wbr>กำลัง<wbr>สอง<wbr>น้อย<wbr>ที่<wbr>สุด<wbr> มี<wbr>สูตร<wbr>ดัง<wbr>นี้
+<p>
+<center><img src="picc3.gif"></center>
+<p>
+<dd>และ<wbr>สมการ<wbr>ถด<wbr>ถอย<wbr>ที่<wbr>ใช้<wbr>คาด<wbr>คะเน<wbr>ค่า<wbr>ของ<wbr> y เมื่อ<wbr>ทราบ<wbr>ค่า<wbr> x คือ<wbr>
+<p>
+<center><img src="picc4.gif"></center>
+<p>
+<dd>การ<wbr>ประมาณ<wbr>สมการ<wbr>ถด<wbr>ถอย<wbr>หรือ<wbr>คำนวณ<wbr>ค่า<wbr> a และ<wbr> b จะ<wbr>ใช้<wbr>เครื่อง<wbr>คิด<wbr>เลข<wbr>ที่<wbr>มี<wbr>ฟังก์ชัน<wbr>เฉพาะ<wbr> หรือ<wbr>ใช้<wbr>คำ<wbr>สั่ง<wbr> regression ใน<wbr>โปรแกรม<wbr> excel ก็<wbr>ได้<wbr> การ<wbr>ใช้<wbr>คอมพิวเตอร์<wbr>จะ<wbr>สะดวก<wbr>มาก<wbr>กว่า<wbr> เพราะ<wbr>สามารถ<wbr>สร้าง<wbr>กราฟ<wbr>ของ<wbr>แผน<wbr>ภาพ<wbr>การ<wbr>กระจาย<wbr>ของ<wbr>ข้อ<wbr>มูล<wbr>ขึ้น<wbr>มา<wbr>ก่อน<wbr> เพื่อ<wbr>ดู<wbr>ว่า<wbr>สมการ<wbr>เส้น<wbr>ตรง<wbr>เหมาะ<wbr>สม<wbr>กับ<wbr>ข้อ<wbr>มูล<wbr>หรือ<wbr>ไม่<wbr>
+</table></center>
+<p>
+<table width=10% border=3>
+<tr align=center bgcolor=#cfcfcf>
+<td><b><font face="ms sans serif" size=-1 color=#00a35f><center>ตัว<wbr>อย่าง</b></center>
+</table>
+<p>
+<center><table width=90%>
+<tr>
+<td><font face="ms sans serif" size=-1 color=brown><dd>ใน<wbr>ปัจจุบัน<wbr> คอมพิวเตอร์<wbr>เข้า<wbr>มา<wbr>มี<wbr>บท<wbr>บาท<wbr>ใน<wbr>ชีวิต<wbr>เรา<wbr>มาก<wbr>ขึ้น<wbr> นิสิต<wbr>ทุก<wbr>คน<wbr>ต้อง<wbr>เรียน<wbr>รู้<wbr>การ<wbr>ประยุกต์<wbr>ใช้<wbr>งาน<wbr>คอมพิวเตอร์<wbr>ใน<wbr>ด้าน<wbr>ต่าง ๆ<wbr> ดัง<wbr>นั้น<wbr>จึง<wbr>มี<wbr>ผู้<wbr>สน<wbr>ใจ<wbr>ศึกษา<wbr>ว่า<wbr> ความ<wbr>ถนัด<wbr>ทาง<wbr>คอมพิวเตอร์<wbr>ขึ้น<wbr>อยู่<wbr>กับ<wbr>ความ<wbr>สามารถ<wbr>ทาง<wbr>คณิต<wbr>ศาสตร์<wbr>หรือ<wbr>ไม่<wbr> ใน<wbr>การ<wbr>ศึกษา<wbr>เรื่อง<wbr>นี้<wbr>ได้<wbr>ให้<wbr>นิสิต<wbr>จำนวน<wbr> 20 คน<wbr> ทด<wbr>ลอง<wbr>ทำ<wbr>แบบ<wbr>ทด<wbr>สอบ<wbr> 2 ชุด<wbr> ชุด<wbr>หนึ่ง<wbr>วัด<wbr>ความ<wbr>สามารถ<wbr>ทาง<wbr>คณิต<wbr>ศาสตร์<wbr> และ<wbr>อีก<wbr>ชุด<wbr>วัด<wbr>ความ<wbr>ถนัด<wbr>ทาง<wbr>คอมพิวเตอร์<wbr> คะแนน<wbr>จาก<wbr>การ<wbr>ทด<wbr>สอบ<wbr>มี<wbr>ดัง<wbr>นี้
+</table></center>
+<p>
+<center><table width=60% border=3>
+<tr align=center bgcolor=#cfcfcf>
+<td><font face="ms sans serif" size=-1 color=#ca00ff>คณิต<wbr>ศาสตร์ (x)
+<td><font face="ms sans serif" size=-1 color=#ca00ff>28
+<td><font face="ms sans serif" size=-1 color=#ca00ff>35
+<td><font face="ms sans serif" size=-1 color=#ca00ff>42
+<td><font face="ms sans serif" size=-1 color=#ca00ff>41
+<td><font face="ms sans serif" size=-1 color=#ca00ff>44
+<td><font face="ms sans serif" size=-1 color=#ca00ff>42
+<td><font face="ms sans serif" size=-1 color=#ca00ff>36
+<td><font face="ms sans serif" size=-1 color=#ca00ff>44
+<td><font face="ms sans serif" size=-1 color=#ca00ff>39
+<td><font face="ms sans serif" size=-1 color=#ca00ff>36
+<tr align=center  bgcolor=#cfcfcf>
+<td><font face="ms sans serif" size=-1 color=brown>คอมพิวเตอร์ (y)	
+<td><font face="ms sans serif" size=-1 color=brown>4
+<td><font face="ms sans serif" size=-1 color=brown>16
+<td><font face="ms sans serif" size=-1 color=brown>20
+<td><font face="ms sans serif" size=-1 color=brown>13
+<td><font face="ms sans serif" size=-1 color=brown>22
+<td><font face="ms sans serif" size=-1 color=brown>21
+<td><font face="ms sans serif" size=-1 color=brown>15
+<td><font face="ms sans serif" size=-1 color=brown>20
+<td><font face="ms sans serif" size=-1 color=brown>19
+<td><font face="ms sans serif" size=-1 color=brown>16
+</table></center>
+<p>
+<center><table width=60% border=3>
+<tr align=center  bgcolor=#cfcfcf>
+<td><font face="ms sans serif" size=-1 color=#ca00ff>คณิต<wbr>ศาสตร์ (x)	
+<td><font face="ms sans serif" size=-1 color=#ca00ff>40
+<td><font face="ms sans serif" size=-1 color=#ca00ff>40
+<td><font face="ms sans serif" size=-1 color=#ca00ff>33
+<td><font face="ms sans serif" size=-1 color=#ca00ff>27
+<td><font face="ms sans serif" size=-1 color=#ca00ff>32
+<td><font face="ms sans serif" size=-1 color=#ca00ff>45
+<td><font face="ms sans serif" size=-1 color=#ca00ff>41
+<td><font face="ms sans serif" size=-1 color=#ca00ff>31
+<td><font face="ms sans serif" size=-1 color=#ca00ff>41
+<td><font face="ms sans serif" size=-1 color=#ca00ff>43
+<tr align=center  bgcolor=#cfcfcf>
+<td><font face="ms sans serif" size=-1 color=brown>คอมพิวเตอร์ (y)
+<td><font face="ms sans serif" size=-1 color=brown>18
+<td><font face="ms sans serif" size=-1 color=brown>17
+<td><font face="ms sans serif" size=-1 color=brown>8
+<td><font face="ms sans serif" size=-1 color=brown>6
+<td><font face="ms sans serif" size=-1 color=brown>5
+<td><font face="ms sans serif" size=-1 color=brown>20
+<td><font face="ms sans serif" size=-1 color=brown>18
+<td><font face="ms sans serif" size=-1 color=brown>11
+<td><font face="ms sans serif" size=-1 color=brown>19
+<td><font face="ms sans serif" size=-1 color=brown>22
+</table></center>
+<p>
+<center><table width=90%>
+<tr>
+<td><center><img src="picc6.gif"></center>
+<p>
+<font face="ms sans serif" size=-1  color=#bc0040><center>ภาพ<wbr>&nbsp; 3.  &nbsp;&nbsp;แผน<wbr>ภาพ<wbr>การ<wbr>กระจาย<wbr>และ<wbr>เส้น<wbr>ถด<wbr>ถอย<wbr>ของ<wbr>ข้อ<wbr>มูล<wbr>คะแนน<wbr>ทด<wbr>สอบ<wbr><wbr></center>
+<p>
+<font color=black><dd>แผน<wbr>ภาพ<wbr>การ<wbr>กระจาย<wbr>ของ<wbr>คะแนน<wbr>ของ<wbr>นิสิต<wbr>ทั้ง<wbr> 20 คน<wbr>ใน<wbr>ภาพ<wbr> 3 
+(ซ้าย)<wbr> ชี้<wbr>ว่า<wbr>ความ<wbr>ถนัด<wbr>ทาง<wbr>คอมพิวเตอร์<wbr>มี<wbr>ความ<wbr>สัมพันธ์<wbr>ใน<wbr>ทาง<wbr>บวก<wbr>กับ<wbr>ความ<wbr>สามารถ<wbr>ทาง<wbr>คณิต<wbr>ศาสตร์<wbr> ผู้<wbr>ที่<wbr>เก่ง<wbr>คณิต<wbr>ศาสตร์<wbr>ก็<wbr>มัก<wbr>จะ<wbr>ถนัด<wbr>ใน<wbr>เรื่อง<wbr>คอมพิวเตอร์<wbr>ด้วย<wbr> ลักษณะ<wbr>ความ<wbr>สัมพันธ์<wbr>ของ<wbr>คะแนน<wbr>ทด<wbr>สอบ<wbr>ทั้ง<wbr>สอง<wbr>ด้าน<wbr>เป็น<wbr>เส้น<wbr>ตรง<wbr> ค่า<wbr>สัมประสิทธิ์<wbr>สหสัมพันธ์<wbr>จาก<wbr>โปรแกรม<wbr> excel คือ<wbr> 0.9102 ซึ่ง<wbr>เป็น<wbr>ความ<wbr>สัมพันธ์<wbr>เชิง<wbr>เส้น<wbr>ตรง<wbr>ใน<wbr>ระดับ<wbr>สูง<wbr> ฉะนั้น<wbr> จึง<wbr>ประมาณ<wbr>สมการ<wbr>ถด<wbr>ถอย<wbr>ต่อ<wbr>ไป<wbr>ได้<wbr>เป็น
+<center><p>
+<img src="picc5.gif"></center>
+<p>
+<dd>เมื่อ<wbr> x เป็น<wbr>คะแนน<wbr>ทด<wbr>สอบ<wbr>ด้าน<wbr>คณิต<wbr>ศาสตร์<wbr> และ<wbr>เป็น<wbr>ค่า<wbr>ประมาณ<wbr>ของ<wbr>คะแนน<wbr>ทด<wbr>สอบ<wbr>ด้าน<wbr>คอมพิวเตอร์<wbr> ภาพ<wbr> 3  (ขวา)<wbr> แสดง<wbr>เส้น<wbr>ถด<wbr>ถอย<wbr>จาก<wbr>สมการ<wbr>นี้<wbr> จะ<wbr>เห็น<wbr>จุด<wbr>เกาะ<wbr>กลุ่ม<wbr>ใกล้<wbr>เส้น<wbr>ตรง<wbr>พอ<wbr>สม<wbr>ควร<wbr> แสดง<wbr>ว่า<wbr> ความ<wbr>สามารถ<wbr>ทาง<wbr>คณิต<wbr>ศาสตร์<wbr>ของ<wbr>นิสิต<wbr>นำ<wbr>มา<wbr>ช่วย<wbr>อธิบาย<wbr>ได้<wbr>ค่อน<wbr>ข้าง<wbr>ดี<wbr>ว่า<wbr>ทำไม<wbr>นิสิต<wbr>จึง<wbr>มี<wbr>ความ<wbr>ถนัด<wbr>ทาง<wbr>คอมพิวเตอร์<wbr>ต่าง<wbr>กัน
+<p>
+<dd>จาก<wbr>สมการ<wbr>ถด<wbr>ถอย<wbr>ทำ<wbr>ให้<wbr>ทราบ<wbr>ว่า<wbr> คะแนน<wbr>ทด<wbr>สอบ<wbr>ด้าน<wbr>คอมพิวเตอร์<wbr>เพิ่ม<wbr>ขึ้น<wbr> (ลด<wbr>ลง)<wbr> 0.96 คะแนน<wbr> ต่อ<wbr>แต่<wbr>ละ<wbr>คะแนน<wbr>ที่<wbr>เพิ่ม<wbr>ขึ้น<wbr> (ลด<wbr>ลง)<wbr> ของ<wbr>การ<wbr>ทด<wbr>สอบ<wbr>ด้าน<wbr>คณิต<wbr>ศาสตร์<wbr> และ<wbr>จะ<wbr>ประมาณ<wbr>คะแนน<wbr>ทด<wbr>สอบ<wbr>ด้าน<wbr>คอมพิวเตอร์<wbr>จาก<wbr>คะแนน<wbr>ทด<wbr>สอบ<wbr>ด้าน<wbr>คณิต<wbr>ศาสตร์<wbr>ได้<wbr> เช่น<wbr> นิสิต<wbr>ที่<wbr>ทำ<wbr>คะแนน<wbr>คณิต<wbr>ศาสตร์<wbr>ได้<wbr> 36 คะแนน<wbr> คาด<wbr>ว่า<wbr>นิสิต<wbr>ผู้<wbr>นั้น<wbr>จะ<wbr>ได้<wbr>คะแนน<wbr>คอมพิวเตอร์<wbr>เป็น<wbr> 13.41 คะแนน<wbr> (สามารถ<wbr>คำนวณ<wbr>จาก<wbr> [- 21.15 + 0.96 (36) ] )
+</table></center>
+<p>
+<hr noshade size=3 width=95% align=right>
+
+<table width=60% align=right>
+<tr> 
+<td bgcolor="#ffffdf"  align=left><font  face="ms sans serif"   color="c000c0" size=-1>ที่มา: 
+<font color="brown">เอกสาร<wbr>ประกอบ<wbr>การ<wbr>สอน<wbr> มหาวิทยาลัย<wbr>เกษตรศาสตร์ <wbr>2542, วิชา<wbr>บูรณาการ<wbr> <dd>หมวด<wbr>การ<wbr>ศึกษา<wbr>ทั่ว<wbr>ไป<wbr> รหัส<wbr>วิชา<wbr> 999211 คณิต<wbr>ศาสตร์<wbr>และ<wbr>คอม<wbr>พิว<wbr>เตอร์<wbr>ใน<wbr>ชีวิต<wbr>ประจำ<wbr>วัน
+</table></center>
+
+<br clear=all>
+<hr noshade size=3 width=60% align=right>
+
+</body>
+</html>

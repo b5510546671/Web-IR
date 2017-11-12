@@ -1,0 +1,1191 @@
+
+<html>
+    <head>
+        <title>calendar activities&reservation</title>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />        
+        <link rel="shortcut icon" href="stylesheet/img/devil-icon.png">
+        <link rel="stylesheet" type="text/css" href="mos-css/mos-style.css">
+        <link rel="stylesheet" type="text/css" href="css/common.css">
+        <link href='js/fullcalendar-2.3.2/fullcalendar.css' rel='stylesheet'/>
+        <link href='js/fullcalendar-2.3.2/fullcalendar.print.css' rel='stylesheet' media='print' />
+        <script src='js/fullcalendar-2.3.2/lib/moment.min.js'></script>
+        <script src='js/fullcalendar-2.3.2/lib/jquery.min.js'></script>
+        <script src='js/fullcalendar-2.3.2/fullcalendar.min.js'></script> 
+        <script type="text/javascript" src="js/calendarscript2.js"></script>
+        <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+        <script type="text/javascript" src="js/jquery.slideviewer.1.2.js"></script>
+        <!--<script type="text/javascript" src="js/fullcalendar-2.3.2/lang/th.js"></script>-->
+        <script type='text/javascript'>
+            $(document).ready(function () {
+                $('#data').after('<div id="nav"></div>');
+                var rowsshown = 20;
+                var rowstotal = $('#data tbody tr').length;
+                var numpages = rowstotal / rowsshown;
+                for (i = 0; i < numpages; i++) {
+                    var pagenum = i + 1;
+                    $('#nav').append('<a href="#" rel="' + i + '">' + pagenum + '</a> ');
+                }
+                $('#data tbody tr').hide();
+                $('#data tbody tr').slice(0, rowsshown).show();
+                $('#nav a:first').addclass('active');
+                $('#nav a').bind('click', function () {
+
+                    $('#nav a').removeclass('active');
+                    $(this).addclass('active');
+                    var currpage = $(this).attr('rel');
+                    var startitem = currpage * rowsshown;
+                    var enditem = startitem + rowsshown;
+                    $('#data tbody tr').css('opacity', '0.0').hide().slice(startitem, enditem).
+                            css('display', 'table-row').animate({opacity: 1}, 300);
+                });
+            });
+        </script>
+
+    </head>
+
+    <body>
+        <div id="header" style="width:100%">
+            <div class="inheaderlogin">
+                <!--
+                <div class="mosadmin">
+                    <img src="mos-css/img/administrator.png">
+                    &nbsp;&nbsp;สวัสดีครับ
+                </div>
+                -->
+                <div class="clear"></div>
+            </div>
+        </div>
+
+        <div id="wrapper">
+            <div id="leftbar">
+                <ul>
+
+                    <li><a href="index.php">หน้าแรก</a></li>
+
+                    <li><a href="tologin.php">บันทึกกิจกรรม</a></li>                    
+                </ul>
+                <div id="login-f">
+                    <form method="post" action="check_login2.php"/>
+                    <center><p>สำหรับบุคลากรสำนักหอสมุด</p></center>
+                    <label for="txtusername">user : </label>
+                    <input type="text" class="login" name="txtusername" maxlength="20" value=""/><br>
+                    <label for="txtpassword">pass : </label>
+                    <input type="password" class="login" name="txtpassword" maxlength="20" value=""/><br>
+                    <center><input type="submit" id="btsubmit" class="button" value="login เข้าสู่ระบบ"/></center>
+                    </form>
+                </div>
+                <div id="showcalendar"><span id="showcal"></span></div>    
+            </div>
+
+            <div id="rightcontent">
+                <div class="quoteofday">
+                    <b><h3>ปฏิทินกิจกรรม<br/>สำนักหอสมุดมหาวิทยาลัยเกษตรศาสตร์</h3></b>
+                </div>
+
+                <div class="clear"></div>
+
+                <!-- per page -->
+                
+                <div id="showtime">
+                    <table style="border: none;font-size: 12px;color: #5b5b5b;width: 100%;margin: 10px 0 10px 0;">
+                        <tr>
+                            <td style="border: none;padding: 4px;" ><img src="img/icon/calendar_empty_32.png"></td>
+                            <td style="border: none;padding: 4px;" ><b>วันนี้ 28 สิงหาคม พ.ศ. 2560</b></td>                       
+                            <td style="border: none;padding: 4px;" ><img src="img/icon/clock_32.png"></td>
+                            <td style="border: none;padding: 4px;" ><b>เวลา 15:56:07</b></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="clear"></div>                
+                <div class="clear"></div><div id="showtomonth"><img src="img/showmonth.png"/><marquee width="100%" height="60" onmouseover="this.stop()" onmouseout="this.start()" scrollamount="1" scrolldelay="100" truespeed="true" direction="up"><a href="showlist2.php?id=1255"><span style="color:blue;">1.กิจกรรม </span>นิสิตคณะสิ่งแวดล้อม วันที่ 28 สิงหาคม พ.ศ. 2560(13:00-16:00) ณ ห้องประชุม2 ชั้น 2 อาคารเทพฯ<br/></a><a href="showlist2.php?id=1164"><span style="color:blue;">2.กิจกรรม </span>งานปฐมนิเทศใช้ห้องสมุด วันที่ 28 สิงหาคม พ.ศ. 2560(08:30-16:30) ณ ห้องประชุม3 ชั้น 4 อาคารเทพฯ<br/></a><a href="showlist2.php?id=1165"><span style="color:blue;">3.กิจกรรม </span>งานปฐมนิเทศใช้ห้องสมุด วันที่ 29 สิงหาคม พ.ศ. 2560(08:30-16:30) ณ ห้องประชุม3 ชั้น 4 อาคารเทพฯ<br/></a><a href="showlist2.php?id=1166"><span style="color:blue;">4.กิจกรรม </span>งานปฐมนิเทศใช้ห้องสมุด วันที่ 30 สิงหาคม พ.ศ. 2560(08:30-16:30) ณ ห้องประชุม3 ชั้น 4 อาคารเทพฯ<br/></a><a href="showlist2.php?id=1093"><span style="color:blue;">5.กิจกรรม </span>โปรแกรมการใช้ endnote วันที่ 30 สิงหาคม พ.ศ. 2560(08:30-14:00) ณ ห้องอบรมชั้น2  อาคารเทพฯ<br/></a><a href="showlist2.php?id=986"><span style="color:blue;">6.กิจกรรม </span>กิจกรรมสร้างแรงบัลดาลใจให้เด็กเรียนเก่ง (อยู่ในระหว่างคิดหัวข้อกิจกรรม) วันที่ 30 สิงหาคม พ.ศ. 2560(13:00-15:00) ณ ห้องประชุมใหญ่ ชั้น 5 อาคารเทพฯ<br/></a><a href="showlist2.php?id=1167"><span style="color:blue;">7.กิจกรรม </span>งานปฐมนิเทศใช้ห้องสมุด วันที่ 31 สิงหาคม พ.ศ. 2560(08:30-16:30) ณ ห้องประชุม3 ชั้น 4 อาคารเทพฯ<br/></a><a href="showlist2.php?id=1236"><span style="color:blue;">8.กิจกรรม </span>สอนการสืบค้นนิสิตสาขาวนผลิตภัณฑ์ วันที่ 31 สิงหาคม พ.ศ. 2560(13:00-14:30) ณ ห้องอบรมชั้น2  อาคารเทพฯ<br/></a><a href="showlist2.php?id=1252"><span style="color:blue;">9.กิจกรรม </span>ประชุมฝ่ายจัดการ ฯ ครั้งที่ 6/2560 วันที่ 31 สิงหาคม พ.ศ. 2560(09:30-12:00) ณ ห้องประชุม2 ชั้น 2 อาคารเทพฯ<br/></a><a href="showlist2.php?id=639"><span style="color:blue;">10.กิจกรรม </span>การบรรยายเชิงปฏิบัติการเรื่องการใช้โปรแกรมจัดการทางบรรณานุกรม endnote x7 (รุ่น 11) วันที่ 31 สิงหาคม พ.ศ. 2560(09:00-12:00) ณ ห้องอบรมชั้น2  อาคารเทพฯ<br/></a></marquee></div><div id="showacts"><br/><br/><table class='titlehead'><tr><th width='36%'>รายการกิจกรรม</th><th width='25%'>วันที่และเวลาจัดกิจกรรม</th><th width='20%'>สถานที่จัดกิจกรรม</th><th width='10%'>สำหรับ</th><th width='7%'>จำนวน</th></tr></table><table class='showpag' id='data'>                    <!--
+                        <tr>
+                            <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:16px;'>1</th><th>หัวข้อกิจกรรม</th>
+                            <th>ประเภท</th><th>วันเวลา</th><th>สถานที่</th><th>สำหรับ</th>
+                            <th>จำนวน</th><th>รายละเอียด</th> 
+                        </tr>
+                    -->
+                    <tr>
+                        <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:14px;'>1</th>
+                    </tr>
+                    <tr>
+                        <td width="36%">งานปฐมนิเทศใช้ห้องสมุด</td>                           
+                        <td width="25%">28 สิงหาคม พ.ศ. 2560(08:30-16:30)</td>
+                        <td width="20%">ห้องประชุม3 ชั้น 4 อาคารเทพฯ</td>
+                        <td width="10%">บุคคลภายนอก</td>
+                        <td width="7%" align='center'>50 คน</td>
+                        <td width="2%" align='center'><a href="showlist2.php?id=1164"><img src="img/icon/16/issue.png" title='ดูรายละเอียด'></a></td>
+                    </tr>
+                                        <!--
+                        <tr>
+                            <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:16px;'>2</th><th>หัวข้อกิจกรรม</th>
+                            <th>ประเภท</th><th>วันเวลา</th><th>สถานที่</th><th>สำหรับ</th>
+                            <th>จำนวน</th><th>รายละเอียด</th> 
+                        </tr>
+                    -->
+                    <tr>
+                        <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:14px;'>2</th>
+                    </tr>
+                    <tr>
+                        <td width="36%">นิสิตคณะสิ่งแวดล้อม</td>                           
+                        <td width="25%">28 สิงหาคม พ.ศ. 2560(13:00-16:00)</td>
+                        <td width="20%">ห้องประชุม2 ชั้น 2 อาคารเทพฯ</td>
+                        <td width="10%">บุคคลภายนอก</td>
+                        <td width="7%" align='center'>20 คน</td>
+                        <td width="2%" align='center'><a href="showlist2.php?id=1255"><img src="img/icon/16/issue.png" title='ดูรายละเอียด'></a></td>
+                    </tr>
+                                        <!--
+                        <tr>
+                            <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:16px;'>3</th><th>หัวข้อกิจกรรม</th>
+                            <th>ประเภท</th><th>วันเวลา</th><th>สถานที่</th><th>สำหรับ</th>
+                            <th>จำนวน</th><th>รายละเอียด</th> 
+                        </tr>
+                    -->
+                    <tr>
+                        <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:14px;'>3</th>
+                    </tr>
+                    <tr>
+                        <td width="36%">งานปฐมนิเทศใช้ห้องสมุด</td>                           
+                        <td width="25%">29 สิงหาคม พ.ศ. 2560(08:30-16:30)</td>
+                        <td width="20%">ห้องประชุม3 ชั้น 4 อาคารเทพฯ</td>
+                        <td width="10%">บุคคลภายนอก</td>
+                        <td width="7%" align='center'>50 คน</td>
+                        <td width="2%" align='center'><a href="showlist2.php?id=1165"><img src="img/icon/16/issue.png" title='ดูรายละเอียด'></a></td>
+                    </tr>
+                                        <!--
+                        <tr>
+                            <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:16px;'>4</th><th>หัวข้อกิจกรรม</th>
+                            <th>ประเภท</th><th>วันเวลา</th><th>สถานที่</th><th>สำหรับ</th>
+                            <th>จำนวน</th><th>รายละเอียด</th> 
+                        </tr>
+                    -->
+                    <tr>
+                        <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:14px;'>4</th>
+                    </tr>
+                    <tr>
+                        <td width="36%">งานปฐมนิเทศใช้ห้องสมุด</td>                           
+                        <td width="25%">30 สิงหาคม พ.ศ. 2560(08:30-16:30)</td>
+                        <td width="20%">ห้องประชุม3 ชั้น 4 อาคารเทพฯ</td>
+                        <td width="10%">บุคคลภายนอก</td>
+                        <td width="7%" align='center'>50 คน</td>
+                        <td width="2%" align='center'><a href="showlist2.php?id=1166"><img src="img/icon/16/issue.png" title='ดูรายละเอียด'></a></td>
+                    </tr>
+                                        <!--
+                        <tr>
+                            <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:16px;'>5</th><th>หัวข้อกิจกรรม</th>
+                            <th>ประเภท</th><th>วันเวลา</th><th>สถานที่</th><th>สำหรับ</th>
+                            <th>จำนวน</th><th>รายละเอียด</th> 
+                        </tr>
+                    -->
+                    <tr>
+                        <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:14px;'>5</th>
+                    </tr>
+                    <tr>
+                        <td width="36%">โปรแกรมการใช้ endnote</td>                           
+                        <td width="25%">30 สิงหาคม พ.ศ. 2560(08:30-14:00)</td>
+                        <td width="20%">ห้องอบรมชั้น2  อาคารเทพฯ</td>
+                        <td width="10%">บุคคลภายนอก</td>
+                        <td width="7%" align='center'>65 คน</td>
+                        <td width="2%" align='center'><a href="showlist2.php?id=1093"><img src="img/icon/16/issue.png" title='ดูรายละเอียด'></a></td>
+                    </tr>
+                                        <!--
+                        <tr>
+                            <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:16px;'>6</th><th>หัวข้อกิจกรรม</th>
+                            <th>ประเภท</th><th>วันเวลา</th><th>สถานที่</th><th>สำหรับ</th>
+                            <th>จำนวน</th><th>รายละเอียด</th> 
+                        </tr>
+                    -->
+                    <tr>
+                        <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:14px;'>6</th>
+                    </tr>
+                    <tr>
+                        <td width="36%">กิจกรรมสร้างแรงบัลดาลใจให้เด็กเรียนเก่ง (อยู่ในระหว่างคิดหัวข้อกิจกรรม)</td>                           
+                        <td width="25%">30 สิงหาคม พ.ศ. 2560(13:00-15:00)</td>
+                        <td width="20%">ห้องประชุมใหญ่ ชั้น 5 อาคารเทพฯ</td>
+                        <td width="10%">บุคคลภายนอก</td>
+                        <td width="7%" align='center'>100 คน</td>
+                        <td width="2%" align='center'><a href="showlist2.php?id=986"><img src="img/icon/16/issue.png" title='ดูรายละเอียด'></a></td>
+                    </tr>
+                                        <!--
+                        <tr>
+                            <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:16px;'>7</th><th>หัวข้อกิจกรรม</th>
+                            <th>ประเภท</th><th>วันเวลา</th><th>สถานที่</th><th>สำหรับ</th>
+                            <th>จำนวน</th><th>รายละเอียด</th> 
+                        </tr>
+                    -->
+                    <tr>
+                        <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:14px;'>7</th>
+                    </tr>
+                    <tr>
+                        <td width="36%">สอนการสืบค้นนิสิตสาขาวนผลิตภัณฑ์</td>                           
+                        <td width="25%">31 สิงหาคม พ.ศ. 2560(13:00-14:30)</td>
+                        <td width="20%">ห้องอบรมชั้น2  อาคารเทพฯ</td>
+                        <td width="10%">บุคคลภายนอก</td>
+                        <td width="7%" align='center'>12 คน</td>
+                        <td width="2%" align='center'><a href="showlist2.php?id=1236"><img src="img/icon/16/issue.png" title='ดูรายละเอียด'></a></td>
+                    </tr>
+                                        <!--
+                        <tr>
+                            <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:16px;'>8</th><th>หัวข้อกิจกรรม</th>
+                            <th>ประเภท</th><th>วันเวลา</th><th>สถานที่</th><th>สำหรับ</th>
+                            <th>จำนวน</th><th>รายละเอียด</th> 
+                        </tr>
+                    -->
+                    <tr>
+                        <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:14px;'>8</th>
+                    </tr>
+                    <tr>
+                        <td width="36%">ประชุมฝ่ายจัดการ ฯ ครั้งที่ 6/2560</td>                           
+                        <td width="25%">31 สิงหาคม พ.ศ. 2560(09:30-12:00)</td>
+                        <td width="20%">ห้องประชุม2 ชั้น 2 อาคารเทพฯ</td>
+                        <td width="10%">บุคคลภายนอก</td>
+                        <td width="7%" align='center'>23 คน</td>
+                        <td width="2%" align='center'><a href="showlist2.php?id=1252"><img src="img/icon/16/issue.png" title='ดูรายละเอียด'></a></td>
+                    </tr>
+                                        <!--
+                        <tr>
+                            <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:16px;'>9</th><th>หัวข้อกิจกรรม</th>
+                            <th>ประเภท</th><th>วันเวลา</th><th>สถานที่</th><th>สำหรับ</th>
+                            <th>จำนวน</th><th>รายละเอียด</th> 
+                        </tr>
+                    -->
+                    <tr>
+                        <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:14px;'>9</th>
+                    </tr>
+                    <tr>
+                        <td width="36%">การบรรยายเชิงปฏิบัติการเรื่องการใช้โปรแกรมจัดการทางบรรณานุกรม endnote x7 (รุ่น 11)</td>                           
+                        <td width="25%">31 สิงหาคม พ.ศ. 2560(09:00-12:00)</td>
+                        <td width="20%">ห้องอบรมชั้น2  อาคารเทพฯ</td>
+                        <td width="10%">บุคคลภายนอก</td>
+                        <td width="7%" align='center'>45 คน</td>
+                        <td width="2%" align='center'><a href="showlist2.php?id=639"><img src="img/icon/16/issue.png" title='ดูรายละเอียด'></a></td>
+                    </tr>
+                                        <!--
+                        <tr>
+                            <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:16px;'>10</th><th>หัวข้อกิจกรรม</th>
+                            <th>ประเภท</th><th>วันเวลา</th><th>สถานที่</th><th>สำหรับ</th>
+                            <th>จำนวน</th><th>รายละเอียด</th> 
+                        </tr>
+                    -->
+                    <tr>
+                        <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:14px;'>10</th>
+                    </tr>
+                    <tr>
+                        <td width="36%">งานปฐมนิเทศใช้ห้องสมุด</td>                           
+                        <td width="25%">31 สิงหาคม พ.ศ. 2560(08:30-16:30)</td>
+                        <td width="20%">ห้องประชุม3 ชั้น 4 อาคารเทพฯ</td>
+                        <td width="10%">บุคคลภายนอก</td>
+                        <td width="7%" align='center'>50 คน</td>
+                        <td width="2%" align='center'><a href="showlist2.php?id=1167"><img src="img/icon/16/issue.png" title='ดูรายละเอียด'></a></td>
+                    </tr>
+                                        <!--
+                        <tr>
+                            <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:16px;'>11</th><th>หัวข้อกิจกรรม</th>
+                            <th>ประเภท</th><th>วันเวลา</th><th>สถานที่</th><th>สำหรับ</th>
+                            <th>จำนวน</th><th>รายละเอียด</th> 
+                        </tr>
+                    -->
+                    <tr>
+                        <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:14px;'>11</th>
+                    </tr>
+                    <tr>
+                        <td width="36%">งานปฐมนิเทศใช้ห้องสมุด</td>                           
+                        <td width="25%">1 กันยายน พ.ศ. 2560(08:30-16:30)</td>
+                        <td width="20%">ห้องประชุม3 ชั้น 4 อาคารเทพฯ</td>
+                        <td width="10%">บุคคลภายนอก</td>
+                        <td width="7%" align='center'>50 คน</td>
+                        <td width="2%" align='center'><a href="showlist2.php?id=1168"><img src="img/icon/16/issue.png" title='ดูรายละเอียด'></a></td>
+                    </tr>
+                                        <!--
+                        <tr>
+                            <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:16px;'>12</th><th>หัวข้อกิจกรรม</th>
+                            <th>ประเภท</th><th>วันเวลา</th><th>สถานที่</th><th>สำหรับ</th>
+                            <th>จำนวน</th><th>รายละเอียด</th> 
+                        </tr>
+                    -->
+                    <tr>
+                        <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:14px;'>12</th>
+                    </tr>
+                    <tr>
+                        <td width="36%">กิจกรรมจินดามณีเกม</td>                           
+                        <td width="25%">1 กันยายน พ.ศ. 2560(08:30-16:30)</td>
+                        <td width="20%">ห้อง ecolibrary</td>
+                        <td width="10%">บุคคลภายนอก</td>
+                        <td width="7%" align='center'>50 คน</td>
+                        <td width="2%" align='center'><a href="showlist2.php?id=1210"><img src="img/icon/16/issue.png" title='ดูรายละเอียด'></a></td>
+                    </tr>
+                                        <!--
+                        <tr>
+                            <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:16px;'>13</th><th>หัวข้อกิจกรรม</th>
+                            <th>ประเภท</th><th>วันเวลา</th><th>สถานที่</th><th>สำหรับ</th>
+                            <th>จำนวน</th><th>รายละเอียด</th> 
+                        </tr>
+                    -->
+                    <tr>
+                        <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:14px;'>13</th>
+                    </tr>
+                    <tr>
+                        <td width="36%">isi web of science workshop (บรรยายเป็นภาษาอังกฤษ)</td>                           
+                        <td width="25%">1 กันยายน พ.ศ. 2560(09:00-16:00)</td>
+                        <td width="20%">ห้องอบรมชั้น2  อาคารเทพฯ</td>
+                        <td width="10%">บุคคลภายนอก</td>
+                        <td width="7%" align='center'>45 คน</td>
+                        <td width="2%" align='center'><a href="showlist2.php?id=1111"><img src="img/icon/16/issue.png" title='ดูรายละเอียด'></a></td>
+                    </tr>
+                                        <!--
+                        <tr>
+                            <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:16px;'>14</th><th>หัวข้อกิจกรรม</th>
+                            <th>ประเภท</th><th>วันเวลา</th><th>สถานที่</th><th>สำหรับ</th>
+                            <th>จำนวน</th><th>รายละเอียด</th> 
+                        </tr>
+                    -->
+                    <tr>
+                        <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:14px;'>14</th>
+                    </tr>
+                    <tr>
+                        <td width="36%">english friday</td>                           
+                        <td width="25%">1 กันยายน พ.ศ. 2560(09:00-15:00)</td>
+                        <td width="20%">อื่น ๆ:เคาน์เตอร์บริการและห้องมินิเธียเตอร์</td>
+                        <td width="10%">บุคคลภายนอก</td>
+                        <td width="7%" align='center'>30 คน</td>
+                        <td width="2%" align='center'><a href="showlist2.php?id=1067"><img src="img/icon/16/issue.png" title='ดูรายละเอียด'></a></td>
+                    </tr>
+                                        <!--
+                        <tr>
+                            <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:16px;'>15</th><th>หัวข้อกิจกรรม</th>
+                            <th>ประเภท</th><th>วันเวลา</th><th>สถานที่</th><th>สำหรับ</th>
+                            <th>จำนวน</th><th>รายละเอียด</th> 
+                        </tr>
+                    -->
+                    <tr>
+                        <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:14px;'>15</th>
+                    </tr>
+                    <tr>
+                        <td width="36%">งานขอบคุณผู้เกษียณอายุ ประจำปี 2560</td>                           
+                        <td width="25%">2 กันยายน พ.ศ. 2560(15:00-18:00)</td>
+                        <td width="20%">ห้องสมุดในสวน</td>
+                        <td width="10%">บุคคลภายนอก</td>
+                        <td width="7%" align='center'>130 คน</td>
+                        <td width="2%" align='center'><a href="showlist2.php?id=1254"><img src="img/icon/16/issue.png" title='ดูรายละเอียด'></a></td>
+                    </tr>
+                                        <!--
+                        <tr>
+                            <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:16px;'>16</th><th>หัวข้อกิจกรรม</th>
+                            <th>ประเภท</th><th>วันเวลา</th><th>สถานที่</th><th>สำหรับ</th>
+                            <th>จำนวน</th><th>รายละเอียด</th> 
+                        </tr>
+                    -->
+                    <tr>
+                        <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:14px;'>16</th>
+                    </tr>
+                    <tr>
+                        <td width="36%">กิจกรรมจินดามณีเกม</td>                           
+                        <td width="25%">2 กันยายน พ.ศ. 2560(08:30-16:30)</td>
+                        <td width="20%">ห้อง ecolibrary</td>
+                        <td width="10%">บุคคลภายนอก</td>
+                        <td width="7%" align='center'>50 คน</td>
+                        <td width="2%" align='center'><a href="showlist2.php?id=1211"><img src="img/icon/16/issue.png" title='ดูรายละเอียด'></a></td>
+                    </tr>
+                                        <!--
+                        <tr>
+                            <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:16px;'>17</th><th>หัวข้อกิจกรรม</th>
+                            <th>ประเภท</th><th>วันเวลา</th><th>สถานที่</th><th>สำหรับ</th>
+                            <th>จำนวน</th><th>รายละเอียด</th> 
+                        </tr>
+                    -->
+                    <tr>
+                        <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:14px;'>17</th>
+                    </tr>
+                    <tr>
+                        <td width="36%">กิจกรรมจินดามณีเกม</td>                           
+                        <td width="25%">3 กันยายน พ.ศ. 2560(08:30-16:30)</td>
+                        <td width="20%">ห้อง ecolibrary</td>
+                        <td width="10%">บุคคลภายนอก</td>
+                        <td width="7%" align='center'>50 คน</td>
+                        <td width="2%" align='center'><a href="showlist2.php?id=1212"><img src="img/icon/16/issue.png" title='ดูรายละเอียด'></a></td>
+                    </tr>
+                                        <!--
+                        <tr>
+                            <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:16px;'>18</th><th>หัวข้อกิจกรรม</th>
+                            <th>ประเภท</th><th>วันเวลา</th><th>สถานที่</th><th>สำหรับ</th>
+                            <th>จำนวน</th><th>รายละเอียด</th> 
+                        </tr>
+                    -->
+                    <tr>
+                        <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:14px;'>18</th>
+                    </tr>
+                    <tr>
+                        <td width="36%">บรรยายการใช้ห้องสมุด และฐานข้อมูล (คณะศึกษาศาสตร์) </td>                           
+                        <td width="25%">3 กันยายน พ.ศ. 2560(13:00-16:00)</td>
+                        <td width="20%">ห้องอบรมชั้น2  อาคารเทพฯ</td>
+                        <td width="10%">บุคคลภายนอก</td>
+                        <td width="7%" align='center'>45 คน</td>
+                        <td width="2%" align='center'><a href="showlist2.php?id=1241"><img src="img/icon/16/issue.png" title='ดูรายละเอียด'></a></td>
+                    </tr>
+                                        <!--
+                        <tr>
+                            <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:16px;'>19</th><th>หัวข้อกิจกรรม</th>
+                            <th>ประเภท</th><th>วันเวลา</th><th>สถานที่</th><th>สำหรับ</th>
+                            <th>จำนวน</th><th>รายละเอียด</th> 
+                        </tr>
+                    -->
+                    <tr>
+                        <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:14px;'>19</th>
+                    </tr>
+                    <tr>
+                        <td width="36%">กิจกรรมจินดามณีเกม</td>                           
+                        <td width="25%">4 กันยายน พ.ศ. 2560(08:30-16:30)</td>
+                        <td width="20%">ห้อง ecolibrary</td>
+                        <td width="10%">บุคคลภายนอก</td>
+                        <td width="7%" align='center'>50 คน</td>
+                        <td width="2%" align='center'><a href="showlist2.php?id=1213"><img src="img/icon/16/issue.png" title='ดูรายละเอียด'></a></td>
+                    </tr>
+                                        <!--
+                        <tr>
+                            <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:16px;'>20</th><th>หัวข้อกิจกรรม</th>
+                            <th>ประเภท</th><th>วันเวลา</th><th>สถานที่</th><th>สำหรับ</th>
+                            <th>จำนวน</th><th>รายละเอียด</th> 
+                        </tr>
+                    -->
+                    <tr>
+                        <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:14px;'>20</th>
+                    </tr>
+                    <tr>
+                        <td width="36%">งานปฐมนิเทศใช้ห้องสมุด</td>                           
+                        <td width="25%">4 กันยายน พ.ศ. 2560(08:30-16:30)</td>
+                        <td width="20%">ห้องประชุม3 ชั้น 4 อาคารเทพฯ</td>
+                        <td width="10%">บุคคลภายนอก</td>
+                        <td width="7%" align='center'>50 คน</td>
+                        <td width="2%" align='center'><a href="showlist2.php?id=1169"><img src="img/icon/16/issue.png" title='ดูรายละเอียด'></a></td>
+                    </tr>
+                                        <!--
+                        <tr>
+                            <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:16px;'>21</th><th>หัวข้อกิจกรรม</th>
+                            <th>ประเภท</th><th>วันเวลา</th><th>สถานที่</th><th>สำหรับ</th>
+                            <th>จำนวน</th><th>รายละเอียด</th> 
+                        </tr>
+                    -->
+                    <tr>
+                        <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:14px;'>21</th>
+                    </tr>
+                    <tr>
+                        <td width="36%">กิจกรรมปล่อยหนังสือ</td>                           
+                        <td width="25%">5 กันยายน พ.ศ. 2560(08:30-16:30)</td>
+                        <td width="20%">อื่น ๆ:ชั้น 1 สำนักหอสมุด</td>
+                        <td width="10%">บุคคลภายนอก</td>
+                        <td width="7%" align='center'>200 คน</td>
+                        <td width="2%" align='center'><a href="showlist2.php?id=1209"><img src="img/icon/16/issue.png" title='ดูรายละเอียด'></a></td>
+                    </tr>
+                                        <!--
+                        <tr>
+                            <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:16px;'>22</th><th>หัวข้อกิจกรรม</th>
+                            <th>ประเภท</th><th>วันเวลา</th><th>สถานที่</th><th>สำหรับ</th>
+                            <th>จำนวน</th><th>รายละเอียด</th> 
+                        </tr>
+                    -->
+                    <tr>
+                        <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:14px;'>22</th>
+                    </tr>
+                    <tr>
+                        <td width="36%">กิจกรรมจินดามณีเกม</td>                           
+                        <td width="25%">5 กันยายน พ.ศ. 2560(08:30-16:30)</td>
+                        <td width="20%">ห้อง ecolibrary</td>
+                        <td width="10%">บุคคลภายนอก</td>
+                        <td width="7%" align='center'>50 คน</td>
+                        <td width="2%" align='center'><a href="showlist2.php?id=1214"><img src="img/icon/16/issue.png" title='ดูรายละเอียด'></a></td>
+                    </tr>
+                                        <!--
+                        <tr>
+                            <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:16px;'>23</th><th>หัวข้อกิจกรรม</th>
+                            <th>ประเภท</th><th>วันเวลา</th><th>สถานที่</th><th>สำหรับ</th>
+                            <th>จำนวน</th><th>รายละเอียด</th> 
+                        </tr>
+                    -->
+                    <tr>
+                        <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:14px;'>23</th>
+                    </tr>
+                    <tr>
+                        <td width="36%">งานปฐมนิเทศใช้ห้องสมุด</td>                           
+                        <td width="25%">5 กันยายน พ.ศ. 2560(08:30-16:30)</td>
+                        <td width="20%">ห้องประชุม3 ชั้น 4 อาคารเทพฯ</td>
+                        <td width="10%">บุคคลภายนอก</td>
+                        <td width="7%" align='center'>50 คน</td>
+                        <td width="2%" align='center'><a href="showlist2.php?id=1170"><img src="img/icon/16/issue.png" title='ดูรายละเอียด'></a></td>
+                    </tr>
+                                        <!--
+                        <tr>
+                            <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:16px;'>24</th><th>หัวข้อกิจกรรม</th>
+                            <th>ประเภท</th><th>วันเวลา</th><th>สถานที่</th><th>สำหรับ</th>
+                            <th>จำนวน</th><th>รายละเอียด</th> 
+                        </tr>
+                    -->
+                    <tr>
+                        <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:14px;'>24</th>
+                    </tr>
+                    <tr>
+                        <td width="36%">สัมภาษณ์ cabi users</td>                           
+                        <td width="25%">5 กันยายน พ.ศ. 2560(09:00-16:00)</td>
+                        <td width="20%">ห้องประชุม1 ชั้น 2 อาคารเทพฯ</td>
+                        <td width="10%">บุคคลภายนอก</td>
+                        <td width="7%" align='center'>10 คน</td>
+                        <td width="2%" align='center'><a href="showlist2.php?id=1243"><img src="img/icon/16/issue.png" title='ดูรายละเอียด'></a></td>
+                    </tr>
+                                        <!--
+                        <tr>
+                            <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:16px;'>25</th><th>หัวข้อกิจกรรม</th>
+                            <th>ประเภท</th><th>วันเวลา</th><th>สถานที่</th><th>สำหรับ</th>
+                            <th>จำนวน</th><th>รายละเอียด</th> 
+                        </tr>
+                    -->
+                    <tr>
+                        <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:14px;'>25</th>
+                    </tr>
+                    <tr>
+                        <td width="36%">elsevier workshop</td>                           
+                        <td width="25%">6 กันยายน พ.ศ. 2560(09:00-16:30)</td>
+                        <td width="20%">ห้องอบรมชั้น2  อาคารเทพฯ</td>
+                        <td width="10%">บุคคลภายนอก</td>
+                        <td width="7%" align='center'>45 คน</td>
+                        <td width="2%" align='center'><a href="showlist2.php?id=1232"><img src="img/icon/16/issue.png" title='ดูรายละเอียด'></a></td>
+                    </tr>
+                                        <!--
+                        <tr>
+                            <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:16px;'>26</th><th>หัวข้อกิจกรรม</th>
+                            <th>ประเภท</th><th>วันเวลา</th><th>สถานที่</th><th>สำหรับ</th>
+                            <th>จำนวน</th><th>รายละเอียด</th> 
+                        </tr>
+                    -->
+                    <tr>
+                        <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:14px;'>26</th>
+                    </tr>
+                    <tr>
+                        <td width="36%">สัมภาษณ์ cabi users</td>                           
+                        <td width="25%">6 กันยายน พ.ศ. 2560(09:00-16:00)</td>
+                        <td width="20%">ห้องประชุม2 ชั้น 2 อาคารเทพฯ</td>
+                        <td width="10%">บุคคลภายนอก</td>
+                        <td width="7%" align='center'>10 คน</td>
+                        <td width="2%" align='center'><a href="showlist2.php?id=1244"><img src="img/icon/16/issue.png" title='ดูรายละเอียด'></a></td>
+                    </tr>
+                                        <!--
+                        <tr>
+                            <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:16px;'>27</th><th>หัวข้อกิจกรรม</th>
+                            <th>ประเภท</th><th>วันเวลา</th><th>สถานที่</th><th>สำหรับ</th>
+                            <th>จำนวน</th><th>รายละเอียด</th> 
+                        </tr>
+                    -->
+                    <tr>
+                        <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:14px;'>27</th>
+                    </tr>
+                    <tr>
+                        <td width="36%">งานปฐมนิเทศใช้ห้องสมุด</td>                           
+                        <td width="25%">6 กันยายน พ.ศ. 2560(08:30-16:30)</td>
+                        <td width="20%">ห้องประชุม3 ชั้น 4 อาคารเทพฯ</td>
+                        <td width="10%">บุคคลภายนอก</td>
+                        <td width="7%" align='center'>50 คน</td>
+                        <td width="2%" align='center'><a href="showlist2.php?id=1171"><img src="img/icon/16/issue.png" title='ดูรายละเอียด'></a></td>
+                    </tr>
+                                        <!--
+                        <tr>
+                            <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:16px;'>28</th><th>หัวข้อกิจกรรม</th>
+                            <th>ประเภท</th><th>วันเวลา</th><th>สถานที่</th><th>สำหรับ</th>
+                            <th>จำนวน</th><th>รายละเอียด</th> 
+                        </tr>
+                    -->
+                    <tr>
+                        <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:14px;'>28</th>
+                    </tr>
+                    <tr>
+                        <td width="36%">กิจกรรมจินดามณีเกม</td>                           
+                        <td width="25%">6 กันยายน พ.ศ. 2560(08:30-16:30)</td>
+                        <td width="20%">ห้อง ecolibrary</td>
+                        <td width="10%">บุคคลภายนอก</td>
+                        <td width="7%" align='center'>50 คน</td>
+                        <td width="2%" align='center'><a href="showlist2.php?id=1215"><img src="img/icon/16/issue.png" title='ดูรายละเอียด'></a></td>
+                    </tr>
+                                        <!--
+                        <tr>
+                            <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:16px;'>29</th><th>หัวข้อกิจกรรม</th>
+                            <th>ประเภท</th><th>วันเวลา</th><th>สถานที่</th><th>สำหรับ</th>
+                            <th>จำนวน</th><th>รายละเอียด</th> 
+                        </tr>
+                    -->
+                    <tr>
+                        <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:14px;'>29</th>
+                    </tr>
+                    <tr>
+                        <td width="36%">การสืบค้นฐานข้อมูลทาด้านวิทยาศาสตร์และการใช้ endnote</td>                           
+                        <td width="25%">7 กันยายน พ.ศ. 2560(12:30-15:00)</td>
+                        <td width="20%">ห้องอบรมชั้น2  อาคารเทพฯ</td>
+                        <td width="10%">บุคคลภายนอก</td>
+                        <td width="7%" align='center'>47 คน</td>
+                        <td width="2%" align='center'><a href="showlist2.php?id=1183"><img src="img/icon/16/issue.png" title='ดูรายละเอียด'></a></td>
+                    </tr>
+                                        <!--
+                        <tr>
+                            <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:16px;'>30</th><th>หัวข้อกิจกรรม</th>
+                            <th>ประเภท</th><th>วันเวลา</th><th>สถานที่</th><th>สำหรับ</th>
+                            <th>จำนวน</th><th>รายละเอียด</th> 
+                        </tr>
+                    -->
+                    <tr>
+                        <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:14px;'>30</th>
+                    </tr>
+                    <tr>
+                        <td width="36%">งานปฐมนิเทศใช้ห้องสมุด</td>                           
+                        <td width="25%">7 กันยายน พ.ศ. 2560(08:30-16:30)</td>
+                        <td width="20%">ห้องประชุม3 ชั้น 4 อาคารเทพฯ</td>
+                        <td width="10%">บุคคลภายนอก</td>
+                        <td width="7%" align='center'>50 คน</td>
+                        <td width="2%" align='center'><a href="showlist2.php?id=1172"><img src="img/icon/16/issue.png" title='ดูรายละเอียด'></a></td>
+                    </tr>
+                                        <!--
+                        <tr>
+                            <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:16px;'>31</th><th>หัวข้อกิจกรรม</th>
+                            <th>ประเภท</th><th>วันเวลา</th><th>สถานที่</th><th>สำหรับ</th>
+                            <th>จำนวน</th><th>รายละเอียด</th> 
+                        </tr>
+                    -->
+                    <tr>
+                        <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:14px;'>31</th>
+                    </tr>
+                    <tr>
+                        <td width="36%">กิจกรรมจินดามณีเกม</td>                           
+                        <td width="25%">7 กันยายน พ.ศ. 2560(08:30-16:30)</td>
+                        <td width="20%">ห้อง ecolibrary</td>
+                        <td width="10%">บุคคลภายนอก</td>
+                        <td width="7%" align='center'>50 คน</td>
+                        <td width="2%" align='center'><a href="showlist2.php?id=1216"><img src="img/icon/16/issue.png" title='ดูรายละเอียด'></a></td>
+                    </tr>
+                                        <!--
+                        <tr>
+                            <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:16px;'>32</th><th>หัวข้อกิจกรรม</th>
+                            <th>ประเภท</th><th>วันเวลา</th><th>สถานที่</th><th>สำหรับ</th>
+                            <th>จำนวน</th><th>รายละเอียด</th> 
+                        </tr>
+                    -->
+                    <tr>
+                        <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:14px;'>32</th>
+                    </tr>
+                    <tr>
+                        <td width="36%">กิจกรรมจินดามณีเกม</td>                           
+                        <td width="25%">8 กันยายน พ.ศ. 2560(08:30-16:30)</td>
+                        <td width="20%">ห้อง ecolibrary</td>
+                        <td width="10%">บุคคลภายนอก</td>
+                        <td width="7%" align='center'>50 คน</td>
+                        <td width="2%" align='center'><a href="showlist2.php?id=1217"><img src="img/icon/16/issue.png" title='ดูรายละเอียด'></a></td>
+                    </tr>
+                                        <!--
+                        <tr>
+                            <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:16px;'>33</th><th>หัวข้อกิจกรรม</th>
+                            <th>ประเภท</th><th>วันเวลา</th><th>สถานที่</th><th>สำหรับ</th>
+                            <th>จำนวน</th><th>รายละเอียด</th> 
+                        </tr>
+                    -->
+                    <tr>
+                        <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:14px;'>33</th>
+                    </tr>
+                    <tr>
+                        <td width="36%">งานปฐมนิเทศใช้ห้องสมุด</td>                           
+                        <td width="25%">8 กันยายน พ.ศ. 2560(08:30-16:30)</td>
+                        <td width="20%">ห้องประชุม3 ชั้น 4 อาคารเทพฯ</td>
+                        <td width="10%">บุคคลภายนอก</td>
+                        <td width="7%" align='center'>50 คน</td>
+                        <td width="2%" align='center'><a href="showlist2.php?id=1173"><img src="img/icon/16/issue.png" title='ดูรายละเอียด'></a></td>
+                    </tr>
+                                        <!--
+                        <tr>
+                            <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:16px;'>34</th><th>หัวข้อกิจกรรม</th>
+                            <th>ประเภท</th><th>วันเวลา</th><th>สถานที่</th><th>สำหรับ</th>
+                            <th>จำนวน</th><th>รายละเอียด</th> 
+                        </tr>
+                    -->
+                    <tr>
+                        <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:14px;'>34</th>
+                    </tr>
+                    <tr>
+                        <td width="36%">การสืบค้นฐานข้อมูลทาด้านวิทยาศาสตร์และการใช้ endnote</td>                           
+                        <td width="25%">8 กันยายน พ.ศ. 2560(12:30-15:00)</td>
+                        <td width="20%">ห้องอบรมชั้น2  อาคารเทพฯ</td>
+                        <td width="10%">บุคคลภายนอก</td>
+                        <td width="7%" align='center'>47 คน</td>
+                        <td width="2%" align='center'><a href="showlist2.php?id=1184"><img src="img/icon/16/issue.png" title='ดูรายละเอียด'></a></td>
+                    </tr>
+                                        <!--
+                        <tr>
+                            <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:16px;'>35</th><th>หัวข้อกิจกรรม</th>
+                            <th>ประเภท</th><th>วันเวลา</th><th>สถานที่</th><th>สำหรับ</th>
+                            <th>จำนวน</th><th>รายละเอียด</th> 
+                        </tr>
+                    -->
+                    <tr>
+                        <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:14px;'>35</th>
+                    </tr>
+                    <tr>
+                        <td width="36%">english friday</td>                           
+                        <td width="25%">8 กันยายน พ.ศ. 2560(09:00-15:00)</td>
+                        <td width="20%">อื่น ๆ:เคาน์เตอร์บริการและห้องมินิเธียเตอร์</td>
+                        <td width="10%">บุคคลภายนอก</td>
+                        <td width="7%" align='center'>30 คน</td>
+                        <td width="2%" align='center'><a href="showlist2.php?id=1068"><img src="img/icon/16/issue.png" title='ดูรายละเอียด'></a></td>
+                    </tr>
+                                        <!--
+                        <tr>
+                            <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:16px;'>36</th><th>หัวข้อกิจกรรม</th>
+                            <th>ประเภท</th><th>วันเวลา</th><th>สถานที่</th><th>สำหรับ</th>
+                            <th>จำนวน</th><th>รายละเอียด</th> 
+                        </tr>
+                    -->
+                    <tr>
+                        <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:14px;'>36</th>
+                    </tr>
+                    <tr>
+                        <td width="36%">กิจกรรมจินดามณีเกม</td>                           
+                        <td width="25%">9 กันยายน พ.ศ. 2560(08:30-16:30)</td>
+                        <td width="20%">ห้อง ecolibrary</td>
+                        <td width="10%">บุคคลภายนอก</td>
+                        <td width="7%" align='center'>50 คน</td>
+                        <td width="2%" align='center'><a href="showlist2.php?id=1218"><img src="img/icon/16/issue.png" title='ดูรายละเอียด'></a></td>
+                    </tr>
+                                        <!--
+                        <tr>
+                            <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:16px;'>37</th><th>หัวข้อกิจกรรม</th>
+                            <th>ประเภท</th><th>วันเวลา</th><th>สถานที่</th><th>สำหรับ</th>
+                            <th>จำนวน</th><th>รายละเอียด</th> 
+                        </tr>
+                    -->
+                    <tr>
+                        <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:14px;'>37</th>
+                    </tr>
+                    <tr>
+                        <td width="36%">กิจกรรมจินดามณีเกม</td>                           
+                        <td width="25%">10 กันยายน พ.ศ. 2560(08:30-16:30)</td>
+                        <td width="20%">ห้อง ecolibrary</td>
+                        <td width="10%">บุคคลภายนอก</td>
+                        <td width="7%" align='center'>50 คน</td>
+                        <td width="2%" align='center'><a href="showlist2.php?id=1219"><img src="img/icon/16/issue.png" title='ดูรายละเอียด'></a></td>
+                    </tr>
+                                        <!--
+                        <tr>
+                            <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:16px;'>38</th><th>หัวข้อกิจกรรม</th>
+                            <th>ประเภท</th><th>วันเวลา</th><th>สถานที่</th><th>สำหรับ</th>
+                            <th>จำนวน</th><th>รายละเอียด</th> 
+                        </tr>
+                    -->
+                    <tr>
+                        <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:14px;'>38</th>
+                    </tr>
+                    <tr>
+                        <td width="36%">กิจกรรมจินดามณีเกม</td>                           
+                        <td width="25%">11 กันยายน พ.ศ. 2560(08:30-16:30)</td>
+                        <td width="20%">ห้อง ecolibrary</td>
+                        <td width="10%">บุคคลภายนอก</td>
+                        <td width="7%" align='center'>50 คน</td>
+                        <td width="2%" align='center'><a href="showlist2.php?id=1220"><img src="img/icon/16/issue.png" title='ดูรายละเอียด'></a></td>
+                    </tr>
+                                        <!--
+                        <tr>
+                            <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:16px;'>39</th><th>หัวข้อกิจกรรม</th>
+                            <th>ประเภท</th><th>วันเวลา</th><th>สถานที่</th><th>สำหรับ</th>
+                            <th>จำนวน</th><th>รายละเอียด</th> 
+                        </tr>
+                    -->
+                    <tr>
+                        <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:14px;'>39</th>
+                    </tr>
+                    <tr>
+                        <td width="36%">กิจกรรมจินดามณีเกม</td>                           
+                        <td width="25%">12 กันยายน พ.ศ. 2560(08:30-16:30)</td>
+                        <td width="20%">ห้อง ecolibrary</td>
+                        <td width="10%">บุคคลภายนอก</td>
+                        <td width="7%" align='center'>50 คน</td>
+                        <td width="2%" align='center'><a href="showlist2.php?id=1221"><img src="img/icon/16/issue.png" title='ดูรายละเอียด'></a></td>
+                    </tr>
+                                        <!--
+                        <tr>
+                            <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:16px;'>40</th><th>หัวข้อกิจกรรม</th>
+                            <th>ประเภท</th><th>วันเวลา</th><th>สถานที่</th><th>สำหรับ</th>
+                            <th>จำนวน</th><th>รายละเอียด</th> 
+                        </tr>
+                    -->
+                    <tr>
+                        <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:14px;'>40</th>
+                    </tr>
+                    <tr>
+                        <td width="36%">อบรมเชิงปฏิบัติการ การคัดเลือกและประเมินคุณภาพวารสารวิชาการ </td>                           
+                        <td width="25%">13 กันยายน พ.ศ. 2560(08:30-12:00)</td>
+                        <td width="20%">ห้องอบรมชั้น2  อาคารเทพฯ</td>
+                        <td width="10%">บุคคลภายนอก</td>
+                        <td width="7%" align='center'>45 คน</td>
+                        <td width="2%" align='center'><a href="showlist2.php?id=553"><img src="img/icon/16/issue.png" title='ดูรายละเอียด'></a></td>
+                    </tr>
+                                        <!--
+                        <tr>
+                            <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:16px;'>41</th><th>หัวข้อกิจกรรม</th>
+                            <th>ประเภท</th><th>วันเวลา</th><th>สถานที่</th><th>สำหรับ</th>
+                            <th>จำนวน</th><th>รายละเอียด</th> 
+                        </tr>
+                    -->
+                    <tr>
+                        <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:14px;'>41</th>
+                    </tr>
+                    <tr>
+                        <td width="36%">กิจกรรมจินดามณีเกม</td>                           
+                        <td width="25%">13 กันยายน พ.ศ. 2560(08:30-16:30)</td>
+                        <td width="20%">ห้อง ecolibrary</td>
+                        <td width="10%">บุคคลภายนอก</td>
+                        <td width="7%" align='center'>50 คน</td>
+                        <td width="2%" align='center'><a href="showlist2.php?id=1222"><img src="img/icon/16/issue.png" title='ดูรายละเอียด'></a></td>
+                    </tr>
+                                        <!--
+                        <tr>
+                            <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:16px;'>42</th><th>หัวข้อกิจกรรม</th>
+                            <th>ประเภท</th><th>วันเวลา</th><th>สถานที่</th><th>สำหรับ</th>
+                            <th>จำนวน</th><th>รายละเอียด</th> 
+                        </tr>
+                    -->
+                    <tr>
+                        <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:14px;'>42</th>
+                    </tr>
+                    <tr>
+                        <td width="36%">library orientation</td>                           
+                        <td width="25%">14 กันยายน พ.ศ. 2560(13:00-16:00)</td>
+                        <td width="20%">ห้องอบรมชั้น2  อาคารเทพฯ</td>
+                        <td width="10%">บุคคลภายนอก</td>
+                        <td width="7%" align='center'>12 คน</td>
+                        <td width="2%" align='center'><a href="showlist2.php?id=1250"><img src="img/icon/16/issue.png" title='ดูรายละเอียด'></a></td>
+                    </tr>
+                                        <!--
+                        <tr>
+                            <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:16px;'>43</th><th>หัวข้อกิจกรรม</th>
+                            <th>ประเภท</th><th>วันเวลา</th><th>สถานที่</th><th>สำหรับ</th>
+                            <th>จำนวน</th><th>รายละเอียด</th> 
+                        </tr>
+                    -->
+                    <tr>
+                        <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:14px;'>43</th>
+                    </tr>
+                    <tr>
+                        <td width="36%">กิจกรรมจินดามณีเกม</td>                           
+                        <td width="25%">14 กันยายน พ.ศ. 2560(08:30-16:30)</td>
+                        <td width="20%">ห้อง ecolibrary</td>
+                        <td width="10%">บุคคลภายนอก</td>
+                        <td width="7%" align='center'>50 คน</td>
+                        <td width="2%" align='center'><a href="showlist2.php?id=1223"><img src="img/icon/16/issue.png" title='ดูรายละเอียด'></a></td>
+                    </tr>
+                                        <!--
+                        <tr>
+                            <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:16px;'>44</th><th>หัวข้อกิจกรรม</th>
+                            <th>ประเภท</th><th>วันเวลา</th><th>สถานที่</th><th>สำหรับ</th>
+                            <th>จำนวน</th><th>รายละเอียด</th> 
+                        </tr>
+                    -->
+                    <tr>
+                        <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:14px;'>44</th>
+                    </tr>
+                    <tr>
+                        <td width="36%">กิจกรรมจินดามณีเกม</td>                           
+                        <td width="25%">15 กันยายน พ.ศ. 2560(08:30-16:30)</td>
+                        <td width="20%">ห้อง ecolibrary</td>
+                        <td width="10%">บุคคลภายนอก</td>
+                        <td width="7%" align='center'>50 คน</td>
+                        <td width="2%" align='center'><a href="showlist2.php?id=1224"><img src="img/icon/16/issue.png" title='ดูรายละเอียด'></a></td>
+                    </tr>
+                                        <!--
+                        <tr>
+                            <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:16px;'>45</th><th>หัวข้อกิจกรรม</th>
+                            <th>ประเภท</th><th>วันเวลา</th><th>สถานที่</th><th>สำหรับ</th>
+                            <th>จำนวน</th><th>รายละเอียด</th> 
+                        </tr>
+                    -->
+                    <tr>
+                        <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:14px;'>45</th>
+                    </tr>
+                    <tr>
+                        <td width="36%">english friday</td>                           
+                        <td width="25%">15 กันยายน พ.ศ. 2560(09:00-15:00)</td>
+                        <td width="20%">อื่น ๆ:เคาน์เตอร์บริการและห้องมินิเธียเตอร์และห้องประชุมชั้น 2 อาคารเทพรัตน์วิทยาโชติ</td>
+                        <td width="10%">บุคคลภายนอก</td>
+                        <td width="7%" align='center'>30 คน</td>
+                        <td width="2%" align='center'><a href="showlist2.php?id=742"><img src="img/icon/16/issue.png" title='ดูรายละเอียด'></a></td>
+                    </tr>
+                                        <!--
+                        <tr>
+                            <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:16px;'>46</th><th>หัวข้อกิจกรรม</th>
+                            <th>ประเภท</th><th>วันเวลา</th><th>สถานที่</th><th>สำหรับ</th>
+                            <th>จำนวน</th><th>รายละเอียด</th> 
+                        </tr>
+                    -->
+                    <tr>
+                        <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:14px;'>46</th>
+                    </tr>
+                    <tr>
+                        <td width="36%">การสืบค้นฐานข้อมูล opac และการสืบค้นวิทยานิพนธ์ (รุ่นที่ 1) </td>                           
+                        <td width="25%">20 กันยายน พ.ศ. 2560(13:00-15:00)</td>
+                        <td width="20%">ห้องอบรมชั้น2  อาคารเทพฯ</td>
+                        <td width="10%">บุคคลภายนอก</td>
+                        <td width="7%" align='center'>45 คน</td>
+                        <td width="2%" align='center'><a href="showlist2.php?id=1097"><img src="img/icon/16/issue.png" title='ดูรายละเอียด'></a></td>
+                    </tr>
+                                        <!--
+                        <tr>
+                            <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:16px;'>47</th><th>หัวข้อกิจกรรม</th>
+                            <th>ประเภท</th><th>วันเวลา</th><th>สถานที่</th><th>สำหรับ</th>
+                            <th>จำนวน</th><th>รายละเอียด</th> 
+                        </tr>
+                    -->
+                    <tr>
+                        <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:14px;'>47</th>
+                    </tr>
+                    <tr>
+                        <td width="36%">ประชุมคณะกรรมการจัดการพลังงานและสิ่งแวดล้อม</td>                           
+                        <td width="25%">21 กันยายน พ.ศ. 2560(13:30-16:30)</td>
+                        <td width="20%">ห้องประชุม2 ชั้น 2 อาคารเทพฯ</td>
+                        <td width="10%">บุคคลภายนอก</td>
+                        <td width="7%" align='center'>30 คน</td>
+                        <td width="2%" align='center'><a href="showlist2.php?id=1251"><img src="img/icon/16/issue.png" title='ดูรายละเอียด'></a></td>
+                    </tr>
+                                        <!--
+                        <tr>
+                            <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:16px;'>48</th><th>หัวข้อกิจกรรม</th>
+                            <th>ประเภท</th><th>วันเวลา</th><th>สถานที่</th><th>สำหรับ</th>
+                            <th>จำนวน</th><th>รายละเอียด</th> 
+                        </tr>
+                    -->
+                    <tr>
+                        <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:14px;'>48</th>
+                    </tr>
+                    <tr>
+                        <td width="36%">การอบรมเชิงปฏิบัติการเรื่องการใช้โปรแกรมจัดการบรรณานุกรม endnote x8 (รุ่นที่ 1) </td>                           
+                        <td width="25%">26 กันยายน พ.ศ. 2560(13:00-16:00)</td>
+                        <td width="20%">ห้องอบรมชั้น2  อาคารเทพฯ</td>
+                        <td width="10%">บุคคลภายนอก</td>
+                        <td width="7%" align='center'>45 คน</td>
+                        <td width="2%" align='center'><a href="showlist2.php?id=1103"><img src="img/icon/16/issue.png" title='ดูรายละเอียด'></a></td>
+                    </tr>
+                                        <!--
+                        <tr>
+                            <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:16px;'>49</th><th>หัวข้อกิจกรรม</th>
+                            <th>ประเภท</th><th>วันเวลา</th><th>สถานที่</th><th>สำหรับ</th>
+                            <th>จำนวน</th><th>รายละเอียด</th> 
+                        </tr>
+                    -->
+                    <tr>
+                        <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:14px;'>49</th>
+                    </tr>
+                    <tr>
+                        <td width="36%">อบรมการสืบค้นฐานข้อมูลด้านมนุษยศาสตร์และสังคมศาสตร์ (รุ่นที่ 1)</td>                           
+                        <td width="25%">3 ตุลาคม พ.ศ. 2560(09:00-11:00)</td>
+                        <td width="20%">ห้องอบรมชั้น2  อาคารเทพฯ</td>
+                        <td width="10%">บุคคลภายนอก</td>
+                        <td width="7%" align='center'>45 คน</td>
+                        <td width="2%" align='center'><a href="showlist2.php?id=1098"><img src="img/icon/16/issue.png" title='ดูรายละเอียด'></a></td>
+                    </tr>
+                                        <!--
+                        <tr>
+                            <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:16px;'>50</th><th>หัวข้อกิจกรรม</th>
+                            <th>ประเภท</th><th>วันเวลา</th><th>สถานที่</th><th>สำหรับ</th>
+                            <th>จำนวน</th><th>รายละเอียด</th> 
+                        </tr>
+                    -->
+                    <tr>
+                        <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:14px;'>50</th>
+                    </tr>
+                    <tr>
+                        <td width="36%">การบรรยายเชิงปฏิบัติการการใช้โปรแกรมจัดการบรรณานุกรม endnotex8 (รุ่นที่ 2)</td>                           
+                        <td width="25%">3 ตุลาคม พ.ศ. 2560(13:00-16:00)</td>
+                        <td width="20%">ห้องอบรมชั้น2  อาคารเทพฯ</td>
+                        <td width="10%">บุคคลภายนอก</td>
+                        <td width="7%" align='center'>45 คน</td>
+                        <td width="2%" align='center'><a href="showlist2.php?id=1189"><img src="img/icon/16/issue.png" title='ดูรายละเอียด'></a></td>
+                    </tr>
+                                        <!--
+                        <tr>
+                            <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:16px;'>51</th><th>หัวข้อกิจกรรม</th>
+                            <th>ประเภท</th><th>วันเวลา</th><th>สถานที่</th><th>สำหรับ</th>
+                            <th>จำนวน</th><th>รายละเอียด</th> 
+                        </tr>
+                    -->
+                    <tr>
+                        <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:14px;'>51</th>
+                    </tr>
+                    <tr>
+                        <td width="36%">การสืบค้นฐานข้อมูลทางด้านเกษตรและคลังความรู้ </td>                           
+                        <td width="25%">1 พฤศจิกายน พ.ศ. 2560(13:00-16:00)</td>
+                        <td width="20%">ห้องอบรมชั้น2  อาคารเทพฯ</td>
+                        <td width="10%">บุคคลภายนอก</td>
+                        <td width="7%" align='center'>45 คน</td>
+                        <td width="2%" align='center'><a href="showlist2.php?id=1100"><img src="img/icon/16/issue.png" title='ดูรายละเอียด'></a></td>
+                    </tr>
+                                        <!--
+                        <tr>
+                            <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:16px;'>52</th><th>หัวข้อกิจกรรม</th>
+                            <th>ประเภท</th><th>วันเวลา</th><th>สถานที่</th><th>สำหรับ</th>
+                            <th>จำนวน</th><th>รายละเอียด</th> 
+                        </tr>
+                    -->
+                    <tr>
+                        <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:14px;'>52</th>
+                    </tr>
+                    <tr>
+                        <td width="36%">การสืบค้นฐานข้อมูลทางด้านวิทยาศาสตร์ (รุ่นที่ 1)</td>                           
+                        <td width="25%">1 พฤศจิกายน พ.ศ. 2560(09:00-11:00)</td>
+                        <td width="20%">ห้องอบรมชั้น2  อาคารเทพฯ</td>
+                        <td width="10%">บุคคลภายนอก</td>
+                        <td width="7%" align='center'>45 คน</td>
+                        <td width="2%" align='center'><a href="showlist2.php?id=1099"><img src="img/icon/16/issue.png" title='ดูรายละเอียด'></a></td>
+                    </tr>
+                                        <!--
+                        <tr>
+                            <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:16px;'>53</th><th>หัวข้อกิจกรรม</th>
+                            <th>ประเภท</th><th>วันเวลา</th><th>สถานที่</th><th>สำหรับ</th>
+                            <th>จำนวน</th><th>รายละเอียด</th> 
+                        </tr>
+                    -->
+                    <tr>
+                        <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:14px;'>53</th>
+                    </tr>
+                    <tr>
+                        <td width="36%">สำนักหอสมุดรับการตรวจประเมินคุณภาพภายในประจำปีการศึกษา 2559</td>                           
+                        <td width="25%">16 พฤศจิกายน พ.ศ. 2560(08:30-16:30)</td>
+                        <td width="20%">ห้องประชุม2 ชั้น 2 อาคารเทพฯ</td>
+                        <td width="10%">บุคคลภายนอก</td>
+                        <td width="7%" align='center'>30 คน</td>
+                        <td width="2%" align='center'><a href="showlist2.php?id=1139"><img src="img/icon/16/issue.png" title='ดูรายละเอียด'></a></td>
+                    </tr>
+                                        <!--
+                        <tr>
+                            <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:16px;'>54</th><th>หัวข้อกิจกรรม</th>
+                            <th>ประเภท</th><th>วันเวลา</th><th>สถานที่</th><th>สำหรับ</th>
+                            <th>จำนวน</th><th>รายละเอียด</th> 
+                        </tr>
+                    -->
+                    <tr>
+                        <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:14px;'>54</th>
+                    </tr>
+                    <tr>
+                        <td width="36%">การสืบค้นฐานข้อมูลอ้างอิง (รุ่นที่ 1) </td>                           
+                        <td width="25%">21 พฤศจิกายน พ.ศ. 2560(13:00-15:00)</td>
+                        <td width="20%">ห้องอบรมชั้น2  อาคารเทพฯ</td>
+                        <td width="10%">บุคคลภายนอก</td>
+                        <td width="7%" align='center'>45 คน</td>
+                        <td width="2%" align='center'><a href="showlist2.php?id=1101"><img src="img/icon/16/issue.png" title='ดูรายละเอียด'></a></td>
+                    </tr>
+                                        <!--
+                        <tr>
+                            <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:16px;'>55</th><th>หัวข้อกิจกรรม</th>
+                            <th>ประเภท</th><th>วันเวลา</th><th>สถานที่</th><th>สำหรับ</th>
+                            <th>จำนวน</th><th>รายละเอียด</th> 
+                        </tr>
+                    -->
+                    <tr>
+                        <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:14px;'>55</th>
+                    </tr>
+                    <tr>
+                        <td width="36%">อบรมเชิงปฏฺบัติการการใช้โปรแกรมจัดการบรรณานุกรม endnotex8 (รุ่นที่3)</td>                           
+                        <td width="25%">29 พฤศจิกายน พ.ศ. 2560(09:00-12:00)</td>
+                        <td width="20%">ห้องอบรมชั้น2  อาคารเทพฯ</td>
+                        <td width="10%">บุคคลภายนอก</td>
+                        <td width="7%" align='center'>45 คน</td>
+                        <td width="2%" align='center'><a href="showlist2.php?id=1190"><img src="img/icon/16/issue.png" title='ดูรายละเอียด'></a></td>
+                    </tr>
+                                        <!--
+                        <tr>
+                            <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:16px;'>56</th><th>หัวข้อกิจกรรม</th>
+                            <th>ประเภท</th><th>วันเวลา</th><th>สถานที่</th><th>สำหรับ</th>
+                            <th>จำนวน</th><th>รายละเอียด</th> 
+                        </tr>
+                    -->
+                    <tr>
+                        <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:14px;'>56</th>
+                    </tr>
+                    <tr>
+                        <td width="36%">สำนักหอสมุดรับการตรวจประเมินคุณภาพภายในประจำปีการศึกษา 2559</td>                           
+                        <td width="25%">30 พฤศจิกายน พ.ศ. 2560(08:30-16:30)</td>
+                        <td width="20%">ห้องประชุม2 ชั้น 2 อาคารเทพฯ</td>
+                        <td width="10%">บุคคลภายนอก</td>
+                        <td width="7%" align='center'>30 คน</td>
+                        <td width="2%" align='center'><a href="showlist2.php?id=1140"><img src="img/icon/16/issue.png" title='ดูรายละเอียด'></a></td>
+                    </tr>
+                                        <!--
+                        <tr>
+                            <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:16px;'>57</th><th>หัวข้อกิจกรรม</th>
+                            <th>ประเภท</th><th>วันเวลา</th><th>สถานที่</th><th>สำหรับ</th>
+                            <th>จำนวน</th><th>รายละเอียด</th> 
+                        </tr>
+                    -->
+                    <tr>
+                        <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:14px;'>57</th>
+                    </tr>
+                    <tr>
+                        <td width="36%">ประชุมผู้บริหารและคณะทำงานเครือข่ายความร่วมมือห้องสมุดด้านประกันคุณภาพการศึกษา 7 สถาบัน</td>                           
+                        <td width="25%">8 ธันวาคม พ.ศ. 2560(08:30-16:30)</td>
+                        <td width="20%">ห้องประชุม2 ชั้น 2 อาคารเทพฯ</td>
+                        <td width="10%">บุคคลภายนอก</td>
+                        <td width="7%" align='center'>40 คน</td>
+                        <td width="2%" align='center'><a href="showlist2.php?id=554"><img src="img/icon/16/issue.png" title='ดูรายละเอียด'></a></td>
+                    </tr>
+                                        <!--
+                        <tr>
+                            <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:16px;'>58</th><th>หัวข้อกิจกรรม</th>
+                            <th>ประเภท</th><th>วันเวลา</th><th>สถานที่</th><th>สำหรับ</th>
+                            <th>จำนวน</th><th>รายละเอียด</th> 
+                        </tr>
+                    -->
+                    <tr>
+                        <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:14px;'>58</th>
+                    </tr>
+                    <tr>
+                        <td width="36%">การสืบค้นฐานข้อมูล opac และการสืบค้นวิทยานิพนธ์ (รุ่นที่ 2)</td>                           
+                        <td width="25%">17 มกราคม พ.ศ. 2561(09:00-11:00)</td>
+                        <td width="20%">ห้องอบรมชั้น2  อาคารเทพฯ</td>
+                        <td width="10%">บุคคลภายนอก</td>
+                        <td width="7%" align='center'>45 คน</td>
+                        <td width="2%" align='center'><a href="showlist2.php?id=1104"><img src="img/icon/16/issue.png" title='ดูรายละเอียด'></a></td>
+                    </tr>
+                                        <!--
+                        <tr>
+                            <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:16px;'>59</th><th>หัวข้อกิจกรรม</th>
+                            <th>ประเภท</th><th>วันเวลา</th><th>สถานที่</th><th>สำหรับ</th>
+                            <th>จำนวน</th><th>รายละเอียด</th> 
+                        </tr>
+                    -->
+                    <tr>
+                        <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:14px;'>59</th>
+                    </tr>
+                    <tr>
+                        <td width="36%">การบรรยายเชิงปฏิบัติการเรื่องการใช้โปรแกรมจัดการทางบรรณานุกรม endnote</td>                           
+                        <td width="25%">26 มกราคม พ.ศ. 2561(09:00-12:00)</td>
+                        <td width="20%">ห้องอบรมชั้น2  อาคารเทพฯ</td>
+                        <td width="10%">บุคคลภายนอก</td>
+                        <td width="7%" align='center'>45 คน</td>
+                        <td width="2%" align='center'><a href="showlist2.php?id=1191"><img src="img/icon/16/issue.png" title='ดูรายละเอียด'></a></td>
+                    </tr>
+                                        <!--
+                        <tr>
+                            <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:16px;'>60</th><th>หัวข้อกิจกรรม</th>
+                            <th>ประเภท</th><th>วันเวลา</th><th>สถานที่</th><th>สำหรับ</th>
+                            <th>จำนวน</th><th>รายละเอียด</th> 
+                        </tr>
+                    -->
+                    <tr>
+                        <th rowspan="2" style='border-right: 3px solid green;font-weight: bold;font-size:14px;'>60</th>
+                    </tr>
+                    <tr>
+                        <td width="36%">การสืบค้นฐานข้อมูลทางด้านมนุษยศาสตร์และสังคมศาสตร์ (รุ่นที่ 2)</td>                           
+                        <td width="25%">29 มกราคม พ.ศ. 2561(13:00-15:00)</td>
+                        <td width="20%">ห้องอบรมชั้น2  อาคารเทพฯ</td>
+                        <td width="10%">บุคคลภายนอก</td>
+                        <td width="7%" align='center'>45 คน</td>
+                        <td width="2%" align='center'><a href="showlist2.php?id=1105"><img src="img/icon/16/issue.png" title='ดูรายละเอียด'></a></td>
+                    </tr>
+                    </table>  
+            </div>
+        </div>
+        <div class="clear"></div>
+        <br/><br/>
+        <div id="footer">
+            &copy; 2015 mos css template | <a href="#">calendar activities</a> | 
+template design <a href="http://arirusmanto.com" target="_blank">information technology department</a><br>
+kulc : <a href="http://www.lib.ku.ac.th">kasetsart university library learning center  </a> | email <a href=""> libpjs@ku.ac.th tel-326</a>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,50 @@
+<html>
+<head>
+<title>การสร้างแบบจำลองทางคณิตศาสตร์</title>
+</head>
+<body  bgcolor = white>
+<center><font face="ms sans serif"><font color="#0000ff"><font ><b>การ<wbr>สร้าง<wbr>แบบ<wbr>จำลอง<wbr>ทางคณิต<wbr>ศาสตร์</b></font></font></font></center>
+
+<p>
+<font face="ms sans serif" color=brown><dd><b>แบบ</b></font><font face="ms sans serif" size=-1>จำลอง<wbr>ทางคณิต<wbr>ศาสตร์<wbr>เป็น<wbr>การ<wbr>ใช้<wbr>เพื่อ<wbr>ที่<wbr>จะ<wbr>หา<wbr>คำ<wbr>ตอบ หรือ<wbr>ทด<wbr>ลอง<wbr>เพื่อ<wbr>ให้<wbr>ได้<wbr>คำ<wbr>ตอบ เช่น<wbr>แบบ<wbr>จำลอง<wbr>การ<wbr>ซื้อ<wbr>สิน<wbr>ค้า<wbr>บน<wbr>ตา<wbr>ราง<wbr>การ<wbr>คำนวณ (spread sheet) ดัง<wbr>ตัว<wbr>อย่าง<wbr>เช่น
+<p>
+<center>
+<table border=0 width=40%>
+<tr  bgcolor="#a1a3fb" ><th colspan=4><font face="ms sans serif" size=-1>ราย<wbr>การ<wbr>ซื้อ<wbr>สิน<wbr>ค้า</th></tr>
+<tr bgcolor="#cacbf8" ><th><font face="ms sans serif" size=-1>จำนวน</th><th><font face="ms sans serif" size=-1>	สิน<wbr>ค้า</th><th><font face="ms sans serif" size=-1>		ราคา<wbr>ต่อ<wbr>หน่วย</th><th><font face="ms sans serif" size=-1>		เป็น<wbr>เงิน</th></tr>
+<tr bgcolor="#f4f4fc"  align=center><td><font face="ms sans serif" size=-1>		 5  </td><td><font face="ms sans serif" size=-1>		มะม่วง </td><td><font face="ms sans serif" size=-1>		       10	 </td><td><font face="ms sans serif" size=-1>		 50 </td></tr>
+<tr bgcolor="#f4f4fc"  align=center><td><font face="ms sans serif" size=-1>	10 </td><td><font face="ms sans serif" size=-1>		แอบเปิ้ล </td><td><font face="ms sans serif" size=-1>		       15	 </td><td><font face="ms sans serif" size=-1>		150 </td></tr>
+<tr bgcolor="#f4f4fc" align=center><td><font face="ms sans serif" size=-1>	30 </td><td><font face="ms sans serif" size=-1>		ส้ม </td><td><font face="ms sans serif" size=-1>		         2	 </td><td><font face="ms sans serif" size=-1>		 60 </td></tr>
+<tr  bgcolor="#cacbf8"  align=center><td>&nbsp;</td><td>&nbsp;</td><td><font face="ms sans serif" size=-1>	<b>รวม</b>	</td><td><font face="ms sans serif" size=-1>	<b>260</b></td></tr>
+</table></center>
+<p><dd>
+	จะ<wbr>เห็น<wbr>ว่า จาก<wbr>ราย<wbr>การ<wbr>ซื้อ<wbr>สิ้น<wbr>ค้า<wbr>นี้<wbr>ถ้า<wbr>เปลี่ยน<wbr>แปลง<wbr>จำนวน<wbr>มะม่วง<wbr>ไป<wbr>จาก 5 ผล เป็น 8 ผล ข้อ<wbr>มูล<wbr>ตัว<wbr>เลข<wbr>บน<wbr>ตาราง<wbr>จะ<wbr>เปลี่ยน<wbr>ไป  ดัง<wbr>นั้น<wbr>เรา<wbr>จะ<wbr>ใช้<wbr>ตัว<wbr>แปรแทน ลอง<wbr>ดู<wbr>จาก<wbr>ตัว<wbr>อย่าง
+<p>
+<center>
+<table border=0 width=50%>
+<tr  bgcolor="#a1a3fb" ><th colspan=4><font face="ms sans serif" size=-1>ราย<wbr>การ<wbr>ซื้อ<wbr>สิน<wbr>ค้า</th></tr>
+<tr bgcolor="#cacbf8" ><th><font face="ms sans serif" size=-1>จำนวน</th><th><font face="ms sans serif" size=-1>	สิน<wbr>ค้า</th><th><font face="ms sans serif" size=-1>		ราคา<wbr>ต่อ<wbr>หน่วย</th><th><font face="ms sans serif" size=-1>		เป็น<wbr>เงิน</th></tr>
+<tr bgcolor="#f4f4fc"  align=center><td><font face="ms sans serif" size=-1>x<sub>1</sub>  </td><td><font face="ms sans serif" size=-1>		มะม่วง </td><td><font face="ms sans serif" size=-1>y<sub>1</sub> </td><td><font face="ms sans serif" size=-1>x<sub>1</sub>y<sub>1</sub> </td></tr>
+
+<tr bgcolor="#f4f4fc"  align=center><td><font face="ms sans serif" size=-1>x<sub>2</sub>  </td><td><font face="ms sans serif" size=-1>		แอปเปิ้ล </td><td><font face="ms sans serif" size=-1>y<sub>2</sub> </td><td><font face="ms sans serif" size=-1>x<sub>2</sub>y<sub>2</sub> </td></tr>
+
+<tr bgcolor="#f4f4fc"  align=center><td><font face="ms sans serif" size=-1>x<sub>3</sub>  </td><td><font face="ms sans serif" size=-1>		ส้ม </td><td><font face="ms sans serif" size=-1>y<sub>3</sub> </td><td><font face="ms sans serif" size=-1>x<sub>3</sub>y<sub>3</sub> </td></tr>
+<tr  bgcolor="#cacbf8"  align=center><td>&nbsp;</td><td>&nbsp;</td><td><font face="ms sans serif" size=-1>	<b>รวม</b>	</td><td><font face="ms sans serif" size=-1>	<b>x<sub>1</sub>y<sub>1</sub> + x<sub>2</sub>y<sub>2</sub> + x<sub>3</sub>y<sub>3</sub></b></td></tr>
+</table></center>
+<p><dd>
+	จะ<wbr>เห็น<wbr>ได้<wbr>ชัด<wbr>ว่า<wbr>คำ<wbr>ตอบ<wbr>บน<wbr>ตา<wbr>ราง<wbr>นี้<wbr>คือ x<sub>1</sub>y<sub>1</sub> + x<sub>2</sub>y<sub>2</sub> + x<sub>3</sub>y<sub>3</sub>    ดัง<wbr>นั้น<wbr>จาก<wbr>แบบ<wbr>จำลอง<wbr>นี้<wbr>ถ้า<wbr>เปลี่ยน<wbr>แปลง<wbr>ค่า<wbr>ใด<wbr>ลง<wbr>บน<wbr>ตา<wbr>ราง การ<wbr>คำนวณ<wbr>เพื่อ<wbr>หา<wbr>คำ<wbr>ตอบ<wbr>ก็<wbr>จะ<wbr>เกิด<wbr>ขึ้น<wbr>ได้
+<p><dd>	ตา<wbr>ราง<wbr>การ<wbr>คำนวณ<wbr>เช่นสเปรด<wbr>ซีตจึง<wbr>เป็น<wbr>ตา<wbr>ราง<wbr>ที่<wbr>สร้าง<wbr>ขึ้น<wbr>เพื่อ<wbr>ใช้<wbr>แทน<wbr>รูป<wbr>แบบ<wbr>ทางคณิต<wbr>ศาสตร์<wbr>ได้<wbr>แบบ<wbr>หนึ่ง
+<p><center><img src="model_math6.gif"></center>
+<p><dd>	การ<wbr>สร้าง<wbr>แบบ<wbr>จำลอง<wbr>ทางคณิต<wbr>ศาสตร์  จึง<wbr>ต้อง<wbr>อาศัย<wbr>ความ<wbr>รอบ<wbr>รู้<wbr>ใน<wbr>เนื้อ<wbr>หา<wbr>เรื่อง<wbr>นั้น<wbr>ก่อน  แล้ว<wbr>จึง<wbr>ใช้<wbr>ความ<wbr>รู้<wbr>ทางคณิต<wbr>ศาสตร์ และ<wbr>สร้าง<wbr>ความ<wbr>ชำนาญ<wbr>เพื่อ<wbr>จะ<wbr>หา<wbr>ผล<wbr>ลัพธ์ หรือ<wbr>ทด<wbr>ลอง<wbr>จน<wbr>ได้<wbr>คำ<wbr>ตอบ<wbr>ที่<wbr>ดี ซึ่ง<wbr>เรียก<wbr>ว่า what if โมเดล หรือ<wbr>ทด<wbr>ลอง<wbr>ดู<wbr>จน<wbr>เกิด<wbr>ความ<wbr>ชำนาญ เปรียบ<wbr>เทียบกับการ<wbr>ก่อ<wbr>สร้าง<wbr>ที่<wbr>ซึ่ง<wbr>ก่อ<wbr>สร้าง<wbr>ตาม<wbr>ต้อง<wbr>การ
+<p>
+<center><table border=0 cellpadding=10>
+<tr align=center><td><font face="ms sans serif" size=-1><img src="model_math8_1.gif"><br>ความรู้ในเนื้อหา</td><td><font face="ms sans serif" size=-1><img src="model_math8_2.gif"><br>ความ<wbr>รู้<wbr>ทางคณิต<wbr>ศาสตร์</td><td><font face="ms sans serif" size=-1><img src="model_math8_3.gif"><br>ความ<wbr>ชำนาญ</td></tr>
+<tr align=center><td><font face="ms sans serif" size=-1><img src="model_math8_4.gif"><br>ก้อน<wbr>อิฐ<wbr>ก่อ<wbr>สร้าง</td><td><font face="ms sans serif" size=-1><img src="model_math8_5.gif"><br>เครื่องมือ<wbr>ก่อ<wbr>สร้างกับปูน<wbr>ซีเมนต์<wbr> ทราย</td><td><font face="ms sans serif" size=-1><img src="model_math8_6.gif"><br>ความ<wbr>ชำนาญได้<wbr>สิ่ง<wbr>ก่อ<wbr>สร้าง</td></tr>
+</table></center>
+	<p><dd>ใน<wbr>การ<wbr>ใช้<wbr>แบบ<wbr>จำลอง<wbr>ทางคณิต<wbr>ศาสตร์<wbr>จึง<wbr>มี<wbr>ขั้น<wbr>ตอน<wbr>ของ<wbr>การ<wbr>นำ<wbr>เอา<wbr>ไป<wbr>ใช้<wbr>ได้<wbr>ดัง<wbr>รูป
+<p><center><img src="model_math7.gif"></center>
+<p>&nbsp;
+<hr width="100%">
+<i>ที่มา : รศ. ยืน ภู่วรวรรณ, สำนักบริการคอมพิวเตอร์ มหาวิทยาลัยเกษตรศาสตร์</i>
+</body>
+</html>

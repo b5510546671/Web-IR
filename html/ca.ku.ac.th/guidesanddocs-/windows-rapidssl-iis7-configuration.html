@@ -1,0 +1,166 @@
+<html>
+<head>
+<title>วิธีการติดตั้งใบรับรองอิเล็กทรอนิกส์สำหรับเครื่องเว็บเซิร์ฟเวอร์บน  ms windows server - guidelines and documents</title>
+<meta http-equiv="content-type" content="text/html; charset=windows-874" />
+<link href="../caweb.css" type=text/css rel=stylesheet>
+</head>
+<body bgcolor="#ffffff" leftmargin="9" topmargin="10" marginwidth="9" marginheight="18">
+
+<table width="768" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#ffffff">
+<tr valign=top><td>
+    <!------------------start top table--------------------------------->
+    <table  width="768"  border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#ffffff">
+    <tr valign=top> 
+    <td><img src="../images/catop1-p1.jpg" width="90" height="58" border="0" ></td>
+    <td><img src="../images/catop2-p1.jpg" width="76" height="58" border="0"></td>
+    <td><img src="../images/catop3-p1.jpg" width="134" height="58" border="0"></td>
+    <td><img src="../images/catop4-p1.jpg" width="192" height="58" border="0"></td>
+    <td><img src="../images/catop5-p1.jpg" width="167" height="58" border="0"></td>
+    <td><img src="../images/catop6-p1.jpg" width="109" height="58" border="0"></td>
+    </tr>
+    <tr valign=top> 
+    <td><img src="../images/catop1-p2.jpg" width="90" height="19" border="0"></td>
+    <td><a href="../index.html"><img src="../images/catop12-p2.jpg" width="76" height="19" border="0" name="home"></a></td>
+    <td><a href="../service.html"><img src="../images/catop13-p2.jpg" width="134" height="19" border="0" name="service"></a></td>
+    <td><a href="../directory.php"><img src="../images/catop14-p2.jpg" width="192" height="19" border="0" name="directory"></a></td>
+    <td><a href="../guidesanddocs.html"><img src="../images/catop15-p2.jpg" width="167" height="19" border="0" name="docs"></a></td>
+    <td><a href="../contact.html"><img src="../images/catop16-p2.jpg" width="109" height="19" border="0" name="contact"></a></td>
+    </tr>
+    </table>
+    <!------------------end top table--------------------------------->           
+</td></tr>
+ 
+    <!------------------start bottom table--------------------------------->    
+<div align=left>
+<tr valign=top><td>
+<table width="100%" border="0" cellspacing="5" cellpadding="0" height="415">
+    <tr>     
+	  <td width="768" valign="top" align="left" height="400">
+	    <table width="768" border="0" cellspacing="0" cellpadding="0" height="350">
+          <tr> 
+            <td height="8"></td>
+          </tr>
+          <tr> 
+            <td height="205" valign="top" align="left"> 
+
+        <table width="768" border="0" cellspacing="0" cellpadding="0" height="200">
+            <td height="1" width="1" align="right"><img src="../images/spc_gry.gif" width="1" height="1"></td>
+            <td height="1" width="768"><img src="../images/spc_gry.gif" width="100%" height="1"></td>
+            <td height="1" width="10"></td>
+          </tr>
+
+          <tr valign="top" align="left"> 
+            <td width="1" height="5" align="right" valign="bottom"><img src="../images/spc_gry.gif"  width="1" height="21"></td>
+            <td height="5" bgcolor="#e1dfdf" class="thcenter">:: วิธีการติดตั้งใบรับรองอิเล็กทรอนิกส์ของ rapid wildcard ssl สำหรับเครื่องเว็บเซิร์ฟเวอร์ของมหาวิทยาลัยเกษตรศาสตร์บน  iis 7 ::</td>
+            <td width="10" height="5"><img src="../images/fold_r.gif" width="22" height="21"></td>
+          </tr>
+
+          <tr valign="top" align="left"> 
+            <td width="1" align="right"><img src="../images/spc_gry.gif" width="1" height="100%"></td>
+            <td class="tdleft"><br>
+			<div align=center>
+			<font color="red">*****</font> คู่มือการติดตั้งนี้ทดลองกับ ms windows server 2008 <font color="red">*****</font></div>
+			 <br><br>
+
+
+			<ol>
+			<li>เมื่อหน่วยงานได้รับไฟล์ใบรับรองอิเล็กทรอนิกส์ของ rapid wildcard ssl สำหรับเครื่องเว็บเซิร์ฟเวอร์ของมหาวิทยาลัยเกษตรศาสตร์ที่ผ่านการรับรองจากสำนักบริการคอมพิวเตอร์แล้ว   โดยจะมีไฟล์ชื่อ web.ku.ac.th.pfx ดังรูปที่ 1
+			<br>
+			<br><div align=center><img src="../images/wild_iis7/01.jpg" border=1><br><b>รูปที่ 1</b></div>
+		
+            <br><br>*** ให้นำไฟล์ใบรับรองอิเล็กทรอนิกส์ดังกล่าวไปเก็บไว้ใน  drive c:  เพื่อจะได้ทำการติดตั้งต่อไป ***
+			</li><p>
+			
+			<li>คลิ๊กปุ่ม start > administrative tools > internet infomation services (iis) manager ดังรูปที่ 2
+			   <br><div align=center><img src="../images/wild_iis7/02.jpg" border=1><br><b>รูปที่ 2</b></div>
+			</li>
+		
+			<br><li>จะพบหน้าจอ internet infomation services (iis) manager ให้เลือกที่ชื่อเครื่อง server และเลือกหัวข้อ server certificates   ดังรูปที่ 3 
+			   <br><div align=center><img src="../images/wild_iis7/04.jpg" border=1><br><b>รูปที่ 3</b></div>
+			</li>
+
+			<br><li>ที่หัวข้อ server certificates ให้เลือก import ...   ดังรูปที่ 4
+			   <br><div align=center><img src="../images/wild_iis7/05.jpg" border=1><br><b>รูปที่ 4</b></div>
+			</li>
+								
+			<br><li>จะพบหน้าจอ import certificate ให้คลิ๊กปุ่ม . . . เพื่อค้นหาไฟล์ใบรับรองอิเล็กทรอนิกส์ที่ได้จากข้อที่ 1  ดังรูปที่ 5
+			   <br><div align=center><img src="../images/wild_iis7/06.jpg" border=1><br><b>รูปที่ 5</b></div>
+			</li>
+
+			<br><li>จากหน้าจอ open ให้คลิ๊กเลือกไฟล์ใบรับรองอิเล็กทรอนิกส์ที่ได้เก็บไว้ใน drive c: จากตัวอย่างไฟล์ใบรับรองจะมีชื่อเป็น web.ku.ac.th.pfx ให้คลิ๊กเลือกไฟล์ดังกล่าว แล้วคลิ๊กปุ่ม open  ดังรูปที่ 6
+			   <br><div align=center><img src="../images/wild_iis7/07.jpg" border=1><br><b>รูปที่ 6</b></div>
+			</li>
+								
+			<br><li>จากหน้าจอ import certificate ใส่ password ที่กำหนดให้แล้วกด ok ดังรูปที่ 7
+			   <br><div align=center><img src="../images/wild_iis7/08.jpg" border=1><br><b>รูปที่ 7</b></div>
+			</li>			
+
+			<br><li>ที่หน้าจอ internet infomation services (iis) manager จะปรากฎ ใบรับรอง *.ku.ac.th โดย rapidssl ขึ้น  ดังรูปที่ 8
+			   <br><div align=center><img src="../images/wild_iis7/09.jpg" border=1><br><b>รูปที่ 8</b></div>
+			</li>
+								
+			<br><li>จากหน้าจอinternet infomation services (iis) manager คลิ๊กเครื่องหมาย " + "  ที่หน้าชื่อเครื่อง server จากนั้นคลิ๊กเครื่องหมาย " + "  ที่หน้า stie แล้วเลือก default website จากนั้น เลือกหัวข้อ bindings ... ทางด้านขวามือ ดังรูปที่ 9
+			   <br><div align=center><img src="../images/wild_iis7/10.jpg" border=1><br><b>รูปที่ 9</b></div>
+			</li>
+								
+			<br><li>จะปรากฎหน้าจอ site bindings ขึ้นให้กดปุ่ม add...    ดังรูปที่ 10
+			   <br><div align=center><img src="../images/wild_iis7/11.jpg" border=1><br><b>รูปที่ 10</b></div>
+			</li>
+
+			<br><li>จะปรากฎหน้าจอ add site binding  ดังรูปที่ 11
+			   <br><div align=center><img src="../images/wild_iis7/12.jpg" border=1><br><b>รูปที่ 11</b></div>
+			</li>
+
+			<br><li>ที่หน้าจอ add site binding ให้กำหนดค่า type เป็น https , port เป็น 443 , ssl certificate เป็น *.ku.ac.th แล้วกด ok   ดังรูปที่ 12
+			   <br><div align=center><img src="../images/wild_iis7/13.jpg" border=1><br><b>รูปที่ 12</b></div>
+			</li>
+								
+			<br><li>ที่หน้าจอ site bindings จะปรากฎ  https 443 ขึ้น  กดปุ่ม close  ดังรูปที่ 13
+			   <br><div align=center><img src="../images/wild_iis7/14.jpg" border=1><br><b>รูปที่ 13</b></div>
+			</li>
+
+			<br><li>จากหน้าจอ internet information services (iis) manager  ให้คลิ๊กปุ่ม stop item  เพื่อให้การติดตั้งใบรับรองอิเล็กทรอนิกส์มีผลต่อการใช้งาน  ดังรูปที่ 14
+			   <br><div align=center><img src="../images/wild_iis7/15.jpg" border=1><br><b>รูปที่ 14</b></div>
+			</li>
+								
+			<br><li>จากหน้าจอ internet information services (iis) manager  ให้คลิ๊กปุ่ม start item  เพื่อให้การติดตั้งใบรับรองอิเล็กทรอนิกส์มีผลต่อการใช้งาน  ดังรูปที่ 15
+			   <br><div align=center><img src="../images/wild_iis7/16.jpg" border=1><br><b>รูปที่ 15</b></div>
+			</li>
+
+			<br><li>ท่านสามารถเปิดโปรแกรมบราวเซอร์เพื่อตรวจสอบว่าการติดตั้งได้เสร็จสมบูรณ์แล้ว  โดยพิมพ์ url  ของเครื่องเว็บเซิร์ฟเวอร์นั้นเป็น  https://&lt;server_domain_name&gt; 
+			   ดังตัวอย่างพิมพ์ตำแหน่ง url  เป็น https://web.ku.ac.th  ดังรูปที่ 16 , 17 ,18
+			   <br><br><div align=center><img src="../images/wildcard_ku/windows_ssl10_ie.jpg" border=1><br><b>รูปที่ 16 (internet explorer)</b></div>
+			   <br><div align=center><img src="../images/wildcard_ku/windows_ssl10_mf.jpg" border=1><br><b>รูปที่ 17 (mozilla firefox)</b></div>
+			   <br><div align=center><img src="../images/wildcard_ku/windows_ssl10_gc.jpg" border=1><br><b>รูปที่ 18 (google chrome)</b></div>
+			</li>
+
+			</ol>
+
+			</td>
+            <td width="10"><img src="../images/line_ver.gif" width="22" height="100%"></td>
+          </tr>
+
+          <tr valign="top" align="left"> 
+            <td width="1" align="right" height="1"> <img src="../images/spc_gry.gif" width="1" height="1"></td>
+            <td width="100%" height="1"><img src="../images/spc_gry.gif" width="100%"1 height="1""></td>
+            <td width="10" height="1"><img src="../images/bottom_r.gif" width="22" height="1"></td>
+          </tr>
+       </table>
+	  </td>
+	 </tr>
+	</table>
+	</td>
+   </tr>
+  </table>
+</div>
+</td></tr>
+    <!------------------end bottom table--------------------------------->    
+  
+
+<tr valign=top bgcolor="#7a3c01" class="footnote"><td align=center>copyright &reg;  2012 
+<br>all rights reserved use of this site is maintained and updated by computer system devision, office of computer services, kasetsart university
+<br>last  maintained and updated:  13 june 2012
+</td></tr>
+</table>
+</body>
+</html>

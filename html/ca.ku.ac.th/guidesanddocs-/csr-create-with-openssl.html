@@ -1,0 +1,198 @@
+<html>
+<head>
+<title>วิธีการสร้างกุญแจคู่และ certificate signing request(csr) ด้วยโปรแกรม openssl - guidelines and documents</title>
+<meta http-equiv="content-type" content="text/html; charset=windows-874" />
+<link href="../caweb.css" type=text/css rel=stylesheet>
+</head>
+<body bgcolor="#ffffff" leftmargin="9" topmargin="10" marginwidth="9" marginheight="18">
+
+<table width="768" border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#ffffff">
+<tr valign=top><td>
+    <!------------------start top table--------------------------------->
+    <table  width="768"  border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#ffffff">
+    <tr valign=top> 
+    <td><img src="../images/catop1-p1.jpg" width="90" height="58" border="0" ></td>
+    <td><img src="../images/catop2-p1.jpg" width="76" height="58" border="0"></td>
+    <td><img src="../images/catop3-p1.jpg" width="134" height="58" border="0"></td>
+    <td><img src="../images/catop4-p1.jpg" width="192" height="58" border="0"></td>
+    <td><img src="../images/catop5-p1.jpg" width="167" height="58" border="0"></td>
+    <td><img src="../images/catop6-p1.jpg" width="109" height="58" border="0"></td>
+    </tr>
+    <tr valign=top> 
+    <td><img src="../images/catop1-p2.jpg" width="90" height="19" border="0"></td>
+    <td><a href="../index.html"><img src="../images/catop12-p2.jpg" width="76" height="19" border="0" name="home"></a></td>
+    <td><a href="../service.html"><img src="../images/catop13-p2.jpg" width="134" height="19" border="0" name="service"></a></td>
+    <td><a href="../directory.php"><img src="../images/catop14-p2.jpg" width="192" height="19" border="0" name="directory"></a></td>
+    <td><a href="../guidesanddocs.html"><img src="../images/catop15-p2.jpg" width="167" height="19" border="0" name="docs"></a></td>
+    <td><a href="../contact.html"><img src="../images/catop16-p2.jpg" width="109" height="19" border="0" name="contact"></a></td>
+    </tr>
+    </table>
+    <!------------------end top table--------------------------------->           
+</td></tr>
+ 
+    <!------------------start bottom table--------------------------------->    
+<div align=left>
+<tr valign=top><td>
+<table width="100%" border="0" cellspacing="5" cellpadding="0" height="415">
+    <tr>     
+	  <td width="768" valign="top" align="left" height="400">
+	    <table width="768" border="0" cellspacing="0" cellpadding="0" height="350">
+          <tr> 
+            <td height="8"></td>
+          </tr>
+          <tr> 
+            <td height="205" valign="top" align="left"> 
+
+        <table width="768" border="0" cellspacing="0" cellpadding="0" height="200">
+            <td height="1" width="1" align="right"><img src="../images/spc_gry.gif" width="1" height="1"></td>
+            <td height="1" width="768"><img src="../images/spc_gry.gif" width="100%" height="1"></td>
+            <td height="1" width="10"></td>
+          </tr>
+
+          <tr valign="top" align="left"> 
+            <td width="1" height="5" align="right" valign="bottom"><img src="../images/spc_gry.gif"  width="1" height="21"></td>
+            <td height="5" bgcolor="#e1dfdf" class="thcenter">:: วิธีการสร้างกุญแจคู่และ certificate signing request(csr)  ด้วยโปรแกรม openssl::</td>
+            <td width="10" height="5"><img src="../images/fold_r.gif" width="22" height="21"></td>
+          </tr>
+
+          <tr valign="top" align="left"> 
+            <td width="1" align="right"><img src="../images/spc_gry.gif" width="1" height="100%"></td>
+            <td class="tdleft"><br><br>
+
+			<ol>
+			<li>สร้างกุญแจคู่และ certificate signing request (csr) โดยใช้โปรแกรม openssl  หน่วยงานจะต้องระบุข้อมูลของเครื่องเว็บเซิร์ฟเวอร์  ดังนี้
+			<br><br><table border=1 width=650>
+            <tr valign=top><td class=tdleft>country name (2 letter code)[au]:   <b>th</b></td>
+			<td class=tdleft>ระบุรหัสประเทศ 2 ตัว ตามมาตรฐาน iso 3166 สำหรับประเทศไทยใช้ th</td>
+			</tr>
+			
+			<tr valign=top><td class=tdleft>state or province name (full name) [some-state]:   <b>bangkok</b></td>
+			<td class=tdleft>ระบุจังหวัดที่หน่วยงานให้บริการเว็บเซิร์ฟเวอร์ตั้งอยู่</td>
+			</tr>
+
+			<tr valign=top><td class=tdleft>locality name (eg, city) [ ]:   <b>chatujak</b></td>
+			<td class=tdleft>ระบุเขตที่หน่วยงานให้บริการเว็บเซิร์ฟเวอร์ตั้งอยู่</td>
+			</tr>
+			
+			<tr valign=top><td class=tdleft>organization name (eg, company) [internet widgits pty ltd]:   <b>kasetsart university</b></td>
+			<td class=tdleft>ระบุชื่อหน่วยงานต้นสังกัด</td>
+            </tr>
+			
+			<tr valign=top><td class=tdleft>organization  unit  name (eg, section) [ ]:   <b>office of computer services</b></td>
+			<td class=tdleft>ระบุชื่อหน่วยงานเจ้าของเครื่องให้บริการเว็บเซิร์ฟเวอร์</td>
+			</tr>
+			
+			<tr valign=top><td class=tdleft>common name (eg, your name) [ ]:   <b>webmail.ku.ac.th</b></td>
+			<td class=tdleft>ระบุชื่อโดเมนของเครื่องเว็บเซิร์ฟเวอร์</td>
+		    </tr>
+			
+			<tr valign=top><td class=tdleft>email address [ ]:   <b>cpcmrt@ku.ac.th</b></td>
+			<td class=tdleft>ระบุอีเมล์แอดแดรสของผู้ดูแลเครื่องเว็บเซิร์ฟเวอร์</td>
+			</tr>
+						
+			</table>
+			
+			<br><br>และพิมพ์คำสั่งในการสร้างกุญแจคู่และ csr  ดังนี้  (ให้แทนชื่อ server domain name ด้วยชื่อโดเมนของเครื่องเว็บเซิร์ฟเวอร์ที่ขอใช้บริการ)  ตัวอย่างการสร้างกุญแจคู่และ  csr ดังแสดงในรูปที่ 1
+			<br><br># openssl req -new -newkey rsa:2048 -sha256 >  <font color="darkorange"><i>&lt;&lt;server domain name&gt;&gt;</i></font>.csr
+			</li>
+		
+<br><br><table border=1 width=650>
+<tr><td><kbd>
+loading 'screen' into random state - done
+<br>generating a 1024 bit rsa private key
+<br>..................++++++
+<br>...........................++++++
+<br>writing new private key to 'privkey.pem'
+<br>enter pem pass phrase: 
+<br>verifying - enter pem pass phrase: 
+<br>-----
+<br>you are about to be asked to enter information that will be incorporated into your certificate request.
+<br>what you are about to enter is what is called a distinguished name or a dn.
+<br>there are quite a few fields but you can leave some blank
+<br>for some fields there will be a default value,
+<br>if you enter '.', the field will be left blank.
+<br>-----
+<br>country name (2 letter code) [au]: <b>th</b>
+<br>state or province name (full name) [some-state]: <b>bangkok</b>
+<br>locality name (eg, city) []: <b>chatujak</b>
+<br>organization name (eg, company) [internet widgits pty ltd]: <b>kasetsart university</b>
+<br>organizational unit name (eg, section) []: <b>office of computer services</b>
+<br>common name (eg, your name) []: <b>webmail.ku.ac.th</b>
+<br>email address []: <b>cpcmrt@ku.ac.th</b>
+
+<br><br>please enter the following 'extra' attributes to be sent with your certificate request
+<br>a challenge password []:
+<br>an optional company name []:
+<div align=center><br><b>รูปที่ 1 ตัวอย่างการสร้างกุญแจคู่และ csr</b></div></kbd></td></tr></table>
+
+            <br><br><img src="../images/space.gif" border=0 hspace=20>เมื่อกรอกรายละเอียดของข้อมูลเสร็จเรียบร้อยแล้ว  โปรแกรมจะสร้างกุญแจส่วนตัว(private key) ชื่อ  <font color="darkorange">privkey.pem</font>
+			และกุญแจสาธารรณะ(public key) หรือ csr  เป็น  <font color="darkorange"><i>&lt;&lt;server domain name&gt;&gt;</i></font>.csr   ทั้งนี้ทางหน่วยงานจะต้องส่ง
+			กุญแจสาธารณะ (public key) หรือ csr นี้ ส่งเมลมาที่สำนักบริการคอมพิวเตอร์เพื่อทำการออกใบรับรองอิเล็กทรอนิกส์สำหรับเครื่องเว็บเซิร์ฟเวอร์ต่อไป
+			ตัวอย่างของกุญแจสาธารณะ (public key) หรือ csr ดังแสดงในรูปที่ 2
+
+<br><br><table border=1 width=650>
+<tr><td><kbd>
+-----begin certificate request-----
+<br>miicctccaxicaqawgbixczajbgnvbaytalrimrawdgydvqqiewdcyw5na29rmrew
+dwydvqqhewhdagf0dwphazedmbsga1uechmus2fzzxrzyxj0ifvuaxzlcnnpdhkx
+jdaibgnvbastg09mzmljzsbvzibdb21wdxrlcibtzxj2awnlczezmbcga1ueaxmq
+d2vibwfpbc5rds5hyy50adeembwgcsqgsib3dqejarypy3bjc25tqgt1lmfjlnro
+migfma0gcsqgsib3dqebaquaa4gnadcbiqkbgqc40hrmyudc3nxbfvpvzxjpmm2/
+0zf2vvkmtd8yufs5z+bc3zr12qmzmo+e7f2m10+6pbnujitnraykbwrbnbbz2a/q
+qrwu/kdb6ugq5laaaot0kphjode8syoyb2albrhrqorasnlbanyailvkqkvztjkv
+xwvnrsyvjp4o1tp+/widaqabobywfayjkozihvcnaqkcmqctbwt1b2nzma0gcsqg
+sib3dqebbauaa4gbadbyihqs+/k/ot6k/zijc4lh5i0wqxlu/squanfnmx2ufs9k
+g/trztjx9zuuyhzazbrz7vrgxl4gzr2zpgzmgqou7c/qsftszr1xl+qmi6wpcwf0
+yw3ngzgvcvb9byupvmztqb44jridgik9twoxkpxnprk8ittjgkwpyqweiznc
+<br>-----end certificate request-----
+<div align=center><br><b>รูปที่ 2 ตัวอย่างกุญแจสาธารณะ (public key)หรือ csr</b></div></kbd></td></tr></table>
+			
+			<br><li>เนื่องจากกุญแจส่วนตัว (privkey.pem) ที่ได้จากโปรแกรม openssl  ยังไม่ได้เข้ารหัสลับ  เพื่อเป็นการป้องกันความปลอดภัยในการใช้งาน ให้ทำการเข้ารหัสกุญแจส่วนตัวก่อนนำไปใช้งาน 
+			โดยพิมพ์คำสั่งดังต่อไปนี้  (ให้แทนชื่อ server domain name ด้วยชื่อโดเมนของเครื่องเว็บเซิร์ฟเวอร์ที่ขอใช้บริการ)
+
+			<br><br>#  openssl rsa -in privkey.pam -out <font color="darkorange"><i>&lt;&lt;server domain name&gt;&gt;</i></font>.key
+			
+			<br><br>โปรแกรม openssl จะให้กำหนดรหัสผ่านเพื่อเข้ารหัสลับกุญแจส่วนตัวดังรูปที่ 3 
+			
+<br><br><table border=1 width=650>
+<tr><td><kbd>
+secure private.pem
+<br>read rsa key
+<br>writing rsa key
+<br>enter pem phrase:
+<br>verifying password - enter pem phrase:
+<div align=center><br><b>รูปที่ 3 การเข้ารหัสกุญแจส่วนตัว</b></div></kbd></td></tr></table>
+
+			<br><br><font color="red">***</font> ในการใช้งานทุกครั้งผู้ใช้ควรจะใช้กุญแจส่วนตัวที่ผ่านการเข้ารหัสแล้วเท่านั้น ส่วนกุญแจส่วนตัว (private.pem) ที่ยังไม่ได้เข้ารหัสควรจะลบทิ้งไป <font color="red">***</font>
+			</li>
+					
+			</ol>
+
+			</td>
+            <td width="10"><img src="../images/line_ver.gif" width="22" height="100%"></td>
+          </tr>
+
+          <tr valign="top" align="left"> 
+            <td width="1" align="right" height="1"> <img src="../images/spc_gry.gif" width="1" height="1"></td>
+            <td width="100%" height="1"><img src="../images/spc_gry.gif" width="100%"1 height="1""></td>
+            <td width="10" height="1"><img src="../images/bottom_r.gif" width="22" height="1"></td>
+          </tr>
+       </table>
+	  </td>
+	 </tr>
+	</table>
+	</td>
+   </tr>
+  </table>
+</div>
+</td></tr>
+    <!------------------end bottom table--------------------------------->    
+  
+
+<tr valign=top bgcolor="#7a3c01" class="footnote"><td align=center>copyright &reg;  2005 
+<br>all rights reserved use of this site is maintained and updated by computer system and network devision, office of computer services, kasetsart university
+<br>last  maintained and updated:  29 august 2014
+</td></tr>
+</table>
+</body>
+</html>

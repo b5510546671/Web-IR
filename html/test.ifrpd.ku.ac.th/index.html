@@ -1,0 +1,264 @@
+<html><title>ifrpd website</title>
+
+
+
+<body>
+
+
+
+<p align="center"><strong><font face="arial"><big>กรุณารอสักครู่ 2 วินาทีเพื่อเข้าสู่หน้าเว็บไซต์<br/>(please wait 2 seconds before being redirected
+
+to the script)</big></font></strong></p>
+<p align="center">&nbsp;</p>
+
+<br>
+
+<center>
+
+  คลิกที่ลิงค์ข้างล่างหากไม่สามารถเข้าสู่หน้าหลักเว็บไซต์ได้<br/>(click the link here if it won't redirect: <a href="http://test.ifrpd.ku.ac.th/2009/">http://test.ifrpd.ku.ac.th/2009/) 
+
+  </a> 
+
+</center>
+
+
+
+
+
+
+
+<script>
+
+
+
+
+
+//specify redirect url
+
+var redirecturl="http://test.ifrpd.ku.ac.th/2009/ "
+
+//specify pause duration before redirection (in seconds)
+
+var pausefor=2
+
+
+
+
+
+
+
+
+
+
+
+//done editing
+
+
+
+function postaction(){
+
+if (window.timer){
+
+clearinterval(timer)
+
+clearinterval(timer_2)
+
+}
+
+window.location=redirecturl
+
+}
+
+settimeout("postaction()",pausefor*1000)
+
+
+
+</script>
+
+
+
+
+
+<!--[if ie]>
+
+
+
+<script language="javascript1.2">
+
+
+
+<!--
+
+
+
+// this script was originally authored by william kemper.  i have no homepage.
+
+var switchm=new array
+
+switchm[0]="ffaa00";
+
+switchm[1]="ffff00";
+
+switchm[2]="00ff00";
+
+switchm[3]="0099ff";
+
+switchm[4]="ff0000";
+
+switchm[5]="ff00ff";
+
+// if you want to add more colors go ahead, all the for limits are based on array length so
+
+// you shouldn't need to change any of the code, just add more colors.
+
+
+
+i=0
+
+j=0
+
+function strobe()
+
+{
+
+if (j>increment.length-1)
+
+	{
+
+	j=0
+
+	i++
+
+		if (i>switchm.length-1)
+
+		{
+
+		i=0
+
+		}
+
+	}
+
+document.all.increment[j].filters.blendtrans.apply()
+
+document.all.increment[j].bgcolor=switchm[i]
+
+document.all.increment[j].filters.blendtrans.play()
+
+j++
+
+}
+
+timer=setinterval("strobe()",20) // change the number to effect the speed of the loadbar.
+
+timer_2=setinterval("reveal()",20)
+
+function reveal()
+
+	{
+
+	if (document.images[0].complete)
+
+		{
+
+		clearinterval(timer)
+
+		clearinterval(timer_2)
+
+		document.all.loadbar.style.visibility="hidden";
+
+		document.all.content.style.visibility="visible";
+
+		}
+
+	}
+
+// i don't know how to put comments in the css, but change duration to  effect the speed of the fade effect.
+
+
+
+
+
+
+
+//-->
+
+</script>
+
+<style><!--
+
+body
+
+	{
+
+	font-size:12px;
+
+	font-family:arial;
+
+	color:000000
+
+	}
+
+#increment
+
+	{
+
+	filter:blendtrans(duration=1)
+
+	}
+
+-->
+
+</style>
+
+
+
+<![endif]-->
+
+
+
+<!--[if ie]>
+
+
+
+<div id=loadbar 
+
+style=position:absolute;top:expression(document.body.clientheight/2-100);left:expression(document.body.clientwidth/2-50)>
+
+<table cellspacing=0 cellpadding=0 width=100><tr><td 
+
+colspan=10><b>loading...</b></td></tr><tr>
+
+<script language="javascript"><!--
+
+for (k=0;k<10;k++)
+
+{
+
+document.write("<td id=increment width=10 height=20></td>") // you could set  the length of the loadbar by changing the upper limit of the for statement.
+
+}
+
+//--></script>
+
+  </tr></table>
+
+</div>
+
+<div id=content 
+
+style="position:absolute;top:expression((document.body.clientheight-document.images[0].height)/2);left:expression((document.body.clientwidth-document.images[0].width)/2);visibility:hidden;">
+
+<img src=placeholder.gif width=1 height=1>
+
+</div>
+
+
+
+<![endif]-->
+
+
+
+</body>
+
+</html>

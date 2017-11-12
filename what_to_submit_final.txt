@@ -1,0 +1,24 @@
+WEB IR To submit
+
+1. reranking
+-web graph
+-page rank
+
+reranking [done]
+modify: index & search
+
+2. lucene web
+
+web page: make it more similar to Google
+
+show:
+heading
+snippet
+url
+
+let user select ranking with normal similarity score or page rank
+
+
+web search jsp page (make it more beautiful, shorten description, hi-light search keyword[optional]), add radio button(let user select normal search / with page rank)
+
+deadline: Nov. 15, 2017

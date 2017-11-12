@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /db
+Disallow: /diag
+Disallow: /diax
+Disallow: /diaxn
+Disallow: /it
+Disallow: /intranet
+Disallow: /health

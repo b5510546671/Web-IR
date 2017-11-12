@@ -1,0 +1,64 @@
+<html>
+<head>
+<title>เพิ่มประสิทธิภาพการให้บริการด้วย  proxy server</title>
+</head>
+<body bgcolor=white text=black>
+<font face = "ms sans serif" size = -1>
+<table cols=1 width="100%" bgcolor="#d9ffaa" >
+<tr>
+<td><font face = "ms sans serif">
+<center><b>เพิ่มประสิทธิภาพการให้บริการด้วย  proxy server</b></center>
+</td>
+</tr>
+</table><br>
+<p>
+
+<dd>ลอง<wbr>นึก<wbr>ดู<wbr>ว่า ถ้า<wbr>มี<wbr>ผู้<wbr>ใช้อินเทอร์เน็ตใน<wbr>องค์<wbr>กร<wbr>หนึ่ง<wbr>ต้อง<wbr>การ<wbr>ใช้<wbr>ข้อ<wbr>มูล<wbr>จาก<wbr>ภาย<wbr>นอก<wbr>ที่<wbr>เป็น<wbr>ข้อ<wbr>มูล<wbr>เดียว<wbr>กัน เช่น เมื่อ<wbr>ใช้เบรา<wbr>เซอร์โหลด<wbr>ข้อ<wbr>มูล<wbr>ซี<wbr>เอ็น<wbr>เอ็น<wbr>ที่<wbr>ตั้ง<wbr>อยู่<wbr>ที่ www.cnn.com โดย<wbr>หลาย<wbr>คน<wbr>ใน<wbr>องค์<wbr>กร<wbr>เรียก<wbr>ไป<wbr>ยัง<wbr>เซอร์ฟเวอร์นี้<wbr>สิ่ง<wbr>ที่<wbr>เกิด<wbr>ขึ้น<wbr>คือ ข้อ<wbr>มูล<wbr>ที่<wbr>เรียก<wbr>ก็<wbr>จะ<wbr>ต้อง<wbr>วิ่ง<wbr>ผ่าน<wbr>สาย<wbr>ส่ง<wbr>สัญญาณ<wbr>มา<wbr>เท่ากับจำนวน<wbr>ผู้<wbr>เรียก หรือ<wbr>ถ้า<wbr>มี<wbr>ผู้<wbr>ใช้<wbr>ใน<wbr>องค์<wbr>กร<wbr>เรียก<wbr>ใช้<wbr>ไฟล์<wbr>ซอฟต์แวร์ที่<wbr>มี<wbr>ผู้<wbr>บริการ<wbr>ให้ โดย<wbr>ใช้ ftp และ<wbr>เรียก<wbr>ไป<wbr>ยัง<wbr>ที่<wbr>เดียว<wbr>กัน<wbr>หลาย<wbr>คน<wbr>เช่น<wbr>กัน ปัญหา<wbr>ใน<wbr>เรื่อง<wbr>การ<wbr>คับ<wbr>คั่ง<wbr>ของ<wbr>ปริมาณ<wbr>ข้อ<wbr>มูล<wbr>บน<wbr>สาย<wbr>ส่ง<wbr>ย่อม<wbr>เกิด<wbr>ขึ้น<wbr>อย่าง<wbr>แน่<wbr>นอน
+
+<p><dd>การ<wbr>ใช้<wbr>งานอินเทอร์เน็ตเพิ่ม<wbr>ปริมาณ<wbr>ขึ้น<wbr>อย่าง<wbr>รวด<wbr>เร็ว ลอง<wbr>พิจารณา<wbr>ที่<wbr>ประเทศ<wbr>ไทย<wbr>ปริมาณ<wbr>ผู้<wbr>ใช้<wbr>เพิ่ม<wbr>ขึ้น ขณะ<wbr>เดียว<wbr>กัน<wbr>มี<wbr>จำนวน<wbr>ผู้<wbr>ให้<wbr>บริการ<wbr>ที่<wbr>เรียก<wbr>ว่า isp หลาย<wbr>ราย แต่<wbr>หาก<wbr>นับ<wbr>อัตรา<wbr>การ<wbr>เพิ่ม<wbr>ของ<wbr>ผู้<wbr>ใช้กับอัตรา<wbr>การ<wbr>เพิ่ม<wbr>ของ<wbr>ขนาด<wbr>สาย<wbr>สัญญาณ<wbr>เชื่อม<wbr>โยง เช่น<wbr>สาย<wbr>เชื่อม<wbr>โยง<wbr>ไป<wbr>ต่าง<wbr>ประเทศ พบ<wbr>ว่า<wbr>อัตรา<wbr>การ<wbr>เพิ่ม<wbr>ของ<wbr>ผู้<wbr>ใช้<wbr>เพิ่ม<wbr>สูง<wbr>กว่า<wbr>มาก ดัง<wbr>นั้น<wbr>จึง<wbr>พบ<wbr>ได้<wbr>ว่า<wbr>ความ<wbr>เร็ว<wbr>ใน<wbr>การ<wbr>เรียก<wbr>ข้อ<wbr>มูล<wbr>จาก<wbr>ต่าง<wbr>ประเทศ<wbr>จะ<wbr>มี<wbr>แนวโน้มที่<wbr>ลด<wbr>ความ<wbr>เร็ว<wbr>ลง หลาย<wbr>องค์<wbr>กร<wbr>ก็<wbr>เช่น<wbr>เดียว<wbr>กัน<wbr>เมื่อ<wbr>เชื่อม<wbr>โยง<wbr>เข้า<wbr>สู่ isp ด้วย<wbr>ความ<wbr>เร็ว<wbr>คง<wbr>ที่<wbr>อัน<wbr>หนึ่ง<wbr>ต่อ<wbr>มา<wbr>ผู้<wbr>ใช้<wbr>งาน<wbr>มาก<wbr>ขึ้น<wbr>ความ<wbr>เร็ว<wbr>ใน<wbr>การ<wbr>ใช้<wbr>ก็<wbr>ลด<wbr>ลง<wbr>ถึง<wbr>แม้<wbr>จะ<wbr>มี<wbr>กา<wbr><wbr>รขยาย<wbr>สัญญาณ<wbr>ให้<wbr>เร็ว<wbr>ขึ้น แต่<wbr>ก็<wbr>รอง<wbr>รับ<wbr>จำนวน<wbr>ผู้<wbr>ใช้<wbr>ไม่<wbr>ได้<wbr>อยู่<wbr>ดี
+
+<p><dd>ด้วย<wbr>จำนวน<wbr>ข้อ<wbr>มูล<wbr>ที่<wbr>เรียก<wbr>ใช้<wbr>มี<wbr>ปริมาณ<wbr>เพิ่ม<wbr>ขึ้น<wbr>อย่าง<wbr>ทวี<wbr>คูณ ทำ<wbr>ให้<wbr>เครือ<wbr>ข่าย<wbr>ที่<wbr>มีเดิมนั้น<wbr>ต้อง<wbr>รับ<wbr>ภาระ<wbr>ใน<wbr>การ<wbr>บริการ<wbr>ข้อ<wbr>มูล<wbr>จำนวน<wbr>มาก จึง<wbr>ต้อง<wbr>มี<wbr>การ<wbr>พัฒนา<wbr>เพื่อ<wbr>เพิ่ม<wbr>ประสิทธิภาพ<wbr>การ<wbr>ให้<wbr>บริการ
+
+<p><font color=green><b>แนว<wbr>ทางใน<wbr>การ<wbr>เพิ่ม<wbr>ประสิทธิภาพ<wbr>การ<wbr>ให้<wbr>บริการ<wbr><wbr></font></b>
+<p><dd>ผู้<wbr>ให้<wbr>บริการอินเทอร์เน็ตจึง<wbr>ต้อง<wbr>แก้<wbr>ปัญหา<wbr>ที่<wbr>เกิด<wbr>ขึ้น<wbr>โดย<wbr>เน้น<wbr>ให้<wbr>บริการ<wbr>ภาย<wbr>ใน ผู้<wbr>ใช้<wbr>ข้อ<wbr>มูล<wbr>สามารถ<wbr>เรียก<wbr>ใช้<wbr>ข้อ<wbr>มูล<wbr>ได้<wbr>จาก<wbr>ภาย<wbr>ใน โดย<wbr>ไม่<wbr>ต้อง<wbr>โหลดจาก<wbr>ภาย<wbr>นอก การ<wbr>แก้<wbr>ปัญหา<wbr>นี้<wbr>หน่วย<wbr>งาน<wbr>ไอ<wbr>เอสพี<wbr>หรือ<wbr>ผู้<wbr>ดู<wbr>แลอินเทอร์เน็ตของ<wbr>องค์<wbr>กร<wbr>จึง<wbr>ต้อง<wbr>ทำ<wbr>ดัง<wbr>นี้
+
+<dd>1. ตั้ง ftp เซอร์ฟเวอร์เก็บ<wbr>ข้อ<wbr>มูล<wbr>ที่<wbr>ใช้<wbr>บ่อย จาก<wbr>หลัก<wbr>การ<wbr>ที่<wbr>ต้อง<wbr>พา<wbr>ข้อ<wbr>มูล<wbr>ที่<wbr>ต้อง<wbr>ใช้<wbr>บ่อย ๆ มา<wbr>เก็บ<wbr>ไว้<wbr>ให้<wbr>ใกล้<wbr>ที่<wbr>สุด นั่น<wbr>คือ ต้อง<wbr>นำ<wbr>เอา<wbr>ข้อ<wbr>มูล<wbr>มาบ<wbr>ริ<wbr>การ<wbr>สมาชิก<wbr>ภาย<wbr>ใน<wbr>องค์<wbr>กร<wbr>หรือโลคัลเน็ตเวิร์ก การ<wbr>ตั้ง ftp เซอร์เวอร์ภาย<wbr>ใน<wbr>หน่วย<wbr>งาน<wbr>กระ<wbr>ทำ<wbr>ได้<wbr>ด้วย<wbr>การ<wbr>ใช้<wbr>หลัก<wbr>การ mirror จาก ftp เซอร์ฟเวอร์ที่<wbr>ใช้<wbr>บ่อย ๆ เช่น มี<wbr>โปรแกรม<wbr>ที่<wbr>ใช้ไดรเวอร์ที่<wbr>มี<wbr>อยู่<wbr>ใน ftp.microsoft.com เป็น<wbr>ต้น
+
+<dd>2.  การ<wbr>ตั้ง<wbr>เซอร์ฟเวอร์พร็อก<wbr>ซี ใน<wbr>องค์<wbr>กร<wbr>มี<wbr>ผู้<wbr>ใช้<wbr>จำนวน<wbr>มาก<wbr>ที่<wbr>ใช้<wbr>งาน<wbr>ประเภท<wbr>ออนไลน์ เช่น ใช้เบรา<wbr>เซอร์ หรือ<wbr>โปรโต<wbr>คอล http การ<wbr>เรียก<wbr>ข้อ<wbr>มูล<wbr>จาก<wbr>ภาย<wbr>นอก<wbr>จึง<wbr>เป็น<wbr>การ<wbr>ทำ<wbr>งาน<wbr>แบบ<wbr>ไคล<wbr>เอนต์เซอร์ฟเวอร<wbr>์
+
+<dd>ใน<wbr>กรณี<wbr>นี้<wbr>สามารถ<wbr>ลด<wbr>ปริมาณ<wbr>ข้อ<wbr>มูล<wbr>ที่<wbr>วิ่ง<wbr>อยู่<wbr>ใน<wbr>สาย<wbr>สัญญาณ<wbr>เชื่อม<wbr>โยง ด้วย<wbr>การ<wbr>ตั้ง<wbr>เซอร์ฟเวอร์ที่<wbr>องค์<wbr>กร<wbr>เพื่อ<wbr>เป็นบัฟเฟอร์รอง<wbr>รับ<wbr>ข้อ<wbr>มูล เมื่อ<wbr>มี<wbr>ผู้<wbr>เรียก<wbr>ข้อ<wbr>มูล<wbr>จาก<wbr>ภาย<wbr>นอก<wbr>คน<wbr>แรก ข้อ<wbr>มูล<wbr>นั้น<wbr>จะ<wbr>นำ<wbr>มา<wbr>เก็บ<wbr>ไว้<wbr>ที่<wbr>เซอร์ฟเวอร์นี้<wbr>ด้วย ดัง<wbr>นั้น<wbr>ถ้า<wbr>มี<wbr>ผู้<wbr>ใช้<wbr>ใน<wbr>องค์<wbr>กร<wbr>อื่น<wbr>ต้อง<wbr>การ<wbr>ใช้<wbr>ก็<wbr>จะ<wbr>นำ<wbr>จาก<wbr>เซอร์ฟเวอร์นี้<wbr>ได้<wbr>ทัน<wbr>ที เรา<wbr>เรียก<wbr>ว่า<wbr>เซอร์ฟเวอร์ว่า proxy
+
+<dd>การ<wbr>เก็บ<wbr>ข้อ<wbr>มูล<wbr>ใน proxy มี<wbr>ลักษณะ<wbr>เป็น<wbr>การ<wbr>เก็บ<wbr>แบบ<wbr>เรียง<wbr>กัน<wbr>ไป<wbr>ใน<wbr>เซอร์ฟเวอร์ ครั้น<wbr>เมื่อ<wbr>เต็ม<wbr>ที่<wbr>เก็บ<wbr>ก็<wbr>จะ<wbr>ลบ<wbr>ส่วน<wbr>ที่<wbr>เคย<wbr>นำ<wbr>มา<wbr>ก่อน<wbr>สุด<wbr>ออก เช่น ถ้า<wbr>มี<wbr>เซอร์ฟเวอร์ proxy ขนาด 1 กิกะไบต์ ก็<wbr>จะ<wbr>เก็บ<wbr>ข้อ<wbr>มูล<wbr>ในบัฟเฟอร์นี้<wbr>และ<wbr>เมื่อ<wbr>ข้อ<wbr>มูล<wbr>เต็ม<wbr>ก็<wbr>จะ<wbr>ลบ<wbr>ออก<wbr>แบบ round rubin หรือ<wbr>วน<wbr>รอบ
+
+<dd>การ<wbr>เชื่อม<wbr>ต่อ<wbr>ด้วย proxy ทำ<wbr>ให้<wbr>ระบบ<wbr>ลด<wbr>ปริมาณ<wbr>ข้อ<wbr>มูล<wbr>ที่<wbr>อยู่<wbr>ใน<wbr>สาย<wbr>สัญญาณ<wbr>เข้า<wbr>องค์<wbr>กร<wbr>ลด<wbr>ลง<wbr>ได้<wbr>มาก ตัง<wbr>อย่าง<wbr>เช่น 
+ผู้<wbr>ใช้<wbr>ใน<wbr>มหาวิทยาลัย<wbr>เกษตร<wbr>ศาสตร์<wbr>สามารถ<wbr>เซต<wbr>การ<wbr>เชื่อม<wbr>ผ่าน proxy ชื่อ proxy.ku.ac.th ดัง<wbr>นั้น<wbr>การ<wbr>ค้น<wbr>หา<wbr>ข้อ<wbr>มูล<wbr>จะ<wbr>ดู<wbr>จาก<wbr>ที่<wbr>นี่<wbr>ก่อน ถ้า<wbr>พบ<wbr>จะ<wbr>ได้<wbr>ข้อ<wbr>มูล<wbr>อย่าง<wbr>รวด<wbr>เร็ว<wbr>ทำ<wbr>ให้<wbr>ผู้<wbr>ใช้<wbr>ได้<wbr>ข้อ<wbr>มูล<wbr>เร็ว และ<wbr>ลด<wbr>ปริมาณ<wbr>ข้อ<wbr>มูล<wbr>ที่<wbr>จะ<wbr>วิ่ง<wbr>ผ่าน<wbr>สาย<wbr>สัญญาณ<wbr>เข้า<wbr>องค์<wbr>กร
+
+<dd>ปกติ<wbr>การ<wbr>ติด<wbr>ตั้ง proxy ของ<wbr>องค์<wbr>กร<wbr>จะ<wbr>มี<wbr>การ<wbr>เชื่อม<wbr>โยงกับ proxy ใน<wbr>ระดับ<wbr>ที่<wbr>อยู่<wbr>เหนือ<wbr>ขึ้น<wbr>ไป<wbr>อีก โดย proxy ที่<wbr>อยู่<wbr>เหนือ<wbr>ขึ้น<wbr>ไป<wbr>จะ<wbr>มี<wbr>ข้อ<wbr>มูล<wbr>ให้<wbr>เรียก<wbr>ใช้<wbr>ได้ เช่น proxy.ku.ac.th มี<wbr>การ<wbr>เซต<wbr>ให้<wbr>เชื่อม<wbr>โยงกับ proxy.nectec.or.th ซึ่ง<wbr>เป็น proxy ของ<wbr>เครือ<wbr>ข่าย<wbr>ไทย<wbr>สาร ซึ่ง<wbr>ทำ<wbr>ให้<wbr>ได้<wbr>ข้อ<wbr>มูล<wbr>มาก<wbr>ขึ้น<wbr>และ<wbr>เป็น<wbr>การ<wbr>ทำ<wbr>ให้<wbr>ประสิทธิภาพ<wbr>ใน<wbr>ประเทศ<wbr>ไทย<wbr>ดี<wbr>ขึ้น
+
+<p><center><img src="proxy_s1.jpg"></center><br>
+<center>รูปที่ 1 การตั้ง ftp ในองค์กรเพื่อลดปริมาณข้อมูลที่เชื่อมอินเทอร์เน็ต</center><br>
+<p><center><img src="proxy_s2.jpg"></center><br>
+<center>รูปที่ 2 ผู้ใช้ในองค์กรต้องการใช้เวบเซอร์ฟเวอร์เดียวกันจะต้องเรียกผ่านสายเชื่อมโยงทำให้ปริมาณข้อมูลบนสายมีมาก</center><br>
+<p><center><img src="proxy_s3.jpg"></center><br>
+<center>รูปที่ 3 การใช้ proxy เป็นบัฟเฟอร์ขององค์กร</center><br>
+
+<p><font color=green><b>การ<wbr>ติด<wbr>ตั้ง<wbr>ค่า<wbr>ในเบรา<wbr>เซอร์ให้<wbr>เชื่อม<wbr>เข้า<wbr>หา proxy</font></b>
+<p><dd>สำหรับ<wbr>ใน<wbr>องค์<wbr>กร<wbr>ที่<wbr>มี<wbr>การ<wbr>วาง<wbr>ตัว<wbr>เซอร์ฟเวอร์ประเภท proxy ไว้<wbr>ผู้<wbr>ใช้<wbr>จำ<wbr>เป็น<wbr>จะ<wbr>ต้อง<wbr>ติด<wbr>ตั้ง<wbr>โปรแกรม<wbr>ใน<wbr>ไคลเอนต์ เช่น เบรา<wbr>เซอร์ <wbr>หรือ<wbr><wbr>ftp ให้<wbr>ใช้ proxy ได้
+
+<p><center><img src="proxy_s4.jpg"></center><br>
+
+<dd>สำหรับ<wbr>ผู้<wbr>ใช้เน็ตสเคป เรา<wbr>สามารถ<wbr>เซต<wbr>ได้ เช่น ในเน็ตสเคปเวอร์ชัน 3 ให้คลิกที่ option จาก<wbr>นั้น<wbr>เลือก<wbr>เมนู network จาก<wbr>นั้น<wbr>เลือก proxy ให้คลิกเลือก proxy แล้ว<wbr>จึง<wbr>ป้อน<wbr>ข้อ<wbr>มูล เช่น ใน<wbr>มหาวิทยาลัย<wbr>เกษตร<wbr>ศาสตร์<wbr>ป้อน proxy.ku.ac.th/autoconfig.pac
+
+<dd>แต่<wbr>สำหรับเน็ตสเคปเวอร์ชัน 4 ให้คลิก edit และ<wbr>เลือก preference จาก<wbr>นั้น<wbr>ดับเบิลคลิกที่ advance จะ<wbr>พบ<wbr>คำ<wbr>ว่า proxy ให้คลิก proxy ให้คลิกที่ automatic proxy configulation โดย<wbr>ป้อน<wbr>ข้อ<wbr>มูล<wbr>ชื่อ proxy server เช่น<wbr>ถ้า<wbr>เป็น<wbr>ของ<wbr>มหาวิทยาลัย<wbr>เกษตร<wbr>ศาสตร์<wbr>ก็<wbr>ป้อน proxy.ku.ac.th/autoconfig.pac
+
+<p><p><font color=green><b>ต้อง<wbr>ได้<wbr>รับ<wbr>ความ<wbr>ร่วม<wbr>มือ<wbr><wbr></font></b>
+<p><dd>การ<wbr>ใช้<wbr>งานอินเทอร์เน็ตใน<wbr>องค์<wbr>กร<wbr>ต้อง<wbr>ได้<wbr>รับ<wbr>ความ<wbr>ร่วม<wbr>มือ<wbr>เพื่อ<wbr>ประ<wbr>โยชน์<wbr>ร่วม<wbr>กัน ผู้<wbr>ใช้<wbr>ก็<wbr>ได้<wbr>ข้อ<wbr>มูล<wbr>เร็ว<wbr>ขึ้น ทา<wbr>งองค์กร<wbr>ก็<wbr>ลด<wbr>ปริมาณ<wbr>ข้อ<wbr>มูล<wbr>ที่<wbr>วิ่ง<wbr>อยู่<wbr>ใน<wbr>สาย<wbr>หลัก ซึ่ง<wbr>มี<wbr>ความ<wbr>เร็ว<wbr>จำกัด<wbr>อยู่<wbr>แล้ว เพื่อ<wbr>ทุก<wbr>คน<wbr>จะ<wbr>ได้<wbr>ประ<wbr>โยชน์<wbr>ร่วม<wbr>กัน แต่<wbr>หาก<wbr>ผู้<wbr>ใช้<wbr>ไม่<wbr>เซต<wbr>โปรแกรมเบรา<wbr>เซอร์ของ<wbr>ตน<wbr>ให้<wbr>เชื่อมกับ proxy การ<wbr>ติด<wbr>ตั้ง proxy ก็<wbr>จะ<wbr>ไม่<wbr>มี<wbr>ประ<wbr>โยชน์<wbr>เพราะ<wbr>ทุก<wbr>ครั้ง<wbr>ผู้<wbr>ใช้<wbr>จะ<wbr>วิ่ง<wbr>ไป<wbr>ยัง<wbr>เซอร์ฟเวอร์ปลาย<wbr>ทางเสมอ
+
+<p>
+<hr noshade>
+เขียนโดย : รศ.ยืน  ภู่วรวรรณ<br>
+นิตยสารไมโครคอมพิวเตอร์ ฉบับเดือนมีนาคม 2541<br>
+last update : 06/07/1999
+</font>
+</body>
+</html>

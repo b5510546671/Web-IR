@@ -1,0 +1,817 @@
+<html>
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+   <meta name="generator" content="mozilla/4.0 [en] (win95; i) [netscape]">
+   <meta name="author" content="nirut">
+   <title>pid controller</title>
+</head>
+<body text="#000000" bgcolor="#c0d8c8">
+&nbsp;
+<center>
+<h1>
+<font face="browalliaupc"><font color="#000099">&atilde;&eth;&ordm;&ordm;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;<wbr>&aacute;&ordm;&ordm;
+pid</font></font></h1></center>
+
+<center>
+<h3>
+&sup1;&ograve;&acirc;<wbr>&sup1;&ocirc;<wbr>&atilde;&oslash;&middot;&cedil;&igrave;<wbr><wbr>&nbsp;
+&ordf;&aring;&ograve;&acirc;<wbr>&sup1;&ograve;&sup1;&sup1;&middot;&igrave;<wbr>&nbsp;
+37053592&nbsp;<br>
+&sup1;&ograve;&acirc;<wbr>&agrave;&frac34;&ocirc;&egrave;&aacute;<wbr>&frac34;&atilde;<wbr><wbr>&nbsp;
+&euml;&ntilde;&micro;&para;&ecirc;&ocirc;&sect;&euml;&igrave;<wbr><wbr>&nbsp;
+37054319</h3></center>
+
+<center>
+<hr></center>
+
+<h2>
+<font color="#993366">&ecirc;&ograve;&atilde;&ordm;&ntilde;&shy;</font><wbr><wbr></h2>
+
+<ul>
+<li>
+<a href="#º·¹ó">&ordm;&middot;&sup1;&oacute;</a><wbr><wbr></li>
+
+<li>
+<a href="#µñç¤çº¤øá">&micro;&ntilde;&ccedil;&curren;&ccedil;&ordm;&curren;&oslash;&aacute;</a><wbr><wbr></li>
+
+<ul>
+<li>
+<a href="#p">proportional action (p)</a></li>
+
+<li>
+<a href="#i">integral&nbsp; action (i)</a></li>
+
+<li>
+<a href="#d">derivative&nbsp; action (d)</a></li>
+
+<li>
+<a href="#µñç¤çº¤øáàªô§àå¢">&micro;&ntilde;&ccedil;&curren;&ccedil;&ordm;&curren;&oslash;&aacute;&agrave;&ordf;&ocirc;&sect;&agrave;&aring;&cent;
+(digital controller)</a></li>
+</ul>
+
+<li>
+<a href="#º·êãø»">&ordm;&middot;&ecirc;&atilde;&oslash;&raquo;</a><wbr><wbr></li>
+
+<li>
+<a href="#àí¡êòãíéò§íô§">&agrave;&iacute;&iexcl;&ecirc;&ograve;&atilde;&iacute;&eacute;&ograve;&sect;&iacute;&ocirc;&sect;</a><wbr><wbr></li>
+</ul>
+&nbsp;
+<h2>
+<a name="º·¹ó"></a><font color="#993366">&ordm;&middot;<wbr>&sup1;&oacute;</font><wbr><wbr></h2>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &iexcl;&atilde;&eth;&ordm;&ccedil;&sup1;<wbr>&iexcl;&ograve;&atilde;<wbr>&aacute;&aring;&eth;<wbr>&iexcl;&ograve;&atilde;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;<wbr>&iacute;&ograve;&uml;<wbr>&raquo;&atilde;&eth;&iexcl;&iacute;&ordm;<wbr>&acute;&eacute;&ccedil;&acirc;<wbr>&ecirc;&egrave;&ccedil;&sup1;<wbr>&raquo;&atilde;&eth;&iexcl;&iacute;&ordm;<wbr>&sect;&egrave;&ograve;&acirc;
+&aelig; &agrave;&ordf;&egrave;&sup1; &atilde;&eth;&ordm;&ordm;<wbr>&middot;&oacute;<wbr>&curren;&ccedil;&ograve;&aacute;<wbr>&atilde;&eacute;&iacute;&sup1;<wbr>&atilde;&sup1;<wbr>&ordm;&eacute;&ograve;&sup1;
+&auml;&raquo;<wbr>&uml;&sup1;<wbr>&iexcl;&atilde;&eth;&middot;&ntilde;&egrave;&sect;<wbr>&para;&ouml;&sect;<wbr>&atilde;&eth;&ordm;&ordm;<wbr>&middot;&otilde;&egrave;<wbr>&laquo;&ntilde;&ordm;<wbr>&laquo;&eacute;&iacute;&sup1;
+&iexcl;&atilde;&eth;&ordm;&ccedil;&sup1;<wbr>&iexcl;&ograve;&atilde;&iexcl;<wbr>&aring;&ntilde;&egrave;&sup1;<wbr>&sup1;&eacute;&oacute;<wbr>&aacute;&ntilde;&sup1;
+&iacute;&acirc;&egrave;&ograve;&sect;<wbr>&auml;&atilde;<wbr>&iexcl;&ccedil;<wbr>&micro;&ograve;&aacute;<wbr>&ccedil;&ntilde;&micro;&para;&oslash;<wbr>&raquo;&atilde;&eth;&ecirc;&sect;&curren;&igrave;<wbr>&cent;&iacute;&sect;<wbr>&iexcl;&ograve;&atilde;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;<wbr>&iexcl;&atilde;&eth;&ordm;&ccedil;&sup1;<wbr>&iexcl;&ograve;&atilde;
+&raquo;&eacute;&iacute;&sup1;<wbr>&iexcl;&aring;&ntilde;&ordm; &curren;&times;&iacute;
+&iexcl;&ograve;&atilde;<wbr>&raquo;&atilde;&ntilde;&ordm;<wbr>&frac34;&aring;&ntilde;&sect;<wbr>&sect;&ograve;&sup1;<wbr>&middot;&otilde;&egrave;
+&atilde;&euml;&eacute;<wbr>&aacute;&iexcl;&egrave;<wbr>&iexcl;&atilde;&eth;&ordm;&ccedil;&sup1;<wbr>&iexcl;&ograve;&atilde;
+&agrave;&frac34;&times;&egrave;&iacute;<wbr>&atilde;&euml;&eacute;<wbr>&auml;&acute;&eacute;<wbr>&frac14;&aring;&ocirc;&micro;<wbr>&agrave;&ntilde;&sup3;&plusmn;&igrave;
+&micro;&ograve;&aacute;<wbr>&micro;&eacute;&iacute;&sect;<wbr>&iexcl;&ograve;&atilde;
+&atilde;&eth;&ordm;&ordm;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;<wbr>&iexcl;&atilde;&eth;&ordm;&ccedil;&sup1;
+&iexcl;&ograve;&atilde;<wbr>&iacute;&acirc;&egrave;&ograve;&sect; &sect;&egrave;&ograve;<wbr>&acirc;
+&aelig; &aacute;&ecirc;&acute;&sect;<wbr>&atilde;&sup1;<wbr>&atilde;&ugrave;&raquo;<wbr>&middot;&otilde;&egrave;
+1
+<center><img src="pic1.jpg" border=2 height=247 width=520></center>
+
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &raquo;&macr;&ocirc;&ordm;&ntilde;&micro;&ocirc;<wbr>&iexcl;&ograve;&atilde;<wbr>&cent;&iacute;&sect;<wbr>&atilde;&eth;&ordm;&ordm;<wbr>&curren;&times;&iacute;<wbr>&iexcl;&ograve;&atilde;<wbr>&middot;&oacute;<wbr>&atilde;&euml;&eacute;<wbr>&iacute;&oslash;&sup3;&euml;&agrave;&ugrave;&aacute;&ocirc;<wbr>&atilde;&sup1;<wbr>&ordm;&eacute;&ograve;&sup1;<wbr>&curren;&sect;<wbr>&middot;&otilde;&egrave;<wbr>&iacute;&acirc;&ugrave;&egrave;<wbr>&middot;&otilde;&egrave;<wbr>&micro;&ntilde;&eacute;&sect;<wbr>&curren;&egrave;&ograve;<wbr>&auml;&ccedil;&eacute;<wbr>&acirc;&acute;&acirc;<wbr>&agrave;&middot;&iacute;&atilde;&igrave;&acirc;&aacute;&ecirc;&micro;&ntilde;<wbr>&middot;
+&iexcl;&oacute;&aring;&ntilde;&sect;<wbr>&sect;&ograve;&sup1;<wbr>&para;&ugrave;&iexcl;<wbr>&uml;&egrave;&ograve;&acirc;<wbr>&atilde;&euml;&eacute;&iexcl;&ntilde;&ordm;&iexcl;<wbr>&atilde;&eth;<wbr>&ordm;&ccedil;&sup1;<wbr>&iexcl;&ograve;&atilde;<wbr>&agrave;&frac34;&times;&egrave;&iacute;<wbr>&middot;&oacute;<wbr>&atilde;&euml;&eacute;<wbr>&curren;&ccedil;&ograve;&aacute;<wbr>&aacute;&micro;&iexcl;<wbr>&micro;&egrave;&ograve;&sect;<wbr>&atilde;&eth;&euml;&ccedil;&egrave;&ograve;&sect;
+&curren;&egrave;&ograve;<wbr>&ccedil;&ntilde;&acute; (measured value) &iexcl;&ntilde;&ordm;&curren;&egrave;&ograve;<wbr>&iexcl;&oacute;&euml;&sup1;&acute;
+(set point) &middot;&otilde;&egrave;<wbr>&agrave;&atilde;&otilde;&acirc;&iexcl;<wbr>&ccedil;&egrave;&ograve;<wbr>&iexcl;&ograve;&atilde;<wbr>&agrave;&ordm;&otilde;&egrave;&acirc;&sect;<wbr>&agrave;&ordm;&sup1;
+(deviation) &curren;&ccedil;&ograve;&aacute;<wbr>&frac14;&ocirc;&acute;<wbr>&frac34;&aring;&ograve;&acute;
+&euml;&atilde;&times;&iacute; &curren;&ccedil;&ograve;&aacute;<wbr>&curren;&aring;&ograve;&acute;<wbr>&agrave;&curren;&aring;&times;&egrave;&iacute;&sup1;
+(error)&aacute;&otilde;<wbr>&curren;&egrave;&ograve; &agrave;&raquo;&ccedil;&sup1;
+&egrave;&ugrave;&sup1;&acirc;&igrave;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &iexcl;&ograve;&atilde;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;<wbr>&iexcl;&atilde;&eth;&ordm;&ccedil;&sup1;<wbr>&iexcl;&ograve;&atilde;<wbr>&acirc;&acute;&acirc;<wbr>&middot;&ntilde;&egrave;&ccedil;<wbr>&auml;&raquo;<wbr>&raquo;&atilde;&eth;&iexcl;&iacute;&ordm;<wbr>&acute;&eacute;&ccedil;&acirc;<wbr>&ecirc;&egrave;&ccedil;&sup1;<wbr>&ecirc;&oacute;&curren;&ntilde;&shy;
+4 &ecirc;&egrave;&ccedil;&sup1;<wbr>&acute;&ntilde;&sect;<wbr>&aacute;&ecirc;&acute;&sect;<wbr>&atilde;&sup1;<wbr>&atilde;&ugrave;&raquo;<wbr>&middot;&otilde;&egrave;
+2
+<center>&nbsp;<img src="pic2.jpg" border=2 height=248 width=518></center>
+&nbsp;
+<ul>
+<ul>
+<li>
+&iexcl;&atilde;&eth;&ordm;&ccedil;&sup1;<wbr>&iexcl;&ograve;&atilde; (process)&nbsp;
+&euml;&aacute;&ograve;&acirc;<wbr>&para;&ouml;&sect;<wbr>&atilde;&eth;&ordm;&ordm;<wbr>&atilde;&acute;
+&aelig; &middot;&otilde;&egrave;<wbr>&para;&ugrave;&iexcl;<wbr>&iacute;&iacute;&iexcl;<wbr>&aacute;&ordm;&ordm;
+&agrave;&frac34;&times;&egrave;&iacute;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;<wbr>&curren;&egrave;&ograve;
+&micro;&ntilde;&ccedil;<wbr>&aacute;&raquo;&atilde; &euml;&sup1;&ouml;&egrave;&sect;<wbr>&euml;&atilde;&times;&iacute;
+&euml;&aring;&ograve;&acirc;<wbr>&micro;&ntilde;&ccedil; &middot;&otilde;&egrave;<wbr>&ecirc;&ograve;&aacute;&ograve;&atilde;&para;
+&aacute;&ecirc;&acute;&sect; &euml;&atilde;&times;&iacute; &middot;&oacute;<wbr>&euml;&sup1;&eacute;&ograve;<wbr>&middot;&otilde;&egrave;<wbr>&cent;&iacute;&sect;
+&atilde;&eth;&ordm;&ordm; &middot;&ntilde;&eacute;&sect; &atilde;&eth;&ordm;&ordm;
+&auml;&acute;&eacute;<wbr><wbr></li>
+
+<li>
+&iacute;&oslash;&raquo;&iexcl;&atilde;&sup3;&igrave;<wbr>&ccedil;&ntilde;&acute;
+(sensor)&nbsp; &atilde;&ordf;&eacute;<wbr>&ccedil;&ntilde;&acute;<wbr>&ecirc;&ntilde;&shy;&shy;&ograve;&sup3;
+&iacute;&iacute;&iexcl;<wbr>&cent;&iacute;&sect; &iexcl;&atilde;&eth;&ordm;&ccedil;&sup1;<wbr>&iexcl;&ograve;&atilde;
+&atilde;&sup1;<wbr>&middot;&ograve;&sect; &raquo;&macr;&ocirc;&ordm;&ntilde;&micro;&ocirc;
+&cent;&iacute;&sect; &atilde;&eth;&ordm;&ordm; &iacute;&oslash;&micro;&ecirc;&ograve;&euml;&iexcl;&atilde;&atilde;&aacute;
+&iacute;&oslash;&raquo;&iexcl;&atilde;&sup3;&igrave; &ccedil;&ntilde;&acute;<wbr>&uml;&eth;
+&para;&ugrave;&iexcl;<wbr>&frac14;&sup1;&ccedil;&iexcl; &auml;&ccedil;&eacute;<wbr>&acute;&eacute;&ccedil;&acirc;
+transmitter &agrave;&frac34;&times;&egrave;&iacute;<wbr>&aacute;&raquo;&aring;&sect;<wbr>&ecirc;&ntilde;&shy;&shy;&ograve;&sup3;
+&iacute;&iacute;&iexcl; &cent;&iacute;&sect; &iacute;&oslash;&raquo;&iexcl;&atilde;&sup3;&igrave;<wbr>&middot;&otilde;&egrave;<wbr>&ccedil;&ntilde;&acute;<wbr>&atilde;&euml;&eacute;<wbr>&iacute;&acirc;&ugrave;&egrave;<wbr>&atilde;&sup1;<wbr>&atilde;&ugrave;&raquo;<wbr>&cent;&iacute;&sect;<wbr>&ecirc;&ntilde;&shy;&shy;&ograve;&sup3;<wbr>&aacute;&ograve;&micro;&atilde;<wbr>&deg;&ograve;&sup1;<wbr>&middot;&ograve;&sect;&iacute;&oslash;&micro;&ecirc;&ograve;&euml;&iexcl;&atilde;&atilde;&aacute;<wbr><wbr></li>
+
+<li>
+&micro;&ntilde;&ccedil;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;
+(controller) &aacute;&otilde;<wbr>&euml;&sup1;&eacute;&ograve;<wbr>&middot;&otilde;&egrave;<wbr>&agrave;&raquo;&aring;&otilde;&egrave;&acirc;&sup1;<wbr>&ecirc;&ograve;&atilde;<wbr>&ecirc;&sup1;&agrave;&middot;&egrave;<wbr>&middot;&otilde;&egrave;<wbr>&auml;&acute;&eacute;<wbr>&uml;&ograve;&iexcl;<wbr>&iacute;&oslash;&raquo;&iexcl;&atilde;&sup3;&igrave;<wbr>&ccedil;&ntilde;&acute;<wbr>&agrave;&raquo;&ccedil;&sup1;<wbr>&ecirc;&ntilde;&shy;&shy;&ograve;&sup3;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;<wbr><wbr></li>
+
+<li>
+&iacute;&oslash;&raquo;&iexcl;&atilde;&sup3;&igrave;<wbr>&raquo;&atilde;&ntilde;&ordm;<wbr>&aacute;&iexcl;&eacute;
+(final control element) &atilde;&ntilde;&ordm;<wbr>&ecirc;&ntilde;&shy;&shy;&ograve;&sup3;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;<wbr>&uml;&ograve;&iexcl;<wbr>&micro;&ntilde;&ccedil;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;
+&aacute;&aring;&eacute;&ccedil;<wbr>&ecirc;&egrave;&sect; &ecirc;&ntilde;&shy;&shy;&ograve;&sup3;
+&raquo;&atilde;&ntilde;&ordm;<wbr>&aacute;&iexcl;&eacute;<wbr>&atilde;&euml;&eacute;&iexcl;&ntilde;&ordm;&iexcl;<wbr>&atilde;&eth;<wbr>&ordm;&ccedil;&sup1;<wbr>&iexcl;&ograve;&atilde;<wbr><wbr></li>
+</ul>
+</ul>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &atilde;&sup1;<wbr>&micro;&ntilde;&ccedil;<wbr>&iacute;&acirc;&egrave;&ograve;&sect;<wbr>&middot;&otilde;&egrave;<wbr>&frac34;&ocirc;&uml;&ograve;&atilde;&sup3;&ograve;<wbr>&iexcl;&atilde;&eth;&ordm;&ccedil;&sup1;<wbr>&iexcl;&ograve;&atilde;
+&curren;&times;&iacute; &iexcl;&ograve;&atilde;<wbr>&middot;&oacute;<wbr>&atilde;&euml;&eacute;<wbr>&agrave;&ograve;&acirc;<wbr>&atilde;&sup1;<wbr>&ordm;&eacute;&ograve;&sup1;
+&atilde;&eacute;&iacute;&sect;<wbr>&para;&ouml;&sect;<wbr>&iacute;&oslash;&sup3;&euml;&agrave;&ugrave;&aacute;&ocirc;<wbr>&middot;&otilde;&egrave;<wbr>&micro;&eacute;&iacute;&sect;<wbr>&iexcl;&ograve;&atilde;
+&iacute;&oslash;&raquo;&iexcl;&atilde;&sup3;&igrave;<wbr>&ccedil;&ntilde;&acute;<wbr>&curren;&times;&iacute;<wbr>&agrave;&middot;&iacute;&atilde;&igrave;&acirc;&aacute;&ecirc;&micro;&ntilde;<wbr>&middot;
+&micro;&ntilde;&ccedil;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;<wbr>&curren;&times;&iacute;&ecirc;&ccedil;&ocirc;&micro;&ordf;&igrave;&cent;&iacute;&sect;
+&agrave;&middot;&iacute;&atilde;&igrave;&acirc;&aacute;&ecirc;&micro;&ntilde;<wbr>&middot;
+&iacute;&oslash;&raquo;&iexcl;&atilde;&sup3;&igrave;<wbr>&raquo;&atilde;&ntilde;&ordm;<wbr>&aacute;&iexcl;&eacute;<wbr>&curren;&times;&iacute;&agrave;&curren;&atilde;&times;&egrave;&iacute;&sect;&middot;&oacute;
+&curren;&ccedil;&ograve;&aacute;<wbr>&atilde;&eacute;&iacute;&sup1;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&acirc;&acute;&acirc;<wbr>&middot;&ntilde;&egrave;&ccedil;<wbr>&auml;&raquo;<wbr>&iexcl;&ograve;&atilde;<wbr>&middot;&oacute;<wbr>&sect;&ograve;&sup1;<wbr>&cent;&iacute;&sect;<wbr>&atilde;&eth;&ordm;&ordm;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;<wbr>&middot;&otilde;&egrave;<wbr>&micro;&eacute;&iacute;&sect;<wbr>&iexcl;&ograve;&atilde;<wbr>&uml;&eth;<wbr>&frac34;&ocirc;&uml;&ograve;&atilde;&sup3;&ograve;<wbr>&aring;&ntilde;&iexcl;&eacute;&sup3;&eth;<wbr>&frac34;&times;&eacute;&sup1;<wbr>&deg;&ograve;&sup1;<wbr>&acute;&ntilde;&sect;<wbr>&micro;&egrave;&iacute;<wbr>&auml;&raquo;<wbr>&sup1;&otilde;&eacute;
+<br><b>&agrave;&ecirc;&para;&otilde;&acirc;&atilde;<wbr>&agrave;&ograve;&frac34;<wbr><wbr></b>
+(stability) &frac14;&aring;<wbr>&micro;&iacute;&ordm;<wbr>&ordf;&ntilde;&egrave;&ccedil;<wbr>&curren;&atilde;&ugrave;&egrave;
+(transient response) &curren;&ccedil;&ograve;&aacute;<wbr>&curren;&aring;&ograve;&acute;<wbr>&agrave;&curren;&aring;&times;&egrave;&iacute;&sup1;<wbr>&atilde;&sup1;<wbr>&ecirc;&agrave;&ograve;&ccedil;&eth;<wbr>&iacute;&acirc;&ugrave;&egrave;<wbr>&micro;&ntilde;&ccedil;
+(steady state error)&nbsp;&nbsp; &aacute;&aring;&eth;<wbr>&curren;&ccedil;&ograve;&aacute;<wbr>&auml;&ccedil;
+(sensivity)&nbsp; &micro;&egrave;&iacute;<wbr>&iexcl;&ograve;&atilde;<wbr>&agrave;&raquo;&aring;&otilde;&egrave;&acirc;&sup1;<wbr>&aacute;&raquo;&aring;&sect;<wbr>&frac34;&ograve;<wbr>&atilde;&ograve;<wbr>&aacute;&ocirc;&agrave;&micro;&iacute;&atilde;&igrave;<wbr>&cent;&iacute;&sect;<wbr>&atilde;&eth;&ordm;&ordm;<wbr>&aacute;&aring;&eth;
+&ecirc;&ocirc;&egrave;&sect;<wbr>&aacute;&ccedil;&acute;<wbr>&aring;&eacute;&iacute;&aacute;
+&ecirc;&ocirc;&egrave;&sect;<wbr>&ecirc;&oacute;&curren;&ntilde;&shy;<wbr>&iacute;&ntilde;&sup1;<wbr>&acute;&ntilde;&ordm;<wbr>&aacute;&atilde;&iexcl;<wbr>&cent;&iacute;&sect;<wbr>&atilde;&eth;&ordm;&ordm;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;<wbr>&curren;&times;&iacute;
+&agrave;&ecirc;&para;&otilde;&acirc;&atilde;<wbr>&agrave;&ograve;&frac34;
+&agrave;&frac34;&atilde;&ograve;&eth;<wbr>&para;&eacute;&ograve;<wbr>&atilde;&eth;&ordm;&ordm;<wbr>&cent;&ograve;&acute;<wbr>&agrave;&ecirc;&para;&otilde;&acirc;&atilde;<wbr>&agrave;&ograve;&frac34;
+&iexcl;&ccedil;<wbr>&auml;&aacute;&egrave;<wbr>&ecirc;&ograve;&aacute;&ograve;&atilde;&para;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;<wbr>&atilde;&eth;&ordm;&ordm;<wbr>&auml;&acute;&eacute;
+&ecirc;&egrave;&ccedil;&sup1;<wbr>&aring;&ntilde;&iexcl;&eacute;&sup3;&eth;<wbr>&iacute;&times;&egrave;&sup1;
+&aelig; &sup1;&ntilde;&eacute;&sup1;<wbr>&cent;&ouml;&eacute;&sup1;<wbr>&iacute;&acirc;&ugrave;&egrave;&iexcl;&ntilde;&ordm;&frac14;&ugrave;&eacute;<wbr>&iacute;&iacute;&iexcl;<wbr>&aacute;&ordm;&ordm;
+&uml;&eth;<wbr>&atilde;&eth;&ordm;&oslash;<wbr>&agrave;&copy;&frac34;&ograve;&eth;<wbr>&aacute;&micro;&egrave;<wbr>&aring;&eth;<wbr>&atilde;&eth;&ordm;&ordm;
+<h2>
+<a name="µñç¤çº¤øá"></a><font color="#993366">&micro;&ntilde;&ccedil;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;</font><wbr><wbr></h2>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &micro;&ntilde;&ccedil;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;<wbr>&atilde;&sup1;<wbr>&atilde;&eth;&ordm;&ordm;<wbr>&aacute;&otilde;<wbr>&euml;&aring;&ograve;&acirc;<wbr>&ordf;&sup1;&ocirc;&acute;
+&aacute;&micro;&egrave;<wbr>&middot;&otilde;&egrave;<wbr>&atilde;&ordf;&eacute;<wbr>&atilde;&sup1;<wbr>&atilde;&eth;&ordm;&ordm;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;<wbr>&iexcl;&atilde;&eth;&ordm;&ccedil;&sup1;<wbr>&iexcl;&ograve;&atilde;<wbr>&ecirc;&egrave;&ccedil;&sup1;<wbr>&atilde;&euml;&shy;&egrave;<wbr>&agrave;&raquo;&ccedil;&sup1;<wbr>&micro;&ntilde;&ccedil;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;<wbr>&aacute;&ordm;&ordm;
+pid &laquo;&ouml;&egrave;&sect;<wbr>&uml;&eth;<wbr>&auml;&aring;&egrave;<wbr>&iacute;&sup1;&oslash;&iexcl;&atilde;&aacute;<wbr>&agrave;&cent;&eacute;&ograve;<wbr>&auml;&raquo;<wbr>&atilde;&sup1;<wbr>&atilde;&eth;&ordm;&ordm;<wbr>&acute;&ntilde;&sect;<wbr>&aacute;&ecirc;&acute;&sect;<wbr>&atilde;&sup1;<wbr>&atilde;&ugrave;&raquo;<wbr>&middot;&otilde;&egrave;
+3
+<br>&nbsp;
+<center><img src="pic4.jpg" border=2 height=246 width=520></center>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &micro;&ntilde;&ccedil;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;
+pid &iacute;&ograve;&egrave;&ntilde;&acirc;<wbr>&agrave;&middot;&curren;&sup1;&ocirc;&curren;<wbr>&iexcl;&ograve;&atilde;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;<wbr>&frac34;&times;&eacute;&sup1;<wbr>&deg;&ograve;&sup1;
+3 &aacute;&ordm;&ordm; &auml;&acute;&eacute;<wbr>&aacute;&iexcl;&egrave;<wbr><wbr>&nbsp;
+&aacute;&ordm;&ordm;<wbr>&ecirc;&ntilde;&acute;<wbr>&ecirc;&egrave;&ccedil;&sup1;
+(propotional , p) , &aacute;&ordm;&ordm;&iacute;&ocirc;&sup1;&middot;&ocirc;&iexcl;&atilde;&ntilde;<wbr>&aring;
+(integral , i) &aacute;&aring;&eth;<wbr>&aacute;&ordm;&ordm; &iacute;&sup1;&oslash;&frac34;&ntilde;&sup1;&cedil;&igrave;
+(derivative , d) &aacute;&micro;&egrave;<wbr>&aring;&eth;<wbr>&aacute;&ordm;&ordm;<wbr>&ecirc;&ograve;&aacute;&ograve;&atilde;&para;<wbr>&sup1;&oacute;<wbr>&aacute;&ograve;<wbr>&raquo;&atilde;&eth;&iexcl;&iacute;&ordm;<wbr>&iexcl;&ntilde;&sup1;
+&agrave;&frac34;&times;&egrave;&iacute;<wbr>&atilde;&euml;&eacute;<wbr>&auml;&acute;&eacute;<wbr>&micro;&ntilde;&ccedil;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;<wbr>&middot;&otilde;&egrave;<wbr>&micro;&eacute;&iacute;&sect;<wbr>&iexcl;&ograve;&atilde;
+&atilde;&ograve;&acirc;<wbr>&aring;&eth;&agrave;&iacute;&otilde;&acirc;&acute;<wbr>&cent;&iacute;&sect;<wbr>&aacute;&micro;&egrave;<wbr>&aring;&eth;<wbr>&aacute;&ordm;&ordm;<wbr>&aacute;&otilde;<wbr>&acute;&ntilde;&sect;<wbr>&sup1;&otilde;&eacute;
+
+<p><font color="#993366">&nbsp;<a name="p"></a><b><font size=+1>proportional&nbsp;
+action (p)</font></b></font>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&agrave;&raquo;&ccedil;&sup1;<wbr>&agrave;&middot;&curren;&sup1;&ocirc;&curren;<wbr>&agrave;&atilde;&otilde;&acirc;&ordm;<wbr>&sect;&egrave;&ograve;&acirc;&middot;&otilde;&egrave;<wbr>&ecirc;&oslash;&acute;<wbr>&euml;&aring;&ntilde;&iexcl;<wbr>&iexcl;&ograve;&atilde;<wbr>&iexcl;&ccedil;<wbr>&curren;&times;&iacute;<wbr>&ecirc;&ntilde;&shy;&shy;&ograve;&sup3;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;<wbr>&uml;&ograve;&iexcl;<wbr>&micro;&ntilde;&ccedil;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;<wbr>&middot;&otilde;&egrave;<wbr>&ecirc;&egrave;&sect;
+&auml;&raquo;<wbr>&atilde;&ntilde;&ordm;<wbr>&iexcl;&atilde;&eth;&ordm;&ccedil;&sup1;<wbr>&iexcl;&ograve;&atilde;
+&aacute;&otilde;<wbr>&curren;&egrave;&ograve;<wbr>&agrave;&raquo;&ccedil;&sup1;<wbr>&ecirc;&ntilde;&acute;<wbr>&ecirc;&egrave;&ccedil;&sup1;&iexcl;&ntilde;&ordm;&curren;&ccedil;&ograve;&aacute;<wbr>&frac14;&ocirc;&acute;<wbr>&frac34;&aring;&ograve;&acute;
+(error = setpoint - output) &middot;&otilde;&egrave;<wbr>&agrave;&iexcl;&ocirc;&acute;<wbr>&cent;&ouml;&eacute;&sup1;
+&euml;&atilde;&times;&iacute;<wbr>&iexcl;&aring;&egrave;&ograve;&ccedil;<wbr>&iacute;&acirc;&egrave;&ograve;&sect;<wbr>&sect;&egrave;&ograve;&acirc;&iexcl;&ccedil;<wbr>&curren;&times;&iacute;<wbr>&agrave;&raquo;&ccedil;&sup1;<wbr>&iacute;&ntilde;&micro;&atilde;&ograve;&cent;&acirc;&ograve;<wbr>&acirc;&eth;&atilde;&atilde;&aacute;<wbr>&acute;&ograve;
+(gain ,k) &sup1;&ntilde;&egrave;&sup1;<wbr>&agrave;&iacute;&sect;<wbr><wbr>&nbsp;
+&micro;&ntilde;&ccedil;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;<wbr>&ordm;&ograve;&sect;<wbr>&micro;&ntilde;&ccedil;
+&ecirc;&ntilde;&shy;&shy;&ograve;&sup3;<wbr>&agrave;&cent;&eacute;&ograve;<wbr>&aacute;&aring;&eth;<wbr>&ecirc;&ntilde;&shy;&shy;&ograve;&sup3;<wbr>&iacute;&iacute;&iexcl;<wbr>&iacute;&ograve;&uml;<wbr>&aacute;&otilde;<wbr>&euml;&sup1;&egrave;&ccedil;&acirc;<wbr>&micro;&egrave;&ograve;&sect;<wbr>&iexcl;&ntilde;&sup1;
+&agrave;&ordf;&egrave;&sup1;<wbr>&iexcl;&ograve;&atilde;<wbr>&agrave;&raquo;&aring;&otilde;&egrave;&acirc;&sup1;<wbr>&aacute;&raquo;&aring;&sect;<wbr>&cent;&iacute;&sect;<wbr>&iacute;&oslash;&sup3;&euml;&agrave;&ugrave;&aacute;&ocirc;
+&middot;&otilde;&egrave;<wbr>&middot;&oacute;<wbr>&atilde;&euml;&eacute;<wbr>&agrave;&iexcl;&ocirc;&acute;<wbr>&iexcl;&ograve;&atilde;<wbr>&agrave;&raquo;&aring;&otilde;&egrave;&acirc;&sup1;<wbr>&aacute;&raquo;&aring;&sect;<wbr>&curren;&ccedil;&ograve;&aacute;<wbr>&acute;&ntilde;&sup1;
+&agrave;&frac34;&times;&egrave;&iacute;<wbr>&euml;&aring;&otilde;&iexcl;<wbr>&agrave;&aring;&otilde;&egrave;&acirc;&sect;<wbr>&iexcl;&ograve;&atilde;<wbr>&aacute;&raquo;&aring;&sect;<wbr>&euml;&sup1;&egrave;&ccedil;&acirc;
+&curren;&ccedil;&ograve;&aacute;<wbr>&ecirc;&ntilde;&aacute;&frac34;&ntilde;&sup1;&cedil;&igrave;<wbr>&atilde;&eth;&euml;&ccedil;&egrave;&ograve;&sect;<wbr>&ecirc;&ntilde;&shy;&shy;&ograve;&sup3;<wbr>&iacute;&iacute;&iexcl;
+&aacute;&aring;&eth; &ecirc;&ntilde;&shy;&shy;&ograve;&sup3;<wbr>&agrave;&cent;&eacute;&ograve;<wbr>&cent;&iacute;&sect;<wbr>&micro;&ntilde;&ccedil;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;
+&iacute;&ograve;&uml;<wbr>&aacute;&ecirc;&acute;&sect;<wbr>&agrave;&raquo;&ccedil;&sup1;<wbr>&aacute;&para;&ordm;<wbr>&ecirc;&ntilde;&acute;<wbr>&ecirc;&egrave;&ccedil;&sup1;
+(proportional band, pb) &acirc;&acute;&acirc;<wbr>&middot;&otilde;&egrave;<wbr>&aacute;&para;&ordm;<wbr>&ecirc;&ntilde;&acute;<wbr>&ecirc;&egrave;&ccedil;&sup1;<wbr>&curren;&times;&iacute;<wbr>&frac34;&ocirc;&ecirc;&ntilde;&acirc;<wbr>&cent;&iacute;&sect;<wbr>&ecirc;&ntilde;&shy;&shy;&ograve;&sup3;<wbr>&agrave;&cent;&eacute;&ograve;<wbr>&middot;&otilde;&egrave;<wbr>&uml;&eth;<wbr>&middot;&oacute;<wbr>&atilde;&euml;&eacute;<wbr>&micro;&ntilde;&ccedil;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;<wbr>&raquo;&macr;&ocirc;&ordm;&ntilde;&micro;&ocirc;<wbr>&sect;&ograve;&sup1;<wbr>&agrave;&micro;&ccedil;&aacute;<wbr>&frac34;&ocirc;&ecirc;&ntilde;&acirc;&raquo;&macr;&ocirc;&ordm;<wbr>&ntilde;&micro;&ocirc;<wbr>&sect;&ograve;&sup1;<wbr>&cent;&iacute;&sect;<wbr>&aacute;&ntilde;&sup1;
+&acirc;&acute;&acirc;<wbr>&aacute;&ecirc;&acute;&sect;<wbr>&agrave;&raquo;&ccedil;&sup1;&agrave;&raquo;&iacute;&atilde;&igrave;&agrave;&laquo;&sup1;&micro;&igrave;&cent;&iacute;&sect;&frac34;&ocirc;&ecirc;&ntilde;&uml;<wbr>&cent;&iacute;&sect;<wbr>&ecirc;&para;&ograve;&sup1;&eth;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;
+&laquo;&ouml;&egrave;&sect;<wbr>&iacute;&oslash;&raquo;&iexcl;&atilde;&sup3;&igrave;<wbr>&uml;&eth;<wbr>&ccedil;&ntilde;&acute;<wbr>&auml;&acute;&eacute;
+&curren;&ccedil;&ograve;&aacute;<wbr>&ecirc;&ntilde;&aacute;&frac34;&ntilde;&sup1;&cedil;&igrave;<wbr>&atilde;&eth;&euml;&ccedil;&egrave;&ograve;&sect;<wbr>&iacute;&ntilde;&micro;&atilde;&ograve;<wbr>&cent;&acirc;&ograve;&acirc;<wbr>&aacute;&aring;&eth;<wbr>&agrave;&raquo;&iacute;&atilde;&igrave;&agrave;&laquo;&ccedil;&sup1;&micro;&igrave;<wbr>&aacute;&para;&ordm;<wbr>&ecirc;&ntilde;&acute;<wbr>&ecirc;&egrave;&ccedil;&sup1;<wbr>&curren;&times;&iacute;
+k = 100 % pb &ecirc;&oacute;&euml;&atilde;&ntilde;&ordm;<wbr>&aring;&ntilde;&iexcl;&eacute;&sup3;&eth;<wbr>&ecirc;&aacute;&ordm;&ntilde;&micro;&ocirc;<wbr>&cent;&iacute;&sect;
+proportional control &sup1;&otilde;&eacute;<wbr>&aacute;&ecirc;&acute;&sect;<wbr>&auml;&ccedil;&eacute;<wbr>&atilde;&sup1;<wbr>&atilde;&ugrave;&raquo;<wbr>&middot;&otilde;&egrave;
+4
+<br>&nbsp;
+<center><img src="pic5.jpg" border=2 height=287 width=520></center>
+&nbsp;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&uml;&ograve;&iexcl;<wbr>&atilde;&ugrave;&raquo;<wbr>&agrave;&atilde;&ograve;<wbr>&uml;&eth;<wbr>&frac34;&ordm;<wbr>&ccedil;&egrave;&ograve;<wbr>&aacute;&aacute;&eacute;<wbr>&curren;&ccedil;&ograve;&aacute;<wbr>&curren;&aring;&ograve;&acute;<wbr>&agrave;&curren;&aring;&times;&egrave;&iacute;&sup1;<wbr>&uml;&eth;<wbr>&agrave;&raquo;&ccedil;&sup1;<wbr>&egrave;&ugrave;&sup1;&acirc;&igrave;<wbr>&iexcl;&ccedil;<wbr>&micro;&ograve;&aacute;
+&aacute;&micro;&egrave;<wbr>&iexcl;&ccedil;<wbr>&uml;&eth;<wbr>&aacute;&otilde;<wbr>&ecirc;&ntilde;&shy;&shy;&ograve;&sup3;<wbr>&curren;&egrave;&ograve;<wbr>&euml;&sup1;&ouml;&egrave;&sect;<wbr>&iacute;&iacute;&iexcl;<wbr>&uml;&ograve;&iexcl;<wbr>&micro;&ntilde;&ccedil;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;<wbr>&ecirc;&egrave;&sect;<wbr>&micro;&egrave;&iacute;<wbr>&auml;&raquo;<wbr>&middot;&otilde;&egrave;<wbr>&iexcl;&atilde;&eth;&ordm;&ccedil;&sup1;<wbr>&iexcl;&ograve;&atilde;
+&laquo;&ouml;&egrave;&sect;<wbr>&ecirc;&ntilde;&shy;&shy;&ograve;&sup3;<wbr>&sup1;&otilde;&eacute;<wbr>&iexcl;&ccedil;<wbr>&curren;&times;&iacute;<wbr>&ecirc;&ntilde;&shy;&shy;&ograve;&sup3;<wbr>&middot;&otilde;&egrave;<wbr>&middot;&oacute;<wbr>&euml;&sup1;&eacute;&ograve;<wbr>&middot;&otilde;&egrave;
+"&auml;&ordm;&aacute;&iacute;&ecirc;<wbr>" &atilde;&eth;&ordm;&ordm;<wbr>&atilde;&euml;&eacute;<wbr>&middot;&oacute;<wbr>&sect;&ograve;&sup1;<wbr>&auml;&acute;&eacute;<wbr>&middot;&otilde;&egrave;<wbr>&uml;&oslash;&acute;<wbr>&middot;&oacute;<wbr>&sect;&ograve;&sup1;<wbr>&sup1;&ntilde;&eacute;&sup1;<wbr>&micro;&egrave;&iacute;<wbr>&auml;&raquo;<wbr>&auml;&acute;&eacute;<wbr>&sup1;&ntilde;&egrave;&sup1;<wbr>&agrave;&iacute;&sect;
+&aacute;&aring;&eth;<wbr>&acirc;&acute;&acirc;<wbr>&middot;&ntilde;&egrave;&ccedil;<wbr>&auml;&raquo;<wbr>&ecirc;&ntilde;&shy;&shy;&ograve;&sup3;<wbr>&curren;&egrave;&ograve;<wbr>&sup1;&otilde;&eacute;<wbr>&aacute;&ntilde;&iexcl;<wbr>&uml;&eth;<wbr>&para;&ugrave;&iexcl;<wbr>&micro;&ntilde;&eacute;&sect;<wbr>&atilde;&euml;&eacute;<wbr>&agrave;&middot;&egrave;&ograve;&iexcl;&ntilde;<wbr>&ordm;
+50 % &cent;&iacute;&sect;<wbr>&ecirc;&ntilde;&shy;&shy;&ograve;&sup3;<wbr>&cent;&ograve;<wbr>&iacute;&iacute;&iexcl;<wbr>&ecirc;&ugrave;&sect;<wbr>&ecirc;&oslash;&acute;<wbr>&cent;&iacute;&sect;<wbr>&micro;&ntilde;&ccedil;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;
+&sup1;&ntilde;&egrave;&sup1;<wbr>&curren;&times;&iacute;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&ecirc;&ntilde;&shy;&shy;&ograve;&sup3;<wbr>&iacute;&iacute;&iexcl; = (&curren;&ccedil;&ograve;&aacute;<wbr>&curren;&aring;&ograve;&acute;<wbr>&agrave;&curren;&aring;&times;&egrave;&iacute;&sup1;
+% / % pb) + 50 %
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&sup1;&iacute;&iexcl;<wbr>&uml;&ograve;&iexcl;<wbr>&sup1;&otilde;&eacute;<wbr>&uml;&eth;<wbr>&frac34;&ordm;<wbr>&ccedil;&egrave;&ograve;<wbr>&micro;&ntilde;&ccedil;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;<wbr>&acirc;&ntilde;&sect;<wbr>&aacute;&otilde;<wbr>&acirc;&egrave;&ograve;&sup1;<wbr>&middot;&otilde;&egrave;<wbr>&agrave;&raquo;&ccedil;&sup1;<wbr>&agrave;&ordf;&ocirc;&sect;<wbr>&agrave;&ecirc;&eacute;&sup1;<wbr>&agrave;&frac34;&otilde;&acirc;&sect;<wbr>&ordf;&egrave;&ccedil;&sect;<wbr>&agrave;&acute;&otilde;&acirc;&ccedil;<wbr>&agrave;&middot;&egrave;&ograve;<wbr>&sup1;&ntilde;&eacute;&sup1;
+&curren;&times;&iacute;<wbr>&ordf;&egrave;&ccedil;&sect;<wbr>&middot;&otilde;&egrave;<wbr>&middot;&oacute;<wbr>&euml;&sup1;&eacute;&ograve;<wbr>&middot;&otilde;&egrave;<wbr>&agrave;&raquo;&ccedil;&sup1;<wbr><wbr>&nbsp;
+amplifier&nbsp; &aacute;&micro;&egrave;<wbr>&para;&eacute;&ograve;<wbr>&curren;&ccedil;&ograve;&aacute;<wbr>&curren;&aring;&ograve;&acute;<wbr>&agrave;&curren;&aring;&times;&egrave;&iacute;&sup1;<wbr>&middot;&otilde;&egrave;<wbr>&agrave;&iexcl;&ocirc;&acute;<wbr>&cent;&ouml;&eacute;&sup1;<wbr>&aacute;&otilde;<wbr>&aacute;&ograve;&iexcl;<wbr>&agrave;&iexcl;&ocirc;&sup1;<wbr>&curren;&egrave;&ograve;<wbr>&euml;&sup1;&ouml;&egrave;&sect;
+&micro;&ntilde;&ccedil;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;<wbr>&iexcl;&ccedil;<wbr>&uml;&eth;<wbr>&iacute;&ocirc;&egrave;&aacute;<wbr>&micro;&ntilde;&ccedil;
+&aacute;&aring;&eacute;&ccedil;<wbr>&atilde;&euml;&eacute;<wbr>&ecirc;&ntilde;&shy;&shy;&ograve;&sup3;<wbr>&iacute;&iacute;&iexcl;<wbr>&aacute;&ograve;<wbr>&curren;&sect;<wbr>&middot;&otilde;&egrave;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&iexcl;&ograve;&atilde;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;<wbr>&agrave;&ordf;&ocirc;&sect;
+&ecirc;&ntilde;&acute;<wbr>&ecirc;&egrave;&ccedil;&sup1;<wbr>&sup1;&otilde;&eacute;<wbr>&ecirc;&ograve;&aacute;&ograve;&atilde;&para;<wbr>&middot;&otilde;&egrave;
+&uml;&eth;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute; &atilde;&eth;&ordm;&ordm;
+&auml;&acute;&eacute;<wbr>&acute;&otilde;<wbr>&frac34;&iacute;<wbr>&ecirc;&aacute;<wbr>&curren;&ccedil;&atilde;
+&agrave;&euml;&aacute;&ograve;&eth;&iexcl;&ntilde;&ordm; &iexcl;&atilde;&eth;&ordm;&ccedil;&sup1;
+&iexcl;&ograve;&atilde; &middot;&otilde;&egrave;<wbr>&micro;&eacute;&iacute;&sect;
+&iexcl;&ograve;&atilde; &frac14;&aring;<wbr>&micro;&iacute;&ordm; &ecirc;&sup1;&iacute;&sect;<wbr>&atilde;&ccedil;&acute;<wbr>&agrave;&atilde;&ccedil;&ccedil;
+&aacute;&aring;&eth;<wbr>&atilde;&sup1;<wbr>&cent;&sup3;&eth;<wbr>&agrave;&acute;&otilde;&acirc;&ccedil;<wbr>&iexcl;&ntilde;&sup1;<wbr>&acirc;&iacute;&aacute;<wbr>&atilde;&euml;&eacute;<wbr>&agrave;&iexcl;&ocirc;&acute;<wbr>&curren;&ccedil;&ograve;&aacute;<wbr>&curren;&aring;&ograve;&acute;<wbr>&agrave;&curren;&aring;&times;&egrave;&iacute;&sup1;<wbr>&cent;&sup1;&ograve;&acute;<wbr>&curren;&sect;<wbr>&middot;&otilde;&egrave;<wbr>&cent;&sup1;&ograve;&acute;<wbr>&euml;&sup1;&ouml;&egrave;&sect;
+&aacute;&micro;&egrave;<wbr>&iacute;&acirc;&egrave;&ograve;&sect;<wbr>&auml;&atilde;<wbr>&iexcl;&ccedil;<wbr>&micro;&ograve;&aacute;
+&euml;&ograve;&iexcl;<wbr>&atilde;&sup1;<wbr>&iexcl;&atilde;&eth;&ordm;&ccedil;&sup1;<wbr>&iexcl;&ograve;&atilde;<wbr>&agrave;&iexcl;&ocirc;&acute;<wbr>&aacute;&otilde;<wbr>&iexcl;&ograve;&atilde;<wbr>&agrave;&raquo;&aring;&otilde;&egrave;&acirc;&sup1;<wbr>&aacute;&raquo;&aring;&sect;<wbr>&frac34;&ograve;<wbr>&atilde;&ograve;<wbr>&aacute;&ocirc;&agrave;&micro;&iacute;&atilde;&igrave;<wbr>&ordm;&ograve;&sect;<wbr>&micro;&ntilde;&ccedil;<wbr>&iexcl;&ccedil;<wbr>&uml;&eth;<wbr>&middot;&oacute;<wbr>&atilde;&euml;&eacute;<wbr>&agrave;&iexcl;&ocirc;&acute;<wbr>&raquo;&ntilde;&shy;&euml;&ograve;<wbr>&cent;&ouml;&eacute;&sup1;<wbr>&auml;&acute;&eacute;
+&agrave;&sup1;&times;&egrave;&iacute;&sect;<wbr>&uml;&ograve;&iexcl;<wbr>&iacute;&ograve;&uml;<wbr>&agrave;&iexcl;&ocirc;&acute;<wbr>&curren;&ccedil;&ograve;&aacute;<wbr>&curren;&aring;&ograve;&acute;<wbr>&agrave;&curren;&aring;&times;&egrave;&iacute;&sup1;<wbr>&atilde;&sup1;<wbr>&ecirc;&agrave;&ograve;&ccedil;&eth;<wbr>&iacute;&acirc;&ugrave;&egrave;<wbr>&micro;&ntilde;&ccedil;
+(steady state error) &euml;&atilde;&times;&iacute;<wbr>&middot;&otilde;&egrave;<wbr>&agrave;&atilde;&otilde;&acirc;&iexcl;<wbr>&ccedil;&egrave;&ograve;
+"&iacute;&iacute;&iquest;&agrave;&laquo;&micro;<wbr><wbr>" &cent;&ouml;&eacute;&sup1;
+&laquo;&ouml;&egrave;&sect;<wbr>&micro;&ntilde;&ccedil;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;<wbr>&aacute;&ordm;&ordm;
+p &auml;&aacute;&egrave;<wbr>&ecirc;&ograve;&aacute;&ograve;&atilde;&para;<wbr>&aacute;&iexcl;&eacute;<wbr>&auml;&cent;<wbr>&atilde;&euml;&eacute;<wbr>&euml;&aacute;&acute;<wbr>&auml;&raquo;<wbr>&auml;&acute;&eacute;
+&micro;&ntilde;&ccedil;<wbr>&iacute;&acirc;&egrave;&ograve;&sect;<wbr>&atilde;&sup1;<wbr>&iexcl;&atilde;&sup3;&otilde;<wbr>&sup1;&otilde;&eacute;<wbr>&iexcl;&ccedil;<wbr>&auml;&acute;&eacute;<wbr>&aacute;&iexcl;&egrave;<wbr>&atilde;&eth;&ordm;&ordm;<wbr>&atilde;&sup1;<wbr>&atilde;&ugrave;&raquo;<wbr>&middot;&otilde;&egrave;
+5
+<br>&nbsp;
+<center><img src="pic6.jpg" border=2 height=265 width=537></center>
+&nbsp;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&uml;&ograve;&iexcl;<wbr>&atilde;&ugrave;&raquo;<wbr>&atilde;&eth;&ordm;&ordm;<wbr>&agrave;&raquo;&ccedil;&sup1;&agrave;&curren;&atilde;&times;&egrave;&iacute;&sect;&aacute;&aring;&iexcl;<wbr>&agrave;&raquo;&aring;&otilde;&egrave;&acirc;&sup1;<wbr>&curren;&ccedil;&ograve;&aacute;<wbr>&atilde;&eacute;&iacute;&sup1;<wbr>&aacute;&ordm;&ordm;<wbr>&auml;&iacute;<wbr>&sup1;&eacute;&oacute;<wbr><wbr>&nbsp;
+&acirc;&acute;&acirc;<wbr>&aacute;&otilde;<wbr>&micro;&ntilde;&ccedil;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;<wbr>&aacute;&ordm;&ordm;
+p &middot;&oacute;<wbr>&euml;&sup1;&eacute;&ograve;<wbr>&middot;&otilde;&egrave;<wbr>&raquo;&atilde;&ntilde;&ordm;<wbr>&ccedil;&ograve;&aring;&igrave;&ccedil;
+&ecirc;&oacute;&euml;&atilde;&ntilde;&ordm;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;
+&raquo;&atilde;&ocirc;&aacute;&ograve;&sup3; &auml;&iacute;<wbr>&sup1;&eacute;&oacute;<wbr>&middot;&otilde;&egrave;
+&frac14;&egrave;&ograve;&sup1;<wbr>&auml;&raquo;<wbr>&atilde;&euml;&eacute;
+&curren;&ccedil;&ograve;&aacute;<wbr>&atilde;&eacute;&iacute;&sup1; &iexcl;&ntilde;&ordm;&ecirc;&ograve;&atilde;
+&middot;&otilde;&egrave;<wbr>&micro;&eacute;&iacute;&sect;<wbr>&iexcl;&ograve;&atilde;
+&uml;&eth;<wbr>&middot;&oacute;<wbr>&curren;&ccedil;&ograve;&aacute;<wbr>&atilde;&eacute;&iacute;&sup1;
+&para;&eacute;&ograve;<wbr>&raquo;&atilde;&eth;&ecirc;&ocirc;&middot;&cedil;&ocirc;&agrave;&ograve;&frac34;
+&iexcl;&ograve;&atilde;<wbr>&aacute;&aring;&iexcl; &agrave;&raquo;&aring;&otilde;&egrave;&acirc;&sup1;
+&curren;&ccedil;&ograve;&aacute;<wbr>&atilde;&eacute;&iacute;&sup1; &cent;&iacute;&sect;&agrave;&curren;&atilde;&times;&egrave;&iacute;<wbr>&sect;
+&aacute;&aring;&iexcl;<wbr>&agrave;&raquo;&aring;&otilde;&egrave;&acirc;&sup1;
+&curren;&ccedil;&ograve;&aacute;<wbr>&atilde;&eacute;&iacute;&sup1;<wbr>&micro;&egrave;&oacute;<wbr>&aring;&sect;
+&iacute;&ograve;&uml;<wbr>&uml;&eth; &agrave;&sup1;&times;&egrave;&iacute;&sect;<wbr>&aacute;&ograve;
+&uml;&ograve;&iexcl;<wbr>&auml;&iacute;<wbr>&sup1;&eacute;&oacute; &euml;&atilde;&times;&iacute;<wbr>&ecirc;&ograve;&atilde;
+&middot;&otilde;&egrave;<wbr>&micro;&eacute;&iacute;&sect;<wbr>&iexcl;&ograve;&atilde;
+&middot;&oacute;<wbr>&curren;&ccedil;&ograve;&aacute; &atilde;&eacute;&iacute;&sup1;<wbr>&middot;&otilde;&egrave;<wbr>&agrave;&cent;&eacute;&ograve;&agrave;&curren;&atilde;&times;&egrave;&iacute;&sect;&auml;&raquo;<wbr><wbr>&nbsp;
+&middot;&oacute;<wbr>&atilde;&euml;&eacute;<wbr>&agrave;&iexcl;&ocirc;&acute;<wbr>&ecirc;&sup1;&ocirc;&aacute;<wbr>&euml;&atilde;&times;&iacute;<wbr>&micro;&eth;&iexcl;&atilde;&ntilde;&sup1;<wbr>&ordm;&sup1;<wbr>&frac14;&ocirc;&ccedil;<wbr>&middot;&otilde;&egrave;<wbr>&atilde;&ordf;&eacute;<wbr>&aacute;&aring;&iexcl;<wbr>&agrave;&raquo;&aring;&otilde;&egrave;&acirc;&sup1;<wbr>&curren;&ccedil;&ograve;&aacute;<wbr>&atilde;&eacute;&iacute;&sup1;
+&euml;&atilde;&times;&iacute;<wbr>&agrave;&sup1;&times;&egrave;&iacute;&sect;<wbr>&aacute;&ograve;<wbr>&uml;&ograve;&iexcl;<wbr>&ecirc;&ograve;&agrave;&euml;&micro;&oslash;<wbr>&iacute;&times;&egrave;&sup1;
+&aelig; &aacute;&micro;&egrave;<wbr>&frac14;&aring;<wbr>&middot;&otilde;&egrave;<wbr>&agrave;&iexcl;&ocirc;&acute;<wbr>&curren;&times;&iacute;
+&iacute;&oslash;&sup3;&euml;&agrave;&ugrave;&aacute;&ocirc;<wbr>&cent;&iacute;&sect;
+&ecirc;&ograve;&atilde;<wbr>&middot;&otilde;&egrave;<wbr>&auml;&acute;&eacute;<wbr>&uml;&eth;<wbr>&auml;&aacute;&egrave;<wbr>&micro;&atilde;&sect;&iexcl;&ntilde;&ordm;&curren;&egrave;&ograve;<wbr>&middot;&otilde;&egrave;<wbr>&micro;&ntilde;&eacute;&sect;<wbr>&auml;&ccedil;&eacute;
+&agrave;&frac34;&atilde;&ograve;&eth; &raquo;&atilde;&eth;&ecirc;&ocirc;&middot;&cedil;&ocirc;&agrave;&ograve;&frac34;
+&cent;&iacute;&sect;&agrave;&curren;&atilde;&times;&egrave;&iacute;<wbr>&sect;
+&aacute;&aring;&iexcl;<wbr>&agrave;&raquo;&aring;&otilde;&egrave;&acirc;&sup1;<wbr>&curren;&ccedil;&ograve;&aacute;<wbr>&atilde;&eacute;&iacute;&sup1;<wbr>&micro;&egrave;&oacute;<wbr>&aring;&sect;<wbr>&middot;&oacute;<wbr>&atilde;&euml;&eacute;<wbr>&micro;&eacute;&iacute;&sect;<wbr>&atilde;&ordf;&eacute;<wbr>&auml;&iacute;<wbr>&sup1;&eacute;&oacute;<wbr>&raquo;&atilde;&ocirc;&aacute;&ograve;&sup3;<wbr>&middot;&otilde;&egrave;<wbr>&aacute;&ograve;&iexcl;<wbr>&cent;&ouml;&eacute;&sup1;<wbr>&atilde;&sup1;<wbr>&iexcl;&ograve;&atilde;<wbr>&middot;&oacute;<wbr>&curren;&ccedil;&ograve;&aacute;<wbr>&atilde;&eacute;&iacute;&sup1;
+&ecirc;&ograve;&atilde;<wbr>&atilde;&euml;&eacute;<wbr>&aacute;&otilde;<wbr>&iacute;&oslash;&sup3;&euml;&agrave;&ugrave;&aacute;&ocirc;
+&micro;&ograve;&aacute;<wbr>&middot;&otilde;&egrave;<wbr>&iexcl;&oacute;&sup1;&euml;&acute;<wbr>&auml;&ccedil;&eacute;
+&aacute;&micro;&egrave;<wbr>&para;&eacute;&ograve;<wbr>&auml;&aacute;&egrave;<wbr>&aacute;&otilde;
+&curren;&ccedil;&ograve;&aacute;<wbr>&curren;&aring;&ograve;&acute;<wbr>&agrave;&curren;&aring;&times;&egrave;&iacute;&sup1;
+&cent;&iacute;&sect;<wbr>&iacute;&oslash;&sup3;&euml;&agrave;&ugrave;&aacute;&ocirc;<wbr>&auml;&iacute;<wbr>&sup1;&eacute;&oacute;<wbr>&uml;&eth;
+&frac14;&egrave;&ograve;&sup1;<wbr>&ccedil;&ograve;&aring;&igrave;&ccedil;
+&auml;&raquo;<wbr>&middot;&otilde;&egrave;&agrave;&curren;&atilde;&times;&egrave;&iacute;<wbr>&sect;
+&aacute;&aring;&iexcl;<wbr>&agrave;&raquo;&aring;&otilde;&egrave;&acirc;&sup1;
+&curren;&ccedil;&ograve;&aacute;<wbr>&atilde;&eacute;&iacute;&sup1;<wbr>&iexcl;&ccedil;<wbr>&uml;&eth;<wbr>&auml;&aacute;&egrave;<wbr>&agrave;&frac34;&otilde;&acirc;&sect;<wbr>&frac34;&iacute;
+&acute;&ntilde;&sect;<wbr>&sup1;&ntilde;&eacute;&sup1; &iacute;&oslash;&sup3;&euml;&agrave;&ugrave;&aacute;&ocirc;<wbr>&cent;&iacute;&sect;<wbr>&ecirc;&ograve;&atilde;
+&middot;&otilde;&egrave;<wbr>&micro;&eacute;&iacute;&sect;<wbr>&iexcl;&ograve;&atilde;<wbr>&middot;&oacute;<wbr>&curren;&ccedil;&ograve;&aacute;<wbr>&atilde;&eacute;&iacute;&sup1;
+&uml;&eth;<wbr>&aacute;&micro;&iexcl;<wbr>&micro;&egrave;&ograve;&sect;
+&uml;&ograve;&iexcl;<wbr>&curren;&egrave;&ograve;<wbr>&middot;&otilde;&egrave;<wbr>&micro;&ntilde;&eacute;&sect;<wbr>&auml;&ccedil;&eacute;<wbr>&atilde;&sup1;
+&raquo;&atilde;&ocirc;&aacute;&ograve;&sup3;<wbr>&middot;&otilde;&egrave;<wbr>&ecirc;&aacute;&acute;&oslash;&aring;
+&iexcl;&ntilde;&ordm;&curren;&egrave;&ograve;<wbr>&auml;&iacute; &sup1;&eacute;&oacute;<wbr>&middot;&otilde;&egrave;
+&ecirc;&egrave;&sect;<wbr>&auml;&raquo;<wbr>&atilde;&euml;&eacute;&agrave;&curren;&atilde;&times;&egrave;&iacute;<wbr>&sect;
+&aacute;&aring;&iexcl;<wbr>&agrave;&raquo;&aring;&otilde;&egrave;&acirc;&sup1;<wbr>&curren;&ccedil;&ograve;&aacute;<wbr>&atilde;&eacute;&iacute;&sup1;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&iexcl;&ograve;&atilde;<wbr>&aacute;&iexcl;&eacute;<wbr>&ecirc;&agrave;&ograve;&frac34;<wbr>&middot;&otilde;&egrave;<wbr>&agrave;&iexcl;&ocirc;&acute;<wbr>&cent;&ouml;&eacute;&sup1;<wbr>&middot;&oacute;<wbr>&auml;&acute;&eacute;
+2 &ccedil;&ocirc;&cedil;&otilde;<wbr><wbr>&nbsp;&nbsp; &ccedil;&ocirc;&cedil;&otilde;<wbr>&aacute;&atilde;&iexcl;<wbr>&curren;&times;&iacute;<wbr>&agrave;&frac34;&ocirc;&egrave;&aacute;<wbr>&iacute;&ntilde;&micro;&atilde;&ograve;<wbr>&cent;&acirc;&ograve;&acirc;
+&cent;&iacute;&sect;<wbr>&micro;&ntilde;&ccedil;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;<wbr>&agrave;&frac34;&times;&egrave;&iacute;
+&agrave;&frac34;&ocirc;&egrave;&aacute;<wbr>&frac14;&aring;<wbr>&frac14;&aring;&ocirc;&micro;<wbr>&cent;&iacute;&sect;
+&curren;&ccedil;&ograve;&aacute;<wbr>&curren;&aring;&ograve;&acute;<wbr>&agrave;&curren;&aring;&times;&egrave;&iacute;&sup1;<wbr>&middot;&otilde;&egrave;<wbr>&aacute;&otilde;<wbr>&micro;&egrave;&iacute;<wbr>&atilde;&eth;&ordm;&ordm;
+&acute;&ntilde;&sect;<wbr>&sup1;&ntilde;&eacute;&sup1;<wbr>&curren;&ccedil;&ograve;&aacute;<wbr>&curren;&aring;&ograve;&acute;<wbr>&agrave;&curren;&aring;&times;&egrave;&iacute;&sup1;
+&middot;&otilde;&egrave;<wbr>&agrave;&iexcl;&ocirc;&acute;<wbr>&cent;&ouml;&eacute;&sup1;<wbr>&uml;&eth;
+&aacute;&otilde;<wbr>&curren;&egrave;&ograve;<wbr>&sup1;&eacute;&iacute;&acirc;<wbr>&aring;&sect;<wbr>&aacute;&micro;&egrave;<wbr>&iexcl;&ccedil;
+&uml;&eth;<wbr>&middot;&oacute;<wbr>&atilde;&euml;&eacute;<wbr>&ecirc;&ntilde;&shy;&shy;&ograve;&sup3;
+&iacute;&iacute;&iexcl;<wbr>&uml;&ograve;&iexcl;<wbr>&micro;&ntilde;&ccedil;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;
+&middot;&otilde;&egrave;<wbr>&agrave;&euml;&aacute;&ograve;&eth; &ecirc;&aacute;&iexcl;&ntilde;&ordm;&iexcl;<wbr>&atilde;&eth;<wbr>&ordm;&ccedil;&sup1;<wbr>&iexcl;&ograve;&atilde;<wbr>&cent;&sup3;&eth;<wbr>&sup1;&ntilde;&eacute;&sup1;<wbr>&auml;&acute;&eacute;
+&aacute;&micro;&egrave;<wbr>&euml;&ograve;&iexcl;<wbr>&agrave;&frac34;&ocirc;&egrave;&aacute;<wbr>&frac14;&aring;<wbr>&cent;&iacute;&sect;<wbr>&curren;&ccedil;&ograve;&aacute;<wbr>&curren;&aring;&ograve;&acute;&agrave;&curren;&aring;&times;&egrave;&sup1;&iacute;<wbr>&aacute;&ograve;&iexcl;<wbr>&agrave;&iexcl;&ocirc;&sup1;<wbr>&auml;&raquo;<wbr>&iexcl;&ccedil;<wbr>&iacute;&ograve;&uml;<wbr>&uml;&eth;<wbr>&middot;&oacute;<wbr>&atilde;&euml;&eacute;<wbr>&atilde;&eth;&ordm;&ordm;<wbr>&aacute;&iexcl;&ccedil;&egrave;&sect;<wbr>&auml;&acute;&eacute;
+&agrave;&sup1;&times;&egrave;&iacute;&sect;<wbr>&uml;&ograve;&iexcl;<wbr>&atilde;&eth;&ordm;&ordm;<wbr>&uml;&eth;<wbr>&auml;&ccedil;<wbr>&agrave;&iexcl;&ocirc;&sup1;<wbr>&auml;&raquo;
+&ccedil;&ocirc;&cedil;&otilde;<wbr>&middot;&otilde;&egrave;<wbr>&ecirc;&iacute;&sect;<wbr>&middot;&oacute;&acirc;&acirc;&acirc;<wbr>&iexcl;&ograve;&atilde;<wbr>&raquo;&atilde;&ntilde;&ordm;<wbr>&curren;&egrave;&ograve;&auml;&ordm;&aacute;&iacute;&ecirc;&cent;&iacute;&sect;<wbr>&micro;&ntilde;&ccedil;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;<wbr>&atilde;&euml;&aacute;&egrave;<wbr>&acute;&eacute;&ccedil;&acirc;<wbr>&aacute;&times;&iacute;
+&laquo;&ouml;&egrave;&sect;<wbr>&uml;&eth;<wbr>&middot;&oacute;<wbr>&atilde;&euml;&eacute;<wbr>&micro;&ntilde;&ccedil;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;<wbr>&agrave;&aring;&times;&egrave;&iacute;&sup1;<wbr>&uml;&oslash;&acute;<wbr>&middot;&oacute;<wbr>&sect;&ograve;&sup1;<wbr>&auml;&raquo;<wbr>&acirc;&ntilde;&sect;<wbr>&uml;&oslash;&acute;
+&middot;&otilde;&egrave;<wbr>&atilde;&euml;&eacute;<wbr>&ecirc;&ntilde;&shy;&shy;&ograve;&sup3;<wbr>&iacute;&iacute;&iexcl;<wbr>&middot;&otilde;&egrave;<wbr>&agrave;&euml;&aacute;&ograve;&eth;<wbr>&ecirc;&aacute;&iexcl;&ntilde;&ordm;&iexcl;<wbr>&atilde;&eth;<wbr>&ordm;&ccedil;&sup1;<wbr>&iexcl;&ograve;&atilde;<wbr>&atilde;&sup1;<wbr>&cent;&sup3;&eth;<wbr>&sup1;&ntilde;&eacute;&sup1;<wbr>&auml;&acute;&eacute;
+&aacute;&micro;&egrave;<wbr>&ccedil;&ocirc;&cedil;&otilde;<wbr>&sup1;&otilde;&eacute;<wbr>&uml;&eth;<wbr>&aacute;&otilde;<wbr>&raquo;&ntilde;&shy;&euml;&ograve;<wbr>&middot;&otilde;&egrave;<wbr>&micro;&eacute;&iacute;&sect;<wbr>&raquo;&atilde;&ntilde;&ordm;<wbr>&curren;&egrave;&ograve;&auml;&ordm;&aacute;&iacute;&ecirc;&cent;&iacute;&sect;
+&micro;&ntilde;&ccedil;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;<wbr>&middot;&oslash;&iexcl;<wbr>&curren;&atilde;&ntilde;&eacute;&sect;<wbr>&middot;&otilde;&egrave;<wbr>&aacute;&otilde;<wbr>&iexcl;&ograve;&atilde;<wbr>&agrave;&raquo;&aring;&otilde;&egrave;&acirc;&sup1;<wbr>&aacute;&raquo;&aring;&sect;<wbr>&frac34;&ograve;<wbr>&atilde;&ograve;<wbr>&aacute;&ocirc;&agrave;&micro;&iacute;&atilde;&igrave;<wbr>&cent;&iacute;&sect;<wbr>&iexcl;&atilde;&eth;&ordm;&ccedil;&sup1;<wbr>&iexcl;&ograve;&atilde;
+
+<p><font color="#993366">&nbsp;<a name="i"></a><b><font size=+1>integral&nbsp;
+action (i)</font></b></font>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&frac14;&aring;<wbr>&micro;&iacute;&ordm;<wbr>&cent;&iacute;&sect; proportional-plus-integral
+action &ecirc;&ograve;&aacute;&ograve;&atilde;&para;<wbr>&iacute;&cedil;&ocirc;&ordm;&ograve;&acirc;<wbr>&auml;&acute;&eacute;<wbr>&atilde;&sup1;<wbr>&ecirc;&aacute;&iexcl;&ograve;&atilde;
+<center>&nbsp;<img src="pic5-1.gif" height=38 width=158></center>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+o&nbsp;&nbsp; =&nbsp;&nbsp; output&nbsp; %&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+pb&nbsp; =&nbsp; proportional&nbsp; band %
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+e&nbsp;&nbsp; =&nbsp;&nbsp; error&nbsp; %&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ti&nbsp;&nbsp; =&nbsp;&nbsp; integral time (&ccedil;&ocirc;&sup1;&ograve;&middot;&otilde;)
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&agrave;&aacute;&times;&egrave;&iacute;<wbr>&agrave;&raquo;&atilde;&otilde;&acirc;&ordm;<wbr>&agrave;&middot;&otilde;&acirc;&ordm;&iexcl;&ntilde;&ordm;&ecirc;&aacute;&iexcl;&ograve;&atilde;<wbr>&cent;&iacute;&sect;<wbr>&micro;&ntilde;&ccedil;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;<wbr>&agrave;&ordf;&ocirc;&sect;<wbr>&ecirc;&ntilde;&acute;<wbr>&ecirc;&egrave;&ccedil;&sup1;<wbr>&iacute;&acirc;&egrave;&ograve;&sect;<wbr>&agrave;&acute;&otilde;&acirc;&ccedil;
+&curren;&ccedil;&ograve;&aacute;<wbr>&aacute;&micro;&iexcl;<wbr>&micro;&egrave;&ograve;&sect;
+&iexcl;&ccedil;<wbr>&aacute;&otilde;<wbr>&agrave;&frac34;&otilde;&acirc;&sect;<wbr>&iacute;&acirc;&egrave;&ograve;&sect;<wbr>&agrave;&acute;&otilde;&acirc;&ccedil;
+&middot;&otilde;&egrave;<wbr>&agrave;&middot;&iacute;&aacute;&auml;&ordm;&aacute;&iacute;&ecirc;&cent;&iacute;&sect;<wbr>&ecirc;&aacute;&iexcl;&ograve;&atilde;
+&curren;&times;&iacute;<wbr>&micro;&ntilde;&ccedil;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;<wbr>&agrave;&ordf;&ocirc;&sect;<wbr>&ecirc;&ntilde;&acute;<wbr>&ecirc;&egrave;&ccedil;&sup1;<wbr>&iacute;&acirc;&egrave;&ograve;&sect;<wbr>&agrave;&acute;&otilde;&acirc;&ccedil;<wbr>&para;&ugrave;&iexcl;<wbr>&uml;&oacute;&iexcl;&ntilde;&acute;<wbr>&acute;&eacute;&ccedil;&acirc;<wbr>&ecirc;&aacute;&iexcl;&ograve;&atilde;<wbr>&middot;&otilde;&egrave;<wbr>&ecirc;&egrave;&ccedil;&sup1;&auml;&ordm;&aacute;&iacute;&ecirc;&agrave;&raquo;&ccedil;&sup1;<wbr>&curren;&egrave;&ograve;<wbr>&micro;&atilde;&ouml;&sect;<wbr>&auml;&ccedil;&eacute;
+integral action &atilde;&ordf;&eacute;&iacute;&ocirc;&sup1;&middot;&ocirc;&iexcl;&atilde;&ntilde;&aring;&curren;&ccedil;&ograve;&aacute;<wbr>&curren;&aring;&ograve;&acute;<wbr>&agrave;&curren;&aring;&times;&egrave;&iacute;&sup1;<wbr>&atilde;&sup1;<wbr>&iexcl;&ograve;&atilde;<wbr>&raquo;&atilde;&ntilde;&ordm;<wbr>&aacute;&micro;&egrave;&sect;&auml;&ordm;&aacute;&iacute;<wbr>&ecirc;
+&aacute;&aring;&eth;<wbr>&uml;&eth;<wbr>&euml;&acirc;&oslash;&acute;<wbr>&agrave;&aacute;&times;&egrave;&iacute;<wbr>&curren;&ccedil;&ograve;&aacute;<wbr>&curren;&aring;&ograve;&acute;<wbr>&agrave;&curren;&aring;&times;&egrave;&iacute;&sup1;
+&cent;&iacute;&sect;<wbr>&atilde;&eth;&ordm;&ordm;<wbr>&agrave;&raquo;&ccedil;&sup1;<wbr>&egrave;&ugrave;&sup1;&acirc;&igrave;
+&agrave;&aacute;&times;&egrave;&iacute;<wbr>&frac14;&aring;<wbr>&micro;&iacute;&ordm;<wbr>&ecirc;&aacute;&ordm;&ugrave;&atilde;&sup3;&igrave;<wbr>&aacute;&aring;&eacute;&ccedil;<wbr>&agrave;&middot;&iacute;&aacute;&auml;&ordm;&aacute;&iacute;&ecirc;&cent;&iacute;&sect;<wbr>&atilde;&eth;&ordm;&ordm;<wbr>&uml;&eth;<wbr>&aacute;&otilde;<wbr>&curren;&egrave;&ograve;<wbr>&aacute;&ograve;&iexcl;<wbr>&cent;&ouml;&eacute;&sup1;<wbr>&euml;&atilde;&times;&iacute;<wbr>&aring;&acute;<wbr>&aring;&sect;
+&aacute;&curren;&egrave;<wbr>&auml;&euml;&sup1;<wbr>&cent;&ouml;&eacute;&sup1;<wbr>&iacute;&acirc;&ugrave;&egrave;
+&iexcl;&ntilde;&ordm;&aring;&ntilde;&iexcl;&eacute;&sup3;&eth;<wbr>&cent;&iacute;&sect;
+disturbance &iexcl;&ograve;&atilde;<wbr>&middot;&oacute;<wbr>&sect;&ograve;&sup1;<wbr>&atilde;&sup1;<wbr>&aring;&ntilde;&iexcl;&eacute;&sup3;&eth;<wbr>&agrave;&ordf;&egrave;&sup1;<wbr>&sup1;&otilde;&eacute;<wbr>&aacute;&otilde;<wbr>&aring;&ntilde;&iexcl;&eacute;&sup3;&eth;<wbr>&curren;&aring;&eacute;&ograve;&acirc;&iexcl;&ntilde;&ordm;&agrave;&raquo;&ccedil;&sup1;
+manual-reset function &acute;&ntilde;&sect;<wbr>&sup1;&ntilde;&eacute;&sup1;<wbr>&atilde;&sup1;<wbr>&ordm;&ograve;&sect;<wbr>&curren;&atilde;&ntilde;&eacute;&sect;<wbr>&uml;&ouml;&sect;<wbr>&agrave;&atilde;&otilde;&acirc;&iexcl;
+integral action &ccedil;&egrave;&ograve; reset function
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&curren;&oslash;&sup3;&ecirc;&aacute;&ordm;&ntilde;&micro;&ocirc;<wbr>&cent;&iacute;&sect;
+integral action &atilde;&sup1;<wbr>&iexcl;&ograve;&atilde;<wbr>&iexcl;&oacute;&uml;&ntilde;&acute;<wbr>&iacute;&iacute;&iquest;&agrave;&laquo;&micro;<wbr>&agrave;&raquo;&ccedil;&sup1;<wbr>&cent;&eacute;&iacute;<wbr>&acute;&otilde;<wbr>&iacute;&acirc;&egrave;&ograve;&sect;<wbr>&aacute;&ograve;&iexcl;
+&acute;&ntilde;&sect;<wbr>&sup1;&ntilde;&eacute;&sup1; integral action
+&uml;&ouml;&sect;<wbr>&agrave;&raquo;&ccedil;&sup1;<wbr>&middot;&otilde;&egrave;<wbr>&sup1;&ocirc;&acirc;&aacute;<wbr>&atilde;&sup1;<wbr>&iexcl;&ograve;&atilde;<wbr>&atilde;&ordf;&eacute;&iexcl;&ntilde;&ordm;&atilde;&eth;&ordm;&ordm;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;<wbr>&raquo;&eacute;&iacute;&sup1;<wbr>&iexcl;&aring;&ntilde;&ordm;
+&iacute;&acirc;&egrave;&ograve;&sect;<wbr>&auml;&atilde;<wbr>&iexcl;&ccedil;<wbr>&micro;&ograve;&aacute;
+integral action &iexcl;&ccedil;<wbr>&aacute;&otilde;<wbr>&cent;&eacute;&iacute;<wbr>&agrave;&ecirc;&otilde;&acirc;<wbr>&iacute;&acirc;&ugrave;&egrave;<wbr>&ordm;&eacute;&ograve;&sect;
+&agrave;&frac34;&atilde;&ograve;&eth; &middot;&oacute;<wbr>&atilde;&euml;&eacute;<wbr>&agrave;&iexcl;&ocirc;&acute;
+capacity-like lag &curren;&atilde;&egrave;&iacute;&aacute;<wbr>&micro;&ntilde;&ccedil;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&aacute;
+&aacute;&aring;&eth;<wbr>&middot;&oacute;<wbr>&atilde;&euml;&eacute;<wbr>&ordf;&egrave;&ccedil;&sect;<wbr>&agrave;&ccedil;&aring;&ograve;<wbr>&cent;&iacute;&sect;<wbr>&iexcl;&ograve;&atilde;<wbr>&aacute;&iexcl;&ccedil;&egrave;&sect;<wbr>&acirc;&ograve;&ccedil;<wbr>&sup1;&ograve;&sup1;<wbr>&cent;&ouml;&eacute;&sup1;
+&acirc;&acute;&acirc;<wbr>&middot;&ntilde;&egrave;&ccedil; &aelig; &auml;&raquo;<wbr>&aacute;&aring;&eacute;&ccedil;
+&atilde;&eth;&ordm;&ordm; proportional-plus-integral &uml;&eth;<wbr>&aacute;&otilde;<wbr>&ordf;&egrave;&ccedil;&sect;<wbr>&agrave;&ccedil;&aring;&ograve;<wbr>&cent;&iacute;&sect;<wbr>&iexcl;&ograve;&atilde;<wbr>&aacute;&iexcl;&ccedil;&egrave;&sect;<wbr>&sup1;&ograve;&sup1;<wbr>&iexcl;&ccedil;&egrave;&ograve;<wbr>&atilde;&eth;&ordm;&ordm;<wbr>&agrave;&ordf;&ocirc;&sect;<wbr>&ecirc;&ntilde;&acute;<wbr>&ecirc;&egrave;&ccedil;&sup1;<wbr>&iacute;&acirc;&egrave;&ograve;&sect;<wbr>&agrave;&acute;&otilde;&acirc;&ccedil;
+50 % &euml;&atilde;&times;&iacute;
+<center><b>t<sub>pi</sub>&nbsp; =&nbsp; 1.5t<sub>p</sub></b></center>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&iacute;&acirc;&egrave;&ograve;&sect;<wbr>&auml;&atilde;<wbr>&iexcl;&ccedil;<wbr>&micro;&ograve;&aacute;
+&ecirc;&oacute;&euml;&atilde;&ntilde;&ordm;<wbr>&atilde;&eth;&ordm;&ordm;<wbr>&middot;&otilde;&egrave;<wbr>&aacute;&otilde;
+time constant&nbsp; &agrave;&atilde;&ccedil;&ccedil; (&agrave;&ordf;&egrave;&sup1;
+&atilde;&eth;&ordm;&ordm;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;<wbr>&iacute;&ntilde;&micro;&atilde;&ograve;<wbr>&iexcl;&ograve;&atilde;<wbr>&auml;&euml;&aring;)
+&raquo;&ntilde;&shy;&euml;&ograve;<wbr>&sup1;&otilde;&eacute; &uml;&eth;<wbr>&auml;&aacute;&egrave;<wbr>&aacute;&otilde;<wbr>&frac14;&aring;<wbr>&aacute;&ograve;&iexcl;<wbr>&sup1;&ntilde;&iexcl;
+&aacute;&micro;&egrave;<wbr>&ecirc;&oacute;&euml;&atilde;&ntilde;&ordm;<wbr>&atilde;&eth;&ordm;&ordm;<wbr>&middot;&otilde;&egrave;<wbr>&aacute;&otilde;
+time constant&nbsp; &ordf;&eacute;&ograve; &raquo;&ntilde;&shy;&euml;&ograve;<wbr>&sup1;&otilde;&eacute;<wbr>&uml;&eth;<wbr>&atilde;&euml;&shy;&egrave;<wbr>&aacute;&ograve;&iexcl;<wbr>&aacute;&aring;&eth;<wbr>&iacute;&ograve;&uml;<wbr>&middot;&oacute;<wbr>&atilde;&euml;&eacute;<wbr>&atilde;&eth;&ordm;&ordm;<wbr>&agrave;&cent;&eacute;&ograve;<wbr>&ecirc;&ugrave;&egrave;
+&uml;&oslash;&acute;<wbr>&ccedil;&ocirc;&iexcl;&auml;&micro;&ocirc;<wbr>&middot;&otilde;&egrave;<wbr>&auml;&aacute;&egrave;<wbr>&ecirc;&ograve;&aacute;&ograve;&atilde;&para;<wbr>&acirc;&iacute;&aacute;<wbr>&atilde;&ntilde;&ordm;<wbr>&auml;&acute;&eacute;
+(&agrave;&ordf;&egrave;&sup1; &atilde;&eth;&ordm;&ordm;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;<wbr>&atilde;&eth;&acute;&ntilde;&ordm;)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+integral action&nbsp; &iexcl;&ccedil;<wbr>&agrave;&ordf;&egrave;&sup1;<wbr>&agrave;&acute;&otilde;&acirc;&ccedil;&iexcl;&ntilde;<wbr>&ordm;
+proportional action &curren;&times;&iacute;<wbr>&uml;&eth;&agrave;&ocirc;&egrave;&aacute;&iacute;&ntilde;&micro;&atilde;&ograve;<wbr>&cent;&acirc;&ograve;&acirc;<wbr>&cent;&iacute;&sect;<wbr>&micro;&ntilde;&ccedil;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;
+&laquo;&ouml;&egrave;&sect;<wbr>&euml;&ograve;&iexcl; &aacute;&ograve;&iexcl;<wbr>&agrave;&iexcl;&ocirc;&sup1;<wbr>&auml;&raquo;<wbr>&uml;&eth;<wbr>&middot;&oacute;<wbr>&atilde;&euml;&eacute;<wbr>&atilde;&eth;&ordm;&ordm;<wbr>&agrave;&iexcl;&ocirc;&acute;<wbr>&iexcl;&ograve;&atilde;<wbr>&aacute;&iexcl;&ccedil;&egrave;&sect;
+&acirc;&acute;&acirc;<wbr>&middot;&ntilde;&egrave;&ccedil; &aelig; &auml;&raquo;
+integral time&nbsp; ( ti = 1/ki sec&nbsp; ffpmuj ki = repeats/sec) &uml;&eth;<wbr>&agrave;&raquo;&ccedil;&sup1;<wbr>&micro;&ntilde;&ccedil;<wbr>&aacute;&ecirc;&acute;&sect;<wbr>&ccedil;&egrave;&ograve;<wbr>&iexcl;&atilde;&eth;&ordm;&ccedil;&sup1;<wbr>&iexcl;&ograve;&atilde;<wbr>&aacute;&otilde;<wbr>&iexcl;&ograve;&atilde;<wbr>&micro;&iacute;&ordm;<wbr>&ecirc;&sup1;&iacute;&sect;<wbr>&micro;&egrave;&iacute;<wbr>&iexcl;&ograve;&atilde;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;<wbr>&agrave;&atilde;&ccedil;&ccedil;<wbr>&aacute;&curren;&egrave;<wbr>&auml;&euml;&sup1;
+&para;&eacute;&ograve;<wbr>&agrave;&ccedil;&aring;&ograve;<wbr>&aacute;&otilde;
+&curren;&egrave;&ograve;<wbr>&sup1;&eacute;&iacute;&acirc;<wbr>&aacute;&ntilde;&sup1;<wbr>&uml;&eth;<wbr>&atilde;&euml;&eacute;<wbr>&curren;&egrave;&ograve;
+&auml;&ordm;&aacute;&iacute;&ecirc;&para;&ouml;&sect;<wbr>&curren;&egrave;&ograve;
+&middot;&otilde;&egrave;<wbr>&micro;&eacute;&iacute;&sect; &iexcl;&ograve;&atilde;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;
+&agrave;&atilde;&ccedil;&ccedil;<wbr>&iexcl;&ccedil;&egrave;&ograve;<wbr>&curren;&egrave;&ograve;<wbr>&middot;&otilde;&egrave;<wbr>&ccedil;&ntilde;&acute;<wbr>&auml;&acute;&eacute;
+&aacute;&micro;&egrave;<wbr>&curren;&ccedil;&ograve;&aacute;<wbr>&curren;&aring;&ograve;&acute;<wbr>&agrave;&curren;&aring;&times;&egrave;&iacute;&sup1;<wbr>&acirc;&ntilde;&sect;<wbr>&agrave;&raquo;&ccedil;&sup1;
+&curren;&egrave;&ograve;<wbr>&ordm;&ccedil;&iexcl;<wbr>&iacute;&acirc;&ugrave;&egrave;
+&acute;&ntilde;&sect;<wbr>&sup1;&ntilde;&eacute;&sup1;<wbr>&iexcl;&ccedil;&egrave;&ograve;<wbr>&curren;&ccedil;&ograve;&aacute;
+&curren;&aring;&ograve;&acute;<wbr>&agrave;&curren;&aring;&times;&egrave;&iacute;&sup1;
+&uml;&eth;<wbr>&agrave;&raquo;&ccedil;&sup1;<wbr>&egrave;&ugrave;&sup1;&acirc;&igrave;
+(&laquo;&ouml;&egrave;&sect;<wbr>&middot;&oacute;<wbr>&atilde;&euml;&eacute;<wbr>&agrave;&middot;&iacute;&aacute;<wbr><wbr>&nbsp;&nbsp;
+e dt &euml;&acirc;&oslash;&acute;<wbr>&middot;&oacute;<wbr>&sect;&ograve;&sup1;)
+&agrave;&middot;&iacute;&aacute;&auml;&ordm;&aacute;&iacute;&ecirc;&iexcl;&ccedil;<wbr>&uml;&eth;<wbr>&aacute;&otilde;<wbr>&curren;&egrave;&ograve;<wbr>&ecirc;&ugrave;&sect;<wbr>&iexcl;&ccedil;&egrave;&ograve;<wbr>&agrave;&middot;&iacute;&aacute;<wbr>&middot;&otilde;&egrave;<wbr>&micro;&eacute;&iacute;&sect;<wbr>&iexcl;&ograve;&atilde;
+&acute;&ntilde;&sect;<wbr>&sup1;&ntilde;&eacute;&sup1;<wbr>&uml;&ouml;&sect;<wbr>&agrave;&iexcl;&ocirc;&acute;<wbr>&iexcl;&ograve;&atilde;<wbr>&frac34;&oslash;&egrave;&sect;<wbr>&agrave;&iexcl;&ocirc;&sup1;
+(over shoot) &agrave;&euml;&sup1;&times;&iacute;<wbr>&curren;&egrave;&ograve;<wbr>&middot;&otilde;&egrave;<wbr>&iexcl;&oacute;&euml;&sup1;&acute;<wbr>&cent;&ouml;&eacute;&sup1;<wbr>&auml;&raquo;
+&agrave;&frac34;&times;&egrave;&iacute;<wbr>&atilde;&euml;&eacute;<wbr>&agrave;&iexcl;&ocirc;&acute;<wbr>&iexcl;&ograve;&atilde;&iacute;&ocirc;&sup1;&middot;&ocirc;&iexcl;&atilde;&ntilde;&aring;&curren;&ccedil;&ograve;&aacute;<wbr>&curren;&aring;&ograve;&acute;<wbr>&agrave;&curren;&aring;&times;&egrave;&iacute;&sup1;<wbr>&curren;&egrave;&ograve;<wbr>&aring;&ordm;<wbr>&aring;&sect;<wbr>&aacute;&ograve;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&iexcl;&ograve;&atilde;<wbr>&atilde;&ordf;&eacute;<wbr>&agrave;&middot;&iacute;&aacute;&iacute;&ocirc;&sup1;&middot;&ocirc;&iexcl;&atilde;&ntilde;&aring;&atilde;&sup1;<wbr>&iexcl;&ograve;&atilde;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;
+&curren;&ccedil;&atilde;<wbr>&atilde;&eth;&ccedil;&ntilde;&sect;<wbr>&atilde;&sup1;<wbr>&agrave;&atilde;&times;&egrave;&iacute;&sect;<wbr>&cent;&iacute;&sect;<wbr>&curren;&ccedil;&ograve;&aacute;<wbr>&curren;&aring;&ograve;&acute;<wbr>&agrave;&curren;&aring;&times;&egrave;&iacute;&sup1;<wbr>&laquo;&ouml;&egrave;&sect;<wbr>&aacute;&otilde;<wbr>&cent;&sup1;&ograve;&acute;<wbr>&atilde;&euml;&shy;&egrave;
+&agrave;&ordf;&egrave;&sup1; &agrave;&iexcl;&ocirc;&acute;<wbr>&iexcl;&ograve;&atilde;<wbr>&agrave;&raquo;&aring;&otilde;&egrave;&acirc;&sup1;<wbr>&aacute;&raquo;&aring;&sect;<wbr>&curren;&egrave;&ograve;<wbr>&iexcl;&oacute;&euml;&sup1;&acute;<wbr>&cent;&sup1;&ograve;&acute;<wbr>&atilde;&euml;&shy;&egrave;)
+&agrave;&frac34;&atilde;&ograve;&eth;<wbr>&uml;&eth;<wbr>&middot;&oacute;<wbr>&atilde;&euml;&eacute;<wbr>&agrave;&iexcl;&ocirc;&acute;<wbr>&raquo;&ntilde;&shy;&euml;&ograve;
+integral windup &para;&ouml;&sect;<wbr>&aacute;&aacute;&eacute;<wbr>&ccedil;&egrave;&ograve;
+integral time &iacute;&ograve;&uml;<wbr>&para;&ugrave;&iexcl;<wbr>&micro;&eacute;&iacute;&sect;<wbr>&atilde;&sup1;<wbr>&iexcl;&ograve;&atilde;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;<wbr>&atilde;&sup1;<wbr>&ecirc;&agrave;&ograve;&ccedil;&eth;<wbr>&iexcl;&ograve;&atilde;<wbr>&middot;&oacute;<wbr>&sect;&ograve;&sup1;<wbr>&cedil;&atilde;&atilde;&aacute;<wbr>&acute;&ograve;
+&aacute;&micro;&egrave;<wbr>&ecirc;&ntilde;&shy;&shy;&ograve;&sup3;<wbr>&iacute;&iacute;&iexcl;<wbr>&cent;&iacute;&sect;<wbr>&iexcl;&atilde;&eth;&ordm;&ccedil;&sup1;<wbr>&iexcl;&ograve;&atilde;<wbr>&iacute;&ograve;&uml;<wbr>&uml;&eth;<wbr>&para;&ouml;&sect;<wbr>&uml;&oslash;&acute;
+&iacute;&ocirc;&egrave;&aacute;<wbr>&micro;&ntilde;&ccedil;<wbr>&atilde;&eth;&euml;&ccedil;&egrave;&ograve;&sect;<wbr>&middot;&otilde;&egrave;<wbr>&agrave;&iexcl;&ocirc;&acute;<wbr>&iexcl;&ograve;&atilde;<wbr>&frac34;&oslash;&egrave;&sect;<wbr>&agrave;&iexcl;&ocirc;&sup1;
+&agrave;&sup1;&times;&egrave;&iacute;&sect;<wbr>&uml;&ograve;&iexcl;<wbr>&frac14;&aring;<wbr>&cent;&iacute;&sect;
+integral action
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&atilde;&sup1;<wbr>&iexcl;&ograve;&atilde;<wbr>&frac34;&ntilde;&sup2;&sup1;&ograve;<wbr>&raquo;&atilde;&ntilde;&ordm;<wbr>&raquo;&atilde;&oslash;&sect;<wbr>&agrave;&frac34;&times;&egrave;&iacute;<wbr>&aacute;&iexcl;&eacute;<wbr>&raquo;&ntilde;&shy;&euml;&ograve;<wbr>&sup1;&otilde;&eacute;
+&iacute;&ograve;&uml;<wbr>&aacute;&otilde;<wbr>&iexcl;&ograve;&atilde;<wbr>&agrave;&frac34;&ocirc;&egrave;&aacute;&ecirc;&ccedil;&ocirc;&middot;&ordf;&igrave;&agrave;&cent;&eacute;&ograve;<wbr>&auml;&raquo;<wbr>&atilde;&sup1;<wbr>&ccedil;&sect;<wbr>&uml;&atilde;
+integral &laquo;&ouml;&egrave;&sect;&ecirc;&ccedil;&ocirc;&middot;&ordf;&igrave;&sup1;&otilde;&eacute;<wbr>&agrave;&raquo;&ccedil;&sup1;
+&middot;&otilde;&egrave;<wbr>&atilde;&ugrave;&eacute;<wbr>&uml;&ntilde;&iexcl;<wbr>&iexcl;&ntilde;&sup1;<wbr>&acute;&otilde;<wbr>&atilde;&sup1;<wbr>&sup1;&ograve;&aacute;<wbr>&cent;&ocirc;&sect;
+batch switch &agrave;&frac34;&times;&egrave;&iacute;<wbr>&aacute;&iexcl;&eacute;<wbr>&raquo;&ntilde;&shy;&euml;&ograve;<wbr>&iexcl;&ograve;&atilde;<wbr>&iacute;&ocirc;&egrave;&aacute;<wbr>&micro;&ntilde;&ccedil;<wbr>&agrave;&sup1;&times;&egrave;&iacute;&sect;<wbr>&uml;&ograve;&iexcl;
+integral action &iacute;&acirc;&egrave;&ograve;&sect;<wbr>&auml;&atilde;<wbr>&iexcl;&ccedil;<wbr>&micro;&ograve;&aacute;<wbr>&iacute;&oslash;&raquo;&iexcl;&atilde;&sup3;&igrave;
+&ccedil;&ntilde;&acute;<wbr>&curren;&oslash;&aacute;<wbr>&atilde;&sup1;<wbr>&raquo;&ntilde;&uml;&uml;&oslash;&ordm;&ntilde;&sup1;<wbr>&aacute;&ntilde;&iexcl;<wbr>&aacute;&otilde;<wbr>&iexcl;&ograve;&atilde;<wbr>&raquo;&eacute;&iacute;&sect;<wbr>&iexcl;&ntilde;&sup1;<wbr>&raquo;&ntilde;&shy;&euml;&ograve;
+integral windup &sup1;&otilde;&eacute;<wbr>&auml;&ccedil;&eacute;<wbr>&iacute;&acirc;&ugrave;&egrave;<wbr>&aacute;&aring;&eacute;&ccedil;
+<br>&nbsp;
+<br><b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&cent;&eacute;&iacute;<wbr>&ecirc;&atilde;&oslash;&raquo;<wbr>&cent;&iacute;&sect;
+integral action</b>
+<ul>
+<ul>
+<li>
+&middot;&oacute;<wbr>&euml;&sup1;&eacute;&ograve;<wbr>&middot;&otilde;&egrave;<wbr>&curren;&aring;&eacute;&ograve;&acirc;
+manual reset &atilde;&ordf;&eacute;<wbr>&iexcl;&oacute;&uml;&ntilde;&acute;<wbr>&curren;&ccedil;&ograve;&aacute;<wbr>&curren;&aring;&ograve;&acute;<wbr>&agrave;&curren;&aring;&times;&egrave;&iacute;&sup1;<wbr>&auml;&acute;&eacute;<wbr><wbr></li>
+
+<li>
+&aacute;&otilde;<wbr>&raquo;&ntilde;&shy;&euml;&ograve; capacity-like lag
+&laquo;&ouml;&egrave;&sect;<wbr>&acirc;&ntilde;&sect;<wbr>&frac14;&aring;<wbr>&atilde;&euml;&eacute;<wbr>&agrave;&iexcl;&ocirc;&acute;<wbr>&iexcl;&ograve;&atilde;<wbr>&euml;&ntilde;&iexcl;<wbr>&aring;&eacute;&ograve;&sect;<wbr>&middot;&ograve;&sect;&agrave;&ccedil;&aring;&ograve;<wbr>&cent;&ouml;&eacute;&sup1;<wbr>&atilde;&sup1;<wbr>&micro;&ntilde;&ccedil;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;<wbr>&uml;&ouml;&sect;<wbr>&auml;&aacute;&egrave;
+&atilde;&ordf;&eacute;&iexcl;&ntilde;&ordm;&atilde;&eth;&ordm;&ordm; &middot;&otilde;&egrave;<wbr>&aacute;&otilde;
+time constant &acirc;&ograve;&ccedil;<wbr>&sup1;&ograve;&sup1;<wbr><wbr></li>
+
+<li>
+&middot;&oacute;<wbr>&atilde;&euml;&eacute;<wbr>&ordf;&egrave;&ccedil;&sect;<wbr>&agrave;&ccedil;&aring;&ograve;<wbr>&atilde;&sup1;<wbr>&iexcl;&ograve;&atilde;<wbr>&aacute;&iexcl;&ccedil;&egrave;&sect;<wbr>&acirc;&ograve;&ccedil;<wbr>&sup1;&ograve;&sup1;<wbr>&cent;&ouml;&eacute;&sup1;<wbr><wbr></li>
+</ul>
+</ul>
+
+<center><img src="pic7.jpg" border=2 height=265 width=537></center>
+&nbsp;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&atilde;&sup1;<wbr>&atilde;&eth;&ordm;&ordm;<wbr>&middot;&otilde;&egrave;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;<wbr><wbr>&nbsp;
+&curren;&egrave;&ograve;<wbr>&ccedil;&ntilde;&acute;<wbr>&aacute;&aring;&eth;<wbr>&curren;&egrave;&ograve;<wbr>&iexcl;&oacute;&euml;&sup1;&acute;<wbr>&curren;&ccedil;&atilde;<wbr>&agrave;&raquo;&ccedil;&sup1;<wbr>&curren;&egrave;&ograve;<wbr>&agrave;&acute;&otilde;&acirc;&ccedil;<wbr>&iexcl;&ntilde;&sup1;
+&aacute;&aring;&eth;<wbr>&atilde;&sup1;<wbr>&ecirc;&agrave;&ograve;&ccedil;&eth;
+&iacute;&acirc;&ugrave;&egrave;<wbr>&micro;&ntilde;&ccedil;<wbr>&curren;&egrave;&ograve;
+&curren;&ccedil;&ograve;&aacute;<wbr>&curren;&aring;&ograve;&acute;<wbr>&agrave;&curren;&aring;&times;&egrave;&iacute;&sup1;<wbr>&curren;&ccedil;&atilde;<wbr>&agrave;&raquo;&ccedil;&sup1;<wbr>&egrave;&ugrave;&sup1;&acirc;&igrave;
+&para;&eacute;&ograve;<wbr>&aacute;&otilde;<wbr>&curren;&ccedil;&ograve;&aacute;<wbr>&curren;&aring;&ograve;&acute;<wbr>&agrave;&curren;&aring;&times;&egrave;&iacute;&sup1;<wbr>&atilde;&sup1;<wbr>&ecirc;&agrave;&ograve;&ccedil;&eth;<wbr>&iacute;&acirc;&ugrave;&egrave;<wbr>&micro;&ntilde;&ccedil;
+&atilde;&euml;&eacute;<wbr>&raquo;&eacute;&iacute;&sup1;<wbr>&ecirc;&ntilde;&shy;&shy;&ograve;&sup3;<wbr>&middot;&otilde;&egrave;<wbr>&auml;&acute;&eacute;<wbr>&uml;&ograve;&iexcl;&iacute;&ocirc;&sup1;&middot;&ocirc;&agrave;&iexcl;&atilde;&agrave;&micro;&iacute;&atilde;&igrave;&laquo;&ouml;&egrave;&sect;<wbr>&ecirc;&ntilde;&shy;&shy;&ograve;&sup3;<wbr>&iacute;&iacute;&iexcl;<wbr>&agrave;&frac34;&ocirc;&egrave;&aacute;<wbr>&cent;&ouml;&eacute;&sup1;<wbr>&acute;&eacute;&ccedil;&acirc;<wbr>&iacute;&ntilde;&micro;&atilde;&ograve;<wbr>&curren;&sect;<wbr>&middot;&otilde;&egrave;
+&agrave;&aacute;&times;&egrave;&iacute;<wbr>&ecirc;&ntilde;&shy;&shy;&ograve;&sup3;<wbr>&agrave;&cent;&eacute;&ograve;<wbr>&aacute;&otilde;<wbr>&curren;&egrave;&ograve;<wbr>&curren;&sect;<wbr>&middot;&otilde;&egrave;)
+&atilde;&euml;&eacute;&iexcl;&ntilde;&ordm;&agrave;&curren;&atilde;&times;&egrave;&iacute;&sect;&cent;&acirc;&ograve;&acirc;<wbr>&acute;&ntilde;&sect;<wbr>&aacute;&ecirc;&acute;&sect;<wbr>&atilde;&sup1;<wbr>&atilde;&ugrave;&raquo;<wbr>&middot;&otilde;&egrave;
+6 &curren;&ccedil;&ograve;&aacute;<wbr>&curren;&aring;&ograve;&acute;<wbr>&agrave;&curren;&aring;&times;&egrave;&iacute;&sup1;<wbr>&atilde;&sup1;<wbr>&ecirc;&agrave;&ograve;&ccedil;&eth;<wbr>&iacute;&acirc;&ugrave;&egrave;<wbr>&micro;&ntilde;&ccedil;<wbr>&agrave;&raquo;&ccedil;&sup1;<wbr>&ecirc;&ntilde;&shy;&shy;&ograve;&sup3;<wbr>&agrave;&cent;&eacute;&ograve;<wbr>&cent;&iacute;&sect;<wbr>&ecirc;&egrave;&ccedil;&sup1;<wbr>&middot;&ntilde;&eacute;&sect;<wbr>&ecirc;&iacute;&sect;<wbr><wbr>&nbsp;
+&curren;&ccedil;&ograve;&aacute;<wbr>&auml;&ccedil;<wbr>&cent;&iacute;&sect;<wbr>&ecirc;&egrave;&ccedil;&sup1;<wbr>&ecirc;&ntilde;&acute;<wbr>&ecirc;&egrave;&ccedil;&sup1;<wbr>&uml;&eth;<wbr>&auml;&aacute;&egrave;<wbr>&middot;&oacute;<wbr>&atilde;&euml;&eacute;<wbr>&aacute;&otilde;<wbr>&ecirc;&ntilde;&shy;&shy;&ograve;&sup3;<wbr>&iacute;&iacute;&iexcl;<wbr>&ecirc;&oacute;&euml;&atilde;&ntilde;&ordm;<wbr>&ecirc;&ntilde;&shy;&shy;&ograve;&sup3;<wbr>&agrave;&cent;&eacute;&ograve;<wbr>&cent;&sup1;&ograve;&acute;<wbr>&sup1;&otilde;&eacute;<wbr><wbr>&nbsp;
+&aacute;&micro;&egrave;<wbr>&ecirc;&egrave;&ccedil;&sup1;&iacute;&ocirc;&sup1;&middot;&ocirc;&agrave;&iexcl;&atilde;&agrave;&micro;&iacute;&atilde;&igrave;&uml;&eth;<wbr>&middot;&oacute;<wbr>&atilde;&euml;&eacute;<wbr>&ecirc;&ntilde;&shy;&shy;&ograve;&sup3;<wbr>&iacute;&iacute;&iexcl;<wbr>&agrave;&frac34;&ocirc;&egrave;&aacute;<wbr>&cent;&ouml;&eacute;&sup1;<wbr>&curren;&sect;<wbr>&middot;&otilde;&egrave;<wbr>&micro;&ograve;&aacute;<wbr>&agrave;&ccedil;&aring;&ograve;
+&ecirc;&ntilde;&shy;&shy;&ograve;&sup3;<wbr>&iacute;&iacute;&iexcl;<wbr>&aacute;&ograve;<wbr>&atilde;&ccedil;&aacute;<wbr>&iexcl;&ntilde;&sup1;<wbr>&middot;&otilde;&egrave;&agrave;&curren;&atilde;&times;&egrave;&iacute;&sect;&cent;&acirc;&ograve;&acirc;<wbr>&aacute;&aring;&eth;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;<wbr>&atilde;&eth;&ordm;&ordm;<wbr>&micro;&ntilde;&ccedil;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;<wbr>&uml;&eth;<wbr>&middot;&oacute;<wbr>&atilde;&euml;&eacute;<wbr>&curren;&egrave;&ograve;<wbr>&ccedil;&ntilde;&acute;
+&agrave;&frac34;&ocirc;&egrave;&aacute;<wbr>&cent;&ouml;&eacute;&sup1;<wbr>&aacute;&ograve;<wbr>&agrave;&middot;&egrave;&ograve;&iexcl;&ntilde;&ordm;&curren;&egrave;&ograve;<wbr>&iexcl;&oacute;&euml;&sup1;&acute;<wbr>&aacute;&aring;&eth;<wbr>&curren;&ccedil;&ograve;&aacute;<wbr>&curren;&aring;&ograve;&acute;<wbr>&agrave;&curren;&aring;&times;&egrave;&iacute;&sup1;<wbr>&atilde;&sup1;<wbr>&ecirc;&agrave;&ograve;&ccedil;&eth;<wbr>&iacute;&acirc;&ugrave;&egrave;<wbr>&micro;&ntilde;&ccedil;<wbr>&agrave;&raquo;&ccedil;&sup1;<wbr>&egrave;&ugrave;&sup1;&acirc;&igrave;
+&iacute;&acirc;&egrave;&ograve;&sect;<wbr>&auml;&atilde;<wbr>&iexcl;&ccedil;<wbr>&acute;&otilde;<wbr>&euml;&ograve;&iexcl;
+ti &aacute;&otilde;<wbr>&curren;&egrave;&ograve; &sup1;&eacute;&iacute;&acirc;<wbr>&aring;&sect;
+&frac14;&aring;<wbr>&micro;&iacute;&ordm;<wbr>&iacute;&ograve;&uml;<wbr>&agrave;&iexcl;&ocirc;&acute;<wbr>&iexcl;&ograve;&atilde;<wbr>&aacute;&iexcl;&ccedil;&egrave;&sect;<wbr>&auml;&acute;&eacute;
+
+<p><b><font color="#993366"><font size=+1>&nbsp;<a name="d"></a>derivative&nbsp;
+action (d)</font></font></b>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+proportional &aacute;&aring;&eth; integral action &micro;&egrave;&ograve;&sect;<wbr>&iexcl;&ccedil;<wbr>&aacute;&otilde;<wbr>&cent;&eacute;&iacute;<wbr>&uml;&oacute;&iexcl;&ntilde;&acute;
+&middot;&otilde;&egrave;<wbr>&ecirc;&oacute;&curren;&ntilde;&shy; &iacute;&acirc;&ugrave;&egrave;<wbr>&middot;&otilde;&egrave;<wbr>&curren;&ccedil;&ograve;&aacute;<wbr>&curren;&aring;&ograve;&acute;<wbr>&agrave;&curren;&aring;&times;&egrave;&iacute;&sup1;
+&laquo;&ouml;&egrave;&sect;<wbr>&aacute;&otilde;<wbr>&cent;&sup1;&ograve;&acute;<wbr>&atilde;&euml;&shy;&egrave;
+&laquo;&ouml;&egrave;&sect;<wbr>&agrave;&iexcl;&ocirc;&acute;<wbr>&raquo;&ntilde;&shy;&euml;&ograve;<wbr>&micro;&egrave;&iacute;<wbr>&iexcl;&ograve;&atilde;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;<wbr>&iexcl;&atilde;&eth;&ordm;&ccedil;&sup1;<wbr>&iexcl;&ograve;&atilde;
+&aacute;&micro;&egrave;<wbr>&curren;&ccedil;&ograve;&aacute;<wbr>&curren;&aring;&ograve;&acute;<wbr>&agrave;&curren;&aring;&times;&egrave;&iacute;&sup1;<wbr>&cent;&sup1;&ograve;&acute;<wbr>&atilde;&euml;&shy;&egrave;<wbr>&sup1;&otilde;&eacute;
+&ecirc;&ograve;&aacute;&ograve;&atilde;&para;<wbr>&atilde;&ugrave;&eacute;
+&auml;&acute;&eacute;<wbr>&aring;&egrave;&ccedil;&sect;<wbr>&euml;&sup1;&eacute;&ograve;<wbr>&acirc;&acute;&acirc;<wbr>&acute;&ugrave;<wbr>&uml;&ograve;&iexcl;<wbr>&aacute;&sup1;&ccedil;&acirc;&sup1;&eacute;&aacute;&cent;&iacute;&sect;<wbr>&curren;&ccedil;&ograve;&aacute;<wbr>&curren;&aring;&ograve;&acute;<wbr>&agrave;&curren;&aring;&times;&egrave;&iacute;&sup1;
+&euml;&atilde;&times;&iacute;<wbr>&curren;&ccedil;&ograve;&aacute;<wbr>&ordf;&ntilde;&sup1;<wbr>&cent;&iacute;&sect;<wbr>&aacute;&ntilde;&sup1;<wbr>&sup1;&ntilde;&egrave;&sup1;<wbr>&agrave;&iacute;&sect;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+derivative action &aacute;&otilde;<wbr>&euml;&aring;&ntilde;&iexcl;<wbr>&iexcl;&ograve;&atilde;<wbr>&middot;&otilde;&egrave;<wbr>&ccedil;&egrave;&ograve;
+&micro;&ntilde;&ccedil;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;<wbr>&uml;&eth;<wbr>&micro;&iacute;&ordm;<wbr>&ecirc;&sup1;&iacute;&sect;<wbr>&micro;&egrave;&iacute;<wbr>&iacute;&ntilde;&micro;&atilde;&ograve;<wbr>&iexcl;&ograve;&atilde;<wbr>&agrave;&raquo;&aring;&otilde;&egrave;&acirc;&sup1;<wbr>&aacute;&raquo;&aring;&sect;<wbr>&cent;&iacute;&sect;<wbr>&curren;&ccedil;&ograve;&aacute;
+&curren;&aring;&ograve;&acute;<wbr>&agrave;&curren;&aring;&times;&egrave;&iacute;&sup1;
+&para;&ouml;&sect;<wbr>&aacute;&aacute;&eacute;<wbr>&ccedil;&egrave;&ograve;<wbr>&curren;&ccedil;&ograve;&aacute;<wbr>&curren;&aring;&ograve;&acute;<wbr>&agrave;&curren;&aring;&times;&egrave;&iacute;&sup1;<wbr>&uml;&eth;<wbr>&aacute;&otilde;<wbr>&acirc;&ntilde;&sect;<wbr>&curren;&egrave;&ograve;<wbr>&agrave;&aring;&ccedil;&iexcl;<wbr>&iacute;&acirc;&ugrave;&egrave;
+&frac14;&aring;<wbr>&micro;&iacute;&ordm;<wbr>&ecirc;&sup1;&iacute;&sect;<wbr>&cent;&iacute;&sect;
+derivative action &auml;&aacute;&egrave;<wbr>&auml;&acute;&eacute; &ecirc;&ntilde;&aacute;&frac34;&ntilde;&sup1;&cedil;&igrave;&iexcl;&ntilde;&ordm;&cent;&sup1;&ograve;&acute;<wbr>&cent;&iacute;&sect;<wbr>&curren;&ccedil;&ograve;&aacute;<wbr>&curren;&aring;&ograve;&acute;<wbr>&agrave;&curren;&aring;&times;&egrave;&iacute;&sup1;
+&aacute;&micro;&egrave;<wbr>&cent;&ouml;&eacute;&sup1;<wbr>&iacute;&acirc;&ugrave;&egrave;&iexcl;&ntilde;&ordm;&iexcl;&ograve;&atilde;<wbr>&agrave;&raquo;&aring;&otilde;&egrave;&acirc;&sup1;<wbr>&aacute;&raquo;&aring;&sect;<wbr>&cent;&iacute;&sect;<wbr>&curren;&ccedil;&ograve;&aacute;<wbr>&curren;&aring;&ograve;&acute;<wbr>&agrave;&curren;&aring;&times;&egrave;&iacute;&sup1;
+&para;&eacute;&ograve;<wbr>&curren;&ccedil;&ograve;&aacute;<wbr>&curren;&aring;&ograve;&acute;<wbr>&agrave;&curren;&aring;&times;&egrave;&iacute;&sup1;<wbr>&aacute;&otilde;<wbr>&curren;&egrave;&ograve;<wbr>&curren;&sect;<wbr>&middot;&otilde;&egrave;
+derivative action &uml;&eth;<wbr>&atilde;&euml;&eacute;<wbr>&frac14;&aring;<wbr>&micro;&iacute;&ordm;<wbr>&ecirc;&sup1;&iacute;&sect;<wbr>&agrave;&raquo;&ccedil;&sup1;<wbr>&egrave;&ugrave;&sup1;&acirc;&igrave;
+&curren;&oslash;&sup3;<wbr>&aring;&ntilde;&iexcl;&eacute;&sup3;&eth;<wbr>&cent;&eacute;&iacute;<wbr>&sup1;&otilde;&eacute;<wbr>&aacute;&otilde;<wbr>&frac14;&aring;<wbr>&acute;&otilde;
+&curren;&times;&iacute; &micro;&ntilde;&ccedil;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;<wbr>&uml;&eth;<wbr>&aacute;&otilde;<wbr>&frac14;&aring;<wbr>&micro;&iacute;&ordm;<wbr>&ecirc;&sup1;&iacute;&sect;<wbr>&middot;&otilde;&egrave;<wbr>&agrave;&iexcl;&ocirc;&acute;<wbr>&iexcl;&egrave;&iacute;&sup1;<wbr>&curren;&ccedil;&ograve;&aacute;<wbr>&curren;&aring;&ograve;&acute;<wbr>&agrave;&curren;&aring;&times;&egrave;&iacute;&sup1;<wbr>&uml;&atilde;&ocirc;&sect;<wbr>&uml;&eth;<wbr>&agrave;&iexcl;&ocirc;&acute;
+&aacute;&aring;&eth;<wbr>&middot;&oacute;<wbr>&atilde;&euml;&eacute;<wbr>&atilde;&eth;&ordm;&ordm;<wbr>&middot;&otilde;&egrave;<wbr>&frac14;&aring;<wbr>&micro;&iacute;&ordm;<wbr>&ecirc;&sup1;&iacute;&sect;<wbr>&middot;&otilde;&egrave;
+&agrave;&atilde;&ccedil;&ccedil;<wbr>&cent;&ouml;&eacute;&sup1;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+derivative time &agrave;&raquo;&ccedil;&sup1;<wbr>&micro;&ntilde;&ccedil;<wbr>&aacute;&ecirc;&acute;&sect;<wbr>&para;&ouml;&sect;<wbr>&frac14;&aring;<wbr>&agrave;&sup1;&times;&egrave;&iacute;&sect;<wbr>&uml;&ograve;&iexcl;
+derivative action &ccedil;&egrave;&ograve;<wbr>&aacute;&otilde;<wbr>&aacute;&ograve;&iexcl;<wbr>&sup1;&eacute;&iacute;&acirc;<wbr>&aacute;&curren;&egrave;<wbr>&auml;&euml;&sup1;
+&iexcl;&ograve;&atilde;<wbr>&agrave;&frac34;&ocirc;&egrave;&aacute; derivative
+time (td) &uml;&eth;<wbr>&middot;&oacute;<wbr>&atilde;&euml;&eacute;<wbr>&frac14;&aring;<wbr>&micro;&iacute;&ordm;<wbr>&ecirc;&sup1;&iacute;&sect;<wbr>&cent;&iacute;&sect;
+derivative action &aacute;&otilde;<wbr>&curren;&egrave;&ograve;<wbr>&aacute;&ograve;&iexcl;<wbr>&cent;&ouml;&eacute;&sup1;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&agrave;&sup1;&times;&egrave;&iacute;&sect;<wbr>&uml;&ograve;&iexcl;<wbr><wbr>&nbsp;
+derivative action &aacute;&otilde;<wbr>&curren;&ccedil;&ograve;&aacute;<wbr>&auml;&ccedil;<wbr>&micro;&egrave;&iacute;<wbr>&iexcl;&ograve;&atilde;<wbr>&agrave;&raquo;&aring;&otilde;&egrave;&acirc;&sup1;<wbr>&aacute;&raquo;&aring;&sect;<wbr>&aacute;&ograve;&iexcl;
+&acute;&ntilde;&sect;<wbr>&sup1;&ntilde;&eacute;&sup1;<wbr>&uml;&ouml;&sect;<wbr>&sup1;&ocirc;&acirc;&aacute;<wbr>&atilde;&ordf;&eacute;&iexcl;&ntilde;<wbr>&ordm;
+&agrave;&copy;&frac34;&ograve;&eth;<wbr>&curren;&egrave;&ograve; &ccedil;&ntilde;&acute;<wbr>&agrave;&middot;&egrave;&ograve;<wbr>&sup1;&ntilde;&eacute;&sup1;
+&auml;&aacute;&egrave;<wbr>&atilde;&ordf;&eacute;&iexcl;&ntilde;&ordm;&curren;&egrave;&ograve;<wbr>&iexcl;&oacute;&euml;&sup1;&acute;
+&agrave;&sup1;&times;&egrave;&iacute;&sect;<wbr>&uml;&ograve;&iexcl;<wbr>&iexcl;&ograve;&atilde;<wbr>&agrave;&raquo;&aring;&otilde;&egrave;&acirc;&sup1;<wbr>&curren;&egrave;&ograve;<wbr>&iexcl;&oacute;&sup1;&euml;&acute;<wbr>&aacute;&ntilde;&iexcl;<wbr>&uml;&eth;<wbr>&agrave;&raquo;&ccedil;&sup1;<wbr>&aacute;&ordm;&ordm;
+step &laquo;&ouml;&egrave;&sect;<wbr>&frac14;&aring;<wbr>&micro;&iacute;&ordm;<wbr>&ecirc;&sup1;&iacute;&sect;<wbr>&cent;&iacute;&sect;
+derivative &uml;&eth;<wbr>&iacute;&iacute;&iexcl;<wbr>&aacute;&ograve;<wbr>&agrave;&raquo;&ccedil;&sup1;
+pulse &aacute;&aring;&eth;<wbr>&middot;&oacute;<wbr>&atilde;&euml;&eacute;<wbr>&agrave;&iexcl;&ocirc;&acute;<wbr>&iexcl;&ograve;&atilde;<wbr>&iexcl;&atilde;&eth;&aacute;&middot;&iexcl;
+(bumped) &micro;&egrave;&iacute;<wbr>&iexcl;&atilde;&eth;&ordm;&ccedil;&sup1;<wbr>&iexcl;&ograve;&atilde;<wbr>&ecirc;&oacute;&euml;&atilde;&ntilde;&ordm;<wbr>&curren;&egrave;&ograve;<wbr>&iexcl;&oacute;&sup1;&euml;&acute;
+&atilde;&ordf;&eacute;<wbr>&agrave;&copy;&frac34;&ograve;&eth; proportional
+&aacute;&aring;&eth; integral mode &frac14;&aring;<wbr>&micro;&iacute;&ordm;<wbr>&ecirc;&sup1;&iacute;&sect;<wbr>&cent;&iacute;&sect;<wbr>&micro;&ntilde;&ccedil;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;
+pid &micro;&ograve;&aacute;<wbr>&middot;&auml;&eacute;&reg;&otilde;<wbr>&auml;&acute;&eacute;<wbr>&acute;&eacute;&ccedil;&acirc;<wbr>&ecirc;&aacute;&iexcl;&ograve;&atilde;
+<center><img src="pic8-1.gif" height=52 width=273></center>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&ecirc;&aacute;&iexcl;&ograve;&atilde;<wbr>&sup1;&otilde;&eacute;<wbr>&frac34;&ocirc;&uml;&ograve;&atilde;&sup3;&ograve;<wbr>&acirc;&acute;&acirc;<wbr>&curren;&ocirc;&acute;<wbr>&ccedil;&egrave;&ograve;<wbr>&auml;&aacute;&egrave;<wbr>&aacute;&otilde;
+interaction &atilde;&eth;&euml;&ccedil;&egrave;&ograve;&sect;<wbr>&micro;&ntilde;&ccedil;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;<wbr>&aacute;&micro;&egrave;<wbr>&aring;&eth;<wbr>&micro;&ntilde;&ccedil;<wbr>&aacute;&micro;&egrave;<wbr>&atilde;&sup1;<wbr>&curren;&ccedil;&ograve;&aacute;<wbr>&agrave;&raquo;&ccedil;&sup1;<wbr>&uml;&atilde;&ocirc;&sect;
+&aacute;&aring;&eacute;&ccedil;<wbr>&iexcl;&ograve;&atilde;<wbr>&agrave;&raquo;&aring;&otilde;&egrave;&acirc;&sup1;<wbr>&aacute;&raquo;&aring;&sect;<wbr>&frac34;&ograve;<wbr>&atilde;&ograve;<wbr>&aacute;&ocirc;&agrave;&micro;&iacute;&atilde;&igrave;<wbr>&cent;&iacute;&sect;<wbr>&micro;&ntilde;&ccedil;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;<wbr>&aacute;&micro;&egrave;<wbr>&aring;&eth;<wbr>&micro;&ntilde;&ccedil;<wbr>&uml;&eth;<wbr>&middot;&oacute;<wbr>&atilde;&euml;&eacute;<wbr>&agrave;&iexcl;&ocirc;&acute;<wbr>&frac14;&aring;<wbr>&iexcl;&atilde;&eth;<wbr>&middot;&ordm;<wbr>&micro;&egrave;&iacute;<wbr>&micro;&ntilde;&ccedil;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;<wbr>&micro;&ntilde;&ccedil;<wbr>&iacute;&times;&egrave;&sup1;
+&aelig; &acute;&eacute;&ccedil;&acirc;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+derivative action&curren;&times;&iacute; &raquo;&macr;&ocirc;&iexcl;&atilde;&ocirc;&acirc;&ograve;<wbr>&middot;&otilde;&egrave;<wbr>&iexcl;&egrave;&iacute;<wbr>&atilde;&euml;&eacute;<wbr>&agrave;&iexcl;&ocirc;&acute;<wbr>&frac14;&aring;<wbr>&micro;&atilde;&sect;<wbr>&cent;&eacute;&ograve;&aacute;&iexcl;&ntilde;<wbr>&ordm;
+integral action &acute;&ntilde;&sect;<wbr>&sup1;&ntilde;&eacute;&sup1;<wbr>&uml;&ouml;&sect;<wbr>&atilde;&ordf;&eacute;<wbr>&atilde;&sup1;
+&iexcl;&ograve;&atilde;<wbr>&raquo;&atilde;&ntilde;&ordm;<wbr>&raquo;&atilde;&sect;<wbr>&iexcl;&atilde;&eth;&ordm;&ccedil;&sup1;<wbr>&iexcl;&ograve;&atilde;<wbr>&middot;&otilde;&egrave;<wbr>&aacute;&otilde;
+time lag &aacute;&ograve;&iexcl; &aelig; &atilde;&euml;&eacute;<wbr>&aacute;&otilde;<wbr>&frac14;&aring;<wbr>&micro;&iacute;&ordm;<wbr>&ecirc;&sup1;&iacute;&sect;<wbr>&middot;&otilde;&egrave;<wbr>&atilde;&ccedil;&acute;<wbr>&agrave;&atilde;&ccedil;&ccedil;<wbr>&cent;&ouml;&eacute;&sup1;
+&aacute;&aring;&eth;<wbr>&ordf;&egrave;&ccedil;&sect;<wbr>&agrave;&ccedil;&aring;&ograve;<wbr>&iexcl;&ograve;&atilde;<wbr>&aacute;&iexcl;&ccedil;&egrave;&sect;<wbr>&middot;&otilde;&egrave;<wbr>&ecirc;&ntilde;&eacute;&sup1;<wbr>&aring;&sect;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&cent;&eacute;&iacute;<wbr>&agrave;&ecirc;&otilde;&acirc;<wbr>&cent;&iacute;&sect;
+derivative action &curren;&times;&iacute; &aacute;&otilde;<wbr>&curren;&ccedil;&ograve;&aacute;<wbr>&auml;&ccedil;<wbr>&micro;&egrave;&iacute;<wbr>&ecirc;&ntilde;&shy;&shy;&ograve;&sup3;<wbr>&atilde;&ordm;<wbr>&iexcl;&ccedil;&sup1;<wbr>&agrave;&raquo;&ccedil;&sup1;<wbr>&iacute;&acirc;&egrave;&ograve;&sect;<wbr>&aacute;&ograve;&iexcl;
+&agrave;&frac34;&atilde;&ograve;&eth;<wbr>&aacute;&ntilde;&sup1;<wbr>&aacute;&otilde;<wbr>&frac14;&aring;
+&micro;&iacute;&ordm;<wbr>&ecirc;&sup1;&iacute;&sect;<wbr>&acirc;&acute;&acirc;<wbr>&micro;&atilde;&sect;<wbr>&micro;&egrave;&iacute;<wbr>&iacute;&ntilde;&micro;&atilde;&ograve;<wbr>&iexcl;&ograve;&atilde;<wbr>&agrave;&raquo;&aring;&otilde;&egrave;&acirc;&sup1;<wbr>&aacute;&raquo;&aring;&sect;<wbr>&cent;&iacute;&sect;<wbr>&ecirc;&ntilde;&shy;&shy;&ograve;&sup3;<wbr>&middot;&otilde;&egrave;<wbr>&ccedil;&ntilde;&acute;<wbr>&auml;&acute;&eacute;
+&acute;&ntilde;&sect;<wbr>&sup1;&ntilde;&eacute;&sup1;<wbr>&aacute;&aacute;&eacute;<wbr>&ecirc;&ntilde;&shy;&shy;&ograve;&sup3;<wbr>&atilde;&ordm;<wbr>&iexcl;&ccedil;&sup1;<wbr>&uml;&eth;<wbr>&aacute;&otilde;<wbr>&cent;&sup1;&ograve;&acute;<wbr>&agrave;&aring;&ccedil;&iexcl;
+&aacute;&micro;&egrave;<wbr>&iexcl;&ccedil;<wbr>&iacute;&ograve;&uml;<wbr>&iexcl;&egrave;&iacute;<wbr>&atilde;&euml;&eacute;<wbr>&agrave;&iexcl;&ocirc;&acute;<wbr>&iexcl;&ograve;&atilde;<wbr>&agrave;&raquo;&aring;&otilde;&egrave;&acirc;&sup1;<wbr>&aacute;&raquo;&aring;&sect;<wbr>&micro;&egrave;&iacute;<wbr>&ecirc;&ntilde;&shy;&shy;&ograve;&sup3;<wbr>&iacute;&iacute;&iexcl;<wbr>&cent;&iacute;&sect;<wbr>&micro;&ntilde;&ccedil;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;<wbr>&agrave;&raquo;&ccedil;&sup1;<wbr>&iacute;&acirc;&egrave;&ograve;&sect;<wbr>&aacute;&ograve;&iexcl;<wbr>&auml;&acute;&eacute;
+&uml;&ouml;&sect;&agrave;&raquo;&ccedil;&icirc;&auml;&raquo;<wbr>&auml;&aacute;&egrave;<wbr>&auml;&acute;&eacute;<wbr>&middot;&otilde;&egrave;<wbr>&uml;&eth;<wbr>&atilde;&ordf;&eacute;
+derivative action &atilde;&sup1;<wbr>&iexcl;&ograve;&atilde;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;<wbr>&frac14;&aring;<wbr>&cent;&iacute;&sect;<wbr>&ecirc;&ntilde;&shy;&shy;&ograve;&sup3;<wbr>&atilde;&ordm;<wbr>&iexcl;&ccedil;&sup1;<wbr>&acirc;&ocirc;&egrave;&sect;<wbr>&auml;&raquo;<wbr>&iexcl;&ccedil;&egrave;&ograve;<wbr>&sup1;&ntilde;&eacute;&sup1;<wbr>&atilde;&eth;&ordm;&ordm;<wbr>&atilde;&acute;<wbr>&middot;&otilde;&egrave;<wbr>&aacute;&otilde;
+&ecirc;&ntilde;&shy;&shy;&ograve;&sup3;<wbr>&atilde;&ordm;<wbr>&iexcl;&ccedil;&sup1;<wbr>&aacute;&ograve;&iexcl;
+&uml;&eth;<wbr>&auml;&aacute;&egrave; &ecirc;&ograve;&aacute;&ograve;&atilde;&para;<wbr>&atilde;&ordf;&eacute;
+derivative action &auml;&acute;&eacute; &atilde;&sup1;<wbr>&ccedil;&sect;<wbr>&iexcl;&ograve;&atilde;<wbr>&iacute;&oslash;&micro;&ecirc;&ograve;&euml;&iexcl;&atilde;&atilde;&aacute;<wbr>&ecirc;&egrave;&ccedil;&sup1;<wbr>&atilde;&euml;&shy;&egrave;<wbr>&sup1;&ocirc;&acirc;&aacute;<wbr>&atilde;&ordf;&eacute;<wbr>&agrave;&frac34;&otilde;&acirc;&sect;<wbr>&micro;&ntilde;&ccedil;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;
+pi &agrave;&middot;&egrave;&ograve;<wbr>&sup1;&ntilde;&eacute;&sup1;
+<br>&nbsp;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>&ordm;&middot;<wbr>&ecirc;&atilde;&oslash;&raquo;<wbr>&cent;&iacute;&sect;
+derivative action</b>
+<ul>
+<ul>
+<li>
+&agrave;&euml;&aacute;&ograve;&eth;<wbr>&ecirc;&oacute;&euml;&atilde;&ntilde;&ordm;<wbr>&iexcl;&atilde;&eth;&ordm;&ccedil;&sup1;<wbr>&iexcl;&ograve;&atilde;<wbr>&middot;&otilde;&egrave;<wbr>&aring;&eacute;&ograve;<wbr>&euml;&aring;&ntilde;&sect;<wbr>&middot;&ograve;&sect;&agrave;&ccedil;&aring;&ograve;<wbr>&aacute;&ograve;&iexcl;
+&middot;&oacute;<wbr>&atilde;&euml;&eacute;<wbr>&iexcl;&ograve;&atilde;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;<wbr>&para;&ouml;&sect;<wbr>&uml;&oslash;&acute;<wbr>&middot;&otilde;&egrave;<wbr>&micro;&eacute;&iacute;&sect;<wbr>&iexcl;&ograve;&atilde;<wbr>&agrave;&atilde;&ccedil;&ccedil;<wbr>&cent;&ouml;&eacute;&sup1;<wbr><wbr></li>
+
+<li>
+&para;&eacute;&ograve; kd &aacute;&ograve;&iexcl;<wbr>&agrave;&iexcl;&ocirc;&sup1;<wbr>&auml;&raquo;
+&frac14;&aring;<wbr>&cent;&iacute;&sect; derivative action &uml;&eth;<wbr>&middot;&oacute;<wbr>&atilde;&euml;&eacute;<wbr>&frac14;&aring;<wbr>&micro;&iacute;&ordm;<wbr>&ecirc;&sup1;&iacute;&sect;<wbr>&auml;&ccedil;&eacute;<wbr>&cent;&ouml;&eacute;&sup1;<wbr>&uml;&sup1;<wbr>&iexcl;&atilde;&eth;&middot;&ntilde;&egrave;&sect;
+&atilde;&eth;&ordm;&ordm;<wbr>&iacute;&ograve;&uml;<wbr>&cent;&ograve;&acute;<wbr>&agrave;&ecirc;&para;&otilde;&acirc;&atilde;<wbr>&agrave;&ograve;&frac34;<wbr>&auml;&acute;&eacute;<wbr><wbr></li>
+
+<li>
+&auml;&aacute;&egrave;<wbr>&agrave;&euml;&aacute;&ograve;&eth;&iexcl;&ntilde;&ordm;&atilde;&eth;&ordm;&ordm;<wbr>&middot;&otilde;&egrave;<wbr>&aacute;&otilde;<wbr>&micro;&ntilde;&ccedil;<wbr>&aacute;&raquo;&atilde;&iexcl;<wbr>&atilde;&eth;<wbr>&ordm;&ccedil;&sup1;<wbr>&iexcl;&ograve;&atilde;<wbr>&agrave;&raquo;&aring;&otilde;&egrave;&acirc;&sup1;<wbr>&aacute;&raquo;&aring;&sect;<wbr>&auml;&acute;&eacute;<wbr>&sect;&egrave;&ograve;<wbr>&acirc;
+&euml;&atilde;&times;&iacute;<wbr>&aacute;&otilde;<wbr>&iexcl;&ograve;&atilde;<wbr>&aring;&eacute;&ograve;<wbr>&euml;&aring;&ntilde;&sect;<wbr>&middot;&ograve;&sect;&agrave;&ccedil;&aring;&ograve;<wbr>&sup1;&eacute;&iacute;&acirc;
+&agrave;&frac34;&atilde;&ograve;&eth;<wbr>&uml;&eth;<wbr>&middot;&oacute;<wbr>&atilde;&euml;&eacute;<wbr>&atilde;&eth;&ordm;&ordm;<wbr>&cent;&ograve;&acute;<wbr>&agrave;&ecirc;&para;&otilde;&acirc;&atilde;<wbr>&agrave;&ograve;&frac34;
+(&agrave;&ordf;&egrave;&sup1;<wbr>&atilde;&eth;&ordm;&ordm;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;<wbr>&iacute;&ntilde;&micro;&atilde;&ograve;<wbr>&iexcl;&ograve;&atilde;<wbr>&auml;&euml;&aring;)</li>
+
+<li>
+&auml;&aacute;&egrave;<wbr>&curren;&ccedil;&atilde;<wbr>&atilde;&ordf;&eacute;&iexcl;&ntilde;&ordm;&atilde;&eth;&ordm;&ordm;<wbr>&middot;&otilde;&egrave;<wbr>&aacute;&otilde;<wbr>&ecirc;&ntilde;&shy;&shy;&ograve;&sup3;<wbr>&atilde;&ordm;<wbr>&iexcl;&ccedil;&sup1;
+(noise) &ecirc;&ugrave;&sect;<wbr><wbr></li>
+
+<li>
+&atilde;&ordf;&eacute;<wbr>&ordf;&acute;<wbr>&agrave;&ordf;&acirc; lag
+&middot;&otilde;&egrave;<wbr>&agrave;&iexcl;&ocirc;&acute;<wbr>&uml;&ograve;&iexcl;
+integral aciton &acute;&eacute;&ccedil;&acirc; lead &atilde;&sup1; derivative
+action</li>
+</ul>
+</ul>
+&nbsp;
+<center><img src="pic8.jpg" border=2 height=265 width=537></center>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &agrave;&aacute;&times;&egrave;&iacute;<wbr>&aacute;&otilde;<wbr>&iexcl;&ograve;&atilde;<wbr>&agrave;&raquo;&aring;&otilde;&egrave;&acirc;&sup1;<wbr>&aacute;&raquo;&aring;&sect;<wbr>&curren;&egrave;&ograve;<wbr>&middot;&otilde;&egrave;<wbr>&iexcl;&oacute;&euml;&sup1;&acute;<wbr>&auml;&ccedil;&eacute;<wbr>&middot;&ntilde;&sup1;<wbr>&middot;&otilde;
+&uml;&eth;<wbr>&middot;&oacute;<wbr>&atilde;&euml;&eacute;<wbr>&iexcl;&ograve;&atilde;<wbr>&agrave;&ordm;&otilde;&egrave;&acirc;&sect;<wbr>&agrave;&ordm;&sup1;<wbr>&agrave;&raquo;&aring;&otilde;&egrave;&acirc;&sup1;<wbr>&aacute;&raquo;&aring;&sect;
+&iacute;&acirc;&egrave;&ograve;&sect;<wbr>&iexcl;&atilde;&eth;<wbr>&middot;&ntilde;&sup1;<wbr>&euml;&ntilde;&sup1;<wbr>&acute;&eacute;&ccedil;&acirc;
+&laquo;&ouml;&egrave;&sect;<wbr>&aacute;&otilde;<wbr>&frac14;&aring;<wbr>&micro;&egrave;&iacute;<wbr>&frac14;&aring;<wbr>&micro;&iacute;&ordm;<wbr>&ecirc;&sup1;&iacute;&sect;<wbr>&cent;&iacute;&sect;<wbr>&atilde;&eth;&ordm;&ordm;
+&para;&eacute;&ograve;<wbr>&euml;&ograve;<wbr>&iacute;&sup1;&oslash;&frac34;&ntilde;&sup1;&cedil;&igrave;<wbr>&cent;&iacute;&sect;<wbr>&iexcl;&ograve;&atilde;<wbr>&agrave;&ordm;&otilde;&egrave;&acirc;&sect;<wbr>&agrave;&ordm;&sup1;<wbr>&sup1;&ntilde;&egrave;&sup1;<wbr>&iexcl;&ccedil;<wbr>&curren;&times;&iacute;
+&ccedil;&ntilde;&acute;<wbr>&iacute;&ntilde;&micro;&atilde;&ograve;<wbr>&iexcl;&ograve;&atilde;<wbr>&agrave;&raquo;&aring;&otilde;&egrave;&acirc;&sup1;<wbr>&aacute;&raquo;&aring;&sect;<wbr>&cent;&iacute;&sect;<wbr>&iexcl;&ograve;&atilde;<wbr>&agrave;&ordm;&otilde;&egrave;&acirc;&sect;<wbr>&agrave;&ordm;&sup1;
+&aacute;&aring;&eacute;&ccedil;<wbr>&raquo;&eacute;&iacute;&sup1;<wbr>&atilde;&ccedil;&aacute;<wbr>&auml;&raquo;&iexcl;&ntilde;<wbr>&ordm;
+&ecirc;&ntilde;&shy;&shy;&ograve;&sup3;<wbr>&middot;&otilde;&egrave;<wbr>&auml;&acute;&eacute;<wbr>&uml;&ograve;&iexcl;<wbr>&ecirc;&egrave;&ccedil;&sup1;<wbr>&ecirc;&ntilde;&acute;<wbr>&ecirc;&egrave;&ccedil;&sup1;<wbr>&aacute;&aring;&eth;<wbr>&ecirc;&egrave;&ccedil;&sup1;&iacute;&ocirc;&sup1;&middot;&ocirc;&agrave;&iexcl;&atilde;&agrave;&micro;&iacute;&atilde;<wbr>&igrave;
+&acute;&ntilde;&sect;<wbr>&aacute;&ecirc;&acute;&sect;<wbr>&atilde;&sup1;<wbr>&atilde;&ugrave;&raquo;<wbr>&middot;&otilde;&egrave;
+7 &uml;&eth;<wbr>&middot;&oacute;<wbr>&atilde;&euml;&eacute;<wbr>&iexcl;&ograve;&atilde;<wbr>&middot;&oacute;<wbr>&sect;&ograve;&sup1;<wbr>&cent;&iacute;&sect;<wbr>&atilde;&eth;&ordm;&ordm;<wbr>&acute;&otilde;<wbr>&cent;&ouml;&eacute;&sup1;
+&iexcl;&ograve;&atilde;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;<wbr>&agrave;&ordf;&ocirc;&sect;<wbr>&iacute;&sup1;&oslash;&frac34;&ntilde;&sup1;&cedil;&igrave;<wbr>&auml;&aacute;&egrave;<wbr>&aacute;&otilde;<wbr>&frac14;&aring;<wbr>&micro;&egrave;&iacute;<wbr>&iexcl;&ograve;&atilde;<wbr>&agrave;&ordm;&otilde;&egrave;&acirc;&sect;<wbr>&agrave;&ordm;&sup1;<wbr>&atilde;&sup1;<wbr>&ecirc;&agrave;&ograve;&ccedil;&eth;<wbr>&iacute;&acirc;&ugrave;&egrave;<wbr>&micro;&ntilde;&ccedil;
+&aacute;&micro;&egrave;<wbr>&uml;&eth;<wbr>&aring;&acute;<wbr>&agrave;&ccedil;&aring;&ograve;<wbr>&agrave;&cent;&eacute;&ograve;<wbr>&ecirc;&ugrave;&egrave;<wbr>&ecirc;&agrave;&ograve;&ccedil;&eth;<wbr>&iacute;&acirc;&ugrave;&egrave;<wbr>&micro;&ntilde;&ccedil;
+(setting time) &acirc;&acute;&acirc;<wbr>&aring;&acute;<wbr>&uml;&oacute;&sup1;&ccedil;&sup1;<wbr>&iexcl;&ograve;&atilde;<wbr>&aacute;&iexcl;&ccedil;&egrave;&sect;<wbr>&aring;&sect;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&uml;&ograve;&iexcl;<wbr>&atilde;&ograve;&acirc;<wbr>&aring;&eth;&agrave;&iacute;&otilde;&acirc;&acute;<wbr>&middot;&otilde;&egrave;<wbr>&iexcl;&aring;&egrave;&ograve;&ccedil;<wbr>&aacute;&ograve;<wbr>&uml;&eth;<wbr>&frac34;&ordm;<wbr>&ccedil;&egrave;&ograve;<wbr>&micro;&ntilde;&ccedil;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;
+pid &micro;&ograve;&aacute;<wbr>&middot;&auml;&eacute;&reg;&otilde;<wbr>&aacute;&otilde;<wbr>&uml;&oslash;&acute;<wbr>&iacute;&egrave;&iacute;&sup1;<wbr>&iacute;&acirc;&ugrave;&egrave;<wbr>&euml;&aring;&ograve;&acirc;<wbr>&iacute;&acirc;&egrave;&ograve;&sect;
+&acute;&ntilde;&sect;<wbr>&sup1;&ntilde;&eacute;&sup1;<wbr>&micro;&ntilde;&ccedil;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;<wbr>&middot;&otilde;&egrave;<wbr>&atilde;&ordf;&eacute;<wbr>&sect;&ograve;&sup1;<wbr>&uml;&atilde;&ocirc;&sect;
+&aelig; &uml;&ouml;&sect;<wbr>&micro;&eacute;&iacute;&sect;<wbr>&aacute;&otilde;<wbr>&iexcl;&ograve;&atilde;<wbr>&micro;&egrave;&iacute;<wbr>&ccedil;&sect;<wbr>&uml;&atilde;<wbr>&frac34;&ocirc;&agrave;&egrave;&eacute;<wbr>&ecirc;&oacute;&euml;&atilde;&ntilde;&ordm;<wbr>&aacute;&iexcl;&eacute;<wbr>&uml;&oslash;&acute;<wbr>&iacute;&egrave;&iacute;&sup1;<wbr>&middot;&otilde;&egrave;<wbr>&agrave;&iexcl;&ocirc;&acute;<wbr>&cent;&ouml;&eacute;&sup1;<wbr>&auml;&ccedil;&eacute;<wbr>&acute;&eacute;&ccedil;&acirc;
+&auml;&acute;&eacute;<wbr>&aacute;&iexcl;&egrave;
+<ul>
+<ul>
+<li>
+&iexcl;&ograve;&atilde;<wbr>&micro;&egrave;&iacute;<wbr>&ccedil;&sect;<wbr>&uml;&atilde;<wbr>&ecirc;&oacute;&euml;&atilde;&ntilde;&ordm;<wbr>&raquo;&eacute;&iacute;&sect;<wbr>&iexcl;&ntilde;&sup1;
+integral windup &middot;&otilde;&egrave;<wbr>&agrave;&iexcl;&ocirc;&acute;<wbr>&uml;&ograve;&iexcl;<wbr>&iexcl;&ograve;&atilde;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;<wbr>&agrave;&ordf;&ocirc;&sect;&iacute;&ocirc;&sup1;&middot;&ocirc;&iexcl;&atilde;&ntilde;&aring;<wbr></li>
+
+<li>
+&iexcl;&ograve;&atilde;<wbr>&middot;&oacute;<wbr>&micro;&ntilde;&ccedil;<wbr>&iexcl;&atilde;&iacute;&ordm;
+(filter) &ecirc;&oacute;&euml;&atilde;&ntilde;&ordm;<wbr>&iexcl;&atilde;&iacute;&sect;<wbr>&ecirc;&ntilde;&shy;&shy;&ograve;&sup3;<wbr>&atilde;&ordm;<wbr>&iexcl;&ccedil;&sup1;<wbr>&atilde;&euml;&eacute;&iexcl;&ntilde;&ordm;&ecirc;&egrave;&ccedil;&sup1;<wbr>&iexcl;&ograve;&atilde;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;<wbr>&agrave;&ordf;&ocirc;&sect;<wbr>&iacute;&sup1;&oslash;&frac34;&ntilde;&sup1;&cedil;&igrave;<wbr><wbr></li>
+
+<li>
+&iexcl;&ograve;&atilde;<wbr>&micro;&egrave;&iacute;<wbr>&iexcl;&ograve;&atilde;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;<wbr>&agrave;&ordf;&ocirc;&sect;<wbr>&iacute;&sup1;&oslash;&frac34;&ntilde;&sup1;&cedil;&igrave;<wbr>&atilde;&euml;&eacute;<wbr>&atilde;&ntilde;&ordm;<wbr>&ecirc;&ntilde;&shy;&shy;&ograve;&sup3;<wbr>&iacute;&iacute;&iexcl;<wbr>&cent;&iacute;&sect;<wbr>&atilde;&eth;&ordm;&ordm;<wbr>&agrave;&middot;&egrave;&ograve;<wbr>&sup1;&ntilde;&eacute;&sup1;
+&agrave;&frac34;&times;&egrave;&iacute;<wbr>&raquo;&eacute;&iacute;&sect;<wbr>&iexcl;&ntilde;&sup1;
+derivative overrun</li>
+</ul>
+</ul>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &sup1;&iacute;&iexcl;<wbr>&uml;&ograve;&iexcl;<wbr>&raquo;&ntilde;&shy;&euml;&ograve;<wbr>&middot;&otilde;&egrave;<wbr>&agrave;&iexcl;&ocirc;&acute;<wbr>&uml;&ograve;&iexcl;<wbr>&iexcl;&ograve;&atilde;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;<wbr>&middot;&ntilde;&eacute;&sect;
+3 &aacute;&ordm;&ordm;<wbr>&aacute;&aring;&eacute;&ccedil; &acirc;&ntilde;&sect;<wbr>&aacute;&otilde;<wbr>&raquo;&ntilde;&shy;&euml;&ograve;<wbr>&middot;&otilde;&egrave;<wbr>&agrave;&iexcl;&ocirc;&acute;<wbr>&uml;&ograve;&iexcl;<wbr>&iquest;&ntilde;&sect;&iexcl;&igrave;&ordf;&ntilde;&sup1;<wbr>&iexcl;&ograve;&atilde;<wbr>&middot;&oacute;<wbr>&sect;&ograve;&sup1;<wbr>&iacute;&otilde;&iexcl;
+&curren;&times;&iacute; &micro;&ntilde;&ccedil;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;<wbr>&ecirc;&egrave;&ccedil;&sup1;<wbr>&aacute;&ograve;&iexcl;<wbr>&uml;&eth;<wbr>&aacute;&otilde;
+2 &acirc;&euml;&aacute;&acute;&iexcl;&ograve;&atilde;<wbr>&middot;&oacute;<wbr>&sect;&ograve;&sup1;<wbr>&curren;&times;&iacute;
+manual &aacute;&aring;&eth; automatic &atilde;&sup1;<wbr>&acirc;&euml;&aacute;<wbr>&acute;
+manual &ecirc;&ntilde;&shy;&shy;&ograve;&sup3;<wbr>&middot;&otilde;&egrave;<wbr>&ecirc;&egrave;&sect;<wbr>&iacute;&iacute;&iexcl;<wbr>&uml;&ograve;&iexcl;<wbr>&micro;&ntilde;&ccedil;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;<wbr>&uml;&eth;<wbr>&cent;&ouml;&eacute;&sup1;&iexcl;&ntilde;&ordm;&iexcl;&ograve;&atilde;<wbr>&raquo;&atilde;&ntilde;&ordm;<wbr>&acirc;&acute;&acirc;<wbr>&micro;&atilde;&sect;<wbr>&cent;&iacute;&sect;<wbr>&frac14;&ugrave;&eacute;<wbr>&atilde;&ordf;&eacute;
+&laquo;&ouml;&egrave;&sect;<wbr>&euml;&ograve;&iexcl;<wbr>&aacute;&otilde;<wbr>&iexcl;&ograve;&atilde;<wbr>&agrave;&raquo;&aring;&otilde;&egrave;&acirc;&sup1;<wbr>&acirc;&euml;&aacute;&acute;&iexcl;&ograve;&atilde;<wbr>&middot;&oacute;<wbr>&sect;&ograve;&sup1;<wbr>&iexcl;&aring;&ntilde;&ordm;<wbr>&aacute;&ograve;<wbr>&middot;&otilde;&egrave;<wbr>&acirc;&euml;&aacute;<wbr>&acute;
+automatic &laquo;&ouml;&egrave;&sect;<wbr>&micro;&ntilde;&ccedil;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;<wbr>&middot;&oacute;<wbr>&euml;&sup1;&eacute;&ograve;<wbr>&middot;&otilde;&egrave;<wbr>&ecirc;&ntilde;&shy;&shy;&ograve;&sup3;<wbr>&iacute;&iacute;&iexcl;<wbr>&uml;&ograve;&iexcl;<wbr>&micro;&ntilde;&ccedil;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;<wbr>&iacute;&ograve;&uml;<wbr>&agrave;&iexcl;&ocirc;&acute;<wbr>&raquo;&ntilde;&shy;&euml;&ograve;<wbr>&iexcl;&ograve;&atilde;<wbr>&iexcl;&atilde;&eth;&aacute;&middot;&iexcl;
+(bump) &atilde;&eth;&ordm;&ordm;<wbr>&cent;&ouml;&eacute;&sup1;<wbr>&auml;&acute;&eacute;
+&agrave;&sup1;&times;&egrave;&iacute;&sect;<wbr>&uml;&ograve;&iexcl;<wbr>&iexcl;&ograve;&atilde;<wbr>&agrave;&raquo;&aring;&otilde;&egrave;&acirc;&sup1;<wbr>&aacute;&raquo;&aring;&sect;<wbr>&ecirc;&ntilde;&shy;&shy;&ograve;&sup3;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;<wbr>&middot;&otilde;&egrave;<wbr>&iacute;&iacute;&iexcl;<wbr>&uml;&ograve;&iexcl;<wbr>&micro;&ntilde;&ccedil;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;<wbr>&iacute;&acirc;&egrave;&ograve;&sect;<wbr>&agrave;&copy;&otilde;&acirc;&ordm;<wbr>&frac34;&aring;&ntilde;&sup1;
+&acute;&ntilde;&sect;<wbr>&sup1;&ntilde;&eacute;&sup1;<wbr>&atilde;&sup1;<wbr>&micro;&ntilde;&ccedil;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;
+pid &ecirc;&egrave;&ccedil;&sup1;<wbr>&aacute;&ograve;&iexcl;<wbr>&uml;&ouml;&sect;<wbr>&micro;&eacute;&iacute;&sect;<wbr>&aacute;&otilde;<wbr>&ccedil;&sect;<wbr>&uml;&atilde;
+bumpless transfer &ecirc;&oacute;&euml;&atilde;&ntilde;&ordm;<wbr>&aacute;&iexcl;&eacute;<wbr>&raquo;&ntilde;&shy;&euml;&ograve;<wbr>&sup1;&otilde;&eacute;<wbr>&auml;&ccedil;&eacute;<wbr>&acute;&eacute;&ccedil;&acirc;
+
+<p><b><font color="#993366"><font size=+1>&nbsp;<a name="µñç¤çº¤øáàªô§àå¢"></a>&micro;&ntilde;&ccedil;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;<wbr>&agrave;&ordf;&ocirc;&sect;<wbr>&agrave;&aring;&cent;
+(digital controller)</font></font></b>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&micro;&ntilde;&ccedil;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;<wbr>&aacute;&iacute;<wbr>&sup1;&ograve;&aring;&ccedil;&iacute;&iexcl;
+(analog controller) &middot;&otilde;&egrave;<wbr>&iexcl;&aring;&egrave;&ograve;&ccedil;<wbr>&para;&ouml;&sect;<wbr>&cent;&eacute;&ograve;&sect;<wbr>&micro;&eacute;&sup1;<wbr>&ecirc;&ograve;&aacute;&ograve;&atilde;&para;<wbr>&middot;&oacute;<wbr>&atilde;&euml;&eacute;<wbr>&atilde;&eth;&ordm;&ordm;<wbr>&middot;&ntilde;&egrave;&ccedil;<wbr>&auml;&raquo;<wbr>&middot;&oacute;<wbr>&sect;&ograve;&sup1;<wbr>&auml;&acute;&eacute;<wbr>&agrave;&raquo;&ccedil;&sup1;<wbr>&iacute;&acirc;&egrave;&ograve;&sect;<wbr>&acute;&otilde;
+&aacute;&aring;&eth;<wbr>&atilde;&ccedil;&aacute;<wbr>&auml;&raquo;<wbr>&para;&ouml;&sect;<wbr>&curren;&ccedil;&ograve;&aacute;<wbr>&raquo;&atilde;&eth;<wbr>&euml;&acirc;&ntilde;&acute;<wbr>&aacute;&aring;&eth;<wbr>&curren;&ccedil;&ograve;&aacute;<wbr>&agrave;&atilde;&otilde;&acirc;&ordm;<wbr>&sect;&egrave;&ograve;&acirc;&ecirc;&oacute;&euml;&atilde;&ntilde;&ordm;<wbr>&atilde;&eth;&ordm;&ordm;<wbr>&middot;&ntilde;&egrave;&ccedil;
+&aelig; &auml;&raquo;<wbr>&acute;&eacute;&ccedil;&acirc; &aacute;&micro;&egrave;<wbr>&ccedil;&egrave;&ograve;
+&micro;&ntilde;&ccedil;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;<wbr>&aacute;&iacute;<wbr>&sup1;&ograve;&aring;&ccedil;&iacute;&iexcl;<wbr>&middot;&otilde;&egrave;<wbr>&aacute;&otilde;<wbr>&curren;&ccedil;&ograve;&aacute;<wbr>&agrave;&frac34;&otilde;&eacute;&acirc;&sup1;<wbr>&sup1;&eacute;&iacute;&acirc;<wbr>&iexcl;&ccedil;<wbr>&uml;&eth;<wbr>&aacute;&otilde;<wbr>&atilde;&ograve;&curren;&ograve;<wbr>&ecirc;&ugrave;&sect;<wbr>&aacute;&ograve;&iexcl;
+&aacute;&aring;&eth;<wbr>&acirc;&ntilde;&sect;<wbr>&acirc;&ograve;&iexcl;<wbr>&micro;&egrave;&iacute;<wbr>&iexcl;&ograve;&atilde;<wbr>&agrave;&raquo;&aring;&otilde;&egrave;&acirc;&sup1;<wbr>&aacute;&raquo;&aring;&sect;<wbr>&ordf;&sup1;&ocirc;&acute;<wbr>&cent;&iacute;&sect;<wbr>&micro;&ntilde;&ccedil;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;<wbr>&iacute;&otilde;&iexcl;<wbr>&acute;&eacute;&ccedil;&acirc;
+&sup1;&iacute;&iexcl;<wbr>&uml;&ograve;&iexcl;<wbr>&sup1;&otilde;&eacute;<wbr>&acirc;&ntilde;&sect;<wbr>&auml;&aacute;&egrave;<wbr>&agrave;&euml;&aacute;&ograve;&eth;<wbr>&ecirc;&aacute;&iexcl;&ntilde;&ordm;&iexcl;&ograve;&atilde;<wbr>&middot;&oacute;
+feedforward control &aacute;&aring;&eth; deadtime compensation &iacute;&otilde;&iexcl;<wbr>&acute;&eacute;&ccedil;&acirc;
+&agrave;&frac34;&atilde;&ograve;&eth;&atilde;&cent;&eacute;&agrave;&ccedil;&aring;&ograve;<wbr>&atilde;&sup1;<wbr>&iexcl;&ograve;&atilde;<wbr>&raquo;&atilde;&eth;&aacute;&ccedil;&aring;<wbr>&frac14;&aring;<wbr>&sup1;&ograve;&sup1;<wbr>&agrave;&iexcl;&ocirc;&sup1;<wbr>&auml;&raquo;
+&aacute;&micro;&egrave;<wbr>&micro;&ntilde;&ccedil;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;<wbr>&agrave;&ordf;&ocirc;&sect;<wbr>&agrave;&aring;&cent;<wbr>&ecirc;&ograve;&aacute;&ograve;&atilde;&para;<wbr>&aacute;&iexcl;&eacute;<wbr>&raquo;&ntilde;&shy;&euml;&ograve;<wbr>&agrave;&euml;&aring;&egrave;&ograve;<wbr>&sup1;&otilde;&eacute;<wbr>&auml;&acute;&eacute;<wbr>&agrave;&raquo;&ccedil;&sup1;<wbr>&iacute;&acirc;&egrave;&ograve;&sect;<wbr>&acute;&otilde;
+&agrave;&sup1;&times;&egrave;&iacute;&sect;<wbr>&aacute;&ograve;<wbr>&uml;&ograve;&iexcl;<wbr>&curren;&ccedil;&ograve;&aacute;<wbr>&ecirc;&oacute;&agrave;&atilde;&ccedil;&uml;<wbr>&cent;&iacute;&sect;
+single-chip microprocessor &middot;&otilde;&egrave;<wbr>&aacute;&otilde;<wbr>&curren;&ccedil;&ograve;&aacute;<wbr>&atilde;&ccedil;&acute;<wbr>&agrave;&atilde;&ccedil;&ccedil;<wbr>&atilde;&sup1;<wbr>&iexcl;&ograve;&atilde;<wbr>&middot;&oacute;<wbr>&sect;&ograve;&sup1;&ecirc;&oslash;<wbr>&sect;
+&middot;&oacute;<wbr>&atilde;&euml;&eacute;<wbr>&aacute;&otilde;<wbr>&iexcl;&ograve;<wbr>&aacute;&atilde;&frac34;&atilde;&egrave;&cent;&acirc;&ograve;&acirc;<wbr>&iacute;&iacute;&iexcl;<wbr>&auml;&raquo;<wbr>&acirc;&ntilde;&sect;<wbr>&atilde;&eth;&ordm;&ordm;<wbr>&iexcl;&ograve;&atilde;<wbr>&frac14;&aring;&ocirc;&micro;<wbr>&micro;&egrave;&ograve;&sect;<wbr><wbr>&nbsp;
+&aelig; &agrave;&raquo;&ccedil;&sup1;<wbr>&ccedil;&sect;<wbr>&iexcl;&ccedil;&eacute;&ograve;&sect;
+&aacute;&aring;&eth;<wbr>&aacute;&otilde;<wbr>&iexcl;&ograve;&atilde;<wbr>&acute;&ntilde;&acute;<wbr>&aacute;&raquo;&aring;&sect;<wbr>&auml;&raquo;<wbr>&atilde;&ordf;&eacute;&iexcl;&ntilde;&ordm;&sect;&ograve;&sup1;<wbr>&euml;&aring;&ograve;&acirc;<wbr>&raquo;&atilde;&eth;&agrave;&agrave;&middot;
+&agrave;&ordf;&egrave;&sup1; &atilde;&eth;&ordm;&ordm;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;<wbr>&micro;&oacute;&aacute;&euml;&sup1;&egrave;&sect;<wbr>&aacute;&iacute;&agrave;&micro;&iacute;&atilde;&igrave;<wbr>&acirc;&acute;&acirc;<wbr>&iacute;&ograve;&egrave;&ntilde;&acirc;
+pulse-width modulation&agrave;&raquo;&ccedil;&sup1;<wbr>&micro;&eacute;&sup1;
+&sup1;&iacute;&iexcl;<wbr>&uml;&ograve;&iexcl;<wbr>&sup1;&otilde;&eacute;<wbr>&ecirc;&ocirc;&egrave;&sect;<wbr>&middot;&otilde;&egrave;<wbr>&middot;&oacute;<wbr>&atilde;&euml;&eacute;<wbr>&micro;&ntilde;&ccedil;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;<wbr>&agrave;&ordf;&ocirc;&sect;<wbr>&agrave;&aring;&cent;<wbr>&agrave;&raquo;&ccedil;&sup1;<wbr>&middot;&otilde;&egrave;<wbr>&sup1;&ocirc;&acirc;&aacute;<wbr>&atilde;&sup1;<wbr>&atilde;&eth;&ordm;&ordm;<wbr>&iexcl;&ograve;&atilde;<wbr>&frac14;&aring;&ocirc;&micro;<wbr>&ecirc;&aacute;&ntilde;&acirc;<wbr>&atilde;&euml;&aacute;&egrave;<wbr>&iexcl;&ccedil;<wbr>&curren;&times;&iacute;<wbr>&micro;&ntilde;&ccedil;<wbr>&curren;&ccedil;&ordm;<wbr><wbr>&curren;&oslash;&aacute;<wbr>&aacute;&micro;&egrave;<wbr>&aring;&eth;<wbr>&micro;&ntilde;&ccedil;<wbr>&ecirc;&ograve;&aacute;&ograve;&atilde;&para;
+&middot;&otilde;&egrave;<wbr>&uml;&eth;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;&aring;&ugrave;&raquo;&iexcl;&ograve;&atilde;<wbr>&middot;&oacute;<wbr>&sect;&ograve;&sup1;<wbr>&auml;&acute;&eacute;<wbr>&euml;&aring;&ograve;&acirc;&aring;&ugrave;&raquo;&frac34;&atilde;&eacute;&iacute;&aacute;<wbr>&iexcl;&ntilde;&sup1;<wbr><wbr>&nbsp;
+&aacute;&aring;&eth;<wbr>&acirc;&ntilde;&sect;<wbr>&ecirc;&ograve;&aacute;&ograve;&atilde;&para;<wbr>&middot;&otilde;&egrave;<wbr>&uml;&eth;<wbr>&agrave;&ordf;&times;&egrave;&iacute;&aacute;<wbr>&micro;&egrave;&iacute;<wbr>&agrave;&cent;&eacute;&ograve;<wbr>&atilde;&eth;&ordm;&ordm;<wbr>&ecirc;&ograve;&atilde;<wbr>&ecirc;&sup1;&agrave;&middot;&egrave;<wbr>&agrave;&frac34;&times;&egrave;&iacute;<wbr>&iexcl;&ograve;&atilde;<wbr>&uml;&ntilde;&acute;<wbr>&iexcl;&ograve;&atilde;
+(management information system &euml;&atilde;&times;&iacute; mis ) &auml;&acute;&eacute;<wbr>&iacute;&otilde;&iexcl;<wbr>&acute;&eacute;&ccedil;&acirc;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>&ecirc;&egrave;&ccedil;&sup1;<wbr>&raquo;&atilde;&eth;&iexcl;&iacute;&ordm;<wbr>&cent;&iacute;&sect;<wbr>&micro;&ntilde;&ccedil;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;<wbr>&agrave;&ordf;&ocirc;&sect;<wbr>&agrave;&aring;&cent;<wbr>&aacute;&otilde;<wbr>&iacute;&acirc;&ugrave;&egrave;
+4 &ecirc;&egrave;&ccedil;&sup1;<wbr>&atilde;&euml;&shy;&egrave; &aelig;
+&acute;&ntilde;&sect;<wbr>&aacute;&ecirc;&acute;&sect;<wbr>&atilde;&sup1;<wbr>&atilde;&ugrave;&raquo;<wbr>&middot;&otilde;&egrave;
+8 &auml;&acute;&eacute;<wbr>&aacute;&iexcl;&egrave;<wbr><wbr></b>
+<ul>
+<ul>
+<li>
+&micro;&ntilde;&ccedil;<wbr>&aacute;&raquo;&aring;&sect;<wbr>&ecirc;&ntilde;&shy;&shy;&ograve;&sup3;&iacute;&sup1;&ograve;&aring;&ccedil;&iacute;&iexcl;<wbr>&agrave;&raquo;&ccedil;&sup1;&acute;&ocirc;&uml;&ocirc;&micro;&iacute;<wbr>&aring;
+(a/d converter) &middot;&oacute;<wbr>&euml;&sup1;&eacute;&ograve;<wbr>&middot;&otilde;&egrave;<wbr>&aacute;&raquo;&aring;&sect;<wbr>&ecirc;&ntilde;&shy;&shy;&ograve;&sup3;<wbr>&middot;&otilde;&egrave;
+&ecirc;&egrave;&sect;<wbr>&agrave;&cent;&eacute;&ograve;<wbr>&micro;&ntilde;&ccedil;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;
+&laquo;&ouml;&egrave;&sect;<wbr>&uml;&eth;<wbr>&iacute;&acirc;&ugrave;&egrave;<wbr>&atilde;&sup1;<wbr>&aring;&ntilde;&iexcl;&eacute;&sup3;&eth;<wbr>&cent;&iacute;&sect;<wbr>&ecirc;&ntilde;&shy;&shy;&ograve;&sup3;&iacute;&sup1;&ograve;&aring;&ccedil;&iacute;&iexcl;<wbr>&middot;&otilde;&egrave;<wbr>&micro;&egrave;&iacute;<wbr>&agrave;&sup1;&times;&egrave;&iacute;&sect;<wbr>&auml;&raquo;<wbr>&iacute;&acirc;&ugrave;&egrave;<wbr>&atilde;&sup1;<wbr>&atilde;&ugrave;&raquo;<wbr>&cent;&iacute;&sect;
+&cent;&eacute;&iacute;<wbr>&aacute;&ugrave;&aring;<wbr>&middot;&otilde;&egrave;<wbr>&agrave;&raquo;&ccedil;&sup1;&acute;&ocirc;&uml;&ocirc;&micro;&iacute;<wbr>&aring;
+&laquo;&ouml;&egrave;&sect;<wbr>&auml;&aacute;&acirc;&curren;&atilde;<wbr>&acirc;&raquo;&atilde;&agrave;&laquo;&ecirc;&agrave;&laquo;&iacute;&atilde;&igrave;<wbr>&ecirc;&ograve;&aacute;&ograve;&atilde;&para;<wbr>&sup1;&oacute;<wbr>&auml;&raquo;<wbr>&raquo;&atilde;&eth;&aacute;&ccedil;&aring;<wbr>&frac14;&aring;<wbr>&auml;&acute;&eacute;<wbr><wbr></li>
+
+<li>
+&auml;&aacute;&acirc;&curren;&atilde;<wbr>&acirc;&frac34;&atilde;&agrave;&laquo;&ecirc;&agrave;&laquo;&iacute;&atilde;<wbr>&igrave;
+(microprocessor) &middot;&oacute;<wbr>&euml;&sup1;&eacute;&ograve;<wbr>&middot;&otilde;&egrave;<wbr>&atilde;&ntilde;&ordm;<wbr>&cent;&eacute;&iacute;<wbr>&aacute;&ugrave;&aring;<wbr>&uml;&ograve;&iexcl;
+a/d converter &aacute;&ograve;<wbr>&middot;&oacute;<wbr>&iexcl;&ograve;&atilde;<wbr>&raquo;&atilde;&eth;&aacute;&ccedil;&aring;<wbr>&frac14;&aring;
+&agrave;&frac34;&times;&egrave;&iacute;<wbr>&euml;&ograve;<wbr>&middot;&otilde;&egrave;<wbr>&uml;&eth;<wbr>&ecirc;&egrave;&sect;<wbr>&auml;&raquo;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;<wbr>&iexcl;&atilde;&eth;&ordm;&ccedil;&sup1;<wbr>&iexcl;&ograve;&atilde;
+&aacute;&aring;&eacute;&ccedil;<wbr>&ecirc;&egrave;&sect;<wbr>&curren;&egrave;&ograve;<wbr>&sup1;&ntilde;&eacute;&sup1;<wbr>&iacute;&iacute;&iexcl;<wbr>&auml;&raquo;<wbr>&acirc;&ntilde;&sect;
+d/a converter &agrave;&frac34;&times;&egrave;&iacute;<wbr>&ecirc;&egrave;&sect;<wbr>&micro;&egrave;&iacute;<wbr>&auml;&raquo;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;<wbr>&iexcl;&atilde;&eth;&ordm;&ccedil;&sup1;<wbr>&iexcl;&ograve;&atilde;<wbr>&iacute;&otilde;&iexcl;<wbr>&middot;&otilde;<wbr><wbr></li>
+
+<li>
+&micro;&ntilde;&ccedil;<wbr>&aacute;&raquo;&aring;&sect;<wbr>&ecirc;&ntilde;&shy;&shy;&ograve;&sup3;&acute;&ocirc;&uml;&ocirc;&micro;&iacute;&aring;&agrave;&raquo;&ccedil;&sup1;&iacute;<wbr>&sup1;&ograve;&aring;&ccedil;&iacute;&iexcl;
+(d/a converter) &middot;&oacute;<wbr>&euml;&sup1;&eacute;&ograve;<wbr>&middot;&otilde;&egrave;<wbr>&atilde;&ntilde;&ordm;<wbr>&curren;&egrave;&ograve;<wbr>&uml;&eth;<wbr>&ecirc;&egrave;&sect;<wbr>&auml;&raquo;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;<wbr>&iexcl;&atilde;&eth;&ordm;&ccedil;&sup1;<wbr>&iexcl;&ograve;&atilde;<wbr>&middot;&otilde;&egrave;<wbr>&auml;&acute;&eacute;<wbr>&uml;&ograve;&iexcl;<wbr>&auml;&aacute;&acirc;&curren;&atilde;<wbr>&acirc;&raquo;&atilde;&agrave;&laquo;&ecirc;&agrave;&laquo;&iacute;&atilde;&igrave;
+&atilde;&sup1;<wbr>&atilde;&ugrave;&raquo;<wbr>&cent;&iacute;&sect;<wbr>&ecirc;&ntilde;&shy;&shy;&ograve;&sup3;&acute;&ocirc;&uml;&ocirc;&micro;&iacute;<wbr>&aring;
+&aacute;&aring;&eacute;&ccedil;<wbr>&aacute;&raquo;&aring;&sect;<wbr>&iexcl;&aring;&ntilde;&ordm;<wbr>&agrave;&raquo;&ccedil;&sup1;<wbr>&curren;&egrave;&ograve;<wbr>&ecirc;&ntilde;&shy;&shy;&ograve;&sup3;&iacute;&sup1;&ograve;&aring;&ccedil;&iacute;&iexcl;<wbr>&aacute;&aring;&eacute;&ccedil;<wbr>&ecirc;&egrave;&sect;<wbr>&auml;&raquo;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;<wbr>&iexcl;&atilde;&eth;&ordm;&ccedil;&sup1;<wbr>&iexcl;&ograve;&atilde;<wbr><wbr></li>
+
+<li>
+&sup1;&ograve;&igrave;&ocirc;&iexcl;&ograve; (clock) &middot;&oacute;<wbr>&euml;&sup1;&eacute;&ograve;<wbr>&middot;&otilde;&egrave;<wbr>&iexcl;&oacute;&euml;&sup1;&acute;<wbr>&uml;&ntilde;&sect;&euml;&ccedil;&eth;<wbr>&iexcl;&ograve;&atilde;<wbr>&middot;&oacute;<wbr>&sect;&ograve;&sup1;<wbr>&cent;&iacute;&sect;<wbr>&iacute;&oslash;&raquo;&iexcl;&atilde;&sup3;&igrave;<wbr>&micro;&egrave;&ograve;&sect;
+&aelig; &atilde;&euml;&eacute;<wbr>&ecirc;&iacute;&acute;<wbr>&curren;&aring;&eacute;&iacute;&sect;<wbr>&iexcl;&ntilde;&sup1;<wbr><wbr></li>
+</ul>
+&nbsp;</ul>
+
+<center><img src="pic9.jpg" border=2 height=282 width=537></center>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &iexcl;&atilde;&eth;&ordm;&ccedil;&sup1;<wbr>&iexcl;&ograve;&atilde;<wbr>&middot;&ntilde;&egrave;&ccedil;<wbr>&auml;&raquo;<wbr>&raquo;&macr;&ocirc;&ordm;&ntilde;&micro;&ocirc;<wbr>&iexcl;&ograve;&atilde;<wbr>&atilde;&sup1;<wbr>&agrave;&ccedil;&aring;&ograve;<wbr>&uml;&atilde;&ocirc;&sect;
+(real time) &agrave;&aacute;&times;&egrave;&iacute;<wbr>&sup1;&oacute;<wbr>&auml;&aacute;&acirc;&curren;&atilde;<wbr>&acirc;&raquo;&atilde;&agrave;&laquo;&ecirc;&agrave;&laquo;&iacute;&atilde;&igrave;<wbr>&agrave;&cent;&eacute;&ograve;<wbr>&aacute;&ograve;<wbr>&micro;&egrave;&iacute;&iexcl;&ntilde;&ordm;&iexcl;<wbr>&atilde;&eth;<wbr>&ordm;&ccedil;&sup1;<wbr>&iexcl;&ograve;&atilde;<wbr>&agrave;&frac34;&times;&egrave;&iacute;<wbr>&middot;&oacute;<wbr>&iexcl;&ograve;&atilde;<wbr>&raquo;&atilde;&eth;&aacute;&ccedil;&aring;<wbr>&ecirc;&ntilde;&shy;&shy;&ograve;&sup3;<wbr>&ecirc;&oacute;&euml;&atilde;&ntilde;&ordm;<wbr>&middot;&oacute;<wbr>&iexcl;&ograve;&atilde;<wbr>&curren;&ccedil;&ordm;<wbr><wbr>&curren;&oslash;&aacute;<wbr>&atilde;&eth;&ordm;&ordm;
+&auml;&aacute;&acirc;&curren;&atilde;<wbr>&acirc;&raquo;&atilde;&agrave;&laquo;&ecirc;&agrave;&laquo;&iacute;&atilde;&igrave;<wbr>&micro;&eacute;&iacute;&sect;<wbr>&raquo;&macr;&ocirc;&ordm;&ntilde;&micro;&ocirc;<wbr>&iexcl;&ograve;&atilde;<wbr>&atilde;&sup1;&ecirc;&agrave;&iexcl;&aring;<wbr>&agrave;&ccedil;&aring;&ograve;<wbr>&agrave;&acute;&otilde;&acirc;&ccedil;&iexcl;&ntilde;&ordm;&atilde;&eth;&ordm;&ordm;
+&curren;&ccedil;&ograve;&aacute;<wbr>&ecirc;&ntilde;&aacute;&frac34;&ntilde;&sup1;&cedil;&igrave;<wbr>&sup1;&otilde;&eacute;<wbr>&agrave;&atilde;&otilde;&acirc;&iexcl;<wbr>&ccedil;&egrave;&ograve;
+clock-based &atilde;&eth;&ordm;&ordm;<wbr>&acirc;&acute;&acirc;<wbr>&middot;&ntilde;&egrave;&ccedil;<wbr>&auml;&raquo;<wbr>&aacute;&otilde;
+time constant &laquo;&ouml;&egrave;&sect;<wbr>&ccedil;&ntilde;&acute;<wbr>&auml;&acute;&eacute;<wbr>&agrave;&raquo;&ccedil;&sup1;<wbr>&ordf;&ntilde;&egrave;&ccedil;<wbr>&acirc;&aacute;&sect;
+&sup1;&ograve;&middot;&otilde; &euml;&atilde;&times;&iacute;<wbr>&ccedil;&ocirc;&sup1;&ograve;&middot;&otilde;
+&ecirc;&oacute;&euml;&atilde;&ntilde;&ordm;<wbr>&atilde;&eth;&ordm;&ordm;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;<wbr>&raquo;&eacute;&iacute;&sup1;<wbr>&iexcl;&aring;&ntilde;&ordm;<wbr>&iacute;&ntilde;&micro;&atilde;&ograve;<wbr>&iexcl;&ograve;&atilde;<wbr>&ecirc;&oslash;&egrave;&aacute;<wbr>&micro;&ntilde;&ccedil;<wbr>&iacute;&acirc;&egrave;&ograve;&sect;
+(sampling rate) &cent;&ouml;&eacute;&sup1;&iexcl;&ntilde;&ordm; time constant
+&cent;&iacute;&sect;<wbr>&atilde;&eth;&ordm;&ordm;<wbr>&middot;&otilde;&egrave;<wbr>&micro;&eacute;&iacute;&sect;<wbr>&iexcl;&ograve;&atilde;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;
+&atilde;&eth;&ordm;&ordm;<wbr>&middot;&otilde;&egrave;<wbr>&aacute;&otilde;<wbr><wbr>time
+constant &ntilde;&eacute;&sup1; &iacute;&ntilde;&micro;&atilde;&ograve;<wbr>&iexcl;&ograve;&atilde;<wbr>&ecirc;&oslash;&egrave;&aacute;<wbr>&micro;&ntilde;&ccedil;<wbr>&iacute;&acirc;&egrave;&ograve;&sect;<wbr>&micro;&eacute;&iacute;&sect;<wbr>&agrave;&atilde;&ccedil;&ccedil;
+&curren;&egrave;&ograve;<wbr>&curren;&ccedil;&ograve;&aacute;<wbr>&para;&otilde;&egrave;<wbr>&iexcl;&ograve;&atilde;<wbr>&ecirc;&oslash;&egrave;&aacute;<wbr>&micro;&ntilde;&ccedil;<wbr>&iacute;&acirc;&egrave;&ograve;&sect;<wbr>&cent;&iacute;&sect;<wbr>&atilde;&eth;&ordm;&ordm;<wbr>&ccedil;&sect;<wbr>&raquo;&ocirc;&acute;<wbr>&curren;&ccedil;&atilde;<wbr>&agrave;&aring;&times;&iacute;&iexcl;<wbr>&agrave;&raquo;&ccedil;&sup1;
+6 &para;&ouml;&sect; 10 &agrave;&middot;&egrave;&ograve;<wbr>&cent;&iacute;&sect;
+bandwidth &euml;&atilde;&times;&iacute; 2 &para;&ouml;&sect; 3 &agrave;&middot;&egrave;&ograve;<wbr>&cent;&iacute;&sect;
+rise time &cent;&iacute;&sect;<wbr>&atilde;&eth;&ordm;&ordm; &auml;&aacute;&acirc;&curren;&atilde;<wbr>&acirc;&raquo;&atilde;&agrave;&laquo;&ecirc;&agrave;&laquo;&iacute;&atilde;&igrave;<wbr>&middot;&otilde;&egrave;<wbr>&atilde;&ordf;&eacute;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;<wbr>&atilde;&eth;&ordm;&ordm;<wbr>&micro;&eacute;&iacute;&sect;<wbr>&ecirc;&aacute;<wbr>&ccedil;&ograve;&aring;
+(synchronize) &iexcl;&ntilde;&ordm;&agrave;&ccedil;&aring;&ograve;<wbr>&uml;&atilde;&ocirc;&sect;
+&aacute;&aring;&eth;<wbr>&micro;&eacute;&iacute;&sect;<wbr>&ecirc;&ograve;&aacute;&ograve;&atilde;&para;<wbr>&acute;&oacute;<wbr>&agrave;&sup1;&ocirc;&sup1;<wbr>&iexcl;&ograve;&atilde;<wbr>&raquo;&macr;&ocirc;&ordm;&ntilde;&micro;&ocirc;<wbr>&iexcl;&ograve;&atilde;<wbr>&middot;&otilde;&egrave;<wbr>&micro;&eacute;&iacute;&sect;<wbr>&iexcl;&ograve;&atilde;<wbr>&auml;&acute;&eacute;<wbr>&middot;&ntilde;&eacute;&sect;<wbr>&euml;&aacute;&acute;
+&agrave;&ordf;&egrave;&sup1; &iexcl;&ograve;&atilde;<wbr>&ccedil;&ntilde;&acute;<wbr>&iexcl;&ograve;&atilde;<wbr>&curren;&oacute;&sup1;&ccedil;&sup3;
+&iexcl;&ograve;&atilde;<wbr>&ecirc;&egrave;&sect;<wbr>&ecirc;&ntilde;&shy;&shy;&ograve;&sup3;<wbr>&iexcl;&aring;&ntilde;&ordm;<wbr>&agrave;&ograve;&acirc;<wbr>&atilde;&sup1;<wbr>&aacute;&micro;&egrave;<wbr>&aring;&eth;<wbr>&ordf;&egrave;&ccedil;&sect;<wbr>&iexcl;&ograve;&atilde;<wbr>&ecirc;&oslash;&egrave;&aacute;<wbr>&micro;&ntilde;&ccedil;<wbr>&iacute;&acirc;&egrave;&ograve;&sect;
+&iexcl;&ograve;&atilde;<wbr>&agrave;&ecirc;&atilde;&ccedil;&uml;<wbr>&ecirc;&aacute;&ordm;&ugrave;&atilde;&sup3;&igrave;<wbr>&cent;&iacute;&sect;<wbr>&iexcl;&ograve;&atilde;<wbr>&raquo;&macr;&ocirc;&ordm;&ntilde;&micro;&ocirc;<wbr>&iexcl;&ograve;&atilde;<wbr>&agrave;&ograve;&acirc;<wbr>&atilde;&sup1;<wbr>&agrave;&ccedil;&aring;&ograve;<wbr>&middot;&otilde;&egrave;<wbr>&iexcl;&oacute;&sup1;&euml;&acute;<wbr>&cent;&ouml;&eacute;&sup1;&iexcl;&ntilde;&ordm;&uml;&oacute;&sup1;&ccedil;&sup1;<wbr>&cent;&iacute;&sect;<wbr>&iexcl;&ograve;&atilde;&raquo;&macr;&ordm;&ntilde;&micro;&ocirc;<wbr>&iexcl;&ograve;&atilde;<wbr>&middot;&otilde;&egrave;&micro;<wbr>&eacute;&iacute;&sect;&iexcl;<wbr>&atilde;&eth;<wbr>&middot;&oacute;<wbr>&aacute;&aring;&eth;
+&curren;&ccedil;&ograve;&aacute;<wbr>&agrave;&atilde;&ccedil;&ccedil;<wbr>&cent;&iacute;&sect;<wbr>&auml;&aacute;&acirc;&curren;&atilde;<wbr>&acirc;&raquo;&atilde;&agrave;&laquo;&ecirc;&agrave;&laquo;&iacute;&atilde;&igrave;
+&iexcl;&ograve;&atilde;<wbr>&ecirc;&aacute;<wbr>&ccedil;&ograve;&aring;<wbr>&middot;&oacute;<wbr>&auml;&acute;&eacute;<wbr>&acirc;&acute;&acirc;<wbr>&iexcl;&ograve;&atilde;<wbr>&agrave;&frac34;&ocirc;&egrave;&aacute;<wbr>&sup1;&ograve;&igrave;&ocirc;&iexcl;&ograve;<wbr>&atilde;&euml;&eacute;&iexcl;&ntilde;&ordm;&auml;&aacute;&acirc;&curren;&atilde;<wbr>&acirc;&raquo;&atilde;&agrave;&laquo;&ecirc;&agrave;&laquo;&iacute;&atilde;&igrave;
+&laquo;&ouml;&egrave;&sect;<wbr>&acirc;&acute;&acirc;<wbr>&middot;&ntilde;&egrave;&ccedil;<wbr>&auml;&raquo;
+&agrave;&atilde;&otilde;&acirc;&iexcl;<wbr>&ccedil;&egrave;&ograve; &sup1;&ograve;&igrave;&ocirc;&iexcl;&ograve;<wbr>&agrave;&ccedil;&aring;&ograve;<wbr>&uml;&atilde;&ocirc;&sect;
+(real-time clock) &aacute;&aring;&eth;<wbr>&atilde;&ordf;&eacute;<wbr>&ecirc;&ntilde;&shy;&shy;&ograve;&sup3;<wbr>&uml;&ograve;&iexcl;<wbr>&sup1;&ograve;&igrave;&ocirc;&iexcl;&ograve;<wbr>&sup1;&otilde;&eacute;<wbr>&agrave;&frac34;&times;&egrave;&iacute;<wbr>&cent;&ntilde;&acute;<wbr>&uml;&ntilde;&sect;&euml;&ccedil;&eth;
+(interrupt) &iexcl;&ograve;&atilde; &raquo;&macr;&ocirc;&ordm;&ntilde;&micro;&ocirc;<wbr>&iexcl;&ograve;&atilde;<wbr>&cent;&iacute;&sect;<wbr>&auml;&aacute;&acirc;&curren;&atilde;<wbr>&acirc;&raquo;&atilde;&agrave;&laquo;&ecirc;&agrave;&laquo;&iacute;&atilde;&igrave;<wbr>&middot;&otilde;&egrave;<wbr>&ordf;&egrave;&ccedil;&sect;<wbr>&agrave;&ccedil;&aring;&ograve;<wbr>&middot;&otilde;&egrave;<wbr>&iexcl;&oacute;&euml;&sup1;&acute;<wbr>&auml;&ccedil;&eacute;<wbr>&iexcl;&egrave;&iacute;&sup1;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<b>&cent;&ntilde;&eacute;&sup1;<wbr>&micro;&iacute;&sup1;<wbr>&iexcl;&ograve;&atilde;<wbr>&middot;&oacute;<wbr>&sect;&ograve;&sup1;<wbr>&cent;&iacute;&sect;<wbr>&atilde;&eth;&ordm;&ordm;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;<wbr>&acute;&eacute;&ccedil;&acirc;<wbr>&curren;&iacute;&aacute;&frac34;&ocirc;&ccedil;&agrave;&micro;&iacute;&atilde;&igrave;<wbr><wbr></b>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1.&nbsp; &sup1;&ograve;&igrave;&ocirc;&iexcl;&ograve;<wbr>&middot;&oacute;<wbr>&euml;&sup1;&eacute;&ograve;<wbr>&middot;&otilde;&egrave;<wbr>&iexcl;&oacute;&sup1;&euml;&acute;<wbr>&uml;&ntilde;&sect;&euml;&ccedil;&eth;<wbr>&iexcl;&ograve;&atilde;<wbr>&middot;&oacute;<wbr>&sect;&ograve;&sup1;<wbr>&cent;&iacute;&sect;<wbr>&aacute;&micro;&egrave;<wbr>&aring;&eth;<wbr>&ecirc;&egrave;&ccedil;&sup1;<wbr>&cent;&iacute;&sect;<wbr>&atilde;&eth;&ordm;&ordm;<wbr>&atilde;&euml;&eacute;<wbr>&ecirc;&iacute;&acute;<wbr>&curren;&aring;&eacute;&iacute;&sect;<wbr>&iexcl;&ntilde;&sup1;
+&iexcl;&oacute;&agrave;&sup1;&ocirc;&acute;<wbr>&ecirc;&ntilde;&shy;&shy;&ograve;&sup3;<wbr>&agrave;&atilde;&ocirc;&egrave;&aacute;<wbr>&micro;&eacute;&sup1;<wbr>&middot;&oacute;<wbr>&sect;&ograve;&sup1;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+2.&nbsp; &ecirc;&ntilde;&shy;&shy;&ograve;&sup3;<wbr>&iacute;&iacute;&iexcl;<wbr>&cent;&iacute;&sect;<wbr>&iexcl;&atilde;&eth;&ordm;&ccedil;&sup1;<wbr>&iexcl;&ograve;&atilde;<wbr>&para;&ugrave;&iexcl;<wbr>&ecirc;&oslash;&egrave;&aacute;<wbr>&micro;&ntilde;&ccedil;<wbr>&iacute;&acirc;&egrave;&ograve;&sect;<wbr>&acute;&eacute;&ccedil;&acirc;
+a/d converter &agrave;&frac34;&times;&egrave;&iacute;<wbr>&aacute;&raquo;&aring;&sect;<wbr>&ecirc;&ntilde;&shy;&shy;&ograve;&sup3;<wbr>&micro;&egrave;&iacute;<wbr>&agrave;&sup1;&times;&egrave;&iacute;&sect;<wbr>&agrave;&raquo;&ccedil;&sup1;<wbr>&ecirc;&ntilde;&shy;&shy;&ograve;&sup3;<wbr>&agrave;&ordf;&ocirc;&sect;<wbr>&agrave;&aring;&cent;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+3.&nbsp; &auml;&aacute;&acirc;&curren;&atilde;<wbr>&acirc;&raquo;&atilde;&agrave;&laquo;&ecirc;&agrave;&laquo;&iacute;&atilde;&igrave;<wbr>&atilde;&ntilde;&ordm;<wbr>&curren;&egrave;&ograve;<wbr>&ecirc;&ntilde;&shy;&shy;&ograve;&sup3;<wbr>&agrave;&ordf;&ocirc;&sect;<wbr>&agrave;&aring;&cent;<wbr>&uml;&ograve;&iexcl;
+a/d converter &aacute;&ograve;<wbr>&atilde;&ordf;&eacute;<wbr>&atilde;&sup1;<wbr>&iexcl;&ograve;&atilde;<wbr>&curren;&oacute;&sup1;&ccedil;&sup3;<wbr>&micro;&ograve;&aacute;<wbr>&cent;&ntilde;&eacute;&sup1;<wbr>&micro;&iacute;&sup1;<wbr>&ccedil;&ocirc;&cedil;&otilde;
+(algorithm) &middot;&otilde;&egrave;<wbr>&iexcl;&oacute;&euml;&sup1;&acute;<wbr>&auml;&ccedil;&eacute;
+&aacute;&aring;&eacute;&ccedil;<wbr>&ecirc;&egrave;&sect;<wbr>&curren;&egrave;&ograve;<wbr>&middot;&otilde;&egrave;<wbr>&auml;&acute;&eacute;<wbr>&uml;&ograve;&iexcl;<wbr>&iexcl;&ograve;&atilde;<wbr>&curren;&oacute;&sup1;&ccedil;&sup3;<wbr>&auml;&raquo;<wbr>&atilde;&euml;&eacute;
+d/a converter
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+4.&nbsp; d/a&nbsp; converter &aacute;&raquo;&aring;&sect;<wbr>&ecirc;&ntilde;&shy;&shy;&ograve;&sup3;<wbr>&agrave;&ordf;&ocirc;&sect;<wbr>&agrave;&aring;&cent;<wbr>&middot;&otilde;&egrave;<wbr>&auml;&acute;&eacute;<wbr>&atilde;&ntilde;&ordm;<wbr>&uml;&ograve;&iexcl;<wbr>&auml;&aacute;&acirc;&curren;&atilde;<wbr>&acirc;&raquo;&atilde;&agrave;&laquo;&ecirc;&agrave;&laquo;&iacute;&atilde;&igrave;<wbr>&auml;&raquo;<wbr>&agrave;&raquo;&ccedil;&sup1;
+<br>&ecirc;&ntilde;&shy;&shy;&ograve;&sup3;<wbr>&micro;&egrave;&iacute;<wbr>&agrave;&sup1;&times;&egrave;&iacute;&sect;<wbr>&aacute;&aring;&eacute;&ccedil;<wbr>&ecirc;&egrave;&sect;<wbr>&agrave;&raquo;&ccedil;&sup1;<wbr>&ecirc;&ntilde;&shy;&shy;&ograve;&sup3;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;<wbr>&atilde;&euml;&eacute;<wbr>&iexcl;&atilde;&eth;&ordm;&ccedil;&sup1;<wbr>&iexcl;&ograve;&atilde;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+5.&nbsp; &atilde;&iacute;<wbr>&uml;&ntilde;&sect;&euml;&ccedil;&eth;<wbr>&agrave;&atilde;&ocirc;&egrave;&aacute;<wbr>&iexcl;&ograve;&atilde;<wbr>&middot;&oacute;<wbr>&sect;&ograve;&sup1;<wbr>&uml;&ograve;&iexcl;<wbr>&sup1;&ograve;&igrave;&ocirc;&iexcl;&ograve;
+
+<p>&nbsp;&nbsp;&nbsp; <b>&micro;&ntilde;&ccedil;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;<wbr>&agrave;&ordf;&ocirc;&sect;<wbr>&agrave;&aring;&cent;<wbr><wbr>&nbsp;
+pid</b>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&micro;&ntilde;&ccedil;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;<wbr>&aacute;&iacute;<wbr>&sup1;&ograve;&aring;&ccedil;&iacute;&iexcl;
+pid &middot;&otilde;&egrave;<wbr>&agrave;&raquo;&ccedil;&sup1;<wbr>&auml;&raquo;<wbr>&micro;&ograve;&aacute;<wbr>&middot;&auml;&eacute;&reg;&otilde;<wbr>&ecirc;&ograve;&aacute;&ograve;&atilde;&para;<wbr>&agrave;&cent;&otilde;&acirc;&sup1;<wbr>&agrave;&raquo;&ccedil;&sup1;<wbr>&ecirc;&aacute;&iexcl;&ograve;&atilde;<wbr>&auml;&acute;&eacute;<wbr>&acute;&ntilde;&sect;<wbr>&sup1;&otilde;&eacute;
+<center>&nbsp;<img src="pic11-1.gif" height=53 width=219></center>
+&nbsp;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+e(t)&nbsp; =&nbsp; error&nbsp; signal&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+k<sub>p</sub>&nbsp; =&nbsp; proportional gain
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+u(t)&nbsp; =&nbsp; control output&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+t<sub>i</sub>&nbsp;&nbsp; =&nbsp;&nbsp; integral time
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+t<sub>d</sub>&nbsp; =&nbsp; derivative&nbsp; time
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &aacute;&micro;&egrave;<wbr>&uml;&ograve;&iexcl;<wbr>&curren;&oslash;&sup3;&ecirc;&aacute;&ordm;&ntilde;&micro;&ocirc;<wbr>&aacute;&aring;&eth;<wbr>&raquo;&ntilde;&shy;&euml;&ograve;<wbr>&cent;&iacute;&sect;
+control action &aacute;&micro;&egrave;<wbr>&aring;&eth;<wbr>&aacute;&ordm;&ordm;<wbr>&acute;&ntilde;&sect;<wbr>&middot;&otilde;&egrave;<wbr>&iexcl;&aring;&egrave;&ograve;&ccedil;<wbr>&auml;&raquo;<wbr>&aacute;&aring;&eacute;&ccedil;
+&middot;&oacute;<wbr>&atilde;&euml;&eacute;<wbr>&auml;&aacute;&egrave;<wbr>&ecirc;&ograve;&aacute;&ograve;&atilde;&para;
+&sup1;&oacute;<wbr>&atilde;&ugrave;&raquo;<wbr>&micro;&ograve;&aacute;<wbr>&middot;&auml;&eacute;&reg;&otilde;<wbr>&auml;&raquo;<wbr>&atilde;&ordf;&eacute;<wbr>&auml;&acute;&eacute;<wbr>&acirc;&acute;&acirc;<wbr>&micro;&atilde;&sect;
+&aacute;&micro;&egrave;<wbr>&uml;&eth;<wbr>&aacute;&otilde;<wbr>&iexcl;&ograve;&atilde;<wbr>&acute;&ntilde;&acute;<wbr>&aacute;&raquo;&aring;&sect;<wbr>&atilde;&euml;&eacute;<wbr>&agrave;&euml;&aacute;&ograve;&eth;<wbr>&ecirc;&aacute;<wbr>&iexcl;&egrave;&iacute;&sup1;
+&agrave;&ordf;&egrave;&sup1;<wbr>&iexcl;&ograve;&atilde;<wbr>&acute;&ntilde;&acute;<wbr>&aacute;&raquo;&aring;&sect;<wbr>&agrave;&frac34;&times;&egrave;&iacute;<wbr>&aring;&acute;<wbr>&curren;&ccedil;&ograve;&aacute;<wbr>&auml;&ccedil;<wbr>&cent;&iacute;&sect;<wbr>&ecirc;&egrave;&ccedil;&sup1;<wbr>&iacute;&sup1;&oslash;&frac34;&ntilde;&sup1;&cedil;&igrave;<wbr>&acute;&eacute;&ccedil;&acirc;<wbr>&iexcl;&ograve;&atilde;&iexcl;<wbr>&atilde;&iacute;&sect;<wbr>&curren;&ccedil;&ograve;&aacute;<wbr>&para;&otilde;&egrave;<wbr>&micro;&egrave;&oacute;<wbr>&frac14;&egrave;&ograve;&sup1;
+<ul>
+<center>&nbsp;<img src="pic11-2.gif" height=39 width=111></center>
+</ul>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &acirc;&acute;&acirc;<wbr>&middot;&otilde;&egrave;
+n &agrave;&raquo;&ccedil;&sup1;<wbr>&curren;&egrave;&ograve;<wbr>&curren;&sect;<wbr>&middot;&otilde;&egrave;<wbr>&raquo;&atilde;&eth;&aacute;&ograve;&sup3;
+3-20 &sup1;&iacute;&iexcl;<wbr>&uml;&ograve;&iexcl;<wbr>&sup1;&otilde;&eacute;<wbr>&uml;&ograve;&iexcl;<wbr>&iexcl;&ograve;&atilde;<wbr>&middot;&oacute;<wbr>&sect;&ograve;&sup1;<wbr>&acute;&eacute;&ccedil;&acirc;<wbr>&micro;&ntilde;&ccedil;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;<wbr>&aacute;&iacute;<wbr>&sup1;&ograve;&aring;&ccedil;&iacute;&iexcl;
+&frac34;&ordm;<wbr>&ccedil;&egrave;&ograve; &agrave;&raquo;&ccedil;&sup1;<wbr>&iexcl;&ograve;&atilde;<wbr>&acute;&otilde;<wbr>&middot;&otilde;&egrave;<wbr>&uml;&eth;<wbr>&auml;&aacute;&egrave;<wbr>&atilde;&ordf;&eacute;<wbr>&curren;&egrave;&ograve;<wbr>&iexcl;&oacute;&euml;&sup1;&acute;&iexcl;&ntilde;&ordm;&ecirc;&egrave;&ccedil;&sup1;<wbr>&iacute;&sup1;&oslash;&frac34;&ntilde;&sup1;&cedil;&igrave;
+&aacute;&aring;&eth;<wbr>&agrave;&euml;&aacute;&ograve;&eth;<wbr>&ecirc;&aacute;<wbr>&iexcl;&ccedil;&egrave;&ograve;<wbr>&para;&eacute;&ograve;<wbr>&atilde;&ordf;&eacute;<wbr>&agrave;&frac34;&otilde;&acirc;&sect;<wbr>&agrave;&egrave;&eacute;<wbr>&ecirc;&egrave;&ccedil;&sup1;
+&cent;&iacute;&sect;<wbr>&curren;&egrave;&ograve;<wbr>&iexcl;&oacute;&sup1;&euml;&acute;
+&atilde;&sup1;<wbr>&ecirc;&egrave;&ccedil;&sup1;<wbr>&ecirc;&ntilde;&acute;<wbr>&ecirc;&egrave;&ccedil;&sup1;
+&laquo;&ouml;&egrave;&sect;<wbr>&iacute;&ograve;&uml;<wbr>&agrave;&cent;&otilde;&acirc;&sup1;<wbr>&ecirc;&ntilde;&shy;&shy;&ograve;&sup3;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;<wbr>&auml;&acute;&eacute;<wbr>&agrave;&raquo;&ccedil;&sup1;
+<center>&nbsp;</center>
+
+<center><img src="pic11-3.gif" height=44 width=348></center>
+
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &micro;&ntilde;&ccedil;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;
+pid &middot;&otilde;&egrave;<wbr>&sup1;&oacute;<wbr>&aacute;&ograve;<wbr>&atilde;&ordf;&eacute;<wbr>&sect;&ograve;&sup1;<wbr>&uml;&atilde;&ocirc;&sect;<wbr>&ecirc;&ograve;&aacute;&ograve;&atilde;&para;<wbr>&agrave;&cent;&otilde;&acirc;&sup1;<wbr>&ecirc;&aacute;&iexcl;&ograve;&atilde;<wbr>&auml;&acute;&eacute;<wbr>&acute;&ntilde;&sect;<wbr>&sup1;&otilde;&eacute;
+<br>&nbsp;
+<center>&nbsp;<img src="pic11-4.gif" height=88 width=238></center>
+
+<center><img src="pic11-5.gif" height=40 width=142></center>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &acirc;&acute;&acirc;<wbr>&middot;&otilde;&egrave;<wbr><wbr>&nbsp;&nbsp;&nbsp;&nbsp;
+r(t)&nbsp; &curren;&times;&iacute;<wbr><wbr>&nbsp; setpoint &euml;&atilde;&times;&iacute;<wbr>&ecirc;&ntilde;&shy;&shy;&ograve;&sup3;<wbr>&iacute;&eacute;&ograve;&sect;<wbr>&iacute;&ocirc;&sect;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+y(t)&nbsp; &curren;&times;&iacute;<wbr><wbr>&nbsp; &ecirc;&ntilde;&shy;&shy;&ograve;&sup3;<wbr>&iacute;&iacute;&iexcl;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+v(t)&nbsp; &curren;&times;&iacute; &ecirc;&ntilde;&shy;&shy;&ograve;&sup3;<wbr>&iacute;&iacute;&iexcl;<wbr>&cent;&iacute;&sect;
+satuation actuator
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+t<sub>t&nbsp;</sub>&nbsp; &curren;&times;&iacute; time constant for tracking
+action &agrave;&raquo;&ccedil;&sup1;<wbr>&agrave;&egrave;&eacute;<wbr>&ecirc;&egrave;&ccedil;&sup1;<wbr>&cent;&iacute;&sect;
+tt
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+n&nbsp;&nbsp;&nbsp; =&nbsp; 10 (&raquo;&atilde;&eth;&aacute;&ograve;&sup3;
+3-20)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&laquo;&ouml;&egrave;&sect;<wbr>&micro;&ntilde;&ccedil;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;<wbr>&agrave;&ordf;&ocirc;&sect;<wbr>&agrave;&aring;&cent;<wbr>&middot;&otilde;&egrave;<wbr>&middot;&oacute;<wbr>&euml;&sup1;&eacute;&ograve;<wbr>&middot;&otilde;&egrave;<wbr>&auml;&acute;&eacute;<wbr>&agrave;&ordf;&egrave;&sup1;<wbr>&agrave;&acute;&otilde;&acirc;&ccedil;&iexcl;&ntilde;&ordm;&micro;&ntilde;&ccedil;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;<wbr>&aacute;&iacute;<wbr>&sup1;&ograve;&aring;&ccedil;&iacute;&iexcl;
+pid &uml;&atilde;&ocirc;&sect; &agrave;&cent;&otilde;&acirc;&sup1;<wbr>&auml;&acute;&eacute;<wbr>&agrave;&raquo;&ccedil;&sup1;
+<br>&nbsp;
+<center>&nbsp;<img src="pic12-1.gif" height=92 width=312></center>
+
+<center><img src="pic12-2.gif" height=46 width=376></center>
+&nbsp;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&acirc;&acute;&acirc;<wbr>&middot;&otilde;&egrave; h &curren;&times;&iacute;
+&curren;&ograve;&ordm;<wbr>&iexcl;&ograve;&atilde;<wbr>&ecirc;&oslash;&egrave;&aacute;<wbr>&micro;&ntilde;&ccedil;<wbr>&iacute;&acirc;&egrave;&ograve;&sect;
+(sampling period)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&euml;&ograve;&iexcl;<wbr>&curren;&ograve;&ordm;<wbr>&iexcl;&ograve;&atilde;<wbr>&ecirc;&oslash;&egrave;&aacute;<wbr>&micro;&ntilde;&ccedil;<wbr>&iacute;&acirc;&egrave;&ograve;&sect;<wbr>&ecirc;&ntilde;&eacute;&sup1;<wbr>&frac34;&iacute;<wbr>&micro;&ntilde;&ccedil;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;<wbr>&agrave;&ordf;&ocirc;&sect;<wbr>&agrave;&aring;&cent;<wbr>&middot;&otilde;&egrave;<wbr>&aacute;&ecirc;&acute;&sect;<wbr>&cent;&eacute;&ograve;&sect;<wbr>&micro;&eacute;&sup1;<wbr>&iexcl;&ccedil;<wbr>&uml;&eth;<wbr>&ecirc;&ograve;&aacute;&ograve;&atilde;&para;<wbr>&middot;&oacute;<wbr>&sect;&ograve;&sup1;<wbr>&auml;&acute;&eacute;<wbr>&acute;&otilde;
+&agrave;&ordf;&egrave;&sup1;<wbr>&agrave;&acute;&otilde;&acirc;&ccedil;&iexcl;&ntilde;&ordm;&micro;&ntilde;&ccedil;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;<wbr>&aacute;&iacute;<wbr>&sup1;&ograve;&aring;&ccedil;&iacute;&iexcl;
+&curren;&egrave;&ograve;<wbr>&frac34;&ograve;<wbr>&atilde;&ograve;<wbr>&aacute;&ocirc;&agrave;&micro;&iacute;&atilde;&igrave;<wbr>&atilde;&sup1;<wbr>&iexcl;&ograve;&atilde;<wbr>&uml;&ugrave;&sup1;&micro;&ntilde;&ccedil;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;<wbr>&curren;&times;&iacute;
+k, t<sub>i</sub> &aacute;&aring;&eth; t<sub>d </sub>&iexcl;&ccedil;<wbr>&ecirc;&ograve;&aacute;&ograve;&atilde;&para;<wbr>&raquo;&atilde;&ntilde;&ordm;<wbr>&auml;&acute;&eacute;<wbr>&acirc;&acute;&acirc;<wbr>&iacute;&ograve;&egrave;&ntilde;&acirc;<wbr>&ccedil;&ocirc;&cedil;&otilde;<wbr>&iexcl;&ograve;&atilde;<wbr>&agrave;&ordf;&egrave;&sup1;<wbr>&agrave;&acute;&otilde;&acirc;&ccedil;&iexcl;&ntilde;&ordm;&micro;&ntilde;&ccedil;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;<wbr>&aacute;&iacute;<wbr>&sup1;&ograve;&aring;&ccedil;&iacute;&iexcl;
+<h2>
+<a name="º·êãø»"></a><font color="#993366">&ordm;&middot;<wbr>&ecirc;&atilde;&oslash;&raquo;</font><wbr><wbr></h2>
+<font color="#993366">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</font><font color="#000000">&atilde;&sup1;<wbr>&raquo;&ntilde;&uml;&uml;&oslash;&ordm;&ntilde;&sup1;<wbr>&sup1;&otilde;&eacute;
+&agrave;&middot;&curren;&acirc;&sup1;&acirc;&aring;&acirc;&otilde;<wbr>&micro;&egrave;&ograve;&sect;<wbr>&aelig;
+&auml;&acute;&eacute;<wbr>&agrave;&cent;&eacute;&ograve;<wbr>&aacute;&ograve;<wbr>&aacute;&otilde;<wbr>&ordm;&middot;<wbr>&ordm;&ograve;&middot;
+&iexcl;&ntilde;&ordm;&ordf;&otilde;&ccedil;&ocirc;&micro;<wbr>&raquo;&atilde;&eth;&uml;&oacute;<wbr>&ccedil;&ntilde;&sup1;<wbr>&cent;&iacute;&sect;<wbr>&agrave;&atilde;&ograve;<wbr>&aacute;&ograve;&iexcl;<wbr>&cent;&ouml;&eacute;&sup1;
+&iacute;&oslash;&raquo;&iexcl;&atilde;&sup3;&igrave;<wbr>&agrave;&euml;&aring;&egrave;&ograve;<wbr>&sup1;&otilde;&eacute;<wbr>&acirc;&ntilde;&sect;<wbr></font>
+<font color="#000000">&raquo;&atilde;&eth;<wbr>&iexcl;&iacute;&ordm;<wbr>&auml;&raquo;<wbr>&acute;&eacute;&ccedil;&acirc;<wbr>&ecirc;&egrave;&ccedil;&sup1;<wbr>&micro;&egrave;&ograve;&sect;&aelig;&euml;&aring;&ograve;&acirc;<wbr>&ecirc;&egrave;&ccedil;&sup1;
+&ecirc;&egrave;&ccedil;&sup1;<wbr>&ecirc;&oacute;&curren;&ntilde;&shy;<wbr>&ecirc;&egrave;&ccedil;&sup1;<wbr>&euml;&sup1;&ouml;&egrave;&sect;<wbr>&middot;&otilde;&egrave;<wbr>&cent;&ograve;&acute;<wbr>&agrave;&ecirc;&otilde;&acirc;<wbr>&aacute;&ocirc;<wbr>&auml;&acute;&eacute;<wbr>&sup1;&ntilde;&egrave;&sup1;<wbr>&iexcl;&ccedil;<wbr>&curren;&times;&iacute;
+&ecirc;&egrave;&ccedil;&sup1;<wbr>&cent;&iacute;&sect;<wbr>&micro;&ntilde;&ccedil;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;<wbr>&laquo;&ouml;&egrave;&sect;<wbr>&agrave;&raquo;&ccedil;&sup1;<wbr>&micro;&ntilde;&ccedil;<wbr>&middot;&otilde;&egrave;<wbr>&uml;&eth;<wbr>&ordf;&egrave;&ccedil;&acirc;<wbr>&atilde;&euml;&eacute;<wbr>&iexcl;&ograve;&atilde;<wbr>
+&middot;&oacute;<wbr>&sect;&ograve;&sup1;<wbr>&cent;&iacute;&sect;<wbr>&iacute;&oslash;&raquo;&iexcl;&atilde;&sup3;&igrave;<wbr>&agrave;&euml;&aring;&egrave;&ograve;<wbr>&sup1;&ntilde;&eacute;&sup1;<wbr>&aacute;&otilde;<wbr>&raquo;&atilde;&eth;&ecirc;&ocirc;&middot;&cedil;&ocirc;&agrave;&ograve;&frac34;<wbr>&aacute;&ograve;&iexcl;<wbr>&cent;&ouml;&eacute;&sup1;<wbr><wbr></font>
+<br><font color="#000000">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+pid(propotional integral derivative) &agrave;&raquo;&ccedil;&sup1;<wbr>&iexcl;&ograve;&atilde;<wbr>&atilde;&ccedil;&aacute;<wbr>&agrave;&iacute;&ograve;<wbr>&agrave;&middot;&curren;&sup1;&ocirc;&curren;<wbr>&middot;&ntilde;&eacute;&sect;
+3 &aacute;&ordm;&ordm;<wbr>&agrave;&cent;&eacute;&ograve;<wbr>&acute;&eacute;&ccedil;&acirc;<wbr>&iexcl;&ntilde;&sup1;<wbr><wbr></font>
+<br><font color="#000000">&middot; &oacute;&atilde;&euml;&eacute;<wbr>&iexcl;&ograve;&atilde;<wbr>&curren;&ccedil;&ordm;<wbr>&curren;&oslash;&aacute;<wbr>&auml;&acute;&eacute;<wbr>&frac14;&aring;<wbr>&acute;&otilde;<wbr>&aacute;&ograve;&iexcl;<wbr>&cent;&ouml;&eacute;&sup1;<wbr>&iexcl;&ccedil;&egrave;&ograve;<wbr>&iexcl;&ograve;&atilde;<wbr>&atilde;&ordf;&eacute;
+&agrave;&middot;&curren;&sup1;&ocirc;&curren;<wbr>&iacute;&acirc;&egrave;&ograve;&sect;<wbr>&atilde;&acute;<wbr>&iacute;&acirc;&egrave;&ograve;&sect;<wbr>&euml;&sup1;&ouml;&egrave;&sect;<wbr>&agrave;&frac34;&otilde;&acirc;&sect;<wbr>&micro;&ntilde;&ccedil;<wbr>&agrave;&acute;&otilde;&acirc;&ccedil;<wbr><wbr></font>
+<br><font color="#993366">&nbsp;</font>
+<br>&nbsp;
+<h2>
+<a name="àí¡êòãíéò§íô§"></a><font color="#993366">&agrave;&iacute;&iexcl;<wbr>&ecirc;&ograve;&atilde;<wbr>&iacute;&eacute;&ograve;&sect;<wbr>&iacute;&ocirc;&sect;</font><wbr><wbr></h2>
+
+<ul>
+<li>
+k.ogata&nbsp;<wbr>, modern<wbr> control&nbsp;<wbr>engineering ,<wbr> 3rd&nbsp;<wbr>edition&nbsp;<wbr>
+prentice-<wbr>hall ,<wbr> englewood&nbsp;<wbr>cliffs ,&nbsp;<wbr>1997</li>
+
+<li>
+b.c.&nbsp;<wbr>kuo ,&nbsp;<wbr>automatic&nbsp;<wbr>control&nbsp;<wbr>systems&nbsp;<wbr>,
+6th&nbsp;<wbr>edition ,&nbsp;<wbr>prentice-<wbr>hall&nbsp;<wbr>anglewood
+,<wbr>1991</li>
+
+<li>
+d.e.<wbr> seborg ,<wbr> t.f.<wbr> edgar&nbsp;<wbr>&amp;&nbsp;<wbr>d.a.&nbsp;<wbr>mellichamp
+,&nbsp;<wbr>process&nbsp;<wbr>dynamics&nbsp;<wbr>and&nbsp;<wbr>control
+,&nbsp;<wbr>john&nbsp;<wbr>wiley ,&nbsp;<wbr>newyork ,&nbsp;<wbr>1989</li>
+
+<li>
+g.&nbsp;<wbr>stephenapoulos ,&nbsp;<wbr>chemical&nbsp;<wbr>process&nbsp;<wbr>control
+,&nbsp;<wbr>prentice&nbsp;<wbr>hall ,<wbr> englewood&nbsp;<wbr>cliffs ,&nbsp;<wbr>1984</li>
+</ul>
+
+<hr>[ <a href="http://www.cpe.ku.ac.th/course/204471/lesson.html">&ordm;&middot;&agrave;&atilde;&otilde;&acirc;&sup1;</a>
+] [ <a href="http://www.cpe.ku.ac.th/course/204471/">204471</a> ] [ <a href="http://www.cpe.ku.ac.th/course/">&atilde;&ograve;&acirc;&ccedil;&ocirc;&ordf;&ograve;</a>
+]
+<br>[ <a href="http://www.cpe.ku.ac.th">&agrave;&ograve;&curren;&ccedil;&ocirc;&ordf;&ograve;&ccedil;&ocirc;&egrave;&ccedil;&iexcl;&atilde;&atilde;&aacute;&curren;&iacute;&aacute;&frac34;&ocirc;&ccedil;&agrave;&micro;&iacute;&atilde;&igrave;</a>
+] [ <a href="http://www.eng.ku.ac.th">&curren;&sup3;&eth;&ccedil;&ocirc;&egrave;&ccedil;&iexcl;&atilde;&atilde;&aacute;&egrave;&ograve;&ecirc;&micro;&atilde;&igrave;</a>
+] [ <a href="http://www.ku.ac.th">&aacute;&euml;&ograve;&ccedil;&ocirc;&middot;&acirc;&ograve;&aring;&ntilde;&acirc;&agrave;&iexcl;&eacute;&micro;&atilde;&egrave;&ograve;&ecirc;&micro;&atilde;&igrave;</a>
+]
+</body>
+</html>

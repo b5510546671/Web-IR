@@ -1,0 +1,812 @@
+
+<head>
+   <title>z-80 architecture</title>
+</head>
+<body>
+
+
+<center><table cols=1 width="95%" bgcolor="#99ff99" >
+<tr>
+<td align=center><b><font color="#000099">สถาปัตยกรรม<wbr>ของ cpu z-80</font></b></td>
+</tr>
+</table></center>
+
+<p>
+<center>
+<table width="95%">
+<tr>
+<td>
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>โครง<wbr>สร้าง<wbr>ของ
+cpu z-80 มี<wbr>โครง<wbr>สร้าง<wbr>ที่<wbr>พัฒนา<wbr>มา<wbr>จาก 8080 ดัง<wbr>นั้น<wbr>ใน<wbr>แง่<wbr>โครง<wbr>สร้าง<wbr>พื้น<wbr>ฐาน<wbr>จะ เหมือนกั<wbr>บ
+cpu 8080 แต่<wbr>เนื่อง<wbr>จาก z-80 มี<wbr>การ<wbr>พัฒนา<wbr>มาก<wbr>ขึ้น<wbr>ทางซอฟท์แวร์ และ ฮาร์ดแวร์
+จึง<wbr>ทำ<wbr>ให้<wbr>มี<wbr>ราย<wbr>ละเอียด<wbr>แตก<wbr>ต่าง<wbr>เพิ่ม<wbr>เติม<wbr>อีก<wbr>หลาย<wbr>ประการ<wbr>ด้วย<wbr>กัน<wbr><wbr></font></font></font></dd>
+
+<p>
+<center>
+<p><img src="5_1.jpg" border=2 height=496 width=550>
+<p><font face="ms sans serif"><font color="#804000"><font size=-1>รูป<wbr>แสดง
+block diagram ของ cpu z-80</font></font></font></center>
+
+<p><img src="zregissh.jpg" height=50 width=250>
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>โครง<wbr>สร้าง<wbr>ภาย<wbr>ใน<wbr>ของ
+z-80 cpu ประกอบ<wbr>ด้วย รีจิสเตอร์ภาย<wbr>ใน<wbr>ที่<wbr>สามารถ เขียน<wbr>และ<wbr>อ่าน<wbr>ได้<wbr>ถึง 208 บิ<wbr>ท
+โดย<wbr>แยก<wbr>เป็น<wbr>กลุ่ม<wbr>ของ<wbr>รีจิสเตอร์ขนาด 8 บิท 18 รีจิสเตอร์และ<wbr>รีจิสเตอร์ขนาด 16
+บิท อีก 4 รีจิสเตอร์<wbr></font></font></font></dd>
+
+<center>
+<p><img src="zreg.jpg" border=2 height=431 width=644>
+<p><font face="ms sans serif"><font color="#804000"><font size=-1>รูป<wbr>ภาพ<wbr>แสดง<wbr>รีจิสเตอร์ภาย<wbr>ใน<wbr>ทั้ง<wbr>หมด<wbr>ของ
+cpu z-80</font></font></font></center>
+
+<p><b><font face="ms sans serif"><font color="#990000"><font size=-1>รีจิสเตอร์หลัก<wbr>ที่<wbr>ใช้<wbr>งาน<wbr>ทั่ว<wbr>ไป<wbr><wbr></font></font></font></b>
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>รีจิสเตอร์ใน<wbr>กลุ่ม<wbr>แรก
+คือ a,f,b,c,d,e,h,l เป็น<wbr>รีจิสเตอร์ขนาด 8บิท ที่<wbr>ใช้<wbr>งาน<wbr>ทั่ว<wbr>ไป<wbr>โดย รีจิสเตอร<wbr>์
+เหล่า<wbr>นี้<wbr>สามารถ<wbr>ประกอบ<wbr>รวม<wbr>กัน<wbr>เป็น<wbr>คู่<wbr>รีจิสเตอร์ได้ คือ af,bc,de และ hlโดย<wbr>คู่
+รีจิสเตอร์เหล่า<wbr>นี้<wbr>ได้<wbr>รับ<wbr>การ<wbr>ใช้<wbr>งาน<wbr>ใน<wbr>ลักษณะ<wbr>ของ<wbr>รีจิสเตอร์ ขนาด 16 บิท การก<wbr>ระ<wbr>ทำ<wbr>ภาย<wbr>ใน
+cpu อาจ<wbr>จะ<wbr>อาศัย<wbr>เพียง<wbr>รีจิสเตอร์เดียว<wbr>หรือ<wbr>กระ<wbr>ทำ<wbr>เป็น<wbr>คู่<wbr>รีจิสเตอร์ได้ โดย<wbr>ที่
+a คือ accumulator , f คือ flag , flagของ z-80 จะ<wbr>มี<wbr>ด้วย<wbr>กัน<wbr>ทั้ง<wbr>หมด 6 ตัว
+จึง<wbr>ใช้<wbr>เพียง 6 บิท แต่ z-80 อาศัย<wbr>การ<wbr>เพิ่ม<wbr>บิทขึ้น<wbr>อีก 2 บิท และ<wbr>กลาย เป็น<wbr>รีจิสเตอร<wbr>์
+f รีจิสเตอร์ f นี้ ได้<wbr>รับ<wbr>การ set , reset การก<wbr>ระ<wbr>ทำ<wbr>ตาม<wbr>คำ<wbr>สั่ง<wbr>ทาง คณิต<wbr>ศาสตร์
+หรือ ลอจิก<wbr>ได้<wbr>และ<wbr>เรา<wbr>สามารถ<wbr>ใช้ f เหมือน<wbr>รีจิสเตอร์หนึ่ง ซึ่ง<wbr>เมื่อ<wbr>รวมกับ a
+แล้ว จะ<wbr>กลาย<wbr>เป็น<wbr>รีจิสเตอร์ขนาด 16บิทได้<wbr><wbr></font></font></font></dd>
+
+<center><img src="zmainreg.jpg" border=2 height=271 width=298>
+<p><font face="ms sans serif"><font color="#804000"><font size=-1>รูป<wbr>ภาพ<wbr>แสดง<wbr>กลุ่ม<wbr>รีจิสเตอร์หลัก<wbr>ใช้<wbr>งาน<wbr>ทั่ว<wbr>ไป<wbr><wbr></font></font></font></center>
+
+<p><b><font face="ms sans serif"><font color="#990000"><font size=-1>กลุ่ม<wbr>รีจิสเตอร์สำรอง<wbr><wbr></font></font></font></b>
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>เป็น<wbr>กลุ่ม<wbr>รีจิสเตอร์ที่<wbr>สามารถ<wbr>เก็บ<wbr>ข้อ<wbr>มูล<wbr>ได้
+โดย<wbr>เป็น<wbr>ตัว<wbr>เก็บ<wbr>ข้อ<wbr>มูล<wbr>ที่<wbr>มา<wbr>จาก<wbr>รีจิสเตอร์หลัก รีจิสเตอร์ ชุด<wbr>นี้<wbr>จึง<wbr>มี<wbr>ด้วย<wbr>กัน
+8 ตัว คือ a', f', b', c', d', e', h' ,l' รีจิสเตอร์เหล่า<wbr>นี้<wbr>เป็น<wbr>รีจิสเตอร์ที่<wbr>ใช้<wbr>ใน<wbr>การ
+เก็บ<wbr>ข้อ<wbr>มูล<wbr>ชั่ว<wbr>คราว ใน<wbr>การ<wbr>ที่<wbr>ต้อง<wbr>การ<wbr>ใช้<wbr>รีจิสเตอร์หลัก<wbr>ทำ<wbr>งาน<wbr>อย่าง<wbr>อื่น<wbr>ก่อน ดัง<wbr>นั้น<wbr>รีจิสเตอร์กลุ่ม
+นี้<wbr>จึง<wbr>ไม่<wbr>สามารถ<wbr>กระ<wbr>ทำ<wbr>ทางคณิต<wbr>ศาสตร์<wbr>และลอจิก<wbr>ได้<wbr><wbr></font></font></font></dd>
+
+<center><img src="zaltreg.jpg" height=274 width=322>
+<p><font face="ms sans serif"><font color="#804000"><font size=-1>รูป<wbr>ภาพ<wbr>แสด<wbr>กลุ่ม<wbr>รีจิสเตอร์สำรอง<wbr><wbr></font></font></font></center>
+
+<p><b><font face="ms sans serif"><font color="#990000"><font size=-1>กลุ่ม<wbr>รีจิสเตอร์ที่<wbr>ใช้<wbr>งาน<wbr>เฉพาะ<wbr>อย่าง<wbr><wbr></font></font></font></b>
+<dd>
+<img src="point.gif" hspace=10 height=20 width=20><font face="ms sans serif"><font size=-1><font color="#008040">โปรแกรม<wbr>เคาน์เตอร์
+(pc - program counter) </font><font color="#000000">โปรแกรม<wbr>เคาน์เตอร์<wbr>เป็น<wbr>รีจิสเตอร์ขนาด
+16บิท ที่<wbr>เป็น<wbr>ตัว<wbr>กำหนด<wbr>ตำแหน่ง<wbr>ของ<wbr>โปรแกรม<wbr>ใน<wbr>ขณะ<wbr>สภาวะ<wbr>การก<wbr>ระ<wbr>ทำ<wbr>การเฟทช์โดย<wbr>ขณะ<wbr>ทำ
+การเฟทช์ค่า<wbr>ที่<wbr>อยู่<wbr>ใน<wbr><wbr></font></font></font></dd>
+
+<br><font face="ms sans serif"><font color="#000000"><font size=-1>โปรแกรม<wbr>เคาน์เตอร์<wbr>จะ<wbr>ไป<wbr>ปรากฎ<wbr>อยู่<wbr>ที่<wbr>แอดเดรสบัสเพื่อ<wbr>ชี้<wbr>ไป<wbr>ยัง<wbr>ตำแหน่ง<wbr>ใน<wbr>หน่วย<wbr>ความ<wbr>จำ
+ให้ cpu อ่าน<wbr>คำ<wbr>สั่ง<wbr>มา<wbr>ตี<wbr>ความ<wbr>หมาย<wbr>ค่า<wbr>ที่<wbr>อยู่<wbr>ใน<wbr>โปรแกรม<wbr>เคาน์เตอร์<wbr>จะ<wbr>เพิ่ม<wbr>ค่า<wbr>ขึ้น<wbr>ได้<wbr>อย่างอัตโนม<wbr>ัติ
+หลัง<wbr>การก<wbr>ระ<wbr>ทำ<wbr>การเฟทช์ แต่<wbr>ถ้า<wbr>หาก cpu กระ<wbr>ทำ<wbr>คำ<wbr>สั่ง<wbr>ให้<wbr>ข้าม<wbr>ไป ยัง<wbr>ตำแหน่ง<wbr>อื่น
+(jump) ค่า<wbr>แอดเดรส ที่<wbr>จะ<wbr>กระ<wbr>โดด<wbr>ข้าม<wbr>นั้น<wbr>จะ<wbr>โหลดเข้า<wbr>มา<wbr>ยัง<wbr>โปรแกรม<wbr>เคาน์เตอร์<wbr>ได้<wbr>อย่าง<wbr>อัตโนมัติ<wbr><wbr></font></font></font>
+<dd>
+<img src="point.gif" hspace=10 height=20 width=20><font face="ms sans serif"><font size=-1><font color="#008040">สแตคพอยท์เตอร<wbr>์
+(sp - stack pointer) </font><font color="#000000">เป็น<wbr>รีจิสเตอร์ที่<wbr>มี<wbr>ขนาด
+16 บิทที่<wbr>ใช้<wbr>สำหรับ<wbr>ชี้<wbr>ไป<wbr>ยัง<wbr>แอดเดรส<wbr>ชั้น<wbr>บน<wbr>สุด<wbr>ของสแตคที่<wbr>อยู่<wbr>ใน ram โดย<wbr>ส่วน<wbr>ของสแตคมี<wbr>ลักษณะ<wbr>โครง<wbr>สร้าง
+เป็น<wbr>หน่วย<wbr>ความ<wbr>จำ เป็น<wbr>แบบ<wbr>เก็บ<wbr>ที<wbr>หลัง<wbr>เรียก<wbr>ออก<wbr>ก่อน (last in first out) ข้อ<wbr>มูล<wbr>ในสแต<wbr>ค
+อาจ<wbr>ได้<wbr>รับ<wbr>การ push หรือ pop มา<wbr>จาก รีจิสเตอร์ภาย<wbr>ใน<wbr><wbr>cpu ลักษณะ<wbr>ของสแตคใน<wbr>ที่<wbr>นี้<wbr>ยัง<wbr>เป็น
+ส่วน<wbr>ช่วย<wbr>ใน<wbr>การก<wbr>ระ<wbr>ทำ interrupt และ<wbr>การ<wbr>เรียก โปรแกรม<wbr>ย่อย กล่าว<wbr>คือ ใน<wbr>การ interrupt
+ค่า<wbr>ของ<wbr>โปรแกรม<wbr>เคาน์เตอร์<wbr>จะ<wbr>ได้<wbr>รับ<wbr>การ<wbr>รักษา<wbr>ไว้<wbr>ใน<wbr>ชั้นสแตคครั้น<wbr>เมื่อ<wbr>โปรแกรม<wbr>กลับ<wbr>จาก
+interrupt ไป<wbr>กระ<wbr>ทำ<wbr>ยัง<wbr>โปรแกรม<wbr>หลัก<wbr>ก็<wbr>จะ<wbr>นำ<wbr>ค่า<wbr>จากสแตคกลับ<wbr>เข้า<wbr>มา<wbr>ยัง<wbr>โปรแกรม<wbr>เคาน์เตอร์
+ใหม่ ใน<wbr>ทำนอง<wbr>เดียว<wbr>กัน การก<wbr>ระ<wbr>โดด<wbr>ไป<wbr>กระ<wbr>ทำ<wbr>ยัง<wbr>โปรแกรม<wbr>ย่อย<wbr>ก็<wbr>เช่น<wbr>เดียว<wbr>กัน ดัง<wbr>นั้น
+การก<wbr>ระ<wbr>ทำ<wbr>ใน<wbr>รูป<wbr>ของ interrupt ของ โปรแกรม<wbr>ย่อย<wbr>สามารถ ซ้อน<wbr>กัน<wbr>ได้<wbr>ไม่<wbr>มี<wbr>สิ้น<wbr>สุด<wbr><wbr></font></font></font></dd>
+
+<dd>
+<img src="point.gif" hspace=10 height=20 width=20><font face="ms sans serif"><font size=-1><font color="#008040">อินเดครีจิสเตอร<wbr>์
+(ix,iy - index register) </font><font color="#000000">cpu z-80 มีอินเดครีจิสเตอร์ขนาน
+16 บิท 2 ตัว แต่<wbr>ละ<wbr>ตัว<wbr>ใช้<wbr>ประ<wbr>โยชน์<wbr>หลัก<wbr>ใน การ ทำ<wbr>หน้า<wbr>ที่<wbr>เป็น<wbr>ตัว<wbr>เก็บ<wbr>แอดเดรส<wbr>ฐาน
+(base address) เพื่อ ทำ<wbr>หน้า<wbr>ที่<wbr>อ้าง<wbr>แอดเดรส<wbr>แบบอินเดคแอดเดรสซิ่ง (index addressing)ใน<wbr>โหมดของอินเดคแอดเดรส
+ซึ่ง<wbr>มี<wbr>ข้อ<wbr>มูล<wbr>ที่ อยู่<wbr>ในอินเดครีจิสเตอร์นี้<wbr>จะ<wbr>รวมกับข้อ<wbr>มูล<wbr>ที่<wbr>ติด<wbr>มากับคำ<wbr>สั่ง<wbr>อีก
+8 บิท เพื่อ<wbr>เป็น<wbr>ตัว<wbr>กำหนด<wbr>แอดเดรส<wbr>ให้กับ คำ<wbr>สั่ง<wbr>ข้อ<wbr>มูล<wbr>ที่<wbr>ติด<wbr>มากับคำ<wbr>สั่ง<wbr>นี้<wbr>เรา<wbr>เรียก<wbr>ว่า
+displacement ซึ่ง<wbr>จะ<wbr>เก็บ<wbr>ใน<wbr>รูป<wbr>ของ<wbr>ตัว<wbr>เลข 2's complement</font></font></font></dd>
+
+<dd>
+<img src="point.gif" hspace=10 height=20 width=20><font face="ms sans serif"><font size=-1><font color="#008040">อินเตอรร์รัพท์เพจแอดเดรส<wbr>รีจิสเตอร<wbr>์
+(i-interrupt page address register) </font><font color="#000000">การอินเตอร์รัพท<wbr>์
+ของ z-80 มี หลาย<wbr>โหมดและ<wbr>โหมดหนึ่ง<wbr>ที่<wbr>ทำ<wbr>ให้<wbr>การอินเตอร์รัพท์ของ z-80มี<wbr>ประสิทธิภาพ
+สูง กล่าว<wbr>คือ เมื่อ<wbr>เกิด<wbr>การอินเตอร์รัพท์ใน<wbr>โหมดนี้<wbr>ขึ้น มัน<wbr>สามารถ<wbr>อ้าง<wbr>แอดเดรส<wbr>โดย<wbr>ทางอ้อม
+ไป<wbr>กระ<wbr>ทำ<wbr>โปรแกรม<wbr>ใน ที่<wbr>ใด<wbr>ก็<wbr>ได้<wbr>ใน<wbr>หน่วย<wbr>ความ<wbr>จำ โดย<wbr>อาศัย<wbr>ค่า<wbr>ใน<wbr>รีจิสเตอร์ รวมกับค่า<wbr>ที่<wbr>ส่ง<wbr>มา<wbr>จาก<wbr>อุปกรณ์<wbr>เพ<wbr>อริเฟอรัลอีก
+8 บิท ชี้<wbr>ไป<wbr>ยัง<wbr>ค่า<wbr>ใน<wbr>หน่วย<wbr>ความ<wbr>จำ<wbr>เพื่อ<wbr>นำ<wbr>ค่า<wbr>นั้น<wbr>มา<wbr>โหลดเข้า<wbr>ใน โปรแกรมเคาวน์เตอร์เพื่อ<wbr>กระ<wbr>ทำ<wbr>ต่อ<wbr>ไป
+ด้วย<wbr>วิธี<wbr>การ<wbr>นี้<wbr>เรา<wbr>จึง<wbr>สามารถ<wbr>กระ<wbr>โดด<wbr>เข้า<wbr>ไป<wbr>ทำ<wbr>ที่<wbr>ส่วน<wbr>ใด<wbr>ก็<wbr>ได้<wbr>ใน<wbr>หน่วย<wbr>ความ<wbr>จำ<wbr><wbr></font></font></font></dd>
+
+<dd>
+<img src="point.gif" hspace=10 height=20 width=20><font face="ms sans serif"><font size=-1><font color="#008040">รีจิสเตอร์รีเฟรชหน่วย<wbr>ความ<wbr>จำ
+(r-memory reflesh register) </font><font color="#000000">การ<wbr>ต่อ ซี<wbr>พียูกับหน่วย<wbr>ความ<wbr>จำ<wbr>นั้น
+โดย ปกติ<wbr>จะ<wbr>ต่อกับหน่วย<wbr>ความ<wbr>จำ<wbr>ชนิด static ได้<wbr>โดย<wbr>ง่าย แต่<wbr>ชนิด dynamic ที่<wbr>ต้อง<wbr>การ<wbr>รีเฟร<wbr>ช
+มี<wbr>ราคา<wbr>ถูก<wbr>กว่า<wbr>มี<wbr>ความ<wbr>หนา<wbr>แน่น<wbr>สูง<wbr>กว่า z-80 ให้<wbr>ข้อ<wbr>ดี<wbr>กว่า<wbr>ประการ<wbr>หนึ่ง<wbr>คือ<wbr>มัน<wbr>สามารถ<wbr>ให้<wbr>การ
+รีเฟรชหน่วย<wbr>ความ<wbr>จำ<wbr>ได้ อย่าง<wbr>อัตโนมัติ โดย<wbr>ค่า<wbr>ใน r รีจิสเตอร์จะ<wbr>เพิ่ม<wbr>ค่า<wbr>ขึ้น<wbr>อีก
+1 ทุก<wbr>ครั้ง<wbr>ที่<wbr>มี<wbr>การก<wbr>ระ<wbr>ทำ<wbr>การ fetch คำ<wbr>สั่ง และ ข้อ<wbr>มูล<wbr>ใน<wbr>รีจิสเตอร์ r นี้ จะ<wbr>ถูก<wbr>ส่ง<wbr>ออก<wbr>ไป<wbr>ยัง<wbr>แอดเดรสบั<wbr>ส
+ใน<wbr>ส่วน<wbr>บิทที่<wbr>มี<wbr>นัย<wbr>สำคัญ<wbr>ต่ำ<wbr>กว่า<wbr>จังหวะ<wbr>ของ<wbr>การ<wbr>ส่ง<wbr>นี้<wbr>จะ<wbr>เป็น<wbr>จังหวะ<wbr>เดียว<wbr>กันกับที่<wbr>ซี<wbr>พีย<wbr>ู
+ส่ง<wbr>สัญญาณ รีเฟรชออก<wbr>มา ผู้<wbr>โปรแกรม<wbr>สามารถ<wbr>กำหนด<wbr>ค่า<wbr>ให้กับ รีจิสเตอร์ r นี้<wbr>ได้<wbr>แต่<wbr>ค่า<wbr>ใน<wbr>รีจิสเตอร<wbr>์
+นี้<wbr>จะ<wbr>เรียก<wbr>ใช้<wbr>โดย<wbr>ผู้<wbr>โปรแกรม<wbr>ทางคำ<wbr>สั่ง<wbr>โดย<wbr>ตรง<wbr>ไม่<wbr>ได้<wbr><wbr></font></font></font></dd>
+
+<dd>
+<img src="point.gif" hspace=10 height=20 width=20><font face="ms sans serif"><font size=-1><font color="#008040">แอคคิวมูเลเตอร<wbr>์
+(accumulator) และแฟลก (flag) </font><font color="#000000">ซี<wbr>พียูจะ<wbr>มี<wbr>รีจิสเตอร์ที่<wbr>ใช้<wbr>เป็น<wbr>หลัก<wbr>ใน<wbr>การ
+เป็น<wbr>ตัว operand สำหรับ<wbr>กระ<wbr>ทำ<wbr>ทางคณิต<wbr>ศาสตร์<wbr>และลอจิก โดย<wbr>รีจิสเตอร์หลัก<wbr>นี้<wbr>จะ<wbr>มี<wbr>เพียง
+8 บิท เรียก<wbr>ว่า "แอคคิวมูเลเตอร์ (accumulator)" การก<wbr>ระ<wbr>ทำ<wbr>ใน<wbr>ส่วน<wbr>ของ<wbr>หน่วย<wbr>คณิต<wbr>ศาสตร์
+และลอจิก<wbr>ย่อม<wbr>เกิด<wbr>เงื่อน<wbr>ไข<wbr>ได้<wbr>หลาย<wbr>อย่าง<wbr>ที่<wbr>จะ<wbr>ต้อง<wbr>แสดง<wbr>สถานะ<wbr>ภาพ<wbr>ของ<wbr>เงื่อน<wbr>ไข<wbr><wbr></font></font></font></dd>
+
+<br><font face="ms sans serif"><font color="#000000"><font size=-1>เหล่า<wbr>นั้น
+เช่น เงื่อน<wbr>ไข<wbr>ผล<wbr>ลัพธ์<wbr>เป็น<wbr>ศูนย์<wbr>ผล<wbr>ลัพธ์<wbr>เป็น<wbr>บวก<wbr>หรือ<wbr>ลบ<wbr>มี<wbr>ตัว<wbr>ทด<wbr>หรือ<wbr>ตัว<wbr>ขอ<wbr>ยืม<wbr>ใน<wbr>การก<wbr>ระ<wbr>ทำ
+ทางคณิต<wbr>ศาสตร์ แสดง<wbr>เงื่อน<wbr>ไข<wbr>พา<wbr>ริตี้คู่<wbr>หรือ<wbr>คี่<wbr>สิ่ง<wbr>เหล่า<wbr>นี้<wbr>จะ<wbr>ให้<wbr>ผล<wbr>ลัพธ์<wbr>แสดง<wbr>สถานะ
+ได้<wbr>ด้วย แฟลก (flag) แฟลกเป็น<wbr>รีจิสเตอ์ขนาด 8 บิท<wbr></font></font></font>
+<br><font face="ms sans serif"><font color="#000000"><font size=-1>ซึ่ง
+สามารถ<wbr>รวมกับแอคคิวมูเลเตอร์เป็น รีจิสเตอร์ขนาด 16 บิท ได้<wbr>ผู้<wbr>โปรแกรม<wbr>ยัง<wbr>สามารถ<wbr>ใช้<wbr>คำ<wbr>สั่ง<wbr>ใน<wbr>การ<wbr>เคลื่อน<wbr>ย้าย<wbr>ข้อ<wbr>มูล<wbr>จาก
+แอคคิวมูเลเตอร์ a และแฟลก fไป<wbr>เก็บ<wbr>ไว้<wbr>ใน a' และ f' ได้ เพื่อ<wbr>ทำ<wbr>ให้<wbr>การ<wbr>ใช้<wbr>งาน
+ของ a และ f มี<wbr>ประสิทธิภาพ<wbr>ดี<wbr>ยิ่ง<wbr>ขึ้น<wbr><wbr></font></font></font>
+<center>
+<p><img src="zspecreg.jpg" border=2 height=260 width=425>
+<p><font face="ms sans serif"><font color="#804000"><font size=-1>รูป<wbr>ภาพ<wbr>แสดง<wbr>กลุ่ม<wbr>รีจิสเตอร์ใช้<wbr>งาน<wbr>เฉพาะ<wbr>อย่าง<wbr><wbr></font></font></font></center>
+
+<p><b><font face="ms sans serif"><font color="#990000"><font size=-1>หน่วย<wbr>คำนวณ<wbr>ทางคณิต<wbr>ศาสตร์<wbr>และลอจิก
+(alu - arithmetic and logic unit)</font></font></font></b>
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>การ<wbr>ประมวล<wbr>ผล<wbr>ที่<wbr>สำคัญ<wbr>ของ
+cpuของ<wbr>คอมพิวเตอร์<wbr>ยัง<wbr>ขึ้น<wbr>อยู่กับหน่วย<wbr>คำนวณ<wbr>ทางคณิต<wbr>ศาสตร์<wbr>และ ลอจิก (alu) ส่วน
+alu นี้<wbr>จะ<wbr>นำ<wbr>ข้อ<wbr>มูล<wbr>ซึ่ง<wbr>อาจ<wbr>จะ<wbr>มา<wbr>จาก<wbr>ภาย<wbr>นอก cpu หรือ<wbr>ภาย<wbr>ใน cpu ก็<wbr>ได้<wbr>มา ประมวล<wbr>ผล
+การ ประมวล<wbr>ผล<wbr>ใน<wbr>ส่วน alu ที่<wbr><wbr></font></font></font></dd>
+
+<br><font face="ms sans serif"><font color="#000000"><font size=-1>สำคัญ<wbr>จะ<wbr>ประกอบ<wbr>ด้วย
+การ<wbr>บวก (add) , การ<wbr>ลบ (subtract) , ลอจิก and , ลอจิก or , ลอจิก ex-or ,
+เปรียบ<wbr>เทียบ (compare) , การ<wbr>เลื่อน<wbr>บิททางซ้าย<wbr>หรือ<wbr>ขวา ,การ<wbr>เพิ่ม<wbr>ค่า (increment)
+, การ<wbr>ลด<wbr>ค่า (decrement) , การเซ็ทบิท (set bit) , การ<wbr>รีเซ็ทบิท (reset bit)
+, การ<wbr>ทด<wbr>สอบ<wbr>บิท (test bit)</font></font></font>
+<center>
+<p><img src="zalu.jpg" border=2 height=401 width=544>
+<p><font face="ms sans serif"><font color="#804000"><font size=-1>รูป<wbr>ภาพ<wbr>แสดง<wbr>การ<wbr>ทำ<wbr>งาน<wbr>ของ
+alu ภาย<wbr>ใน<wbr><wbr></font></font></font></center>
+
+<p><img src="zdiagsh.jpg" height=50 width=300>
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>&nbsp;&nbsp;
+z-80 cpu จะ<wbr>ทำ<wbr>งาน<wbr>ใน<wbr>ลักษณะ<wbr>พื้น<wbr>ฐาน ที่<wbr>สำคัญ<wbr>ประกอบ<wbr>ด้วย<wbr><wbr></font></font></font></dd>
+
+<dd>
+<img src="point.gif" hspace=10 height=20 width=20><font face="ms sans serif"><font color="#000000"><font size=-1>การ<wbr>เขียน
+- อ่าน<wbr>หน่วย<wbr>ความ<wbr>จำ<wbr><wbr></font></font></font></dd>
+
+<dd>
+<img src="point.gif" hspace=10 height=20 width=20><font face="ms sans serif"><font color="#000000"><font size=-1>การ<wbr>เขียน
+- อ่าน<wbr>อุปกรณ์อินพุท - เอาท์พุท<wbr></font></font></font></dd>
+
+<dd>
+<img src="point.gif" hspace=10 height=20 width=20><font face="ms sans serif"><font color="#000000"><font size=-1>การ<wbr>ตอบ<wbr>สนอง<wbr>ต่อ<wbr>การอินเตอร์รัพท์<wbr></font></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>การ<wbr>ทำ<wbr>งาน<wbr>ใน<wbr>แต่<wbr>ละ<wbr>ไซเคิลของ<wbr>คำ<wbr>สั่ง<wbr>ประกอบ<wbr>ด้วย<wbr>ส่วน<wbr>การ<wbr>ทำ<wbr>งาน<wbr>สอง<wbr>จังหวะ<wbr>ที่<wbr>สำคัญ
+คือ สภาวะเฟทช์ (fetch) และ<wbr>สภาวะ execute ส่วน<wbr>ของ<wbr>สภาวะ fetchจะ<wbr>ประกอบ<wbr>ด้วย
+state ย่อย ๆ หลาย state แต่<wbr>ละ state จะ synchronize กับสัญญาณ<wbr>นาฬิกา<wbr><wbr></font></font></font></dd>
+
+<center>
+<p><img src="ztime.jpg" border=2 height=200 width=600></center>
+
+<dl>
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>เนื่อง<wbr>จาก<wbr>ใน<wbr>แต่<wbr>ละ<wbr>คำ<wbr>สั่ง<wbr>ประกอบ<wbr>ด้วย
+machine cycle หลาย<wbr>แบบ<wbr>ด้วย<wbr>กัน แต่<wbr><wbr>machine cycle ที่<wbr>ใช้ ทั้ง<wbr>หมด สามารถ<wbr>สรุป<wbr>ออก<wbr>มา<wbr>เป็น<wbr>แบบ<wbr>อย่าง<wbr>ได้<wbr>เป็น<wbr><wbr></font></font></font></dd>
+
+<dl>
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1><a href="#d1">1.
+ไซเคิลการ fetch (m1)</a></font></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1><a href="#d2">2.
+ไซเคิลการ<wbr>เขียน<wbr>หรือ<wbr>อ่าน<wbr>หน่วย<wbr>ความ<wbr>จำ<wbr><wbr></a></font></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1><a href="#d3">3.
+ไซเคิลการ<wbr>รับ<wbr>ส่ง<wbr>ข้อ<wbr>มูลอินพุทหรือ<wbr>เอาท์พุท<wbr></a></font></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1><a href="#d4">4.
+ไซเคิลการ<wbr>ต้อง<wbr>การ<wbr>ใช้บัส หรือ<wbr>การ<wbr>ตอบ<wbr>สนอง<wbr>การ<wbr>ใช้บัส<wbr></a></font></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1><a href="#d5">5.
+ไซเคิลการอินเตอร์รัพท์ และ<wbr>การ<wbr>ตอบ<wbr>สนอง<wbr>ต่อ<wbr>การอินเตอร์รัพท์<wbr></a></font></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1><a href="#d6">6.
+ไซเคิลการ<wbr>รับอินเตอร์รัพท์แบบ<wbr>นอน<wbr>มาสค์เคเบิ้ล (nonmaskable interrupt)</a></font></font></font></dd>
+</dl>
+</dl>
+<a name="d1"></a><b><u><font face="ms sans serif"><font color="#993300"><font size=-1>ไซเคิลการเฟทช์ออพโค้ด
+(ocf - opcode fetch)</font></font></font></u></b>
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>ใน<wbr>สภาวะ
+m1 นี้ เป็น<wbr>ภาวะ<wbr>เริ่ม<wbr>แรก<wbr>ของ<wbr>ทุก<wbr>คำ<wbr>สั่ง ใน<wbr>สภาวะ m1 นี้<wbr>ขอ<wbr>ให้<wbr>สังเกต<wbr>จาก<wbr>ระบบ ไดอะแก<wbr>รม<wbr>เวลา
+จะ<wbr>เห็น<wbr>สภาวะ<wbr>การ<wbr>ทำ<wbr>งาน<wbr>ของ cpu ได้<wbr>ดี กล่าว<wbr>คือ<wbr>เมื่อ<wbr>เริ่ม<wbr>เข้า<wbr>สู่<wbr>สภาวะ fetch ข้อ<wbr>มูล<wbr>จาก
+program counter จะ<wbr>ถ่าย<wbr>ลง<wbr>ไป<wbr>ยัง address bus และ<wbr>หลัง<wbr>จาก<wbr>ครึ่ง cycleของ<wbr>สัญญาณ
+นาฬิกา cpu ก็<wbr>จะ<wbr>ส่ง<wbr>สัญญาณ /mreq ซึ่ง<wbr>เป็น สัญญาณ<wbr>บอก<wbr>ว่า cpu ต้อง<wbr>การ<wbr>ติด<wbr>ต่อกับหน่วย
+ความ<wbr>จำ<wbr>และ<wbr>ขณะ<wbr>เดียว<wbr>กัน<wbr>ก็ ส่ง<wbr>สัญญาณ /rd บอก<wbr>หน่วย ความ<wbr>จำ<wbr>ว่า<wbr>ต้อง<wbr>การ /rdหรือ<wbr>อ่าน<wbr>ข้อ<wbr>มูล
+ใน<wbr>หน่วย<wbr>ความ<wbr>จำ<wbr>ตาม address ที่<wbr>ต้อง<wbr>การ และ<wbr>เมื่อ<wbr>ถึง<wbr>ขา<wbr>ลง<wbr>ของ t2 cpu จะ<wbr>ตรวจ<wbr>สอบ<wbr>สัญญาณ
+ที่<wbr>ทางขา /wait ว่า<wbr>เป็น "0" หรือ<wbr>ไม่ ถ้า<wbr>ไม่<wbr>ก็<wbr>จะ<wbr>ทำ<wbr>งาน<wbr>ต่อ<wbr>แบบ<wbr>ปกติ แต่<wbr>ถ้า<wbr>ขา /wait
+เป็น "0" cpu จะ<wbr>เพิ่ม<wbr>สภาวะ<wbr>การ<wbr>รอ (wait state) เกิด<wbr>ขึ้น การ<wbr><wbr></font></font></font></dd>
+
+<br><font face="ms sans serif"><font color="#000000"><font size=-1>อ่าน<wbr>ข้อ<wbr>มูล<wbr>จาก<wbr>หน่วย<wbr>ความ<wbr>จำ<wbr>ใน<wbr>ที่<wbr>นี้
+ถ้า<wbr>นำ<wbr>เอา สัญญาณ /mreq และ /rd เป็น<wbr>ตัว<wbr>อ่าน ข้อ<wbr>มูล<wbr>ที่ bus ข้อ<wbr>มูล<wbr>ก็<wbr>จะ<wbr>มี<wbr>ข้อ<wbr>มูล<wbr>ที่<wbr>อ่าน<wbr>ได้<wbr>ใน<wbr>ขณะ<wbr>ที่
+/mreq or /rd เป็น "0" ทั้ง<wbr>คู่ แต่ cpu จะ<wbr>รับ<wbr>การ<wbr>เปิด bus นี้<wbr>เข้า<wbr>ใน ir เพียง<wbr>ชั่ว<wbr>ขณะ<wbr>สั้น<wbr>เท่า<wbr>นั้น<wbr><wbr>(ดู<wbr>รูป)
+เมื่อ<wbr>ข้อ<wbr>มูล จาก bus เข้า ir เรียบ<wbr>ร้อย<wbr>แล้ว ก็<wbr>จบ<wbr>สภาวะ<wbr>การ fetch สัญญาณ<wbr>ที่<wbr>ขา
+/m1 ก็<wbr>จะ<wbr>เป็น "1" บอก<wbr>ว่า fetch เสร็จ แล้ว แต่<wbr>อย่าง<wbr>ไร<wbr>ก็<wbr>ตาม สภาวะ /m1 cycle
+ยัง<wbr>ไม่<wbr>หมด และ cpu จะ<wbr>ส่ง<wbr>สัญญาณ ทำ<wbr>การ refresh หน่วย<wbr>ความ<wbr>จำ ชนิดไดนา<wbr>มิกส์นั่น<wbr>คือ
+ใน address bus จะ<wbr>มี<wbr>ข้อ<wbr>มูล<wbr>ของ address ที่ ต้อง<wbr>การ refresh และ<wbr>ขา /rfsh ก็<wbr>จะ
+บอก<wbr>สภาวะ<wbr>ว่า<wbr>ต้อง<wbr>การ refresh นั่น<wbr>เอง<wbr><wbr></font></font></font>
+<center>
+<p><img src="zm1.jpg" border=2 height=316 width=574></center>
+
+<p><b><font face="ms sans serif"><font color="#000000"><font size=-1>m1
+cycle ที่<wbr>มี wait states</font></font></font></b>
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>ทุก ๆ ขา<wbr>ลง<wbr>ของ
+t2 จะ<wbr>มี<wbr>การ<wbr>ตรวจ<wbr>สอบ<wbr>ที่<wbr>ขา /wait ว่า<wbr>เป็น "0" หรือ<wbr>ไม่<wbr>สมมติ<wbr>ว่า<wbr>เป็น "0" cpu จะ<wbr>สร้าง
+state การ /wait อีก 1 cycle โดย<wbr>ที่<wbr>ค่า<wbr>สัญญาณ<wbr>อื่น ๆ ไว้<wbr>ดังเดิม และ<wbr>ทุก ๆ ขา<wbr>ลง<wbr>ของ
+tw ก็<wbr>จะ<wbr>ตรวจ<wbr>สอบ<wbr>ขา /wait อีก<wbr>เช่น<wbr>กัน ถ้า<wbr>ขา<wbr><wbr></font></font></font></dd>
+
+<br><font face="ms sans serif"><font color="#000000"><font size=-1>/wait
+เป็น "0" ก็<wbr>จะ<wbr>สร้าง tw ต่อ<wbr>ไป<wbr>อีก<wbr>และ<wbr>เป็น<wbr>เช่น<wbr>นี้ เรื่อง<wbr>ไป<wbr>ไม่<wbr>สิ้น<wbr>สุด ใน<wbr>ขณะ<wbr>ที่
+cpu สร้าง<wbr>สัญญาณ tw สัญญาณ<wbr>ขา<wbr>ต่าง ๆ จะ<wbr>ยัง<wbr>คง<wbr>ค่าเดิมไว้<wbr>หมด สัญญาณ<wbr>ต่าง ๆ เหล่า<wbr>นี้<wbr>ได้<wbr>แก่
+a0-a15, /mreq, /rd, /m1 และ /rfsh ครั้น<wbr>เมื่อ<wbr>ขา<wbr>ลง<wbr>ของ tw</font></font></font>
+<br><font face="ms sans serif"><font color="#000000"><font size=-1>cpu
+ตรวจ<wbr>สอบ<wbr>สัญญาณ /wait พบ ลอจิก "1" มัน<wbr>จะ<wbr>เริ่ม การ<wbr>อ่าน<wbr>ข้อ<wbr>มูล<wbr>จาก bus ข้อ<wbr>มูล<wbr>และ<wbr>ต่อ<wbr>ท้าย
+ด้วย t3 และ t4 ต่อ<wbr>ไป<wbr><wbr></font></font></font>
+<center>
+<p><img src="zm1wait.jpg" border=2 height=300 width=600></center>
+
+<p>
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>ประ<wbr>โยชน์<wbr>ของ<wbr>การ<wbr>ใช้
+tw ก็<wbr>ด้วย<wbr>เหตุ<wbr>ผล<wbr>ใน<wbr>การ<wbr>ยืด<wbr>ความ<wbr>กว้าง<wbr>ขอ<wbr>สัญญาณ<wbr>ต่าง ๆ เพื่อ synchronous หรือ<wbr>ให้
+ทำ<wbr>งาน<wbr>ร่วมกับอุปกรณ์<wbr>ภาย<wbr>นอก<wbr>ที่<wbr>ความ<wbr>เร็ว<wbr>ช้า<wbr>ได้ เช่น ถ้า<wbr>ต้อง<wbr>การ<wbr>อ่าน<wbr>หน่วย<wbr>ความ<wbr>จำ
+ที่<wbr>มี<wbr>ความ<wbr>เร็ว<wbr>ต่ำ เรา<wbr>จำ<wbr>เป็น ต้อง<wbr>ยืด<wbr>สัญญาณ /rd และ /mreq ออก<wbr>เพื่อ<wbr>ให้<wbr>ส่ง<wbr>ไป<wbr>ควบ<wbr>คุม<wbr>หน่วย
+ความ<wbr>จำ<wbr>ได้ เรา<wbr>ก็<wbr>สร้าง<wbr>สัญญาณ /wait cpu นั่น<wbr>เอง<wbr><wbr></font></font></font></dd>
+
+<p><a name="d2"></a><b><u><font face="ms sans serif"><font color="#993300"><font size=-1>ไซเคิลการ<wbr>อ่าน<wbr>หน่วย<wbr>ความ<wbr>จำ
+(mr - memory read cycle) และ<wbr>ไซเคิลการ<wbr>เขียน<wbr>หน่วย<wbr>ความ<wbr>จำ (mw - memory write
+cycle)</font></font></font></u></b>
+<dd>
+<font face="ms sans serif"><font size=-1>จาก<wbr>รูป แสดง diagram ของ<wbr>การ<wbr>อ่าน<wbr>และ<wbr>เขียน<wbr>หน่วย<wbr>ความ<wbr>จำ<wbr>ใน<wbr>การ<wbr>อ่าน<wbr>และ<wbr>เขียน<wbr>หน่วย<wbr>ความ<wbr>จำ<wbr>นี้
+cpu จะ<wbr>ใช้<wbr>เวลา<wbr>ทั้ง<wbr>สิ้น 3 clock cycle คือ t1,t2,t3</font></font></dd>
+
+<center>
+<p><img src="zmemrw.jpg" border=2 height=250 width=526></center>
+
+<p>
+<dd>
+<font face="ms sans serif"><font size=-1>ใน<wbr>การ<wbr>อ่าน<wbr>หน่วย<wbr>ความ<wbr>จำ<wbr>นั้น cpu จะ<wbr>ส่ง<wbr>แอดเดรส<wbr>ที่<wbr>ต้อง<wbr>การ<wbr>อ่าน<wbr>เข้า<wbr>สู่
+address bus a0-a15 ก่อน ใน<wbr>ตอน แรก<wbr>ของ machine cycle นี้<wbr>หลังจากั้น<wbr>ต่อ<wbr>มา<wbr>ก็<wbr>ส่ง<wbr>สัญญาณ
+/mreq และ /rd ออก<wbr>มา<wbr>และ ทุก<wbr>ครั้ง<wbr>ของ<wbr>ขา<wbr>ลง ใน<wbr>ช่วง<wbr>จังหวะ t2 cpu</font></font></dd>
+
+<br><font face="ms sans serif"><font size=-1>จะ<wbr>ตรวจ<wbr>สอบ<wbr>ขา /wait ว่า<wbr>เป็นลอจิก
+"0" หรือ<wbr>ไม่ ถ้า ไม่<wbr>มี cpu ก็<wbr>จะ<wbr>ทำ<wbr>งาน<wbr>ตาม<wbr>ปกติ แต่<wbr>ถ้า<wbr>เป็น "0" ก็<wbr>จะ<wbr>สร้าง tw
+เพิ่ม<wbr>ขึ้น ช่วง<wbr>จังหวะ<wbr>ที่ address bus และ<wbr>สัญญาณ /mreq, /rd ไป<wbr>ยัง<wbr>หน่วย<wbr>ความ<wbr>จำ<wbr>จะ<wbr>มี<wbr>ข้อ<wbr>มูล<wbr>ออก<wbr>จาก<wbr>หน่วย<wbr>ความ<wbr>จำ<wbr>ลง<wbr>มา<wbr>ใน
+data bus แล้ว แต่ cpu ยัง<wbr>ไม่<wbr>อ่าน จังหวะ<wbr>การ<wbr>อ่าน<wbr>ของ cpu จะ<wbr>เกิด<wbr>ขึ้น<wbr>ใน<wbr>จังหวะ<wbr>ขา<wbr>ลง<wbr>ของ
+t3 ช่วง<wbr>การ อ่าน<wbr>ของ cpu จะ<wbr>ใช้<wbr>เวลา<wbr>สั้น ๆ เพื่อ<wbr>ป้อง<wbr>กัน<wbr>การ<wbr>อ่าน<wbr>ข้อ<wbr>มูล<wbr>ผิด<wbr>พลาด
+คือ ผิด<wbr>ตำแหน่ง<wbr>แอดเดรส<wbr>หรือ อ่าน<wbr>ได้<wbr>หลาย<wbr>แอดเดรส<wbr>นั่น<wbr>เอง<wbr><wbr></font></font>
+<dd>
+<font face="ms sans serif"><font size=-1>ใน<wbr>ทำนอง<wbr>เดียว<wbr>กัน<wbr>ใน<wbr>จังหวะ<wbr>ของ /mw
+ก็<wbr>เช่น<wbr>กัน<wbr>ประกอบ<wbr>ด้วย t1,t2 และ t3 (กรณี<wbr>ไม่<wbr>มี tw) ใน<wbr>ที่<wbr>นี้ cpu จะ<wbr>สร้าง<wbr>สัญญาณ
+/mreq กับ /wr ให้ active อย่าง<wbr>ไร<wbr>ก็<wbr>ตาม cpuจะ<wbr>ส่ง<wbr>ข้อ<wbr>มูล<wbr>ออก ไป<wbr>รอ<wbr>ไว้<wbr>ที่ data
+bus ก่อน และ<wbr>ยาว<wbr>นาน<wbr>กว่า<wbr><wbr></font></font></dd>
+
+<br><font face="ms sans serif"><font size=-1>pulse การ<wbr>เขียน (/wr) การ<wbr>เขียน<wbr>ข้อ<wbr>มูล
+(/wr) จะ<wbr>ใช้ เวลา<wbr>เพียง<wbr>สั้น ๆใน<wbr>จังหวะ<wbr>ที่<wbr>ข้อ<wbr>มูล<wbr>มา รอ<wbr>อยู่<wbr>ที่ bus เรียบ<wbr>ร้อย<wbr>แล้ว<wbr><wbr></font></font>
+<center>
+<p><img src="zmemwait.jpg" border=2 height=254 width=592></center>
+
+<p>
+<dd>
+<font face="ms sans serif"><font size=-1>ใน<wbr>กรณี<wbr>ต้อง<wbr>การ<wbr>หน่วง<wbr>เวลา<wbr>การ<wbr>ทำ<wbr>งาน<wbr>ใน
+machine cycle เหล่า<wbr>นี้<wbr>สามารถ<wbr>ทำ<wbr>ได้<wbr>ด้วย<wbr>การ<wbr>สร้าง<wbr>ขา /wait ให้<wbr>มี ค่า<wbr>เป็น "0"
+ใน<wbr>ขณะ<wbr>ขา<wbr>ลง<wbr>ของ t2 ซึ่ง cpu จะ<wbr>สร้าง twขึ้น<wbr>ตราบ<wbr>เท่า<wbr>ที่<wbr>ขา /wait ยัง<wbr>คง<wbr>เป็น "0"
+อยู่<wbr><wbr></font></font></dd>
+
+<p>
+<a name="d3"></a><b><u><font face="ms sans serif"><font color="#993300"><font size=-1>ไซเคิลการ<wbr>เขียน<wbr>เอาท์พุทและ<wbr>อ่านอินพุท<wbr>(pw-port
+write and pr-port read)</font></font></font></u></b>
+<dd>
+<font face="ms sans serif"><font size=-1>ใน<wbr>การ<wbr>เขียน<wbr>เอาท์พุทและ<wbr>อ่านอินพุทก็คล้ยคลึงกับการ<wbr>เขียน<wbr>และ<wbr>อ่าน<wbr>หน่วย<wbr>ความ<wbr>จำ<wbr>นั่น<wbr>เอง
+โดย<wbr>การ<wbr>เปลี่ยน สัญญาณ /mreq เป็น /iorq เท่า<wbr>นั้น โดย diagram การ<wbr>เขียน<wbr>เอาท์พุทและ
+อ่านอินพุทแสดง<wbr>ดัง<wbr>รูป<wbr><wbr></font></font></dd>
+
+<center>
+<p><img src="zio.jpg" border=2 height=290 width=500></center>
+
+<p>
+<dd>
+<font face="ms sans serif"><font size=-1>ข้อ<wbr>แตก<wbr>ต่าง<wbr>ที่<wbr>เห็น<wbr>ได้<wbr>ชัด<wbr>เมื่อ<wbr>เทียบกับการ<wbr>เขียน<wbr>และ<wbr>อ่าน<wbr>หน่วย<wbr>ความ<wbr>จำ<wbr>อีก<wbr>ข้อ<wbr>หนึ่ง<wbr>ส่วน<wbr>ของ<wbr><wbr>แอดเดรส
+นั้น จะ<wbr>แสดง<wbr>เบอร์<wbr>พอร์ทใน<wbr>ส่วน<wbr>ของ a0-a7 เท่า<wbr>นั้น ใน<wbr>การ<wbr>ทำ<wbr>งาน<wbr>แบบ<wbr>ปกติ cpu จะ<wbr>สร้าง
+tw แทรก<wbr>เข้า<wbr>มา 1 ลูก<wbr>โดย<wbr>อัตโนมัติ แม้<wbr>จะ<wbr>ไม่<wbr>มี<wbr>การ<wbr><wbr>/wait ทั้ง<wbr>นี้<wbr>เพราะ<wbr>ช่วง<wbr>จังหวะ
+/iorq นั้น cpu จะ<wbr>สร้าง<wbr>ใน<wbr>ขณะ t2 และ<wbr><wbr>cpuจะ<wbr>ไม่<wbr>สามารถ ตรวจ<wbr>สอบ<wbr>จังหวะ /wait ใน<wbr>ขณะ<wbr>ขา<wbr>ลง<wbr>ของ
+t2 ได้ การ<wbr>ตรวจ<wbr>สอบ<wbr>ว่า /waitจะ<wbr>เกิด<wbr>ขึ้น ใน<wbr>จังหวะ<wbr>ของ tw แทน<wbr>นั่น<wbr>เอง และ<wbr>ถ้า<wbr>หาก<wbr>มี<wbr>การ
+/wait cpuก็<wbr>จะ<wbr>สร้าง<wbr>สัญญาณ tw ต่อ<wbr>มา<wbr>อีก<wbr><wbr></font></font></dd>
+
+<center>
+<p><img src="ziowait.jpg" border=2 height=291 width=516></center>
+
+<p><a name="d4"></a><b><u><font face="ms sans serif"><font color="#993300"><font size=-1>ไซเคิลการ<wbr>ขอ<wbr>ใช้บัสและ<wbr>การ<wbr>ตอบ<wbr>สนอง<wbr>การ<wbr>ให้<wbr>ใช้บั<wbr>ส
+(bus request and acknowledge cycle)</font></font></font></u></b>
+<dd>
+<font face="ms sans serif"><font size=-1>จาก<wbr>รูป เป็น diagram เวลา<wbr>ของ<wbr>การ<wbr>ขอ<wbr>ใช้บัสและ<wbr>การ<wbr>ตอบ<wbr>สนอง<wbr>ต่อ<wbr>การ<wbr>ใช้บั<wbr>ส
+การ<wbr>ใช้บัสนั้น<wbr>จะ ใช้<wbr>สัญญาณ ที่<wbr>ส่ง<wbr>เข้า<wbr>มา<wbr>ขอ<wbr>ทางขา /busrq cpuจะ<wbr>ทำ<wbr>การ<wbr>ตรวจ<wbr>สอบ<wbr>ขา
+/busrq ใน<wbr>ขณะ สัญญาณ<wbr>นาฬิกา<wbr>กำลัง<wbr>จะ เปลี่ยน<wbr>จาก "0" ไป<wbr>เป็น "1" ใน<wbr>ขณะ<wbr>สัญญาณ
+state สุด<wbr>ท้าย<wbr>ของ<wbr>ทุก ๆ mcycle ถ้า /busrq แอคตีฟ cpu จะ<wbr>ทำ<wbr>การ<wbr>เซท address bus
+และ data bus ให้<wbr>อยู่<wbr>ใน<wbr>สถานะ ไตร<wbr>เสตทใน<wbr>สัญญาณ<wbr>นาฬิกา<wbr>ลูก<wbr>ต่อ<wbr>มา และ cpu ก็<wbr>จะ<wbr>ส่ง<wbr>สัญญาณ<wbr>ตอบ<wbr>รับ<wbr>การ<wbr>ขอ<wbr>ใช้บั<wbr>ส
+(/busak) เมื่อ cpu ควบ<wbr>คุม<wbr>ไต<wbr>รสเตท แล้ว<wbr>อุปกรณ์<wbr>ภาย<wbr>นอก<wbr>ก็<wbr>จะ<wbr>ใช้บัสได้<wbr>ซึ่ง<wbr>อาจ<wbr>จะ<wbr>เป็น<wbr>กรรม<wbr>วิธี<wbr>การ
+dma(direct memory access) หรือ การ<wbr>ติด<wbr>ต่อ<wbr>ระหว่าง<wbr>อุปกรณ์ i/o กับหน่วย<wbr>ความ<wbr>จำ<wbr>โดย<wbr>ตรง<wbr>ได้
+กรณี<wbr>เช่น<wbr>นี้<wbr>ทำ<wbr>ให้<wbr>การ<wbr>ถ่าย<wbr>ข้อ<wbr>มูล<wbr>เป็น<wbr>ไป<wbr>ได้<wbr>เร็ว<wbr>กว่า<wbr>การ<wbr>ใช้ cpu ควบ<wbr>คุม<wbr>โดย<wbr>ตรง<wbr>การ<wbr>ถ่าย<wbr>เท<wbr>ข้อ<wbr>มูล
+ใน<wbr>กรณี<wbr>นี้<wbr>มัก<wbr>ใช้<wbr>สำหรับ<wbr>การ<wbr>ถ่าย<wbr>ข้อ<wbr>มูล<wbr>เป็น<wbr>จำนวน<wbr>มาก ขณะ<wbr>มี<wbr>การ<wbr>ขอ<wbr>ใช้บัสนี้ cpu
+จะ<wbr>ตรวจ<wbr>สอบ<wbr>ขา /busrq ทุก ๆ สเตท เช่น<wbr>กัน และ<wbr>ถ้า /busrq เป็น "1" เมื่อ<wbr>ใด<wbr>ใน<wbr>สัญญาณ<wbr>นาฬิกาสเตทต่อ<wbr>ไป<wbr>ก็<wbr>จะ<wbr>ส่ง
+/busak = "1" เพื่อ<wbr>บอก<wbr>เลิก<wbr>การ<wbr>ใช้บัส และ การ<wbr>ควบ<wbr>คุม<wbr>ไต<wbr>รสเตทหมด<wbr>สิ้น<wbr>ภาระ<wbr>กิจ<wbr><wbr></font></font></dd>
+
+<center>
+<p><img src="zbus.jpg" border=2 height=280 width=616></center>
+<p>
+<dd>
+<font face="ms sans serif"><font size=-1>ใน<wbr>ขณะ<wbr>การ<wbr>ใช้บัสใน<wbr>กรณี<wbr>นี้ cpu ไม่<wbr>สามารถ<wbr>ตอบ<wbr>สนอง<wbr>ต่อ<wbr>การอินเตอร์รัพท์ได้<wbr>ไม่<wbr>ว่า<wbr>จะ<wbr>เป็น<wbr>การ
+อินเตอร์รัพท์ แบบ /nmi หรือ /int ก็<wbr>ตาม<wbr><wbr></font></font></dd>
+
+<p><a name="d5"></a><b><u><font face="ms sans serif"><font color="#993300"><font size=-1>ไซเคิลการ<wbr>รับ<wbr>สัญญาณอินเตอร์รัพท์และ<wbr>การ<wbr>ตอบ<wbr>สนอง<wbr>ต่อ<wbr>สัญญาณอินเตอร์รัพท<wbr>์
+(interrupt request and acknowledge cycle)</font></font></font></u></b>
+<center>
+<p><img src="zint.jpg" border=2 height=311 width=526></center>
+
+<p>
+<dd>
+<font face="ms sans serif"><font size=-1>จาก<wbr>รูป เป็น<wbr>การ<wbr>แสดง diagram เวลา<wbr>ของ<wbr>การอินเตอร์รัพท<wbr>์
+cpu, cpu จะ<wbr>ทำ<wbr>กร<wbr>ตรวจ<wbr>สอบ<wbr>สัญญาณ int ทุก ๆ pulse สัญญาณ<wbr>นาฬิกา<wbr>ลูก<wbr>สุด<wbr>ท้าย<wbr>ของ<wbr>ทุก<wbr>คำ<wbr>สั่ง<wbr>ที่<wbr>กระ<wbr>ทำ<wbr>แต่<wbr>อย่าง<wbr>ไร<wbr>ก็<wbr>ตาม<wbr>การ<wbr>ตรวจ<wbr>สอบ
+นี้<wbr>จะ<wbr>ไม่<wbr>เกิด<wbr>ผล<wbr>หาก software ได้<wbr>สั่ง di</font></font></dd>
+
+<br><font face="ms sans serif"><font size=-1>(disable interrupt) ซึ่ง<wbr>จะ<wbr>ทำ<wbr>ให้อินเตอร์รัพท<wbr>์
+flip-flop ภาย ใน<wbr>ไม่<wbr>ได้<wbr>รับ<wbr>การ<wbr>เซท นอก<wbr>จาก<wbr>นี้ สัญญาณ /busrq แอคตีฟ การอินเตอร์รัพท์ก็<wbr>ไม่<wbr>ได้<wbr>รับ<wbr>การ<wbr>ตอบ<wbr>สนอง
+เช่น<wbr>กัน เมื่อ<wbr>การ<wbr>ตอบ<wbr>สนอง<wbr>ต่อ /int เกิด<wbr>ขึ้น cpu จะ<wbr>สร้าง<wbr>สถานะ<wbr>พิเศษ<wbr>ใน /m1</font></font>
+<br><font face="ms sans serif"><font size=-1>ต่อ<wbr>มา ใน สถานะ<wbr>พิเศษ<wbr>ของ /m1
+นี้ /iorq จะ<wbr>แอคตีฟแทน /mreq เพื่อ<wbr>เป็น<wbr>การ<wbr>ตอบ<wbr>สนอง<wbr>ต่อ<wbr>การอินเตอร์<wbr>- รัพท์และ<wbr>ตอน<wbr>ท้าย<wbr>ของ
+/iorq cpu จะ<wbr>ทำ<wbr>การ<wbr>อ่าน<wbr>ข้อ<wbr>มูล 8 บิท เป็น เวคเตอร์สำหรับ<wbr>การ อินเตอร์รัพท์จาก
+data bus สังเกต<wbr>ว่า<wbr>ใน<wbr><wbr></font></font>
+<br><font face="ms sans serif"><font size=-1>กรณี<wbr>นี้ cpu จะ<wbr>สร้าง<wbr>สัญญาณ
+tw สองสเตทขึ้น อย่าง อัตโนมัติ การ<wbr>สร้าง tw ขึ้น<wbr>มา<wbr>ก็<wbr>เพื่อ<wbr>ชลอเวลา<wbr>ให้<wbr>อุปกรณ์<wbr>ภาย<wbr>นอก<wbr>ตรวจ<wbr>สอบ<wbr>ตัว<wbr>อุปกรณ์<wbr>ที่<wbr>สร้าง
+อินเตอร์รัพท์ และ จัด<wbr>ลำ<wbr>ดับ<wbr>ความ สำคัญ (priority) ของ<wbr>สัญญาณ<wbr>ที่อินเตอร์รัพท์<wbr></font></font>
+<center>
+<p><img src="zintwait.jpg" border=2 height=311 width=600></center>
+
+<p>
+<dd>
+<font face="ms sans serif"><font size=-1>เรา<wbr>ยัง<wbr>สามารถ<wbr>เพิ่มสเตทการ /wait
+ขึ้น<wbr>อีก<wbr>ได้<wbr>เพื่อ<wbr>ให้ cpu รอ<wbr>อุปกรณ์<wbr>ที่<wbr>จะ<wbr>ส่ง<wbr>เวคเตอร์ ของ<wbr>การ อินเตอร์รัพท์ทา<wbr>ง
+data bus</font></font></dd>
+
+<p><a name="d6"></a><b><u><font face="ms sans serif"><font color="#993300"><font size=-1>ไซเคิลการ<wbr>ตอบ<wbr>สนอง<wbr>ต่อ<wbr>การอินเตอร์รัพท์แบบ<wbr>นอน<wbr>มาสเคเบิ้ลอินเตอร์รัพท<wbr>์
+(nonmaskable interrupt response)</font></font></font></u></b>
+<dd>
+<font face="ms sans serif"><font size=-1>จาก<wbr>รูป เป็น diagram เวลา<wbr>ของ<wbr>การ<wbr>ตอบ<wbr>สนอง<wbr>ต่อ<wbr>การอินเตอร์รัพท์แบบ
+nonmaskable เมื่อ<wbr>ถึง pulse ของ<wbr>สัญญาณ<wbr>นาฬิกา<wbr>ลูก<wbr>สุด<wbr>ท้าย<wbr>ก่อน<wbr>การก<wbr>ระ<wbr>ทำ<wbr>การ<wbr>จบ<wbr>คำ<wbr>สั่ง
+แต่<wbr>ละ<wbr>คำ<wbr>สั่ง cpuจะ<wbr>ทำ<wbr>การ<wbr>ตรวจ<wbr>สอบ ขา /nmi และ<wbr>ถ้า /nmi มี<wbr>ค่า<wbr>แอคตีฟ (=0) cpu
+ก็<wbr>จะ latch ไว้<wbr>แล้ว<wbr>ตอบ<wbr>สนอง<wbr>ต่อ<wbr>การอินเตอร์รัพท์ ทัน<wbr>ที การอินเตอร์รัพท์ด้วย<wbr><wbr></font></font></dd>
+
+<br><font face="ms sans serif"><font size=-1>วิธี<wbr>นี้<wbr>ถือ<wbr>ว่า cpu ให้<wbr>ความ<wbr>สำคัญ<wbr>สูง<wbr>สุด
+และ<wbr>ขบวน<wbr>การ<wbr>ทาง software ก็<wbr>ไม่<wbr>สามารถ<wbr>ที่<wbr>จะ<wbr>ป้อง<wbr>กัน<wbr>ไม่<wbr>ให้ cpu ตอบ<wbr>สนอง<wbr>ได้ การ<wbr>ตอบ<wbr>สนอง<wbr>จะ<wbr>เกิด<wbr>ขึ้น<wbr>ทัน<wbr>ที<wbr>ดัง<wbr>นั้น<wbr>การอินเตอร์รัพท์ด้วยวิะีนี้<wbr>จึง<wbr>นำ<wbr>มา<wbr>ใช้<wbr>ใน<wbr>กรณี<wbr>ที่
+สำคัญ<wbr>เป็น<wbr>พิเศษ การอินเตอร์รัพท์วิธี<wbr>นี้<wbr><wbr></font></font>
+<br><font face="ms sans serif"><font size=-1>cpu จะ<wbr>ส่ง<wbr>ข้อ<wbr>มูล เดิมที่<wbr>อยู่<wbr>ใน
+program counter ไป<wbr>เก็บ<wbr>ไว้<wbr>ที่ stack แล้ว<wbr>เซทค่า program counter เป็น<wbr>ค่า 0066h
+เพื่อ กระ<wbr>ทำ<wbr>ใน<wbr>ส่วน<wbr>ของ<wbr>โปรแกรม<wbr>ย่อย<wbr>ที่<wbr>ตำแหน่ง 0066h</font></font>
+<center>
+<p><img src="znmi.jpg" border=2 height=310 width=600>
+</center>
+
+<p><img src="zpinsh.jpg" height=50 width=250>
+<dd>
+<font face="ms sans serif"><font size=-1>z-80 ซี<wbr>พียูเป็น<wbr>ไอ<wbr>ชี<wbr>ไมโคร<wbr>โปรเซสเซอร์<wbr>ที่<wbr>มี<wbr>ขา<wbr>เพียง
+40 ขา<wbr>โดย<wbr>หลัก<wbr>การ<wbr>แล้ว z-80 เป็น ซี<wbr>พียู ได้<wbr>โดย สมบูรณ์<wbr>กล่าว<wbr>คือ<wbr><wbr>z-80ไม่<wbr>ต้อง<wbr>ประกอบกับอุปกรณ์<wbr>ประกอบ<wbr>อื่น<wbr>ที่<wbr>จะ<wbr>แยก<wbr>การ<wbr>ทำ<wbr>งาน<wbr>เพื่อ
+รวม<wbr>เป็น<wbr>ซี<wbr>พียูส่วน<wbr>ของ<wbr>สัญญาณ<wbr>จะ<wbr>ประ<wbr>กอย<wbr>ด้วยบัสแอดเดรส บัสข้อ<wbr>มูล<wbr>และ<wbr>สัญญาณ<wbr>ควบ<wbr>คุม
+การ<wbr>จัด<wbr>วาง<wbr>ขา แสดง<wbr>ได้<wbr>ดัง<wbr>รูป<wbr><wbr></font></font></dd>
+
+<center>
+<p><img src="zpin.jpg" border=2 height=523 width=500></center>
+
+<p><b><font face="ms sans serif"><font size=-1>ราย<wbr>ละเอียด<wbr>ของ<wbr>ขา<wbr>ต่าง ๆ แสดง<wbr>ได้<wbr>ดัง<wbr>นี้<wbr><wbr></font></font></b>
+<dd>
+<b><font face="ms sans serif"><font color="#ff0000"><font size=-1>a<sub>0</sub>
+- a<sub>15</sub></font></font></font></b></dd>
+
+<dd>
+<font face="ms sans serif"><font size=-1>บัสแอดเดรส สัญญาณ<wbr>ที่<wbr>ออก<wbr>มา<wbr>จาก<wbr>ขา<wbr>ไอ<wbr>ซี<wbr>เหล่า<wbr>นี้<wbr>จะ<wbr>ให้<wbr>แอคตีฟขณะ
+high โดย<wbr>ขา<wbr>เหล่า<wbr>นี้<wbr>เป็น เอาท์พุทแบบ<wbr>ไต<wbr>รสเตท บัสแอดเดรส<wbr>มี<wbr>ด้วย<wbr>กัน<wbr>ทั้ง<wbr>หมด<wbr><wbr>16สาย<wbr>เพื่อ<wbr>ให้<wbr>ซี<wbr>พียูติด<wbr>ต่อกับหน่วย
+ความ<wbr>จำ<wbr>ได้<wbr>มาก<wbr>ถึง 2<sup>16</sup> = 64 k ไบท์นอก<wbr>จาก<wbr>นี้<wbr>ส่วน<wbr>ของ<wbr><wbr></font></font></dd>
+
+<br><font face="ms sans serif"><font size=-1>แอดเดรส<wbr>ยัง<wbr>เป็น<wbr>ตัว<wbr>กำหนด<wbr>เบอร์
+พอร์ทของ<wbr>อุปกรณ์อินพุท<wbr>-เอาท์พุทโดย<wbr>ขณะ<wbr>ที่<wbr>ซี<wbr>พียูกระ<wbr>ทำ<wbr>คำ<wbr>สั่ง<wbr>เกี่ยวกับอินพุทหรือ<wbr>เอาท์พุ<wbr>ท
+ค่า<wbr>ของ<wbr>แอดเดรสบัสใน 8 บิทล่าง (a<sub>0</sub> - a<sub>7</sub>) จะ<wbr>แสดง<wbr>ค่า<wbr>เบอร์<wbr>พอร์ทดัง<wbr>นั้น<wbr>เรา<wbr>จึง<wbr>มี<wbr>อุปกรณ์อินพุทหรือ<wbr>เอาท์พุทได้
+ทั้ง<wbr>หมด 2<sup>8</sup> = 256 พอร์ท และ<wbr>ใน<wbr>ขณะ<wbr>ช่วง<wbr>เวลา<wbr>รีเฟทชโดย<wbr>เมื่อ<wbr>สัญญาณ<wbr>รีเฟร<wbr>ช
+ปรากฎ<wbr>ขึ้น<wbr>ที่<wbr>ขา<wbr>รีเฟรช (/rfsh) ค่า<wbr>ใน<wbr>แอดเดรสบัส a<sub>0</sub> - a<sub>7</sub>จะ<wbr>แสดง<wbr>ค่า<wbr>แอดเดรส<wbr>ของ<wbr>หน่วย
+ความ<wbr>จำ<wbr>ที่<wbr>จะ<wbr>ได้<wbr>รับ<wbr>การก<wbr>ระ<wbr>ทำ<wbr>การ<wbr>รีเฟรช<wbr></font></font>
+<dd>
+<b><font face="ms sans serif"><font color="#0000ff"><font size=-1>d<sub>0</sub>
+- d<sub>7</sub></font></font></font></b></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>บัสข้อ<wbr>มูล
+(data bus) เป็น<wbr>ลักษณะบัสแบบ<wbr>สอง<wbr>ทิศ<wbr>ทาง z-80 ซี<wbr>พียูมีบัสข้อ<wbr>มูล 8 เส้น บัสข้อ<wbr>มูล
+เป็น<wbr>เส้น<wbr>ทางผ่าน<wbr>ของ<wbr>ข้อ<wbr>มูล<wbr>ระหว่าง ซี<wbr>พียูกับหน่วย<wbr>ความ<wbr>จำ<wbr>ซี<wbr>พียู กับอุปกรณ์อินพุท<wbr>-เอา<wbr>พุทหรือ<wbr>การ<wbr>ติด<wbr>ต่อ<wbr>ระหว่าง<wbr>อุปกรณ์อินพุท<wbr>-เอาท์พุทกับหน่วย<wbr>ความ<wbr>จำ<wbr><wbr></font></font></font></dd>
+
+<dd>
+<b><font face="ms sans serif"><font color="#cccc00"><font size=-1>/m1</font></font></font></b></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>(machine
+cycle one) มี<wbr>ลักษณะ<wbr>เป็น<wbr>แอคตีฟที่ลอจิก "0" /m1เป็น<wbr>ส่วน<wbr>ที่<wbr>จะ<wbr>บอก<wbr>ให้<wbr>ทราบ<wbr>ว่า<wbr>ขณะ<wbr>นี้
+ซี<wbr>พียูกำลัง<wbr>อยู่<wbr>ใน<wbr>สภาวะเฟทช์ ใน<wbr>ขณะ<wbr>ที่<wbr>ซี<wbr>พียูเฟทช์คำ<wbr>สั่ง<wbr>ที่<wbr>มี<wbr>ออพโค้ด<wbr>สองไบท<wbr>์
+ส่วน<wbr>ของ /m1 จะ<wbr>สร้าง<wbr>ขี้นขณะเฟทช์ใน<wbr>แต่<wbr>ละไบท์ลักษณะ<wbr>ของ<wbr>คำ<wbr>สั่ง<wbr>ที่<wbr>มี<wbr>ออพโค้ด สองไบท์จะ<wbr>ขึ้น<wbr>ต้น<wbr>ด้วย
+cbh, ddh, edh, fdh (h ต่อ<wbr>ท้าย<wbr>หมาย<wbr>ถึง<wbr>ตัว<wbr>เลข<wbr>ฐาน<wbr>สิบ<wbr>หก) นอก<wbr>จาก<wbr>นี้ /m1 ยัง<wbr>สร้าง<wbr>สัญญาณ<wbr>ร่วม
+กับ<wbr>/iorq เพื่อ<wbr>บอก<wbr>สถานะ<wbr>การ<wbr>ตอบ<wbr>รับ<wbr>การอินเตอร์รัพท์<wbr></font></font></font></dd>
+
+<dd>
+<b><font face="ms sans serif"><font color="#f400f4"><font size=-1>/mreq</font></font></font></b></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>(memory
+request) เป็น<wbr>ลักษณะ<wbr>ไต<wbr>รสเตท ให้ลอจิก<wbr>แอคตีฟที่ "0" เป็น<wbr>สาย<wbr>สัญญาณ ที่<wbr>บอก<wbr>ให้<wbr>ทราบ
+ว่า<wbr>ซี<wbr>พียูต้อง<wbr>การ<wbr>เขียน<wbr>หรือ<wbr>อ่าน<wbr>หน่วย<wbr>ความ<wbr>จำ<wbr>ตาม<wbr>แอดเดรส<wbr>ที่ปรากฏอยู่<wbr>ใน<wbr>แอดเดรสบัส<wbr></font></font></font></dd>
+
+<dd>
+<b><font face="ms sans serif"><font color="#ff8000"><font size=-1>/ioreq</font></font></font></b></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>(input
+output request) เป็น<wbr>เอาท์พุทลักษณะ<wbr>ไต<wbr>รสเตทให้ลอจิก<wbr>แอคตีฟที่ "0" เป็น<wbr>สัญญาณ<wbr>ที่<wbr>บอก
+ให้<wbr>ทราบ<wbr>ว่า ซี<wbr>พียูต้อง<wbr>การ<wbr>ติด<wbr>ต่อ กับอุปกรณ์อินพุท<wbr>-เอาท์พุท โดย<wbr>แอดเดรสบั<wbr>ส
+8 บิทล่าง<wbr>จะ<wbr>ให้<wbr>แสดง<wbr>ค่า<wbr>เบอร์<wbr>พอร์ทส่วนบัสข้อ<wbr>มูล<wbr>จะ<wbr>แสดง<wbr>ข้อ<wbr>มูล<wbr>ที่<wbr>จะ<wbr>มี<wbr>การ<wbr>ส่ง<wbr>ถ่าย
+ระหว่าง<wbr>ซี<wbr>พียูกับ i/o นอก<wbr>จาก<wbr>นี้ /iorq ถ้า<wbr>เกิด<wbr>ขึ้น<wbr>พร้อมกับสัญญาณ /m1 เป็น<wbr>ตัว<wbr>บอก<wbr>ถึง<wbr>สถานะ<wbr>ที่<wbr>ซี<wbr>พียูกำลัง<wbr>ตอบ<wbr>สนอง
+ผล<wbr>การอินเตอร์รัพท์ โดย<wbr>ขณะ<wbr>นี้<wbr>ส่วน<wbr>ของบัสข้อ<wbr>มูล<wbr>จะ<wbr>มี<wbr>การ<wbr>ส่ง<wbr>ผ่าน<wbr>เข้า<wbr>มา<wbr>ด้วย<wbr>ค่า<wbr>ของอินเตอร์รัพท์เวคเตอร์<wbr></font></font></font></dd>
+
+<dd>
+<b><font face="ms sans serif"><font color="#00b500"><font size=-1>/rd</font></font></font></b></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>(memory
+read) เป็น<wbr>เอาท์พุทที่<wbr>ไต<wbr>รสเตทและ<wbr>แอคตีฟขณะลอจิก "0" /rd เป็น<wbr>ตัว<wbr>บอก<wbr>ว่า<wbr>ขณะ<wbr>นี้
+ซี<wbr>พียูต้อง<wbr>การ<wbr>อ่าน<wbr>ข้อ<wbr>มูล<wbr>จาก<wbr>หน่วย<wbr>ความ<wbr>จำ<wbr>หรือ<wbr>อุปกรณ์ i/o</font></font></font></dd>
+
+<dd>
+<b><font face="ms sans serif"><font color="#8080c0"><font size=-1>/wr</font></font></font></b></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>(memory
+write) เป็น<wbr>ขา<wbr>เอาท์พุทแบบ<wbr>ไต<wbr>รสเตท และ<wbr>แอคตีฟขณะลอจิก "0" /wr</font></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>เป็น<wbr>สัญญาณ<wbr>บอก
+ว่า<wbr>ซี<wbr>พียูต้อง<wbr>การ<wbr>เขียน<wbr>ข้อ<wbr>มูล<wbr>โดย<wbr>จะ<wbr>เขียน<wbr>ข้อ<wbr>มูล<wbr>ใน<wbr>ตำแหน่ง<wbr>ที่<wbr>แอดเดรสบัสกำหนด<wbr>ขึ้น<wbr>อาจเป<wbr>็นหน่วย<wbr>ความ<wbr>จำ<wbr>หรือ<wbr>อุปกรณ์
+i/o ก็<wbr>ได้<wbr><wbr></font></font></font></dd>
+
+<dd>
+<b><font face="ms sans serif"><font color="#b76f6f"><font size=-1>/rfsh</font></font></font></b></dd>
+
+<dd>
+<font face="ms sans serif"><font size=-1><font color="#000000">(refesh)
+เป็น<wbr>ขา<wbr>เอาท์พุทแอคตีฟขณะลอจิก "0" /rfsh เป็น<wbr>สัญญาณ<wbr>ที่<wbr>จะ<wbr>บอก<wbr>ให้<wbr>ทราบ<wbr>ว่า<wbr>สัญญาณ<wbr>ใน<wbr>แอดเดรสบั<wbr>ส
+ใน<wbr>ส่วน </font>a<sub>0</sub> - a<sub>6 </sub><font color="#000000">เป็น<wbr>แอดเดรส<wbr>ที่<wbr>จะ<wbr>ใช้<wbr>ใน<wbr>การ<wbr>รีเฟรชหน่วย<wbr>ความ<wbr>จำ
+ชนิดไดนา<wbr>มิกส์ ส่วน<wbr>บิท </font>a<sub>0</sub><font color="#000000"> จะ<wbr>เป็น
+"0" ส่วน<wbr>บิท </font>a<sub>8</sub> - a<sub>15 </sub><font color="#000000">จะ<wbr>แสดง<wbr>ค่า<wbr>ของ<wbr>รีจีสเตอร์<wbr></font></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font size=-1><b><font color="#0000ff">/halt
+</font></b><font color="#000000">(halt
+state) เป็น<wbr>เอาท์พุทที่<wbr>แอคตีฟด้วยลอจิก "0" สัญญาณ /haltจะ<wbr>แสดง<wbr>เมื่อ<wbr>ซี<wbr>พียูได้<wbr>กระ<wbr>ทำ
+คำ<wbr>สั่ง halt และ<wbr>จะ<wbr>หยุด<wbr>รอ<wbr>จน<wbr>กว่า<wbr>จะ<wbr>มี<wbr>การอินเตอร์รัพท์หรือ<wbr>รี<wbr>เซท ขณะ<wbr>ที่<wbr>อยู่<wbr>ใน<wbr>ช่วง
+halt ซี<wbr>พียูจะ เสมือน<wbr>กำลัง<wbr>กระ<wbr>ทำ<wbr>คำ<wbr>สั่ง nop (no</font></font></font></dd>
+
+<br><font face="ms sans serif"><font color="#000000"><font size=-1>operation)
+เพื่อ<wbr>ให้<wbr>เกิด<wbr>ไซเคิลใน<wbr>การ<wbr>ทำ<wbr>งาน<wbr>เพื่อ ส่ง<wbr>สัญญาณ<wbr>ไป<wbr>กระ<wbr>ทำ<wbr>การ<wbr>รีเฟรชหน่วย<wbr>ความ<wbr>จำ<wbr>ชนิดไดนา<wbr>มิกส์<wbr></font></font></font>
+<dd>
+<b><font face="ms sans serif"><font color="#ff0000"><font size=-1>/wait</font></font></font></b></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>(wait)
+เป็น<wbr>ขาอินพุท จะ<wbr>แอคตีฟด้วยลอจิก "0" /waitเป็น<wbr>ตัว<wbr>กำหนด<wbr>แสดง<wbr>เพื่อ<wbr>บอก<wbr>ซี<wbr>พีย<wbr>ู
+ให้<wbr>ซี<wbr>พียูหยุด<wbr>รอ ใน<wbr>กรณี<wbr>ที่<wbr>อุปกรณ์ อินพุท<wbr>-เอาท์พุท หรือ<wbr>หน่วย<wbr>ความ<wbr>จำ<wbr>ไม่<wbr>สามารถ<wbr>รับ<wbr>หรือ
+ส่ง<wbr>ข้อ<wbr>มูล<wbr>ได้<wbr>ทัน /wait จะ<wbr>เป็น<wbr>ตัว<wbr>ทำ<wbr>ให้<wbr>ซี<wbr>พียู ซิงค์ได้<wbr>พอ<wbr>ดีกับ<wbr></font></font></font></dd>
+
+<br><font face="ms sans serif"><font color="#000000"><font size=-1>อุปกรณ์อินพุทเอาท์พุทที่<wbr>ทำ
+งาน<wbr>ด้วย<wbr>ความ<wbr>เร็ว<wbr>ช้า ๆ<wbr></font></font></font>
+<dd>
+<b><font face="ms sans serif"><font color="#ff80ff"><font size=-1>/int</font></font></font></b></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>(interrupt
+request) เป็น<wbr>ขาอินพุท แอคตีฟด้วยลอจิก "0" /int เป็น<wbr>สัญญาณ<wbr>ที่<wbr>สร้าง<wbr>ขึ้น<wbr>มา<wbr>จาก
+อุปกรณ์อินพุทเอาท์พุทเพื่อ<wbr>ต้อง<wbr>การ<wbr>ที่<wbr>จะอินเตอร์รัพท์ซี<wbr>พียู ซี<wbr>พียูจะ<wbr>ทำ<wbr>การ<wbr>ตรวจ<wbr>สอบ<wbr>สัญญาณ
+นี้<wbr>ทุก ๆ ครั้ง<wbr>ที่<wbr>จบ<wbr>การก<wbr>ระ<wbr>ทำ<wbr>แต่<wbr>ละ<wbr>คำ<wbr>สั่ง<wbr>การ<wbr>ตอบ<wbr>สนอง<wbr>ของ<wbr>ตัว<wbr>การอินเตอร์รัพท์สามารถ
+ควบ<wbr>คุม<wbr>ได้<wbr>ด้วย ซอฟท์แวร์<wbr>ด้วย<wbr>การ<wbr><wbr></font></font></font></dd>
+
+<br><font face="ms sans serif"><font color="#000000"><font size=-1>เซทค่าอินเตอร์รัพท์ฟลิบฟลอบ
+(iff) การ<wbr>ตอบ<wbr>สนองอินเตอร์รัพท์จะ<wbr>เกิด<wbr>ได้ ยัง<wbr>ต้อง<wbr>ให้ /busrq ไม่<wbr>แอคตีฟ เมื่อ<wbr>ซี<wbr>พียูตอบ<wbr>สนอง<wbr>ต่อ<wbr>การ
+อินเตอร์รัพท์ ซี<wbr>พียูจะ<wbr>สร้าง<wbr>สัญญาณ<wbr>ตอบ<wbr>ด้วย<wbr>การ<wbr>สร้าง<wbr>สัญญาณ /iorq ระหว่าง<wbr>ช่วง<wbr>เวลา
+/m1</font></font></font>
+<br><font face="ms sans serif"><font color="#000000"><font size=-1>การ<wbr>ตอบ<wbr>สนอง
+ต่อ<wbr>การอินเตอร์รัพท์มี<wbr>แยก<wbr>แยะ<wbr>ได้ 3 แบบ ซึ่ง<wbr>จะ<wbr>อธิบาย<wbr>ใน<wbr>หัว<wbr>ข้อ<wbr>การอินเตอร์รัพท์<wbr></font></font></font>
+<dd>
+<b><font face="ms sans serif"><font color="#00e6e6"><font size=-1>/nmi</font></font></font></b></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>(nonmaskable
+interrupt) เป็น<wbr>ขาอินพุทที่<wbr>จะทริก<wbr>บอก<wbr>ซี<wbr>พียูใน<wbr>ขณะ<wbr>ขอบพัลซ์ ขา<wbr>ลง<wbr>การอินเตอร์รัพท<wbr>์
+ด้วย<wbr>วิธี<wbr>นี้ ซี<wbr>พียูจะ<wbr>ให้<wbr>ความ<wbr>สำคัญ<wbr>สูง<wbr>กว่า /intกล่าว<wbr>คือ มัน<wbr>จะ<wbr>ตอบ<wbr>สนอง<wbr>และ<wbr>กระ<wbr>ทำ
+ทัน<wbr>ที<wbr>ด้วย การ<wbr>เริ่ม<wbr>เอ็ก<wbr>ซี<wbr>คิ้ว คำ<wbr>สั่ง<wbr>ใน<wbr>ตำแหน่ง 0066h</font></font></font></dd>
+
+<br><font face="ms sans serif"><font color="#000000"><font size=-1>โดย<wbr>อัตโนมัติ
+การก<wbr>ระ<wbr>โดด<wbr>ไป<wbr>กระ<wbr>ทำ<wbr>ใน<wbr>กรณี<wbr>นี้ ซี<wbr>พียูจะ<wbr>เก็บ<wbr>ค่า<wbr>โปรแกรมเคาร์เตอร์ เดิมไว้<wbr>ในสแต<wbr>ค
+เพื่อ<wbr>จะ<wbr>ได้<wbr>กลับ<wbr>ไป<wbr>ทำ<wbr>งานเดิม เมื่อ<wbr>เสร็จ<wbr>สิ้น การอินเตอร์รัพท์ได้<wbr><wbr></font></font></font>
+<dd>
+<b><font face="ms sans serif"><font color="#baba74"><font size=-1>/reset</font></font></font></b></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>(reset)
+เป็น<wbr>ขาอินพุทที่<wbr>แอคตีฟด้วยลอจิก "0" การ<wbr>รี<wbr>เซทใน<wbr>กรณี<wbr>นี้<wbr>จะ<wbr>มี<wbr>ผล<wbr>ดัง<wbr>นี้<wbr><wbr></font></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>1.
+ค่า<wbr>ของ pc มี<wbr>ค่า<wbr>เป็น "0"</font></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>2.
+iff จะ<wbr>ได้<wbr>รับ<wbr>การ disable</font></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>3.
+รีจิสเตอร์ r จะ<wbr>มี<wbr>ค่า 00h</font></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>4.
+จะ<wbr>มี<wbr>การ<wbr>เซทอินเตอร์รพท์โหมด<wbr>มา<wbr>อยู่<wbr>ที่<wbr>โหมด 0</font></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>ระหว่าง<wbr>การ<wbr>รี<wbr>เซทสาย<wbr>แอดเดรสบัสและบัสข้อ<wbr>มูล<wbr>จะ<wbr>ได้<wbr>รับ<wbr>การก<wbr>ระ<wbr>ทำ<wbr>ให้<wbr>มี<wbr>ค่าอิมพี<wbr>แดน<wbr>สูง
+เพื่อ<wbr>แยก<wbr>ออก<wbr>จาก<wbr>ซี<wbr>พียู ส่วน<wbr>สาย<wbr>สัญญาณ ควบ<wbr>คุม<wbr>จะ<wbr>ได้<wbr>รับ<wbr>การ<wbr>ทำ<wbr>ให้ เป็น<wbr>สัญญาณ<wbr>ที่<wbr>ไม่<wbr>แอคตี<wbr>ฟ
+การ<wbr>รีเฟรชจะ<wbr>ไม่<wbr>เกิด<wbr>ขึ้น<wbr><wbr></font></font></font></dd>
+
+<dd>
+<b><font face="ms sans serif"><font color="#dbdb00"><font size=-1>/busrq</font></font></font></b></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>(bus
+request) เป็น<wbr>ขาอินพุทที่<wbr>แอคตีฟด้วยลอจิก "0" /busrq เป็น<wbr>สัญญาณ<wbr>ที่<wbr>ส่ง<wbr>บอกกับซี<wbr>พีย<wbr>ู
+เพื่อ<wbr>ต้อง<wbr>การ<wbr>ให้<wbr>ซี<wbr>พียูควยคุมบัสก<wbr>ล่าวคือ<wbr>ต้อง<wbr>การ<wbr>ให้<wbr>ซี<wbr>พียูทำ<wbr>ให้บัสแอดเดรส<wbr>และบัสข้อม<wbr>ูลอยู่
+ใน<wbr>สถานะอิมพี<wbr>แดนข์สูง คือ<wbr>ต้อง<wbr>การ<wbr>แยก<wbr>ซี<wbr>พียูออก<wbr>จากบัสนั้น<wbr>เอง<wbr><wbr></font></font></font></dd>
+
+<dd>
+<b><font face="ms sans serif"><font color="#ff84c1"><font size=-1>/busak</font></font></font></b></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>(bus
+acknowledge) เป็น<wbr>ขา<wbr>เอาท์พุท แอคตีฟขณะลอจิก "0" /busak เป็น<wbr>สัญญาณ<wbr>ตอบ<wbr>จาก<wbr>ซี<wbr>พียูว่า
+ซี<wbr>พียูได้<wbr>แยก<wbr>ตัว<wbr>เอง<wbr>ออก<wbr>จาก<wbr>แอดเดรสบัสและบัสข้อ<wbr>มูล<wbr>เรียบ<wbr>ร้อย<wbr>แล้ว<wbr><wbr></font></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font size=-1><b><font color="#d06800">clk</font></b><font color="#000000">(clock)
+สัญญาณ<wbr>นาฬิกา<wbr>ที่<wbr>จะ<wbr>ป้อน<wbr>เข้า<wbr>ระบบ<wbr><wbr></font></font></font></dd>
+
+<br><img src="zinterh.jpg" height=60 width=300>
+<dd>
+<font face="ms sans serif"><font size=-1>z-80 มี<wbr>ขาอินพุทสำหรับอินเตอร์รัพท์ได้
+2 ขา คือ อินเตอร์รัพท์แบบ<wbr>มาสเคเบิ้ล (int) และ<wbr>แบบ<wbr>นอน<wbr>มาสเคเบิ้ล (mni)สำหรับ<wbr>การอินเตอร์รัพท์แบบ<wbr>มาสเคเบิ้<wbr>ล
+สามารถ<wbr>ให้ cpu กระ<wbr>โดด<wbr>ข้าม<wbr>ไป<wbr>ทำ<wbr>งาน<wbr>ที่<wbr>ส่วน<wbr>ต่าง ๆ ของ<wbr>โปรแกรม<wbr>ได้<wbr>ส่วน<wbr>การ อินเตอร์รัพท์แบบ<wbr>นอน<wbr>มาสเตเบิ้ลนั้น<wbr>แตก<wbr>ต่างกับแบบ<wbr>มาสเคเบิ้ลคือ<wbr>การอินเตอร์รัพท์แบบน<wbr>ี้จะ<wbr>เกิด<wbr>ขึ้น<wbr>ทัน<wbr>ที<wbr>โดย<wbr>ที่<wbr>ผู้<wbr>ใช้<wbr>ไม่<wbr>สามารถ<wbr>หยุด<wbr>ยั้ง<wbr>หรือดิสเอเบิ้ลได้<wbr>ด้วยชอฟท์แวร์<wbr></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font size=-1><font color="#0000ff"><b>นอน<wbr>มาสเคเบิ้ลอินเตอร์รัพท์<wbr>(non-maskable
+interrupt)</b> </font><font color="#000000">การอินเตอร์รัพท์จะ<wbr>ป้อน<wbr>เข้า<wbr>ทางขา
+nmi ของ<wbr>ซี<wbr>พี<wbr>ยูโดยที่ลอจิก<wbr>ของ<wbr>การ<wbr>แอคตีฟจะ<wbr>เกิด<wbr>ขึ้น<wbr>ด้วยลอจิก "0" เมื่อ<wbr>ซี<wbr>พียูรับสัญญาณ<wbr>นี้<wbr>แล้ว
+ซี<wbr>พียูจะ<wbr>ไม่<wbr>กระ<wbr>ทำ<wbr>คำ<wbr>สั่ง<wbr>ถัด<wbr><wbr></font></font></font></dd>
+
+<br><font face="ms sans serif"><font color="#000000"><font size=-1>ไป โดย<wbr>จะ<wbr>ตอบ<wbr>สนอง<wbr>ต่อ<wbr>การอินเตอร์รัพท์โดย<wbr>การ<wbr>เปลี่ยน<wbr>ข้อ<wbr>มูล<wbr>ให้
+pc เป็น 0066h เพื่อ<wbr>ให้<wbr>ภาวะ<wbr>การเฟทช์ครั้ง<wbr>ต่อ<wbr>ไป<wbr>เกิด<wbr>ขึ้น<wbr>ที่<wbr>แอดเดรส<wbr>นี้ การ<wbr>ตอบ<wbr>สนอง<wbr>ใน<wbr>กรณี<wbr>ของ<wbr>นอน<wbr>มาสเคเบิ้ลนี้
+ซี<wbr>พียูถือ<wbr>ว่า<wbr>เป็น<wbr>ส่วน<wbr>สำคัญ<wbr>ที่<wbr>สุด<wbr>ที่<wbr>จะ<wbr>ต้อง<wbr>กระ<wbr>ทำ<wbr>โดย<wbr>คำ<wbr>สั่ง<wbr>ทางซอฟท์แวร์<wbr>หรือ<wbr>ขบวน<wbr>การอื<wbr>่นใด<wbr>ไม่<wbr>สามารถ<wbr>เข้า<wbr>มา<wbr>หยุด<wbr>ยั้ง<wbr>การอินเตอร์รัพท์ได้
+การอินเตอร์รัพท์ด้วย<wbr>วิธี<wbr>นี้<wbr>จึง<wbr>มัก<wbr>ใช้<wbr>ใน<wbr>กรณี<wbr>ว่า<wbr>มี<wbr>เหตุ<wbr>การณ์<wbr>สำคัญ<wbr>ที่<wbr>สุด จาก<wbr>หลัก<wbr>การ<wbr>ทั่ว<wbr>ไป<wbr>ของ<wbr>การอินเตอร์รัพท<wbr>์
+ค่าเดิมของ pc ที่<wbr>ซี<wbr>พียูจะ<wbr>กระ<wbr>ทำ<wbr>ต่อ<wbr>ไป<wbr>ใน<wbr>โปรแกรม<wbr>หลัก<wbr>จะ<wbr>ได้<wbr>รับ<wbr>การ<wbr>เก็บ<wbr>รักษา<wbr>ไว้<wbr>ในสแตคและ<wbr>การก<wbr>ลับ<wbr>คืน<wbr>สู่<wbr>โปรแกรม<wbr>หลักเดิมนั้น<wbr>กระ<wbr>ทำ<wbr>ได้<wbr>ด้วย<wbr>คำ<wbr>สั่ง
+retn (return from nonmaskable)</font></font></font>
+<dd>
+<font face="ms sans serif"><font size=-1><b><font color="#0000ff">การอินเตอร์รัพท์แบบ<wbr>มาสเคเบิ้<wbr>ล
+(maskable interrupt) </font></b><font color="#000000">ใน<wbr>การอินเตอร์รัพท์แบบ<wbr>นี้
+ผู้<wbr>ใช้<wbr>ต้องอินเตอร์รัพท์ผ่าน<wbr>เข้า<wbr>มา<wbr>ทางขา int ของ<wbr>ซี<wbr>พียู เมื่อ<wbr>ซี<wbr>พียูได้<wbr>รับ<wbr>สัญญาณ<wbr>นี้<wbr>แล้ว<wbr>ซี<wbr>พียูจะ<wbr>ตรวจ<wbr>สอบ<wbr>สถานะ<wbr>ของ<wbr>ตัว<wbr>เอง<wbr>ว่า<wbr>จะ<wbr>ตอบ<wbr>สนอง<wbr>ต่อ<wbr>การอิ<wbr>นเตอร์รัพท์หรือ<wbr>ไม่
+การ<wbr>ที่<wbr>จะ<wbr>ตอบ<wbr>สนอง<wbr>หรือ<wbr>ไม่<wbr>สามารถ<wbr>โปรแกรม<wbr>ได้<wbr>ด้วย<wbr>ซอฟท์แวร์ ดัง<wbr>นั้น<wbr>ผู้<wbr>โปรแกรม<wbr>จึง<wbr>สามารถ<wbr>กำหนด<wbr>สภาวะ<wbr>การอินเตอร์รัพท์ให้<wbr>ได้
+รับ<wbr>การ<wbr>ตอบ<wbr>สนอง<wbr>ตรง<wbr>ส่วน<wbr>ใด<wbr>ของ<wbr>โปรแกรม<wbr>ได้<wbr>การอินเตอร์รัพท์ด้วย<wbr>วิธี<wbr>นี้<wbr>สามารถ<wbr>แยก<wbr>แยะ<wbr>การอิ<wbr>นเตอร์รัพท์ออก<wbr>เป็น
+3 โหมด ซึ่ง<wbr>การ<wbr>แยก<wbr>โหมดก็<wbr>ทำ<wbr>ได้<wbr>ด้วย<wbr>การ<wbr>ใช้<wbr>ซอฟท์แวร์<wbr>หรือ<wbr>คำ<wbr>สั่ง<wbr>นั่น<wbr>เอง โดย<wbr>แยก<wbr>เป็น<wbr>โหม<wbr>ด
+0 (im0), โหมด 1 (im1), โหมด 2 (im2)</font></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font size=-1><b><font color="#0000ff">การอินเตอร์รัพท์โหมด
+0 </font></b><font color="#000000">ใน<wbr>โหมดนี้<wbr>ผู้<wbr>ออก<wbr>แบบ<wbr>ซี<wbr>พียู z-80 ได้<wbr>ออก<wbr>แบบ<wbr>มา<wbr>เพื่อ<wbr>ให้
+z-80 ทำ<wbr>การ<wbr>ตอบ<wbr>สนอง<wbr>ต่อ<wbr>สัญญาณอินเตอร์รัพท์เหมือน 8080 ทุก<wbr>ประการ กล่าว<wbr>คือ<wbr>เมื่อ<wbr>มี<wbr>การอินเตอร์รัพท<wbr>์
+เกิด<wbr>ขึ้น<wbr>และ<wbr>โปรแกรม<wbr>ทางซอฟท์แวร์<wbr>ได้<wbr>เซทโหมด<wbr>การ<wbr>รับอินเตอร์รัพท์เป็น<wbr>โหมด 0 (im0)
+และ<wbr>อี<wbr>นาเบิ้ลการอินเตอร์รัพท์ไว้<wbr>การ<wbr>ทำ<wbr>งาน<wbr>ของ<wbr>ซี<wbr>พียูจะ<wbr>หยุด<wbr>การเฟทช์คำ<wbr>สั่ง ถัด<wbr>ไป
+แต่<wbr>จะ<wbr>ตอบ<wbr>รับ<wbr>การอินเตอร์รัพท์ด้วย<wbr>การ<wbr>ส่ง<wbr>สัญญาณ<wbr>ตอบ<wbr>รับ<wbr>ด้วย /m1 กับ /iorq อ่าน<wbr>ข้อ<wbr>มูล
+1 ไบท์ เข้า<wbr>มา<wbr>ทางบัสข้อ<wbr>มูล ข้อ<wbr>มูล 1 ไบท์นี้<wbr>ได้<wbr>รับ<wbr>การ<wbr>ส่ง<wbr>มา<wbr>จาก อุปกรณ์ i/o
+ที่อินเตอร์รัพท์มา เมื่อ<wbr>ซี<wbr>พียูอ่าน<wbr>ข้อ<wbr>มูลไบท์นี้<wbr>มา<wbr>ซี<wbr>พียูจะ<wbr>ถือ<wbr>ว่า<wbr>เป็น<wbr>ออพโค้ด<wbr>ทัน<wbr>ที<wbr>และ<wbr>จะ<wbr>ตี<wbr>ความ<wbr>หมาย<wbr>ใน<wbr>การ<wbr><wbr>ทำ<wbr>งาน
+คำ<wbr>สั่ง<wbr>ขนาด 1 ไบท์ที่<wbr>เหมาะ<wbr><wbr></font></font></font></dd>
+
+<br><font face="ms sans serif"><font color="#000000"><font size=-1>ใน<wbr>การ<wbr>ใช้<wbr>ใน<wbr>การอินเตอร์รัพท์ก็<wbr>คือ<wbr>คำ<wbr>สั่ง
+rst เมื่อ<wbr>ซี<wbr>พียูเอ็ก<wbr>ซี<wbr>คิ้ว<wbr>คำ<wbr>สั่ง rstซี<wbr>พียูจะ<wbr>เก็บ<wbr>ข้อ<wbr>มูลเดิมใน pc ไว้<wbr>ที่สแต<wbr>ค
+แล้ว<wbr>เปลี่ยน<wbr>ค่า pc ใหม่<wbr>ตาม<wbr>ลักษณะ<wbr>ของ<wbr>การ rst นั้น ๆดัง<wbr>นั้น<wbr>ซี<wbr>พียูจะ<wbr>กระ<wbr>โดด<wbr>ข้าม<wbr>ไป<wbr>ทำ<wbr>งาน<wbr>ตาม<wbr>ที่<wbr>ต้อง<wbr>การ<wbr>ของ<wbr>การอินเตอร์รัพท์ได้<wbr><wbr></font></font></font>
+<br><font face="ms sans serif"><font color="#000000"><font size=-1>การ<wbr>ตอบ<wbr>สนอง<wbr>ต่อ<wbr>การอินเตอร์รัพท์ด้วย<wbr>การ<wbr>ส่ง<wbr>สัญญาณ
+/m1 และ /iorq ทำ<wbr>การเฟทช์ข้อ<wbr>มูล<wbr>จาก i/o มา<wbr>เอ็ก<wbr>ซี<wbr>คิ้ว<wbr>นี้<wbr>อาจ<wbr>ทำ<wbr>ได้<wbr>โดย<wbr>การ<wbr>ให้
+i/o ส่ง<wbr>คำ<wbr>สั่ง<wbr>อื่น<wbr>ที่<wbr>ไม่<wbr>ใช่<wbr>คำ<wbr>สั่ง rst (คำ<wbr>สั่งไบท์เดียว) แต่<wbr>เป็น คำ<wbr>สั่ง<wbr>หลายไบท<wbr>์
+เช่น<wbr>คำ<wbr>สั่ง call</font></font></font>
+<br><font face="ms sans serif"><font color="#000000"><font size=-1>ซึ่ง<wbr>เป็น<wbr>คำ<wbr>สั่ง<wbr>ขนาด
+3 ไบท์ โดย i/o ส่ง<wbr>ข้อ<wbr>มูล<wbr>ขณะ<wbr>ตอบ<wbr>รับ<wbr>การ อินเตอร์รัพท์<wbr>(/m1+/iorq) ด้วย<wbr>ข้อ<wbr>ความ
+cdh (call) เมื่อ<wbr>ซี<wbr>พียูเอ็ก<wbr>ซี<wbr>คิ้ว<wbr>คำ<wbr>สั่ง<wbr>นี้<wbr>ก็<wbr>จะ<wbr>ทราบ<wbr>ว่า<wbr>เป็น<wbr>คำ<wbr>สั่ง call ซึ่ง<wbr>ยัง<wbr>ต้อง<wbr>การ<wbr>ข้อ<wbr>มูล<wbr>เพิ่ม<wbr>อีก
+2 ไบท์ ซี<wbr>พียูจะ<wbr>สร้างแมชีน ไซเคิลต่อ<wbr>ไป<wbr>ใน<wbr>การ<wbr>อ่าน<wbr>หน่วย<wbr>ความ<wbr>จำ<wbr>เหมือน<wbr>กระ<wbr>ทำ<wbr>คำ<wbr>สั่ง
+call จริง ๆใน<wbr>การ<wbr>นี้<wbr>เรา<wbr>จะ<wbr>ต้อง<wbr>ใช้<wbr>วง<wbr>จร<wbr>ทางฮาร์ดแวร์<wbr>ประกอบ<wbr>เพื่อ<wbr>ให้ i/o ส่ง<wbr>ข้อ<wbr>มูล<wbr>อีก
+2 ไบท์ ตาม<wbr>ไป<wbr>ให้<wbr>ได้<wbr>ซึ่ง<wbr>การอินเตอร์รัพท์ด้วย<wbr>วิธี<wbr>นี้<wbr>อาจ<wbr>กำหนด<wbr>ได้<wbr>ด้วย<wbr>เทคนิค<wbr>ที่<wbr>แตก<wbr>ต่าง<wbr>กัน<wbr>ตาม<wbr>การ<wbr>ออก<wbr>แบบ<wbr>ของ<wbr>แต่<wbr>ละ<wbr>บุคคล<wbr><wbr></font></font></font>
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>บริษัทอินเทลได้<wbr>ออก<wbr>แบบ<wbr>ไอ<wbr>ซี<wbr>ที่<wbr>ใช้<wbr>ใน<wbr>การ<wbr>ควบ<wbr>คุม<wbr>การอินเตอร์รัพท์และ<wbr>จัด<wbr>ลำ<wbr>ดับ<wbr>ความ<wbr>สำคัญ<wbr>ใน<wbr><wbr>การอินเตอร์รัพท์ขึ้น
+เช่น ic เบอร์ 8214 การ<wbr>ใช้<wbr>เวลา<wbr>ใน<wbr>การ<wbr>ตอบ<wbr>สนอง<wbr>ต่อ<wbr>การอินเตอร์รัพท์ด้วย<wbr>การ ส่ง
+/m1 และ /iorq นี้<wbr>จะ<wbr>กระ<wbr>ทำ<wbr>เหมือน<wbr>การก<wbr>ระ<wbr>ทำ<wbr><wbr></font></font></font></dd>
+
+<br><font face="ms sans serif"><font color="#000000"><font size=-1>ใน<wbr>ช่วง<wbr>เวลาแมชีนไซเคิ<wbr>ล
+/m1 แต่<wbr>ซี<wbr>พียูจะ<wbr>ใช้<wbr>เวลา<wbr>ยาว<wbr>นาน<wbr>กว่าแมชีนไซเคิล /m1โดย<wbr>ปกติ โดย<wbr>การ<wbr>เพิ่ม t<sub>w
+</sub>ขึ้น<wbr>ก็<wbr>เพื่อ<wbr>ให้<wbr>เวลา<wbr>แก่<wbr>อุปกรณ์ i/oใน<wbr>การก<wbr>ระ<wbr>ทำ<wbr>ขบวน<wbr>การเดซี่<wbr>เชน (daisy
+chain) ใน<wbr>การ<wbr>จัด<wbr>ลำ<wbr>ดับ<wbr>ความ<wbr>สำคัญ<wbr>ของ<wbr>การอินเตอร์รัพท์<wbr></font></font></font>
+<br><font face="ms sans serif"><font color="#000000"><font size=-1>โดย<wbr>ปกติ<wbr>การ<wbr>เซทให้<wbr>อยู่<wbr>ใน<wbr>โหมดนี้<wbr>กระ<wbr>ทำ<wbr>ได้<wbr>ด้วย<wbr>การ<wbr>สั่ง<wbr>ทางซอฟท์แวร์<wbr>ด้วย<wbr>คำ<wbr>สั่ง
+im1และ<wbr>การ<wbr>กำหนด<wbr>ให้<wbr>รับ<wbr>การอินเตอร์รัพท์ได้<wbr>หรือ<wbr>ไม่<wbr>กระ<wbr>ทำ<wbr>ได้<wbr>ด้วย<wbr>คำ<wbr>สั่ง ei และ
+diและ<wbr>เพื่อ<wbr>ให้<wbr>การ<wbr>ทำ<wbr>งาน<wbr>เหมือน<wbr>อยู่<wbr>ใน<wbr>โหมดของ 8080 ทุก<wbr>ประการ ดัง<wbr>นั้น<wbr>หลัง<wbr>จาก<wbr>การ<wbr>รี<wbr>เซทซี<wbr>พีย<wbr>ู
+ซี<wbr>พียูจะ<wbr>เซทตัว<wbr>เอง<wbr>ให้<wbr>อยู่<wbr>ใน<wbr>โหมด 0 นี้<wbr>โดย<wbr>อัตโนมัติ<wbr><wbr></font></font></font>
+<dd>
+<font face="ms sans serif"><font size=-1><b><font color="#0000ff">การอินเตอร์รัพท์โหมด
+1</font></b><font color="#000000">ใน<wbr>โหมดนี้<wbr>ผู้<wbr>โปรแกรม<wbr>สามารถ<wbr>กำหนด<wbr>ได้<wbr>ด้วย<wbr>คำ<wbr>สั่ง
+im1 การอินเตอร์รัพท์ใน<wbr>โหมด<wbr></font></font></font></dd>
+
+<br><font face="ms sans serif"><font color="#000000"><font size=-1>นี้<wbr>จะ<wbr>กระ<wbr>ทำ<wbr>เหมือน<wbr>กันกับนอน<wbr>มาสเคเบิ้ลอินเตอร์รัพท์ทุก<wbr>ประการ<wbr>แต่<wbr>จะ<wbr>แตก<wbr>ต่าง<wbr>กัน<wbr>ก็<wbr>เพียง<wbr>การ<wbr>รีสตาร์ทมา<wbr>ที่<wbr>ตำแหน่ง
+0038h (กรณี<wbr>นอน<wbr>มาสเคเบิ้ลไป<wbr>กระ<wbr>ทำ<wbr>ที่ 0066h) และ<wbr>จำนวน<wbr>คาบ<wbr>เวลา<wbr>ที่<wbr>ใช้<wbr>ใน<wbr>โหมด 1
+นี้<wbr>มี<wbr>มาก<wbr>กว่า<wbr>ใน<wbr>นอน<wbr>มาสเคเบิ้ลทั้ง<wbr>นี้<wbr><wbr></font></font></font>
+<br><font face="ms sans serif"><font color="#000000"><font size=-1>เพราะ<wbr>ใน<wbr>โหมดนี้<wbr>ซี<wbr>พียูต้อง<wbr>เพิ่ม
+t<sub>w
+</sub>ขึ้น<wbr>อีก 2 สเตทการอินเตอร์รัพท์ใน<wbr>โหมดนี้<wbr>สามารถดิสเอเบิ้ลได้<wbr>ด้วย<wbr>ซอฟแวร์<wbr></font></font></font>
+<dd>
+<font face="ms sans serif"><font size=-1><b><font color="#0000ff">การอินเตอร์รัพท์โหมด
+2 </font></b><font color="#000000">ใน<wbr>โหมดนี้<wbr>ทำ<wbr>ให้ z-80 มี<wbr>ขีด<wbr>ความ<wbr>สามารถ<wbr>เกี่ยวกับการอินเตอร์รัพท์สูง<wbr>ขึ้น<wbr>มาก<wbr><wbr></font></font></font></dd>
+
+<br><font face="ms sans serif"><font color="#000000"><font size=-1>การอินเตอร์รัพท์ใน<wbr>โหมดนี้<wbr>กำหนด<wbr>ได้<wbr>ด้วย<wbr>คำ<wbr>สั่ง
+im2 และ<wbr>การ<wbr>จะ<wbr>ให้<wbr>ซี<wbr>พียูตอบ<wbr>สนอง<wbr>หรือ<wbr>ไม่<wbr>ก็<wbr>ยัง<wbr>ใช้<wbr>คำ<wbr>สั่ง<wbr>โปรแกรม<wbr>ได้<wbr>เช่น<wbr>กัน<wbr>โดย<wbr>ใช้<wbr>คำ<wbr>สั่ง
+ei และ di การก<wbr>ระ<wbr>โดด<wbr>ไป<wbr>ยัง<wbr>โปรแกรม<wbr>อื่น<wbr>ใน<wbr>ขณะ<wbr>เมื่อ<wbr>ซี<wbr>พียูตอบ<wbr>สนอง<wbr>ต่อ<wbr>การอินเตอร์รัพท<wbr>์
+ใน<wbr>กรณี<wbr>นี้<wbr>จะ<wbr>ไป<wbr>ที่<wbr>ใด<wbr>ก็<wbr>ได้ โดย<wbr>ใช้<wbr>แอดเดรส<wbr>ใน<wbr>การก<wbr>ระ<wbr>โดด<wbr>นี้<wbr>ได้<wbr>ถึง 16 บิท ซึ่ง<wbr>ทำ<wbr>ให้<wbr>การอินเตอร์รัพท์ทำ<wbr>ได้<wbr>สะดวก<wbr>และ<wbr>รวด<wbr>เร็ว<wbr>ขึ้น<wbr>อีก<wbr>มาก<wbr><wbr></font></font></font>
+<br><font face="ms sans serif"><font color="#000000"><font size=-1>กรรม<wbr>วิธี<wbr>การ<wbr>ตอบ<wbr>สนอง<wbr>ต่อ<wbr>การอินเตอร์รัพท์ใน<wbr>กรณี<wbr>นี้<wbr>คือ
+เมื่อ<wbr>มี<wbr>สัญญาณ /int เข้า<wbr>มา<wbr>และ<wbr>ซี<wbr>พียูตรวจ<wbr>สอบ<wbr>ได้<wbr>ใน<wbr>ตอน<wbr>สุด<wbr>ท้าย<wbr>ของ<wbr>คำ<wbr>สั่ง ซี<wbr>พียูจะ<wbr>ตอบ<wbr>สนอง<wbr>ด้วย<wbr>การ<wbr>ส่ง
+/m1 กับ /iorq ออก<wbr>ไป สัญญาณ /m1 กับ /iorq จะ<wbr>เป็น<wbr>ตัว<wbr>บอก<wbr>อุปกรณ์<wbr>ที่<wbr><wbr></font></font></font>
+<br><font face="ms sans serif"><font color="#000000"><font size=-1>ส่ง
+/int มา<wbr>ให้<wbr>ส่ง<wbr>ข้อ<wbr>มูล<wbr>ขนาด 1 ไบท์เข้า<wbr>ทางบัสข้อ<wbr>มูล สำหรับ<wbr>ใน<wbr>โหมดนี้<wbr>ข้อ<wbr>มูล<wbr>ที่<wbr>ส่ง<wbr>จาก
+i/o ขนาด 1 ไบท์ที่<wbr>เข้า<wbr>ทางบัสข้อ<wbr>มูล<wbr>นี้<wbr>ซี<wbr>พียูถือ<wbr>ว่า<wbr>เป็น เวคเตอร์ของ การอินเตอร์รัพท<wbr>์
+โดย<wbr>ข้อ<wbr>มูล<wbr>ใน<wbr>บิท d<sub>0 </sub>จะ<wbr>ต้อง<wbr>เป็น "0" ส่วน<wbr>บิทอื่น<wbr>จะ<wbr>เป็น<wbr>อะไร<wbr>ก็<wbr>ได้<wbr>ซี<wbr>พียูจะ<wbr>นำ<wbr>เวคเตอร์นี้<wbr>ไป<wbr>เป็น<wbr>ข้อ<wbr>มูล<wbr>แอดเดรสไบท์ที่<wbr>มี<wbr>นัย<wbr>สำ<wbr><wbr>คัญต่ำ<wbr>และ<wbr>ข้อ<wbr>มูล<wbr>จาก<wbr>รีจิสเตอร<wbr>์
+1 ภาย<wbr>ใน<wbr>ซี<wbr>พียูเป็น<wbr>ข้อ<wbr>มูลไบท์ที่<wbr>มี<wbr>นัย<wbr>สำคัญ<wbr>สูง เรียก<wbr>หา<wbr>ไป<wbr>ยัง<wbr>ข้อ<wbr>มูล<wbr>ใน<wbr>หน่วย<wbr>ความ<wbr>จำ<wbr>เพื่อ<wbr>อ่าน<wbr>ข้อ<wbr>มูล<wbr>ใน<wbr>หน่วย<wbr>ความ<wbr>จำ
+2 ไบท์ติด<wbr>กัน<wbr>นั้น<wbr>มา<wbr>โหลดใส่ pc หรือ<wbr>เป็น<wbr>การ<wbr>อ้าง<wbr>แอดเดรส<wbr>ให้ pc แบบ<wbr>โดย<wbr>ทางอ้อม<wbr>นั่น<wbr>เอง<wbr><wbr></font></font></font>
+<center>
+<p><img src="zintvec.jpg" border=2 height=211 width=510></center>
+
+<br>
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>สำหรับ<wbr>กรณี<wbr>นี้<wbr>จะ<wbr>เห็น<wbr>ว่า<wbr>เรา<wbr>สามารถ<wbr>เซทค่า<wbr>ใน<wbr>รีจิสเตอร<wbr>์
+i ให้<wbr>เป็น<wbr>อะไร<wbr>ก็<wbr>ได้<wbr>และ i/o จะ<wbr>ส่ง<wbr>ข้อ<wbr>มูล<wbr>เวคเตอร์มา<wbr>ประกอบ<wbr>รวม<wbr>เพื่อ<wbr>บอก<wbr>ถึง<wbr>ค่า<wbr>ตา<wbr>ราง<wbr>ใน<wbr>หน่วย<wbr>ความ<wbr>จำ<wbr>ที่<wbr>ต้อง<wbr>การ
+ด้วย<wbr>วิธี<wbr>การ<wbr>เช่น<wbr>นี้<wbr>จะ<wbr>ทำ<wbr>ให้<wbr>การก<wbr>ระ<wbr>โดด<wbr>ไป<wbr>ยัง<wbr>โปรแกรม<wbr>ย่อย<wbr>เกิด<wbr>ขึ้น<wbr>ที่<wbr>ใด<wbr>ก็<wbr>ได้<wbr><wbr></font></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>อุปกรณ์<wbr>ไอ<wbr>ซี<wbr>ที่<wbr>ทำ<wbr>งาน<wbr>ร่วม<wbr>โดย<wbr>ใช้อินเตอร์รัพท์โหมด<wbr>นี้<wbr>มี<wbr>หลาย<wbr>เบอร์<wbr>ด้วย<wbr>กัน
+เช่น z-80pio, z-80ctc, z-80sio ฯลฯซึ่ง<wbr>อุปกรณ์อินเตอร์เฟสเหล่า<wbr>นี้<wbr>สามารถ<wbr>ส่ง<wbr>เวคเตอร์ให้กับซี<wbr>พียูได้<wbr>อย่าง<wbr>มี<wbr>ประ<wbr>สิทธิ<wbr><wbr>ภาพ<wbr><wbr></font></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>การอินเตอร์รัพท์ใน<wbr>โหมดนี้<wbr>ซี<wbr>พียูต้อง<wbr>การ<wbr>เวลา<wbr>ถึง
+19 สเตท โดย<wbr>ใช้ 7 สเตทใน<wbr><wbr></font></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>การเฟทช์เวคเตอร<wbr>์
+6 สเตทใน<wbr>การ<wbr>เก็บ<wbr>ข้อ<wbr>มูล pc เดิมในสเตท และ 6 เป็น<wbr>การ<wbr>อ่าน<wbr>ข้อ<wbr>มูล<wbr>จาก<wbr>หน่วย<wbr>ความ<wbr>จำ<wbr>มา<wbr>ยัง
+pc</font></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font size=-1><b><font color="#0000ff">การ<wbr>อี<wbr>นาเบิ้ลและดิสเอเบิ้ลอินเตอร์รัพท<wbr>์
+</font></b><font color="#000000">สถานะ<wbr>ภาพ<wbr>ต่อ<wbr>การ<wbr>ตอบ<wbr>สนองอินเตอร์รัพท์ ซี<wbr>พียูจะ<wbr>ทำ<wbr>การ<wbr>ตรวจ<wbr>สอบ<wbr>ที่
+iff หรือ<wbr><wbr></font></font></font></dd>
+
+<br><font face="ms sans serif"><font color="#000000"><font size=-1>อินเตอร์รัพท์ฟลิบฟลอบ<wbr>ใน<wbr>กรณี<wbr>ของ
+z-80 จะ<wbr>มีฟลิบฟลอบ<wbr>ที่<wbr>แสดง<wbr>สถานะ<wbr>ภาพ ใน<wbr>การอินเตอร์รัพท์อยู่ 2 บิท คือ iff1
+และ iff2 โดย<wbr>ทั้ง<wbr>สอง<wbr>บิทนี้<wbr>จะ<wbr>ได้<wbr>รับ<wbr>การ<wbr>เกี่ยว<wbr>ข้อง<wbr>ด้วย<wbr>จาก<wbr>การก<wbr>ระ<wbr>ทำ<wbr>ของ<wbr>ซี<wbr>พียูหรือ<wbr>ของ<wbr>ผู้<wbr>โปรแกรม<wbr>โด<wbr><wbr>ยโปรแกรม<wbr>คำ<wbr>สั่ง<wbr><wbr></font></font></font>
+<br><font face="ms sans serif"><font color="#000000"><font size=-1>เข้า<wbr>มา<wbr>เซทหรือ<wbr>รี<wbr>เซทฟลิบฟลอบ
+โดย<wbr>หลัก<wbr>การ iff1ทำ<wbr>หน้า<wbr>ที่<wbr>เป็น<wbr>ตัว<wbr>กำหนด<wbr>การ<wbr>อี<wbr>นาเบิ้ลหรือดิสเอเบิ้ลการอินเตอร์<wbr>-</font></font></font>
+<br><font face="ms sans serif"><font color="#000000"><font size=-1>รัพท<wbr>์
+โดย<wbr>ที่ iff2 จะ<wbr>มี<wbr>หน้า<wbr>ที่<wbr>หลัก<wbr>ใน<wbr>การ<wbr>เก็บ<wbr>ข้อ<wbr>มูล<wbr>ชั่ว<wbr>คราว<wbr>ของ iff1 ใน<wbr>ขณะ<wbr>ที่<wbr>มี<wbr>การ
+รี<wbr>เซทซี<wbr>พียูทางขา<wbr>รี<wbr>เซท ทั้ง iff1 และ iff2 จะ<wbr>ได้<wbr>รับ<wbr>การ<wbr>รี<wbr>เซทไป<wbr>ด้วย การ<wbr>แสดง<wbr>สถานะ
+"0" ของ iff1 จะ<wbr>เป็น<wbr>การดิสเอเบิ้ลการอินเตอร์รัพท์ กล่าว<wbr>คือ iff1</font></font></font>
+<br><font face="ms sans serif"><font color="#000000"><font size=-1>= "0"
+ซี<wbr>พียูยะ<wbr>ไม่<wbr>รับ<wbr>รู้<wbr>ต่อ<wbr>การอินเตอร์รัพท์ที่<wbr>เข้า<wbr>มา<wbr>ทาง int การ<wbr>เซท iff สามารถ<wbr>กระ<wbr>ทำ<wbr>ได้<wbr>ด้วย<wbr>คำ<wbr>สั่ง
+ei โดย<wbr>สถานะ<wbr>ภาพ<wbr>ของ iff1 และ iff2 ที่<wbr>จะ<wbr>เปลี่ยน<wbr>แปลง<wbr>เนื่อง<wbr>จาก<wbr>การก<wbr>ระ<wbr>ทำ<wbr>ต่าง ๆ
+สรุป<wbr>ได้<wbr>ดัง<wbr>ตา<wbr>ราง<wbr>ข้าง<wbr>ล่าง<wbr>นี้<wbr><wbr></font></font></font>
+<center>
+<p><img src="zintab.jpg" height=218 width=362></center>
+<font face="ms sans serif"><font color="#000000"><font size=-1></font></font></font>
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>จาก<wbr>ตา<wbr>ราง<wbr>พอ<wbr>สรุป<wbr>ได้<wbr>ว่า
+การ<wbr>กำหนด<wbr>อี<wbr>นาเบิ้ลจะ<wbr>ต้อง<wbr>ทำ<wbr>การ<wbr>เซทฟลิบฟลอบ iff1หรือ<wbr>กล่าว<wbr>อีก<wbr>นัย<wbr>หนึ่ง การ<wbr>ยอม<wbr>ให้<wbr>เกิด<wbr>การอินเตอร์รัพท์ได้<wbr>ก็<wbr>ต่อ<wbr>เมื่อ<wbr>ซี<wbr>พียูตรวจ<wbr>สอบ
+iff1 ว่า<wbr>อยู่<wbr>ใน<wbr>สภาวะ<wbr>อี<wbr>นาเบิ้ลหรือ<wbr>ไม่<wbr>การ<wbr>ตรวจ<wbr>สอบ<wbr>สภาวะ<wbr>อี<wbr>นาเบิ้ลว่า<wbr>ได้<wbr>รับ<wbr>การ<wbr>อี<wbr>นาเบิ้ลหรือด<wbr><wbr>ิสเอเบิ้<wbr>ล
+ใน<wbr>บาง<wbr>กรณี<wbr>ทำ<wbr>ได้<wbr>โดย<wbr>การ<wbr>ตรวจ<wbr>สอบ<wbr>ทางบิทพา<wbr>ริตี้นั่น<wbr>คือ การก<wbr>ระ<wbr>ทำ<wbr>คำ<wbr>สั่ง ld a, i
+และ ld a, r จะ<wbr>มี<wbr>ผล<wbr>ให้<wbr>ค่า<wbr>ของ iff2 ไป<wbr>เก็บ<wbr>ยัง<wbr>พา<wbr>ริตี้แฟลก<wbr></font></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>เมื่อ<wbr>มี<wbr>การอินเตอร์รัพท์แบบ
+nmi ขึ้น<wbr>จะ<wbr>เกิด<wbr>สภาวะดิสเอเบิ้ลทัน<wbr>ที<wbr>ที่ iff1 กล่าว<wbr>คือ<wbr>มัน<wbr>จะ<wbr>ได้ รับ<wbr>การ<wbr>รี<wbr>เซ<wbr>ท
+นั่น<wbr>คือ<wbr>ระหว่าง<wbr>การอินเตอร์รัพท์แบบ nmi นี้ การอินเตอร์รัพท์แบบ<wbr>อื่น<wbr>จะ<wbr>เข้า<wbr>มา<wbr>อีก<wbr>ไม่<wbr>ได้
+ซี<wbr>พียูจะ<wbr>ไม่<wbr>รับ<wbr>รู้<wbr>ทั้ง<wbr>สิ้น<wbr>สถานะเดิมก่อน<wbr>การ อินเตอร์รัพท์แบบ nmi (สถานะ<wbr>การดิสเอเบิ้ลหรือ<wbr>อี<wbr>นาเบิ้ล)จะ<wbr>ได้<wbr>รับ<wbr>การ<wbr>เก็บ<wbr>รักษา<wbr>ไว้<wbr>ที่
+iff2 ซึ่ง<wbr>ระหว่าง<wbr>นี้<wbr>จะ<wbr>ได้<wbr>รับ<wbr>การ<wbr>ตรวจ<wbr>สอบ<wbr>ได้<wbr>เช่น<wbr>กัน<wbr>ว่า ก่อน<wbr>การ<wbr>เข้า<wbr>ไป<wbr>สู่<wbr>โหม<wbr>ด
+nmi สภาวะ<wbr>การ<wbr>เป็น<wbr>อย่าง<wbr>ไร และ<wbr>เมื่อ<wbr>กลับ<wbr>เข้า<wbr>โปรแกรม<wbr>หลัก<wbr>ด้วย<wbr>คำ<wbr>สั่ง retn จะ<wbr>ทำ<wbr>ให้<wbr>สถานะเดิมเก็บ<wbr>รักษา<wbr>ไว้<wbr>ใน
+iff1 ใหม่<wbr>การ<wbr>ตอบ<wbr>สนอง<wbr>ต่อ /int ก็<wbr>จะ<wbr>ทำ<wbr>ให้ iff1 และ iff2 ได้<wbr>รับ<wbr>การ<wbr>รี<wbr>เซทเช่น<wbr>กัน
+ดัง<wbr>นั้น<wbr>เมื่อ<wbr>มี<wbr>การ int สัญญาณ /int ครั้ง<wbr>ต่อ<wbr>ไป<wbr>จะ<wbr>ไม่<wbr>สามารถ<wbr>ได้<wbr>รับ<wbr>การ<wbr>ตอบ<wbr><wbr></font></font></font></dd>
+
+<br><font face="ms sans serif"><font color="#000000"><font size=-1>สนอง<wbr>จน<wbr>กว่า<wbr>จะ<wbr>มี<wbr>คำ<wbr>สั่ง
+ei /int จึง<wbr>จะ<wbr>ได้<wbr>รับ<wbr>การ<wbr>ตอบ<wbr>สนอง<wbr>นั่น<wbr>เอง ส่วน<wbr>การ<wbr>เอ็ก<wbr>ซี<wbr>คิ้ว<wbr>คำ<wbr>สั่ง reti จะ<wbr>ไม่<wbr>มี<wbr>ผล<wbr>ทำ<wbr>ให้
+iff1 และ iff2 เกิด<wbr>การ<wbr>เปลี่ยน<wbr>แปลง<wbr><wbr></font></font></font>
+<dd>
+<font face="ms sans serif"><font size=-1><b><font color="#0000ff">ไดอะแก<wbr>รม<wbr>เวลา<wbr>สำหรับ<wbr>การ<wbr>ตอบ<wbr>สนอง<wbr>ต่อ<wbr>การอินเตอร์รัพท์ของ<wbr>ซี<wbr>พีย<wbr>ู
+</font></b><font color="#000000">การ<wbr>สนอง<wbr>ต่อ<wbr>การอินเตอร์รัพท์ของ<wbr>ซี<wbr>พียูมี<wbr>ลักษณะ<wbr>สำคัญ<wbr>ที่<wbr>เรา<wbr>จะ<wbr>ต้อง<wbr>พิจารณา<wbr>ใน<wbr>แง่<wbr>ของไดอะ<wbr>แก<wbr>รม<wbr>เวลา
+เพื่อ<wbr>การ<wbr>เชื่อม<wbr>ต่อกับอุปกรณ์ i/o ใน<wbr>แง่<wbr>ทางฮาร์ดแวร์<wbr>จะ<wbr>ได้<wbr>เป็น<wbr>ไป<wbr>อย่าง<wbr>ถูก<wbr>ต้อง<wbr><wbr></font></font></font></dd>
+
+<dd>
+<b><font face="ms sans serif"><font color="#0000ff"><font size=-1>สรุป<wbr>การ<wbr>ตอบ<wbr>สนอง<wbr>จะ<wbr>เกิด<wbr>ตาม<wbr>ลำ<wbr>ดับ<wbr>ดัง<wbr>นี้<wbr><wbr></font></font></font></b></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>1. อุปกรณ์
+i/o ส่ง<wbr>สัญญาณอินเตอร์รัพท์มา โดย<wbr>การ<wbr>ทำ<wbr>ให้<wbr>ขา /int อยู่<wbr>ในลอจิก "0"</font></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>2. cpu จะ<wbr>ตอบ<wbr>สนอง<wbr>ต่อ<wbr>การอินเตอร์รัพท์ด้วย<wbr>การ<wbr>ส่ง
+/m1 ลอจิก "0" ก่อน<wbr>เพื่อ<wbr>ให้<wbr>อุปกรณ์ i/o เตรียม<wbr>จัด<wbr>การ<wbr>เกี่ยวกับขบวน<wbr>การ<wbr>จัด<wbr>ลำ<wbr>ดับ<wbr>ก่อน
+แลัว /iorqจาก<wbr>ซี<wbr>พียูจึง<wbr>ส่ง<wbr>ตาม<wbr>มา การ<wbr>ให้ /iorq มา<wbr>ที<wbr>หลัง /m1ก็<wbr>เนื่อง<wbr>จาก<wbr>ให้<wbr>ช่วง<wbr>เวลา<wbr>ดีเลย์ระหว่าง<wbr>นี้<wbr>เป็น<wbr>ตัว<wbr>กำหนด
+iei และ ieo ของ<wbr>การก<wbr>ระ<wbr>ทำเดซี<wbr>เชน เมื่อ /iorq ออก<wbr>ไป<wbr>ที่ i/o</font></font></font></dd>
+
+<br><font face="ms sans serif"><font color="#000000"><font size=-1>และ<wbr>ถ้า
+iei ของ<wbr>อุปกรณ์<wbr>นั้น<wbr>เป็นลอจิก "1" ตัว i/o นั้น<wbr>ก็<wbr>จะ<wbr>ส่ง<wbr>เวคเตอร์เข้า<wbr>มา<wbr>ทางบัสข้อ<wbr>มูล
+และ<wbr>ซี<wbr>พียูจะ<wbr>ใช้ /iorq และ /m1 เป็นพัลซ์สั่ง<wbr>อ่าน<wbr>เข้า<wbr>ทางบัสข้อ<wbr>มูล<wbr>และ<wbr>การ<wbr>ทำเดซี<wbr>เชน
+อุปกรณ์<wbr>ที่<wbr>ส่งอินเตอร์รัพท์ได้ จะ<wbr>ให้ ieo เป็นลอจิก "0" เพื่อ<wbr>ป้อน<wbr><wbr></font></font></font>
+<br><font face="ms sans serif"><font color="#000000"><font size=-1>เข้า
+iei ของ<wbr>ตัว<wbr>อื่น<wbr>เป็น<wbr>การ<wbr>บล็อก<wbr>การ<wbr>ส่ง<wbr>เวคเตอร์จาก i/o ตัวอี่น<wbr></font></font></font>
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>3. การ<wbr>เคลียร์อินเตอร์รัพท<wbr>์
+โดย<wbr>ปกติ<wbr>อุปกรณ์<wbr><wbr>i/o จะ<wbr>แอคตีฟใน<wbr>การ<wbr>ส่งอินเตอร์รัพท์ ได้<wbr>ต้อง<wbr>ให้ iei = 1 และ
+ieo = 0 ดัง<wbr>นั้น<wbr>เมื่อ<wbr>เสร็จ<wbr>สิ้น<wbr>การก<wbr>ระ<wbr>ทำ<wbr>การอินเตอร์รัพท์ แล้ว<wbr>สถานะ<wbr>ของ<wbr>การ i/o
+จะ<wbr>ต้อง เคลียร์ตัว<wbr>เอง<wbr>ได้ นั้น<wbr>คือ<wbr>เมื่อ<wbr>มี<wbr>การก<wbr>ระ<wbr>ทำ<wbr>คำ<wbr>สั่ง<wbr><wbr></font></font></font></dd>
+
+<br><font face="ms sans serif"><font color="#000000"><font size=-1>reti
+(ed 4d) ก็<wbr>จะ<wbr>มี<wbr>การ<wbr>บอก<wbr>ให้<wbr>อุปกรณ์ i/o ทราบ<wbr>ว่า<wbr>จบ<wbr>สิ้น<wbr>การอินเตอร์รัพท์<wbr></font></font></font>
+<br><font face="ms sans serif"><font color="#000000"><font size=-1>แล้ว
+เพื่อ<wbr>ทำ<wbr>ให้ ieo เป็น "1" เพื่อ<wbr>การ<wbr>อี<wbr>นาเบิ้ลตัว<wbr><wbr>i/o ที่<wbr>มี<wbr>ความ<wbr>สำคัญ<wbr>น้อย<wbr>กว่า
+ความ<wbr>สัมพันธ์<wbr>ของ /int, /nmi และ /busrq</font></font></font>
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>ไดอะแก<wbr>รม<wbr>เวลา<wbr>ข้าง<wbr>ล่าง<wbr>นี้<wbr>เป็นไดอะแก<wbr>รม<wbr>การ<wbr>จัด<wbr>ลำ<wbr>ดับ<wbr>การ<wbr>ทำ<wbr>งาน<wbr>ภาย<wbr>ใน
+ใน<wbr>การตรววสอบ<wbr>การอินเตอร์รัพท์ทั้ง<wbr>แบบ /int และ /nmi รวม<wbr>ทั้ง<wbr>ขบวน<wbr>การ<wbr>ขอ<wbr>ใช้บั<wbr>ส
+/busrq โดย<wbr>มี<wbr>ลักษณะ<wbr>การ<wbr>ทำ<wbr>งาน<wbr>ที่<wbr>น่า<wbr>สน<wbr>ใจ<wbr>ดัง<wbr>นี้<wbr><wbr></font></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>1. การ<wbr>ตรวจ<wbr>สอบ
+/int และ /nmi ซี<wbr>พียูจะ<wbr>ทำ<wbr>การ<wbr>ตรวจ<wbr>สอบ<wbr>ทุก ๆไซเคิลสุด<wbr>ท้าย<wbr>ของ<wbr>สัญญาณ<wbr>นาฬิกา<wbr>ของ<wbr>แต่<wbr>ละ<wbr>คำ<wbr>สั่ง<wbr><wbr></font></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>2. /busrq
+จะ<wbr>ได้<wbr>รับ<wbr>การ<wbr>ตรวจ<wbr>สอบ<wbr>ทุก ๆ ตอน<wbr>สุด<wbr>ท้าย<wbr>ของแมชีนไซเคิล<wbr></font></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>3. เมื่อ
+cpu อยู่<wbr>ใน<wbr>สภาวะ dma จะ<wbr>ไม่<wbr>ยอม<wbr>รับ<wbr>รู้<wbr>การ<wbr>ขอ /int หรือ /nmi</font></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>4. การ<wbr>จัด<wbr>การ<wbr>ตอบ<wbr>สนอง<wbr>จะ<wbr>เป็น<wbr>ไป<wbr>ตาม<wbr>ลำ<wbr>ดับ<wbr>ดัง<wbr>นี้
+/busrq /nmi หรือ /int</font></font></font></dd>
+
+<center>
+<p><img src="zintdia.jpg" border=2 height=586 width=406></center>
+
+<p><font face="ms sans serif"><font size=-1><a href="zmain.html"></a></font></font>
+<p>
+<hr width="100%">
+<i><font face="ms sans serif"><font size=-2>รวบรวมจาก บทเรียน online วิชา 204323 ไมโครโปรเซสเซอร์และการออกแบบไมโครคอมพิวเตอร์ รศ.ยืน ภู่วรวรรณ </font></font></i>
+</td>
+</tr>
+</table></center>
+
+</body>
+</html>

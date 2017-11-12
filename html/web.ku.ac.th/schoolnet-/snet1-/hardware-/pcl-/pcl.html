@@ -1,0 +1,1009 @@
+
+<html>
+<head>
+   <title>pcl มาตรฐานภาษาสั่งงานเครื่องพิมพ์เลเซอร์</title>
+</head>
+<body>
+<center><table cols=1 width="95%" bgcolor="#99ff99" >
+<tr>
+<td align=center><b><font face="ms sans serif"><font color="#3333ff"><font size=-1>pcl
+มาตร<wbr>ฐาน<wbr>ภาษา<wbr>สั่ง<wbr>งานเครื่องพิมพ์<wbr>เลเซอร์<wbr><wbr></font></font></font></b></td>
+</tr>
+</table></center>
+<p>
+<center><table cols=1 width="95%" >
+<tr>
+<td>
+<dd>
+<font face="ms sans serif"><font size=-1>&nbsp;ความ<wbr>เป็น<wbr>มา<wbr>มาตร<wbr>ฐาน<wbr>คำ<wbr>สั่ง<wbr>การ<wbr>ควบ<wbr>คุมเครื่องพิมพ์<wbr>ที่<wbr>เรียก<wbr>ว่า<wbr><wbr>&nbsp;
+pcl (printer command language) และ<wbr>แสดง<wbr>ให้<wbr>เห็น<wbr>ลักษณะ<wbr>และ<wbr>ความ<wbr>สามารถ<wbr>ที่<wbr>สำคัญ<wbr>ของ<wbr>ภาษา<wbr>สั่ง<wbr>งาน<wbr>พี<wbr>ซี<wbr>แอล<wbr></font></font></dd>
+
+<p><b><font face="ms sans serif"><font color="#990000"><font size=-1>ยุค<wbr>ของ<wbr>การ<wbr>ใช้เครื่องพิมพ์<wbr><wbr></font></font></font></b>
+<dd>
+<font face="ms sans serif"><font size=-1>การ<wbr>ใช้เครื่องพิมพ์<wbr>มีวิวัฒนา<wbr>กร<wbr>พร้อมกับการ<wbr>พัฒนา<wbr>คอมพิวเตอร์
+เพราะเครื่องพิมพ์<wbr>ก็<wbr>เป็น<wbr>อุปกรณ์<wbr>ที่<wbr>สำคัญ<wbr>สำหรับ<wbr>การ<wbr>ทำ<wbr>ราย<wbr>งาน<wbr>ผล<wbr>ที่<wbr>ได้<wbr>จาก<wbr>คอมพิวเตอร์
+การ<wbr>ใช้<wbr>งานเครื่องพิมพ์<wbr>มี<wbr>การ<wbr>พัฒนา<wbr>มา<wbr>หลาย<wbr>ยุค<wbr>สมัย และ<wbr>มี<wbr>พัฒนา<wbr>การ<wbr>ดี<wbr>ขึ้น<wbr>เรื่อย
+ๆ เรา<wbr>อาจ<wbr>จัด<wbr>แบ่งเครื่องพิมพ์<wbr>ออก<wbr>เป็น<wbr>ระดับ<wbr>ตาม<wbr>การ<wbr>ใช้<wbr>งาน<wbr>และ<wbr>การ<wbr>พัฒนา<wbr>ได้<wbr>ดัง<wbr>นี้<wbr><wbr></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font size=-1><b><font color="#3333ff">ระดับ<wbr>แรก
+</font></b><font color="#000000">การ<wbr>พิมพ์<wbr>ที่<wbr>เรียก<wbr>ว่า
+print and space ลักษณะ<wbr>การ<wbr>พิมพ์<wbr>เหมือนเครื่องพิมพ์<wbr>ดีด กล่าว<wbr>คือ ถ้า<wbr>ต้อง<wbr>การ<wbr>เลื่อน<wbr>ไป<wbr>พิมพ์<wbr>กลาง<wbr>หน้า<wbr>กระดาษ<wbr>ก็<wbr>ต้อง<wbr>เคาะ
+space ไป<wbr>เรื่อย ๆ จน<wbr>ถึง<wbr>ตำแหน่ง<wbr>ที่<wbr>ต้อง<wbr>การ<wbr><wbr></font></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font size=-1><font color="#3333ff"><b>ระดับ<wbr>ที่<wbr>สอง<wbr><wbr></b>&nbsp;</font><font color="#000000">
+เป็น<wbr>งาน<wbr>พิมพ์<wbr>ที่<wbr>ใช้<wbr>รหัส<wbr>ตัว<wbr>ควบ<wbr>คุม<wbr>มาตร<wbr>ฐาน ทำ<wbr>ให้<wbr>ลด<wbr>จำนวน<wbr>ส่ง<wbr>ตัว<wbr>อักษร space ลง
+เช่น การ<wbr>ใช้ cr, lf การแทป การ<wbr>ย่อ<wbr>หน้า<wbr>โดย<wbr>กำหนด<wbr>เป็น<wbr>ตัว<wbr>อักษร<wbr>ใน<wbr>ตา<wbr>รางรัหสแอ<wbr>สกี
+และ<wbr>สามารถ<wbr>ใช้<wbr>ใน<wbr>การ<wbr>สื่อ<wbr>สาร<wbr>ระหว่างเครื่องคอมพิวเตอร์กับเครื่องพิมพ์<wbr><wbr></font></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font size=-1><b><font color="#3333ff">ระดับ<wbr>ที่<wbr>สาม<wbr><wbr></font></b><font color="#000000">
+เป็น<wbr>งาน<wbr>พิมพ์<wbr>เวิร์ด<wbr>โปรเซสเซอร์ ยุค<wbr>นี้<wbr>เป็น<wbr>ยุค<wbr>ของเครื่องพิมพ์ดอตแมตริกซ์ ซึ่ง<wbr>รับรุ้คำ<wbr>สั่ง
+esc มี<wbr>การ<wbr>กำหนด<wbr>รูป<wbr>แบบ<wbr>การ<wbr>พิมพ์ การ<wbr>ย่อ<wbr>หน้า การ<wbr>ใช้<wbr>ตัว<wbr>อักษร<wbr>ใหญ่<wbr>เล็ก ขีด<wbr>เส้น<wbr>ใต้
+ตัว<wbr>เอน การ<wbr>พิมพ์<wbr>ลักษณ์พิเศษ<wbr>อื่น ๆ เครื่องพิมพ์<wbr>ใน<wbr>ยุค<wbr>นี้<wbr>เป็น<wbr>ที่<wbr>รู้<wbr>จัก<wbr>กัน<wbr>ดี<wbr>ใน<wbr>หมู่<wbr>นัก<wbr>ไมโคร<wbr>คอมพิวเตอร์<wbr><wbr></font></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font size=-1><b><font color="#3333ff">ระดับ<wbr>ที่<wbr>สี่
+</font></b><font color="#000000">เป็น<wbr>การ<wbr>ใช้<wbr>ภาษา<wbr>สั่ง<wbr>การ<wbr>พิมพ์
+ลักษณะ<wbr>นี้<wbr>ได้<wbr>แก่ โพสต์สคริปต์<wbr>,พี<wbr>ซี<wbr>แอล เป็น<wbr>ต้น ภาษา<wbr>สั่ง<wbr>งาน<wbr>พิมพ์<wbr>นี้<wbr>เป็น<wbr>การ<wbr>ประยุกต์<wbr>ใช้<wbr>งาน<wbr>พิมพ์<wbr>ใน<wbr>ลักษณะ<wbr>พิมพ์<wbr>เป็น<wbr>หน้า<wbr>แทน<wbr>ที่<wbr>จะ<wbr>พิมพ์<wbr>แบบ<wbr>ลำ<wbr>ดับ<wbr>ที<wbr>ละ<wbr>บรรทัด
+เครื่องพิมพ์<wbr>ที่<wbr>พิมพ์<wbr>เป็น<wbr>หน้า ได้<wbr>แก่ เครื่องพิมพ์<wbr>เลเซอร์ เป็น<wbr>ต้น งาน<wbr>พิมพ์<wbr>จึง<wbr>ทำ<wbr>ได้<wbr>ดี
+สามารถ<wbr>จัด<wbr>รูป<wbr>ภาพ<wbr>และ<wbr>เอก<wbr>สาร<wbr>ร่วม<wbr>กัน<wbr>ได้ งาน<wbr>ประยุกต์<wbr>ก็<wbr>จะ<wbr>กว้าง<wbr>ขวาง<wbr>ขี้นไป<wbr>อีก<wbr>มาก
+เช่น งาน<wbr>ไทป์เซตติ้ง งาน<wbr>ออก<wbr>แบ<wbr>บก<wbr>รา<wbr>ฟิก งานเดสค์ท้อปพับ<wbr>ลิชชิ่ง เป็น<wbr>ต้น<wbr><wbr></font></font></font></dd>
+
+<p><b><font face="ms sans serif"><font color="#990000"><font size=-1>ทำไม<wbr>ต้อง<wbr>พี<wbr>ซี<wbr>แอ<wbr>ล
+(pcl)</font></font></font></b>
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>บริษัทฮิวเล็ตต์<wbr>-แพคการ์ด
+ซึ่ง<wbr>เป็น<wbr>บริษัท<wbr>ที่<wbr>มี<wbr>ชื่อ<wbr>เสียง<wbr>ใน<wbr>การ<wbr>พัฒนาเครื่องพิมพ์<wbr>เลเซอร์<wbr>และ<wbr>มี<wbr>ผู้<wbr>นิยม<wbr>ใช้เครื่อง<wbr>พิมพ์<wbr>ของฮิวเล็ตต์<wbr>-แพคการ์ด<wbr>อยู่<wbr>มาก
+ได้<wbr>พัฒนา<wbr>ภาษา<wbr>สั่ง<wbr>งานเครื่องพิมพ์<wbr>ขึ้น<wbr>มา<wbr>ภาษา<wbr>หนึ่ง<wbr>เรียก<wbr>ว่า พี<wbr>ซี<wbr>แอล (pcl-printer
+command language) พี<wbr>ซี<wbr>แอลได้<wbr>รับ<wbr>การ<wbr>พัฒนา<wbr>ขึ้น<wbr>มา<wbr>ด้วย<wbr>จุด<wbr>มุ่ง<wbr>หมาย<wbr>ดัง<wbr>ต่อ<wbr>ไป<wbr>นี้<wbr><wbr></font></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>- ให้เครื่องพิมพ์<wbr>ทุกเครื่องที่<wbr>มี<wbr>โครง<wbr>สร้าง<wbr>กล<wbr>ไก<wbr>ฮาร์ดแวร์<wbr>ต่าง<wbr>กัน<wbr>จะ<wbr>ทำ<wbr>งานกับซอฟต์แวร์ไ<wbr>ด้เหมือน<wbr>กัน<wbr><wbr></font></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>- ครื่องพิมพ์<wbr>ระดับ<wbr>ที่<wbr>ต่ำ<wbr>กว่า<wbr>จะ<wbr>เป็น<wbr>เซต<wbr>ย่อย<wbr>ของเครื่องพิมพ์<wbr>ระดับ<wbr>นี้<wbr>กล่าว<wbr>คือ
+การ<wbr>ใช้<wbr>งาน<wbr>ของเครื่องพิมพ์<wbr>อะไร<wbr>ก็<wbr>ตาม<wbr>สามารถ<wbr>ใช้กับพี<wbr>ซี<wbr>แอลได้<wbr><wbr></font></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>- สั่ง<wbr>งาน<wbr>ได้<wbr>กะ<wbr>ทัด<wbr>รัด<wbr>และ<wbr>ง่ายรวด<wbr>เร็ว<wbr><wbr></font></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>- มี<wbr>การ<wbr>ทำ<wbr>งาน<wbr>ได้<wbr>ทั้ง<wbr>รูป<wbr>แบบ<wbr>ที่<wbr>เรียก<wbr>ว่า
+มาสเตอร์กรา<wbr>ฟิก<wbr>หรือ<wbr>แบบเดซี<wbr>วีลที่<wbr>พิมพ์<wbr>ตัว<wbr>อักษร<wbr>ที<wbr>ละ<wbr>ตัว เห็น<wbr>ได้<wbr>ว่า<wbr>บริษัทฮิวเล็ต<wbr>-แพคการ์ด<wbr>ได้<wbr>เน้นเครื่องพิมพ์<wbr>ที่<wbr>ใช้
+pcl ครอบ<wbr>คลุม<wbr>การ<wbr>ทำ<wbr>งาน<wbr>ของเครื่องพิมพ์<wbr>อื่น ๆ ทั้ง<wbr>หมด ทำ<wbr>ให้<wbr>การ<wbr>เขียน<wbr>ซอฟต์แวร์จะ<wbr>ได้<wbr>เป็น<wbr>มาตร<wbr>ฐาน<wbr>เดียว<wbr>กัน<wbr>ได้<wbr><wbr></font></font></font></dd>
+
+<p><b><font face="ms sans serif"><font color="#990000"><font size=-1>ลักษณะ<wbr>ของ<wbr>พี<wbr>ซี<wbr>แอล<wbr></font></font></font></b>
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>พี<wbr>ซี<wbr>แอลมี<wbr>ลักษณะ<wbr>ของ<wbr>คำ<wbr>สั่ง<wbr>ที่<wbr>ใช้<wbr>ใน<wbr>การ<wbr>สั่ง<wbr>งานเครื่องพิมพ์
+การ<wbr>สั่ง<wbr>งาน<wbr>ก็<wbr>เหมือนกับสั่ง<wbr>งานเครื่องพิมพ์<wbr>ใน<wbr>ระดับดอตแมตริกซ์เดิม คือ<wbr>ส่ง<wbr>รหัส<wbr>ไป<wbr>ยังเครื่องพิมพ์
+เครื่องพิมพ์<wbr>จะ<wbr>ทำ<wbr>การ<wbr>แปล<wbr>ความ<wbr>หมาย<wbr>ของ<wbr>การ<wbr>พิมพ์<wbr><wbr></font></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>พี<wbr>ซี<wbr>แอลที่<wbr>ใช้<wbr>นี้<wbr>มี
+3 รูป<wbr>แบบ<wbr>คือ<wbr><wbr></font></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>1.&nbsp;
+ใช้<wbr>รหัส<wbr>ควบ<wbr>คุม<wbr>โดย<wbr>ตรง เช่น การ<wbr>ใช้<wbr>รหัส cr, lf, ff เป็น<wbr>ต้น รหัส<wbr>ควบ<wbr>คุม<wbr>นี้<wbr>อยู่<wbr>ใน<wbr>ตา<wbr>ราง<wbr>รหัส<wbr>แอ<wbr>สกี<wbr>แล้ว<wbr><wbr></font></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>2.&nbsp;
+ตัว<wbr>อักษร<wbr>ตาม<wbr>รหัส esc เช่น esc ตาม<wbr>ด้วย x&nbsp; x ที่<wbr>ตาม<wbr>มา<wbr>จะ<wbr>สื่อ<wbr>ความ<wbr>หมายกับเครื่องพิมพ์<wbr>ใน<wbr>การ<wbr>สั่ง<wbr>การ<wbr>ทำ<wbr>งาน
+รหัส x ที่<wbr>ใช้<wbr>มี<wbr>ค่า<wbr>อยู่<wbr>ระหว่าง<wbr>รหัส แอ<wbr>สกี 48-126 เช่น esc e หมาย<wbr>ถึง<wbr>ใช้<wbr>รี<wbr>เซตเครื่องพิมพ์
+esc 9 หมาย<wbr>ถึง<wbr>การ<wbr>รี<wbr>เซต<wbr>การ<wbr>ตั้ง<wbr>ขอบ<wbr>ซ้าย<wbr>และ<wbr>ขอบ<wbr>ขวา<wbr><wbr></font></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>3.&nbsp;
+ตัว<wbr>อักษร<wbr>ตาม<wbr>รหัส esc ใน<wbr>รูป<wbr>พา<wbr>รา<wbr>มิเตอร์ ใน<wbr>กรณี<wbr>นี้<wbr>ใช้<wbr>ตัว<wbr>อักษร<wbr>หลาย<wbr>ตัว และ<wbr>เป็น<wbr>ตัว<wbr>แปรหรือ<wbr>ตัว<wbr>เลข<wbr>ที่<wbr>แปรเปลี่ยน<wbr>ค่า<wbr>ได้
+รูป<wbr>แบบ<wbr>ของ<wbr>การ<wbr>ใช้<wbr>เป็น<wbr><wbr>&nbsp;</font></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>esc x&nbsp;
+y # z1 # z2 # z3…<wbr>#zn [data] โดย<wbr>ที่<wbr><wbr>&nbsp;</font></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>y, #, zi
+และ [data] อาจ<wbr>เป็น<wbr>ตัว<wbr>เผื่อ<wbr>เลือก คือ จะ<wbr>มี<wbr>หรือ<wbr>ไม่<wbr>ก็<wbr>ได้<wbr><wbr></font></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>x เป็น<wbr>ตัว<wbr>อักษร<wbr>ที่<wbr>เรียก<wbr>ว่า
+พา<wbr>รา<wbr>มิเตอร์ ใช้<wbr>รหัส<wbr>แอ<wbr>สกี<wbr>จาก 33-47 (!ถึง<wbr><wbr>/)&nbsp;</font></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>y คือ ตัว<wbr>อักษร<wbr>บอ<wbr>กกรุ๊<wbr>ป
+ใช้<wbr>รหัส<wbr>แอ<wbr>สกี<wbr>จาก 96-126</font></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1># คือ ฟิล์ดบอก<wbr>ค่า
+เป็น<wbr>กลุ่ม<wbr>ของ<wbr>ตัว<wbr>อักษร<wbr>ที่<wbr>เป็น<wbr>ค่า<wbr>ตัว<wbr>เลข<wbr><wbr></font></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>zi คือ ตัว<wbr>อักษร<wbr>พา<wbr>รา<wbr>มิเตอร์<wbr><wbr></font></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>zn คือ ตัว<wbr>บอก<wbr>จบ<wbr>คำ<wbr>สั่ง<wbr><wbr></font></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>[data] คือ
+ตัว<wbr>ข้อ<wbr>มูล<wbr>ที่<wbr>มอง<wbr>แบบ<wbr>รหัสไบนา<wbr>รี่<wbr><wbr></font></font></font></dd>
+
+
+<blockquote><b><font face="ms sans serif"><font color="#3333ff"><font size=-1>ตัว<wbr>อย่าง<wbr>พี<wbr>ซี<wbr>แอล<wbr></font></font></font></b>
+<center><img src="pcl1.gif" height=142 width=300>
+<p><img src="pcl2.gif" height=151 width=350></center>
+</blockquote>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>&nbsp;คำ<wbr>สั่ง<wbr>ดัง<wbr>กล่าว<wbr>เป็น<wbr>คำ<wbr>สั่ง<wbr>ที่<wbr>รวม<wbr>คำ<wbr>สั่ง<wbr>เข้า<wbr>ด้วย<wbr>กัน
+คือ esc &amp; i 1 o กับ esc &amp; i 1 2 a สังเกต<wbr>ว่า<wbr>หาก<wbr><wbr></font></font></font></dd>
+
+<br><font face="ms sans serif"><font color="#000000"><font size=-1>คำ<wbr>สั่ง<wbr>ที่<wbr>ใช้<wbr>อยู่<wbr>ใน<wbr>กลุ่ม<wbr>เดียว<wbr>กัน<wbr>สามารถ<wbr>นำ<wbr>มา<wbr>รวม<wbr>กัน<wbr>ได้
+แต่<wbr>ต้อง<wbr>เปลี่ยน<wbr>ตัว<wbr>อักษร<wbr>บอก<wbr>จบ<wbr>คำ<wbr>สั่ง<wbr>ของ<wbr>คำ<wbr>สั่ง<wbr>แรก<wbr>ให้<wbr>เป็น<wbr>ตัว<wbr>อักษร<wbr>ตัว<wbr>เล็ก<wbr>เสีย<wbr>ก่อน
+เพราะ<wbr>รหัส<wbr>จบ<wbr>คำ<wbr>สั่ง<wbr>ของ<wbr>พี<wbr>ซี<wbr>แอลจะ<wbr>ใช้<wbr>ตัว<wbr>อักษร<wbr>ตัว<wbr>ใหญ่<wbr>เท่า<wbr>นั้น<wbr><wbr></font></font></font><b><font face="ms sans serif"><font color="#990000"><font size=-1></font></font></font></b>
+<p><b><font face="ms sans serif"><font color="#990000"><font size=-1>พี<wbr>ซี<wbr>แอลสั่ง<wbr>งาน<wbr>ให้<wbr>ทำ<wbr>อะไร<wbr>ได้<wbr>บ้าง<wbr><wbr></font></font></font></b>
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>&nbsp;ใน<wbr>ที่<wbr>นี้<wbr>จะ<wbr>ไม่<wbr>ยก<wbr>คำ<wbr>สั่ง<wbr>ของ<wbr>พี<wbr>ซี<wbr>แอ<wbr>ล
+เพราะ<wbr>คำ<wbr>สั่ง<wbr>ของ<wbr>พี<wbr>ซี<wbr>แอลมี<wbr>มาก และ<wbr>ไม่<wbr>สามารถ<wbr>นำ<wbr>มา<wbr>แสดง<wbr>ให้<wbr>ดู<wbr>ได้<wbr>หมด ผู้<wbr>สน<wbr>ใจ<wbr>หา<wbr>ดู<wbr>ได้<wbr>จาก<wbr>หนังสือ
+technical reference manual ของเครื่องพิมพ์<wbr>เลเซอร์ สำหรับ<wbr>บท<wbr>ความ<wbr>นี้<wbr>จะ<wbr>กล่าว<wbr>ถึง<wbr>ขีด<wbr>ความ<wbr>สามารถ<wbr>ของ<wbr>พี<wbr>ซี<wbr>แอลว่า<wbr>ทำ<wbr>อะไร<wbr>ให้<wbr>เรา<wbr>ได้<wbr>บ้าง<wbr>ใน<wbr>เชิง<wbr>ภาย<wbr>นอก<wbr>ที่<wbr>เห็น<wbr>ว่า<wbr>เรา<wbr>จะ<wbr>ใช้<wbr>พี<wbr>ซี<wbr>แอลมา<wbr>ช่วย<wbr>งาน<wbr>เรา<wbr>ได้<wbr>แค่<wbr>ไหน<wbr><wbr></font></font></font></dd>
+
+<p><b><font face="ms sans serif"><font color="#990000"><font size=-1>คำ<wbr>สั่ง<wbr>ใน<wbr>การ<wbr>กำหนด<wbr>ขนาด<wbr>กรอบ<wbr>การ<wbr>พิมพ์<wbr><wbr></font></font></font></b>
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>&nbsp;เครื่องพิมพ์<wbr>เลเซอร์<wbr>เป็นเครื่องพิมพ์<wbr>ที่<wbr>พิมพ์<wbr>ได้<wbr>ที<wbr>ละ<wbr>แผ่น
+การ<wbr>จัด<wbr>การ<wbr>ข้อ<wbr>มูล<wbr>การ<wbr>พิมพ์<wbr>จะ<wbr>ต้อง<wbr>กำหนด<wbr>ขอบ<wbr>เขต<wbr>ของ<wbr>การ<wbr>พิมพ์ โดย<wbr>การ<wbr>กำหนด<wbr>กรอบ<wbr>กระดาษ
+การ<wbr>กำหนด<wbr>จุด<wbr>บน<wbr>กระดาษ พี<wbr>ซี<wbr>แอลอ้าง<wbr>อิง<wbr>ตำแหน่ง x,y ตำแหน่ง<wbr>อ้าง<wbr>อิง 0,0 อยู่<wbr>บน<wbr>ซ้าย<wbr>สุด<wbr>ของ<wbr>ขอบ<wbr>กระดาษ
+โครง<wbr>สร้าง<wbr>ของ<wbr>ตำแหน่ง<wbr>กระดาษ<wbr>แสดง<wbr>ได้<wbr>ดัง<wbr>รูป<wbr>ที่ 1</font></font></font></dd>
+
+<center><img src="pcl3.gif" height=256 width=340></center>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>ใน<wbr>การ<wbr>อ้าง<wbr>อิง<wbr>ทางแ<wbr>น
+xของ<wbr>พี<wbr>ซี<wbr>แอล จะ<wbr>อ้าง<wbr>อิง<wbr>เป็น<wbr>จุด หรือ<wbr>อ้าง<wbr>แบบ<wbr>แบบ<wbr>แกน<wbr>นอน จะ<wbr>เป็น<wbr>ดัง<wbr>รูป 2</font></font></font></dd>
+
+<center><img src="pcl4.gif" height=219 width=390></center>
+
+<center><table border cols=9 width="70%" bgcolor="#ccffff" >
+<tr>
+<td align=center>
+<center><font face="ms sans serif"><font size=-1>ขนาด<wbr>กระดาษ<wbr><wbr></font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>a</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>b</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>c</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>d</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>e</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>f</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>g</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>h</font></font></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center><font face="ms sans serif"><font size=-1>letter</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>3300</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>2550</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>3180</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>2550</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>60</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>60</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>50</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>100</font></font></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center><font face="ms sans serif"><font size=-1>legal</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>4200</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>2550</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>4080</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>2550</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>60</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>60</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>50</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>100</font></font></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center><font face="ms sans serif"><font size=-1>executive</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>3150</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>2175</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>3030</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>2175</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>60</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>60</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>50</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>100</font></font></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center><font face="ms sans serif"><font size=-1>a4</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>3507</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>2480</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>3389</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>2480</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>60</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>58</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>50</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>92</font></font></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center><font face="ms sans serif"><font size=-1>com-10</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>2850</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>1237</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>2730</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>1237</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>60</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>60</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>50</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>100</font></font></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center><font face="ms sans serif"><font size=-1>monarc</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>2250</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>1162</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>2130</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>1162</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>60</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>60</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>50</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>100</font></font></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center><font face="ms sans serif"><font size=-1>c5</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>2704</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>1913</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>2586</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>1913</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>60</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>58</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>50</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>92</font></font></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center><font face="ms sans serif"><font size=-1>dl</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>2598</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>1299</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>2480</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>1299</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>60</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>58</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>50</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>92</font></font></center>
+</td>
+</tr>
+</table></center>
+
+<center>
+<p><b><font face="ms sans serif"><font color="#3333ff"><font size=-1>รูป<wbr>ที่
+2 กรอบ<wbr>การ<wbr>พิมพ์<wbr>แบบ<wbr>แกน<wbr>นอน<wbr><wbr></font></font></font></b>
+<p><img src="pcl5.gif" height=316 width=390></center>
+
+<center><table border cols=9 width="70%" bgcolor="#ccffff" >
+<tr>
+<td>
+<center><font face="ms sans serif"><font size=-1>ขอบ<wbr>กระดาษ<wbr><wbr></font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>a</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>b</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>c</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>d</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>e</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>f</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>g</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>h</font></font></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center><font face="ms sans serif"><font size=-1>letter</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>2550</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>330</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>2400</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>330</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>50</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>100</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>60</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>60</font></font></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center><font face="ms sans serif"><font size=-1>legal</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>2550</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>4200</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>2400</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>4200</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>50</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>100</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>60</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>60</font></font></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center><font face="ms sans serif"><font size=-1>excutive</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>2175</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>3150</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>2025</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>3150</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>50</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>100</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>60</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>60</font></font></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center><font face="ms sans serif"><font size=-1>a4</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>2480</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>3507</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>2338</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>2507</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>50</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>92</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>60</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>58</font></font></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center><font face="ms sans serif"><font size=-1>com-10</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>1237</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>2850</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>1087</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>2850</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>50</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>100</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>60</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>60</font></font></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center><font face="ms sans serif"><font size=-1>monarc</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>1162</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>2250</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>1012</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>2250</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>50</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>100</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>60</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>60</font></font></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center><font face="ms sans serif"><font size=-1>c5</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>1913</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>2704</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>1771</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>2704</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>50</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>92</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>60</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>58</font></font></center>
+</td>
+</tr>
+
+<tr>
+<td>
+<center><font face="ms sans serif"><font size=-1>dl</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>1299</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>2598</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>1157</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>2598</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>50</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>92</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>60</font></font></center>
+</td>
+
+<td>
+<center><font face="ms sans serif"><font size=-1>58</font></font></center>
+</td>
+</tr>
+</table></center>
+
+<center>
+<p><b><font face="ms sans serif"><font color="#3333ff"><font size=-1>รูป<wbr>ที่
+3 กรอบ<wbr>การ<wbr>พิมพ์<wbr>แบบ<wbr>แถบ<wbr>ตั้ง<wbr><wbr></font></font></font></b></center>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>สังเกต<wbr>ว่า<wbr>การ<wbr>ใช้<wbr>งานเครื่องพิมพ์<wbr>เลเซอร์<wbr>จำ<wbr>เป็น<wbr>ต้อง<wbr>ใช้<wbr>พี<wbr>ซี<wbr>แอ<wbr>ลบ<wbr>อก<wbr>ชนิด<wbr>ของ<wbr>กระดาษ<wbr>ที่<wbr>ใช้
+แล้ว<wbr>จึง<wbr><wbr></font></font></font></dd>
+
+<br><font face="ms sans serif"><font color="#000000"><font size=-1>อ้าง<wbr>อิง<wbr>ตำแหน่ง<wbr>การ<wbr>พิมพ์<wbr>ได้
+หาก<wbr>การ<wbr>อ้าง<wbr>อิง<wbr>ออก<wbr>นอก<wbr>กรอบ<wbr>ที่<wbr>จะ<wbr>พิมพ์<wbr>ได้ เครื่องพิมพ์<wbr>เลเซอร์<wbr>จะ<wbr>ไม่<wbr>ยอม<wbr>พิมพ์<wbr>ให้<wbr><wbr>&nbsp;</font></font></font>
+<br><font face="ms sans serif"><font color="#000000"><font size=-1>หรือ<wbr>แม้<wbr>แต่<wbr>การ<wbr>กำหนด<wbr>ตัว<wbr>หนังสือ<wbr>ที่<wbr>จะ<wbr>พิมพ์<wbr>เหลื่อม<wbr>จาก<wbr>กรอบ<wbr>ที่<wbr>กำหนด
+ก็<wbr>จะ<wbr>ไม่<wbr>พิมพ์<wbr>ตัว<wbr>หนังสือ<wbr>นั้น<wbr>เช่น<wbr>กัน<wbr><wbr></font></font></font>
+<p><b><font face="ms sans serif"><font color="#990000"><font size=-1>พี<wbr>ซี<wbr>แอลสามารถ<wbr>สั่ง<wbr>การ<wbr>กำหนดเคอร์เซอร์ได้<wbr>เหมือน<wbr>จอ<wbr>ภาพ<wbr><wbr></font></font></font></b>
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>&nbsp;การ<wbr>พิมพ์<wbr>บน<wbr>กระดาษ<wbr>จำ<wbr>เป็น<wbr>ต้อง<wbr>มี<wbr>การ<wbr>กำหนดเคอร์เซอร<wbr>์
+การ<wbr>เลื่อนเคอร์เซอร์ เครื่องพิมพ์<wbr>เลเซอร์<wbr>มีเคอร์เซอร์และ<wbr>จะ<wbr>เลื่อนเคอร์เซอร์ได้<wbr>สอง<wbr>แบบ
+แบบ<wbr>แรก<wbr>คือ การ<wbr>เลื่อน<wbr>แบบ<wbr>แอปโซ<wbr>ลุท และ<wbr>แบบ<wbr>ที่<wbr>สอง<wbr>เป็น<wbr>แบบ รีเลตีฟ แบบ<wbr>แอปโซ<wbr>ลุทเป็น<wbr>แบบ<wbr>ที่<wbr>ใช้<wbr>พี<wbr>ซี<wbr>แอลสั่ง<wbr>ให้<wbr>เลื่อน<wbr>ไป<wbr>ยัง<wbr>ตำแหน่ง
+x, y โดย<wbr>ตรง ส่วน<wbr>แบบ<wbr>รีเลตีฟนั้น<wbr>ค่า<wbr>ตัว<wbr>เลข<wbr>พา<wbr>รา<wbr>มิเตอร์<wbr>ที่<wbr>บอก<wbr>มา<wbr>จะ<wbr>นำ<wbr>มาบ<wbr>วก<wbr>หรือ<wbr>ลบกับค่าเดิ<wbr>ม
+โครง<wbr>สร้าง<wbr>การ<wbr>กำหนดเคอร์เซอร์แสดง<wbr>ได้<wbr>ดัง<wbr>รูป 4</font></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>ใน<wbr>การ<wbr>พิมพ์<wbr>ตัว<wbr>อักษร<wbr>ลง<wbr>บน<wbr>กระดาษเคอร์เซอร์จะ<wbr>เลื่อน<wbr>ไป<wbr>เอง<wbr>โดย<wbr>อัตโนมัติ
+นอก<wbr>จาก<wbr>นี้<wbr>เรา<wbr>ยัง<wbr>สามารถ<wbr><wbr></font></font></font></dd>
+
+<br><font face="ms sans serif"><font color="#000000"><font size=-1>เก็บ<wbr>ตำแหน่ง<wbr>ของเคอร์เซอร์ลง<wbr>ในสแต็<wbr>ก
+และ<wbr>เรียก<wbr>หน่วยเดซิ<wbr>พอยต์ หรือ<wbr>อ้าง<wbr>เป็น<wbr>คอลัมน์ก็<wbr>ได้ การ<wbr>อ้าง<wbr>เป็น<wbr><wbr></font></font></font>
+<br><font face="ms sans serif"><font color="#000000"><font size=-1>เดซิ<wbr>พอยต์เป็น<wbr>หน่วย<wbr>ทางด้าน<wbr>งาน<wbr>พิมพ์
+ซึ่ง<wbr>หนึ่งเดซิ<wbr>พอยต์มี<wbr>ค่า<wbr>เท่ากับ 1/720 นิ้ว ส่วน<wbr>การ<wbr>อ้าง<wbr>อิง<wbr>ทางแกน<wbr><wbr></font></font></font>
+<br><font face="ms sans serif"><font color="#000000"><font size=-1>y จะ<wbr>ต้อง<wbr>เป็น<wbr>จุด<wbr>หรือ<wbr>หน่วยเดซิ<wbr>พอยต์หรือ<wbr>เป็น<wbr>แถว<wbr>ก็<wbr>ได้<wbr><wbr></font></font></font>
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>เครื่องพิมพ์<wbr>เลเซอร์<wbr>ส่วน<wbr>ใหญ่<wbr>ให้<wbr>ราย<wbr>ละเอียด<wbr>จุด<wbr>มี<wbr>ค่า<wbr>เป็น
+1/300 นิ้ว หรือ<wbr>พิมพ์<wbr>ได้<wbr>ละเอียด 300 จุด<wbr>ต่อ<wbr>นิ้ว<wbr><wbr></font></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>การ<wbr>สั่ง<wbr>งาน<wbr>ด้วย<wbr>พี<wbr>ซี<wbr>แอลสามารถ<wbr>สั่ง<wbr>ให้<wbr>การ<wbr>พิมพ์<wbr>พิมพ์<wbr>ตาม<wbr>แนว<wbr>นอน
+หรือ<wbr>แนว<wbr>ตั้ง<wbr>ของ<wbr>กระดาษ<wbr>ก็<wbr>ได้ ถ้า<wbr>พิมพ์<wbr>แนว<wbr>นอน ก็<wbr>เรียก<wbr>การ<wbr>พิมพ์<wbr>แบบ landscape และ<wbr>ถ้า<wbr>พิมพ์<wbr>แกน<wbr>ตั้ง<wbr>ก็<wbr>เรียก<wbr>ว่า
+portrait</font></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>การ<wbr>พิมพ์<wbr>แบบ<wbr>นอน<wbr>นั้น<wbr>ผู้<wbr>สั่ง<wbr>งาน<wbr>ใช้<wbr>คำ<wbr>สั่ง<wbr>พี<wbr>ซี<wbr>แอลเพื่อ<wbr>กำหนด<wbr>การ<wbr>พิมพ์<wbr>จะ<wbr>ต้อง<wbr>ไม่<wbr>พิมพ์<wbr>เกิน<wbr><wbr>กรอบ<wbr>ที่<wbr>กำหนด
+เครื่องพิมพ์<wbr>แต่<wbr>ละเครื่องมี<wbr>กรอบ<wbr>การ<wbr>พิมพ์ ดัง<wbr>นั้น<wbr>การ<wbr>อ้าง<wbr>อิง<wbr>ตำแหน่ง x, y ต้อง<wbr>ไม่<wbr>เกิน<wbr>กว่า<wbr>ตำแหน่ง<wbr>ของ<wbr>กรอบ<wbr>กระดาษ<wbr><wbr></font></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>กรอบ<wbr>กระดาษ<wbr>แบบ<wbr>แกน<wbr>นอน<wbr>มี<wbr>กรอบ<wbr>การ<wbr>พิมพ์<wbr>ได้<wbr>ดัง<wbr>รูป<wbr>ที่
+4 ส่วน<wbr>การ<wbr>สั่ง<wbr>งาน<wbr>พี<wbr>ซี<wbr>แอลใน<wbr>กรอบ<wbr>การ<wbr>พิมพ์<wbr>กลับ<wbr>เข้า<wbr>มา<wbr>ใหม่<wbr>ได้ การ<wbr>สั่ง<wbr>พิมพ์<wbr>นี้<wbr>สั่ง<wbr>พิมพ์<wbr>ได้<wbr>ทั้ง<wbr>แบบ<wbr>ตัว<wbr>อักษร<wbr>หรือกรา<wbr>ฟิก<wbr>ผสม<wbr>กัน<wbr>ได้<wbr><wbr></font></font></font></dd>
+
+<center><img src="pcl6.gif" height=346 width=407>
+<br><b><font face="ms sans serif"><font color="#3333ff"><font size=-1>รูป<wbr>ที่
+4 การ<wbr>ควบ<wbr>คุมเคอร์เซอร์<wbr></font></font></font></b></center>
+
+<p><b><font face="ms sans serif"><font color="#990000"><font size=-1>พี<wbr>ซี<wbr>แอลสามารถ<wbr>สั่ง<wbr>งาน<wbr>เพื่อ<wbr>กำหนด<wbr>สิ่ง<wbr>แวด<wbr>ล้อม<wbr><wbr></font></font></font></b>
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>&nbsp;ข้อ<wbr>เด่น<wbr>ของ<wbr>การ<wbr>ใช้<wbr>พี<wbr>ซี<wbr>แอลเห็น<wbr>จะ<wbr>ได้<wbr>แก่<wbr>การ<wbr>สั่ง<wbr>พิมพ์<wbr>เป็น<wbr>หน้า
+และ<wbr>คำ<wbr>สั่ง<wbr>พี<wbr>ซี<wbr>แอลมี<wbr>รูป<wbr>ลักษณะ<wbr>ที่<wbr>ควบ<wbr>คุม<wbr><wbr></font></font></font></dd>
+
+<br><font face="ms sans serif"><font color="#000000"><font size=-1>การ<wbr>ทำ<wbr>งาน<wbr>ได้<wbr>ง่า<wbr>ย
+นอก<wbr>จาก<wbr>นี้<wbr>ยัง<wbr>สามารถ<wbr>สั่ง<wbr>การ<wbr>ควบ<wbr>คุม<wbr>การ<wbr>ทำ<wbr>งาน<wbr>ใน<wbr>การ<wbr>กำหนด<wbr>สิ่ง<wbr>แวด<wbr>ล้อม<wbr>ได้ เช่น ออก<wbr>จำนวน<wbr>สำเนา<wbr>ซึ่ง<wbr>จะ<wbr>พิมพ์<wbr>กี่<wbr>ใบ<wbr>ก็<wbr>ได้
+บอก<wbr>ราย<wbr>ละเอียด<wbr>ของ<wbr>กรอบ<wbr>กระดาษ ชนิด<wbr>ของ<wbr>ตัว<wbr>อักษร<wbr>และ<wbr>สามารถ<wbr>สั่ง<wbr>ให้<wbr><wbr></font></font></font>
+<br><font face="ms sans serif"><font color="#000000"><font size=-1>พิมพ์<wbr>ผสมกับตัว<wbr>อักษร<wbr>หลาย<wbr>รูป<wbr>แบบ<wbr>ใน<wbr>หน้า<wbr>เดียว<wbr>กัน<wbr>ได้<wbr><wbr></font></font></font>
+<p><b><font face="ms sans serif"><font color="#990000"><font size=-1>พี<wbr>ซี<wbr>แอลกับลักษณะ<wbr>ของ<wbr>ตัว<wbr>อักษร
+(ฟอนต์)</font></font></font></b>
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>&nbsp;ปกติ<wbr>ภาย<wbr>ในเครื่องพิมพ์<wbr>เลเซอร์<wbr>มี<wbr>การ<wbr>เก็บ<wbr>รูป<wbr>แบบ<wbr>ลักษณะ<wbr>ตัว<wbr>อักษร<wbr>ไว้<wbr>แล้ว<wbr>หลาย<wbr>รูป<wbr>แบบ
+เครื่องพิมพ์<wbr><wbr></font></font></font></dd>
+
+<br><font face="ms sans serif"><font color="#000000"><font size=-1>เลเซอร์<wbr>บางเครื่องสามารถ<wbr>เก็บ<wbr>รูป<wbr>แบบ<wbr>ตัว<wbr>อักษร<wbr>ได้<wbr>ถึง
+16 แบบ<wbr>หรือ<wbr>สามารถ<wbr>โหลดมา<wbr>เพิ่ม<wbr>เติม<wbr>ได้<wbr>อีก ใน<wbr>การ<wbr>สั่ง<wbr>พิมพ์<wbr>นั้น<wbr>อาจ<wbr>ให้<wbr>พิมพ์<wbr>ตัว<wbr>หนา<wbr>โดย<wbr>ใช้<wbr>ฟอนต์เดิมได้
+หรือ<wbr>เลือก<wbr>ฟอนต์หลาย<wbr>ชนิด<wbr>ผสม<wbr>กัน<wbr>ได้ รูป<wbr>ที่ 5 เป็น<wbr>ตัว<wbr>อย่าง<wbr><wbr></font></font></font>
+<br><font face="ms sans serif"><font color="#000000"><font size=-1>การ<wbr>สั่ง<wbr>ให้<wbr>พิมพ์<wbr>ตัว<wbr>หนา<wbr>และ<wbr>เลือก<wbr>ตัว<wbr>อักษร<wbr>หลาย<wbr>แบบ<wbr><wbr></font></font></font>
+<center>
+<p><img src="pcl9.gif" height=213 width=289>
+<br><b><font face="ms sans serif"><font color="#3333ff"><font size=-1>รูป<wbr>ที่
+5 ตัว<wbr>อย่าง<wbr>การ<wbr>สั่ง<wbr>ให้<wbr>พิมพ์<wbr>ตัว<wbr>หนา<wbr>และ<wbr>การ<wbr>เลือก<wbr>ตัว<wbr>อักษร<wbr>หลาย<wbr>แบบ<wbr><wbr></font></font></font></b></center>
+
+<p><b><font face="ms sans serif"><font color="#990000"><font size=-1>การ<wbr>สร้าง<wbr>ตัว<wbr>อักษร<wbr>ใช้<wbr>เอง<wbr><wbr></font></font></font></b>
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>&nbsp;การ<wbr>สร้าง<wbr>ตัว<wbr>อักษร<wbr>ภาษา<wbr>ไทย<wbr>ใช้<wbr>เอง<wbr>ทำ<wbr>ได้<wbr>สะดวก<wbr>มาก
+เพราะเครื่องพิมพ์<wbr>เลเซอร์<wbr>มี<wbr>ขีด<wbr>ความ<wbr>สามารถ<wbr>ที่<wbr>จะ<wbr>ให้<wbr>ผู้<wbr>ใช้<wbr>งาน<wbr>สร้าง<wbr>ไฟล์<wbr>ตัว<wbr>อักษร<wbr>และ<wbr>โหล<wbr>ดเข้า<wbr>มา<wbr>ยังเครื่องพิมพ์<wbr>เลเซอร์<wbr>ได้<wbr><wbr></font></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>ตัว<wbr>อักษร<wbr>ที่<wbr>จะ<wbr>สร้าง<wbr>ขึ้น<wbr>จะ<wbr>เป็น<wbr>ตัว<wbr>อักษร<wbr>ที่<wbr>มี<wbr>ความ<wbr>ละเอียด<wbr>ค่อน<wbr>ข้าง<wbr>สูง
+ดัง<wbr>นั้น<wbr>จึง<wbr>ต้อง<wbr>ใช้<wbr>จุด<wbr>ที่<wbr>อยู่<wbr>ใน<wbr>เซลตัว<wbr>อักษร<wbr>จำนวน<wbr>มาก<wbr><wbr></font></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>รูป<wbr>ที่ 6
+เป็น<wbr>ขอบ<wbr>เขต<wbr>ของ<wbr>ตัว<wbr>อักษร<wbr>หนึ่ง<wbr>ตัว ซึ่ง<wbr>เมื่อ<wbr>สร้าง<wbr>ตัว<wbr>อักษร<wbr>ขึ้น<wbr>ใช้<wbr>เอง<wbr>ต้อง<wbr>ให้<wbr>ราย<wbr>ละเอียด<wbr>ข้อ<wbr>มูล<wbr>เหล่า<wbr>นี้<wbr>ไว้<wbr>หมด<wbr><wbr></font></font></font></dd>
+
+<center>
+<p><img src="pcl7.gif" height=233 width=311>
+<p><b><font face="ms sans serif"><font color="#3333ff"><font size=-1>รูป<wbr>ที่
+6 เซลตัว<wbr>อักษร<wbr><wbr></font></font></font></b></center>
+
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>การ<wbr>กำหนด<wbr>ข้อ<wbr>มูล<wbr>ตัว<wbr>อักษร<wbr>จะ<wbr>เก็บ<wbr>ไว้<wbr>ใน<wbr>ไฟล์
+โดย<wbr>โครง<wbr>สร้าง<wbr>ของ<wbr>ไฟล์<wbr>เขียน<wbr>ได้<wbr>อย่าง<wbr>คร่าว ๆ เป็น<wbr>ดัง<wbr>รูป<wbr>ที่ 7</font></font></font></dd>
+
+<dd>
+<b><font face="ms sans serif"><font color="#3333ff"><font size=-1></font></font></font></b></dd>
+
+<center><img src="pcl10.gif" height=290 width=300>
+<br><b><font face="ms sans serif"><font color="#3333ff"><font size=-1>รูป<wbr>ที่
+7 โครง<wbr>สร้าง<wbr>ไฟล์<wbr>ที่<wbr>เก็บ<wbr>ข้อ<wbr>มูล<wbr>ตัว<wbr>อักษร<wbr><wbr></font></font></font></b></center>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1></font></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>ข้อ<wbr>มูล<wbr>ตัว<wbr>อักษร<wbr>แต่<wbr>ละ<wbr>ตัว<wbr>จะ<wbr>เก็บ<wbr>เป็น<wbr>ข้อ<wbr>มูล<wbr>ตัว<wbr>เลขไบนา<wbr>รี
+และ<wbr>มี<wbr>ข้อ<wbr>มูล<wbr>อยู่<wbr>มาก<wbr>พอ<wbr>ควร<wbr>สำหรับ<wbr>ตัว<wbr>อักษร แต่<wbr>ละ<wbr>ชุด รูป<wbr>ที่ 8 เป็น<wbr>ตัว<wbr>อย่าง<wbr>ข้อ<wbr>มูล<wbr>ของ<wbr>ตัว<wbr>อักษร<wbr>ตัว<wbr>หนึ่ง<wbr>ที่<wbr>เก็บ<wbr>ราย<wbr>ละเอียด<wbr>ของ<wbr>ตัว<wbr>อักษร<wbr>ขนาด
+24x32 จุด<wbr><wbr></font></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1></font></font></font></dd>
+
+<center><img src="pcl8.gif" height=293 width=306>
+<br><b><font face="ms sans serif"><font color="#3333ff"><font size=-1>รูป<wbr>ที่
+8 ข้อ<wbr>มูล<wbr>ตัว<wbr>อักษณหนึ่ง<wbr>ตัว<wbr><wbr></font></font></font></b></center>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1></font></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1></font></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>ด้วย<wbr>วิธี<wbr>การ<wbr>กำหนด<wbr>ข้อ<wbr>มูล<wbr>ตัว<wbr>อักษร<wbr>แต่<wbr>ละ<wbr>ตัว<wbr>แยก<wbr>กัน
+ทำ<wbr>ให้<wbr>เรา<wbr>สามารถ<wbr>สั่ง<wbr>งานเครื่องพิมพ์<wbr>เลเซอร์<wbr>ใน<wbr>ลักษณะ<wbr>ที่<wbr>พิมพ์<wbr>แบบ<wbr>ตัว<wbr>อักษร<wbr>ที่<wbr>มี<wbr>ความกว้า<wbr><wbr>งไม่<wbr>เท่า<wbr>กัน<wbr>ได้<wbr><wbr></font></font></font></dd>
+<b><font face="ms sans serif"><font color="#990000"><font size=-1></font></font></font></b>
+<p><b><font face="ms sans serif"><font color="#990000"><font size=-1>คำ<wbr>สั่ง<wbr>พี<wbr>ซี<wbr>แอลสำหรับ<wbr>ลาก<wbr>เส้น
+ตี<wbr>กรอบ ระบาย<wbr>แร<wbr>เงา<wbr><wbr></font></font></font></b>
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>&nbsp;เพื่อ<wbr>ให้<wbr>การ<wbr>ใช้<wbr>งานเครื่องพิมพ์<wbr>เลเซอร์<wbr>ได้<wbr>ดี<wbr>ยิ่ง<wbr>ขึ้น
+คำ<wbr>สั่ง<wbr>ของ<wbr>พี<wbr>ซี<wbr>แอลยัง<wbr>รวม<wbr>เอา<wbr>คำ<wbr>สั่ง<wbr>ที่<wbr>เกี่ยวกับก<wbr>รา<wbr>ฟิก<wbr>ลง<wbr>ไป<wbr>ไว้<wbr>ด้วย เช่น คำ<wbr>สั่ง<wbr>ใน<wbr>การ<wbr>ลาก<wbr>เส้น<wbr>ตี<wbr>กรอบ
+หรือ<wbr>แม้<wbr>แต่<wbr>ระบาย<wbr>หรือ<wbr>แร<wbr>เงา<wbr><wbr></font></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>ผู้<wbr>เขียน<wbr>โปรแกรม<wbr>พี<wbr>ซี<wbr>แอลสามารถ<wbr>นำ<wbr>คำ<wbr>สั่ง<wbr>ต่าง
+ๆ มา<wbr>รวม<wbr>กัน<wbr>ให้<wbr>เป็น<wbr>มา<wbr>โครได้ นอก<wbr>จาก<wbr>นี้<wbr>พี<wbr>ซี<wbr>แอลยัง<wbr>ครอบ<wbr>คลุม<wbr>การ<wbr>ทำ<wbr>งาน<wbr>แบบเดิมที่<wbr>ใช้<wbr>คำ<wbr>สั่ง
+esc ไว้<wbr>กล่าว<wbr>คือ สามารถ<wbr>ทำ<wbr>การ<wbr>แปลง<wbr>รหัส esc ที่<wbr>ใช้กับเครื่องพิมพ์<wbr>อื่น<wbr>ให้<wbr>ใช้กับเครื่องพิมพ์<wbr>เซอร์ได้<wbr><wbr></font></font></font></dd>
+
+<p>
+<hr width="100%">
+<font face="ms sans serif"><font size=-1>เขียน<wbr>โดย : รศ. ยืน ภู่วรวรรณ<wbr><wbr></font></font>
+<br><font face="ms sans serif"><font size=-1>ไมโคร<wbr>คอมพิวเตอร์ ฉบับ<wbr>ที่ 58
+เดือน<wbr>พฤษภาคม 2539</font></font></td>
+</tr>
+</table></center>
+
+</body>
+</html>

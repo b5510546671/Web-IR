@@ -1,0 +1,157 @@
+<?php require_once('connections/qa_51.php'); ?><?php 
+session_start();
+require_once('connections/qa_51.php'); ?>
+<?php
+mysql_select_db($database_qa_51, $qa_51);
+$query_fac = "select * from faculty where `group` = 'f'";
+$fac = mysql_query($query_fac, $qa_51) or die(mysql_error());
+$row_fac = mysql_fetch_assoc($fac);
+$totalrows_fac = mysql_num_rows($fac);
+?><!doctype html public "-//w3c//dtd xhtml 1.0 transitional//en" "http://www.w3.org/tr/xhtml1/dtd/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>ข้อมูลหน่วยงานที่มีระบบและกลไกลสนับสนุนให้อาจารย์ประจำทางการวิจัยเพื่อพัฒนาการเรียนการสอน</title>
+<style type="text/css">
+<!--
+body,td,th {
+	font-family: ms sans serif, tahoma;
+	font-size: 10pt;
+}
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+a:link {
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+a:active {
+	text-decoration: none;
+}
+.style1 {font-size: 12pt}
+-->
+</style></head>
+<?php 
+
+$db_host = "localhost";
+$db_username = "edusql";
+$db_password = "sqladmin";
+$db_name = "qa";
+$conn = mysql_connect($db_host, $db_username, $db_password) or die(mysql_error());
+mysql_select_db($db_name) or die(mysql_error());
+
+
+$sql = "select * from tbl_research";
+$result = mysql_query($sql);
+$rows = mysql_num_rows($result);
+
+?>
+
+<body>
+<div align="center">
+  <table width="1004" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <th scope="col"><img src="images/db_head.jpg" width="1004" height="132" /></th>
+    </tr>
+    <tr>
+      <th height="30" valign="bottom" background="images/db_body.jpg" scope="col"><span class="style1">แบบรายงานข้อมูลหน่วยงานที่มีระบบและกลไกลสนับสนุนให้อาจารย์ประจำทางการวิจัยเพื่อพัฒนาการเรียนการสอน</span></th>
+    </tr>
+    
+    <tr>
+      <td height="39" align="center" valign="middle" background="images/db_body.jpg"><table width="1000" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <th scope="col">&nbsp;&nbsp;&nbsp;&nbsp; |<a href="index.php">หน้าหลัก</a> | </th>
+        </tr>
+      </table></td>
+    </tr>
+    <tr>
+      <td align="center" background="images/db_body.jpg"><br />
+      <table width="747" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td align="center" scope="col"><div align="left"></div>
+              <table width="747" border="1" cellpadding="0" cellspacing="0" bordercolor="#999999">
+                <tr>
+                  <th width="64" height="40" bgcolor="#99cccc" scope="col">ลำดับที่</th>
+                  <th width="347" bgcolor="#99cccc" scope="col">คณะ / วิทยาเขต </th>
+                  <th width="328" bgcolor="#99cccc" scope="col"><p>ผลการดำเนินงาน </p>                  </th>
+                </tr>
+                <?php $i=1; ?>
+                  <?php do { ?>
+				  <tr>
+                  <th scope="col">&nbsp;<?php echo $i;?></th>
+                  <th scope="col"><div align="left"><a href="issue_5_detail.php?id=<?php echo $row_fac['id']; ?>">														<?php echo $row_fac['name']; ?></a>  </div></th>
+                  <th scope="col">&nbsp;
+				  
+				  												<?php 								
+							$query_sum = sprintf("select resh_process from tbl_research where  stu_year = 2553 and id = '%s'" ,$row_fac['id']);
+												$sum = mysql_query($query_sum, $qa_51) or die(mysql_error());
+												$row_sum = mysql_fetch_assoc($sum);
+												$totalrows_sum = mysql_num_rows($sum);
+?>
+													   <?php $n=0;
+													  
+													  
+													$sum1 = 0;
+													$too=0;		   
+													   ?>
+											
+													<?php  do { 
+        									                	
+															   
+														
+															  		    
+															    $sum1=    $sum1+ $row_sum['resh_process'];
+															
+												 } while ($row_sum = mysql_fetch_assoc($sum)); 
+													 
+													 
+													echo "&nbsp;";
+							
+													 if ($sum1 == 0){
+													 echo " - ";
+													 } else {
+													 echo "�ա�ô��թ�ҹ"; 
+													 }
+														 
+											
+													 ?>
+				  
+				  
+				  
+				  
+				  
+				  </th>
+				  </tr><?php $i++; ?>
+                  <?php } while ($row_fac = mysql_fetch_assoc($fac)); ?>
+                
+<?php $i==1;
+while ($data = mysql_fetch_array($result)){  
+$i++;
+?>
+      <?php } ?>
+              </table>
+            <br /></td>
+          </tr>
+        </table>      </td>
+    </tr>
+    <tr>
+      <td align="center" background="images/db_body.jpg"><br /></td>
+    </tr>
+    <tr>
+      <td><img src="images/db_bottom.jpg" width="1004" height="34" /></td>
+    </tr>
+  </table>
+</div>
+</body>
+</html>
+<?php
+mysql_free_result($fac);
+?>

@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: 
+Disallow: /cgi-bin/
+Disallow: /pornsiri/
+Disallow: /kosol/
+Disallow: /curri_o5/
+Disallow: /Templates/
+Sitemap: http://cyberlab.lh1.ku.ac.th/sitemap.xml

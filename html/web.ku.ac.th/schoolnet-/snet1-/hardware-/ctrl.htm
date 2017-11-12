@@ -1,0 +1,65 @@
+
+<html>
+<head>
+   <title>คอมพิวเตอร์</title>
+</head>
+<body>
+<center><table cols=1 width="95%" bgcolor="#ffcc99" >
+<tr>
+<td align=center><b><font face="ms sans serif"><font color="#000099">ส่วนควบคุม
+(control unit)</font></font></b></td>
+</tr>
+</table></center>
+
+<br>
+<center><table border=0 cols=1 width="95%" >
+<tr>
+<td>
+<dd>
+<font face="ms sans serif"><font size=-1>ส่วน<wbr>ควบ<wbr>คุม<wbr>ทำ<wbr>หน้า<wbr>ที่<wbr>ควบ<wbr>คุม<wbr>การ<wbr>ทำ<wbr>งาน<wbr>ส่วน<wbr>ต่าง
+ๆ ของเครื่องคอมพิวเตอร์<wbr>ซึ่ง<wbr>ขึ้น<wbr>อยู่กับการ<wbr>ออก<wbr>แบบ
+เช่น วิธี<wbr>การ<wbr>ทำ<wbr>งาน<wbr>ของ<wbr>สัญญาณ<wbr>ตาม<wbr>แบบ<wbr>อนุกรม<wbr>หรือ<wbr>แบบ<wbr>ขนาน<wbr>ชนิด<wbr>ของ<wbr>ส่วน<wbr>ความ<wbr>จำ
+ชนิด<wbr>ของ<wbr>ส่วน<wbr>รับ<wbr>งาน<wbr>และ<wbr>แสดง<wbr>ผล ฯลฯ ให้<wbr>ทำ<wbr>งาน<wbr>ประสาน<wbr>กัน
+และ<wbr>ถูก<wbr>ต้อง<wbr>ตาม<wbr>ขั้น<wbr>ตอน<wbr>ที่<wbr>ได้<wbr>รับ<wbr>คำ<wbr>สั่ง<wbr>มา
+คำ<wbr>สั่ง<wbr>นี้<wbr>จะ<wbr>อยู่กับข้อ<wbr>มูล<wbr>ที่<wbr>ใช้<wbr>ประมวล<wbr>ผล<wbr>ใน<wbr>ส่วน<wbr>ความ<wbr>จำ<wbr>ตาม<wbr>ตำแหน่ง<wbr>ต่าง
+ๆ ที่<wbr>ต้อง<wbr>ระบุ<wbr>ให้<wbr>ถูก<wbr>ต้อง<wbr>เหมือนกับเลข<wbr>ที่<wbr>บ้าน<wbr>ของ<wbr>เรา<wbr>ทั่ว
+ๆ ไป เรียก<wbr>ว่า "แอดเดรส<wbr><wbr>" (address)</font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font size=-1>สมมติ<wbr>ว่า<wbr>เรา<wbr>เลือก<wbr>ใช้<wbr>คำ<wbr>สั่ง<wbr>คำ<wbr>หนึ่ง<wbr>ประกอบ<wbr>ด้วย
+18 บิต 6 บิตแรก<wbr>เป็น<wbr>คำ<wbr>สั่ง<wbr>ให้เครื่องทำ เช่น บวก ลบ คูณ
+หาร อ่าน พิมพ์ หยุด ฯลฯ เรียก<wbr>ว่า "รหัส<wbr>คำ<wbr>สั่ง<wbr><wbr>"
+(operation code = op code) 3 บิตต่อ<wbr>มา<wbr>จัด<wbr>ไว้<wbr>เพื่อ<wbr>ใช้กับลักษณะ<wbr>การ<wbr>ทำ<wbr>งาน<wbr>พิเศษ
+และ 9 บิตสุด<wbr>ท้าย<wbr>เป็น<wbr>ข้อ<wbr>มูล<wbr>ที่<wbr>ใช้<wbr>ประมวล<wbr>ผล<wbr>หรือ<wbr>เป็น</font></font><wbr><wbr></dd>
+
+<br><font face="ms sans serif"><font size=-1>แอดเดรส<wbr>ก็<wbr>ได้ เรียก<wbr>ว่า
+ออ<wbr>เพอแรนด์ (operand)</font></font>
+<dd>
+<font face="ms sans serif"><font size=-1>โดย<wbr>พื้น<wbr>ฐาน<wbr>ทั่ว<wbr>ไป
+ส่วน<wbr>ควบ<wbr>คุม<wbr>จะ<wbr>ทำ<wbr>งาน<wbr>เป็น 2 จังหวะ คือ จังหวะ<wbr>แรก
+รับ<wbr>คำ<wbr>สั่ง (fetch) จังหวะ<wbr>ที่<wbr>สองปฎิบัติ (execute)</font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font size=-1><b><font color="#cc0000">1. รับ<wbr>คำ<wbr>สั่ง<wbr><wbr></font></b>
+ใน<wbr>จังหวะ<wbr>แรก<wbr>นี้ ชุด<wbr>คำ<wbr>สั่ง<wbr>จะ<wbr>ถูก<wbr>ดึง<wbr>จาก<wbr>ส่วน<wbr>ความ<wbr>จำ<wbr>เข้า<wbr>สู่<wbr>ส่วน<wbr>ควบ<wbr>คุม<wbr>แล้ว<wbr>แยก<wbr>ออก<wbr>เป็น<wbr>สอง<wbr>ส่วน
+คือ ส่วน<wbr>ที่<wbr>เป็น<wbr>รหัส<wbr>คำ<wbr>สั่ง จะ<wbr>แยก<wbr>ไป<wbr>ยัง<wbr>ส่วน<wbr>ที่<wbr>มี<wbr>ชื่อ<wbr>เรียก<wbr>ว่า
+วง<wbr>จร<wbr>สร้าง<wbr>สัญญาณ (decoder) เพื่อ<wbr>เตรียม<wbr>ทำ<wbr>งาน<wbr>ใน<wbr>จังหวะ<wbr>ที่<wbr>สอง
+และ<wbr>ส่วน<wbr>ที่<wbr>เป็น<wbr>ออ<wbr>เพอแรนด์ จะ<wbr>แยก<wbr>ออก<wbr>ไป<wbr>ยัง<wbr>วง<wbr>จร<wbr>อีก<wbr>ส่วน<wbr>หนึ่ง
+เพื่อปฎิบัติ<wbr>ให้<wbr>เสร็จ<wbr>สิ้น<wbr>ใน<wbr>จังหวะ<wbr>แรก<wbr>แล้ว<wbr>เตรียม<wbr>พร้อม<wbr>ที่<wbr>จะ<wbr>ทำ<wbr>งาน<wbr>ใน<wbr>จังหวะ<wbr>ต่อ<wbr>ไป<wbr>เมื่อไ<wbr>ด้รับ<wbr>สัญญาณ<wbr>ควบ<wbr>คุม<wbr>ส่ง<wbr>มา<wbr>บังคับ</font></font><wbr><wbr></dd>
+
+<dd>
+<font face="ms sans serif"><font size=-1><b><font color="#cc0000">2. ปฎิบัติ<wbr><wbr></font></b>
+เมื่อ<wbr>จังหวะ<wbr>แรก<wbr>ได้<wbr>เสร็จ<wbr>สิ้น<wbr>ไป<wbr>แล้ว วง<wbr>จร<wbr>ควบ<wbr>คุม<wbr>จะ<wbr>สร้าง<wbr>สัญญาณ<wbr>ขึ้น<wbr>เพื่อ<wbr>ส่ง<wbr>ไป<wbr>ควบ<wbr>คุม<wbr>ส่วน<wbr>ต่าง
+ๆ ของเครื่องคอมพิวเตอร์<wbr>ตาม<wbr>รหัส<wbr>คำ<wbr>สั่ง<wbr>ที่<wbr>ได้<wbr>รับ<wbr>มา
+เช่น การ<wbr>บวก ลบ คูณ หาร หรือ<wbr>ย้าย<wbr>ข้อ<wbr>มูล เครื่องคอมพิวเตอร์<wbr>หลาย<wbr>แบบ<wbr>ใช้<wbr>วง<wbr>จร<wbr>ควบ<wbr>คุม<wbr>ที่<wbr>เป็น<wbr>วง<wbr>จร<wbr>อิเล็กทรอนิกส์<wbr>ที่<wbr>สร้าง<wbr>เสร็จเรี<wbr>ยบร้อย<wbr>ติด<wbr>ไว้<wbr>ในเครื่อ<wbr>ง
+เครื่องคำนวณ จะ<wbr>เก็บ<wbr>สัญญาณ<wbr>ควบ<wbr>คุม<wbr>เหล่า<wbr>นี้<wbr>ไว้<wbr>ใน<wbr>ส่วน<wbr>ความ<wbr>จำ<wbr>พิเศษ<wbr>ที่<wbr>เรียก<wbr>ว่า<a href="http://web.ku.ac.th/schoolnet/snet1/hardware/rom.htm">
+รอม (rom)&nbsp;</a></font></font></dd>
+<p>
+<hr width="100%">
+<i><font face="ms sans serif"><font size=-2>รวบรวมจาก สารานุกรมไทยสำหรับเยาวชน เล่ม 11</font></font></i>
+
+</td>
+</tr>
+</table></center>
+</body>
+</html>

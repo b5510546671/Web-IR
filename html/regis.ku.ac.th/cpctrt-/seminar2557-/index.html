@@ -1,0 +1,240 @@
+<!doctype html public "-//w3c//dtd xhtml 1.0 transitional//en" "http://www.w3.org/tr/xhtml1/dtd/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=window-874" />
+<title>..แบบประเมินผล การประชุมสัมมนาอาจารย์ มหาวิทยาลัยเกษตรศาสตร์ ประจำปี 2557...</title>
+<meta name="viewport" content="width=device-width" />
+<link href="css/template.css" rel="stylesheet" type="text/css" />
+<script language="javascript">
+
+function check()
+{
+    var i
+	var checkflag = false;
+	var mychoice=new array("","1","2","3","4.1","4.2","4.3","5.1","5.2","6","7","8","9","10","11","12","13");
+	 if( document.getelementbyid('hidgender').value == ""){
+		window.alert("กรุณาเลือกข้อมูลทั่วไป");
+		checkflag=true;
+		return false;
+	}
+	if(document.getelementbyid('hidtype').value == ""){
+		window.alert("กรุณาเลือกประเภท");
+		checkflag=true;
+		return false;
+   } 
+    if(document.getelementbyid('hidcamp').value == ""){ 
+		window.alert("กรุณาเลือกวิทยาเขต");
+		checkflag=true;
+		return false;
+	} 
+
+	var num_mychoice=mychoice.length;
+    for( i=1;i<=num_mychoice;i++)
+			{
+			  
+				if(eval("document.form1.hidques"+i+".value") == "")
+				{
+						window.alert("กรุณาเลือกข้อ "+mychoice[i]);
+						 checkflag=true;
+						return false;
+				}
+			}
+			if(!checkflag){
+				  // form1.submit();
+				  return false;
+				}else{
+					return false;
+		 }
+}         // function check
+
+</script>
+</head>
+<body>
+<div class="container"> <!-- bootstrap.css -->
+<div style="text-align:center; color:#ff0000; margin-top:30px">** หมดช่วงเวลาประเมิน  **</div><br><br>
+<div id="templatemo_top">
+<p>แบบประเมินผล</p>
+<p>การประชุมสัมมนาอาจารย์มหาวิทยาลัยเกษตรศาสตร์ ประจำปี ๒๕๕๗</p>
+<p>เรื่อง ทิศทางการเรียนการสอนสำหรับนิสิต generation z</p>
+<p>วันพฤหัสบดีที่ ๑๙ มิถุนายน ๒๕๕๗</p>
+<p>ณ ห้องประชุมสุธรรม อารีกุล และถ่ายทอดทางไกลไปวิทยาเขตกำแพงแสน วิทยาเขตศรีราชา</p>
+<p>และวิทยาเขตเฉลิมพระเกียรติ จังหวัดสกลนคร</p>
+<p>------------------------------------------------------------</p>
+</div>  <!--templatemo_top-->
+<!--<div style="text-align:center; color:#ff0000; margin-top:30px">** หมดช่วงเวลาประเมิน  **</div>-->
+<div id="templetemo_main">
+<div style="padding-top:10px; padding-left:10px">
+<form name="form1" method="post" action="rec_data.php" onsubmit="return check();">
+<table align="center" style="margin:0px 0 20px 0px;" class="table">
+<tr><td width="18%"><strong>๑. ข้อมูลทั่วไป </strong><input type="hidden" name="hidgender" id="hidgender"  value=""></td>
+<td width="28%"><input name="gender" type="radio"  value="หญิง"  onclick="document.getelementbyid('hidgender').value='f'">&nbsp;หญิง</td>
+<td width="27%"><input name="gender" type="radio"  value="ชาย"   onclick="document.getelementbyid('hidgender').value='m'">&nbsp;ชาย</td><td width="27%">&nbsp;</td></tr>
+<tr><td><strong>๒. ประเภท</strong><input type="hidden" name="hidtype" id="hidtype"  value=""></td>
+<td><input name="type" type="radio"  value="ข้าราชการ"  onclick="document.form1.hidtype.value='ข้าราชการ'">&nbsp;ข้าราชการ</td>
+<td><input name="type" type="radio"  value="พนักงานมหาวิทยาลัย"  onclick="document.form1.hidtype.value='พนักงานมหาวิทยาลัย'">&nbsp;พนักงานมหาวิทยาลัย</td>
+<td><input name="type" type="radio"  value="พนักงานเงินรายได้"  onclick="document.form1.hidtype.value='พนักงานเงินรายได้'">&nbsp;พนักงานเงินรายได้</td></tr>
+<tr><td></td><td colspan="3"><input name="type" type="radio"  value="อื่นๆ"  onclick="document.form1.hidtype.value='อื่นๆ'">&nbsp;อื่นๆ ระบุ &nbsp;
+<input  type="text" name="other_type"  style="width:200px" /></td>
+</tr>
+<tr><td><strong>๓. สังกัดวิทยาเขต</strong><input type="hidden" name="hidcamp" id="hidcamp"  value=""></td>
+<td><input name="sl_campus" type="radio"  value="b"  onclick="document.form1.hidcamp.value='b'">&nbsp;บางเขน</td>
+<td><input name="sl_campus" type="radio"  value="k"  onclick="document.form1.hidcamp.value='k'">&nbsp;กำแพงแสน</td>
+<td><input name="sl_campus" type="radio"  value="s"  onclick="document.form1.hidcamp.value='s'">&nbsp;ศรีราชา</td></tr>
+<tr><td></td><td><input name="sl_campus" type="radio"  value="c"  onclick="document.form1.hidcamp.value='c'">&nbsp;เฉลิมพระเกียรติ จังหวัดสกลนคร</td><td>
+</td><td></td></tr>
+</table>
+<div><strong>๔. ประโยชน์และความพึงพอใจที่มีต่อการจัดการประชุมสัมมนาอาจารย์ มก. ประจำปี ๒๕๕๗</strong></div>
+<table align="center" style="width:95%; margin-top:10px; text-align:center; border-collapse:collapse;" border="1"  >
+<tr style="font-weight:bold"><td width="50%" rowspan="2">ประโยชน์และความพึงพอใจ</td>
+<td colspan="5">ระดับประโยชน์และความพึงพอใจ</td></tr>
+<tr style="font-weight:bold"><td width="9%">มากที่สุด<br />
+  {๕}</td><td width="9%">มาก<br />
+    {๔}</td><td width="9%">ปานกลาง<br />
+      {๓}</td><td width="9%">น้อย<br />
+        {๒}</td><td width="9%">น้อยที่สุด<br />
+          {๑}</td></tr>
+<tr><td style="text-align:left">๑. ประโยชน์ที่ท่านได้รับจากการเข้าร่วมประชุมสัมมนาฯ <input type="hidden" name="hidques1"  value=""></td>
+ <td><input name="quest_1"  id="quest_1"   type="radio"  value="5" onclick="document.form1.hidques1.value=5"></td>
+  <td><input name="quest_1"  id="quest_1"   type="radio"  value="4" onclick="document.form1.hidques1.value=4"></td>
+  <td><input name="quest_1"  id="quest_1"  type="radio"  value="3"  onclick="document.form1.hidques1.value=3"></td>
+  <td><input name="quest_1"  id="quest_1"  type="radio"  value="2"  onclick="document.form1.hidques1.value=2"></td>
+  <td><input name="quest_1"  id="quest_1"  type="radio"  value="1"  onclick="document.form1.hidques1.value=1"></td></tr>
+  <tr><td style="text-align:left">๒. การมอบนโยบายการพัฒนางานด้านวิชาการของมหาวิทยาลัยเกษตรศาสตร์
+โดย อธิการบดีมหาวิทยาลัยเกษตรศาสตร์ <input type="hidden" name="hidques2"  value=""></td>
+ <td><input name="quest_2"  id="quest_2"   type="radio"  value="5" onclick="document.form1.hidques2.value=5"></td>
+  <td><input name="quest_2"  id="quest_2"   type="radio"  value="4" onclick="document.form1.hidques2.value=4"></td>
+  <td><input name="quest_2"  id="quest_2"  type="radio"  value="3"  onclick="document.form1.hidques2.value=3"></td>
+  <td><input name="quest_2"  id="quest_2"  type="radio"  value="2"  onclick="document.form1.hidques2.value=2"></td>
+  <td><input name="quest_2"  id="quest_2"  type="radio"  value="1"  onclick="document.form1.hidques2.value=1"></td></tr>
+  <tr><td style="text-align:left">๓. ความเหมาะสมของวิทยากรการบรรยาย เรื่อง ประสบการณ์การสอนและพฤติกรรมการเรียนรู้ของเด็ก generation z โดยอาจารย์โรงเรียนสาธิตฯ
+  <input type="hidden" name="hidques3"  value=""></td>
+  <td><input name="quest_3"  id="quest_3"   type="radio"  value="5" onclick="document.form1.hidques3.value=5"></td>
+  <td><input name="quest_3"  id="quest_3"   type="radio"  value="4" onclick="document.form1.hidques3.value=4"></td>
+  <td><input name="quest_3"  id="quest_3"  type="radio"  value="3"  onclick="document.form1.hidques3.value=3"></td>
+  <td><input name="quest_3"  id="quest_3"  type="radio"  value="2"  onclick="document.form1.hidques3.value=2"></td>
+  <td><input name="quest_3"  id="quest_3"  type="radio"  value="1"  onclick="document.form1.hidques3.value=1"></td></tr>
+    <tr><td style="text-align:left">๔. ความเหมาะสมของวิทยากรการเสวนา เรื่อง ทิศทางการเรียนการสอนสำหรับนิสิต generation z โดย วิทยากรผู้ทรงคุณวุฒิ</td>
+ <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td></tr>
+  <tr><td style="text-align:left" class="pad-left-20">๔.๑  - ศ.นพ.บรรจง  มไหสวริยะ <input type="hidden" name="hidques4"  value=""></td>
+  <td><input name="quest_4"  id="quest_4"   type="radio"  value="5" onclick="document.form1.hidques4.value=5"></td>
+  <td><input name="quest_4"  id="quest_4"   type="radio"  value="4" onclick="document.form1.hidques4.value=4"></td>
+  <td><input name="quest_4"  id="quest_4"  type="radio"  value="3"  onclick="document.form1.hidques4.value=3"></td>
+  <td><input name="quest_4"  id="quest_4"  type="radio"  value="2"  onclick="document.form1.hidques4.value=2"></td>
+  <td><input name="quest_4"  id="quest_4"  type="radio"  value="1"  onclick="document.form1.hidques4.value=1"></td></tr>
+  <tr><td style="text-align:left" class="pad-left-20">๔.๒  - รศ.ยืน  ภู่วรวรรณ <input type="hidden" name="hidques5"  value=""></td>
+  <td><input name="quest_5"  id="quest_5"   type="radio"  value="5" onclick="document.form1.hidques5.value=5"></td>
+  <td><input name="quest_5"  id="quest_5"   type="radio"  value="4" onclick="document.form1.hidques5.value=4"></td>
+  <td><input name="quest_5"  id="quest_5"  type="radio"  value="3"  onclick="document.form1.hidques5.value=3"></td>
+  <td><input name="quest_5"  id="quest_5"  type="radio"  value="2"  onclick="document.form1.hidques5.value=2"></td>
+  <td><input name="quest_5"  id="quest_5"  type="radio"  value="1"  onclick="document.form1.hidques5.value=1"></td></tr>
+  <tr><td style="text-align:left" class="pad-left-20">๔.๓  - ผู้ดำเนินรายการ (ผศ.กรกฎา  นักคิ้ม) <input type="hidden" name="hidques6"  value=""></td>
+  <td><input name="quest_6"  id="quest_6"   type="radio"  value="5" onclick="document.form1.hidques6.value=5"></td>
+  <td><input name="quest_6"  id="quest_6"   type="radio"  value="4" onclick="document.form1.hidques6.value=4"></td>
+  <td><input name="quest_6"  id="quest_6"  type="radio"  value="3"  onclick="document.form1.hidques6.value=3"></td>
+  <td><input name="quest_6"  id="quest_6"  type="radio"  value="2"  onclick="document.form1.hidques6.value=2"></td>
+  <td><input name="quest_6"  id="quest_6"  type="radio"  value="1"  onclick="document.form1.hidques6.value=1"></td></tr>
+    <tr><td style="text-align:left">๕. เสียงสะท้อนจากนิสิต generation z</td>
+ <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td>
+  <td>&nbsp;</td></tr>
+   <tr><td style="text-align:left" class="pad-left-20">๕.๑  - นิสิตคณะวิศวกรรมศาสตร์ <input type="hidden" name="hidques7"  value=""></td>
+  <td><input name="quest_7"  id="quest_7"   type="radio"  value="5" onclick="document.form1.hidques7.value=5"></td>
+  <td><input name="quest_7"  id="quest_7"   type="radio"  value="4" onclick="document.form1.hidques7.value=4"></td>
+  <td><input name="quest_7"  id="quest_7"  type="radio"  value="3"  onclick="document.form1.hidques7.value=3"></td>
+  <td><input name="quest_7"  id="quest_7"  type="radio"  value="2"  onclick="document.form1.hidques7.value=2"></td>
+  <td><input name="quest_7"  id="quest_7"  type="radio"  value="1"  onclick="document.form1.hidques7.value=1"></td></tr>
+   <tr><td style="text-align:left" class="pad-left-20">๕.๒  - นิสิตคณะเศรษฐศาสตร์ <input type="hidden" name="hidques8"  value=""></td>
+  <td><input name="quest_8"  id="quest_8"   type="radio"  value="5" onclick="document.form1.hidques8.value=5"></td>
+  <td><input name="quest_8"  id="quest_8"   type="radio"  value="4" onclick="document.form1.hidques8.value=4"></td>
+  <td><input name="quest_8"  id="quest_8"  type="radio"  value="3"  onclick="document.form1.hidques8.value=3"></td>
+  <td><input name="quest_8"  id="quest_8"  type="radio"  value="2"  onclick="document.form1.hidques8.value=2"></td>
+  <td><input name="quest_8"  id="quest_8"  type="radio"  value="1"  onclick="document.form1.hidques8.value=1"></td></tr>
+  <tr><td style="text-align:left">๖. ความรู้ที่ได้รับจากการสัมมนาสามารถนำไปประยุกต์ใช้ในการปฏิบัติงานได้อย่างเหมาะสม <input type="hidden" name="hidques9"  value=""></td>
+  <td><input name="quest_9"  id="quest_9"   type="radio"  value="5" onclick="document.form1.hidques9.value=5"></td>
+  <td><input name="quest_9"  id="quest_9"   type="radio"  value="4" onclick="document.form1.hidques9.value=4"></td>
+  <td><input name="quest_9"  id="quest_9"  type="radio"  value="3"  onclick="document.form1.hidques9.value=3"></td>
+  <td><input name="quest_9"  id="quest_9"  type="radio"  value="2"  onclick="document.form1.hidques9.value=2"></td>
+  <td><input name="quest_9"  id="quest_9"  type="radio"  value="1"  onclick="document.form1.hidques9.value=1"></td></tr>
+  <tr><td style="text-align:left">๗. เนื้อหาและความรู้ที่ได้รับจากการประชุมสัมมนาฯ <input type="hidden" name="hidques10"  value=""></td>
+  <td><input name="quest_10"  id="quest_10"   type="radio"  value="5" onclick="document.form1.hidques10.value=5"></td>
+  <td><input name="quest_10"  id="quest_10"   type="radio"  value="4" onclick="document.form1.hidques10.value=4"></td>
+  <td><input name="quest_10"  id="quest_10"  type="radio"  value="3"  onclick="document.form1.hidques10.value=3"></td>
+  <td><input name="quest_10"  id="quest_10"  type="radio"  value="2"  onclick="document.form1.hidques10.value=2"></td>
+  <td><input name="quest_10"  id="quest_10"  type="radio"  value="1"  onclick="document.form1.hidques10.value=1"></td></tr>
+  <tr><td style="text-align:left">๘. การเปิดโอกาสให้ผู้ฟังมีส่วนร่วมในการแลกเปลี่ยนความคิดเห็น <input type="hidden" name="hidques11"  value=""></td>
+  <td><input name="quest_11"  id="quest_11"   type="radio"  value="5" onclick="document.form1.hidques11.value=5"></td>
+  <td><input name="quest_11"  id="quest_11"   type="radio"  value="4" onclick="document.form1.hidques11.value=4"></td>
+
+  <td><input name="quest_11"  id="quest_11"  type="radio"  value="3"  onclick="document.form1.hidques11.value=3"></td>
+  <td><input name="quest_11"  id="quest_11"  type="radio"  value="2"  onclick="document.form1.hidques11.value=2"></td>
+  <td><input name="quest_11"  id="quest_11"  type="radio"  value="1"  onclick="document.form1.hidques11.value=1"></td></tr>
+  <tr><td style="text-align:left">๙. ความเหมาะสมของระยะเวลาการจัดประชุมสัมมนาฯ <input type="hidden" name="hidques12"  value=""></td>
+ <td><input name="quest_12"  id="quest_1"   type="radio"  value="5" onclick="document.form1.hidques12.value=5"></td>
+  <td><input name="quest_12"  id="quest_1"   type="radio"  value="4" onclick="document.form1.hidques12.value=4"></td>
+  <td><input name="quest_12"  id="quest_1"  type="radio"  value="3"  onclick="document.form1.hidques12.value=3"></td>
+  <td><input name="quest_12"  id="quest_1"  type="radio"  value="2"  onclick="document.form1.hidques12.value=2"></td>
+  <td><input name="quest_12"  id="quest_1"  type="radio"  value="1"  onclick="document.form1.hidques12.value=1"></td></tr>
+  <tr><td style="text-align:left">๑๐. ความเหมาะสมของสถานที่จัดการประชุมสัมมนาฯ <input type="hidden" name="hidques13"  value=""></td>
+  <td><input name="quest_13"  id="quest_13"   type="radio"  value="5" onclick="document.form1.hidques13.value=5"></td>
+  <td><input name="quest_13"  id="quest_13"   type="radio"  value="4" onclick="document.form1.hidques13.value=4"></td>
+  <td><input name="quest_13"  id="quest_13"  type="radio"  value="3"  onclick="document.form1.hidques13.value=3"></td>
+  <td><input name="quest_13"  id="quest_13"  type="radio"  value="2"  onclick="document.form1.hidques13.value=2"></td>
+  <td><input name="quest_13"  id="quest_13"  type="radio"  value="1"  onclick="document.form1.hidques13.value=1"></td></tr>
+  <tr><td style="text-align:left">๑๑. ความเหมาะสมของการจัดอาหารว่างและเครื่องดื่ม <input type="hidden" name="hidques14"  value=""></td>
+ <td><input name="quest_14"  id="quest_14"   type="radio"  value="5" onclick="document.form1.hidques14.value=5"></td>
+  <td><input name="quest_14"  id="quest_14"   type="radio"  value="4" onclick="document.form1.hidques14.value=4"></td>
+  <td><input name="quest_14"  id="quest_14"  type="radio"  value="3"  onclick="document.form1.hidques14.value=3"></td>
+  <td><input name="quest_14"  id="quest_14"  type="radio"  value="2"  onclick="document.form1.hidques14.value=2"></td>
+  <td><input name="quest_14"  id="quest_14"  type="radio"  value="1"  onclick="document.form1.hidques14.value=1"></td></tr>
+    <tr><td style="text-align:left">๑๒. ความเหมาะสมด้านของที่ระลึกการจัดงาน <input type="hidden" name="hidques15"  value=""></td>
+  <td><input name="quest_15"  id="quest_15"   type="radio"  value="5" onclick="document.form1.hidques15.value=5"></td>
+  <td><input name="quest_15"  id="quest_15"   type="radio"  value="4" onclick="document.form1.hidques15.value=4"></td>
+  <td><input name="quest_15"  id="quest_15"  type="radio"  value="3"  onclick="document.form1.hidques15.value=3"></td>
+  <td><input name="quest_15"  id="quest_15"  type="radio"  value="2"  onclick="document.form1.hidques15.value=2"></td>
+  <td><input name="quest_15"  id="quest_15"  type="radio"  value="1"  onclick="document.form1.hidques15.value=1"></td></tr>
+    <tr><td style="text-align:left">๑๓. ความพึงพอใจในภาพรวมของการจัดงาน <input type="hidden" name="hidques16"  value=""></td>
+  <td><input name="quest_16"  id="quest_16"   type="radio"  value="5" onclick="document.form1.hidques16.value=5"></td>
+  <td><input name="quest_16"  id="quest_16"   type="radio"  value="4" onclick="document.form1.hidques16.value=4"></td>
+  <td><input name="quest_16"  id="quest_16"  type="radio"  value="3"  onclick="document.form1.hidques16.value=3"></td>
+  <td><input name="quest_16"  id="quest_16"  type="radio"  value="2"  onclick="document.form1.hidques16.value=2"></td>
+  <td><input name="quest_16"  id="quest_16"  type="radio"  value="1"  onclick="document.form1.hidques16.value=1"></td></tr>
+</table>
+<br/><table width="100%" align="center"  class="table">
+<tr><td width="100%" valign="top"><div align="left"><strong>&nbsp;๕. หัวข้อที่ท่านประสงค์ให้มีการจัดในครั้งต่อไป</strong></div>
+</td></tr>
+<tr>
+  <td valign="top"><div align="left" style="margin-left:20px">&nbsp;<input name="seminar_next" type="radio"  value="1">&nbsp;ต้องการ โปรดระบุหัวข้อ 
+  </div> </td></tr>
+<tr>  <td width="100%"><div align="left" style="margin-left:100px">&nbsp;&nbsp;๑. <input type="text" name="title1"  style=" width:40%" class="form-control" /></div></td></tr>
+<tr>  <td width="100%"><div align="left" style="margin-left:100px">&nbsp;&nbsp;๒. <input type="text" name="title2"  style=" width:40%" class="form-control" /></div></td></tr>
+<tr>  <td width="100%"><div align="left" style="margin-left:100px">&nbsp;&nbsp;๓. <input type="text" name="title3"  style=" width:40%" class="form-control" /></div></td></tr>
+<tr>
+  <td valign="top"><div align="left" style="margin-left:20px">&nbsp;<input name="speaker" type="radio"  value="1" >&nbsp;วิทยากรที่แนะนำ</div></td>
+</tr>
+<tr>  <td width="100%"><div align="left" style="margin-left:100px">&nbsp;&nbsp;๑. <input type="text" name="person1"  style=" width:40%" class="form-control" /></div></td></tr>
+<tr>  <td width="100%"><div align="left" style="margin-left:100px">&nbsp;&nbsp;๒. <input type="text" name="person2"  style=" width:40%" class="form-control" /></div></td></tr>
+<tr>  <td width="100%"><div align="left" style="margin-left:100px">&nbsp;&nbsp;๓. <input type="text" name="person3"  style=" width:40%" class="form-control" /></div></td></tr>
+<tr>
+<tr><td width="100%" valign="top"><div align="left"><strong>&nbsp;๖. ข้อคิดเห็นและข้อเสนอแนะอื่นๆ (ถ้ามี)</strong></div></td></tr>
+<tr><td width="100%"><div align="left" style=" margin-left:20px">&nbsp;&nbsp;<textarea name="opinion"  cols="60" rows="10" class="form-control" ></textarea></div></td></tr>
+<tr>
+<td colspan="2"><div align="center"><input type="submit" name="submit" value="บันทึก"><input  type="reset" name="reset" value="ยกเลิก"></div></td>
+</tr>
+
+<tr><td colspan="2"><div align="center"><strong>-------------------------------------------------------------------------------------------------------------------------------------------------</strong></div></td></tr>
+</tr><td colspan="2"><div align="right">ขอขอบคุณที่กรุณาประเมินและแสดงความคิดเห็น&nbsp;&nbsp;</div></td></tr>
+<tr> <td colspan="2"><div align="right">ฝ่ายเลขานุการในคณะกรรมการดำเนินงานจัดประชุมสัมมนาอาจารย์ มก. ประจำปี ๒๕๕๗&nbsp;&nbsp;</div></td></tr>
+<tr> <td colspan="2"><div align="right">สำนักทะเบียนและประมวลผล ชั้น ๗ อาคารระพีสาคริก มก. บางเขน</div></td></tr>
+</table></form></div>
+<div style="height:30px"></div>
+</div><!-- templatemo_main -->
+<div style="height:30px"></div>
+</div> <!--- container-->
+</body>
+</html>

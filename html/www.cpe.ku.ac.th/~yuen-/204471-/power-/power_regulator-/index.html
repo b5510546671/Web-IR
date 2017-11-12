@@ -1,0 +1,824 @@
+<html>
+<head>
+   <title> power regulator </title>
+</head>
+<body text="#000000" bgcolor="#c0d8c8">
+ <center>
+<h1>
+<font color="#000099">à¤ã×èí§¨èòâä¿¿éò</font></font></h1></center>
+
+<center>
+<h3>
+àãõâºàãõâ§â´â<br>
+¹òââáàãè  »ãñª­¾ä¡éì<br>
+¹òâêøàá¸  à¡µøèãõ  </h3></center>
+
+<center>
+<hr></center>
+
+<h2>
+<font color="#993366">êòãºñ­</font></h2>
+
+<ul>
+<li>
+<a href="#º·¹ó">º·¹ó</a></li>
+
+<li>
+<a href="#rps">à¤ã×èí§¨èòâä¿¿éò·õèáõ¤çòáà·õèâ§µã§
+(regulated power supplies)</a></li>
+
+<li>
+<a href="#stabilization">¤çòáàê¶õâãàò¾¢í§à¤ã×èí§¨èòâä¿¿éò
+(stabilization)</a></li>
+
+<li>
+<a href="#monolithic_regulator">àã¡ùàåàµíãìêóàãç¨ãù»
+(monolithic regulators)</a></li>
+
+<li>
+<a href="#switching_regulator">êçôµªôè§àã¡ùàåàµíãì
+(switching regulators)</a></li>
+
+<br>      <a href="#basic_switching_regulator">ç§¨ãàº×éí§íâèò§§èòâ¢í§êçôµªôè§àã¡ùàåàµíãì
+(basic switching regulator topology)</a>
+<br>      <a href="#additional_switching_regulator">ç§¨ã¢í§êçôµªôè§àã¡ùàåàµíãìáººí×è¹æ
+(additional switching regulator topologies)</a>
+<li>
+<a href="#transformer_coupled">¡òãêãéò§à¤ã×èí§¨èòâä¿¡ãðáêµã§â´âãªéëáéíá»å§µèíáºº¾øª¾øå
+(transformer-coupled push-pull dc-to-dc converter)</a></li>
+
+<li>
+<a href="#generating">¡òãêãéò§êñ­­ò³êóëãñº¤çº¤øá¡òãêçôµªì
+(generating the switching waveforms)</a></li>
+
+<li>
+<a href="#º·êãø»">º·êãø»</a></li>
+
+<li>
+<a href="#àí¡êòãíéò§íô§">àí¡êòãíéò§íô§</a></li>
+</ul>
+<a name="º·¹ó"></a>
+<h2>
+<font color="#993366">º·¹ó</font></h2>
+               
+¤çòá¡éòçë¹éò¢í§à·¤â¹âåâõã¹¡òã¼åôµíø»¡ã³ì¡öè§µñç¹ó
+·óãëéà¡ô´¡òã»ãñº»ãø§¢éí¡óë¹´¢í§íø»¡ã³ì
+ã¹´éò¹¢í§¤çòáêòáòã¶ã¹¡òã¨èòâ¡ãðáê
+áã§´ñ¹ä¿¿éò·õè¨èòâ
+¤çòáàãççã¹¡òãêçôµªì
+«öè§¡òã¾ñ²¹òíñ¹¹õéä´é¹óä»êùè¡òã¢âòâµñçã¹´éò¹µèò§æ
+àªè¹ ¤íá¾ôçàµíãì,
+ãðººê×èíêòã
+«öè§µéí§¡òãáëåè§¨èòâä¿·õèà·õèâ§µã§
+ãò¤ò¶ù¡ áåðáõ¤çòá¹èòàª×èí¶×íêù§
+àãò¨ö§àå×í¡
+power regulator ·õèáõ¡òããªé¾åñ§§ò¹íâèò§¤øéá¤èò
+áåðä´éáã§´ñ¹àíòµì¾øµ·õèà·õèâ§µã§àª×èí¶×íä´é
+
+<p>               
+ã¹ç§¨ã¢í§à¤ã×èí§¨èòâä¿¿éò¡çáõ¨ø´à´è¹¨ø´´éíâµèò§æ
+¡ñ¹ ¼ùéíí¡áººà¤ã×èí§¨èòâä¿¿éò¨ö§¨óà»ç¹µéí§èö¡éò
+áåðëòçô¸õ¡òãí×è¹áòá¡éä¢¨ø´º¡¾ãèí§
+à¾×èíãëéä´éà¤ã×èí§¨èòâä¿¿éò·õèáõ»ãðêô·¸ôàò¾êù§
+»ãðëâñ´¾åñ§§ò¹
+áåðµã§µòá¤çòáµéí§¡òã
+
+<p>               
+ã¹·õè¹õé¨ð¡åèò§¶ö§¡òãêãéò§à¤ã×èí§¨èòâä¿¿éòíâèò§§èòâ
+â´âã¹¢ñé¹áã¡¨ð¡åèòç¶ö§à¤ã×èí§ãªéä¿¿éò·õèáõ¤çòáà·õèâ§µã§
+áåð»ñ¨¨ñâ·õèáõ¼å¡ñºáã§´ñ¹àíòµì¾øµ¢í§à¤ã×èí§¨èòâä¿¿éò
+¨ò¡¹ñé¹¨ðá¹ð¹óàã¡ùàåàµíãìêóàãç¨ãù»«öè§à»ç¹äí«õ·õè§èòâµèí¡òããªé§ò¹áåðáõãëéàå×í¡áò¡áòâ
+àá×èí¤øé¹à¤â¡ñºà¤ã×èí§¨èòâä¿¿éòáåéç¡ç¨ð¡åèòç¶ö§çô¸õ¡òãíí¡áººà¤ã×èí§¨èòâä¿¿éò
+â´ââ¡µñçíâèò§¢í§êçôµªôè§àã¡ùàåàµíãì
+¨ò¡¾×é¹°ò¹·õèä´é¡ç¨ð¹óä»êùè¡òãêãéò§à¤ã×èí§¨èòâä¿¡ãðáêµã§·õèãªéëáéíá»å§µèíáºº¾øª¾øå«öè§¨èòâ¡óåñ§ä´éêù§
+êòáòã¶àå×í¡áã§´ñ¹àíòµì¾øµä´éµòáµéí§¡òã
+áåð¨º·õè¡òãêãéò§êñ­­ò³ã¹¡òã¤çº¤øá¡òãêçôµªì
+
+<p><a name="rps"></a>
+<h2>
+<font color="#993366">regulated power supplies</font></h2>
+                
+regulated power supply  ¤×í ç§¨ãíôàåç¤·ãí¹ô¡êì·õèêãéò§áã§´ñ¹¡ãðáêµã§¤§·õè
+â´âäáè¢öé¹íâùè¡ñº¡ãðáê·õè¨èòâãëé¡ñºâëå´,
+äáè¢öé¹¡ñºíø³ëàùáô
+áåðäáè¢öé¹¡ñº¤çòáá»ã¼ñ¹µèò§æã¹êòâêè§¡ãðáêêåñº
+
+<p>               
+àëµø¼å·õèàãòäáè¹ôâáãªé
+unregulated power supply ã¹ëåòâæ¡òã»ãðâø¡µì¤×í
+<br>    1.  ¤çòáêòáòã¶ã¹¡òã·ó
+regulatation µèó, â´âáã§´ñ¹àíòµì¾øµ
+¨ðà»åõèâ¹á»å§µòáâëå´·õèµèííâùè
+<br>    2.  áã§´ñ¹àíòµì¾øµ¡ãðáµã§à»åõèâ¹á»å§µòááã§´ñ¹íô¹¾øµ¡ãðáêêåñº
+<br>    3.  áã§´ñ¹àíòµì¾øµ¡ãðáêµã§à»åõèâ¹á»å§µòáíø³ëàùáô
+â´âà©¾òð¡ñºç§¨ã·õèãªéíø»¡ã³ìêòã¡öè§µñç¹ó
+
+<p>               
+àãòêòáòã¶·ó
+regulator íâèò§§èòâæâ´âãªé
+zener diode áµèçèòçô¸õ¹õé
+¨ð·óãëéà¡ô´¢éí¨ó¡ñ´íâùè·õè¡ãðáê
+áåð¡óåñ§¢í§µñç
+zener diode
+<p>
+<center><img src="fig1.jpg" border=2 height=300 width=581></center>
+
+<center><b><font size=+1>ãù»·õè
+1</font></b></center>
+
+
+<p>               
+ã¹ãù»·õè 1 áê´§µñçíâèò§¢í§ç§¨ã
+regualted power suply «öè§à»ç¹ç§¨ãáºº»éí¹¡åñº
+â´âêòáòã¶á¡éä¢¢éíàêõâ·ñé§
+3 »ãð¡òã¢í§ unregulated
+power supply  ´ñ§·õè¡åèòçäçé¢éò§º¹
+áåð¢éí¨ó¡ñ´¢í§
+zener diode
+
+<p>               
+·ãò¹«ôêàµíãì
+q1 àãõâ¡çèò pass
+transistor ëã×í pass element ·óë¹éò·õèà»ç¹
+emitter  follower ãëéíñµãò¢âòâ»ãðáò³
+1, à¾ãòð©ð¹ñé¹¨ðä´é
+<font size=+2>v</font>o<b><font size=+2>'</font></b> = <font size=+2>v</font>o
+  r1,r2 ·óë¹éò·õèà»ç¹
+feedback network â´â»éí¹ <font size=+2>v</font>o
+¡åñºä»ãëéíí»áíá»ì
+´éçâíñµãòêèç¹
+<font size=+2>b</font> = r2 / (r1+r2) ¨ò¡¡òã¤ó¹ç³àãò¨ðä´é
+<br>               
+<font size=+2>v</font><font size=+1>o</font><font size=+2>'</font><font size=+1>
+= </font><font size=+2>a</font><font size=+1>v * </font><font size=+2>v</font><font size=+1>i
+= </font><font size=+2>a</font><font size=+1>v*(</font><font size=+2>v</font><font size=+1>r
+- (</font><font size=+2>b</font><font size=+1>*</font><font size=+2>v</font><font size=+1>o))
+= </font><font size=+2>v</font><font size=+1>o</font>
+<br>               
+<font size=+2>v</font>o = <font size=+2>v</font>r*<font size=+2>a</font>v<font size=+1>
+/ (1+</font><font size=+2>b</font><font size=+1>*</font><font size=+2>a</font>v<font size=+1>)</font>
+
+<p>               
+¶éò  <font size=+2>ba</font>v<font size=+2> </font>>>
+1 àãò¨ðä´é   <font size=+2>v</font>o
+= <font size=+2>v</font><font size=+1>r/</font><font size=+2>b </font>«öè§à»ç¹¤èò¤§·õèêóëãñºç§¨ãë¹öè§æ
+â´âàãòêòáòã¶»ãñº¤èò¢í§
+<font size=+2>v</font>o ä´é´éçâ¡òã»ãñº¤èò¢í§
+<font size=+2>b</font> áåðáõà§×èí¹ä¢çèò
+<font size=+2>v</font>o µéí§¹éíâ¡çèò
+unregulated voltage <font size=+2>v</font>dc
+
+<p><a name="stabilization"></a>
+<h2>
+<font color="#993366">stabilization</font></h2>
+               
+à¹×èí§¨ò¡áã§´ñ¹àíòµì¾øµ
+<font size=+2>v</font>o ¢öé¹íâùè¡ñºáã§´ñ¹íô¹¾øµ
+<font size=+2>v</font>dc , ¡ãðáêâëå´
+<font size=+2>i</font>l áåðíø³ëàùáô
+à¾ãòð©ð¹ñé¹¡òãà»åõèâ¹á»å§¢í§áã§´ñ¹àíòµì¾øµ
+¨ò¡à¤ã×èí§¨èòâä¿
+¨ðáõ¤çòáêñá¾ñ¹¸ì´ñ§¹õé
+<p>
+<center><img src="formula1.jpg" border=2 height=150 width=400></center>
+ 
+
+<p>               
+àá×èí¤èòêñá»ãðêô·¸ôì·ñé§
+3 à»ç¹´ñ§¹õé
+
+<p>                               
+input regulation factor
+<center><img src="formula2.jpg" border=2 height=150 width=400></center>
+
+<center></center>
+<p>                                
+output resistance
+<center><img src="formula3.jpg" border=2 height=150 width=400></center>
+
+
+<p>                               
+temperature coefficient
+<center><img src="formula4.jpg" border=2 height=150 width=400></center>
+ 
+
+<p>               
+âôè§¤èò¢í§êñá»ãðêô·¸ôì·ñé§
+3 ¹éíâà¾õâ§ã´
+¤çòáêòáòã¶ã¹¡òããñ¡éòãð´ñºáã§´ñ¹àíòµì¾øµ¢í§à¤ã×èí§¨èòâ¨ðä¿áò¡¢öé¹à·èò¹ñé¹
+
+<p><a name="monolithic_regulator"></a>
+<h2>
+<font color="#993366">monolithic regulators</font></h2>
+                
+¶éòàãòµéí§¡òãµèíç§¨ãµòáãù»·õè
+1 àãòêòáòã¶ëòíø»¡ã³ìµèò§æµòá·éí§µåò´ä´é´ñ§¹õé
+â´âíò¨ãªéíí»áíá»ì
+741 ëã×í lm301a  à»ç¹
+differential amplifier áåðãªé lm103,
+lm199 ëã×í zener diode à»ç¹
+reference diode á·¹ battery <font size=+2>v</font>r
+´éçâà·¤â¹âåâõ¢í§
+microelectronics àãòêòáòã¶·õè¨ðãçá·ø¡íâèò§ãëéíâùèã¹
+ic µñçà´õâçä´é«öè§¨ðãëé»ãðêô·¸ôàò¾·õè´õ¡çèò
+ã¹ãò¤ò·õèµèó¡çèò
+áåðâñ§áõ¤çòá¹èòàª×èí¶×í¡çèòíõ¡´éçâ«öè§àãòàãõâ¡äí«õ·õè·óë¹éò·õèà»ç¹àã¡ùàåàµíãìçèòàã¡ùàåàµíãìêóàãç¨ãù»
+( monolithic regulator)
+
+<p>               
+µñçíâèò§¢í§ 
+monolithic regulator «öè§íâùèã¹ãù»¢í§äí«õ
+¤×í motorola mc7800c series «öè§áõ
+3 ¢ò áåðãëéáã§´ñ¹ºç¡¢¹ò´¤§·õè
+â´âêòáòã¶´ùµñçíâèò§¡òããªé§ò¹ä´é¨ò¡ãù»·õè
+2
+<p>
+<center><img src="fig2.jpg" border=2 height=266 width=546></center>
+
+<center><b><font size=+1>ãù»·õè
+2</font></b></center>
+ 
+
+<p>               
+µñçà¡çº»ãð¨ø
+ci ãªéêóëãñº¡ó¨ñ´¼å¡ãð·º¢í§¡òãàë¹õèâç¹ó 
+( inductive effect ) ·õèáõíâùèã¹êòâêè§
+êèç¹µñçà¡çº»ãð¨ø
+co ãªé»ãñº»ãø§¤ø³àò¾¢í§
+vo ãëé´õ¢öé¹ ( »ãñº»ãø§
+transient response )  ã¹¡òããªé§ò¹àãòäáèµéí§»ãñºáµè§íðäãàåâ
+â´âáã§´ñ¹àíòµì¾øµ¨ð¶ù¡µñé§äçéâ´â¼ùé¼åôµµòááòµã°ò¹¢í§íøµêòë¡ããááõ¤èòµèò§æ
+ä´éá¡è 5,6,8,12,15,18,24 v àªè¹
+mc7824c ãëéáã§´ñ¹àíòµì¾øµ¢¹ò´
+24 v àã¡ùàåàµíãìàëåèò¹õéêòáòã¶¨èòâ¡ãðáêä´é¢¹ò´
+1 a áåðâñ§áõç§¨ã»éí§¡ñ¹µèò§æ
+àªè¹ short circuit protection àíòäçé¨ó¡ñ´¡ãðáêêù§êø´·õèç§¨ã¨ðãñº
+, thermal shutdown , output-transistor saft-operating-area protection îåî
+
+<p>                
+µñçíâèò§¢í§
+parameter ¢í§ç§¨ãàëåèò¹õéä´éá¡è
+<br>                       
+sv = 3 * 10^-3 ro = 30 mw st = 1 mv/  íc
+<p>
+<center><img src="fig3.jpg" border=2 height=474 width=400></center>
+
+<center><b><font size=+1>ãù»·õè
+3</font></b></center>
+
+
+<p>               
+µñçíâèò§ç§¨ã¢í§
+mc7800c áê´§äçéã¹ãù»·õè
+3  ¡ãíº·õèáã§à§òã¹ãù»à·õâºä´é¡ñºáã§´ñ¹à»ãõâºà·õâº
+<font size=+2>v</font>r ( reference voltage ) ã¹ãù»·õè
+1 µñçµéò¹·ò¹
+r1 áåð r2 ã¹ãù»·óë¹éò·õèà»ç¹
+feedback network àëá×í¹¡ñºã¹ãù»·õè
+1 áåð¤ùè¢í§ transistor
+q<b><font size=+2>'</font></b> áåð q<b><font size=+2>''</font></b> 
+à»ç¹  dalington pair à»ãõâºàêá×í¹
+pass element q1 ã¹ãù»·õè
+1 ç§¨ã»éí§¡ñ¹¨ðáê´§íâùèã¹àêé¹ë¹ñ¡
+â´âãªé r3,r4 áåð
+q2 ã¹¡òã¨ó¡ñ´¡ãðáê
+( current limitting ) , q<b><font size=+2>'</font></b>  áåð
+q<b><font size=+2>''</font></b> ãªéã¹¡òã·ó
+safe-operating-protection áåð thermal overload protection
+
+<p>               
+ã¹·éí§µåò´
+monolithic regulator ¹õéáõãëéàå×í¡ëåòâ»ãðàà·µñé§áµèáã§´ñ¹¤§·õè
+¡ñº»ãñº¤èòä´é,
+áã§´ñ¹ºç¡ ëã×íáã§´ñ¹åº,
+¡ãðáêàíòµì¾øµ·õèêù§
+( > 1 a ), áã§´ñ¹àíòµì¾øµêù§
+( > 24 v ) áåðáõë¹öè§ëã×íêí§àíòµì¾øµ 
+(+/-)
+<br> 
+<br><a name="switching_regulator"></a>
+<h2>
+<font color="#993366">switching regulators</font></h2>
+<font color="#993366">               
+</font>¨ò¡ëñç¢éí·õè¡åèòçáòáåéç¨ðàëç¹çèòà¤ã×èí§¨èòâä¿áºº
+pass regulator áõ¢éíàêõâºò§íâèò§
+àªè¹ ¨ðµéí§ãªéä¿àåõéâ§êóëãñºíí»áíá»ì
+(op-amp) µèò§ëò¡ ¶éòíí»áíá»ì¹ñé¹ãªéä¿àåõéâ§·õèµèò§¡ñºáã§´ñ¹íô¹¾øµáò¡,
+¶éòáã§´ñ¹íô¹¾øµáåðáã§´ñ¹àíòµì¾øµµèò§¡ñ¹áò¡
+¡óåñ§·õèêù­àêõâã¹ç§¨ã¡ç¨ðâôè§áò¡
+¨ò¡¢éíàêõâµèò§æ
+àãò¨ö§ãªéëåñ¡¡òããëáèã¹¡òãêãéò§à¤ã×èí§¨èòâä¿
+«öè§ëåñ¡¡òã·õè¹óáòãªé¨ð¹óáòêãéò§à»ç¹êçôµªôè§àã¡ùàåàµíãì
+( switching regulator )
+<h2>
+<a name="basic_switching_regulator"></a></h2>
+
+<h2>
+<font color="#993366">        basic
+switching regulator topology</font></h2>
+               
+ç§¨ãêçôµªôè§àã¡ùàåàµíãìáºº¾×é¹°ò¹áê´§äçéã¹ãù»·õè
+4 â´â·õè <font size=+2>v</font>in
+¤×í áã§´ñ¹íô¹¾øµ(âñ§äáè¼èò¹¡òãàã¡ùàåµ), 
+<font size=+2>v</font>o ¤×í áã§´ñ¹àíòµì¾øµ(¼èò¹¡òãàã¡ùàåµáåéç), 
+<font size=+2>r</font>l à»ç¹âëå´
+<p> 
+<center><img src="fig4.jpg" border=2 height=368 width=620></center>
+
+<center><b><font size=+1>ãù»·õè
+4</font></b></center>
+
+<center> </center>
+
+
+<p>               
+ã¹ç§¨ãáºè§ä´éà»ç¹êèç¹µèò§æ
+´ñ§¹õé
+<br>              
+reference regulator ·óë¹éò·õèêãéò§
+<font size=+2>v</font>ref «öè§à»ç¹áã§´ñ¹íéò§íô§áåðà»ç¹ä¿àåõéâ§ãëé¡ñº
+error-amplifier áåð pulse-width modulator  «öè§·ñé§
+reference regulator,  error-amplifier, pulse-width modulator 
+áåðêèç¹·õè·óë¹éò·õèêãéò§áã§´ñ¹¤å×è¹êòáàëåõèâá
+êòáòã¶¼åôµãçá¡ñ¹äçéã¹äí«õµñçà´õâçä´é 
+´ñ§¹ñé¹êèç¹¹õé¨ðà»ç¹êèç¹·õèãªé¡óåñ§µèó¨ö§äáèáõ¼å¡ãð·º¡ñº»ãðêô·¸ôàò¾ãçá¢í§ãðºº
+
+<p>               
+error-amplifier ·óë¹éò·õèà»ãõâºà·õâº
+<font size=+2>v</font>ref ¡ñº¤èòáã§´ñ¹·õèä´é¨ò¡¡òã»éí¹
+<font size=+2>v</font>o ¡åñºáò¼èò¹
+r1, r2 áåéç¢âòâ¤çòááµ¡µèò§áåéçêè§à»ç¹àíòµì¾øµ
+<font size=+2>v</font>m ãëé¡ñº pulse-width
+modulator (pwm)
+
+<p>               
+pwm ·óë¹éò·õèáí´ùàåµ
+<font size=+2>v</font>m ¡ñºáã§´ñ¹¤å×è¹êòáàëåõèâá·õèáõ¤òºà·èò¡ñº
+t à¾×èíêãéò§à»ç¹áã§´ñ¹
+<font size=+2>v</font>a ·õèà»ç¹¤å×è¹êõèàëåõèâááõ¤òº
+t áõ duty cycle á»ã¼ñ¹µã§¡ñº
+<font size=+2>v</font>m
+
+<p>               
+power switch à»ç¹êçôµªìà´õèâçáººêí§·ò§
+(single pole - double throw, spdt) ·óë¹éò·õèêçôµªìãðëçèò§
+<font size=+2>v</font>in áåð¡ãòç´ì
+¡òãêçôµªì¤çº¤øáâ´â
+<font size=+2>v</font>a «öè§àãò¨ðä´é
+<font size=+2>v</font>b à»ç¹áã§´ñ¹¤å×è¹êõèàëåõèâá·õèáõ¤òº,
+áõ duty cycle à·èò¡ñº
+<font size=+2>v</font>a áåðáõáíá¾åô¨ù´à»ç¹
+<font size=+2>v</font>in
+
+<p>               
+lc filter ·óë¹éò·õèà»ç¹
+low-pass filter â´â¡ó¨ñ´í§¤ì»ãð¡íº·õèáõ¤çòá¶õèêù§ã¹
+<font size=+2>v</font>b äáèãëé¼èò¹ä»·õèâëå´
+´ñ§¹ñé¹¨ö§áõà©¾òð¡ãðáêµã§à·èò¹ñé¹·õè¼èò¹ä»ä´é
+<font size=+2>v</font>o ¨ö§áõ¤èò¤§·õè
+áåðà·èò¡ñº¤èòà©åõèâ¢í§
+<font size=+2>v</font>b
+
+<p>               
+¡òãêãéò§ power switch
+¹õéáõçô¸õêãéò§ä´éëåòâáººâ¡µñçíâèò§àªè¹
+<p> 
+<center> <img src="fig5.jpg" border=2 height=436 width=499></center>
+
+<center><b><font size=+1>ãù»·õè
+5</font></b></center>
+ 
+<br>               
+ç§¨ãã¹ãù»·õè
+5 ãªéä´âí´áåðêçôµªìà´õèâç·ò§à´õâç
+(single pole-single throw, spst) ·õè¤çº¤øáâ´â
+pwm àá×èíêçôµªì»ô´ä´âí´¨ðäáè¹ó¡ãðáê
+¡ãðáê¨ö§äëå¼èò¹µñçàë¹õèâç¹ó
+áåðä´é <font size=+2>v</font>b = <font size=+2>v</font>in
+àá×èíêçôµªìà»ô´¡ãðáê·õè¼èò¹µñçàë¹õèâç¹ó¨ðâñ§¤§·õèíâùè
+´ñ§¹ñé¹¨ðáõ¡ãðáêäëå¨ò¡¡ãòç´ì¼èò¹ä´âí´ä»âñ§µñçàë¹õèâç¹óáåðâëå´
+¶éòäáè¤ô´¤çòáµèò§èñ¡âì·õè¤ãèíáä´âí´
+¨ðä´é <font size=+2>v</font>b=0  àãòàãõâ¡ä´âí´·õè·ó§ò¹ã¹åñ¡é³ð¹õéçèò
+flyback diode
+<p> 
+<center><img src="fig6.jpg" border=2 height=374 width=400></center>
+
+<center><b><font size=+1>ãù»·õè
+6</font></b></center>
+
+<center> </center>
+               
+êçôµªìà´õèâç·ò§à´õâçã¹ãù»·õè
+5 êòáòã¶á·¹ä´é´éçâ·ãò¹«ôêàµíãì
+q1 ã¹ãù»·õè 6 êóëãñºã¹¡ã³õ·õèâëå´µéí§¡òã¡ãðáêáò¡
+àãò¨ðµéí§µèí·ãò¹«ôêàµíãìà»ç¹áºº´òãìåô§µñ¹ 
+(darlington pair) â´âãªé q2 à»ç¹µñçªèçâã¹¡òã´ö§¡ãðáêàºê¢í§
+q1 ãëéáò¡¢öé¹
+
+<p>               
+¨ò¡¡òã·õèàãòãªé·ãò¹«ôêàµíãìáºº
+pnp á·¹êçôµªì áåðàãòµéí§¡òããëéêçôµªì»ô´àá×èí
+<font size=+2>v</font>a áõ¤èòêù§àãò¨ö§µéí§ãªé
+q3 ·õèà»ç¹ª¹ô´
+npn ã¹¡òã¤çº¤øáêçôµªìãëéà»ô´»ô´¶ù¡µéí§
+àá×èí <font size=+2>v</font>a à»ç¹ºç¡
+q3 ¨ð·ó§ò¹¡ãðáê¤íåàå¡àµíãì¢í§
+q3 ¨ðäëå¼èò¹µñçµéò¹·ò¹áµèåðµñç·óãëé
+q1 áåð q2 ·ó§ò¹ «öè§¨ðä´é
+<font size=+2>v</font>b à¡×íºà·èò¡ñº
+<font size=+2>v</font>in  àá×èí
+<font size=+2>v</font>a à»ç¹åºëã×íèù¹âì 
+q3 ¨ðäáè·ó§ò¹¨ö§äáèáõ¡ãðáêä»¡ãðµøé¹
+q1 áåð q2 ·óãëéêçôµªìà»ô´ 
+flyback diode ¡ç¨ð·óë¹éò·õèà»ç¹·ò§¼èò¹ãëé¡ñº¡ãðáê·õèäëå¨ò¡¡ãòç´ì¼èò¹ä»âñ§µñçàë¹õèâç¹ó
+<br> 
+<br>               
+¡òã·õè lc filter ¨ðáõ»ãðêô·¸ôàò¾ã¹¡òã¡ñ¹í§¤ì»ãð¡íº·õèáõ¤çòá¶õèêù§
+¤èò¢í§ reactance ¢í§
+c ¨ðµéí§¹éíâ¡çèò¤èò¢í§
+reactance ¢í§ l áò¡æ ·õè¤çòá¶õèáùå°ò¹ 
+´ñ§¹ñé¹ <font size=+2>t/(2pic)
+&lt;&lt; 2pil/t</font> ëã×í<font size=+2> sqrt(lc)
+>> t/2pi</font>
+
+<p>               
+¶éòàãò¾ô¨òã³òêá¡òã¢í§
+error-amplifier ¨ðä´éçèò
+<br>                           
+<font size=+3>v</font><font size=+2>ref = r1 * </font><font size=+3>v</font><font size=+2>o/(r1+r2)</font>
+<br>               
+ëã×í     <font size=+3>v</font><font size=+2>o
+= </font><font size=+3>v</font><font size=+2>ref * (1 + r1/r2)</font>
+
+<p>               
+«öè§¨ðàëç¹çèò
+<font size=+2>v</font>o äáè¢öé¹¡ñº
+<font size=+2>v</font>in áåð¡ãðáêâëå´
+áµè¨ò¡¡òã·õè
+<font size=+2>v</font>o à»ç¹¤èòà©åõèâ¢í§
+<font size=+2>v</font>b «öè§ <font size=+2>v</font>b
+áõ¤èòêù§êø´à»ç¹
+<font size=+2>v</font>in ´ñ§¹ñé¹
+<font size=+2>v</font>o ·õèä´é¨ð¹éíâ¡çèò
+<font size=+2>v</font>in àêáí
+
+<p>               
+ã¹´éò¹¢í§»ãðêô·¸ôàò¾ç§¨ã·õèêãéò§â´âëåñ¡¡òã¹õé¶éòãªé
+power switch ·õèáõ¡òãêù­àêõâµèó
+àªè¹ ·ãò¹«ôêàµíãì·õèáõ
+<font size=+2>v</font>ce(sat) µèóáåðáõ¤çòáàãççã¹¡òãêçôµªìêù§
+áåðãªé µñçàë¹õèâç¹ó·õèáõ¤èò
+q (quality factor) êù§ ëã×íáõ¤èò¤çòáµéò¹·ò¹àòâã¹µèó¨ðä´é»ãðêô·¸ôàò¾äáèµèó¡çèò
+90 à»íãìà«¹µì
+<br> 
+<h2>
+<a name="additional_switching_regulator"></a></h2>
+
+<h2>
+<font color="#993366">        
+additional switching regulator topologies</font></h2>
+               
+¨ò¡ç§¨ãã¹ãù»·õè
+4 áã§´ñ¹àíòµì¾øµ·õèä´é¨ð¹éíâ¡çèòáã§´ñ¹íô¹¾øµáåðáõ¤èòà»ç¹ºç¡àêáí 
+àãò¨ö§¤ô´ëò·ò§á¡éä¢¢éí¨ó¡ñ´íñ¹¹õé
+â´âç§¨ãã¹ãù»·õè
+7 à»ç¹ç§¨ã·õèêãéò§áã§´ñ¹àíòµì¾øµ·õèà»ç¹ºç¡áåðáõ¤èòáò¡¡çèò
+<font size=+2>v</font>in
+
+<p>               
+ã¹ªèç§·õèêçôµªì»ô´(êááµôçèò»ô´à»ç¹àçåò
+t1) ä´âí´¨ðäáè¹ó¡ãðáê
+ã¹ªèç§¹õéµñçà¡çº»ãð¨ø¨ð¤òâ»ãð¨øãëé¡ñºâëå´
+â´âàãò¨ðµéí§àå×í¡ãëé 
+<font size=+2>c*r</font>l<font size=+2> >> t1</font>  à¾×èíãëé¤èò
+<font size=+2>v</font>o à»åõèâ¹á»å§¹éíâ
+ã¹ªèç§¹õéáã§´ñ¹¤ãèíáµñçàë¹õèâç¹ó
+¤×í <font size=+2>v</font>in ¨ð·óãëé¡ãðáê
+<font size=+3>i</font>l à¾ôèá¢öé¹¨¹¶ö§ªèç§·õèêçôµªìà»ô´µòáêá¡òã 
+<p>               
+<font size=+2>di = vin * dt/l = vin * t1/l</font>
+
+<p>               
+ã¹ªèç§·õèêçôµªìà»ô´(êááµôçèòà»ô´à»ç¹àçåò
+t2) ¡ãðáê·õèäëåã¹µñçàë¹õèâç¹óäáèêòáòã¶à»åõèâ¹á»å§ã¹·ñ¹·õ
+´ñ§¹ñé¹¡ãðáê·õèäëåã¹¢³ðêçôµªìàãôèáà»ô´âñ§¤§áõ¤èò¤§à´ôá
+áõ¼å·óãëéä´âí´¹ó¡ãðáê
+¡ãðáê¨ò¡µñçàë¹õèâç¹ó¨ö§äëåä»âñ§µñçà¡çº»ãð¨øáåðâëå´
+ã¹ªèç§àçåò¹õé¡ãðáê¢í§µñçàë¹õèâç¹ó¨ðå´å§à·èò¡ñº
+<font size=+3>v</font><font size=+2>in * t1/l</font>  ·óãëéáã§´ñ¹¤ãèíáµñçàë¹õèâç¹óáõ¤èòà»ç¹åº
+(<font size=+2>ldi/dt</font> &lt; 0)
+
+<p>               
+´ñ§¹ñé¹        
+<font size=+3>v</font><font size=+2>o = </font><font size=+3>v</font><font size=+2>in
+- ldi/dt</font>
+<br><font size=+2>                           
+= </font><font size=+3>v</font><font size=+2>in + l * (</font><font size=+3>v</font><font size=+2>in
+* t1/l)/t2</font>
+<br><font size=+2>                           
+= </font><font size=+3>v</font><font size=+2>in * (1+t1/t2)  > </font><font size=+3>v</font><font size=+2>in</font>
+
+<p>                 
+àá×èíç§¨ã¹õéà¢éòêùèàòçðêá´øåâì
+¤èò¢í§ <font size=+2>v</font>o ¨ðáõ¤èòáò¡¡çèò
+<font size=+2>v</font>in ¤×íáõ¤èòà·èò¡ñº
+<font size=+3>v</font><font size=+2>in * (1+t1/t2)</font> àá×èíêçôµªì»ô´¤èò¢í§
+<font size=+2>v</font>o ¨ðå´å§àåç¡¹éíâ¢öé¹íâùè¡ñº¤èò¢í§ 
+<font size=+2>c * r</font>l  ´ñ§¹ñé¹àãòêòáòã¶¤çº¤øá¤èò¢í§
+<font size=+2>v</font>o â´â¤çº¤øá
+duty cycle ¢í§ pwm
+<p> 
+<center><img src="fig7.jpg" border=2 height=278 width=379></center>
+
+<center><b><font size=+1>ãù»·õè
+7</font></b></center>
+ 
+<br>                   
+ç§¨ãã¹ãù»·õè
+8 à»ç¹ç§¨ã·õèãëé¤èò
+<font size=+2>v</font>o à»ç¹åº «öè§ëåñ¡¡òã¢í§ç§¨ã¤åéòâ¡ñºëåñ¡¡òã¢í§ç§¨ãã¹ãù»·õè
+7 ¤×í
+
+<p>                   
+ã¹ªèç§·õèêçôµªì»ô´à»ç¹àçåò
+t1 ä´âô´¨ðäáè¹ó¡ãðáê
+µñçà¡çº»ãð¨ø¨ð¤òâ»ãð¨øãëé¡ñºâëå´áåðáã§´ñ¹¤ãèíáµñçàë¹õèâç¹ó
+¤×í <font size=+2>v</font>in ¨ð·óãëé¡ãðáê·õèäëå¼èò¹µñçàë¹õèâç¹óáõ¤èòà¾ôèá¢öé¹à·èò¡ñº
+<font size=+3>v</font><font size=+2>in * t1/l</font>
+
+<p>                   
+ã¹ªèç§·õèêçôµªìà»ô´à»ç¹àçåò
+t2 ¡ãðáê·õèäëåã¹µñçàë¹õèâç¹óäáèêòáòã¶à»åõèâ¹á»å§ã¹·ñ¹·õ
+´ñ§¹ñé¹ä´âí´¨ð¶ù¡ºñ§¤ñºãëé¹ó¡ãðáê
+¡ãðáê¢í§µñçàë¹õèâç¹ó
+¨ðäëåä»âñ§µñçà¡çº»ãð¨øáåðâëå´·ò§¢ñéç·õèíâùè´éò¹åèò§
+â´â¤èò¢í§¡ãðáê¹õé¨ðå´å§à·èò¡ñº
+<font size=+3>v</font><font size=+2>in * t1/l</font> ã¹ªèç§àçåò
+t2
+
+<p>                   
+´ñ§¹ñé¹ <font size=+3>v</font><font size=+2>o
+= ldi/dt </font>  (¶éòäáè¤ô´áã§´ñ¹¤ãèíáä´âí´)
+<br>                                        <font size=+2>
+= l * (- </font><font size=+3>v</font><font size=+2>in * t1/l)/t2</font>
+<br><font size=+2>                        
+= -</font><font size=+3>v</font><font size=+2>in * t1/t2</font>
+<br>                     
+«öè§¨ðàëç¹çèòàãòêòáòã¶»ãñº¢¹ò´¢í§
+<font size=+2>v</font>o ä´éâ´â»ãñº
+duty cycle ¢í§¡òãêçôµªì
+<p> 
+<center><img src="fig8.jpg" border=2 height=276 width=365></center>
+
+<center><b><font size=+1>ãù»·õè
+8</font></b></center>
+
+
+<p> 
+<h2>
+<a name="transformer_coupled"></a></h2>
+
+<h2>
+<font color="#993366">transformer-coupled push-pull dc-to-dc converter</font></h2>
+               
+ã¹¡òãêãéò§à¤ã×èí§¨èòâä¿¿éò¢í§ëñç¢éí¹õé¨ðãªéëåñ¡¡òã¢í§
+dc-to-dc converter «öè§ <font size=+2>v</font>o
+íò¨¨ðáò¡¡çèòëã×í¹éíâ¡çèò
+<font size=+2>v</font>in áåð <font size=+2>v</font>o íò¨¨ðà»ç¹ºç¡ëã×íåº¡çä´é 
+´ñ§ç§¨ã·õèáê´§äçéã¹ãù»·õè
+9
+
+<p> 
+<center><img src="fig9.jpg" border=2 height=297 width=600></center>
+
+<center><b><font size=+1>ãù»·õè
+9</font></b></center>
+
+
+<p>                
+ã¹ç§¨ã·õèà»ç¹êèç¹¢í§¾òçàçíãìêçôµªì
+áõ¡òããªéëáéíá»å§·õèáõá·ç»¡åò§·ñé§·ò§´éò¹»°áàùáôáåð·øµôâàùáôµèíáºº¾øª¾øåâ´âáõ
+<font size=+2>v</font>in à»ç¹áëåè§¡óà¹ô´¡ãðáêµã§µèíäçé·õèá·ç»¡åò§
+áõ sw1 áåð sw2 ¤çº¤øááã§´ñ¹»°áàùáô
+¨ó¹ç¹ãíº¢í§¢´åç´ã¹´éò¹·øµôâàùáôáõ¤èòà»ç¹ 
+n à·èò¢í§¨ó¹ç¹ãíº¢í§¢´åç´ã¹´éò¹»°áàùáô«öè§¨ð·óãëé
+<font size=+2>v</font>p1 = <font size=+2>v</font>p2, <font size=+2>v</font>s1
+= <font size=+2>v</font>s2 áåð <font size=+2>v</font>s1
+=  <font size=+2>n</font> *<font size=+2>v</font>p1, <font size=+2>v</font>s2
+= <font size=+2>n </font>* <font size=+2>v</font>p2  ¶éò
+<font size=+2>n</font>>1 ¨ðä´é <font size=+2>v</font>o
+> <font size=+2>v</font>in áµè¶éò
+<font size=+2>n</font>&lt;=1 ¨ðä´é <font size=+2>v</font>o&lt;=<font size=+2>v</font>in
+
+<p>               
+ä´âí´ d1 áåð d2 ·óë¹éò·õèà»ç¹
+full wave rectifier à¾×èíêè§ä»ãëé 
+l áåð c «öè§µèí¡ñ¹à»ç¹
+low-pass filter ·óë¹éò·õè¡ãí§ãëé¡ãðáêµã§à·èò¹ñé¹¼èò¹ä»ä´é·óãëé
+<font size=+2>v</font>o áõ¤èò¤§·õèáåðà·èò¡ñº¤èòà©åõèâ¢í§
+<font size=+2>v</font>b
+<br> 
+<br>               
+êçôµªì sw1 áåð sw2
+¤çº¤øáâ´âêñ­­ò³
+<font size=+2>v</font>a1 áåð <font size=+2>v</font>a2
+«öè§ä´é¨ò¡¡òãáí´ùàåµ
+<font size=+2>v</font>a ¡ñºêñ­­ò³¤å×è¹êòáàëåõèâá·õè¤òºà·èò¡ñ¹áµèà¿êµèò§¡ñ¹
+180 í§èò  <font size=+2>v</font>a1 áåð
+<font size=+2>v</font>a2 áõ¤òºà·èò¡ñºêí§à·èò¢í§
+<font size=+2>v</font>a ´ñ§¹ñé¹êçôµªì
+sw1 áåð sw2 ¨ð»ô´à»ô´à»ç¹ãðâðàçåò·õèà·èò¡ñ¹
+áµèêåñº¡ñ¹¤¹åðãíº¢í§
+<font size=+2>v</font>a ´ñ§ã¹ãù»·õè
+10  â´â sw1 áåð sw2 ¨ðäáè»ô´¾ãéíá¡ñ¹
+
+<p>               
+¨ò¡ç§¨ãã¹ãù»·õè
+9 ¨ðä´é¤èò¢í§
+<font size=+2>v</font>p1 áåð <font size=+2>v</font>p2
+(áê´§ãù»¢í§êñ­­ò³äçéã¹ãù»·õè
+10) ´ñ§¹õé
+<br>                  
+<font size=+2>v</font>p1 = <font size=+2>v</font>p2 =  -<font size=+2>v</font>in  
+¶éò sw1 »ô´ áåð sw2
+à»ô´, +<font size=+2>v</font>in 
+¶éò sw1 à»ô´ áåð
+sw2 »ô´, 0      
+¶éò sw1 à»ô´ áåð
+sw2 à»ô´
+
+<p> 
+<center><img src="fig10.jpg" border=2 height=352 width=534></center>
+
+<center><b><font size=+1>ãù»·õè
+10</font></b></center>
+
+
+<p>                   
+<font size=+2>v</font>s1 áåð <font size=+2>v</font>s2
+¨ðáõãù»ãèò§¢í§êñ­­ò³àëá×í¹¡ñº
+<font size=+2>v</font>p1 áåð <font size=+2>v</font>p2
+áµèáõáíá¾åô¨ù´à»ç¹
+<font size=+2>n</font> à·èòáåðáõ¤èòà·èò¡ñ¹
+ã¹ªèç§·õè <font size=+2>v</font>s1
+áõ¤èòà»ç¹ºç¡
+ä´âí´ d1 ¨ð¹ó¡ãðáê 
+áµèä´âí´ d2 ¨ðäáè¹ó¡ãðáê
+áåðä´é <font size=+2>v</font>b = <font size=+2>n
+</font>* <font size=+2>v</font>in êóëãñºã¹ªèç§·õè
+<font size=+2>v</font>s1 áõ¤èòà»ç¹åº
+ä´âí´ d1 ¨ðäáè¹ó¡ãðáê
+áµèä´âí´ d2 ¨ð¹ó¡ãðáê
+áåðä´é <font size=+2>v</font>b = <font size=+2>n
+</font>* <font size=+2>v</font>in  àëá×í¹ªèç§·õè
+<font size=+2>v</font>s1 à»ç¹ºç¡
+ã¹ªèç§·õè <font size=+2>v</font>s1=0
+áåð <font size=+2>v</font>s2=0 ä´âí´·ñé§êí§µñç¨ðàêá×í¹çèò¢ñéçíòâ¹´µèí¡ñº¡ãòç´ì
+ä´âí´·ñé§êí§µñç¨ö§·óë¹éò·õèà»ç¹
+flyback diode ã¹ªèç§¹õé
+<font size=+2>v</font>b=0
+
+<p>                   
+¨ò¡¡òã·õè l áåð
+c ·óë¹éò·õèà»ç¹
+low-pass filter àãò¨ö§ä´éçèò
+<br>                           
+<font size=+2>v</font>o  =  ¤èòà©åõèâ¢í§
+<font size=+2>v</font>b
+<br>                                    
+=  <font size=+2>n</font> * <font size=+2>v</font>in * duty cycle
+¢í§ <font size=+2>v</font>a
+
+<p>                   
+¨ðêñ§à¡µçèò
+¤èò¢í§ <font size=+2>v</font>o íò¨¨ðáõ¢¹ò´áò¡¡çèòëã×í¹éíâ¡çèò 
+<font size=+2>v</font>in  ¡çä´é¢öé¹íâùè¡ñº¤èò¢í§
+<font size=+2>n</font> áåð duty cycle ¢í§
+<font size=+2>v</font>a áåð¶éòàãò¡åñº¢ñéç¢í§ä´âí´·ñé§êí§µñçàãò¡ç¨ðä´é 
+<font size=+2>v</font>o ·õèà»ç¹åº
+
+<p>                   
+ã¹ëñç¢éí¶ñ´ä»àãò¨ð¡åèò§¶ö§¡òãêãéò§êñ­­ò³·õè¹óáòãªé¤çº¤øá¡òãêçôµªì«öè§¨ðµéí§êãéò§
+<font size=+2>v</font>a1 áåð <font size=+2>v</font>a2
+·õèáõ duty cycle à·èò¡ñ¹
+áõ¤òºà·èò¡ñ¹ 
+áåðµéí§áõà¿êµèò§¡ñ¹ 
+180 í§èò
+<br> 
+
+<p><a name="generating"></a>
+<h2>
+<font color="#993366">generating the switching waveforms</font></h2>
+                   
+ã¹¡òãêãéò§êñ­­ò³·õèãªéã¹¡òã¤çº¤øáêçôµªì
+sw1 áåð sw2 ã¹ãù»·õè
+9 ¨ðµéí§áõç§¨ã·õèêãéò§êñ­­ò³·õèáõ¤òºà·èò¡ñ¹
+áµèà¿êµèò§¡ñ¹
+180 í§èò çô¸õ¡òãë¹öè§·õèãªéä´é 
+¤×í ãªéç§¨ã·õèáõåñ¡é³ð´ñ§ã¹ãù»·õè
+11
+<p> 
+<center><img src="fig11.jpg" border=2 height=400 width=558></center>
+
+<center><b><font size=+1>ãù»·õè
+11</font></b></center>
+
+
+<p>                   
+ã¹ç§¨ããù»·õè
+11 áõííê«ôåàåàµíãì·óë¹éò·õèêãéò§êñ­­ò³¹òìô¡ò
+(<font size=+2>v</font>osc) ãëé¡ñº¿åô»¿åí»
+â´â·õèêñ­­ò³¹òìô¡ò¹õé¨ðµéí§áõ¤òºà·èò¡ñº¤òº¢í§
+<font size=+2>v</font>a ´ñ§ã¹ãù»·õè
+12  ¿åô»¿åí»ã¹ç§¨ã·óë¹éò·õèà»ç¹ç§¨ãëòãêí§
+ä´éàíòµì¾øµà»ç¹
+<font size=+2>v</font>q áåð <font size=+2>v</font>q' ´ñ§ã¹ãù»·õè
+12 «öè§¨ðàëç¹çèò
+<font size=+2>v</font>q áåð <font size=+2>v</font>q' 
+áõà¿êµèò§¡ñ¹
+180 í§èò áõ¤òºà·èò¡ñ¹áåðà·èò¡ñºêí§à·èò¢í§
+<font size=+2>v</font>a áåéç ¢³ð¹õéàãòáõ
+<font size=+2>v</font>osc, <font size=+2>v</font>a, <font size=+2>v</font>q,
+<font size=+2>v</font>q' ¡çµéí§¤ô´µèíä»çèò¨ð¹óêí­­ò³àëåèò¹õéáòãªé¤çº¤øá
+sw1 áåð sw2 íâèò§äã
+<p>                   
+¨ò¡·õèàãòãùéçèò
+<font size=+2>v</font>a1 áåð <font size=+2>v</font>a2
+¨ðµéí§¤çº¤øá
+duty cycle ä´é  àãò¡çáí§ëòçèòã¹ºãã´òêñ­­ò³·õèàãòáõ
+êñ­­ò³ã´ºéò§·õè¤çº¤øá
+duty cycle ä´é ¨ðàëç¹çèòã¹·õè¹õéàãòáõáµè
+<font size=+2>v</font>a à·èò¹ñé¹·õè¤çº¤øá
+duty cycle ä´é «öè§ã¹ãù»·õè
+12 <font size=+2>v</font>a áõ duty cycle à·èò¡ñº
+<font size=+2>t1/(t1+t2)</font> àãò¨ö§¹ó
+<font size=+2>v</font>a áò¼êá¡ñº
+<font size=+2>v</font>q áåð¹ó <font size=+2>v</font>a
+áò¼êá¡ñº <font size=+2>v</font>q'
+â´â¹óáòà»ç¹íô¹¾øµ¢í§
+and gate ´ñ§ã¹ãù»·õè
+11  àãò¨ö§ä´é
+<font size=+2>v</font>a1 áåð <font size=+2>v</font>a2
+´ñ§ã¹ãù»·õè 12
+
+<p>                   
+¤ãòç¹õéàãò¡çáò¶ö§êèç¹¢í§¡òãíí¡áººêçôµªì
+àãòµéí§¤ó¹ö§çèòàãòµéí§¡òãà¤ã×èí§¨èòâä¿¿éò·õèêòáòã¶¨èòâ¡óåñ§ä´éáò¡
+´ñ§¹ñé¹êçôµªì¢í§àãò¨ö§µéí§à»ç¹åñ¡é³ð¢í§¾òçàçíãìêçôµªì
+â´âãªé¾òçàçíãì·ãò¹«ôêàµíãìã¹êèç¹·õèµèí¡ñºàíòµì¾øµ¢í§êçôµªì
+áåðãªé·ãò¹«ôêàµíãì¸ããá´òáò¨èòâ¡ãðáêàºêãëé¡ñº¾òçàçíãì·ãò¹«ôêàµíãì
+â´âµèí¡ñ¹áºº´òãìåô§µñ¹
+à¾×èíà¾ôèáíñµãò¢âòâ 
+ã¹ãù»·õè 11 q1 áåð
+q2 à»ç¹¾òçàçíãì·ãò¹«ôêàµíãì«öè§áõ
+q3 áåð q4 ·óë¹éò·õè¨èòâ¡ãðáêàºêãëé
+·õèêó¤ñ­·ø¡êèç¹¢í§ãù»·õè
+11 êòáòã¶¼åôµà»ç¹äí«õàòâã¹µñçà´õâçä´é
+<p> 
+<center><img src="fig12.jpg" border=2 height=333 width=534></center>
+
+<center><b><font size=+1>ãù»·õè
+12</font></b></center>
+ 
+
+<p><a name="º·êãø»"></a>
+<h2>
+<font color="#993366">º·êãø»</font></h2>
+                   
+¤çòáµéí§¡òããªéà¤ã×èí§¨èòâä¿¿éò·õèáõ¤çòáà·õèâ§µã§
+ãò¤ò¶ù¡ áõ¤çòá¹èòàª×èí¶×íáåð»ãðêô·¸ôàò¾êù§
+¡òããªéàã¡ùàåàµíãìêóàãç¨ãù»à»ç¹çô¸õ¡òã·õè§èòâáåð»ãðëâñ´
+áµèã¹ºò§¤ãñé§àã¡ùàåàµíãìêóàãç¨ãù»¡çäáèêòáòã¶ãëéêôè§·õèàãòµéí§¡òãä´é 
+·óãëéµéí§áõ¡òã¾ñ²¹òçô¸õãëáèæ
+·õèáõ»ãðêô·¸ôàò¾áòãªéêãéò§à¤ã×èí§¨èòâä¿¿éò 
+çô¸õ¡òãë¹öè§·õèä´é¼å¤øéá¤èòáåð»ãðëâñ´¤×íãªéëåñ¡¡òãêçôµªôè§
+«öè§à¤ã×èí§¨èòâä¿¿éò·õèä´é¨ðáõ»ãðêô·¸ôàò¾äáèµèó¡çèò
+90 à»íãìà«¹µì
+âôè§ä»¡çèò¹ñé¹à¤ã×èí§¨èòâä¿¿éòª¹ô´¹õéáõâñ§¢¹ò´àåç¡áåð¹éóë¹ñ¡àºòíõ¡´éçâ 
+¡òããªéëáéíá»å§µèíáºº¾øª¾øå·óãëéàãòêòáòã¶àå×í¡áã§´ñ¹àíòµì¾øµä´éëåòâáºº
+áåðêòáòã¶¨èòâ¡óåñ§ä´éêù§ºò§êèç¹¢í§ç§¨ãêòáòã¶¼åôµà»ç¹äí«õä´é 
+·óãëéå´¾×é¹·õè¢í§à¤ã×èí§¨èòâä¿ä¿éòä´éºò§êèç¹
+¨ò¡ëñç¢éí·õè¡åèòçáò·ñé§ëá´¼ùéíèò¹íò¨¹óä»»ãñº»ãø§ãëéáõ»ãðêô·¸ôàò¾à¾×èíä»ãªéêãéò§à¤ã×èí§¨èòâä¿·õèàëáòðêá¡ñº¡òããªé§ò¹<
+
+wbr>ä´éµèíä»
+<br> 
+
+<p><a name="àí¡êòãíéò§íô§"></a>
+<h2>
+<font color="#993366">àí¡êòãíéò§íô§</font></h2>
+
+<ul>
+<li>
+integrated electronics: analog and digital circuits and systems, jacob
+millman, christos c. halkias. mcgraw-hill book company.</li>
+
+<li>
+microelectronics: jacob millman, arvin grabel. mcgraw-hill book company.</li>
+
+<li>
+exploring electronic device: mark e. hazen. saunders college publishing.</li>
+</ul>
+
+
+</body>
+</html>

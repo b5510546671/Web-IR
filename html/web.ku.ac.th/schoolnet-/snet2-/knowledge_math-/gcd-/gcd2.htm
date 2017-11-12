@@ -1,0 +1,57 @@
+<html>
+<head>
+   <title>ห.ร.ม.</title>
+</head>
+<body text="#000000" bgcolor="#ffffff" link="#0000ee" vlink="#551a8b" alink="#ff0000" background="bg.gif">
+
+<center><img src="gcd_title.gif" height=54 width=269></center>
+
+<p><font face="ms sans serif" size=-1>
+
+<table border cols=1 width="50%" bgcolor="#ffffff" >
+<tr>
+<td><font color="#3366ff"><font face="ms sans serif" size=-1>ตัวอย่างโปรแกรมด้วยปาสคาลหา ห.ร.ม. ด้วยอัลกอริทึมของยูคลิด</font></td>
+</tr>
+</table>
+
+<br>&nbsp;
+<center><table cols=1 width="76%" bgcolor="#f7eeff" >
+<tr>
+<td><font face="ms sans serif" size=-1>program euclid_gcd
+<br>var
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; a, b, r: extended;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (* use type real if you
+do not have extended *)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (* precision, but his limits
+the number of *)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (* significant figures to
+about 11. *)
+<br>begin
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; writeln ('type two positive
+number separated by a space');
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; read (a, b);
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; writeln ('gcd of', a:0:0,
+'and', b:0:0, 'is');
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (* since a and b change
+their values during the *)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (* program, we have to put
+this here !*)
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; while b > 0 do
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+begin
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+r := a - b * int (a/b);
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+a := b; b := r;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+end;
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; writeln (a:0:0);
+<br>end.</td>
+</tr>
+</table></center>
+
+<p>&nbsp;
+<hr width="100%">
+<i>ที่มา : รศ. ยืน ภู่วรวรรณ, สำนักบริการคอมพิวเตอร์ มหาวิทยาลัยเกษตรศาสตร์</i>
+</body>
+</html>

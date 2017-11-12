@@ -1,0 +1,332 @@
+
+<html>
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=x-user-defined">
+   <meta name="generator" content="mozilla/4.06 [en] (win98; i) [netscape]">
+   <title>rom</title>
+</head>
+<body>
+
+<center><table cols=1 width="95%" bgcolor="#ffcc99" >
+<tr>
+<td align=center><b><font face="ms sans serif"><font color="#000099"><font size=-1>rom
+(read-onlymemory)</font></font></font></b></td>
+</tr>
+</table></center>
+
+<p>
+<center><table width="95%" >
+<tr>
+<td><font face="ms sans serif"><font size=-1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+คือ<wbr>หน่วย<wbr>ความ<wbr>จำ<wbr>ชนิด<wbr>หนึ่ง ที่<wbr>มี<wbr>โปรแกรม
+หรือ<wbr>ข้อ<wbr>มูล<wbr>อยู่<wbr>แล้ว และ<wbr>พร้อม<wbr>ที่<wbr>จะ<wbr>นำ<wbr>มา<wbr>ต่อกั<wbr>บ
+ไมโคร<wbr>โปรเซสเซอร์<wbr>ได้<wbr>โดย<wbr>ตรง ซึ่ง<wbr>โปรแกรม หรือ<wbr>ข้อ<wbr>มูล<wbr>นั้น<wbr>จะ<wbr>ไม่<wbr>สูญ<wbr>หาย<wbr>ไป</font></font><wbr><wbr>
+<br><font face="ms sans serif"><font size=-1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+แม้<wbr>ว่า<wbr>จะ<wbr>ไม่<wbr>มี<wbr>การ<wbr>จ่าย<wbr>ไฟ<wbr>เลี้ยง<wbr>ให้<wbr>แก่<wbr>ระบบ
+ข้อ<wbr>มูล<wbr>ที่<wbr>เก็บ<wbr>อยู่<wbr>ใน rom จะ<wbr>สามารถ<wbr>อ่าน<wbr>ออก<wbr>มา<wbr>ได้
+แต่<wbr>ไม่<wbr>สามารถ<wbr>เขียน<wbr>ข้อ<wbr>มูล<wbr>เข้า<wbr>ไป<wbr>ได้
+เว้น<wbr>แต่<wbr>จะ<wbr>ใช้<wbr>วิธี<wbr>การ<wbr>พิเศษ<wbr>ซึ่ง<wbr>ขึ้นกับชนิด<wbr>ของ
+rom</font></font><font face="ms sans serif"></font>
+<p><b><font face="ms sans serif"><font size=-1>ชนิด<wbr>ของ<wbr><wbr>rom</font></font></b>
+<ul>
+<ul>
+<li>
+<b><font face="ms sans serif"><font color="#000099"><font size=-1>manual
+rom</font></font></font></b></li>
+
+<br><font face="ms sans serif"><font color="#000000"><font size=-1>rom
+(read-only memory)</font></font></font>
+<br><font face="ms sans serif"><font color="#000000"><font size=-1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ข้อมูลทั้งหมดที่อยู่ใน rom จะถูกโปรแกรม โดยผู้ผลิต (โปรแกรม มาจากโรงงาน)
+เราจะใช้ rom ชนิดนี้ เมื่อข้อมูลนั้น ไม่มีการเปลี่ยนแปลง และมีความต้องการใช้งาน
+เป็นจำนวนมาก ผู้ใช้ไม่สามารถ เปลี่ยนแปลงข้อมูลภายใน rom ได้</font></font></font>
+<br><font face="ms sans serif"><font color="#000000"><font size=-1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+โดย rom จะมีการใช้ technology ที่แตกต่างกันตัวอย่างเช่น bipolar, cmos,
+nmos, pmos</font></font></font>
+<br><font face="ms sans serif"></font>&nbsp;
+<li>
+<b><font face="ms sans serif"><font color="#000099"><font size=-1>prom
+(programmable rom)</font></font></font></b></li>
+
+<br><font face="ms sans serif"><font color="#000000"><font size=-1>prom
+(programmable read-only memory)</font></font></font>
+<br><font face="ms sans serif"><font color="#000000"><font size=-1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ข้อมูลที่ต้องการโปรแกรมจะถูกโปรแกรมโดยผู้ใช้เอง โดยป้อนพัลส์แรงดันสูง (high
+voltage pulsed) ทำให้ metal strips หรือ polycrystaline silicon ที่อยู่ในตัว
+ic ขาดออกจากกัน ทำให้เกิดเป็นลอจิก “1” หรือ “0” ตามตำแหน่ง ที่กำหนดในหน่วยความจำนั้นๆ
+เมื่อ prom ถูกโปรแกรมแล้ว ข้อมูลภายใน จะไม่สามารถเปลี่ยนแปลงได้อีก หน่วยความจำชนิดนี้
+จะใช้ในงานที่ใช้ความเร็วสูง ซึ่งความเร็วสูงกว่า หน่วยความจำ ที่โปรแกรมได้ชนิดอื่นๆ</font></font></font></ul>
+</ul>
+
+<ul>
+<ul>
+<li>
+<b><font face="ms sans serif"><font color="#000099"><font size=-1>eprom
+(erasable programmable rom)</font></font></font></b></li>
+
+<br><font face="ms sans serif"><font color="#000000"><font size=-1>eprom
+(erasable programmable read-only memory)</font></font></font>
+<br><font face="ms sans serif"><font color="#000000"><font size=-1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ข้อมูลจะถูกโปรแกรม โดยผู้ใช้โดยการให้สัญญาณ ที่มีแรงดันสูง (high voltage
+signal) ผ่านเข้าไปในตัว eprom ซึ่งเป็นวิธีเดียวกับที่ใช้ใน prom แต่ข้อมูลที่อยู่ใน
+eprom เปลี่ยนแปลงได้ โดยการลบข้อมูลเดิมที่อยู่ใน eprom ออกก่อน แล้วค่อยโปรแกรมเข้าไปใหม่
+การลบข้อมูลนี้ทำได้ด้วย การฉายแสง อุลตร้าไวโอเลตเข้าไปในตัว ic โดยผ่าน
+ทางกระจกใส ที่อยู่บนตัว ic เมื่อฉายแสง ครู่หนึ่ง (ประมาณ 5-10 นาที) ข้อมูลที่อยู่ภายใน
+ก็จะถูกลบทิ้ง ซึ่งช่วงเวลา ที่ฉายแสงนี้ สามารถดูได้จากข้อมูล ที่กำหนด (data
+sheet) มากับตัว eprom และ มีความเหมาะสม ที่จะใช้ เมื่องานของระบบ มีโอกาส
+ที่จะปรับปรุงแก้ไขข้อมูลใหม่</font></font></font></ul>
+</ul>
+
+<ul>
+<ul>
+<li>
+<b><font face="ms sans serif"><font color="#000099"><font size=-1>earom
+(electrically alterable rom)</font></font></font></b></li>
+
+<br><font face="ms sans serif"><font color="#000000"><font size=-1>earom
+(electrically alterable read-only memory)</font></font></font>
+<br><font face="ms sans serif"><font color="#000000"><font size=-1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+earom หรืออีกชื่อหนึ่งว่า eeprom (electrical erasable eprom) เนื่องจากมีการใช้ไฟฟ้าในการลบข้อมูลใน
+rom เพื่อเขียนใหม่ ซึ่งใช้เวลาสั้นกว่าของ eprom</font></font></font>
+<br><font face="ms sans serif"><font color="#000000"><font size=-1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+การลบขึ้นอยู่กับพื้นฐานการใช้เทคโนโลยีที่แตกต่างกัน ดังนั้น earom (electrical
+alterable rom) จะอยู่บนพื้นฐานของเทคโนโลยีแบบ nmos ข้อมูลจะถูกโปรแกรมโดยผู้ใช้เหมือนใน
+eprom แต่สิ่งที่แตกต่างก็คือ ข้อมูลของ earom สามารถลบได้โดยทางไฟฟ้าไม่ใช่โดยการฉายแสงแบบ
+eprom</font></font></font></ul>
+</ul>
+<font face="ms sans serif"><font size=-1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+โดย<wbr>ทั่ว<wbr>ไป<wbr>จะ<wbr>ใช้ eprom เพราะ<wbr>เรา<wbr>สามารถ<wbr>หา<wbr>มา<wbr>ใช้
+และ<wbr>ทด<wbr>ลอง<wbr>ได้<wbr>ง่าย มี<wbr>ราคา<wbr>ถูก วง<wbr>จร<wbr>ต่อ<wbr>ง่า<wbr>ย
+ไม่<wbr>ยุ่ง<wbr>ยาก และ<wbr>สามารถ<wbr>เปลี่ยน<wbr>แปลง<wbr>โปรแกรม<wbr>ได้
+นอก<wbr>จาก<wbr>ระบบ ที่<wbr>ทำ<wbr>เป็น<wbr>การ<wbr>ค้า<wbr>จำนวน<wbr>มาก
+จึง<wbr>จะ<wbr>ใช้ rom ประเภท<wbr>โปรแกรม<wbr>สำเร็จ</font></font><wbr><wbr><font face="ms sans serif"></font>
+<center>
+<p><img src="rom7.gif" height=224 width=249></center>
+<p><font face="ms sans serif"><font size=-1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+จาก<wbr>รูป<wbr>แสดง<wbr>ให้<wbr>เห็น<wbr>ส่วน<wbr>ประกอบ<wbr>พื้น<wbr>ฐาน<wbr>ของ
+rom ซึ่ง<wbr>จะ<wbr>มี<wbr>สัญญาณ<wbr>ต่างๆ ที่<wbr>เกี่ยว<wbr>ข้องกั<wbr>บ
+rom และ<wbr>ทุก<wbr>ชิปที่<wbr>อยู่<wbr>ใน rom มัก<wbr>มี<wbr>การ<wbr>จัด<wbr>แบ่ง<wbr>แยก<wbr>หน้า<wbr>ที่<wbr>เสมอ
+เช่น ขา<wbr>แอดเดรส<wbr>ของ rom เป็นอินพุต ส่วน<wbr>ขา<wbr>ข้อ<wbr>มูล<wbr>จะ<wbr>เป็น<wbr>เอาต์พุต
+โดย<wbr>หลัก<wbr>การ<wbr>แล้ว ขา<wbr>ข้อ<wbr>มูล<wbr>จะ<wbr>ต่อ<wbr>เข้ากับบัสข้อ<wbr>มูล<wbr>ซึ่ง<wbr>เป็นบั<wbr>ส
+2 ทาง ดัง<wbr>นั้น<wbr>เอาต์พุตของ rom ใน<wbr>ส่วน<wbr>ขา<wbr>ข้อ<wbr>มูล<wbr>นี้<wbr>มัก<wbr>จะ<wbr>เป็นลอจิก
+3 สถานะ ซึ่ง<wbr>ถ้า<wbr>ไม่<wbr>ใช้<wbr>ก็<wbr>จะ<wbr>อยู่<wbr>ใน<wbr>สถานะ
+ที่<wbr>มีอิมพี<wbr>แดนซ์สูง (high impedence)</font></font>
+<br><font face="ms sans serif"><font size=-1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ลักษณะ<wbr>โครง<wbr>สร้าง<wbr>ภาย<wbr>ใน<wbr>ของ<wbr>ข้อ<wbr>มูล<wbr>ใน<wbr>หน่วย<wbr>ความ<wbr>จำ
+สามารถ<wbr>ดู<wbr>ได้<wbr>จาก data sheet ของ rom นั้นๆ เช่น rom ที่<wbr>ระบุ<wbr>เป็น
+1024 8 ,2048 8 หรือ 4096 8 ตัว<wbr>เลข<wbr>ชุด<wbr>แรก (1024 ,2048 หรือ
+4096) จะ<wbr>บอก<wbr>จำนวน<wbr>ตำแหน่ง ที่<wbr>ใช้<wbr>เก็บ<wbr>ข้อ<wbr>มูล<wbr>ภาย<wbr>ใน
+ส่วน<wbr>ตัว<wbr>เลข<wbr>ชุด<wbr>ที่<wbr>สอง (8) เป็น<wbr>ตัว<wbr>บอก<wbr>จำนวน<wbr>บิตของ<wbr>ข้อ<wbr>มูล<wbr>แบบ<wbr>ขนาน
+ที่<wbr>อ่าน<wbr>จาก rom</font></font>
+<br><font face="ms sans serif"><font size=-1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ใน<wbr>การ<wbr>กำหนด<wbr>จำนวน<wbr>เส้น<wbr>ของบัสแอดเดรส<wbr>ที่<wbr>ใช้กับ
+rom เรา<wbr>สามารถ<wbr>รู้<wbr>ได้<wbr>ด้วย<wbr>สูตร</font></font><wbr><wbr>
+<br><font face="ms sans serif"></font>&nbsp;
+<center><table border bgcolor="#00ff00" >
+<tr>
+<td><font face="ms sans serif"><font color="#000000"><font size=-1>2<sup>x
+</sup>=
+จำนวน<wbr>แอดเดรส<wbr>ที่<wbr>อ้าง<wbr>ถึง</font></font></font><wbr><wbr></td>
+</tr>
+</table></center>
+<font face="ms sans serif"><font size=-1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+เช่น 2<sup>x</sup> = 4096 จะ<wbr>ได้ x = 12 ซึ่ง<wbr>ก็<wbr>คือ จำนวน<wbr>เส้นบัสแอดเดรส<wbr>นั่น<wbr>เอง</font></font><wbr><wbr><font face="ms sans serif"></font>
+<p><b><font face="ms sans serif"><font size=-1>ขั้น<wbr>ตอน<wbr>การ<wbr>อ่าน<wbr>ข้อ<wbr>มูล<wbr>จาก
+rom</font></font></b>
+<br><font face="ms sans serif"><font size=-1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1. cpu จะ<wbr>ส่ง<wbr>แอดเดรส<wbr>ไป<wbr>ให้ rom แอดเดรส<wbr>ดัง<wbr>กล่าว<wbr>จะปราก<wbr>ฏ
+เป็น<wbr>แอดเดรส<wbr>ที่<wbr>ต้อง<wbr>การ<wbr>อ่าน ใน rom โดย<wbr>ข้อ<wbr>มูล<wbr>จะ<wbr>ถูก<wbr>อ่าน<wbr>ออก<wbr>มา<wbr>เพียง<wbr>ครั้ง<wbr>ละ
+1 ไบต์เท่า<wbr>นั้น</font></font><wbr><wbr>
+<br><font face="ms sans serif"><font size=-1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+2. cpu จะ<wbr>ต้อง<wbr>ให้<wbr>ช่วง<wbr>เวลา<wbr>ของ<wbr>การ<wbr>ส่ง<wbr>แอดเดรส<wbr>ยาว<wbr>นาน<wbr>พอ<wbr>ประมาณ
+(wait state) เรียก<wbr>ว่า access time โดย<wbr>ปกติ<wbr>ต้อง<wbr>ประมาณ
+100-300 นา<wbr>โน<wbr>วินาที ขึ้นกับชนิด<wbr>ของ rom ซึ่ง rom จะ<wbr>ใช้<wbr>เวลา<wbr>นั้น<wbr>ใน<wbr>การ<wbr>ถอด<wbr>รหัส<wbr>แอดเดรส
+ของ<wbr>ข้อ<wbr>มูล<wbr>ที่<wbr>ต้อง<wbr>การ<wbr>จะ<wbr>อ่าน<wbr>ออก<wbr>มา<wbr>ที่<wbr>เอาท์พุทของ
+rom ซึ่ง<wbr>ถ้า<wbr>ใช้<wbr>เวลา<wbr>เร็ว<wbr>กว่า<wbr>นั้น rom จะ<wbr>ตอบ<wbr>สนอง<wbr>ไม่<wbr>ทัน</font></font><wbr><wbr>
+<br><font face="ms sans serif"><font size=-1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+3. cpu จะ<wbr>ส่ง<wbr>สัญญาณ<wbr>ไป<wbr>ทำ<wbr>การ<wbr>เลือก rom เรียก<wbr>ว่า
+สัญญาณ /cs (chip select) เพื่อ<wbr>บอก<wbr>ว่า<wbr>ต้อง<wbr>การ<wbr>เลือก
+rom ซึ่ง<wbr>เป็น<wbr>การ<wbr>ส่ง<wbr>สัญญาณ<wbr>เพื่อ<wbr>ยืน<wbr>ยัน<wbr>การ<wbr>เลือก<wbr>ชิปนั่น<wbr>เอง</font></font><wbr><wbr>
+<br><font face="ms sans serif"><font size=-1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+4. ข้อ<wbr>มูล<wbr>จะ<wbr>ผ่าน<wbr>ออก<wbr>ทางขา<wbr>ข้อ<wbr>มูล<wbr>ชั่ว<wbr>ขณะ<wbr>จังหวะ<wbr>การ<wbr>เลือก<wbr>ชิ<wbr>ป
+และ<wbr>เมื่อ<wbr>ขา<wbr>การ<wbr>เลือก<wbr>ชิปไม่<wbr>แอคตีฟ ข้อ<wbr>มูล<wbr>ก็<wbr>จะ<wbr>เข้า<wbr>สู่<wbr>ภาวะ<wbr>ที่<wbr>มีอิมพี<wbr>แดนซ์สูง</font></font><wbr><wbr>
+<br><font face="ms sans serif"><font size=-1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ลักษณะ<wbr>ดัง<wbr>กล่าว สามารถ<wbr>เขียน<wbr>เป็น<wbr>แผน<wbr>ผัง<wbr>เวลา<wbr>ออก<wbr>มา<wbr>ได้
+ดัง<wbr>แสดง<wbr>ใน<wbr>รูป</font></font><wbr><wbr>
+
+<center>
+<p><img src="rom8.jpg" height=373 width=426></center>
+
+<p><b><font face="ms sans serif"><font size=-1>การ<wbr>ต่อกับบัสของ z-80</font></font></b>
+<br><font face="ms sans serif"><font size=-1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ใน<wbr>การ<wbr>ต่อกับบัสของ z-80 นั้น สามารถ<wbr>เชื่อม<wbr>โยง<wbr>กัน<wbr>โดย<wbr>ตรง<wbr>ได้
+เพราะ z-80 แยกบัสข้อ<wbr>มูล และบัสแอดเดรส<wbr>ออก<wbr>จาก<wbr>กัน ดัง<wbr>แสดง<wbr>ใน<wbr>รูป</font></font><wbr><wbr>
+
+<center>
+<p><img src="rom9.jpg" height=365 width=395></center>
+
+<p><font face="ms sans serif"><font size=-1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+จาก<wbr>รูป เป็น<wbr>การ<wbr>นำ<wbr>เอา rom เบอร์ 2716 มา<wbr>ต่อกับ z-80
+โดย<wbr>ใช้<wbr>แอดเดรส<wbr>จาก cpu ต่อกั<wbr>บ rom โดย<wbr>ตรง และบัสข้อ<wbr>มูล<wbr>ก็<wbr>ต่อ<wbr>ถึง<wbr>กัน<wbr>โดย<wbr>ตรง
+ใน<wbr>ที่<wbr>นี้<wbr>จะ<wbr>ยัง<wbr>ไม่<wbr>มี<wbr>การ<wbr>ถอด<wbr>รหัส<wbr>แอดเดรส
+สังเกต<wbr>ว่า<wbr>ใน<wbr>ขณะ<wbr>นี้<wbr>ยัง<wbr>ไม่<wbr>มี การ<wbr>ต่อ<wbr>สาย<wbr>สัญญาณ
+/ce ซึ่ง<wbr>ปกติ<wbr>ต้อง<wbr>มา<wbr>จาก cpu แต่<wbr>จะ<wbr>กล่าว<wbr>ถึง<wbr>เฉพาะ<wbr>วิธี<wbr>การ<wbr>ถอด<wbr>รหัส<wbr>เพื่อ<wbr>ต่อกั<wbr>บ
+สัญญาณ /ce นี้<wbr>เท่า<wbr>นั้น</font></font><wbr><wbr><font face="ms sans serif"></font>
+<p><b><font face="ms sans serif"><font size=-1>การ<wbr>กำหนด<wbr>แอดเดรส</font></font></b><wbr><wbr>
+<br><font face="ms sans serif"><font size=-1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ปกติ z-80 จะ<wbr>มี<wbr>สัญญาณ<wbr>แอดเดรส<wbr>จำนวน 16 สาย โดย<wbr>ใช้<wbr>ชื่อ<wbr>สัญญาณ<wbr>เป็น<wbr>แอดเดรส
+a<sub>0</sub>-a<sub>15</sub> ซึ่ง<wbr>หมาย<wbr>ถึง การ<wbr>อ้าง<wbr>แอดเดรส<wbr>ได้
+216 หรือ 65536 ตำแหน่ง แต่ rom เบอร์ 2716 มี<wbr>แอดเดรส<wbr>เพียง 11 สาย
+นั่น<wbr>หมาย<wbr>ถึง ความ<wbr>จุ<wbr>ของ<wbr>หน่วย<wbr>ความ<wbr>จำ มี<wbr>เพียง
+2 กิโลไบต<wbr>์ หรือ 2048 ตำแหน่ง<wbr>เท่า<wbr>นั้น ดัง<wbr>นั้น<wbr>การ<wbr>ต่อ
+2 กิโลไบต์ ลง<wbr>ใน 64 กิโลไบต์จะ<wbr>ต้อง<wbr>กำหนด<wbr>ว่า 2 กิโลไบต์ที่<wbr>ต่อ<wbr>นี้
+อยู่ ณ ที่<wbr>ใด<wbr>ใน<wbr>ส่วน<wbr>ของ<wbr>พื้น<wbr>ที่<wbr>ทั้ง<wbr>หมด
+64 กิโลไบต์ของ z-80 ซึ่ง<wbr>ถ้า<wbr>จะ<wbr>ต่อ<wbr>ให้<wbr>ครบ<wbr>ทั้ง
+64 กิโลไบต์ ต้อง<wbr>ใช้ rom ถึง 32 ตัว</font></font><wbr><wbr>
+<br><font face="ms sans serif"><font size=-1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ใน<wbr>การ<wbr>ต่อ rom นั้น เรา<wbr>มัก<wbr>ให้ rom เริ่ม<wbr>ที่<wbr>แอดเดรส
+0000h ทั้ง<wbr>นี้<wbr>เพราะ<wbr>เมื่อ<wbr>เริ่ม<wbr>ทำ<wbr>การ<wbr>รี<wbr>เซต
+z-80จะ<wbr>เริ่ม<wbr>ทำ<wbr>งาน<wbr>ที่<wbr>แอดเดรส<wbr>นี้ ดัง<wbr>นั้น<wbr>เมื่อ<wbr>เปิดเครื่องจะ<wbr>ทำ<wbr>ให้
+z-80 มี<wbr>โปรแกรม<wbr>และ<wbr>พร้อม<wbr>ที่<wbr>จะ<wbr>รัน (run) จึง<wbr>ต้อง<wbr>นำ
+rom มา<wbr>ใส่<wbr>ที่<wbr>แอดเดรส<wbr>กลุ่ม<wbr>ล่าง<wbr>สุด<wbr>นี้ สำหรับ<wbr>การ<wbr>กำหนด<wbr>พื้น<wbr>ที่<wbr>ของ<wbr>หน่วย<wbr>ความ<wbr>จำ<wbr>เพื่อ<wbr>การ<wbr>ใช้<wbr>งาน<wbr>นั้น
+สามารถ<wbr>แสดง<wbr>ได้<wbr>ดัง<wbr>รูป</font></font><wbr><wbr>
+<center>
+<p><img src="rom10.jpg" height=289 width=173></center>
+
+<p><font face="ms sans serif"><font size=-1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+จาก<wbr>รูป เป็น<wbr>การ<wbr>กำหนด<wbr>พื้น<wbr>ที่<wbr>ของ<wbr>หน่วย<wbr>ความ<wbr>จำ
+ram และ rom เพื่อ<wbr>การ<wbr>ใช้<wbr>งาน โดย<wbr>สมมติ<wbr>ให้ rom ที่<wbr>จะ<wbr>ต่อ<wbr>นี้<wbr>มี<wbr>ทั้ง<wbr>สิ้น
+4 ตัว คือ roma, romb, romc และ romd โดย<wbr>ใน<wbr>ขั้น<wbr>แรก<wbr>จะ<wbr>ต่อ<wbr>เฉพาะ
+roma และ romb ส่วน ram ที่<wbr>ใช้<wbr>จะ<wbr>ต่อ<wbr>เป็น rama และ ramb</font></font><font face="ms sans serif"></font>
+<p><b><font face="ms sans serif"><font size=-1>การ<wbr>เลือก<wbr>ชิปของ
+rom</font></font></b>
+<br><font face="ms sans serif"><font size=-1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+เมื่อ<wbr>ต่อ rom เข้า<wbr>สู่<wbr>ระบบ เรา<wbr>จะ<wbr>ต้อง<wbr>หา<wbr>วิธี<wbr>ใน<wbr>การ<wbr>เลือก<wbr>ชิปของ
+rom ให้<wbr>ถูก<wbr>ต้อง<wbr>ตาม<wbr>แอดเดรส<wbr>ที่<wbr>เรา<wbr>กำหนด
+ไว้ เช่น roma เรา<wbr>กำหนด<wbr>แอดเดรส<wbr>ไว้<wbr>ที่<wbr>แอดเดรส 0000h
+- 07ffh ดัง<wbr>นั้น<wbr>เรา<wbr>จำ<wbr>เป็น<wbr>ต้อง<wbr>มี<wbr>ตัว<wbr>ถอด<wbr>รหัส<wbr>เพื่อ<wbr>เลือก
+แอดเดรส<wbr>ให้<wbr>ถูก<wbr>ต้อง การ<wbr>ถอด<wbr>รหัส<wbr>นี้<wbr>เรา<wbr>จะ<wbr>ใช้<wbr>แอดเดรส<wbr>ส่วน<wbr>บน<wbr>ที่<wbr>เหลือ<wbr>มา<wbr>ทำ<wbr>การ<wbr>ถอด<wbr>รหัส
+ใน<wbr>ที่<wbr>นี้<wbr>เรา<wbr>จะ<wbr>ใช้ 74ls138 และ<wbr>ทำ<wbr>การ<wbr>เลือก<wbr>โดย<wbr>ใช้
+a<sub>11</sub>, a<sub>12</sub>, a<sub>13</sub>, a<sub>14</sub> และ a<sub>15</sub>
+การ<wbr>ถอด<wbr>รหัส<wbr>ของ 74ls138 นี้<wbr>เป็น<wbr>การ<wbr>เลือก<wbr>จาก
+3 บิตไป<wbr>เป็น 8 บิตโดย<wbr>ใช้อินพุต a, b, c วง<wbr>จร<wbr>การ<wbr>ถอด<wbr>รหัส<wbr>นี้<wbr>แสดง<wbr>ได้<wbr>ดัง<wbr>รูป</font></font><wbr><wbr>
+<center>
+<p><img src="rom11.jpg" height=253 width=260></center>
+
+<p><font face="ms sans serif"><font size=-1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ด้วย<wbr>วิธี<wbr>นี้<wbr>จะ<wbr>เห็น<wbr>ว่า ถ้า<wbr>เรา<wbr>เลือก<wbr>แอดเดรส<wbr>จาก
+a<sub>10</sub> - a<sub>15</sub> จะ<wbr>มี<wbr>สัญญาณ<wbr>จาก a<sub>0</sub>
+- a<sub>10</sub> ส่ง<wbr>ไป<wbr>ยัง<wbr>แอดเดรส<wbr>ของ rom โดย<wbr>ตรง
+ส่วน a11 - a 15 จะ<wbr>ผ่าน<wbr>การ<wbr>ถอด<wbr>รหัส<wbr>ก่อน แล้ว<wbr>จึง<wbr>ไป<wbr>ทำ<wbr>การ<wbr>เลือก<wbr>ชิปใน
+rom ตาม<wbr>ที่<wbr>เรา<wbr>ต้อง<wbr>การ เพื่อ<wbr>ให้<wbr>เห็น<wbr>ขั้น<wbr>ตอน<wbr>การ<wbr>ถอด<wbr>รหัส<wbr>ชัด<wbr>เจน<wbr>ขึ้น
+เรา<wbr>ควร<wbr>พิจารณา<wbr>ขั้น<wbr>ตอน<wbr>การ<wbr>ทำ<wbr>งาน<wbr>ของ
+74ls138 โดย<wbr>เขียน<wbr>ออก<wbr>มา<wbr>เป็น<wbr>ตา<wbr>ราง<wbr>แอดเดรส
+ดัง<wbr>แสดง<wbr>ใน<wbr>ตา<wbr>ราง</font></font><wbr><wbr>
+<center>
+<p><img src="tabler1.jpg" height=257 width=383></center>
+
+<p><font face="ms sans serif"><font size=-1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+จาก<wbr>ตา<wbr>ราง<wbr>นี้ เรา<wbr>จะ<wbr>เน้น<wbr>เฉพาะ<wbr>ส่วน<wbr>ของ<wbr>แอดเดรส
+a<sub>11</sub> - a<sub>15</sub> ซึ่ง<wbr>จะ<wbr>ส่ง<wbr>ค่า<wbr>รวม<wbr>ของ<wbr>แอดเดรส<wbr>เพื่อ<wbr>ออก<wbr>ไป<wbr>ยัง<wbr>ขา<wbr>เอาต์พุตขา<wbr>ที่
+10-15 เช่น ถ้า<wbr>แอดเดรส a<sub>11</sub> - a<sub>15</sub> เป็นลอจิก ‘
+0 ‘ หมด ขา<wbr>ที่ 15 ซึ่ง<wbr>เป็น<wbr>เอาต์พุตจะ<wbr>แอคตี<wbr>ฟ เพิ่อทำ<wbr>การ<wbr>เลือก<wbr>ชิป
+และ<wbr>จาก<wbr>ตา<wbr>ราง<wbr>จะ<wbr>พบ<wbr>ว่า ใน<wbr>ช่วง<wbr>ระหว่าง<wbr>แอดเดรส
+0000h-07ffh ขา<wbr>ที่ 15 ของ 74ls138 จะ<wbr>แอคตีฟ ดัง<wbr>นั้น 74ls138
+จึง<wbr>เป็น<wbr>วง<wbr>จร<wbr>ถอด<wbr>รหัส<wbr>ที่<wbr>ใช้<wbr>ใน<wbr>การ<wbr>เลือก<wbr>ชิ<wbr>ป
+rom ได้<wbr>อย่าง<wbr>ถูก<wbr>ต้อง</font></font><wbr><wbr><font face="ms sans serif"></font>
+<p><b><font face="ms sans serif"><font size=-1>สัญญาณ<wbr>การ<wbr>อ่าน<wbr>ข้อ<wbr>มูล</font></font></b><wbr><wbr>
+<br><font face="ms sans serif"><font size=-1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+สำหรับ<wbr>การ<wbr>อ่าน<wbr>ข้อ<wbr>มูล<wbr>จาก<wbr>หน่วย<wbr>ความ<wbr>จำ<wbr>นั้น
+z-80 จะ<wbr>ต้อง<wbr>ใช้<wbr>สัญญาณ<wbr>ที<wbr>เกี่ยว<wbr>ข้อง<wbr>หลาย<wbr>สัญญาณ
+เช่น สัญญาณ /mreq กับสัญญาณ /rd สัญญาณ<wbr>ทั้ง<wbr>สอง<wbr>จะ<wbr>ต้อง<wbr>เกิด<wbr>ขึ้น<wbr>พร้อม<wbr>กัน
+ดัง<wbr>นั้น<wbr>เมื่อ<wbr>เป็น<wbr>เช่น<wbr>นี้ จึง<wbr>ต้อง<wbr>เอา<wbr>สัญญาณ<wbr>ทั้ง<wbr>สอง<wbr>นี้<wbr>ออร์
+(or) กัน<wbr>เพื่อ<wbr>ให้<wbr>ได้<wbr>สัญญาณ /memr การ<wbr>กำหนด<wbr>จังหวะ<wbr>การ<wbr>อ่าน<wbr>หน่วย<wbr>ความ<wbr>จำ
+แสดง<wbr>ได้<wbr>ดัง<wbr>รูป</font></font><wbr><wbr>
+<center>
+<p><img src="rom12.jpg" height=230 width=330></center>
+
+<p><b><font face="ms sans serif"><font size=-1>การ<wbr>ต่อ z-80 กับสัญญาณ
+/cs ของ rom</font></font></b>
+<br><font face="ms sans serif"><font size=-1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+การ<wbr>เลือก rom ใน<wbr>จังหวะ<wbr>การ<wbr>อ่าน<wbr>นี้ ซี<wbr>พียูต้อง<wbr>กำหนด<wbr>ได้<wbr>ว่า<wbr>จะ<wbr>เลือก<wbr>แอดเดรส<wbr>กลุ่ม<wbr>ใด
+และ<wbr>จังหวะ<wbr>การ<wbr>เลือก<wbr>นั้น<wbr>จะ<wbr>ต้อง<wbr>ตรงกับการ<wbr>อ่าน<wbr>พอ<wbr>ดี
+ดัง<wbr>นั้น<wbr>จึง<wbr>ต้อง<wbr>นำ<wbr>เอา<wbr>สัญญาณ /memr และ<wbr>สัญญาณ<wbr>เลือก
+roma มา<wbr>ทำ<wbr>การ or กัน<wbr>อีก<wbr>ครั้ง เพื่อ<wbr>จะ<wbr>เลือก
+rom ได้<wbr>อย่าง<wbr>ถูก<wbr>ต้อง วง<wbr>จร<wbr>ที่<wbr>ต่อ rom แบบ<wbr>สมบูรณ์<wbr>ใน<wbr>กรณี<wbr>นี้<wbr>แสดง<wbr>ได้<wbr>ดัง<wbr>รูป</font></font><wbr><wbr>
+<center>
+<p><img src="rom13.jpg" height=513 width=381></center>
+
+<p><font face="ms sans serif"><font size=-1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+จาก<wbr>รูป<wbr>จะ<wbr>เห็น<wbr>ว่า สัญญาณ<wbr>จาก<wbr>ซี<wbr>พียูที่<wbr>เข้า<wbr>ไป<wbr>ทำ<wbr>การ<wbr>ควบ<wbr>คุม
+rom จะ<wbr>ประกอบ<wbr>ด้วย<wbr>สัญญาณ จาก<wbr>หลาย<wbr>ส่วน<wbr>ซึ่ง<wbr>ได้<wbr>แก่
+สัญญาณ<wbr>แอดเดรส a<sub>0</sub>-a<sub>15</sub> โดย<wbr>สัญญาณ a<sub>11</sub>-a<sub>15</sub>
+จะ<wbr>สร้าง<wbr>สัญญาณ<wbr>ใหม่<wbr>เป็น สัญญาณ roma เพื่อ<wbr>เลือก rom
+จาก<wbr>นั้น<wbr>จะ<wbr>ใช้<wbr>สัญญาณ /mreq กับสัญญาณ /rd สร้าง<wbr>สัญญาณ
+/memr และ<wbr>สร้าง<wbr>เป็น<wbr>สัญญาณ /ce ต่อ<wbr>ไป โดย<wbr>ประกอบ<wbr>กัน<wbr>เป็น<wbr>ขั้น<wbr>ตอน<wbr>ดัง<wbr>แสดง<wbr>ใน<wbr>รูป</font></font><wbr><wbr>
+<center>
+<p><img src="rom14.jpg" height=263 width=272></center>
+
+<p><b><font face="ms sans serif"><font size=-1>การ<wbr>ต่อ z-80 กับ rom
+อีก<wbr>วิธี<wbr>หนึ่ง</font></font></b><wbr><wbr>
+<br><font face="ms sans serif"><font size=-1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+สังเกต<wbr>ว่า rom เบอร์ 2716 มี<wbr>ขา /ce และ /oe ซึ่ง<wbr>อาจ<wbr>จะ<wbr>นำ<wbr>ขา<wbr>สัญญาณ<wbr>เลือก<wbr>เอาต์พุตนี้
+มา<wbr>ใช้<wbr>ประ<wbr>โยชน์<wbr>ได้ การ<wbr>เลือก rom เบอร์ 2716 นี้<wbr>จะ<wbr>ใช้
+/ce และ /oe ใน<wbr>การ<wbr>เลือก โดย<wbr>ขา<wbr>ทั้ง<wbr>สอง จะ<wbr>เป็นลอจิก“<wbr>0”
+ใน<wbr>การ<wbr>เลือก<wbr>ชิป และ<wbr>เลือก<wbr>เอาต์พุตโดย<wbr>ทำ<wbr>การ<wbr>เปิด<wbr>เกตลอจิก
+3 สถานะ<wbr>นั่น<wbr>เอง เมื่อ<wbr>เป็น<wbr>เช่น<wbr>นี้ เรา<wbr>สามารถ<wbr>ลด<wbr>จำนวน<wbr>เกตแบบ<wbr>ออร์
+(or gate) ลง<wbr>ไป 1 ตัว<wbr>ได้ โดย<wbr>แทน<wbr>ที่<wbr>จะ<wbr>ใช้<wbr>สัญญาณ
+/memr และ<wbr>สัญญาณ roma มา or กัน เรา<wbr>ก็<wbr>เชื่อม<wbr>ต่อ<wbr>โดย<wbr>การ<wbr>ใช้<wbr>สัญญาณ
+/memr ต่อกับสัญญาณ /oe และ<wbr>สัญญาณ roma ต่อกับสัญญาณ /ce ดัง<wbr>แสดง<wbr>ใน<wbr>รูป</font></font><wbr><wbr>
+<center>
+<p><img src="rom15.jpg" height=157 width=137></center>
+
+<p><b><font face="ms sans serif"><font size=-1>การ<wbr>ต่อ rom หลายๆชิบ</font></font></b><wbr>
+<br><font face="ms sans serif"><font size=-1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+หาก<wbr>ต้อง<wbr>การ<wbr>จะ<wbr>ต่อ rom หลายๆชิป เช่น roma,romb,romc และ
+romd ก็<wbr>สามารถ<wbr>ต่อ<wbr>เพิ่ม<wbr>ได้ โดย<wbr>ใช้<wbr>สัญญาณ<wbr>เลือก<wbr>จาก
+74ls138 และ /memr มา<wbr>เลือก<wbr>โดย<wbr>ผ่าน<wbr>ทาง /ce และ /oe ได้
+ดัง<wbr>แสดง<wbr>ใน<wbr>รูป</font></font><wbr><wbr>
+<center>
+<p><img src="rom16.jpg" height=201 width=412></center>
+
+<p><b><font face="ms sans serif"><font size=-1>การ<wbr>ใช้ rom ใน<wbr>ชิปที่<wbr>มี<wbr>ความ<wbr>จุ<wbr>เพิ่ม<wbr>ขึ้น</font></font></b><wbr><wbr>
+<br><font face="ms sans serif"><font size=-1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+rom ที่<wbr>ใช้<wbr>ใน<wbr>ปัจจุบัน<wbr>มี<wbr>ความ<wbr>จุ<wbr>สูง<wbr>ขึ้น<wbr>มาก
+eprom บาง<wbr>ตัว<wbr>มี<wbr>ความ<wbr>จุ<wbr>ถึง 32 กิโลไบต<wbr>์ เช่น
+eprom ที่ใข้กัน<wbr>มาก<wbr>ใน<wbr>ขณะ<wbr>นี้ ได้<wbr>แก่ เบอร์ 2764 (มี<wbr>ความ<wbr>จุ
+8 กิโลไบต์) เบอร์ 27128 (มี<wbr>ความ<wbr>จุ 16 กิโลไบต์) ดัง<wbr>นั้น<wbr>หาก<wbr>ต้อง<wbr>การ<wbr>ใช้
+rom ใน<wbr>ชิปที่<wbr>มี<wbr>ความ<wbr>จุ<wbr>เพิ่ม<wbr>ขึ้น<wbr>ก็<wbr>ทำ<wbr>ได้
+โดย<wbr>ใช้<wbr>หลัก<wbr>การ<wbr>เช่น<wbr>เดียว<wbr>กัน ใน<wbr>ที่<wbr>นี้<wbr>ขอ<wbr>ให้<wbr>ดู<wbr>การ<wbr>จัด<wbr>ขา<wbr>ของ
+eprom เบอร์ 2732 เมื่อ<wbr>เปรียบ<wbr>เทียบกับเบอร์ 2764 ซึ่ง<wbr>สามารถ<wbr>แสดง<wbr>ได้<wbr>ดัง<wbr>รูป</font></font><wbr><wbr>
+<center>
+<p><img src="rom17.jpg" height=148 width=284></center>
+
+<p><font face="ms sans serif"><font size=-1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+eprom เบอร์ 2732 มี<wbr>จำนวน<wbr>ขา<wbr>เท่ากับเบอร์ 2764 ดัง<wbr>นั้น<wbr>การ<wbr>เพิ่ม<wbr>ความ<wbr>จุ<wbr>จะ<wbr>กระ<wbr>ทำ<wbr>ได้<wbr>โดย<wbr>ง่า<wbr>ย
+และ<wbr>สามารถ<wbr>ใช้ซ็อก<wbr>เกต (socket) เดิมได้<wbr>ทัน<wbr>ที หรือ<wbr>เพียง<wbr>แต่<wbr>แก้<wbr>ขา<wbr>แอดเดรส<wbr>เพียง<wbr>เส้น<wbr>เดียว
+สังเกต<wbr>ว่า<wbr>ขา<wbr>ที่<wbr>แตก<wbr>ต่าง<wbr>กัน<wbr>ใน<wbr>ที่<wbr>นี้<wbr>คือ
+eprom เบอร์ 2764 ได้<wbr>เพิ่ม<wbr>เติม<wbr>อีก 4 ขา โดย<wbr>เพิ่ม<wbr>ส่วน<wbr>บน<wbr>เป็น
+a<sub>12 </sub>และ<wbr>ขา pgm มา<wbr>อยู่<wbr>ที่<wbr>ขา 27 ส่วน<wbr>ขา
+26 ไม่<wbr>ใช้ ความ<wbr>แตก<wbr>ต่าง<wbr>นี้<wbr>เอง<wbr>ทำ<wbr>ให้<wbr>การ<wbr>เพิ่ม<wbr>เติม<wbr>ลาย<wbr>วง<wbr>จร<wbr>ทำ<wbr>ได้<wbr>ง่ายขึ้น
+โดย<wbr>การ<wbr>ต่อ<wbr>จาก<wbr>ขา 26 มา<wbr>ที่<wbr>ขา 28 เพื่อ<wbr>ต่อ<wbr>สาย
+vcc ดัง<wbr>แสดง<wbr>ใน<wbr>รูป</font></font><wbr><wbr>
+<center>
+<p><img src="rom18.jpg" height=210 width=213></center>
+
+<p><font face="ms sans serif"><font size=-1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+เมื่อ<wbr>จะ<wbr>ต่อกับ eprom เบอร์ 2732 เรา<wbr>สามารถ<wbr>ขยาย<wbr>ระบบ<wbr>โดย<wbr>ใช้<wbr>ขา<wbr>แอดเดรส<wbr>ของ
+eprom เบอร์ 2732 จาก<wbr>แอดเดรส a<sub>0</sub>- a<sub>11</sub>ดัง<wbr>นั้น<wbr>ส่วน<wbr>ที่<wbr>จะ<wbr>ขยาย<wbr>จาก<wbr>ซี<wbr>พีย<wbr>ู
+เรา<wbr>ใช้ 74ls42 โดย<wbr>นำ<wbr>แอดเดรส a<sub>12</sub>- a<sub>15</sub>
+มา<wbr>ถอด<wbr>รหัส<wbr>ดัง<wbr>แสดง<wbr>ใน<wbr>รูป</font></font><wbr><wbr>
+<center>
+<p><img src="rom19.jpg" height=194 width=434></center>
+<p>
+<hr width="100%">
+<i><font face="ms sans serif"><font size=-2>รวบรวมจาก บทเรียน online วิชา 204323 ไมโครโปรเซสเซอร์และการออกแบบไมโครคอมพิวเตอร์ รศ.ยืน ภู่วรวรรณ </font></font></i>
+
+</td>
+</tr>
+</table></center>
+
+</body>
+</html>

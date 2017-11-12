@@ -1,0 +1,213 @@
+﻿<!doctype html public "-//w3c//dtd xhtml 1.0 transitional//en" "http://www.w3.org/tr/xhtml1/dtd/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>kasetsart university webmail :: welcome to kasetsart university webmail</title>
+<meta name="robots" content="noindex,nofollow" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<style type="text/css">
+body {
+	background-color: #f8fcf2;
+}
+.sidebar {
+	width: 350px;
+	margin-top: 13px;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 1px;
+	padding-left: 95px;
+}
+a {
+	text-decoration: none;
+	color: #2d5305;
+	}
+a:hover {
+	text-decoration: underline;
+	}
+
+</style>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="plugins/jqueryui/themes/default/jquery-ui-1.10.4.custom.css?s=1436417938" />
+<script type="text/javascript" src="program/js/jquery-1.6.3.min.js?s=1436345146"></script>
+<script type="text/javascript" src="program/js/common.js?s=1307022171"></script>
+<script type="text/javascript" src="program/js/app.js?s=1307022168"></script>
+<script type="text/javascript">
+/* <![cdata[ */
+
+var rcmail = new rcube_webmail();
+rcmail.set_env({"task":"login","request_token":"cc10391efbac377f25e3a7ff91e87e10","keep_alive":60,"action":"","comm_path":".\/?_task=login"});
+rcmail.add_label("loading","loading...");
+rcmail.add_label("servererror","server error!");
+rcmail.add_label("compose_newwindow.compose_newwindow","compose in new window");
+rcmail.add_label("compose_newwindow.enabled","enable compose in new window");
+rcmail.add_label("compose_newwindow.hidebar","hide main toolbar in compose windows");
+rcmail.gui_object('message', 'message');
+rcmail.gui_object('loginform', 'form');
+/* ]]> */
+</script>
+<script type="text/javascript" src="plugins/jqueryui/js/jquery-ui-1.10.4.custom.min.js?s=1436417907"></script>
+<script type="text/javascript" src="plugins/jqueryui/js/i18n/jquery.ui.datepicker-en-gb.js?s=1308107481"></script>
+<script type="text/javascript" src="plugins/compose_newwindow/composenewwindow.js?s=1314044318"></script>
+<script type="text/javascript" src="plugins/compose_newwindow/closewindow.js?s=1314044318"></script>
+</head>
+<body>
+<div id="message"></div>
+<p>&nbsp;</p>
+<!--div align="center"><img src="skins/kasetsart/images/under-maintenance.jpg"></div-->
+<table align="center" width="959" border="0" cellpadding="0" cellspacing="0">
+  <tr valign="bottom">
+    <td width="904"></td>
+    <td width="55" align="center" style="vertical-align:baseline" background="skins/kasetsart/images/webmail_29.png">
+    <a href="https://webmail.ku.ac.th/roundcube/?_action=plugin.lang_sel&_lang_sel=th_th" target="_parent"><img src="skins/kasetsart/images/th.png" alt="thai" width="18" height="12" border="0"></a>
+    <a href="https://webmail.ku.ac.th/roundcube/?_action=plugin.lang_sel&_lang_sel=en_gb" target="_parent"><img src="skins/kasetsart/images/uk.png" alt="english" width="18" height="12" border="0"></a></td>
+  </tr>
+</table>
+<table id="table_01" align="center" width="959" height="353" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td colspan="4" background="skins/kasetsart/images/webmail_01.png" width="573" height="53"></td>
+		<td rowspan="5" background="skins/kasetsart/images/webmail_02.png" width="386" height="352"></td>
+	</tr>
+	<tr>
+		<td colspan="2" background="skins/kasetsart/images/webmail_03.png" width="224" height="43"></td>
+		<td colspan="2" background="skins/kasetsart/images/webmail_04.png" width="349" height="43"></td>
+	</tr>
+	<tr>
+		<td rowspan="2" background="skins/kasetsart/images/webmail_05.png" width="29" height="223"></td>
+		<td colspan="2" background="skins/kasetsart/images/webmail_06.png" width="479" height="8"></td>
+		<td rowspan="3" background="skins/kasetsart/images/webmail_07.png" width="65" height="256"></td>
+	</tr>
+	<tr>
+		<td colspan="2" bgcolor="#ffffff" width="479" height="215" valign="top">
+        <div id="login-form" style="font-size:small;">
+       <div class="sidebar">
+        <form name="form" action="./" method="post">
+<input type="hidden" name="_token" value="cc10391efbac377f25e3a7ff91e87e10" />
+        <input type="hidden" name="_task" value="login" /><input type="hidden" name="_action" value="login" /><input type="hidden" name="_timezone" id="rcmlogintz" value="_default_" /><input type="hidden" name="_url" id="rcmloginurl" value="" /><table summary="" border="0"><tbody><tr><td class="title"><label for="rcmloginuser">username</label>
+</td>
+<td><input name="_user" id="rcmloginuser" autocomplete="off" type="text" /></td>
+</tr>
+<tr><td class="title"><label for="rcmloginpwd">password</label>
+</td>
+<td><input name="_pass" id="rcmloginpwd" autocomplete="off" type="password" /></td>
+</tr>
+<tr><td class="title"><label for="rcmloginhost">server</label>
+</td>
+<td><select name="_host" id="rcmloginhost">
+<option value="nontri.ku.ac.th">nontri.ku.ac.th</option>
+<option value="alumni.ku.ac.th">alumni server</option>
+</select>
+</td>
+</tr>
+
+
+<tr><td class="title"><label for="rcmlangsel">language</label></td>
+<td><select onchange="document.location.href='./?_action=plugin.lang_sel&_lang_sel=' + this.value" name="_lang_sel">
+<option value="zh_cn">chinese (简体中文)</option>
+<option value="en_gb" selected="selected">english (gb)</option>
+<option value="en_us">english (us)</option>
+<option value="fr_fr">french (français)</option>
+<option value="ja_jp">japanese (日本語)</option>
+<option value="ko_kr">korean (한국어)</option>
+<option value="th_th">thai (ไทย)</option>
+</select>
+</td></tr>
+</tbody>
+</table>
+
+        <p style="text-align:center;">
+        <input type="submit" style="background-image:url(skins/kasetsart/images/login.png); width:70px; height:22px; border:0px" value="" /></p>
+        </form>
+        </div>
+        </div>
+        <div style="font-size:12px; font-family:tahoma, sans-serif; margin-top: 17px;" align="center">
+        <a href="https://webmail.ku.ac.th/manuals/kuwebmail.pdf" target="_blank">manual</a>
+        | <a href="https://accounts.ku.ac.th" target="_blank">change password</a>
+        | <a href="https://nontri.ku.ac.th/tools/" target="_blank">nontri server tools</a>
+        <!-- | <strong>old</strong> (<a href="https://webmail2.ku.ac.th/horde/imp/" target="_blank">horde</a> | <a href="https://webmail.ku.ac.th/squirrelmail/src/" target="_blank">squirrelmail</a>)</div>
+-->
+        | <strong>old</strong> (<a href="https://webmail.ku.ac.th/squirrelmail/src/" target="_blank">squirrelmail</a>)</div>
+      </td>
+	</tr>
+	<tr>
+		<td colspan="3" background="skins/kasetsart/images/webmail_09.png" width="508" height="33"></td>
+	</tr>
+	<tr>
+		<td background="skins/kasetsart/images/spacer.gif" width="29" height="1"></td>
+		<td background="skins/kasetsart/images/spacer.gif" width="195" height="1"></td>
+		<td background="skins/kasetsart/images/spacer.gif" width="284" height="1"></td>
+		<td background="skins/kasetsart/images/spacer.gif" width="65" height="1"></td>
+		<td background="skins/kasetsart/images/spacer.gif" width="386" height="1"></td>
+	</tr>
+</table>
+<div align="center" style="font-size:14px; color:#082702; font-family:'times new roman', times, serif; margin-top: 10px;">
+  <table width="895" border="0" cellpadding="0" cellspacing="0">
+<!--
+<tr  align="center">
+<td><div color:blue;>
+<font color="red" size="3">
+<b><u>เรียนผู้ใช้บริการ (7/3/2557)</u></b></font><br>
+<div align="left">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; จากข้อขัดข้องของระบบให้บริการจดหมายอิเล็กทรอนิกส์ เมื่อวันที่ 28 ธันวาคม 2556 ที่ผ่านมา สำนักบริการคอมพิวเตอร์ได้ตรวจสอบพบว่าเกิดจากสาเหตุของอุปกรณ์ฮาร์ดดิสก์ที่ใช้ในการเก็บข้อมูลจดหมายนั้นเกิดความเสียหาย สำนักฯ จึงได้ดำเนินการให้บริษัทกู้ข้อมูลโดยใช้ระยะเวลาดำเนินการกว่า 2 เดือน และพบว่าไม่สามารถกู้คืนข้อมูลดังกล่าวได้ สำนักบริการคอมพิวเตอร์ ขออภัยในข้อขัดข้องที่เกิดขึ้น ทางสำนักฯได้จัดทำแผนเพื่อป้องกันเหตุที่อาจเกิดขึ้นในอนาคต และได้ดำเนินการสำรองข้อมูลจดหมายให้ครบถ้วนทั้งหมด (ยกเว้นอาจมีข้อมูลสูญหายเฉพาะในวันที่เกิดเหตุ) 
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  สำนักฯ จะเปิดให้บริการ imap และ imaps ในวันทื่ 12 มีนาคม 2557 เวลา 9.00 น. ผลกระทบกับผู้ใช้งานทั้งเครื่องคอมพิวเตอร์และอุปกรณ์ smart phone คือ ข้อมูลจดหมายระหว่างช่วงเดือนสิงหาคม 2556 ถึง ธันวาคม 2556 จะสูญหาย
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ข้อแนะนำเพิ่มเติม เฉพาะในกรณีที่ท่านสำรองจดหมายไว้ที่เครื่องคอมพิวเตอร์ของท่านเอง ระหว่างช่วงเดือนสิงหาคม 2556 ถึง ธันวาคม 2556 ให้ปฏิบัติตามคู่มือสำรองข้อมูลจดหมายด้านล่าง (ผู้ใช้ smart phone จะไม่สามารถสำรองข้อมูลได้) 
+</div>
+</font>
+<div><b>
+<a href="https://webmail.ku.ac.th/manuals/manual_imap_backup_v3.pdf">outlook </a> | 
+<a href="https://webmail.ku.ac.th/manuals/manual_imap_thunderbird_backup_v3.pdf">mozilla thunderbird </a> | 
+<a href="https://webmail.ku.ac.th/manuals/manual_imap_android_backup_v3.pdf">android</a>
+</b>
+</div>
+<br>
+<div align="left">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ท่านสามารถติดต่อสอบถามข้อมูลเพิ่มเติมได้ที่ helpdesk สำนักบริการคอมพิวเตอร์ โทรศัพท์ 02-5620951-6 ต่อ 2541-3 หรืออีเมล help@ku.ac.th
+</div>
+</td>
+-->
+</tr>
+    <tr align="center" bgcolor="#ffffff">
+	<td>
+จดหมายที่อยู่ใน deleted items เกิน 30 วันจะถูกลบโดยอัตโนมัติ (messages that have been in deleted items more than 30 days will be automatically deleted)
+	</td>
+    </tr>
+    <tr align="center" bgcolor="#ffffff">
+	<td>
+<p>!!! ประกาศ นิสิตปีการศึกษา 2558 สามารถเข้าใช้งานระบบอีเมลได้ที่ <a href="http://mail.ku.th" target="_blank">http://mail.ku.th</a> <br>หมายเหตุ นิสิตปีการศึกษา 2558 ขึ้นไปจะไม่มีบัญชีอีเมลในรูปแบบ "@ku.ac.th" โดยจะมีบัญชีอีเมลในรูปแบบ "@ku.th" แทน (9 กรกฎาคม 2558)</p>
+	</td>
+    </tr>
+    <tr align="center" bgcolor="#ffffff">
+	<td><p>บัญชี google for education (@ku.th) เปิดให้ลงทะเบียนแล้วตั้งแต่วันนี้ (22 ธันวาคม 2557) <a href="https://accounts.ku.ac.th/kgg/" target="_blank">เข้าลงทะเบียนได้ที่นี่ (https://accounts.ku.ac.th/kgg/)</a><br>ต้องการศึกษารายละเอียดก่อน อ่านได้ที่เว็บ <a href="http://kgg.ku.th" target="_blank">kgg.ku.th</a></p>
+	</td>
+    </tr>
+    <tr align="center" bgcolor="#ffffff">
+	<td><a href="https://webmail.ku.ac.th/roundcube/mail_policy_ku_20120905.pdf" target="_blank">ข้อปฏิบัติในการใช้จดหมายอิเล็กทรอนิกส์ (e-mail) มหาวิทยาลัยเกษตรศาสตร์ </a>(5 กันยายน 2555)
+	</td>
+    </tr>
+    <tr align="center">
+      <td><a href="http://www.ku.ac.th/newdesign/newhot_detail.php?hotid=76" target="_blank"><img src="skins/kasetsart/images/warning.gif" alt="" width="590" height="140" border="0" /></a>
+        <p>&copy;2011 office of computer service - kasetsart university 50 ngam wong wan rd, chatuchak bangkok 10900<br />
+      tel. 02-5620951-6 ext. 622501 helpdesk ext. 622541 - 622543 fax. 02-5620950,5620957</p></td>
+    </tr>
+  </table>
+</div>
+
+
+
+
+
+
+<script type="text/javascript">
+/* <![cdata[ */
+
+$(document).ready(function(){ rcmail.init(); });
+$(document).ready(function(){
+            var images = ["skins\/kasetsart\/images\/icons\/folders.png","skins\/kasetsart\/images\/mail_footer.png","skins\/kasetsart\/images\/taskicons.gif","skins\/kasetsart\/images\/display\/loading.gif","skins\/kasetsart\/images\/pagenav.gif","skins\/kasetsart\/images\/mail_toolbar.png","skins\/kasetsart\/images\/searchfield.gif","skins\/kasetsart\/images\/messageicons.png","skins\/kasetsart\/images\/icons\/reset.gif","skins\/kasetsart\/images\/abook_toolbar.png","skins\/kasetsart\/images\/icons\/groupactions.png","skins\/kasetsart\/images\/watermark.gif"];
+            for (var i=0; i<images.length; i++) {
+                img = new image();
+                img.src = images[i];
+            }});
+/* ]]> */
+</script>
+</body>
+</html>

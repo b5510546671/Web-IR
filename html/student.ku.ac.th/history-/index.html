@@ -1,0 +1,1064 @@
+<script language="javascript">
+<!--
+function check()
+{
+      var v1 = document.login_form.username.value;
+      var v2 = document.login_form.password.value;
+
+        if (v1.length==0)
+           {
+           alert("กรุณาป้อน username ด้วยครับ");
+           document.login_form.username.focus();           
+           return false;
+           }
+        else if (v2.length==0)
+           {
+           alert("กรุณาป้อน password ด้วยครับ") ;
+           document.login_form.password.focus();           
+           return false;
+           }
+        else
+           return true;
+}
+
+function deldoc(std_id,file_id,doc_id,type_id){
+	if (confirm("คุณต้องการลบคำร้องนี้ ?")) {
+		var f_name="deldoc.php?std_id="+std_id+"&file_id="+file_id+"&doc_id="+doc_id+"&type_id="+type_id;
+		window.location=f_name;
+	}		
+}
+//-->
+</script>
+<script language="javascript">
+<!--
+writecookie();
+function writecookie() 
+{
+ var today = new date();
+ var the_date = new date("december 31, 2023");
+ var the_cookie_date = the_date.togmtstring();
+ var the_cookie = "users_resolution="+ screen.width +"x"+ screen.height;
+ var the_cookie = "users_resolutionx="+ screen.width;
+ var the_cookie = the_cookie + ";expires=" + the_cookie_date;
+ document.cookie=the_cookie	 
+}
+//-->
+</script>
+<script language="javascript" src="js/tooltip.js"></script>
+<script language="javascript" src="js/fade.js"></script>
+<script language="javascript" src="js/swipe.js"></script>
+<!-- yui -->
+
+    <link rel="stylesheet" type="text/css" href="yui_2.5.2/build/fonts/fonts-min.css" />
+    <link rel="stylesheet" type="text/css" href="yui_2.5.2/build/container/assets/skins/sam/container.css" />
+    <link rel="stylesheet" type="text/css" href="yui_2.5.2/build/resize/assets/skins/sam/resize.css" />
+	<link rel="stylesheet" type="text/css" href="yui_2.5.2/build/tabview/assets/skins/sam/tabview.css" />
+
+
+    <script type="text/javascript" src="yui_2.5.2/build/utilities/utilities.js"></script>
+    <script type="text/javascript" src="yui_2.5.2/build/container/container.js"></script>
+    <script type="text/javascript" src="yui_2.5.2/build/resize/resize-beta.js"></script>
+	<script type="text/javascript" src="yui_2.5.2/build/tabview/tabview-min.js"></script>
+
+
+
+    <style type="text/css">
+    #examplecontainer {
+        padding:10px;
+    }
+
+    #resizablepanel .bd {
+        overflow:auto;
+        height: 300px;
+        background-color:#fff;
+        padding:10px;
+    }
+
+    #resizablepanel .ft {
+        height:15px;
+        padding:0;
+    }
+
+    #resizablepanel .yui-resize-handle-br {
+        right:0;
+        bottom:0;
+        height: 8px;
+        width: 8px;
+        position:absolute;
+    }
+
+    /*  
+        the following css is added to prevent scrollbar bleedthrough on
+        gecko browsers (e.g. firefox) on macos.
+    */
+
+    /*
+        please note: it is necessary to toggle the "overflow" property 
+        of the body element between "hidden" and "auto" in order to 
+        prevent the scrollbars from remaining visible after the the 
+        resizable panel is hidden.  for more information on this issue, 
+        read the comments in the "container-core.css" file.
+       
+        we use the #reziablepanel_c id based specifier, so that the rule
+        is specific enough to over-ride the .bd overflow rule above.
+    */
+
+    #resizablepanel_c.hide-scrollbars .yui-resize .bd {
+        overflow: hidden;
+    }
+
+    #resizablepanel_c.show-scrollbars .yui-resize .bd {
+        overflow: auto;
+    }
+
+    /*
+        please note: it is necessary to set the "overflow" property of
+        the underlay element to "visible" in order for the 
+        scrollbars on the body of a resizable panel instance to be 
+        visible.  by default the "overflow" property of the underlay 
+        element is set to "auto" when a panel is made visible on
+        gecko for mac os x to prevent scrollbars from poking through
+        it on that browser + platform combintation.  for more 
+        information on this issue, read the comments in the 
+        "container-core.css" file.
+    */
+
+    #resizablepanel_c.show-scrollbars .underlay {
+        overflow: visible;
+    }
+    </style>
+
+    <script type="text/javascript">
+    yahoo.util.event.ondomready(
+
+        function() {
+
+            // setup constants
+
+            // quirks flag, for box model
+            var ie_quirks = (yahoo.env.ua.ie && document.compatmode == "backcompat");
+
+            // underlay/iframe sync required
+            var ie_sync = (yahoo.env.ua.ie == 6 || (yahoo.env.ua.ie == 7 && ie_quirks));
+
+            // padding used for body element (hardcoded for example)
+            var panel_body_padding = (10*2) // 10px top/bottom padding applied to panel body element. the top/bottom border width is 0
+
+            // create a panel instance, from the 'resizablepanel' div standard module markup
+            var panel = new yahoo.widget.panel('resizablepanel', {
+                draggable: true,
+				fixedcenter: true,
+                width: '640px',
+                context: ["showbtn", "tl", "bl"]
+            });
+            panel.render();
+            panel.hide();	    
+			/*
+			// create a panel instance, from the 'resizablepanel' div standard module markup
+            var end4admin_panel = new yahoo.widget.panel('resizablepanel', {
+                draggable: true,
+				fixedcenter: true,
+                width: '640px',
+                context: ["showbtn", "tl", "bl"]
+            });
+            end4admin_panel.render();
+			end4admin_panel.hide();
+			//end4admin_panel.show();
+            //panel.hide();
+*/
+            // create resize instance, binding it to the 'resizablepanel' div 
+            var resize = new yahoo.util.resize('resizablepanel', {
+                handles: ['br'],
+                autoratio: false,
+                minwidth: 300,
+                minheight: 200,
+                status: true
+            });
+
+            // setup resize handler to update the size of the panel's body element
+            // whenever the size of the 'resizablepanel' div changes
+            resize.on('resize', function(args) {
+
+                var panelheight = args.height;
+
+                var headerheight = this.header.offsetheight; // content + padding + border
+                var footerheight = this.footer.offsetheight; // content + padding + border
+
+                var bodyheight = (panelheight - headerheight - footerheight);
+                var bodycontentheight = (ie_quirks) ? bodyheight : bodyheight - panel_body_padding;
+                yahoo.util.dom.setstyle(this.body, 'height', bodycontentheight + 'px');
+
+                if (ie_sync) {
+
+                    // keep the underlay and iframe size in sync.
+
+                    // you could also set the width property, to achieve the 
+                    // same results, if you wanted to keep the panel's internal
+                    // width property in sync with the dom width. 
+
+                    this.sizeunderlay();
+
+                    // syncing the iframe can be expensive. disable iframe if you
+                    // don't need it.
+
+                    this.synciframe();
+                }
+            }, panel, true);
+
+            //yahoo.util.event.on("showbtn", "click", panel.show, panel, true);
+			
+            yahoo.util.event.on("showbtn", "click",
+				function(){
+				document.getelementbyid('end_adr_form').src='end_adr_form.php';
+				//alert(document.getelementbyid('end_adr_form').src);
+				panel.show();
+				}, panel, true);
+
+
+            yahoo.util.event.on("showbtn4admin", "click",
+				function(){
+				document.getelementbyid('end_adr_form').src='end_adr_entry.html';
+				//alert(document.getelementbyid('end_adr_form').src);
+				panel.show();
+				}, panel, true);
+        }
+    );
+
+	
+    </script>
+<!-- /yui -->
+<html>
+<head>
+<title>ระเบียนนิสิตปริญาตรี</title>
+<meta http-equiv="content-type" content="text/html; charset=tis-620">
+<style type="text/css">
+<!--
+.txt1 {
+	font-family: cordiaupc,serif, sans-serif,tahoma;
+	font-size: 16px;
+	color: #7e9aab;
+}
+body{
+	font-family: cordiaupc,serif, sans-serif,tahoma;
+	font-size: 15px;
+	color: #6a8494;
+	background-color: white;
+}
+a{color:#006600}
+a:hover{color:#6f6f6f}
+td.lefttd {
+		background-repeat: repeat-y;
+		background-image: url(./image/left.gif);
+}
+td.righttd {
+		background-image: url(./image/right.gif);
+		background-repeat: repeat-y;
+}
+/* this is the outline round the main forum tables */
+.forumline	{ background-color: #a9b8c2; border: 0px #006699 solid; }
+
+.gen { margin: 1px 1px; font-family: trebuchet ms,cordiaupc,serif, sans-serif,tahoma;
+	font-size: 15px; font-weight: bold;
+	letter-spacing: 0px; color: #ffffff;}
+.genmed { margin: 1px 1px; font-size: 14px; }
+.gensmall { margin: 1px 1px; font-family: tahoma,serif, sans-serif; font-size: 12px; }
+.genbig { margin: 1px 1px; font-size: 16 px; }
+
+td { font-family: ms sans serif, verdana, helvetica, sans-serif; font-size: 14px }
+th { height: 22px; color: #999999; border-color: #ffffff; border-style: solid;font-family: ms sans serif, verdana, helvetica, sans-serif; font-size: 14px; background-color: #eaeaea; white-space: nowrap; border-width: 1px 1px 0px 1px; }
+
+img { border: 0px; }
+
+/* background images for tables */
+.tbl{border-collapse:collapse;height:4px;width:100%}
+.tbll{background: url(./image/tb4_l.gif) no-repeat;width:8px}
+.tblbot{background: url(./image/tb4_m.gif) repeat-x;width:100%}
+.tblr{background: url(./image/tb4_r.gif) no-repeat;width:8px}
+.tbl80{border-collapse:collapse;height:4px;width:80%}
+
+/* background images for tables */
+.tbt{border-collapse:collapse;height:22px;width:100%}
+.tbtl{background: url(./image/tb2_l.gif) no-repeat;width:22px}
+.tbtbot{background: url(./image/tb2_m.gif) repeat-x;width:100%;font-size:11px;color:#445588; text-align:right;}
+.tbtr{background: url(./image/tb2_r.gif) no-repeat;width:124px}
+
+/* background images for tables */
+.tbn{border-collapse:collapse;height:22px;width:100%}
+.tbnl{background: url(./image/tb1_l.gif) no-repeat;width:76px}
+.tbnbot{background: url(./image/tb1_m.gif) repeat-x;width:100%;font-size:11px;color:#445588;}
+.tbnr{background: url(./image/tb1_r.gif) no-repeat;width:39px}
+
+.row1 { background-color: #f7f7f7; padding: 4px; font-family: ms sans serif, verdana, helvetica, sans-serif; font-size: 11px; border-color: #ffffff; border-style: solid; border-width: 1px 1px 0px 1px; }
+.row2 { background-color: #ececec; padding: 4px; font-family: ms sans serif, verdana, helvetica, sans-serif; font-size: 11px; border-color: #ffffff; border-style: solid; border-width: 1px 1px 0px 1px; }
+.row3 { background-color: #eaeaea; padding: 4px; font-family: ms sans serif, verdana, helvetica, sans-serif; font-size: 11px; border-color: #ffffff; border-style: solid; border-width: 1px 1px 0px 1px; }
+.spacer { background-color: #d1d7dc; }
+
+.inputtext{ border-bottom: 1px dotted;  border-left: none;  border-right: none;  border-top: none; color: #6a8494; text-align: left; font-family: ms sans serif, verdana, helvetica, sans-serif;  font-size: 10pt;  font-weight: bold;  height:23px; background-color: #f7f7f7; padding: 5px;};
+
+
+.rahmen {
+	border-right: #ffffff 2px solid; border-top: #ffffff 2px solid; border-left: #ffffff 2px solid; border-bottom: #ffffff 2px solid
+}
+-->
+</style>
+<script language="javascript">
+<!--
+function menuover(id){
+document.getelementbyid(id).style.backgroundcolor="#33ff00"
+}
+function menuout(id){
+document.getelementbyid(id).style.backgroundcolor="#3399ff"
+}
+function mover(obj,id){
+obj.style.backgroundcolor='#ececec';
+obj.style.borderleftcolor='#33ff00';
+obj.style.borderleftwidth='5px';
+menuover(id);
+}
+function mdown(obj,id){
+obj.style.backgroundcolor='#ececec';
+obj.style.borderleftcolor='#33ff00';
+obj.style.borderleftwidth='5px';
+obj.style.bordertopcolor='#000000';
+obj.style.borderbottomcolor='#000000';
+obj.style.borderbottomwidth='1px';
+menuover(id);
+}
+function mup(obj,id){
+obj.style.backgroundcolor='#ececec';
+obj.style.borderleftcolor='#33ff00' ;
+obj.style.borderleftwidth='5px';
+obj.style.bordertopcolor='#ffffff';
+obj.style.borderbottomcolor='#ffffff';
+obj.style.borderbottomwidth='0px';
+menuover(id);
+}
+function mout(obj,id){
+obj.style.backgroundcolor='f7f7f7';
+obj.style.borderleftcolor='#ffffff';
+obj.style.borderleftwidth='1px';
+menuout(id);
+}
+function talimit() {
+	var taobj=event.srcelement;
+	if (taobj.value.length==taobj.maxlength*1) return false;
+}
+
+function tacount(viscnt) { 
+	var taobj=event.srcelement;
+	if (taobj.value.length>taobj.maxlength*1) taobj.value=taobj.value.substring(0,taobj.maxlength*1);
+	if (viscnt) viscnt.innertext=taobj.maxlength-taobj.value.length;
+}
+function cleardefaultandcss(el) {
+	if (el.defaultvalue==el.value) el.value = ""
+	// if dynamic style is supported, clear the style
+	if (el.style) el.style.csstext = ""
+}
+//-->
+</script>
+</head>
+<body style="padding:0;margin:4 " class=" yui-skin-sam">
+<table cellpadding="0" cellspacing="0" border="0" align="center">
+  <tr>
+	<td width="10" nowrap="nowrap" class="lefttd">
+	</td>
+	<td align="center">
+	
+	<table border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td valign="top"  width="758" height="143">
+		 <!-- <h1 align=center>student history</h1> -->
+		 <img src="./image/header.jpg" width="758" height="143" border="0" alt="">
+		<!-- 
+		<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="include/swflash.cab#version=6,0,29,0" width="758" height="143">
+		<param name="movie" value="1.swf">
+		<param name="quality" value="high">
+		<embed src="1.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="778" height="153"></embed></object>
+		 -->
+		</td>
+	</tr>
+	</table>
+
+
+	<table border="0" cellspacing="0" cellpadding="0" width="100%">
+	<tr>
+		<td valign="top">	
+		<table border="1" bordercolor="#ccccff"  cellspacing="1" cellpadding="0" background="./image/barmenu.gif" width="100%" height="30" frame="void">
+		<tr>
+			<td valign="middle" width="110" align="center"><a href="index.php" class="txt1" style="text-decoration:none;text-align: center; "><b>หน้าหลัก</b></a></td>
+			<td valign="middle" width="110" align="center"><a href="" class="txt1" style="text-decoration:none;"><b></b></a></td>
+			<td valign="middle" width="110" align="center"><a href="" class="txt1" style="text-decoration:none;"><b></b></a></td>    
+			<td valign="middle" width="110" align="center"><a href="" class="txt1" style="text-decoration:none;"><b></b></a></td>
+			<td valign="middle" width="110" align="center"><a href="" class="txt1" style="text-decoration:none;"><b></b></a></td>   
+		</tr>
+		</table> 
+		</td>
+	</tr>
+	<tr><td valign="top" style="padding-left:4px">
+	<tr>
+		<td>
+		<table width="100%" border="0" bordercolor="#ccccff" cellspacing="0" cellpadding="4">
+		<tr>
+			<td align="left" valign="top" width="200"><!-- ซ้าย -->
+			<table border="0" cellpadding="0" cellspacing="0" class="tbt"><tr><td class="tbtl"><img src="./image/spacer.gif" alt="" width="67" height="26" /></td><td class="tbtbot"><b></b><span class="gen">เข้าสู่ระบบ</span></td><td class="tbtr"><img src="./image/spacer.gif" alt="" width="35" height="26" /></td></tr></table>				<table width="100%" cellpadding="0" cellspacing="1" border="0" class="forumline">
+				  <tr>						
+					 <td class="row1">
+						<form style="padding:0;margin:0 " name="login_form" method=post action="" onsubmit="return check()">
+						usernsme:<input type="text" style="width:80px;height:20px;font-size:10px;vertical-align:middle;margin-left:4px; border: 1px solid #6495ed; position: relative; left: 34px;" name="username">
+						<br>
+						password:<input type="password" style="width:80px;height:20px;font-size:10px;vertical-align:middle;margin-left:4px; border: 1px solid #6495ed; position: relative; left: 35px;" name="password"> 
+						<table width="100%" cellpadding="0" cellspacing="0" border="0">
+						<tr>
+							<td class="row1" style="border-color: #f7f7f7;" width="70%"><img src="image/i_lpass.gif"> <a href="http://cpc.ku.ac.th/account/email_private.html" target="_blank">ลืม password ?</a><br>
+							<img src="image/i_change.gif"> <a href="https://nontri.ku.ac.th/tools/passwd.html" target="_blank">เปลี่ยน password</a>
+														</td>
+							<td class="row1" style="border-color: #f7f7f7;" valign="top"><div style="text-align: right; padding-right: 0px;"><input type="submit" value="login"></div></td>
+						</tr>
+						</table>		
+						</form>
+					 </td>
+				  </tr>
+				</table>
+				<table border="0" cellpadding="0" cellspacing="0" class="tbl"><tr><td class="tbll"><img src="./image/spacer.gif" alt="" width="8" height="4" /></td><td class="tblbot"><img src="./image/spacer.gif" alt="" width="8" height="4" /></td><td class="tblr"><img src="./image/spacer.gif" alt="" width="8" height="4" /></td></tr></table>
+				<table border="0" cellpadding="0" cellspacing="0" class="tbl"><tr>
+				<td><img src="./image/spacer.gif" alt="" width="8" height="4" /></td>
+				</tr></table>
+
+
+				<!-- เมนูสำหรับเจ้าหน้าที่มอบตัว -->
+								
+				<!-- เมนูสำหรับadmin -->
+						
+
+
+				<!-- เมนูสำหรับเจ้าหน้าที่ -->
+						
+			
+				<table border="0" cellpadding="0" cellspacing="0" class="tbt"><tr><td class="tbtl"><img src="./image/spacer.gif" alt="" width="67" height="26" /></td><td class="tbtbot"><b></b><span class="gen"">สำหรับนิสิต</span></td><td class="tbtr"><img src="./image/spacer.gif" alt="" width="35" height="26" /></td></tr></table>
+				<table width="100%" cellpadding="0" cellspacing="1" border="0" class="forumline">
+				<!-- 		
+				<tr>						
+					<td class="row1" style="cursor: hand" onmouseover="javascript:mover(this,'menu1')" onmousedown="javascript:mdown(this,'menu1')" onmouseup="javascript:mup(this,'menu1')" onmouseout="javascript:mout(this,'menu1')"
+					onclick="javascript:window.open('url')" >descript</td>
+					<td id="menu1" bgcolor="#3399ff" width="27" align="center"><img src="./image/arrow.png" /></td>
+				</tr> 
+				-->
+				<!-- 
+				<tr>						
+					<td class="row1" style="cursor: hand" onmouseover="javascript:mover(this,'menu3')" onmousedown="javascript:mdown(this,'menu3')" onmouseup="javascript:mup(this,'menu3')" onmouseout="javascript:mout(this,'menu3')"
+					id="showbtn" ><font color="#ff0000">ยื่นคำร้องขอจบการศึกษา</font></td>
+					<td id="menu3" bgcolor="#3399ff" width="27" align="center"><img src="./image/arrow.png" /></td>
+				</tr>
+				<tr>						
+					<td class="row1" style="cursor: hand" onmouseover="javascript:mover(this,'menu2')" onmousedown="javascript:mdown(this,'menu2')" onmouseup="javascript:mup(this,'menu2')" onmouseout="javascript:mout(this,'menu2')"
+					onclick="javascript:window.location='readme_end_propose.php'" >ขั้นตอนยื่นคำร้องขอจบการศึกษา</td>
+					<td id="menu2" bgcolor="#3399ff" width="27" align="center"><img src="./image/arrow.png" /></td>
+				</tr>
+				<tr>						
+					<td class="row1" style="cursor: hand" onmouseover="javascript:mover(this,'menu4')" onmousedown="javascript:mdown(this,'menu4')" onmouseup="javascript:mup(this,'menu4')" onmouseout="javascript:mout(this,'menu4')"
+					onclick="javascript:window.open('rpt_end.php', '_blank')"><font color="#339900">รายชื่อนิสิตยื่นขอจบการศึกษา</font></td>
+					<td id="menu4" bgcolor="#3399ff" width="27" align="center"><img src="./image/arrow.png" /></td>
+				</tr>
+			 -->
+			<!--
+				<tr>						
+					<td class="row1" style="cursor: hand" onmouseover="javascript:mover(this,'menu5')" onmousedown="javascript:mdown(this,'menu5')" onmouseup="javascript:mup(this,'menu5')" onmouseout="javascript:mout(this,'menu5')"
+					onclick="javascript:window.location=''" >menu3</td>
+					<td id="menu5" bgcolor="#3399ff" width="27" align="center"><img src="./image/arrow.png" /></td>
+				</tr> -->
+				<tr>						
+					<td class="row1" style="cursor: hand" onmouseover="javascript:mover(this,'menu7')" onmousedown="javascript:mdown(this,'menu7')" onmouseup="javascript:mup(this,'menu7')" onmouseout="javascript:mout(this,'menu7')"
+					onclick="javascript:window.open('https://www.student.ku.ac.th/newregis/')" >บันทึกระเบียนประวัตินิสิตใหม่</td>
+					<td id="menu7" bgcolor="#3399ff" width="27" align="center"><img src="./image/arrow.png" /></td>
+				</tr>
+				<tr>						
+					<td class="row1" style="cursor: hand" onmouseover="javascript:mover(this,'menu8')" onmousedown="javascript:mdown(this,'menu8')" onmouseup="javascript:mup(this,'menu8')" onmouseout="javascript:mout(this,'menu8')"
+					onclick="javascript:window.open('https://nontriregis.ku.ac.th/th/')" >ขอรับบัญชีเครือข่ายนนทรี </td>
+					<td id="menu8" bgcolor="#3399ff" width="27" align="center"><img src="./image/arrow.png" /></td>
+				</tr>
+				<tr>						
+					<td class="row1" style="cursor: hand" onmouseover="javascript:mover(this,'menu9')" onmousedown="javascript:mdown(this,'menu9')" onmouseup="javascript:mup(this,'menu9')" onmouseout="javascript:mout(this,'menu9')"
+					onclick="javascript:window.location='orde.php'" >ระเบียบ คำสั่ง ประกาศ</td>
+					<td id="menu9" bgcolor="#3399ff" width="27" align="center"><img src="./image/arrow.png" /></td>
+				</tr>
+				<tr>						
+					<td class="row1" style="cursor: hand" onmouseover="javascript:mover(this,'menu10')" onmousedown="javascript:mdown(this,'menu10')" onmouseup="javascript:mup(this,'menu10')" onmouseout="javascript:mout(this,'menu10')"
+					onclick="javascript:window.location='form.php'" >แบบฟอร์ม</td>
+					<td id="menu10" bgcolor="#3399ff" width="27" align="center"><img src="./image/arrow.png" /></td>
+				</tr>
+				<tr>						
+					<td class="row1" style="cursor: hand" onmouseover="javascript:mover(this,'menu100')" onmousedown="javascript:mdown(this,'menu100')" onmouseup="javascript:mup(this,'menu100')" onmouseout="javascript:mout(this,'menu100')"
+					onclick="javascript:window.location='linkother.php'" >ลิงค์แนะนำ</td>
+					<td id="menu100" bgcolor="#3399ff" width="27" align="center"><img src="./image/arrow.png" /></td>
+				</tr>
+				</table>
+				<table border="0" cellpadding="0" cellspacing="0" class="tbl"><tr><td class="tbll"><img src="./image/spacer.gif" alt="" width="8" height="4" /></td><td class="tblbot"><img src="./image/spacer.gif" alt="" width="8" height="4" /></td><td class="tblr"><img src="./image/spacer.gif" alt="" width="8" height="4" /></td></tr></table>
+				<table border="0" cellpadding="0" cellspacing="0" class="tbl"><tr>
+				<td><img src="./image/spacer.gif" alt="" width="8" height="4" /></td>
+				</tr></table>
+
+				
+				<table border="0" cellpadding="0" cellspacing="0" class="tbt"><tr><td class="tbtl"><img src="./image/spacer.gif" alt="" width="67" height="26" /></td><td class="tbtbot"><b></b><span class="gen">ปฏิทิน</span></td><td class="tbtr"><img src="./image/spacer.gif" alt="" width="35" height="26" /></td></tr></table>
+				<script language="javascript" src="js/calendar.js"></script>
+				<table border="0" cellpadding="0" cellspacing="0" class="tbl"><tr><td class="tbll"><img src="./image/spacer.gif" alt="" width="8" height="4" /></td><td class="tblbot"><img src="./image/spacer.gif" alt="" width="8" height="4" /></td><td class="tblr"><img src="./image/spacer.gif" alt="" width="8" height="4" /></td></tr></table>
+				<table border="0" cellpadding="0" cellspacing="0" class="tbl"><tr>
+				<td><img src="./image/spacer.gif" alt="" width="8" height="4" /></td>
+				</tr></table>
+
+				
+				<table border="0" cellpadding="0" cellspacing="0" class="tbt"><tr><td class="tbtl"><img src="./image/spacer.gif" alt="" width="67" height="26" /></td><td class="tbtbot"><b></b><span class="gen">ผู้เยี่ยมชม</span></td><td class="tbtr"><img src="./image/spacer.gif" alt="" width="35" height="26" /></td></tr></table>
+				<table width="100%" cellpadding="0" cellspacing="1" border="0" class="forumline">
+				<tr>	<td class="row1" align="center">
+				<img src="image/userst.gif" width="52" height="25" border="0">
+				</td></tr>
+				<tr><td class="row1" align="center">
+				<img src='counter/0.png '><img src='counter/8.png '><img src='counter/8.png '><img src='counter/6.png '><img src='counter/1.png '>				</td></tr>
+				<tr>	<td class="row1" align="center">
+				: : ขอขอบคุณผู้เยี่ยมชม : :
+				</td></tr> 
+				</table>
+				<table border="0" cellpadding="0" cellspacing="0" class="tbl"><tr><td class="tbll"><img src="./image/spacer.gif" alt="" width="8" height="4" /></td><td class="tblbot"><img src="./image/spacer.gif" alt="" width="8" height="4" /></td><td class="tblr"><img src="./image/spacer.gif" alt="" width="8" height="4" /></td></tr></table>
+				<table border="0" cellpadding="0" cellspacing="0" class="tbl"><tr>
+				<td><img src="./image/spacer.gif" alt="" width="8" height="4" /></td>
+				</tr></table>
+
+			</td>
+			<td align="right" valign="top"><!-- กลาง -->
+
+			
+<!--begin source code for example =============================== -->
+
+<div id="demo" class="yui-navset">
+    <ul class="yui-nav">
+        <li>
+			<a href="#tab1">
+				<em style="background-image: url('./image/tb2_m.gif');">
+					หน้าหลัก  
+				</em>
+			</a>
+		</li>
+        <li>
+			<a href="#tab2">
+				<em style="background-image: url('./image/tb2_m.gif');">
+					รายงาน 2554-2558
+				</em>
+			</a>
+		</li>
+        <li class="selected">
+			<a href="#tab3">
+				<em style="background-image: url('./image/tb2_m.gif');">
+					รายงาน 2559
+				</em>
+			</a>
+		</li>
+    </ul>            
+    <div class="yui-content">
+        <div id="tab1">
+		<p>
+				<!--head  table-->
+				<table border="0" cellpadding="0" cellspacing="0" class="tbt"><tr><td class="tbtl"><img src="./image/spacer.gif" alt="" width="67" height="26" /></td><td class="tbtbot"><b></b><span class="gen">การบันทึกขัอมูลนิสิตใหม่  </span></td><td class="tbtr"><img src="./image/spacer.gif" alt="" width="35" height="26" /></td></tr></table>
+				<!-- detail  table-->
+				<table width="100%" cellpadding="0" cellspacing="1" border="0" class="forumline">
+				<tr>
+					<td class='row1'><b style="background-color: #33cc99; color: #ffffff">1. สรุปจำนวนนิสิตและสถานภาพการบันทึกขัอมูลนิสิตใหม่&nbsp;&nbsp;</b></td>
+				</tr>
+				<tr>
+					<td class='row1'>&nbsp;&nbsp;<img src="image/www.jpg" border="0">&nbsp;<a href="./report/b1.php" target="_blank">1.1 รายงานสรุปจำนวนนิสิตใหม่ที่บันทึกและไม่ได้บันทึกขัอมูลประวัติและแบบสำรวจ</a></td>
+				</tr>
+				<tr>
+					<td class='row1'>&nbsp;&nbsp;<img src="image/www.jpg" border="0">&nbsp;<a href="./report/b2.php" target="_blank">1.2 รายชื่อนิสิตใหม่ที่บันทึกและไม่ได้บันทึกขัอมูลประวัติและแบบสำรวจ</a></td>
+				</tr>	
+				<tr>
+					<td class='row1'>&nbsp;&nbsp;<img src="image/www.jpg" border="0">&nbsp;<a href="./report/b3.php" target="_blank">1.3 รายงานสรุปจำนวนผู้ผ่านขั้นตอนการเป็นนิสิตใหม่</a></td>
+				</tr>	
+				<tr>
+					<td class='row1'>&nbsp;&nbsp;<img src="image/www.jpg" border="0">&nbsp;<a href="./report/b3_inter.php" target="_blank">1.4 รายงานสรุปจำนวนผู้ผ่านขั้นตอนการเป็นนิสิตใหม่ (หลักสูตรนานาชาติ)</a></td>
+				</tr>
+				<tr>
+					<td class='row1'><b style="background-color: #33cc99; color: #ffffff">2. รายงานทั่วไป&nbsp;&nbsp;</b></td>
+				</tr>
+				<tr>
+					<td class='row1'>&nbsp;&nbsp;<img src="image/www.jpg" border="0">&nbsp;<a href="./report/c1_1.php" target="_blank">2.1 จำแนกตามประเภทการรับเข้าจำแนกตามเพศ วิทยาเขต กลุ่มสาขาวิชา และคณะ</a></td>
+				</tr>
+				<tr>
+					<td class='row1'>&nbsp;&nbsp;<img src="image/www.jpg" border="0">&nbsp;<a href="./report/c1_2.php" target="_blank">2.2 จำแนกตามประเภทการรับเข้าจำแนกตามประเภทการรับเข้า วิทยาเขต กลุ่มสาขาวิชา และคณะ</a></td>
+				</tr>	
+				</table>
+				<!-- foot  table-->
+				<table border="0" cellpadding="0" cellspacing="0" class="tbl"><tr><td class="tbll"><img src="./image/spacer.gif" alt="" width="8" height="4" /></td><td class="tblbot"><img src="./image/spacer.gif" alt="" width="8" height="4" /></td><td class="tblr"><img src="./image/spacer.gif" alt="" width="8" height="4" /></td></tr></table>
+		
+
+		
+		</p>
+		</div>
+        <div id="tab2">
+		<p>
+				<!--head  table-->
+				<table border="0" cellpadding="0" cellspacing="0" class="tbt"><tr><td class="tbtl"><img src="./image/spacer.gif" alt="" width="67" height="26" /></td><td class="tbtbot"><b></b><span class="gen">แบบสำรวจนิิสิตใหม่ 2558</span></td><td class="tbtr"><img src="./image/spacer.gif" alt="" width="35" height="26" /></td></tr></table>
+				<!-- detail  table-->
+				<table width="100%" cellpadding="0" cellspacing="1" border="0" class="forumline">
+				<tr>
+					<td class='row1'><b style="background-color: #33cc99; color: #ffffff">:: รายงานลักษณะประชากรและสังคม&nbsp;&nbsp;</b></td>
+				</tr>
+				<tr>
+					<td class='row1'>&nbsp;&nbsp;<img src="image/www.jpg" border="0">&nbsp;<a href="./report/30table/table1age.php" target="_blank">1 อายุของนิสิตใหม่ จำแนกตามวิทยาเขต กลุ่มสาขา และคณะ</a></td>
+				</tr>
+				<tr>
+					<td class='row1'>&nbsp;&nbsp;<img src="image/www.jpg" border="0">&nbsp;<a href="./report/30table/table2weak.php" target="_blank">2 ความปกติความพิการด้านต่างๆ ของนิสิตใหม่ จำแนกตามวิทยาเขต กลุ่มสาขา และคณะ</a></td>
+				</tr>
+				<tr>
+					<td class='row1'>&nbsp;&nbsp;<img src="image/www.jpg" border="0">&nbsp;<a href="./report/30table/table3religion.php" target="_blank">3 การนับถือศาสนาของนิสิตใหม่ จำแนกตามวิทยาเขต กลุ่มสาขา และคณะ</a></td>
+				</tr>
+				<tr>
+					<td class='row1'>&nbsp;&nbsp;<img src="image/www.jpg" border="0">&nbsp;<a href="./report/30table/table4bornplace.php" target="_blank">4 ภูมิลำเนาของนิสิตใหม่ จำแนกตามวิทยาเขต กลุ่มสาขา และคณะ</a></td>
+				</tr>
+				<tr>
+					<td class='row1'>&nbsp;&nbsp;<img src="image/www.jpg" border="0">&nbsp;<a href="./report/30table/table5bornplace.php" target="_blank">5 ภูมิลำเนาและจังหวัดที่เกิดของนิสิตใหม่ จำแนกตามวิทยาเขต กลุ่มสาขา และคณะ</a></td>
+				</tr>
+				<tr>
+					<td class='row1'>&nbsp;&nbsp;<img src="image/www.jpg" border="0">&nbsp;<a href="./report/30table/table6facku.php" target="_blank">6 เหตุผลที่เลือกศึกษาในมหาวิทยาลัยเกษตรศาสตร์ จำแนกตามวิทยาเขต กลุ่มสาขา และคณะ</a></td>
+				</tr>
+				<tr>
+					<td class='row1'>&nbsp;&nbsp;<img src="image/www.jpg" border="0">&nbsp;<a href="./report/30table/table7facfac.php" target="_blank">7 เหตุผลที่เลือกสาขาวิชาของนิสิตใหม่ จำแนกตามวิทยาเขต กลุ่มสาขา และคณะ</a></td>
+				</tr>
+				<tr>
+					<td class='row1'>&nbsp;&nbsp;<img src="image/www.jpg" border="0">&nbsp;<a href="./report/30table/table8sequence.php" target="_blank">8 ลำดับการเลือกเข้ามหาวิทยาลัยเกษตรศาสตร์ของนิสิตใหม่ จำแนกตามวิทยาเขต กลุ่มสาขา และคณะ</a></td>
+				</tr>
+				<tr>
+					<td class='row1'>&nbsp;&nbsp;<img src="image/www.jpg" border="0">&nbsp;<a href="./report/30table/table9gpa.php" target="_blank">9 คะแนนเฉลี่ยของนิสิตใหม่ จำแนกตามวิทยาเขต กลุ่มสาขา และคณะ</a></td>
+				</tr>
+				<tr>
+					<td class='row1'>&nbsp;&nbsp;<img src="image/www.jpg" border="0">&nbsp;<a href="./report/30table/table10provinceschool.php" target="_blank">10 ภาคที่จบการศึกษาของนิสิตใหม่ จำแนกตามวิทยาเขต กลุ่มสาขา และคณะ</a></td>
+				</tr>
+				<tr>
+					<td class='row1'><b style="background-color: #33cc99; color: #ffffff">:: รายงานลักษณะพื้นฐานของครอบครัว&nbsp;&nbsp;</b></td>
+				</tr>
+				<tr>
+					<td class='row1'>&nbsp;&nbsp;<img src="image/www.jpg" border="0">&nbsp;<a href="./report/30table/table11parentstatus.php" target="_blank">11 สถานภาพสมรสของบิดามารดาของนิสิตใหม่ จำแนกตามวิทยาเขต กลุ่มสาขา และคณะ</a></td>
+				</tr>
+				<tr>
+					<td class='row1'>&nbsp;&nbsp;<img src="image/www.jpg" border="0">&nbsp;<a href="./report/30table/table12fathergrad.php" target="_blank">12 ระดับการศึกษาของบิดาของนิสิตใหม่ จำแนกตามวิทยาเขต กลุ่มสาขา และคณะ</a></td>
+				</tr>
+				<tr>
+					<td class='row1'>&nbsp;&nbsp;<img src="image/www.jpg" border="0">&nbsp;<a href="./report/30table/table13mothergrad.php" target="_blank">13 ระดับการศึกษาของมารดาของนิสิตใหม่ จำแนกตามวิทยาเขต กลุ่มสาขา และคณะ</a></td>
+				</tr>
+				<tr>
+					<td class='row1'>&nbsp;&nbsp;<img src="image/www.jpg" border="0">&nbsp;<a href="./report/30table/table14fatheroccup.php" target="_blank">14 อาชีพของบิดาของนิสิตใหม่ จำแนกตามวิทยาเขต กลุ่มสาขา และคณะ</a></td>
+				</tr>
+				<tr>
+					<td class='row1'>&nbsp;&nbsp;<img src="image/www.jpg" border="0">&nbsp;<a href="./report/30table/table15motheroccup.php" target="_blank">15 อาชีพของมารดาของนิสิตใหม่ จำแนกตามวิทยาเขต กลุ่มสาขา และคณะ</a></td>
+				</tr>
+				<tr>
+					<td class='row1'>&nbsp;&nbsp;<img src="image/www.jpg" border="0">&nbsp;<a href="./report/30table/table16familyincome.php" target="_blank">16 รายได้ของครอบครัวของนิสิตใหม่ จำแนกตามวิทยาเขต กลุ่มสาขา และคณะ</a></td>
+				</tr>
+				<tr>
+					<td class='row1'>&nbsp;&nbsp;<img src="image/www.jpg" border="0">&nbsp;<a href="./report/30table/table17familysalary.php" target="_blank">17 ค่าใช้จ่ายส่วนตัวที่ได้รับต่อเดือนของนิสิตใหม่ จำแนกตามวิทยาเขต กลุ่มสาขา และคณะ</a></td>
+				</tr>
+				<tr>
+					<td class='row1'>&nbsp;&nbsp;<img src="image/www.jpg" border="0">&nbsp;<a href="./report/30table/table18familysupport.php" target="_blank">18 ผู้อุปการะค่าเล่าเรียน และค่าใช้จ่ายส่วนตัวของนิสิตใหม่ จำแนกตามวิทยาเขต กลุ่มสาขา และคณะ</a></td>
+				</tr>
+				<tr>
+					<td class='row1'>&nbsp;&nbsp;<img src="image/www.jpg" border="0">&nbsp;<a href="./report/30table/table19profileresidence.php" target="_blank">19 ลักษณะที่อยู่อาศัยในระหว่างการศึกษาของนิสิตใหม่ จำแนกตามวิทยาเขต กลุ่มสาขา และคณะ</a></td>
+				</tr>
+				<tr>
+					<td class='row1'>&nbsp;&nbsp;<img src="image/www.jpg" border="0">&nbsp;<a href="./report/30table/table20profilestay.php" target="_blank">20 บุคคลที่พักอาศัยด้วยของนิสิตใหม่ จำแนกตามวิทยาเขต กลุ่มสาขา และคณะ</a></td>
+				</tr>
+				<tr>
+					<td class='row1'>&nbsp;&nbsp;<img src="image/www.jpg" border="0">&nbsp;<a href="./report/30table/table21profiletravel.php" target="_blank">21 การเดินทางมาศึกษาที่หมาวิทยาลัยของนิสิตใหม่ จำแนกตามวิทยาเขต กลุ่มสาขา และคณะ</a></td>
+				</tr>
+				<tr>
+					<td class='row1'>&nbsp;&nbsp;<img src="image/www.jpg" border="0">&nbsp;<a href="./report/30table/table22activityacku.php" target="_blank">22 ความสนใจในการเข้าร่วมกิจกรรมขณะศึกษาในมหาวิทยาลัยของนิสิตใหม่ จำแนกตามวิทยาเขต กลุ่มสาขา และคณะ</a></td>
+				</tr>
+				<tr>
+					<td class='row1'>&nbsp;&nbsp;<img src="image/www.jpg" border="0">&nbsp;<a href="./report/30table/table23generalwelcome.php" target="_blank">23 ความต้องการเกี่ยวกับรูปแบบการรับน้องใหม่ของนิสิตใหม่ จำแนกตามวิทยาเขต กลุ่มสาขา และคณะ</a></td>
+				</tr>
+				<tr>
+					<td class='row1'>&nbsp;&nbsp;<img src="image/www.jpg" border="0">&nbsp;<a href="./report/30table/table24activitytraining.php" target="_blank">24 ความประสงค์ในการทำงานพิเศษหรือฝึกงานในระหว่างปิดภาคเรียนของนิสิตใหม่ จำแนกตามวิทยาเขต กลุ่มสาขา และคณะ</a></td>
+				</tr>
+				<tr>
+					<td class='row1'><b style="background-color: #33cc99; color: #ffffff">:: รายงานข้อมูล ความคาดหวัง และความต้องการของนิสิตใหม่&nbsp;&nbsp;</b></td>
+				</tr>
+				<tr>
+					<td class='row1'>&nbsp;&nbsp;<img src="image/www.jpg" border="0">&nbsp;<a href="./report/30table/table25generalproblem1map25.php" target="_blank">25 ปัญหาที่อยากให้คณะทราบและหาทางช่วยเหลือของนิสิตใหม่  จำแนกตามวิทยาเขต กลุ่มสาขา และคณะ</a></td>
+				</tr>
+				<tr>
+					<td class='row1'>&nbsp;&nbsp;<img src="image/www.jpg" border="0">&nbsp;<a href="./report/30table/table26generalsubject1.php" target="_blank">26 วิชาที่คาดว่าจะมีปัญหามากที่สุดของนิสิตใหม่  จำแนกตามวิทยาเขต กลุ่มสาขา และคณะ</a></td>
+				</tr>
+				<tr>
+					<td class='row1'>&nbsp;&nbsp;<img src="image/www.jpg" border="0">&nbsp;<a href="./report/30table/table28generalproblem1map28.php" target="_blank">28 ความต้องการที่อยากให้คณะทราบและหาทางช่วยเหลือของนิสิตใหม่  จำแนกตามวิทยาเขต กลุ่มสาขา และคณะ</a></td>
+				</tr>
+				<tr>
+					<td class='row1'>&nbsp;&nbsp;<img src="image/www.jpg" border="0">&nbsp;<a href="./report/30table/table29generalexpect1map29.php" target="_blank">29 ความคาดหวังอันดับที่ 1 ของนิสิตใหม่ จำแนกตามวิทยาเขต กลุ่มสาขา และคณะ</a></td>
+				</tr>
+				</table>
+				<!-- foot  table-->
+				<table border="0" cellpadding="0" cellspacing="0" class="tbl"><tr><td class="tbll"><img src="./image/spacer.gif" alt="" width="8" height="4" /></td><td class="tblbot"><img src="./image/spacer.gif" alt="" width="8" height="4" /></td><td class="tblr"><img src="./image/spacer.gif" alt="" width="8" height="4" /></td></tr></table>
+		
+		</p>
+		</div>
+        <div id="tab3">
+		<p>
+				<!--head  table-->
+				<table border="0" cellpadding="0" cellspacing="0" class="tbt"><tr><td class="tbtl"><img src="./image/spacer.gif" alt="" width="67" height="26" /></td><td class="tbtbot"><b></b><span class="gen">แบบสำรวจนิิสิตใหม่ 2559</span></td><td class="tbtr"><img src="./image/spacer.gif" alt="" width="35" height="26" /></td></tr></table>
+				<!-- detail  table-->
+				<table width="100%" cellpadding="0" cellspacing="1" border="0" class="forumline">
+				<!-- 1 -->
+				<tr>
+					<td class='row1'>
+					<b style="background-color: #33cc99; color: #ffffff">:: 
+					รายงานลักษณะประชากรและสังคม
+					&nbsp;&nbsp;
+					</b>
+					</td>
+				</tr>
+				<tr>
+					<td class='row1'>&nbsp;&nbsp;<img src="image/www.jpg" border="0">&nbsp;
+					<a href="./report/30table2559/table01.php" target="_blank">
+					เพศของนิสิตใหม่ จำแนกตามวิทยาเขต กลุ่มสาขา ประเภทโครงการ และคณะ 
+					</a>
+					</td>
+				</tr>
+				<tr>
+					<td class='row1'>&nbsp;&nbsp;<img src="image/www.jpg" border="0">&nbsp;
+					<a href="./report/30table2559/table02.php" target="_blank">
+					อายุของนิสิตใหม่ จำแนกตามวิทยาเขต กลุ่มสาขา ประเภทโครงการ และคณะ 
+					</a>
+					</td>
+				</tr>
+				<tr>
+					<td class='row1'>&nbsp;&nbsp;<img src="image/www.jpg" border="0">&nbsp;
+					<a href="./report/30table2559/table03.php" target="_blank">
+					ความปกติและความบกพร่องในด้านต่างๆของนิสิตใหม่ จำแนกตามวิทยาเขต กลุ่มสาขา ประเภทโครงการ และคณะ 
+					</a>
+					</td>
+				</tr>
+				<tr>
+					<td class='row1'>&nbsp;&nbsp;<img src="image/www.jpg" border="0">&nbsp;
+					<a href="./report/30table2559/table04.php" target="_blank">
+					การนับถือศาสนาของนิสิตใหม่ จำแนกตามวิทยาเขต กลุ่มสาขา ประเภทโครงการ และคณะ 
+					</a>
+					</td>
+				</tr>
+				<tr>
+					<td class='row1'>&nbsp;&nbsp;<img src="image/www.jpg" border="0">&nbsp;
+					<a href="./report/30table2559/table05.php" target="_blank">
+					ภูมิลำเนาของนิสิตใหม่ จำแนกตามวิทยาเขต กลุ่มสาขา ประเภทโครงการ และคณะ 
+					</a>
+					</td>
+				</tr>
+				<tr>
+					<td class='row1'>&nbsp;&nbsp;<img src="image/www.jpg" border="0">&nbsp;
+					<a href="./report/30table2559/table06.php" target="_blank">
+					ภูมิลำเนาและจังหวัดที่เกิดของนิสิตใหม่ จำแนกตามวิทยาเขต   
+					</a>
+					</td>
+				</tr>
+				<!-- 2 -->
+				<tr>
+					<td class='row1'>
+					<b style="background-color: #33cc99; color: #ffffff">:: 
+					รายงานการสอบเข้ามหาวิทยาลัยและประวัติการศึกษา
+					&nbsp;&nbsp;
+					</b>
+					</td>
+				</tr>
+				<tr>
+					<td class='row1'>&nbsp;&nbsp;<img src="image/www.jpg" border="0">&nbsp;
+					<a href="./report/30table2559/table07.php" target="_blank">
+					เหตุผลที่เลือกศึกษาในมหาวิทยาลัยเกษตรศาสตร์ของนิสิตใหม่ จำแนกตามวิทยาเขต กลุ่มสาขา ประเภทโครงการ และคณะ
+					</a>
+					</td>
+				</tr>
+				<tr>
+					<td class='row1'>&nbsp;&nbsp;<img src="image/www.jpg" border="0">&nbsp;
+					<a href="./report/30table2559/table08.php" target="_blank">
+					เหตุผลที่เลือกสาขาวิชาของนิสิตใหม่ จำแนกตามวิทยาเขต กลุ่มสาขา ประเภทโครงการ และคณะ
+					</a>
+					</td>
+				</tr>
+				<tr>
+					<td class='row1'>&nbsp;&nbsp;<img src="image/www.jpg" border="0">&nbsp;
+					<a href="./report/30table2559/table09.php" target="_blank">
+					ลำดับการเลือกเข้ามหาวิทยาลัยเกษตรศาสตร์ของนิสิตใหม่ จำแนกตามวิทยาเขต กลุ่มสาขา ประเภทโครงการ และคณะ
+					</a>
+					</td>
+				</tr>
+				<tr>
+					<td class='row1'>&nbsp;&nbsp;<img src="image/www.jpg" border="0">&nbsp;
+					<a href="./report/30table2559/table10.php" target="_blank">
+					คะแนนเฉลี่ยของนิสิตใหม่ จำแนกตามวิทยาเขต กลุ่มสาขา ประเภทโครงการ และคณะ
+					</a>
+					</td>
+				</tr>
+				<tr>
+					<td class='row1'>&nbsp;&nbsp;<img src="image/www.jpg" border="0">&nbsp;
+					<a href="./report/30table2559/table11.php" target="_blank">
+					ภาคที่จบการศึกษาของนิสิตใหม่ จำแนกตามวิทยาเขต กลุ่มสาขา ประเภทโครงการ และคณะ
+					</a>
+					</td>
+				</tr>
+				<!-- 3 -->
+				<tr>
+					<td class='row1'>
+					<b style="background-color: #33cc99; color: #ffffff">:: 
+					รายงานลักษณะพื้นฐานครอบครัว
+					&nbsp;&nbsp;
+					</b>
+					</td>
+				</tr>
+				<tr>
+					<td class='row1'>&nbsp;&nbsp;<img src="image/www.jpg" border="0">&nbsp;
+					<a href="./report/30table2559/table12.php" target="_blank">
+					สถานภาพสมรสของบิดาและมารดาของนิสิตใหม่ จำแนกตามวิทยาเขต กลุ่มสาขา ประเภทโครงการ และคณะ
+					</a>
+					</td>
+				</tr>
+				<tr>
+					<td class='row1'>&nbsp;&nbsp;<img src="image/www.jpg" border="0">&nbsp;
+					<a href="./report/30table2559/table13.php" target="_blank">
+					ระดับการศึกษาของบิดาของนิสิตใหม่ จำแนกตามวิทยาเขต กลุ่มสาขา ประเภทโครงการ และคณะ
+					</a>
+					</td>
+				</tr>
+				<tr>
+					<td class='row1'>&nbsp;&nbsp;<img src="image/www.jpg" border="0">&nbsp;
+					<a href="./report/30table2559/table14.php" target="_blank">
+					ระดับการศึกษาของมารดาของนิสิตใหม่ จำแนกตามวิทยาเขต กลุ่มสาขา ประเภทโครงการ และคณะ
+					</a>
+					</td>
+				</tr>
+				<tr>
+					<td class='row1'>&nbsp;&nbsp;<img src="image/www.jpg" border="0">&nbsp;
+					<a href="./report/30table2559/table15.php" target="_blank">
+					อาชีพหลักของบิดาของนิสิตใหม่ จำแนกตามวิทยาเขต กลุ่มสาขา ประเภทโครงการ และคณะ
+					</a>
+					</td>
+				</tr>
+				<tr>
+					<td class='row1'>&nbsp;&nbsp;<img src="image/www.jpg" border="0">&nbsp;
+					<a href="./report/30table2559/table16.php" target="_blank">
+					อาชีพหลักของมารดาของนิสิตใหม่ จำแนกตามวิทยาเขต กลุ่มสาขา ประเภทโครงการ และคณะ
+					</a>
+					</td>
+				</tr>
+				<tr>
+					<td class='row1'>&nbsp;&nbsp;<img src="image/www.jpg" border="0">&nbsp;
+					<a href="./report/30table2559/table17.php" target="_blank">
+					รายได้เฉลี่ยต่อเดือนของครอบครัวหรือผู้อุปการะนิสิตใหม่ จำแนกตามวิทยาเขต กลุ่มสาขา ประเภทโครงการ และคณะ
+					</a>
+					</td>
+				</tr>
+				<!-- 4 -->
+				<tr>
+					<td class='row1'>
+					<b style="background-color: #33cc99; color: #ffffff">:: 
+					รายงานรูปแบบการดำเนินชีวิตในมหาวิทยาลัย
+					&nbsp;&nbsp;
+					</b>
+					</td>
+				</tr>
+				<tr>
+					<td class='row1'>&nbsp;&nbsp;<img src="image/www.jpg" border="0">&nbsp;
+					<a href="./report/30table2559/table18.php" target="_blank">
+					ค่าใช้จ่ายส่วนตัวที่ได้รับต่อเดือนของนิสิตใหม่ จำแนกตามวิทยาเขต กลุ่มสาขา ประเภทโครงการ และคณะ
+					</a>
+					</td>
+				</tr>
+				<tr>
+					<td class='row1'>&nbsp;&nbsp;<img src="image/www.jpg" border="0">&nbsp;
+					<a href="./report/30table2559/table19.php" target="_blank">
+					ผู้อุปการะค่าใช้จ่ายในการศึกษาของนิสิตใหม่ จำแนกตามวิทยาเขต กลุ่มสาขา ประเภทโครงการ และคณะ
+					</a>
+					</td>
+				</tr>
+				<tr>
+					<td class='row1'>&nbsp;&nbsp;<img src="image/www.jpg" border="0">&nbsp;
+					<a href="./report/30table2559/table20.php" target="_blank">
+					ลักษณะที่อยู่อาศัยในระหว่างการศึกษาของนิสิตใหม่ จำแนกตามวิทยาเขต กลุ่มสาขา ประเภทโครงการ และคณะ
+					</a>
+					</td>
+				</tr>
+				<tr>
+					<td class='row1'>&nbsp;&nbsp;<img src="image/www.jpg" border="0">&nbsp;
+					<a href="./report/30table2559/table21.php" target="_blank">
+					บุคคลที่พักอาศัยด้วยของนิสิตใหม่ จำแนกตามวิทยาเขต กลุ่มสาขา ประเภทโครงการ และคณะ
+					</a>
+					</td>
+				</tr>
+				<tr>
+					<td class='row1'>&nbsp;&nbsp;<img src="image/www.jpg" border="0">&nbsp;
+					<a href="./report/30table2559/table22.php" target="_blank">
+					การเดินทางมาศึกษาที่มหาวิทยาลัยของนิสิตใหม่ จำแนกตามวิทยาเขต กลุ่มสาขา ประเภทโครงการ และคณะ
+					</a>
+					</td>
+				</tr>
+				<tr>
+					<td class='row1'>&nbsp;&nbsp;<img src="image/www.jpg" border="0">&nbsp;
+					<a href="./report/30table2559/table23.php" target="_blank">
+					ความประสงค์ในการขอรับเงินอุดหนุนการศึกษาของนิสิตใหม่ จำแนกตามวิทยาเขต กลุ่มสาขา ประเภทโครงการ และคณะ
+					</a>
+					</td>
+				</tr>
+				<tr>
+					<td class='row1'>&nbsp;&nbsp;<img src="image/www.jpg" border="0">&nbsp;
+					<a href="./report/30table2559/table24.php" target="_blank">
+					การทำงานก่อนเข้าศึกษาในมหาวิทยาลัยเกษตรศาสตร์ของนิสิตใหม่ จำแนกตามวิทยาเขต กลุ่มสาขา ประเภทโครงการ และคณะ
+					</a>
+					</td>
+				</tr>
+				<!-- 5 -->
+				<tr>
+					<td class='row1'>
+					<b style="background-color: #33cc99; color: #ffffff">:: 
+					รายงานการเข้าร่วมกิจกรรม ปัญหาและความคาดหวัง
+					&nbsp;&nbsp;
+					</b>
+					</td>
+				</tr>
+				<tr>
+					<td class='row1'>&nbsp;&nbsp;<img src="image/www.jpg" border="0">&nbsp;
+					<a href="./report/30table2559/table25.php" target="_blank">
+					ความต้องการเกี่ยวกับรูปแบบการรับน้องใหม่ของนิสิตใหม่ จำแนกตามวิทยาเขต กลุ่มสาขา ประเภทโครงการ และคณะ
+					</a>
+					</td>
+				</tr>
+				<tr>
+					<td class='row1'>&nbsp;&nbsp;<img src="image/www.jpg" border="0">&nbsp;
+					<a href="./report/30table2559/table26.php" target="_blank">
+					ความประสงค์ในการทำงานพิเศษหรือฝึกงานในระหว่างปิดภาคเรียนของนิสิตใหม่ จำแนกตามวิทยาเขต กลุ่มสาขา ประเภทโครงการ และคณะ
+					</a>
+					</td>
+				</tr>
+				<tr>
+					<td class='row1'>&nbsp;&nbsp;<img src="image/www.jpg" border="0">&nbsp;
+					<a href="./report/30table2559/table27.php" target="_blank">
+					ปัญหาที่อยากให้ทางคณะรับทราบและหาทางช่วยเหลือของนิสิตใหม่ จำแนกตามวิทยาเขต กลุ่มสาขา ประเภทโครงการ และคณะ
+					</a>
+					</td>
+				</tr>
+				<tr>
+					<td class='row1'>&nbsp;&nbsp;<img src="image/www.jpg" border="0">&nbsp;
+					<a href="./report/30table2559/table28.php" target="_blank">
+					ความคาดหวังขณะศึกษาในมหาวิทยาลัยเกษตรศาสตร์ของนิสิตใหม่ จำแนกตามวิทยาเขต กลุ่มสาขา ประเภทโครงการ และคณะ
+					</a>
+					</td>
+				</tr>
+				</table>
+				<!-- foot  table-->
+				<table border="0" cellpadding="0" cellspacing="0" class="tbl"><tr><td class="tbll"><img src="./image/spacer.gif" alt="" width="8" height="4" /></td><td class="tblbot"><img src="./image/spacer.gif" alt="" width="8" height="4" /></td><td class="tblr"><img src="./image/spacer.gif" alt="" width="8" height="4" /></td></tr></table>
+		
+		</p>
+		</div>
+    </div>
+</div>
+<script>
+(function() {
+    var tabview = new yahoo.widget.tabview('demo');
+
+    yahoo.log("the example has finished loading; as you interact with it, you'll see log messages appearing here.", "info", "example");
+})();
+</script>
+
+<!--end source code for example =============================== -->
+
+				<!--head  table-->
+				<table border="0" cellpadding="0" cellspacing="0" class="tbt"><tr><td class="tbtl"><img src="./image/spacer.gif" alt="" width="67" height="26" /></td><td class="tbtbot"><b></b><span class="gen">รายงานการวิเคราะห์เบื้องต้น</span></td><td class="tbtr"><img src="./image/spacer.gif" alt="" width="35" height="26" /></td></tr></table>
+				<!-- detail  table-->
+				<table width="100%" cellpadding="0" cellspacing="1" border="0" class="forumline">
+								</table>
+				<!-- foot  table-->
+				<table border="0" cellpadding="0" cellspacing="0" class="tbl"><tr><td class="tbll"><img src="./image/spacer.gif" alt="" width="8" height="4" /></td><td class="tblbot"><img src="./image/spacer.gif" alt="" width="8" height="4" /></td><td class="tblr"><img src="./image/spacer.gif" alt="" width="8" height="4" /></td></tr></table>
+		
+				
+ 
+
+<table border="0" cellpadding="0" cellspacing="0" class="tbt"><tr><td class="tbtl"><img src="./image/spacer.gif" alt="" width="67" height="26" /></td><td class="tbtbot"><b></b><span class="gen"">แจ้งข่าว</span></td><td class="tbtr"><img src="./image/spacer.gif" alt="" width="35" height="26" /></td></tr></table><table width="100%" cellpadding="0" cellspacing="1" border="0" class="forumline"><tr><th width=13%>วันที่</th>
+<th width=50%>หัวข้อข่าว</th>
+<th width=13%>ผู้แจ้งข่าว</font></th>
+<th width=7%>อ่าน</th>
+</tr><tr><td class='row1' align='center'><nobr>22 ก.ค. 2557</nobr></td>
+<td class='row1'><a href='./news/view.php?no=16' target="_blank">รูปถ่าย 1 นิ้ว ที่ติดในใบ สทป.1</a> <img src='./news/pic/cam.gif' alt='มีรูปภาพแทรกอยู่ในกระทู้นี้'>    </td>
+<td class='row1'><font color='#666666'><b> webmaster </b></font></td>
+<td class='row1' align='center'><font  color='#666666'> 10115 </font></td>
+</tr>
+
+<tr><td class='row1' align='center'><nobr>21 ก.ค. 2557</nobr></td>
+<td class='row1'><a href='./news/view.php?no=13' target="_blank">การขึ้นบัญชีทหาร</a> <img src='./news/pic/cam.gif' alt='มีรูปภาพแทรกอยู่ในกระทู้นี้'>    </td>
+<td class='row1'><font color='#666666'><b> webmaster </b></font></td>
+<td class='row1' align='center'><font  color='#666666'> 3625 </font></td>
+</tr>
+
+<tr><td class='row1' align='center'><nobr>28 พ.ค. 2555</nobr></td>
+<td class='row1'><a href='./news/view.php?no=12' target="_blank">8.การพิมพ์ใบแจ้งรหัสบัญชีผู้ใช้เครือข่ายนนทรี ไม่ได้</a> <img src='./news/pic/cam.gif' alt='มีรูปภาพแทรกอยู่ในกระทู้นี้'>    </td>
+<td class='row1'><font color='#666666'><b> webmaster </b></font></td>
+<td class='row1' align='center'><font  color='#666666'> 8619 </font></td>
+</tr>
+
+<tr><td class='row1' align='center'><nobr>26 พ.ค. 2554</nobr></td>
+<td class='row1'><a href='./news/view.php?no=7' target="_blank">ขอปฏิบัติเมื่อ <b>ลืม password บัญชีผู้ใช้</b>เครือข่ายนนทรี</a>     </td>
+<td class='row1'><font color='#666666'><b> webmaster </b></font></td>
+<td class='row1' align='center'><font  color='#666666'> 8772 </font></td>
+</tr>
+
+<tr><td class='row1' align='center'><nobr>25 พ.ค. 2554</nobr></td>
+<td class='row1'><a href='./news/view.php?no=5' target="_blank">เวลาที่ในการในการกรอกประวัติต้อง<b>ไม่เกิน 30 นาที </b>!!!</a>     </td>
+<td class='row1'><font color='#666666'><b> webmaster </b></font></td>
+<td class='row1' align='center'><font  color='#666666'> 4188 </font></td>
+</tr>
+
+<tr><td class='row1' align='center'><nobr>24 พ.ค. 2554</nobr></td>
+<td class='row1'><a href='./news/view.php?no=4' target="_blank">นิสิตที่ติดตั้งแต่สองสาขาวิชาขึ้นไป <b><u>ต้องรอ</u></b> กรอกประวัติใน<b><u>สาขาที่จะรายงานตัว</u></b>เท่านั้น</a>     </td>
+<td class='row1'><font color='#666666'><b> webmaster </b></font></td>
+<td class='row1' align='center'><font  color='#666666'> 2274 </font></td>
+</tr>
+
+<tr><td colspan='5' class='row1' align='center'><span>[ <a href='news/new.php'>ตั้งข่าวใหม่</a> ]</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span><a href='./news/webboard.php'>ดูทั้งหมด <img src='./image/more.gif'></a></span></td></tr></table>		<table border="0" cellpadding="0" cellspacing="0" class="tbl"><tr><td class="tbll"><img src="../image/spacer.gif" alt="" width="8" height="4" /></td><td class="tblbot"><img src="../image/spacer.gif" alt="" width="8" height="4" /></td><td class="tblr"><img src="../image/spacer.gif" alt="" width="8" height="4" /></td></tr></table><table border="0" cellpadding="0" cellspacing="0" class="tbl"><tr><td><img src="./image/spacer.gif" alt="" width="8" height="4" /></td></tr></table>			</td>
+		</tr>
+		</table>
+
+		
+		<!-- yui -->
+        <div id="resizablepanel">
+            <div class="hd">ยื่นคำร้องขอจบการศึกษา</div>
+            <div class="bd" >
+
+			<iframe id="end_adr_form" src="end_adr_form.php" width="99%" height="95%" scrolling="yes"></iframe>
+
+            </div>
+            <div class="ft"></div>
+        </div>
+		<!-- /yui -->
+
+
+	</td>
+	</tr>
+	<tr>
+	<td>
+		<table border="1" bordercolor="#ccccff"  cellspacing="1" cellpadding="0" background="./image/barmenu.gif" width="100%" height="10" frame="void">
+		<tr>
+			
+			<td valign="middle" width="110" align="center"><a href="" class="txt1" style="text-decoration:none;"><b></b></a></td>
+			<td valign="middle" width="110" align="center"><a href="" class="txt1" style="text-decoration:none;"><b></b></a></td>    
+			<td valign="middle" width="110" align="center"><a href="" class="txt1" style="text-decoration:none;"><b></b></a></td>
+			<td valign="middle" width="110" align="center"><a href="" class="txt1" style="text-decoration:none;"><b></b></a></td>  
+			<td valign="middle" width="110" align="center"><a href="" class="txt1" style="text-decoration:none;"><b></b></a></td>
+		</tr>
+		</table> 
+	</td>
+	</tr>
+<tr>
+	<td colspan="2" height="54" background="image/footer.jpg" align="center" style="color:#000;" class="row1">สำนักทะเบียนและประมวลผล 50 ถนนพหลโยธิน แขวงลาดยาว เขตจตุจักร กรุงเทพฯ 10900
+	<br>
+	โทร 0 21180100 , 0 2942 8200 ต่อ 8000 (อาคารใหม่ อาคารระพีสาคริก)
+	
+	<br><a href="./index.php" style="text-decoration:none;"><span  style="color:#fff;">https://www.student.ku.ac.th/history/ &copy;2011</span></a>
+	</td>
+</tr>
+	</table>
+
+	</td>
+	<td width="10" nowrap="nowrap" class="righttd"></td>
+  </tr>
+</table>
+</body>
+</html>

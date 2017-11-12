@@ -1,0 +1,518 @@
+<html>
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+   <meta name="author" content="suttiphol warangrit">
+   <meta name="generator" content="mozilla/4.01 [en] (win95; i) [netscape]">
+   <title>switching\robot</title>
+</head>
+<body text="#000000" bgcolor="#c0d8c8" link="#0000ee" vlink="#551a8b" alink="#ff0000">
+
+<center>
+<h1>
+<b><font face="angsanaupc"><font color="#000099"><font size=+2>µñç<wbr>íâèò§
+robot&nbsp; ¡ã³õ<wbr>èö¡éò
+micro mouse ã¹<wbr>êèç¹<wbr>¡òã<wbr>íí¡<wbr>áºº<wbr>ç§<wbr>¨ã<wbr><wbr></font></font></font></b></h1></center>
+
+<center>
+<h2>
+<b><font face="angsanaupc"><font color="#000000"><font size=+1>àí¡<wbr>¾å
+âã¨¹ì<wbr>ãñµ¹òçôªñâ
+37056249</font></font></font></b></h2></center>
+
+<center>
+<h2>
+<b><font face="angsanaupc"><font color="#000000"><font size=+1>êø·¸ô<wbr>¾å
+çãò§<wbr>ä·¸ôì 37055647</font></font></font></b></h2></center>
+
+<hr width="100%"><b><font face="angsanaupc">&nbsp;</font></b>
+<h3>
+<b><font face="angsanaupc"><font color="#ff0000">&nbsp;&nbsp; </font><font color="#993366">êòãºñ­<wbr><wbr></font></font></b></h3>
+<font face="angsanaupc">&nbsp;&nbsp; 1. <a href="#preface">º·¹ó</a></font>
+<br><font face="angsanaupc">&nbsp;&nbsp;&nbsp; 2. <a href="#microcomputer board">microcomputer
+board (mcb)</a></font>
+<br><font face="angsanaupc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+2.1. <a href="#system power">system power</a></font>
+<br><font face="angsanaupc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+2.2. <a href="#microcomputer">microcomputer</a></font>
+<br><font face="angsanaupc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+2.2.1. <a href="#microcontroller">microcontroller</a></font>
+<br><font face="angsanaupc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+2.2.2. <a href="#memory mapping">memory mapping</a></font>
+<br><font face="angsanaupc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+2.2.3. <a href="#reset switch">reset switch</a></font>
+<br><font face="angsanaupc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+2.2.4. <a href="#serial communication interface">serial communication interface</a></font>
+<br><font face="angsanaupc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+2.2.5. <a href="#led indicator">led indicator</a></font>
+<br><font face="angsanaupc">&nbsp;&nbsp;&nbsp; 3. <a href="#infra-red sensor board">infra-red
+sensor board (isb)</a></font>
+<br><font face="angsanaupc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+3.1. <a href="#sensor transmitter">sensor transmitter</a></font>
+<br><font face="angsanaupc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+3.2. <a href="#sensor receiver">sensor receiver</a></font>
+<br><font face="angsanaupc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+3.3. <font color="#ff0000"><a href="#sensor expansion">sensor expansion</a></font></font>
+<br><font face="angsanaupc">&nbsp;&nbsp;&nbsp; 4. <a href="#motor driver">motor
+driver board</a></font>
+<br><font face="angsanaupc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+4.1. <a href="#4.1  stepping motor">stepping motor sequencer</a></font>
+<br><font face="angsanaupc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+4.2. <a href="#4.2  stepping motor">stepping motor driver</a></font>
+<br><font face="angsanaupc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+4.3. <a href="#4.3  driver">driver calibration</a></font>
+<br><font face="angsanaupc">&nbsp;&nbsp;&nbsp; 5. <a href="#conclude">êãø»</a></font>
+<br><font face="angsanaupc">&nbsp;&nbsp;&nbsp; 6. <a href="#reference">àí¡êòãíéò§íô§</a></font>
+
+<p><a name="preface"></a><b><font face="angsanaupc"><font color="#993366">º·<wbr>¹ó<wbr><wbr></font></font></b>
+<br><font face="angsanaupc">&nbsp;&nbsp;&nbsp; micro mouse à»ç¹<wbr>ëøè¹<wbr>â¹µì<wbr>·õè<wbr>·ó<wbr>§ò¹<wbr>ä´é<wbr>´éçâ<wbr>µñç<wbr>àí§<wbr>·õè<wbr>êòáòã¶<wbr>çôè§<wbr>êóãç¨<wbr>à¢ò<wbr>ç§¡µ<wbr>·õè<wbr>äáè<wbr>ãùé<wbr>¨ñ¡<wbr>áåð<wbr>êòáòã¶<wbr>ëò<wbr>àêé¹<wbr>·ò§â´â
+ãªé<wbr>àçåò<wbr>¹éíâ<wbr>·õè<wbr>êø´<wbr>·õè<wbr>çôè§<wbr>¨ò¡<wbr>¨ø´<wbr>àãôèá<wbr>µé¹<wbr>ä»<wbr>âñ§<wbr>àêé¹<wbr>ªñâ<wbr>·õè<wbr>íâùè<wbr>¡åò§<wbr>à¢ò<wbr>ç§¡µ<wbr>ä´é<wbr>»ãð<wbr>êô·¸ô<wbr>àò¾<wbr>¢í§
+micro mouse ¢öé¹<wbr>íâùè¡ñ<wbr>º
+hardware áåð software ¤×í â»ãá¡ãá<wbr>·õè<wbr>©åò´
+·õè<wbr>êòáòã¶<wbr>¤é¹<wbr>ëò<wbr>áåð<wbr>¨´<wbr>¨ó<wbr>àêé¹<wbr>·ò§ã¹<wbr>à¢ò<wbr>ç§¡µ<wbr>áåð
+»ãðáçå<wbr>¼å<wbr>ëò<wbr>àêé¹<wbr>·ò§·õè<wbr>´õ<wbr>·õè<wbr>êø´
+áåð<wbr>¢öé¹<wbr>íâùè¡ñº¡òã<wbr>íí¡<wbr>áºº<wbr>ç§<wbr>¨ã<wbr>¢í§
+micro mouse&nbsp; áåð<wbr>â¤ã§<wbr>êãéò§<wbr>¡å<wbr>ä¡<wbr>à¾×èí<wbr>·ó<wbr>ãëé
+micro mouse êòáòã¶<wbr>â»ãá¡ãá<wbr>ä´é<wbr>§èò<wbr>â
+áõ<wbr>»ãðêô·¸ôàò¾<wbr>ã¹<wbr>¡òã<wbr>à¤å×èí¹<wbr>·õè<wbr>áåð<wbr>¡òã<wbr>µãç¨<wbr>¨ñº<wbr>¡óá¾§<wbr><wbr></font>
+
+<p><font face="angsanaupc">&nbsp;&nbsp;&nbsp; êóëãñº<wbr>¡ã³õ<wbr>èö¡éò
+micro mouse ¹õé<wbr><wbr>&nbsp; èö¡éò<wbr>¨ò¡<wbr>µé¹<wbr>áºº
+micro mouse ¢í§ alpha centre , ngee ann polytechnic ,
+singapore «öè§<wbr>à»ç¹ micro
+mouse µé¹<wbr>áºº<wbr>·õè<wbr>àò¤<wbr>çôªò<wbr><wbr>&icirc;
+ä´é<wbr>ãªé<wbr>à¾×èí<wbr>¡òã<wbr>èö¡éò<wbr>çô¨ñâ
+ã¹<wbr>¡òã<wbr>¾ñ²¹ò
+software áåð hardware</font> <font face="angsanaupc">º·<wbr>¤çòá<wbr>¹õé
+¨ð<wbr>èö¡éò<wbr>à©¾òð<wbr>ã¹<wbr>êèç¹<wbr>¢í§
+hardware ã¹<wbr>êèç¹<wbr>¢í§<wbr>¡òã<wbr>íí¡<wbr>áºº<wbr>ç§<wbr>¨ã<wbr><wbr></font>
+<center><img src="image1.jpg" height=516 width=394></center>
+<font face="angsanaupc">&nbsp;<a name="microcomputer board"></a><b><font color="#993366">microcomputer
+board (mcb)</font></b></font>
+<center><font face="angsanaupc">&nbsp;</font><img src="image2.jpg" height=418 width=354></center>
+
+
+<p><font face="angsanaupc">´ñ§<wbr>ãù»<wbr>áê´§<wbr>ç§<wbr>¨ã<wbr>¢í§
+microcomputer board (mcb) â´â<wbr>áºè§<wbr>à»ç¹
+4 êèç¹<wbr>´ñ§<wbr>¹õé<wbr><wbr></font>
+<ul>
+<li>
+<font face="angsanaupc">&nbsp;the microcomputer</font></li>
+
+<li>
+<font face="angsanaupc">system power</font></li>
+
+<li>
+<font face="angsanaupc">sensor interface</font></li>
+
+<li>
+<font face="angsanaupc">led display</font></li>
+</ul>
+<a name="system power"></a><b><font face="angsanaupc"><font color="#993366">system
+power</font></font></b>
+<br><font face="angsanaupc">micro mouse µéí§<wbr>¡òã<wbr>ä¿<wbr>àåõéâ§<wbr>·õè<wbr>áã§<wbr>´ñ¹
+(volt) µèò§<wbr>¡ñ¹ vcc êóëãñº<wbr>ç§<wbr>¨ã
+microcomputer íõ¡<wbr>êèç¹<wbr>êóëãñº<wbr>ç§<wbr>¨ã
+sensor, 12v áåð<wbr>êóëãñº
+stepping motor ·ñé§<wbr>ëá´<wbr>ãñº<wbr>¾åñ§<wbr>§ò¹<wbr>¨ò¡<wbr>áëåè§<wbr>à´õâç<wbr>¡ñ¹
+(input 15-24v) â´â<wbr>à»ç¹<wbr>ä´é<wbr>·ñé§<wbr>¨ò¡<wbr>áºµàµíãõè<wbr>áåð<wbr>ä¿
+dc</font> <font face="angsanaupc">5v, vcc ä´é<wbr>¨ò¡<wbr>ç§<wbr>¨ã
+switching regulator lm2575t5 ´ñ§<wbr>ãù»<wbr>ç§<wbr>¨ã<wbr><wbr></font>
+<center><img src="image3.jpg" height=241 width=469></center>
+<font face="angsanaupc">ç§<wbr>¨ã dc-dc regulator lm2575t5
+(u15) à»ç¹<wbr>¡òã<wbr>á»å§<wbr>áºº
+step-down switching regulator ãëé<wbr>¡ãðáê<wbr>êù§<wbr>êø´<wbr>·õè
+1a ¹õè<wbr>à»ç¹<wbr>¡òã<wbr>íí¡<wbr>áºº<wbr>ç§<wbr>¨ã<wbr>íâèò§<wbr>§èò<wbr>â
+æ ·õè<wbr>·ó<wbr>ãëé<wbr>ãªé<wbr>à¹×éí<wbr>·õè<wbr>¹éíâ
+áåð regulator áõ<wbr>»ãðêô·¸ôàò¾<wbr>êù§
+(typ. 80%) áåð<wbr>äáè<wbr>¨ó<wbr>à»ç¹<wbr>µéí§<wbr>ãªé
+heat-sink</font>
+<br><font face="angsanaupc">ç§<wbr>¨ã<wbr>¢ñº
+sensor ãªé<wbr>ä¿ 12v ãªé
+linear regulator l7812 (u14) ãëé output 12v íâèò§<wbr>äã<wbr>¡ç<wbr>µòá
+linear regulator µñç<wbr>¹õé<wbr>áõ<wbr>»ãðêô·¸ôàò¾<wbr>¡òã<wbr>·ó<wbr>§ò¹<wbr>µèó
+áµè<wbr>äáè<wbr>áõ<wbr>¹ñâ<wbr>êó¤ñ­<wbr>·õè<wbr>µéí§<wbr>ê¹<wbr>ã¨<wbr>à¾ãòð<wbr>¡òã<wbr>áê<wbr>¢í§
+led ãªé<wbr>à¾õâ§ 100ma ä¿<wbr>àåõéâ§<wbr>¹õé<wbr>ãªé<wbr>¢ñº
+sensor ·õè connector sen_0 - sen_3</font>
+<center><img src="image4.jpg" height=250 width=500></center>
+<font face="angsanaupc">&nbsp;</font>
+<br><font face="angsanaupc">¾åñ§<wbr>§ò¹<wbr>·õè<wbr>ãëé
+stepping motor ¨ð<wbr>ãñº<wbr>â´â<wbr>µã§<wbr>¨ò¡<wbr>áºµàµíãõè
+(ëã×í<wbr>ä¿ dc) »ãðêô·¸ôàò¾<wbr>¢í§
+stepping motor</font>
+<br><font face="angsanaupc">¢öé¹<wbr>íâùè¡ñºä¿<wbr>àåõéâ§<wbr>·õè<wbr>µéí§<wbr>¨èòâ<wbr>íâèò§<wbr>êáèóàêáí
+motor driver µèí¡ñº m3</font>
+
+<p><a name="microcomputer"></a><b><font face="angsanaupc"><font color="#993366">microcomputer</font></font></b>
+<br><font face="angsanaupc">ç§<wbr>¨ã microcomputer ¹õé<wbr>¶ù¡<wbr>íí¡<wbr>áºº<wbr>êóëãñº
+micro mouse ·õè<wbr>áõ i/o 24 port êóëãñº
+ç§<wbr>¨ã sensor áåð<wbr>¡òã<wbr>¤çº<wbr>¤øá
+stepping motor áåð<wbr>áõ<wbr>ç§<wbr>¨ã
+serial communication êóëãñº<wbr>¡òã
+download áåð<wbr>¡òã<wbr>·´<wbr>êíº<wbr>â»ãá¡ãá
+¡òã synchronize ·ó<wbr>â´â<wbr>ç§<wbr>¨ã
+timer unit</font>
+
+<p><a name="microcontroller"></a><b><font face="angsanaupc"><font color="#993366">microcontroller</font></font></b>
+<br><font face="angsanaupc">ãªé nec 78k310a à»ç¹
+single chip 8-bit microcontroller (u1)</font>
+<br><font face="angsanaupc">¤ø³êáºñµô<wbr>¤ãèòç
+æ<wbr></font>
+<ul>
+<li>
+<font face="angsanaupc">&nbsp;operating frequency 6mhz (ëòã<wbr>¨ò¡
+crystal 12mhz)</font></li>
+
+<li>
+<font face="angsanaupc">&nbsp;128 byte internal ram</font></li>
+
+<li>
+<font face="angsanaupc">&nbsp;8/16 bit arithmetic and logic unit (alu)</font></li>
+
+<li>
+<font face="angsanaupc">&nbsp;8/16 bit unsigned multiplication and division
+instruction</font></li>
+
+<li>
+<font face="angsanaupc">&nbsp;memory addressing up to 64kbyte</font></li>
+
+<li>
+<font face="angsanaupc">&nbsp;24 i/o lines</font></li>
+
+<li>
+<font face="angsanaupc">&nbsp;two 16-bit timers</font></li>
+
+<li>
+<font face="angsanaupc">&nbsp;two 16-bit quadrature counter</font></li>
+
+<li>
+<font face="angsanaupc">&nbsp;four channels a/d converter with 8-bit resolution</font></li>
+
+<li>
+<font face="angsanaupc">&nbsp;universal asynchronous receive and transmitter
+(uart)</font></li>
+</ul>
+
+<center><img src="image5.jpg" height=605 width=1363></center>
+<font face="angsanaupc">&nbsp;</font>
+<br><a name="memory mapping"></a><b><font face="angsanaupc"><font color="#993366">memory
+mapping</font></font></b>
+<br><font face="angsanaupc">»ãð¡íº<wbr>´éçâ
+32kb eprom (u3) áåð 128kb sram (u4) address decoder gal
+chip (u7)&nbsp; ¡òã<wbr>·ó memory mapping
+´éçâ jumper dload</font>
+<ul>
+<li>
+<font face="angsanaupc">download mode jumper ¶ù¡<wbr>àêõâº<wbr>íâùè
+¤ãñé§<wbr>áã¡ memory ¶ù¡
+map ä»<wbr>·õè 32kb rom áåð
+32kb ram ëåñ§<wbr>¨ò¡<wbr>·õè
+cpu ·ó<wbr>§ò¹<wbr>¨ò¡ loader ·õè
+rom áåéç memory ¨ð remap ä»<wbr>·õè
+64kb ram ·õè<wbr>à»ç¹ code 32kb
+data 32kb</font></li>
+
+<li>
+<font face="angsanaupc">eprom mode jumper ¶ù¡<wbr>»åèíâ<wbr>åíâ
+memory map ¶ù¡<wbr>¤§<wbr>äçé<wbr>·õè
+32kb rom áåð 32kb ram mode ¹õé<wbr>ãªé<wbr>àá×èí<wbr>â»ãá¡ãá<wbr>¶ù¡
+burnt å§ eprom àãõâº<wbr>ãéíâ<wbr>áåð<wbr>â»ãá¡ãá<wbr>¨ð<wbr>¶ù¡<wbr>àãõâ¡<wbr>¨ò¡<wbr>áñ¹<wbr><wbr></font></li>
+</ul>
+<a name="reset switch"></a><b><font face="angsanaupc"><font color="#993366">reset
+switch</font></font></b>
+<br><font face="angsanaupc">»øèá reset ¶ù¡<wbr>íí¡<wbr>áºº<wbr>ãëé<wbr>à»ç¹<wbr>»øèá<wbr>áºº<wbr>¡´<wbr>µô´<wbr><wbr>-»åèíâ<wbr>´ñº
+à»ç¹<wbr>ç§<wbr>¨ã<wbr>·õè<wbr>ãªé
+rc à¾×èí<wbr>ãëé power-up
+delay àá×èí reset ·ó<wbr>§ò¹
+micro mouse ¨ð<wbr>àãôèá<wbr>µé¹<wbr>·ó<wbr>§ò¹<wbr>ãëáè
+ªèç§<wbr>ãíº<wbr>àçåò<wbr>¡òã
+reset 10 micro-sec.</font>
+<br><font face="angsanaupc">&nbsp;</font>
+<center><img src="image6.jpg" height=204 width=500></center>
+
+
+<p><a name="serial communication interface"></a><b><font face="angsanaupc"><font color="#993366">serial
+communication interface</font></font></b>
+<br><font face="angsanaupc">ãªé<wbr>êóëãñº<wbr>àª×èíá<wbr>µèí
+micro mouse à¢éò¡ñº pc ´éçâ<wbr>â»ãá¡ãá<wbr>êóëãñº
+micro mouse, interface ·õè<wbr>ãªé<wbr>à»ç¹
+rs-232c</font>
+<br><font face="angsanaupc">nec 78k310a microcontroller áõ
+uart ã¹<wbr>µñç ä¿ +5v rs232 driver/receiver
+(u8) ·ó<wbr>§ò¹<wbr>ãèçá¡ñ<wbr>º
+c8 c9 c10 c11 à¾×èí<wbr>ãëé
+rs232 volt output ¤§<wbr>·õè (+/- 10v)</font>
+<br><font face="angsanaupc">led áê´§<wbr>¡òã<wbr>àª×èíá<wbr>µèí<wbr>¶éò<wbr>êáºùã³ì<wbr>ä¿<wbr>¨ð<wbr>µô´<wbr><wbr></font>
+<br><font face="angsanaupc">serial interface pin assignment</font>
+<ul>
+<li>
+<font face="angsanaupc">&nbsp;pin 1 transmit data output (tx)</font></li>
+
+<li>
+<font face="angsanaupc">&nbsp;pin 2 common ground</font></li>
+
+<li>
+<font face="angsanaupc">&nbsp;pin 3 receive data input (rx)</font></li>
+</ul>
+
+<center><img src="image7.jpg" height=376 width=400></center>
+<font face="angsanaupc">&nbsp;</font>
+<br><a name="led indicator"></a><b><font face="angsanaupc"><font color="#993366">led
+indicator</font></font></b>
+<br><font face="angsanaupc">led áõ<wbr>·ñé§<wbr>ëá´
+8 ´ç§<wbr>·õè<wbr>áê´§<wbr>º¹
+board ãªé<wbr>êóëãñº<wbr>áê´§<wbr>ê¶ò¹ð<wbr>¢í§
+sensor ëã×í<wbr>íâèò§<wbr>í×è¹
+áåéç<wbr>áµè<wbr>¨ð<wbr>â»ãá¡ãá
+led ¶ù¡<wbr>¢ñº<wbr>´éçâ
+bcd encoder/driver (u9) ¤çº<wbr>¤øá<wbr>´éçâ<wbr>¡òã<wbr>êè§
+1 byte áò<wbr>·õè port ¹õé<wbr><wbr></font>
+<center><img src="image8.jpg" height=322 width=551></center>
+<font face="angsanaupc">&nbsp;</font>
+<center>&nbsp;</center>
+
+
+<p><a name="infra-red sensor board"></a><b><font face="angsanaupc"><font color="#993366">infra-red
+sensor board (isb)</font></font></b>
+<br><font face="angsanaupc">infra-red sensor ãªé<wbr>êóëãñº<wbr>µãç¨<wbr>¨ñº<wbr>¡óá¾§<wbr>ãíº
+æ µñç micro mouse à¾×èí<wbr>ãëé
+micro mouse ãùé<wbr>·ôè<wbr>·ò§áåð<wbr>êòáòã¶<wbr>êãéò§<wbr>á¼¹<wbr>·õè<wbr>¢öé¹<wbr>áò<wbr>ä´é
+isb µô´<wbr>íâùè<wbr>·õè
+micro mouse íâùè<wbr>àë¹×í¨ò¡óá¾§<wbr>»ãðáò³
+3-5mm íø»¡ã³ì sensor ¼åôµ<wbr>â´â
+panasonic electronic co.,japan àºíãì on2160r
+à»ç¹<wbr>íø»¡ã³ì<wbr>·õè<wbr>ãçá<wbr>·ñé§<wbr>àò¤<wbr>êè§<wbr>áåð<wbr>àò¤<wbr>ãñº<wbr>äçé<wbr>·õè<wbr>íø»¡ã³ì<wbr>µñç<wbr>à´õâç<wbr>¡ñ¹
+áõ<wbr>¢¹ò´<wbr>àåç¡<wbr><wbr></font>
+<br><font face="angsanaupc">sensor µô´<wbr>µòá<wbr>¨ø´<wbr>µèò§
+æ áõ<wbr>¨ø´<wbr>»ãðê§¤ì<wbr>´ñ§<wbr>¹õé<wbr><wbr></font>
+<ul>
+<li>
+<font face="angsanaupc">sensor u1-u5 áåð u8-u12 ãªé<wbr>à¾×èí<wbr>»ãñº<wbr>µñç<wbr>ãëé<wbr>íâùè<wbr>¡öè§<wbr>¡åò§<wbr>·ò§à´ô¹
+u10, u13 à»ç¹<wbr>µóáë¹è§<wbr>¢í§<wbr>¡öè§<wbr>¡åò§<wbr><wbr></font></li>
+
+<li>
+<font face="angsanaupc">&nbsp;sensor u7d ãªé<wbr>à¾×èí<wbr>µãç¨<wbr>¨ñº<wbr>¡óá¾§<wbr>ë¹éò
+sensor u7b íò¨<wbr>µô´<wbr>à¾ôèá<wbr>à¾×èí<wbr>ã¹<wbr>¡ã³õ<wbr>·õè
+micro mouse çôè§<wbr>áò<wbr>àãçç<wbr>¨ð<wbr>ä´é<wbr>µãç¨<wbr>¨ñº<wbr>¡óá¾§<wbr>ä´é<wbr><wbr></font></li>
+
+<li>
+<font face="angsanaupc">&nbsp;sensor u6 ãªé<wbr>µãç¨<wbr>¨ñº<wbr>¡óá¾§<wbr>ë¹éò<wbr>à¾×èí<wbr>ãëé
+micro mouse ëâø´<wbr>¾í<wbr>´õ<wbr><wbr></font></li>
+</ul>
+<font face="angsanaupc">sensor output áåð<wbr>ç§<wbr>¨ã<wbr>¤çº<wbr>¤øá
+sensor àª×èíá<wbr>µèí¡ñ<wbr>º
+mcb ¼èò¹ connector sen_0 ·õè
+mcb áåð mp1 ·õè isb</font>
+<center><font face="angsanaupc">&nbsp;</font>&nbsp;<font face="angsanaupc">&nbsp;</font><img src="image9.jpg" height=780 width=766></center>
+
+<center>&nbsp;</center>
+
+<center><img src="image10.jpg" height=580 width=563></center>
+<a name="sensor transmitter"></a><b><font face="angsanaupc"><font color="#993366">sensor
+transmitter</font></font></b>
+<br><font face="angsanaupc">ç§<wbr>¨ã darlington (àºíãì
+uln2003a à»ç¹<wbr>áºº 7-stage) ãªé<wbr>¢ñº
+infra-red sensor&nbsp; ´ñ§<wbr>ãù»<wbr>ç§<wbr>¨ã<wbr><wbr></font>
+<br><font face="angsanaupc">&nbsp;</font>
+<center><img src="image11.jpg" height=399 width=794></center>
+
+
+<p><font face="angsanaupc">ã¹ isb ç§<wbr>¨ã
+infra-red ¶ù¡<wbr>áºè§<wbr>à»ç¹
+2 ·ò§ ·ñé§<wbr>¤ùè<wbr>¶ù¡<wbr>¢ñº<wbr>´éçâ<wbr>ç§<wbr>¨ã
+dralington ·õè<wbr>íâùè<wbr>º¹
+mcb ¡ãðáê<wbr>¨ó¡ñ´<wbr>´éçâ<wbr>µñç<wbr>µéò¹<wbr>·ò¹
+r1 r2 ¡ãðáê<wbr>áµè<wbr>åð<wbr>àêé¹<wbr>»ãðáò³
+110ma sensor on ·ø¡ æ 5.5ms àçé¹
+40us</font>
+
+<p><a name="sensor receiver"></a><b><font face="angsanaupc"><font color="#993366">sensor
+receiver</font></font></b>
+<br><font face="angsanaupc">sensor 12 µñç<wbr>º¹
+isb àãõâ§<wbr>¡ñ¹<wbr>áµè<wbr>áõ
+8 output â´â u1 u2 µèí<wbr>ãçá<wbr>¡ñ¹<wbr>â´â<wbr>áºè§<wbr>àò¤<wbr>ãñº<wbr>ãèçá<wbr>¡ñ¹
+àªè¹<wbr>à´õâç¡ñ<wbr>º
+u4 ¡ñº u5, u8 ¡ñº u9, u11 ¡ñ<wbr>º
+u12</font>
+<center><img src="image12.jpg" height=273 width=591></center>
+<font face="angsanaupc">&nbsp;</font>
+<br>&nbsp;<font face="angsanaupc">áµè<wbr>åð sensor
+output µèí¡ñº resistor áåð
+capacitor à¾×èí<wbr>¡ãí§
+noise signal, output signal êòáòã¶<wbr>»ãñº
+ä´é<wbr>´éçâ r-vary</font>
+
+<p><a name="sensor expansion"></a><b><font face="angsanaupc"><font color="#993366">sensor
+expansion</font></font></b>
+<br><font face="angsanaupc">mcb êòáòã¶<wbr>µèí
+sensor ä´é 4 ªø´ â´â<wbr>áµè<wbr>åð<wbr>ªø´<wbr>µéí§<wbr>áõ<wbr>ç§<wbr>¨ã
+darlington áåð sensor µð<wbr>ëò¡<wbr><wbr></font>
+<br>&nbsp;
+<center><font face="angsanaupc">&nbsp;</font><img src="image13.jpg" height=280 width=500></center>
+
+
+<p><font face="angsanaupc">áõ<wbr>ä¿<wbr>àåõéâ§
+2 ªø´<wbr><wbr>, vcc áåð 12v ¡ãðáê<wbr>ç§<wbr>¨ã
+transmitter ¼èò¹<wbr>·ò§ tx* áåð<wbr>¡ãðáê<wbr>ç§<wbr>¨ã
+receiver ¼èò¹<wbr>·ò§ bank* pin
+1,2 äáè<wbr>ãªé<wbr><wbr></font>
+<br><font face="angsanaupc">êááøµô<wbr>çèò<wbr>µéí§<wbr>¡òã<wbr>µèí
+sensor 10 µñç<wbr>à¢éò¡ñ<wbr>º
+bank 2 áõ 2 êôè§<wbr>·õè<wbr>µéí§<wbr>·ó<wbr>¤×í
+íí¡<wbr>áºº<wbr>ç§<wbr>¨ã
+sensors áåð<wbr>à¾ôèá<wbr>íø»¡ã³ì<wbr>à¢éò<wbr>·õè
+mcb êóëãñº bank 2 íø»¡ã³ì<wbr>·õè<wbr>µéí§<wbr>ãªé<wbr>áõ<wbr>´ñ§<wbr>¹õé<wbr><wbr></font>
+<ul>
+<li>
+<font face="angsanaupc">&nbsp;connector pins, sen_2</font></li>
+
+<li>
+<font face="angsanaupc">&nbsp;resistor pack, rp2 áåð rp6</font></li>
+
+<li>
+<font face="angsanaupc">&nbsp;capacitors, c53-c61</font></li>
+
+<li>
+<font face="angsanaupc">&nbsp;variable resistor, vr12</font></li>
+
+<li>
+<font face="angsanaupc">&nbsp;latch, u12</font></li>
+</ul>
+&nbsp;
+<br><font face="angsanaupc">sensor áµè<wbr>åð<wbr>µñç<wbr>áõ<wbr>·ñé§<wbr>àò¤<wbr>êè§<wbr>áåð<wbr>àò¤<wbr>ãñº
+êòëãñº<wbr>àò¤<wbr>êè§
+supply 12v, sensor áµè<wbr>åð<wbr>µñç
+volt drop 1.6v áºè§<wbr>íí¡<wbr>à»ç¹
+2 êèç¹<wbr><wbr></font>
+<center><img src="image14.jpg" height=395 width=400></center>
+<font face="angsanaupc">&nbsp;</font>
+<br><font face="angsanaupc">áºè§<wbr>à»ç¹<wbr>êèç¹<wbr>åð
+5 µñç<wbr><wbr></font>
+<br><font face="angsanaupc">volt drop ãçá<wbr><wbr></font>
+<br><font face="angsanaupc">5 x 1.6 = 8v</font>
+<br><font face="angsanaupc">volt drop ·õè r1</font>
+<br><font face="angsanaupc">12 - 8 = 4v</font>
+<br><font face="angsanaupc">¡ãðáê<wbr>·õè<wbr>ãªé<wbr>¤×í
+110ma, r1 ¤×í<wbr><wbr></font>
+<br><font face="angsanaupc">4 / 0.110 = 36ohm</font>
+<br><font face="angsanaupc">r2 ¡ç<wbr>àªè¹<wbr>à´õâç<wbr>¡ñ¹<wbr>¤×í
+36ohm</font>
+
+<p><font face="angsanaupc">¡òã<wbr>áºè§<wbr>¡åøèá<wbr>àò¤<wbr>ãñº<wbr>¹ñé¹<wbr>êòáòã¶<wbr>·ó<wbr>ä´é<wbr>êù§<wbr>êø´
+8 ¡åøèá<wbr><wbr></font>
+<center><font face="angsanaupc">&nbsp;</font>&nbsp;<img src="image15.jpg" height=400 width=444></center>
+<a name="motor driver"></a><b><font color="#993366">motor driver board</font></b>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; micro mouse áõ<wbr>áíàµíãì<wbr>íâùè<wbr>·õè
+2 åéí<wbr>ëåñ§ â´â<wbr>áíàµíãì<wbr>·õè<wbr>ãªé<wbr>¹ñé¹<wbr>à»ç¹
+vextor motor ãøè¹ (px 224-02a) ·ó<wbr>§ò¹<wbr>íôêãð<wbr>äáè<wbr>¢öé¹<wbr>µèí<wbr>¡ñ¹
+áõ<wbr>¢¹ò´<wbr>¢í§<wbr>·íãì¡êù§<wbr>êø´
+15.7 n-cm. áåð<wbr>áõ high frequency (20000 pulse/sec)
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ¹í¡<wbr>¨ò¡<wbr>¹õé
+micromouse âñ§<wbr>ãªé bipolar driver ·ó<wbr>§ò¹<wbr>áºº
+halfstep ªöè§¡òã<wbr>ãªé
+bipolar driver ¹õé<wbr>ãëé<wbr>·íãì¡áò¡<wbr>¡çèò
+unipolar ¶ö§ 40% áåð<wbr>¡òã<wbr>·ó<wbr>§ò¹<wbr>áºº
+halr step ¨ð<wbr>ªèçâ<wbr>·ó<wbr>à¾ôèá<wbr>¤çòá<wbr>á·è¹<wbr>âó<wbr>ã¹<wbr>¡òã<wbr>ºñ§¤ñº<wbr>ãëé
+micro mouse à¤å×èí¹<wbr>·õè<wbr>áò¡<wbr>¡çèò<wbr>áºº
+full step áã§<wbr>´ñ¹<wbr>ä¿<wbr>¿éò<wbr>·õè<wbr>¨èòâ¡ñ<wbr>º
+driver ¹õé<wbr>áõ<wbr>¢¹ò´
+16.8 v êèç¹<wbr>¡ãðáê<wbr>·õè
+driver
+<br>¨èòâ<wbr>íí¡<wbr>áò<wbr>áõ<wbr>¢¹ò´
+0.8 a.micro mouse êòáòã¶<wbr>áõ<wbr>ä´é
+·õè<wbr>¤çòá<wbr>àãçç<wbr>µñé§<wbr>áµè
+40 pps ¶ö§ 12000 pps
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ¡òã<wbr>·õè
+bipolar driiver ¨ð<wbr>êòáòã¶<wbr>·ó<wbr>áºº
+half-step â´â<wbr>¡ç<wbr>µèí<wbr>à¢éò¡ñ<wbr>º
+stepping motor sequencer áåð dual bridge driver ´ñ§<wbr>ãù»
+<br>&nbsp;
+<center><img src="drawing41.jpg" height=574 width=749></center>
+&nbsp;
+
+<p><a name="4.1  stepping motor"></a><b><font color="#993366">stepping
+motor sequencer</font></b>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; micro mouse ãªé
+chip l297 à»ç¹ stepping motor sequencer â´â<wbr>¨ð<wbr>áõ<wbr>êñ­­ò³<wbr>¤çº<wbr>¤øá<wbr>à¾õâ§<wbr>á¤è
+3
+<br>êñ­­ò³ ¤×í device
+enable , ëáø¹<wbr>·ç¹<wbr>à¢çá<wbr>¹òìô¡ò
+¹í¡<wbr>¨ò¡<wbr>¹õé<wbr>«ô»
+l297 âñ§<wbr>áõ chopper circuit êóëãñº<wbr>¡òã<wbr>¤çº<wbr>¤øá<wbr>¡ãðáê<wbr>¢í§<wbr>áíàµíãì
+áåð<wbr>¶éò<wbr>ã¹<wbr>¡ã³õ<wbr>·õè
+v ·õè r4/r5 áò¡<wbr>¡çèò
+v ·õè r2/r3 áåéç ¡ãðáê<wbr>¨ð<wbr>¶ù¡
+rectified â´â l297
+
+<p><a name="4.2  stepping motor"></a><b><font color="#993366">stepping
+motor driver</font></b>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; micro mouse ãªé<wbr>«ô»
+l298n à»ç¹<wbr>µñç<wbr>¢ñº
+motor (motor driver) «öè§<wbr>êòáòã¶<wbr>·ó<wbr>§ò¹<wbr>ãçá¡ñº«ô»
+l297 ä´é<wbr>íâèò§<wbr>´õ
+â´â<wbr>¡òã<wbr>µèí<wbr>ç§<wbr>¨ã
+´ñ§<wbr>ãù»
+<center><img src="drawing42.jpg" height=372 width=461></center>
+&nbsp;
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; output ¢í§
+bridge driver ¨ð<wbr>µèí<wbr>à¢éò¡ñ<wbr>º
+motor l1,l2 driver output áµè<wbr>åð<wbr>àêé¹<wbr>¨ð<wbr>¶ù¡<wbr>µèí<wbr>à¢éò¡ñºä´âí´
+d1-d8 â´â<wbr>áõ<wbr>¡òã<wbr>µèí<wbr>à¢éò¡ñ<wbr>º
+vcc,ground ãªé<wbr>êóëãñº
+´ôêªòãìµ motor charge
+ã¹<wbr>¡ã³õ<wbr>·õè<wbr>¨ð<wbr>»ô´à¤ã×èí<wbr>§
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp; motor control sequens ¨ð<wbr>·ó<wbr>§ò¹<wbr>áºº
+half-step áåð<wbr>µèí<wbr>´ñ§<wbr>ãù»
+<center><img src="image43.jpg" height=481 width=500></center>
+&nbsp;
+<br>&nbsp;
+<br><a name="4.3  driver"></a><b><font color="#993366">driver calibration</font></b>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; micro mouse ãªé
+motor driver board (mdb) à»ç¹<wbr>µñç<wbr>¤çº<wbr>¤øá
+stepping motor â´â<wbr>ãªé<wbr>êñ­­ò³<wbr>´ñ§<wbr>µèí<wbr>ä»<wbr>¹õé
+left motor clock , left motor direction , right motor clock , right motor
+direction , motor enable â´â mdb áõ<wbr>åñ¡é³ð<wbr>ãù»<wbr>ãèò§<wbr>´ñ§<wbr>ãù»
+<center><img src="image42.jpg" height=262 width=386></center>
+&nbsp;
+
+<p><a name="conclude"></a><b><font face="angsanaupc"><font color="#993366">êãø»<wbr><wbr></font></font></b>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; micro mouse à»ç¹<wbr>ë¹öè§<wbr>ã¹<wbr>µñç<wbr>íâèò§<wbr>¡òã<wbr>íí¡<wbr>áºº
+robot «öè§<wbr>¡òã<wbr>íí¡<wbr>áºº<wbr><wbr>&nbsp;
+micro mouse ãëé<wbr>êòáòã¶<wbr>·ó<wbr>§ò¹<wbr>ä´é<wbr>´õ<wbr>¹ñé¹<wbr>¢öé¹<wbr>íâùè¡ñº¡å<wbr>ä¡<wbr>ëåòâ
+æ êèç¹<wbr>»ãð¡íº<wbr>¡ñ¹
+µñé§<wbr>áµè microcontroller ·õè<wbr>ãªé<wbr>¤çòá<wbr>¤øá<wbr>íø»¡ã³ì<wbr>µèò§
+æ sensor ãªé<wbr>µãç¨<wbr>¨ñº<wbr>¡óá¾§
+áåð<wbr>»ãñº<wbr>µóáë¹è§<wbr>µñç
+step motor ·ó<wbr>ãëé micro mouse à¤å×èí¹<wbr>·õè
+â´â<wbr>·õè<wbr>êòáòã¶<wbr>¤çº<wbr>¤øá<wbr>ãíº<wbr>ä´é
+áåð<wbr>·õè<wbr>êó¤ñ­<wbr>·õè<wbr>êø´<wbr>¤×í<wbr>â»ãá¡ãá
+(software) à¾×èí<wbr>êãéò§<wbr>¤çòá<wbr>©åò´
+(intelligent) ãëé¡ñº micro mouse â´â<wbr>·ó<wbr>ãëé
+micro mouse êòáòã¶<wbr>¤é¹<wbr>ëò<wbr>àêé¹<wbr>·ò§·õè<wbr>´õ<wbr>·õè<wbr>êø´<wbr>¨ò¡<wbr>¨ø´<wbr>àãôèá<wbr>µé¹<wbr>ä»<wbr>àêé¹<wbr>ªñâ<wbr>ä´é<wbr>àãçç<wbr>·õè<wbr>êø´
+<br>&nbsp;¨ò¡<wbr>µñç<wbr>íâèò§<wbr>¹õé<wbr>êòáòã¶<wbr>¹ó<wbr>ä»<wbr>¾ñ²¹ò<wbr>µèí<wbr>ä»<wbr>ãëé
+micro mouse áõ<wbr>¤çòá<wbr>êòáòã¶<wbr>áò¡<wbr>¢öé¹<wbr>àªè¹
+¡òã<wbr>çôè§<wbr>àåõéâç<wbr>â¤é§
+¡òã<wbr>à¾ôèá<wbr>»ãðêô·¸ôàò¾<wbr>¢í§
+microcontroller áåð<wbr>à¾ôèá
+ram à¾×èí<wbr>ãí§<wbr>ãñº<wbr>â»ãá¡ãá<wbr>·õè<wbr>«ñº<wbr>«éí¹<wbr>ä´é
+
+<p><a name="reference"></a><b><font face="angsanaupc"><font color="#993366">àí¡<wbr>êòã<wbr>íéò§<wbr>íô§<wbr><wbr></font></font></b>
+<ul>
+<li>
+<font face="angsanaupc">alpha centre, ngee ann polytechnic, singapore,&nbsp;
+np micromouse kit technical manual (reversion 2,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+jan<wbr>96),&nbsp; 1996</font></li>
+
+<li>
+<font face="angsanaupc">ãè.â×¹ àùèçãçãã³<wbr><wbr>,&nbsp;
+·äé®õ<wbr>áåð<wbr>¡òã<wbr>»ãð<wbr>âø¤µìäáâ¤ã<wbr>â»ãà«êà«íãì
+z-80,&nbsp; º.«õàíç<wbr>´âùà¤ªñè<wbr>¹
+¨ó¡ñ´<wbr><wbr>,&nbsp; 2536</font></li>
+</ul>
+&nbsp;
+<br>&nbsp;
+</body>
+</html>

@@ -1,0 +1,211 @@
+<html>
+<!-- created with the coffeecup html editor++ -->
+<!--          http://www.coffeecup.com        -->
+<!--     brewed on july 5 1999 2:24:10 pm     -->
+<head>
+  <title>multititier client server architecture</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+</head>
+<body bgcolor="ffffff" text="000000" link="0000ff" vlink="800080">
+<table width = 100% bgcolor = ffcc99>
+  <tr><!-- row 1 -->
+     <td align = center><b>สถาปัตยกรรม<wbr>ของ multitier client server</b></td>
+  </tr>
+</table><br>
+
+<table>
+  <tr><!-- row 1 -->
+     <td align = center><img src="picture1.gif" width="412" height="151" border=0></td>
+     <td>
+
+<ul>
+ <b>   <li><a href="#section1">ความ<wbr>รู้<wbr>เบื้อง<wbr>ต้น<wbr><wbr></a>
+    <li><a href="#section2">คำ<wbr>จำกัด<wbr>ความ<wbr><wbr></a>
+    <li><a href="#section3">ชนิด<wbr>ของ<wbr>โครง<wbr>สร้าง<wbr><wbr></a>
+    <li><a href="#section4">การ<wbr>เปรียบ<wbr>เทียบ<wbr>ความ<wbr>สามารถ<wbr>ระหว่าง two tier และ three tier</a></b>
+</ul>
+
+
+</td>
+  </tr>
+</table>
+
+
+<center>
+</center>
+<p>
+<a name="section1">
+<table bgcolor=ffb164 border = 1 vspace = 20 cellspacing = 5>
+    <tr><!-- row 1 -->
+      <td align = center><b>ความ<wbr>รู้<wbr>เบื้อง<wbr>ต้น<wbr><wbr></b></td>
+    </tr>
+</table>
+
+<br>
+
+
+<dd>เมื่อ<wbr>กล่าว<wbr>ถึง<wbr>ระบบ<wbr>ของ<wbr>ไคร์เอนท์<wbr>/เซิร์ฟเวอร์เรา<wbr>มัก<wbr>รู้<wbr>จัก<wbr>ระบบ<wbr>ไคร์เอนท์<wbr>/เซิร์ฟเวอร์ใน<wbr>ด้าน<wbr>การ<wbr>เป็น<wbr>ผู้<wbr>ที่<wbr>คอย<wbr>จัด<wbr>การกับข้อ<wbr>มูล<wbr>ต่างๆทั้ง<wbr>ทางตรง<wbr>และ<wbr>ทางอ้อม<wbr>ผ่าน<wbr>ตัว<wbr><wbr>เซิร์ฟเวอร์ ใน<wbr>สมัย<wbr>ก่อน<wbr>ไคร์เอนท์<wbr>/เซิร์ฟเวอร์ทำ<wbr>ได้<wbr>เฉพาะ<wbr>ใน<wbr>ระบบ<wbr>เล็กๆเท่า<wbr>นั้น<wbr> 
+ไม่<wbr>สามารถ<wbr>ใช้<wbr>ผ่าน<wbr>ระบบ<wbr>เครือ<wbr>ข่าย<wbr>ขนาด<wbr>ใหญ่<wbr>ได้<wbr>เนื่อง<wbr>จาก<wbr>ข้อ<wbr>จำกัด<wbr>ใน<wbr>ด้านเครื่องมือ<wbr>และ<wbr>เทค<wbr>โนโลยี 
+<dd>เมื่อ<wbr>มี<wbr>การ<wbr>ตื่น<wbr>ตัว<wbr>ใน<wbr>การ<wbr>ใช้<wbr>ระบบ<wbr>เครือ<wbr>ข่าย<wbr>มาก<wbr>ขึ้น<wbr>แต่<wbr>ความ<wbr>สามารถ<wbr>ใน<wbr>ระบบ<wbr>ไคร์แอนท์<wbr>/เซิร์ฟเวอร์ยัง<wbr>ไม่<wbr>เพียง<wbr>พอ<wbr>ทา<wbr>งองค์กร<wbr>ต่าง<wbr>ๆ
+จึง<wbr>เริ่ม<wbr>มี<wbr>การ<wbr>ปรับ<wbr>ปรุง<wbr>ให้<wbr>ระบบ<wbr>ไคร์เอนท์<wbr>/เซิร์ฟเวอร์มี<wbr>ประสิทธิภาพ<wbr>มาก<wbr>ขึ้น<wbr>ทั้ง<wbr>ความ<wbr>สะดวก<wbr>ใน<wbr>การ<wbr>ใช้<wbr>และ<wbr>ขนาด<wbr>ของ<wbr>ระบบ<wbr>ที่<wbr>เหมาะ<wbr>สม<wbr>แต่<wbr>ปัญหา<wbr>ที่<wbr>ตาม<wbr>มา<wbr>ก็<wbr>คือ
+ลักษณะ<wbr>โครง<wbr>สร้าง<wbr>แบบ<wbr>ใด<wbr>จึง<wbr>จะ<wbr>เหมาะ<wbr>สมกับระบบ<wbr>ที่<wbr>ใช้<wbr>กัน<wbr>อยู่<wbr><wbr>?  :-two tier หรือ three tier??? 
+<dd>จาก<wbr>สถิติ<wbr>ของ<wbr>หน่วย<wbr>สำรวจ<wbr>ตลาด<wbr>ของ standish group international, inc. พบ<wbr>ว่า<wbr>อัตรา<wbr>การ<wbr>ใช้<wbr>ไคร์เอนท์<wbr>/เซิร์ฟเวอร์แบบ three tier
+มี<wbr>อัตรา<wbr>เท่ากับ<wbr>17% ใน<wbr>ปี 1996  และ<wbr>คาด<wbr>ว่า<wbr>จะ<wbr>เติบ<wbr>โต<wbr>ขึ้น<wbr>ไป<wbr>เรื่อยๆใน<wbr>อนาคต 
+<dd> โครง<wbr>สร้าง<wbr>ของ<wbr>ระบบ<wbr>มี<wbr>ผล<wbr>ต่อ<wbr>การ<wbr>จัด<wbr>การ<wbr>และ<wbr>รูป<wbr>ร่าง<wbr>หน้า<wbr>ตา<wbr>ของ<wbr>การ<wbr>ออก<wbr>แบบ<wbr>ซอฟต์แวร์ การ<wbr>เลือก<wbr>ลักษณะ<wbr>โครง<wbr>สร้าง<wbr>ของ<wbr>ระบบ<wbr>จะ<wbr>ขึ้น<wbr>อยู่กับความ<wbr>ซับ<wbr>ซ้อน<wbr>ของ<wbr>โปรแกรม<wbr>ประยุกต์ ระดับ<wbr>ของ<wbr>ข้อ<wbr>มูล<wbr> ความ<wbr>ต้อง<wbr>การ<wbr>ใน<wbr>ส่วน<wbr>ที่<wbr>ติด<wbr>ต่อกับผู้<wbr>ใช้ ประเภท<wbr>ของ<wbr>เครือ<wbr>ข่าย และ<wbr>ภาพ<wbr>โดย<wbr>รวม<wbr>ของ<wbr>โปรแกรมป<wbr>ระ<wbr>ยุกต์<wbr>ก่อน<wbr>ที่<wbr>จะ<wbr>ตัด<wbr>สิน<wbr>ใจ<wbr>เลือก<wbr>ชนิด<wbr>ของ<wbr>โครง<wbr>สร้าง
+<dd>การ<wbr>ออก<wbr>แบบ<wbr>โครง<wbr>สร้าง<wbr>ที่<wbr>ไม่<wbr>เหมาะ<wbr>สม<wbr>หรือ<wbr>ความ<wbr>บก<wbr>พร่อง<wbr>ของ<wbr>การ<wbr>ใช้<wbr>งาน<wbr>มี<wbr>ผล<wbr>ต่อ<wbr>การ<wbr>ตอบ<wbr>สนอง<wbr>ของ<wbr>ไค<wbr><wbr>ร์เอนท์<wbr>/เซิร์ฟเวอร์การ<wbr>เลือก<wbr>โครง<wbr>สร้าง<wbr>จะ<wbr>มี<wbr>ผล<wbr>มาก<wbr>ต่อ<wbr>การพั<wbr>?นา<wbr>และ<wbr>การ<wbr>ดู<wbr>แล<wbr>รักษา<wbr>โปรแกรม<wbr>ประยุกต์ เอก<wbr>สาร<wbr>ฉบับ<wbr>นี้<wbr>จะ<wbr>ระบุ<wbr>ถึง<wbr>ความ<wbr>คิด<wbr>พื้น<wbr>ฐาน<wbr>ของ<wbr>โครงสร้า<wbr><wbr>งไคร์เอนท์<wbr>/เซิร์ฟเวอร์ คำ<wbr>จำกัด<wbr>ความ<wbr>ของ<wbr>โครง<wbr>สร้าง<wbr><wbr>two
+tier และ three tier และ<wbr>วิเคราะห์<wbr>ถึง<wbr>ประ<wbr>โยชน์ ข้อ<wbr>จำกัด<wbr>ของ<wbr>โครง<wbr>สร้าง<wbr>ทั้ง<wbr>สอง<wbr>ประเภท<wbr>รวม<wbr>ทั้ง<wbr>เปรียบ<wbr>เทียบ<wbr>ความ<wbr>แตก<wbr>ต่าง<wbr>ใน<wbr>การ<wbr>พัฒนา<wbr>ความ<wbr>ยืด<wbr>หยุ่น<wbr>และ<wbr>ง่ายใน<wbr>การ<wbr>นำ<wbr>มา<wbr>ใช้<wbr>ใหม่ 
+
+
+<p></a>
+
+<a name="section2">
+<table bgcolor=ffb164 border = 1 vspace = 20 cellspacing = 5>
+    <tr><!-- row 1 -->
+      <td align = center><b>คำ<wbr>จำกัด<wbr>ความ<wbr><wbr></b></td>
+    </tr>
+</table>
+<br>
+
+<dd> เอก<wbr>สาร<wbr>ที่<wbr>เกี่ยวกับไคร์เอนท์<wbr>/เซิร์ฟเวอร์มัก<wbr>ระบุ<wbr>ความ<wbr>หมาย<wbr>ของ<wbr>ไคร์เอนท์<wbr>/เซิร์ฟเวอร์อย่าง<wbr>สับ<wbr>สน<wbr>ความ<wbr>หมาย<wbr>ที่<wbr>แท้<wbr>จริง<wbr>ของ<wbr>ไคร์เอนท์<wbr>/เซิร์ฟเวอร์นั้น<wbr>คือ<wbr>อะไร   ที่<wbr>จริง<wbr>แล้ว<wbr>ไคร์เอนท์และเซิร์ฟเวอร์เป็น<wbr>ตัว<wbr>ซอฟท์แวร์ ไม่<wbr>มี<wbr>อุปกรณ์<wbr><wbr>?าร์ดแวร์มา<wbr>เกี่ยว<wbr>ข้อง<wbr>รูป<wbr>แบบ<wbr>ขั้น<wbr>พื้น<wbr>ฐาน<wbr>ของ<wbr>ไคร์เอนท์<wbr>/เซิร์ฟเวอร์จะ<wbr>เกี่ยว<wbr>ข้องกับโปรแกรม<wbr>การ<wbr>ร้อง<wbr>ขอ<wbr><wbr>(request)ซึ่ง<wbr>ตัว<wbr>ไคร์เอนท์จะ<wbr>ส่ง<wbr>ออก<wbr>ไป<wbr>เมื่อ<wbr>ตัวเซิร์ฟเวอร์ได้<wbr>รับ<wbr>คำ<wbr>ร้อง<wbr>ขอ<wbr><wbr>?ั้นตัวเซิร์ฟเวอร์จะ<wbr>พยายาม<wbr>ตอบ<wbr>รับ<wbr>การ<wbr>ร้อง<wbr>ขอ<wbr>นั้น<wbr>และ<wbr>จะ<wbr>ส่ง<wbr>โปรแกรม<wbr>การ<wbr>ตอบ<wbr>รับ<wbr><wbr>(response) ซึ่ง<wbr>จาก<wbr>รูป<wbr>ที่<wbr><wbr>1
+จะ<wbr>บอก<wbr>ถึง<wbr>กระบวน<wbr>การ<wbr>แลก<wbr>เปลี่ยน<wbr>โปรแกรม<wbr>ระหว่าง<wbr>ตัว<wbr>ไคร์เอนท์กับตัวเซิร์ฟเวอร์ กระบวน<wbr>การ<wbr><wbr>ของ<wbr>ตัว<wbr>ไคร์เอนท์ จะ<wbr>ส่ง<wbr>คำ<wbr>ร้อง<wbr>ขอ<wbr>ไป<wbr>ยัง<wbr>ตัวเซิร์ฟเวอร์ตัวเซิร์ฟเวอร์จะ<wbr>ทำ<wbr>การ<wbr>แปล<wbr>ข้อ<wbr>ความ<wbr>และ<wbr>พยายาม<wbr>ทำ<wbr>ตาม<wbr>คำ<wbr>ร้อง<wbr>ขอ<wbr>นั้น<wbr>ซึ่ง<wbr>อาจ<wbr>จะ<wbr>เกี่ยว<wbr>ข้องกับฐาน<wbr>ข้อ<wbr>มูล การ<wbr>ประมวล<wbr>ผล<wbr>ข้อ<wbr>มูล<wbr>การค<wbr>วบคุม<wbr>อุปกรณ์<wbr>ภาย<wbr>นอก หรือ<wbr>การ<wbr>ส่ง<wbr>คำ<wbr>ร้อง<wbr>ขอ<wbr>เพิ่ม<wbr>เติม<wbr>ไป<wbr>ยังเซิร์ฟเวอร์ตัว<wbr>อื่น ตาม<wbr>ลักษณะ<wbr>โครง<wbr>สร้าง<wbr>แล้ว<wbr>ไคร์เอนท์หนึ่ง<wbr>ตัว<wbr>สามารถ<wbr>ส่ง<wbr>คำ<wbr>ร้อง<wbr>ขอ<wbr>ไป<wbr>ยังเซิรฟ์เวอร์ได้<wbr>หลาย<wbr>ตัว<wbr>และเซิ<wbr>ร์ฟเวอร์หนึ่ง<wbr>ตัว<wbr>ก็<wbr>สามารถ<wbr>ให้<wbr>บริการ<wbr>แก่<wbr>ไคร์เอนท์ได้<wbr>หลาย<wbr>ตัว<wbr>เช่น<wbr>กัน
+  <p>
+<center><img src="figure1.gif" width="600" height="180" border=2></center><br>
+<center>รูป<wbr>ที่ 1  client/servertransactions</center>
+<p>
+
+<dd>การ<wbr>ทำ<wbr>งาน<wbr>ของ<wbr>ตัว<wbr>ไคร์เอนท์และเซิร์ฟเวอร์นั้น<wbr>ตัว<wbr>ไคร์เอนท์จะ<wbr>ต้อง<wbr>เป็น<wbr>ตัว<wbr>เริ่ม<wbr>ใน<wbr>การ<wbr>ติด<wbr>ต่อ<wbr>กัน และ<wbr>ตัวเซิร์ฟเวอร์จะ<wbr>เป็น<wbr>ตัว<wbr>ตอบ<wbr>รับ<wbr>ตัวเซิร์ฟเวอร์ไม่<wbr>สามารถ<wbr>เป็น<wbr>ตัว<wbr>เริ่ม<wbr>การ<wbr>ติด<wbr><wbr>ต่อ<wbr>ได้ ไคร์เอนท<wbr>์
+และเซิร์ฟเวอร์เป็น<wbr>ซอฟท์แวร์<wbr>ซึ่ง<wbr>ติด<wbr>ตั้ง<wbr>อยู่<wbr>บน<wbr>ฮาร์ดแวร์<wbr>ที่<wbr>เหมาะ<wbr>สม<wbr>กระบวน<wbr>การ<wbr>ของ<wbr>ไคร์<wbr>เอนท์จะ<wbr>อยู่<wbr>บน<wbr>ฮาร์ดแวร์<wbr>และ<wbr>ขอ<wbr>ข้อ<wbr>มูล<wbr>จาก<wbr>กระบวน<wbr>การ<wbr>ของเซิร์ฟเวอร์ซึ่ง<wbr>ทำ<wbr>งาน<wbr>อยู่<wbr>บน<wbr>ฮาร์ด<wbr>แวร์อีก<wbr>ตัว<wbr>หนึ่ง<wbr>หรือ
+อยู่<wbr>บน<wbr>ฮาร์ดแวร์<wbr>ตัว<wbr>เดียว<wbr>กัน<wbr>ความ<wbr>จริง<wbr>แล้ว<wbr>ใน<wbr>ขั้น<wbr>ตอน<wbr>ของ<wbr>การ<wbr>ทำ<wbr>ตัว<wbr>ต้น<wbr>แบบ ผู้<wbr>พัฒนา<wbr>อาจ<wbr>จะเ<wbr>ลือกที่<wbr>จะ<wbr>มี<wbr>ทั้ง<wbr>ตัว<wbr>ไคร์เอนท์ที่<wbr>ใช้<wbr>แสดง<wbr>ผล<wbr>และ<wbr>ตัวเซิร์ฟเวอร์ฐาน<wbr>ข้อ<wbr>มูล<wbr>อยู่<wbr>บนเครื่องฮา<wbr><wbr>ร์ดแวร์ pc
+เดียว<wbr>กัน<wbr>ก่อน<wbr>เพราะ<wbr>ตัวเซิร์ฟเวอร์สามารถ<wbr>ที่<wbr>จะ<wbr>แยก<wbr>อิสระ<wbr>ไป<wbr>เป็น<wbr>ระบบ<wbr>ที่<wbr>ใหญ่<wbr>ขึ้น<wbr>สำหรับ<wbr>ทด<wbr>สอบ<wbr>ก่อน<wbr>ที่<wbr>จะ<wbr>สร้าง<wbr>เป็น<wbr>ผลิต<wbr>ภัณฑ์<wbr>หลัง<wbr>จาก<wbr>การ<wbr>พัฒนา<wbr>โครง<wbr>สร้าง<wbr>ข้อ<wbr>มูล<wbr>และ<wbr>โปรแกรม<wbr>ประยุกต์<wbr>ขน<wbr><wbr>าดใหญ่<wbr>ได้<wbr>เสร็จ<wbr>สมบูรณ์<wbr>แล้ว
+
+<dd>แม้<wbr>ว่า<wbr>ไคร์เอนท์และเซิร์ฟเวอร์จะ<wbr>สามารถ<wbr>ติด<wbr>ตั้ง<wbr>อยู่<wbr>บนเครื่องเดียว<wbr>กัน<wbr>ได้<wbr>แต่<wbr>เอก<wbr>สารฉบ<wbr>ับนี้<wbr>จะ<wbr>กล่าว<wbr>ถึง<wbr>เฉพาะ<wbr>โครง<wbr>สร้าง<wbr>ที่<wbr>ใช้<wbr>สร้าง<wbr><wbr>distributed
+application เช่น ตัว<wbr>ไคร์เอนท์และเซิร์ฟเวอร์ที่<wbr>อยู่<wbr>บน<wbr>อุปกรณ์<wbr>ที่<wbr>แยก<wbr>ออก<wbr>จาก<wbr>กัน 
+<dd>ตาม<wbr>ที่ bever (et al.) กล่าว<wbr>ว่า<wbr><wbr>distributed application
+ประกอบ<wbr>ด้วย<wbr>ส่วน<wbr>ที่<wbr>แยก<wbr>ออก<wbr>จาก<wbr>กัน ซึ่ง<wbr>ทำ<wbr>งาน<wbr>บนเครื่องบน<wbr>เครือ<wbr>ข่าย<wbr>ต่างเครื่องกัน<wbr>แต่<wbr>ทำ<wbr>งา<wbr><wbr>นร่วม<wbr>กัน<wbr>เพื่อ<wbr>ทำ<wbr>งาน<wbr>ให้<wbr>เสร็จ<wbr>ดัง<wbr>เป้า<wbr>หมาย<wbr>ที่<wbr>ตั้ง<wbr>ไว้ 
+<dd>ตัว<wbr>ไคร์เอนท์บน<wbr>โครง<wbr>สร้าง<wbr>ไคร์เอนท์<wbr>/เซิร์ฟเวอร์ไม่<wbr>จำ<wbr>เป็น<wbr>ต้อง<wbr>มี<wbr><wbr>gui (graphic user interface) 
+แต่<wbr>ใน<wbr>โปรแกรม<wbr>เชิง<wbr>ธุรกิจ<wbr>ส่วน<wbr>ใหญ่<wbr>จะ<wbr>มี<wbr>ส่วน<wbr>ของ gui อยู่<wbr>ด้วย
+เพื่อ<wbr>ความ<wbr>สะดวก<wbr>ของ<wbr>ผู้<wbr>ใช้  ใน<wbr>บาง<wbr>ระบบ<wbr>ตัว<wbr>ไคร์เอนท์จำ<wbr>เป็น<wbr>จะ<wbr>ต้อง<wbr>ส่วน<wbr>เพิ่ม<wbr>เติม<wbr>ขึ้น<wbr>มาเช<wbr>่น print spooling (เช่น<wbr><wbr>network print queues)
+หรือ<wbr>ส่วน<wbr>ที่<wbr>ใช้<wbr>ใน<wbr>การ<wbr>แสดง<wbr>ผล (เช่น  x-window) 
+<p>
+</a>
+
+<a name="section3">
+<table bgcolor=ffb164 border = 1 vspace = 20 cellspacing = 5>
+    <tr><!-- row 1 -->
+      <td align = center><b>ชนิด<wbr>ของ<wbr>โครง<wbr>สร้าง<wbr><wbr></b></td>
+    </tr>
+</table>
+<br>
+
+<dd> ส่วน<wbr>ที่<wbr>ใหญ่<wbr>ที่<wbr>สุด<wbr>ของ<wbr>โปรแกรม<wbr>ประยุกต์<wbr>ที่<wbr><wbr>end user ใช้ จะ<wbr>ประกอบ<wbr>ด้วย<wbr><wbr>3 ส่วน<wbr>ใหญ่<wbr>ๆ
+คือ<wbr>ส่วน<wbr>ที่<wbr>แสดง<wbr>ผล<wbr>ส่วน<wbr>ประมวล<wbr>ผล<wbr>และ<wbr>ส่วน<wbr>ของ<wbr>ข้อ<wbr>มูล<wbr>โครง<wbr>สร้าง<wbr>ไคร์เอนท์<wbr>/เซิร์ฟเวอร์สามารถ<wbr>อธิบาย<wbr>ได้<wbr>โดย<wbr>ดู<wbr>ว่า<wbr>ส่วน<wbr>ประกอบ<wbr>ที่<wbr>แบ่ง<wbr>ออก<wbr>มา<wbr>แล้ว<wbr>แยก<wbr>ไป<wbr>ตาม<wbr>เครือ<wbr>ข่าย
+<p>
+<b>two-tier architecture</b><br>
+
+<dd>ส่วน<wbr>ประกอบ 3 ส่วน ของ<wbr>โปรแกรม<wbr>อัน<wbr>ได้<wbr>แก่ ส่วน<wbr>แสดง<wbr>ผล<wbr>ส่วน<wbr>ประมวล<wbr>ผล<wbr>และ<wbr>ส่วน<wbr>ของ<wbr>ข้อ<wbr>มูล ซึ่ง<wbr>สามารถ<wbr>แบ่ง<wbr>ได้<wbr>ออก<wbr>เป็น<wbr><wbr>2 จำพวก คือ
+ส่วน<wbr>ของ<wbr>รหัส<wbr>ของ<wbr>ไคร์เอนท์และ<wbr>ส่วน<wbr>ของ<wbr>ฐาน<wbr>ข้อ<wbr>มูล<wbr>ของเซิร์ฟเวอร์ 
+<dd>โปรแกรม<wbr>ของ<wbr>ไคร์เอนท์ที่<wbr>ได้<wbr>รับ<wbr>การ<wbr>พัฒนา<wbr>แล้ว<wbr>นั้น จะ<wbr>ต้อง<wbr>เป็น<wbr>ตัว<wbr>หลัก<wbr>ที่<wbr>ทำ<wbr>งาน<wbr>ได้<wbr>อย่างค<wbr>ล่อง<wbr>แคล่วใน<wbr>การ<wbr>การ<wbr>ส่ง<wbr>การ<wbr>ร้อง<wbr>ขอ<wbr>ของ<wbr>ไคร์เอนท์ ไป<wbr>ยังเครื่องเซิร์ฟเวอร์ซึ่ง<wbr>เป็น<wbr>สิ่ง<wbr>สำ<wbr>คัญมาก<wbr>สำหรับ<wbr>การ<wbr>วาง<wbr>โครง<wbr>สร้าง<wbr>แบบ<wbr><wbr>two
+tier 
+<dd>ส่วน<wbr>ของ<wbr>การ<wbr>แสดง<wbr>ผล<wbr>ถูก<wbr>ควบ<wbr>คุม<wbr>โดย<wbr>ไคร์เอนท์   ส่วน<wbr>การ<wbr>ประมวล<wbr>ผล<wbr>นั้น<wbr>จะ<wbr>แบ่ง<wbr>ระหว่าง<wbr>ตัว<wbr>ไคร์<wbr>เอนท์และ<wbr>ตัวเซิร์ฟเวอร์และ<wbr>ส่วน<wbr>ของ<wbr>ข้อ<wbr>มูล<wbr>นั้น<wbr>จะ<wbr>ถูก<wbr>เก็บ
+และ<wbr>จัด<wbr>การ<wbr>ผ่าน<wbr>ตัวเซิร์ฟเวอร์ 
+<dd>ใน<wbr>การ<wbr>ร้อง<wbr>ขอ<wbr>ข้อ<wbr>มูล<wbr>จะ<wbr>อยู่<wbr>ใน<wbr>รูปฟอร์มของ<wbr><wbr>sql โดย<wbr>การ<wbr>ส่ง
+sqlจาก<wbr>ไคร์เอนท์ถึงเซิร์ฟเวอร์ต้อง<wbr>การ<wbr>การ<wbr>เชื่อม<wbr>ต่อ<wbr>ที่<wbr>ค่อน<wbr>ข้าง<wbr>แน่<wbr>นอน<wbr>ระหว่าง<wbr>ทั้ง<wbr>สอง<wbr>ชั้น<wbr><wbr>ไคร์เอนท์จะ<wbr>ต้อง<wbr>รู้<wbr>ถึง<wbr>วากยสัมพันธ์<wbr>ของเซิร์ฟเวอร์หรือ<wbr>มี<wbr>การ<wbr>แปลง<wbr>รูป<wbr>แบบ<wbr>ผ่าน api (application
+program interface) และ<wbr>มัน<wbr>จะ<wbr>ต้อง<wbr>รู้<wbr>ว่าเซิร์ฟเวอร์ว่า<wbr>ตั้ง<wbr>อยู่<wbr>ที่<wbr>ใด<wbr>และ<wbr>ข้อ<wbr>มูล<wbr>จะ<wbr>ถูก<wbr>จัด<wbr>การ<wbr>อย่าง<wbr>ไร<wbr>และ<wbr>ข้อม<wbr>ูลถูก<wbr>กำหนด<wbr>อย่าง<wbr>ไร<wbr>การ<wbr>ร้อง<wbr>ขอ<wbr>จะ<wbr>ถูก<wbr>เก็บ<wbr>และ<wbr>ประมวล<wbr>ผล<wbr>บนเครื่องเซิร์ฟเวอร์ซึ่ง<wbr>เป็น<wbr>ศูนย์<wbr>รวม<wbr>ของ<wbr>งาน<wbr>ทั้ง<wbr>หมด<wbr>เช่น<wbr>การ<wbr>เช็ค<wbr>ความ<wbr>ถูก<wbr>ต้อง<wbr>ของ<wbr>ข้อ<wbr>มูล<wbr>การ<wbr>รวบ<wbr>รวม<wbr>ข้อ<wbr>มูล<wbr>และ<wbr>การ<wbr>รักษา<wbr>ความปล<wbr>อด<wbr>ภัย<wbr>ของ<wbr>ข้อ<wbr>มูล<wbr>ข้อ<wbr>มูล<wbr>จะ<wbr>ถูก<wbr>ส่ง<wbr>คืน<wbr>ไป<wbr>ยัง<wbr>ตัว<wbr>ไคร์เอนท<wbr>์
+และ<wbr>ถูก<wbr>จัด<wbr>การ<wbr>ใน<wbr>ระดับ<wbr>ของ<wbr>ไคร์เอนท์ แล้ว<wbr>แสดง<wbr>ผล<wbr>ออก<wbr>มา<wbr>เป็น<wbr>ต้น
+<p>
+<center><img src="figure2.gif" width="600" height="180" border=2><br></center>
+<br><center>รูป<wbr>ที่ 2  dataaccess topology for two-tier architecture<br>
+majority of functional logic exists at the client level</center>
+<p>
+<dd>ข้อ<wbr>ดี<wbr>ของ two tier คือ<wbr>โปรแกรม<wbr>ที่<wbr>พัฒนา<wbr>ขึ้น<wbr>มา<wbr>นั้น<wbr>เร็ว<wbr>มาก เพราะ<wbr>ระบบ two tier สามารถ<wbr>พัฒนา<wbr>เป็น<wbr>ส่วน<wbr>ย่อย<wbr>เล็กๆ ได้
+หลัก<wbr>จาก<wbr>นั้น<wbr>มัน<wbr>จะ<wbr>นำ<wbr>รหัส<wbr>มา<wbr>เปรียบ<wbr>เทียบ<wbr>กัน แต่<wbr>มัน<wbr>เป็น<wbr>ระบบ<wbr>ที่<wbr>ค่อน<wbr>ข้าง<wbr>จะ<wbr>ยืด<wbr>หยุ่น<wbr>น้อย 
+<dd>เครื่องมือ<wbr>ของ two tier สามารถ<wbr>ใช้<wbr>ลักษณะ<wbr>โครง<wbr>สร้าง<wbr>ข้อ<wbr>มูล รวม<wbr>ทั้ง<wbr>การ<wbr>สร้าง<wbr>ใน<wbr>โพรซิ<wbr>เยอร์ และ<wbr>ฟังก์ชั่น<wbr>ได้<wbr>หลาย<wbr>รูป<wbr>แบบ
+อีก<wbr>ทั้ง<wbr>ยัง<wbr>ป้อง<wbr>กัน สิ่ง<wbr>ที่<wbr>เกิด<wbr>ขึ้น<wbr>จาก<wbr>การ<wbr>โปรแกรม เช่น<wbr>การ<wbr>จัด<wbr>การ<wbr>หน่วย<wbr>ความ<wbr>จำ เครื่องมือ<wbr>เหล่า<wbr>นี้<wbr>จะ<wbr>ใช้<wbr>เทคนิค<wbr>การ<wbr>เรียก<wbr>ซ้ำ และ<wbr>ใช้<wbr>เทคนิค rapid
+application develpment(rad) ซึ่ง<wbr>ทำ<wbr>ให้<wbr>แน่<wbr>ใจ<wbr>ได้<wbr>ว่า ความ<wbr>ต้อง<wbr>การ<wbr>ของ<wbr>ผู้<wbr>ใช้<wbr>จะ<wbr>สามารถ<wbr>ทำ<wbr>ได้<wbr>อย่าง<wbr>รวด<wbr>เร็ว และ<wbr>สมบูรณ์ 
+<dd>is organizations สามารถ<wbr>ติด<wbr>ต่อ<wbr>ส่วน<wbr>ที่<wbr>เหลือ<wbr>อยู่ โดย<wbr>ใช้<wbr>คำ<wbr>สั่ง<wbr>ของ<wbr>ผู้<wbr>ใช้ ผ่านเครื่องมือ<wbr>สำหรับ<wbr>การ<wbr>พัฒนา<wbr>ระบบ two tier
+ไคร์เอนท์<wbr>/เซิร์ฟเวอร์ ซึ่ง<wbr>พัฒนา<wbr>ได้<wbr>อย่าง<wbr>รวด<wbr>เร็ว และ<wbr>แปลง<wbr>รูป<wbr>แบบ<wbr>ได้<wbr>มาก 
+<dd>โครง<wbr>สร้าง<wbr>แบบ two tier สามารถ<wbr>ทำ<wbr>งาน<wbr>ได้<wbr>ดี<wbr>ใน<wbr>สภาวะ<wbr>แวด<wbr>ล้อม<wbr>ที่<wbr>ไม่<wbr>มี<wbr>การ<wbr>เปลี่ยน<wbr>แปลง โครง<wbr>สร้าง<wbr>นี้ จะ<wbr>ไม่<wbr>เหมาะ<wbr>สมกั<wbr>บ
+สภาวะ<wbr>แวด<wbr>ล้อม<wbr>แบบ<wbr>กระจาย หรือ<wbr>แตก<wbr>ต่างกับกฎ<wbr>ที่<wbr>เปลี่ยน<wbr>แปลง<wbr>ไป<wbr>อย่าง<wbr>รวด<wbr>เร็ว เพราะ<wbr>ว่า<wbr>โปรแกรม<wbr>ขนาด<wbr>ใหญ่<wbr>ที่<wbr>มี<wbr>อยู่<wbr>บนเครื่องไคร์เอนท์<wbr>pc  ทำ<wbr>ให้<wbr>โครง<wbr>สร้าง<wbr>แบบ two tier จึง<wbr>เจอกับปัญหา<wbr>ของ<wbr>การ<wbr>ควบ<wbr>คุม และ
+ปัญหา<wbr>ของ<wbr>การ re-distribution  การ<wbr>เปลี่ยน<wbr>กฎ<wbr>เกณฑ์ จะ<wbr>ต้อง<wbr>เปลี่ยน<wbr>ที่<wbr>ตัว<wbr>ไคร์เอนท์ แต่<wbr>ละ<wbr>ตัว แต่<wbr>ละ<wbr>โปรแกรม<wbr>ประยุกต์  การ<wbr>เปลี่ยน<wbr>แปลง<wbr>ไคร์เอนท์ผ่าน<wbr>เครือ<wbr>ข่าย<wbr>เป็น<wbr>งาน<wbr>ที่<wbr>ยาก เนื่อง<wbr>จาก<wbr>ขาด<wbr>การ<wbr>ควบ<wbr>คุม<wbr>การ<wbr>ปรับ<wbr>ปรุง<wbr>รุ่น<wbr>ของ<wbr>โปรแกรม<wbr>ในเครื่อง ดัง<wbr>นั้น
+การ<wbr>ปรับ<wbr>เปลี่ยน หรือ<wbr>ปรับ<wbr>ปรุง<wbr>โปรแกรม<wbr>จึง<wbr>ต้อง<wbr>ทำกับไคร์เอนท์ทุกเครื่อง 
+<dd>ระบบ<wbr>รักษา<wbr>ความ<wbr>ปลอด<wbr>ภัย<wbr>ใน<wbr>ระบบ two tier มี<wbr>ความ<wbr>ซับ<wbr>ซ้อน<wbr>มาก เพราะ<wbr>ว่า ผู้<wbr>ใช้<wbr>แต่<wbr>ละ<wbr>คน<wbr>ต้อง<wbr>ใช้<wbr>รหัส<wbr>ผ่าน<wbr>ที่<wbr>แตก<wbr>ต่าง<wbr>กัน
+สำหรับ<wbr>การ<wbr>ประมวล sql แต่<wbr>ละ<wbr>ครั้ง โปรแกรม<wbr>ไคร์เอนท์<wbr>/เซิร์ฟเวอร์ที่<wbr>ได้<wbr>รับ<wbr>การ<wbr>พัฒนา ส่วน<wbr>มาก<wbr>จะ<wbr>ออก<wbr>แบบ<wbr>โดย<wbr>ปราศ<wbr>จาก<wbr>การ<wbr>ตบ<wbr>ตา
+ซึ่ง<wbr>ทำ<wbr>ให้<wbr>เพิ่ม<wbr>ประสิทธิภาพ<wbr>ความ<wbr>ปลอด<wbr>ภัย<wbr>มาก<wbr>ขึ้น แต่<wbr>โอกาส<wbr>ที่<wbr>รหัส<wbr>ผ่าน<wbr>จะ<wbr>ซ้ำ<wbr>กัน ซึ่ง<wbr>ทำ<wbr>ให้<wbr>ผู้<wbr>ใช้<wbr>ที่<wbr>ไม่<wbr>มี<wbr>ใน<wbr>การ<wbr>ประมวล<wbr>ข้อ<wbr>มูล
+หรือ<wbr>ตา<wbr>ราง<wbr>ที่<wbr>ซ่อน<wbr>ไว้  เข้า<wbr>ไป<wbr>ใช้<wbr>ข้อ<wbr>มูล  ทำ<wbr>ให้<wbr>ข้อ<wbr>มูล<wbr>อาจ<wbr>เปลี่ยน<wbr>แปลง หรือ<wbr>สูญ<wbr>หาย<wbr>ไป<wbr>ได้ <p>
+<b>three-tier architecture</b>
+<br>
+<dd>โครง<wbr>สร้าง<wbr>แบบ three tier (ตาม<wbr>รูป<wbr>ที่ 3) พยายาม<wbr>เพื่อ<wbr>กำจัด<wbr>ข้อ<wbr>จำกัด<wbr>ของ<wbr>โครง<wbr>สร้าง<wbr>แบบ two tier
+โดย<wbr>แบ่ง<wbr>ส่วน<wbr>การ<wbr>แสดง<wbr>ผล<wbr>การ<wbr>ประมวล<wbr>ผล และ ฐาน<wbr>ข้อ<wbr>มูล<wbr>ออก<wbr>จาก<wbr>กัน เป็น 3 ส่วน เครื่องมือ<wbr>ที่<wbr>เหมือน<wbr>กัน
+สามารถ<wbr>ใช้<wbr>แสดง<wbr>ผล<wbr>ได้<wbr>เหมือน<wbr>กันกับใน<wbr>ระบบ<wbr>ของ two tier  อย่าง<wbr>ไร<wbr>ก็<wbr>ตามเครื่องมือ<wbr>เหล่า<wbr><wbr>?ี้ถูก<wbr>ใช้<wbr>สำหรับ<wbr>การ<wbr>ควบ<wbr>คุม<wbr>การ<wbr>แสดง<wbr>ผล
+เมื่อ<wbr>การ<wbr>คำนวณ หรือ<wbr>ประมวล<wbr>ข้อ<wbr>มูล<wbr>ถูก<wbr>ใช้<wbr>โดย หน่วย<wbr>แสดง<wbr>ผล<wbr>ของ<wbr>ไคร์เอนท์ การ<wbr>เรียก<wbr>ใช้<wbr>ถูก<wbr>สร้าง<wbr>เป็น เซิร์ฟเวอร์ตัว<wbr>กลาง
+ใน<wbr>ชั้น<wbr>นี้<wbr>สามารถ<wbr>ทำ<wbr>การ<wbr>คำนวณ หรือ สร้าง<wbr>การ<wbr>ร้อง<wbr>ขอ<wbr>เหมือน<wbr>ตัว<wbr>ไคร์เอนท์ เพื่อ<wbr>ส่ง<wbr>ไป<wbr>ยังเซิร์ฟเวอร์ได้   เซิร์ฟเวอร์ตัว<wbr>กลาง<wbr>สามารถ<wbr>เข้า<wbr>รหัส
+เป็น<wbr>ภาษา<wbr>ที่<wbr>ใช้<wbr>กัน<wbr>ทั่ว<wbr>ไป<wbr>ได้  เช่น<wbr>ภาษา c  ฟังก์ชั่น<wbr>ที่<wbr>ใช้<wbr>ในเซิร์ฟเวอร์ชั้น<wbr>กลาง<wbr>นี้<wbr>อาจ<wbr>จะ<wbr>ใช้ multi-threaded
+และ<wbr>สามารถ<wbr>ประมวล<wbr>ผล<wbr>ให้กับไคร์เอนท์หลายๆ ตัว<wbr>พร้อม<wbr>กัน แม้<wbr>ว่า<wbr>จะ<wbr>ใช้<wbr>โปรแกรม<wbr>ประยุกต์<wbr>ต่าง<wbr>กัน 
+<dd>ระบบ three tier จะ<wbr>ใช้<wbr>เทคโนโลยี<wbr>ที่<wbr>หลาก<wbr>หลาย โดย<wbr>การ<wbr>เรียก<wbr>ใช้<wbr>ตัว<wbr>ไคร์เอนท์ ถึง<wbr>ตัวเซิร์ฟเวอร์ ซึ่ง<wbr>ระบบ<wbr>จะ<wbr>ไป<wbr>เรียก<wbr>โปรแกรม<wbr>ย่อย หรือ
+ที่<wbr>เรียก<wbr>ว่า rpc   ซึ่ง<wbr>เรา<wbr>จะ<wbr>สามารถ<wbr>ทำ<wbr>งาน<wbr>แบบ two tier ที่<wbr>เป็น<wbr>ระบบ<wbr>ใหญ่ ที่<wbr>เกี่ยว<wbr>ข้องกับ sql ได้ และ<wbr>ระบบ three tier
+สามารถ<wbr>ใช้<wbr>ประ<wbr>โยชน์<wbr>จาก rpc ได้ 
+<dd>rpc ถูก<wbr>เรียก<wbr>จาก<wbr>หน่วย<wbr>แสดง<wbr>ผล ถึง เซิร์ฟเวอร์ชั้น<wbr>กลาง ซึ่ง<wbr>การ<wbr>ใช้ rpc จะ<wbr>ยืด<wbr>หยุ่น<wbr>กว่า sql ซึ่ง<wbr>เรียก<wbr>จาก
+ตัว<wbr>ไคร์เอนท์ถึง<wbr>ตัวเซิร์ฟเวอร์แบบ<wbr>โครง<wbr>สร้าง two tier 
+<dd>rpc จะ<wbr>เกิด<wbr>จาก<wbr>การ<wbr>ร้อง<wbr>ขอ<wbr>ของ<wbr>ไคร์เอนท์ ซึ่ง<wbr>ตัว<wbr>ไครเอนท์จะ<wbr>ส่ง<wbr>ผ่าน<wbr>ค่า<wbr>ตัว<wbr>แปร สำหรับ<wbr>การ<wbr>ร้อง<wbr>ขอ และ<wbr>ระบุ<wbr>ถึง<wbr>โครง<wbr>สร้าง<wbr>ข้อ<wbr>มูล
+เพื่อ<wbr>รับ<wbr>ค่า<wbr>ที่<wbr>ส่ง<wbr>กลับ<wbr>มา ใน<wbr>การ<wbr>แสดง<wbr>ผล<wbr>ของ three tier  นั้น ตัว<wbr>ไคร์เอนท์ ไม่<wbr>ต้อง<wbr>การ<wbr>ที่<wbr>ต้อง<wbr>ใช้ sql อีก<wbr>ต่อ<wbr>ไป<wbr> 
+ทำ<wbr>ให้<wbr>การ<wbr>ทำ<wbr>งาน<wbr>ยืด<wbr>หยุ่น<wbr>มาก<wbr>ขึ้น 
+  
+<p>
+<center><img src="figure3.gif" width="436" height="256" border=2><p>
+
+                  รูป<wbr>ที่ 3      three tier architecture. most of the logic processing is handled by functionality servers.<br>
+                                       middle-tier code can be accessed and utilized by multiple clients.</center>
+
+<p>
+<dd>            นอก<wbr>จาก<wbr>นี้<wbr>ประ<wbr>โยชน์<wbr>อีก<wbr>อย่าง<wbr>หนึ่ง ก็<wbr>คือ<wbr>การ<wbr>แสดง<wbr>ผล<wbr>โดย<wbr>ใช้<wbr>โครง<wbr>สร้าง<wbr>นี้ สามารถ<wbr>ทำ<wbr>งาน<wbr>แบบ<wbr>ขนาน<wbr>ได้ โดย<wbr>ใช้<wbr>โปรแกรม<wbr>พิเศษ  อีก<wbr>ทั้ง
+โครง<wbr>สร้าง<wbr>ของ three tier นั้น<wbr>ยัง<wbr>ยืด<wbr>หยุ่น<wbr>ใน<wbr>ด้าน<wbr>ที่<wbr>เก็บ<wbr>ทรัพยากร ซึ่ง<wbr>เมื่อ<wbr>มี<wbr>การ<wbr>เปลี่ยน<wbr>แปลง<wbr>ของ<wbr>โปรแกรม เรา<wbr>สามารถ<wbr>แก้<wbr>ไข<wbr>ที่<wbr>ตัว
+เซิร์ฟเวอร์กลาง<wbr>เพียง<wbr>แค่<wbr>ครั้ง<wbr>เดียว นอก<wbr>จาก<wbr>นี้<wbr>ยัง<wbr>ทำ<wbr>ให้<wbr>ความ<wbr>แอ<wbr>อัด<wbr>ของ<wbr>ข้อ<wbr>มูล<wbr>ใน<wbr>เครือ<wbr>ข่าย<wbr>ลด<wbr>ลง<wbr>ด้วย 
+</a>
+
+<p>
+<a name="section4">
+
+<table bgcolor=ffb164 border = 1 vspace = 20 cellspacing = 5>
+    <tr><!-- row 1 -->
+      <td align = center><b>การ<wbr>เปรียบ<wbr>เทียบ<wbr>ความ<wbr>สามารถ<wbr>ระหว่าง two tier และ three tier</b></td>
+    </tr>
+</table>
+<br>
+<dd>รูป<wbr>กราฟ ที่ 4  ถึง รูป<wbr>กราฟ<wbr>ที่ 6 แสดง<wbr>ถึง<wbr>เวลา<wbr>ที่<wbr>ใช้<wbr>แปลง สำหรับ two tier และ three tier   เวลา<wbr>ที่<wbr>ใช้<wbr>ใน<wbr>การ<wbr>แปลง<wbr>คือ
+เวลา<wbr>ของ<wbr>ระบบ<wbr>ใน<wbr>การ<wbr>ติด<wbr>ต่อ<wbr>สื่อ<wbr>สาร ไม่<wbr>ใช่<wbr>เวลา<wbr>ของ<wbr>คน  มี<wbr>หน่วย เป็น<wbr><wbr>c/s 
+ <wbr><p> 
+
+<center><img src="figure4.gif" width="448" height="210" border=0><br>
+รูป<wbr>ที่<wbr><wbr>4            initial development effort<br></center><p>
+
+<dd>รูป<wbr>ที่ 4 แสดง<wbr>ถึง การ<wbr>เปรียบ<wbr>เทียบ<wbr>ระบบ โปรแกรม<wbr>ประยุกต์<wbr>แบบ three tier  จะ<wbr>ใช้<wbr>เวลา<wbr>ใน<wbr>การ<wbr>พัฒนา<wbr>นาน<wbr>กว่า
+เพราะ<wbr>ใช้<wbr>ภาษา<wbr>ใน<wbr>ระดับ<wbr>ล่าง ของ<wbr>ภาษา<wbr>ระดับ<wbr>ที่ 3 (third generation language) เช่น c เป็น<wbr>ต้น   และ<wbr>ความ<wbr>ยาก<wbr>ใน<wbr>การ<wbr>ติด<wbr>ต่อ
+ซอฟท์แวร์โมดูลที่<wbr>ไม่<wbr>ขึ้น<wbr>ต่อ<wbr>กัน บน platform  ที่<wbr>ต่าง<wbr>กัน 
+<dd>ใน<wbr>ทางตรง<wbr>ข้าม โครง<wbr>สร้าง<wbr>แบบ  two tier อนุญาต<wbr>ให้<wbr>ใช้ ภาษา<wbr>ใน<wbr>ระดับ<wbr>สูง<wbr>ในเครื่องมือ<wbr>ที่<wbr>ใช้<wbr>ใน<wbr>การ<wbr>สร้าง<wbr>ส่วน<wbr>ที่<wbr>ติด<wbr>ต่อกับผู้<wbr>ใช้ 
+  
+<center><p><img src="figure5.gif" width="448" height="210" border=0><br>
+รูป<wbr>ที่ 5            subsequent development efforts
+</center><p>
+
+ <wbr><dd>จาก<wbr>รูป<wbr>จะ<wbr>เห็น<wbr>ได้<wbr>ว่า<wbr>เวลา<wbr>ที่<wbr>ใช้<wbr>ใน<wbr>ส่วน<wbr>ของ เซิร์ฟเวอร์ชั้น<wbr>กลาง<wbr>ใช้<wbr>เวลา<wbr>น้อย<wbr>มาก และ<wbr>สามารถ<wbr>นำ<wbr>ข้อ<wbr>มูล<wbr>มา<wbr>ใช้<wbr>ได้<wbr>ใหม่ ซึ่ง<wbr>มี<wbr>ประ<wbr>โยชน์<wbr>มาก
+โดย<wbr>เฉพาะ<wbr>องค์<wbr>กร<wbr>ต่างๆ ซึ่ง<wbr>ต้อง<wbr>ใช้<wbr>โปรแกรม<wbr>ประยุกต์<wbr>เหมือน<wbr>กัน การ<wbr>เรียก<wbr>ใช้<wbr>เหมือน<wbr>กัน<wbr>ก็<wbr>มี<wbr>โอกาส<wbr>สูง ก็<wbr>ไม่<wbr>ต้อง<wbr>เสีย<wbr>เวลา<wbr>ไป<wbr>ค้น<wbr>หา<wbr>ข้อ<wbr>มูล<wbr>อีก 
+  
+
+<p>
+<center><img src="figure6.gif" width="448" height="223" border=0><br>
+รูป<wbr>ที่ 6            client tool migration</center><p>
+
+<dd>รูป<wbr>ที่ 6  จะ<wbr>เป็น<wbr>การ<wbr>เปรียบ<wbr>เทียบ<wbr>เมื่อ<wbr>มี<wbr>การ<wbr>ย้าย หรือ<wbr>เปลี่ยนเครื่องมือ ใน<wbr>ระบบ two tier ต้อง<wbr>แก้<wbr>ทุกเครื่องใน<wbr>ระบบ แต่ ใน<wbr>ระบบ three
+tier เพียง<wbr>แก้<wbr>ใน เซิร์ฟเวอร์ชั้น<wbr>กลาง เมื่อ<wbr>ย้ายเครื่องมือ<wbr>ใหม่ ผู้<wbr>ที่<wbr>พัฒนา<wbr>จะ<wbr>ต้อง<wbr>สร้าง<wbr>ตัว<wbr>แสดง<wbr>ผล<wbr>ใหม่ และ<wbr>เพิ่ม rpc 
+<p>
+<hr noshade>
+
+<b>
+<u>เอก<wbr>สาร<wbr>อ้าง<wbr>อิง<wbr><wbr></b></u>
+
+           <u>the critical choice of client server architecture: a comparison of two and three tier systems </u><br>
+            
+</a>
+</body>
+</html>

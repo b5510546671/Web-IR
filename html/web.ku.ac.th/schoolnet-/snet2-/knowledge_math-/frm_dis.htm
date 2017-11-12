@@ -1,0 +1,30 @@
+<html>
+<head>
+<title>รูปแบบการคำนวณสำหรับกิ่งการตัดสินใจ</title>
+</head>
+<body  bgcolor = white>
+<center><font face="ms sans serif"><font color="#0000ff"><font ><b>รูป<wbr>แบบ<wbr>การ<wbr>คำนวณ<wbr>สำหรับกิ่งการ<wbr>ตัด<wbr>สิน<wbr>ใจ</b></font></font></font></center>
+<p>
+<font face="ms sans serif" color=brown><dd><b>การ</b></font><font face="ms sans serif" size=-1>สร้างกิ่งการ<wbr>ตัด<wbr>สิน<wbr>ใจ เป็น<wbr>การ<wbr>นิยาม<wbr>ขอบ<wbr>เขต<wbr>ของ<wbr>ปัญหา หรือ<wbr>การ<wbr>สร้างกิ่งที่<wbr>เป็น<wbr>ไป<wbr>ได้ แต่<wbr>ทางเลือก<wbr>ใน<wbr>การ<wbr>คำนวณ<wbr>หรือ<wbr>เส้น<wbr>ทางที่<wbr>จะ<wbr>คิด<wbr>คำนวณ<wbr>คง<wbr>ต้อง<wbr>หา<wbr>ทางตาม<wbr>สภาพ<wbr>ความ<wbr>เหมาะ<wbr>สม<wbr>ของปัญหา
+<p><dd><font color = brown>ปัญหา<wbr>เหรียญ 8 เหรียญ</font>&nbsp;&nbsp; เหรียญ 8 เหรียญ มี<wbr>ลักษณะ<wbr>ภาย<wbr>นอก<wbr>เหมือน<wbr>กัน แต่<wbr>ใน<wbr>จำนวน<wbr>นี้<wbr>มี<wbr>เหรียญ<wbr>หนึ่ง ที่<wbr>มี<wbr>ความ<wbr>แตก<wbr>ต่าง<wbr>ใน<wbr>เรื่อง<wbr>น้ำ<wbr>หนัก ซึ่ง<wbr>อาจ<wbr>จะ<wbr>หนัก<wbr>กว่า<wbr>หรือ<wbr>เบา<wbr>กว่า โดย<wbr>ที่<wbr>ถ้า<wbr>ดู<wbr>จาก<wbr>ภาย<wbr>นอก<wbr>จะ<wbr>ไม่<wbr>รู้ ใน<wbr>การ<wbr>ตรวจ<wbr>สอบ<wbr>จะ<wbr>ใช้<wbr>ตา<wbr>ชั่ง การ<wbr>หา<wbr>เหรียญ<wbr>แปลก<wbr>นี้<wbr>คง<wbr>ต้อง<wbr>ใช้<wbr>ตา<wbr>ชั่ง และ สร้าง<wbr>ปัญหา<wbr>นี้<wbr>ให้<wbr>เป็นกิ่งการ<wbr>ตัด<wbr>สิน<wbr>ใจ
+<p><dd>	ใน<wbr>ที่<wbr>นี้<wbr>สมมุติ มี<wbr>เหรียญ 8 เหรียญ ที่<wbr>ใช้ c<sub>1</sub> c<sub>2</sub> . . . c<sub>8</sub> แทน<wbr>เหรียญ<wbr>ทั้ง<wbr>แปด การ<wbr>เปรียบ<wbr>เทียบ คง<wbr>ทำ<wbr>ได้<wbr>ดัง<wbr>นี้
+<p><center><img src="frm_1.gif"></center>
+<p><dd>
+	การ<wbr>สร้างกิ่งการ<wbr>ตัด<wbr>สิน<wbr>ใจ<wbr>นี้ เป็น<wbr>หน<wbr>ทางของ<wbr>การ<wbr>สร้าง<wbr>ระบบ<wbr>เพื่อ<wbr>แก้<wbr>ปัญหา<wbr>และ<wbr>หา<wbr>ทางที่<wbr>จะ<wbr>เข้า<wbr>ถึง<wbr>คำ<wbr>ตอบ<wbr>ให้<wbr>ได้<wbr>เร็ว<wbr>และ<wbr>ดี<wbr>ที่<wbr><wbr>สุด
+<p><dd>
+	การ<wbr>เข้า<wbr>ถึง<wbr>จาก<wbr>จุด<wbr>ยอด<wbr>ของ<wbr>โครง<wbr>สร้าง<wbr>ต้น<wbr>ไม้ (tree) นี้ มี<wbr>วิธี<wbr>การ<wbr>ได้<wbr>หลาย<wbr>ทาง หน<wbr>ทางการ<wbr>เข้า<wbr>ถึง<wbr>โดย<wbr>เริ่ม<wbr>จาก<wbr>โหนดยอด<wbr>สุด ไป<wbr>ยัง<wbr>เป้า<wbr>หมาย<wbr>ทาง เรา<wbr>เรียก<wbr>ขบวน<wbr>การ<wbr>นี้<wbr>ว่า การ<wbr>ท่อง<wbr>ไป<wbr>ในกิ่งต้น<wbr>ไม้ ซึ่ง<wbr>เทียบไดกับการ<wbr>ค้น<wbr>หา (research) เพื่อ<wbr>หา<wbr>คำ<wbr>ตอบ แน่<wbr>นอน<wbr>ว่า<wbr>ขอบ<wbr>เขต<wbr>ของ<wbr>ต้น<wbr>ไม้<wbr>จึง<wbr>เป็น<wbr>ขอบ<wbr>เขต<wbr>ของ<wbr>ปัญหา<wbr>ที่<wbr>เป็น<wbr>ไป<wbr>ได้ ซึ่ง<wbr>เรา<wbr>เรียก<wbr>ว่า problem space
+<p><dd>	การ<wbr>ค้น<wbr>หา<wbr>ใน problem space ทำ<wbr>ได้<wbr>หลาย<wbr>วิธี ซึ่ง<wbr>ได้<wbr>แก่
+<p>
+<center>
+<table width=40%>
+<tr align=center><td bgcolor ="#e0f8e0"><font face="ms sans serif" size=-1>
+	<a href="frm_depth.htm">การ<wbr>ค้น<wbr>หา<wbr>ทางลึก<wbr>ก่อน</a> (depth first search)</td></tr>
+<tr align=center><td bgcolor ="#e0f8e0"><font face="ms sans serif" size=-1>
+	<a href="frm_breadth.htm">การ<wbr>ค้น<wbr>หา<wbr>ทา<wbr>งก<wbr>ว้าง<wbr>ก่อน</a> (breadth first search)</td></tr>
+</table></center>
+<p>&nbsp;
+<hr width="100%">
+<i>ที่มา : รศ. ยืน ภู่วรวรรณ, สำนักบริการคอมพิวเตอร์ มหาวิทยาลัยเกษตรศาสตร์</i>
+
+</body>
+</html>

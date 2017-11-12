@@ -1,0 +1,121 @@
+
+<html>
+<head>
+   <title>ความปลอดภัยในเครือข่าย</title>
+</head>
+<body text="#0000ff" bgcolor="#ffffff">
+
+<center><table cols=1 width="95%" bgcolor="#d9ffaa" >
+<tr>
+<td>
+<center><b><font face="ms sans serif">nms ระบบ<wbr>ดู<wbr>แล<wbr>และ<wbr>บริหาร<wbr>เครือ<wbr>ข่าย<wbr><wbr></font></b></center>
+</td>
+</tr>
+</table></center>
+<p>
+<center><table cols=1 width="95%" >
+<tr>
+<td><b><font face="ms sans serif"><font color="#990000"><font size=-1>ทำไม<wbr>จึง<wbr>ต้อง<wbr>มี<wbr>ระบบ<wbr>ดู<wbr>แล<wbr>เครือ<wbr>ข่าย<wbr><wbr></font></font></font></b>
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>เมื่อ<wbr>เริ่ม<wbr>ใช้<wbr>พี<wbr>ซี
+ผู้<wbr>ใช้<wbr>ต้อง<wbr>รู้<wbr>จัก<wbr>ดู<wbr>และ<wbr>รักษา<wbr>พี<wbr>ซี<wbr>ให้<wbr>ใช้<wbr>งาน<wbr>ได้<wbr>ดี<wbr>ตลอด<wbr>ไป การ<wbr>ดู<wbr>แล<wbr>พี<wbr>ซี<wbr>เกี่ยว<wbr>ข้อง<wbr>ทั้ง<wbr>ทางด้าน<wbr>ฮาร์ดแวร์<wbr>และ<wbr>ซอฟต์แวร<wbr>์
+ใน<wbr>บาง<wbr>ครั้ง<wbr>เรา<wbr>ไม่<wbr>สามารถ<wbr>จัด<wbr>การ<wbr>แก้<wbr>ไข<wbr>ปัญหา<wbr>ที่<wbr>เกิด<wbr>ขึ้นกับพี<wbr>ซี<wbr>ได้ จึง<wbr>ต้อง<wbr>มี<wbr>การ<wbr>ตาม<wbr>ช่าง<wbr>หรือ<wbr>บริษัท<wbr>ผู้<wbr>ขาย<wbr>มา<wbr>ช่วย<wbr>บริการ<wbr>ให้<wbr>ใช้<wbr>งาน<wbr>ได้
+เช่น<wbr>กัน<wbr>การ<wbr>นำ<wbr>พี<wbr>ซี<wbr>มา<wbr>ต่อ<wbr>ร่วม<wbr>เป็น<wbr>ระบบ lan มี<wbr>การ<wbr>จัด<wbr>ตั้งเครื่องบ<wbr>ริ<wbr>การเซิร์ฟเวอร<wbr>์
+การ<wbr>ดู<wbr>แล<wbr>และ<wbr>บริหาร<wbr>เครือ<wbr>ข่าย<wbr>แลนก็<wbr>เริ่ม<wbr>มี<wbr>ความ<wbr>ยุ่ง<wbr>ยาก<wbr>ขึ้น เพราะ<wbr>มี<wbr>อุปกรณ์<wbr>ประกอบ<wbr>หลาย<wbr>ชิ้น
+อุปกรณ์<wbr>เหล่า<wbr>นี้<wbr>ต้อง<wbr>ทำ<wbr>งาน<wbr>ร่วม<wbr>กัน<wbr>เป็น<wbr>ระบบ<wbr>หาก<wbr>ชิ้น<wbr>หนึ่ง<wbr>ชิ้น<wbr>ใด<wbr>มี<wbr>ปัญหา การ<wbr>ทำ<wbr>งาน<wbr>ทั้ง<wbr>ระบบ<wbr>ก็<wbr>มี<wbr>ปัญหา<wbr><wbr>&nbsp;</font></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>การ<wbr>ใช้<wbr>งาน<wbr>ใน<wbr>องค์<wbr>กร<wbr>มี<wbr>ความ<wbr>ซับ<wbr>ซ้อน<wbr>ยิ่ง<wbr>ขึ้น
+มี<wbr>การ<wbr>เชื่อม<wbr>ต่อ<wbr>แลน หลายๆ เครือ<wbr>ข่าย<wbr>ให้<wbr>เป็น<wbr>เครือ<wbr>ข่าย<wbr>ใหญ่<wbr>ขึ้น หรือ<wbr>ที่<wbr>เรียก<wbr>ว่า
+อินทราเน็ต มี<wbr>อุปกรณ์<wbr>พิเศษ<wbr>จำพวกสวิตชิ่ง<wbr>และ<wbr>เราเตอร์ มี<wbr>การ<wbr>เชื่อม<wbr>โยง<wbr>ผ่าน<wbr>เครือ<wbr>ข่าย<wbr>บริการ<wbr>ต่าง
+ๆ ใน<wbr>รูป<wbr>แบบ wan เพื่อ<wbr>เชื่อม<wbr>ต่อ<wbr>หรือ<wbr>สื่อ<wbr>สารกับหน่วย<wbr>งาน<wbr>อื่น<wbr>ที่<wbr>อยู่<wbr>ห่าง<wbr>ไกล<wbr>ความ<wbr>ซ้ำ<wbr>ซ้อน<wbr>ของ<wbr>ระบบ<wbr>จึง<wbr>มี<wbr>มาก<wbr><wbr>ขึ้น<wbr><wbr></font></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>ดัง<wbr>นั้น<wbr>จึง<wbr>มี<wbr>ความ<wbr>จำ<wbr>เป็น<wbr>ที่<wbr>จะ<wbr>ต้อง<wbr>หา<wbr>วิธี<wbr>การ<wbr>ดู<wbr>แล<wbr>และ<wbr>บริหาร<wbr>เครือ<wbr>ข่าย<wbr>ให้<wbr>มี<wbr>ประสิทธิภาพเ<wbr>ชื่อ<wbr>ถือ<wbr>ได้
+สามารถ<wbr>ใช้<wbr>งาน<wbr>ได้<wbr>ทน<wbr>ทาน เทคโนโลยี<wbr>เครือ<wbr>ข่าย<wbr>จึง<wbr>ต้อง<wbr>มี<wbr>ระบบ<wbr>การ<wbr>จัด<wbr>การ<wbr>เครือ<wbr>ข่าย
+มี<wbr>การ<wbr>สร้าง<wbr>โปรโต<wbr>คอลสำหรับ<wbr>รอง<wbr>รับ<wbr>การ<wbr>ทำ<wbr>งาน<wbr>ใน<wbr>ส่วน<wbr>เหล่า<wbr>นี้<wbr><wbr></font></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1></font></font></font></dd>
+
+<br><b><font face="ms sans serif"><font color="#990000"><font size=-1>snmp
+คือ<wbr>อะไร<wbr><wbr></font></font></font></b>
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>เครือ<wbr>ข่ายอินทราเน็ตที่<wbr>ใช้<wbr>โปรโต<wbr>คอ<wbr>ล
+tcp/ip มี<wbr>อุปกรณ์<wbr>เครือ<wbr>ข่าย<wbr>แบบ<wbr>หลากชนิกและ<wbr>หลาย<wbr>ยี่ห้อ แต่<wbr>มาตร<wbr>ฐาน<wbr>การ<wbr>จัด<wbr>การ<wbr>เครือ<wbr>ข่าย<wbr>ที่<wbr>ใช้<wbr>งาน<wbr>ได้<wbr>ผล<wbr>ดี<wbr>คือ
+snmp</font></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>snmp ย่อ<wbr>มา<wbr>จาก
+simple network&nbsp; management protocol ซึ่ง<wbr>เป็น<wbr>โปรโต<wbr>คอลที่<wbr>อยู่<wbr>ระดับ<wbr>บน<wbr>ใน<wbr>ชั้น<wbr>การ<wbr>ประยุกต์
+และ<wbr>เป็น<wbr>ส่วน<wbr>หนึ่ง<wbr>ของ<wbr>ชุด<wbr>โปรโต<wbr>คอล tcp/ip</font></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>ใน<wbr>การ<wbr>บริการ<wbr>และ<wbr>จัด<wbr>การ<wbr>เครือ<wbr>ข่าย<wbr>ต้อง<wbr>ใช้<wbr>อุปกรณ์<wbr>ต่าง
+ๆ มี<wbr>ส่วน<wbr>ของ<wbr>การ<wbr>ทำ<wbr>งาน<wbr>ร่วมกับระบบ<wbr>จัด<wbr>การ<wbr>เครือ<wbr>ข่าย ซึ่ง<wbr>เรา<wbr>เรียก<wbr>ว่า เอ<wbr>เจนต์ (agent)
+เอ<wbr>เจนต์เป็น<wbr>ส่วน<wbr>ของ<wbr>ซอฟต์แวร์ที่<wbr>อยู่<wbr>ใน<wbr>อุปกรณ์<wbr>ต่าง ๆ ที่<wbr>เชื่อม<wbr>อยู่<wbr>ใน<wbr>เครือ<wbr>ข่าย<wbr>โดย<wbr>มี<wbr>คอมพิวเตอร์<wbr>หลัก<wbr>ใน<wbr>ระบบ<wbr>หนึ่งเครื่องเป็น<wbr>ตัว<wbr>จัด<wbr>การ<wbr>และบ<wbr>ริ<wbr>หาร<wbr>เครือ<wbr>ข่าย<wbr>หรือ<wbr>เรียก<wbr>ว่า
+nms-network management system</font></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1></font></font></font></dd>
+
+<br><b><font face="ms sans serif"><font color="#990000"><font size=-1>ความ<wbr>สำคัญ<wbr>ของ
+nms</font></font></font></b>
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>nms ทำ<wbr>หน้า<wbr>ที่<wbr>เป็น<wbr>ศูนย์<wbr>กลาง<wbr>การ<wbr>ควบ<wbr>คุม
+และ<wbr>เฝ้า<wbr>มอง<wbr>เครือ<wbr>ข่าย<wbr>มี<wbr>ระบบ<wbr>เตือน<wbr>เมื่อ<wbr>มี<wbr>ส่วน<wbr>หนึ่ง<wbr>ส่วน<wbr>ใด<wbr>ของ<wbr>เครือ<wbr>ข่าย<wbr>ทำ<wbr>งาน<wbr>ผิด<wbr>พลาด
+หรือ<wbr>เกิด<wbr>ข้อ<wbr>ขัด<wbr>ข้อง ทำ<wbr>ให้<wbr>ผู้<wbr>ดู<wbr>แล<wbr>ระบบ<wbr>ทราบ<wbr>ได้<wbr>ทัน<wbr>ที และ<wbr>เข้า<wbr>ไป<wbr>ทำ<wbr>การ<wbr>แก้<wbr>ไข<wbr>ได้<wbr>รวม<wbr>เร็ว<wbr><wbr></font></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>หน้า<wbr>ที่<wbr>หลัก<wbr>ของ
+nms คือ<wbr>การ<wbr>ตรวจ<wbr>สอบ<wbr>เครือ<wbr>ข่าย<wbr>ตลอด<wbr>เวลา ทำ<wbr>ราย<wbr>งาน<wbr>สถิติ<wbr>การ<wbr>ใช้<wbr>เครือ<wbr>ข่าย เช่น สถิติ<wbr>ของ<wbr>ปริมาณ<wbr>ข้อ<wbr>มูล
+ปริมาณ<wbr>ผู้<wbr>ใช้ สามารถ<wbr>เขียน<wbr>เป็น<wbr>กราฟ<wbr>เพื่อ<wbr>ให้<wbr>ผู้<wbr>ดู<wbr>แล<wbr>ระบบ<wbr>นำ<wbr>ไป<wbr>วิเคราะห์<wbr>และ<wbr>วาง<wbr>แผน<wbr>ขยาย<wbr>เครือ<wbr>ข่าย
+ผู้<wbr>ดู<wbr>แล<wbr>ระบบ<wbr>ยัง<wbr>สามารถ<wbr>ตรวจ<wbr>สอบ<wbr>และ<wbr>แก้<wbr>ไข<wbr>ระบบ<wbr>จาก<wbr>จุด<wbr>ศูนย์<wbr>กลาง รวม<wbr>ถึง<wbr>การ<wbr>ติด<wbr>ตั้ง<wbr>ซอฟต์แวร<wbr>์
+การ<wbr>ตั้ง<wbr>ค่า<wbr>ระบบ<wbr>ให้กับอุปกรณ์<wbr>เครือ<wbr>ข่าย<wbr>ที่<wbr>อยู่<wbr>ห่าง<wbr>ไกล<wbr><wbr></font></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>nms จึง<wbr>เป็น<wbr>อุปกรณ์<wbr>ที่<wbr>ระบบ<wbr>เครือ<wbr>ข่าย<wbr>ขนาด<wbr>ใหญ่
+หรือ<wbr>ผู้<wbr>ให้<wbr>บริการ<wbr>เครือ<wbr>ข่าย<wbr>แบบ<wbr>สาธารณะ<wbr>ที่<wbr>มี<wbr>ผู้<wbr>ใช้<wbr>บริการ<wbr>จำนวน<wbr>มาก<wbr>จำ<wbr>เป็น<wbr>ต้อง<wbr>มี
+เพราะ<wbr>เป็น<wbr>อุปกรณ์<wbr>ที่<wbr>ทำ<wbr>ให้<wbr>การ<wbr>เฝ้า<wbr>มอง<wbr>ระบบ<wbr>เป็น<wbr>ไป<wbr>อย่าง<wbr>มี<wbr>ประสิทธิภาพ ปัจจุบัน<wbr>แม้<wbr>แต่เครื่องอินทราเน็ตมี<wbr>อุปกรณ์<wbr>ต่าง
+ๆ ประกอบ<wbr>รวม<wbr>กัน<wbr>มี<wbr>ความ<wbr>ซับ<wbr>ซ้อน<wbr>มาก<wbr>ขึ้น nms จึง<wbr>มี<wbr>ส่วน<wbr>สำคัญ<wbr>ใน<wbr>การ<wbr>บริหาร<wbr>และ<wbr>จัด<wbr>การ<wbr>เครือ<wbr>ข่ายอินทราเน็ต<wbr></font></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>การ<wbr>ที่<wbr>ระบบ<wbr>บริหาร<wbr>และ<wbr>จัด<wbr>การ<wbr>เครือ<wbr>ข่าย<wbr>จะ<wbr>ประสบ<wbr>ผล<wbr>สำเร็จ
+จึง<wbr>ขึ้นกับระบบ<wbr>ซอฟต์แวร์ที่<wbr>ต้อง<wbr>มี<wbr>อยู่<wbr>ใน<wbr>ตัว<wbr>อุปกรณ์<wbr>เครือ<wbr>ข่าย (เอ<wbr>เจนต์) ส่วน<wbr>ของ<wbr>เอ<wbr>เจนต์ยัง<wbr>มี<wbr>การ<wbr>เก็บ<wbr>ข้อ<wbr>มูล<wbr>ไว้<wbr>ภาย<wbr>ใน
+ข้อ<wbr>มูล<wbr>ที่<wbr>เก็บ<wbr>ไว้<wbr>นี้<wbr>เรียก<wbr>ว่า mib - management information base การ<wbr>ทำ<wbr>งาน<wbr>ของ<wbr>อุปกรณ์<wbr>ต่าง
+ๆ บน<wbr>เครือ<wbr>ข่าย<wbr>จะ<wbr>มี<wbr>ส่วน<wbr>ข้อ<wbr>มูล<wbr>ของ<wbr>ตัว<wbr>เอง<wbr>เก็บ<wbr>ไว้<wbr>ที่ mib ดัง<wbr>นั้น nms จึง<wbr>ส่ง<wbr>คำ<wbr>ถาม<wbr>มา<wbr>ยัง<wbr>เอ<wbr>เจนต<wbr>์
+การ<wbr>ส่ง<wbr>คำ<wbr>ถาม<wbr>และ<wbr>เอ<wbr>เจนต์ส่ง<wbr>ข้อ<wbr>มูล<wbr>คำ<wbr>ตอบ<wbr>นี้<wbr>ย่อม<wbr>เป็น<wbr>ไป<wbr>ตาม<wbr>มาตร<wbr>ฐาน<wbr>โปรโต<wbr>คอลที่<wbr>กำหนด
+เช่น ลักษณะ<wbr>คำ<wbr>ถาม<wbr>คำ<wbr>ตอบ<wbr>ของ snmp ที่<wbr>สอบ<wbr>ถาม<wbr>กัน<wbr>เป็น<wbr>ระบบ และ<wbr>เป็น<wbr>มาตร<wbr>ฐาน<wbr>สากล<wbr><wbr>&nbsp;</font></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>ข้อ<wbr>มูล<wbr>ใน<wbr>ฐาน<wbr>ข้อ<wbr>มูล<wbr>ที่<wbr>เก็บ<wbr>ใน<wbr>เอ<wbr>เจนต์ของ<wbr>แต่<wbr>ละ<wbr>อุปกรณ์<wbr>ประกอบ<wbr>ด้วย
+ข้อ<wbr>มูล<wbr>ชื่อ<wbr>อุปกรณ์ รหัส<wbr>อุปกรณ์ หมาย<wbr>เลข<wbr>แอดเดรส<wbr>บน<wbr>เครือ<wbr>ข่าย ตา<wbr>ราง<wbr>กำหนด<wbr>เส้น<wbr>ทางปริมาณ<wbr>ข้อ<wbr>มูล<wbr>ที่<wbr>รับ<wbr>ส่ง
+ข้อ<wbr>ผิด<wbr>พลาด<wbr>ที่ปรากฏ ฯลฯ<wbr></font></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>ดัง<wbr>นั้น<wbr>ระบบ
+nms จึง<wbr>ได้<wbr>ข้อ<wbr>มูล<wbr>ของ<wbr>ทุก<wbr>อุปกรณ์<wbr>ที่<wbr>มี<wbr>เอ<wbr>เจนต์อยู่ และ<wbr>นำ<wbr>ข้อ<wbr>มูล<wbr>เหล่า<wbr>นั้น<wbr>มา<wbr>แสดง<wbr>ผล<wbr>ใน<wbr>เชิง<wbr>วิเคราะห์<wbr>ต่าง
+ๆ ไดอะแก<wbr>รม<wbr>รูป<wbr>ภาพ<wbr>ของ<wbr>เครือ<wbr>ข่าย<wbr>ทางฟิสิคัล การ<wbr>นำ<wbr>ข้อ<wbr>มูล<wbr>มา<wbr>แสดง<wbr>ผล<wbr>นี้ nms ส่ง<wbr>คำ<wbr>ถาม<wbr>ไป<wbr>เป็น<wbr>ระยะ
+และ<wbr>รับ<wbr>คำ<wbr>ตอบ<wbr>มา<wbr>ปรับ<wbr>ปรุง<wbr>ข้อ<wbr>มูล หาก<wbr>ส่ง<wbr>คำ<wbr>ถาม<wbr>ไป<wbr>ยัง<wbr>ตัว<wbr>อุปกรณ์<wbr>ที่<wbr>มี<wbr>ใน<wbr>ระบบ<wbr>และ<wbr>ไม่<wbr>ได้<wbr>รับ<wbr>คำ<wbr>ตอบ<wbr>ก็<wbr>จะ<wbr>มี<wbr>วิธี<wbr>การ<wbr>ตรวจ<wbr>สอบ<wbr>อย่า<wbr>งอ<wbr><wbr>ื่นประกอบ
+เช่น อุปกรณ์<wbr>นั้น<wbr>มี<wbr>ปัญหา<wbr>อย่าง<wbr>ไร<wbr>หรือ<wbr>ไม่<wbr>หาก<wbr>พบ<wbr>ปัญหา<wbr>ก็<wbr>จะ<wbr>แสดง<wbr>ปัญหา<wbr>เพื่อ<wbr>ให้<wbr>ผู้<wbr>ดู<wbr>ระบบ<wbr>ทราบ<wbr><wbr></font></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>ระบบ<wbr>บริหาร<wbr>และ<wbr>จัด<wbr>การ<wbr>เครือ<wbr>ข่าย<wbr>จึง<wbr>เป็น<wbr>ซอฟต์แวร์ที่<wbr>นำ<wbr>ข้อ<wbr>มูล<wbr>จาก<wbr>เอ<wbr>เจนต์ต่าง
+ๆ มา<wbr>แสดง<wbr>ผล และ<wbr>ติด<wbr>ต่อกับผู้<wbr>ดู<wbr>แล<wbr>ระบบ ดัง<wbr>นั้น<wbr>จึง<wbr>มี<wbr>ผู้<wbr>พัฒนา<wbr>ระบบ nms ใน<wbr>รูป<wbr>แบบ<wbr>ต่าง
+ๆ กัน<wbr>มาก ผู้<wbr>ดู<wbr>แล<wbr>และ<wbr>บริหาร<wbr>เครือ<wbr>ข่าย<wbr>สามารถ<wbr>เลือก<wbr>ใช้<wbr>ซอฟต์แวร์ nms ได้ โดย<wbr>มี<wbr>ผู้<wbr>ผลิต<wbr>ซอฟต์แวร<wbr>์
+หรือ<wbr>ผู้<wbr>ผลิต<wbr>อุปกรณ์<wbr>สื่อ<wbr>สาร<wbr>ที่<wbr>อยู่<wbr>บนอินเทอร์เน็ตให้<wbr>ดาน์โหลด<wbr>มา<wbr>ลอง<wbr>ใช้<wbr>ดู<wbr>ก่อน<wbr><wbr></font></font></font></dd>
+<p>
+<center><img src="snmp.gif" border=0 height=218 width=285></center>
+<br>
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>พัฒนา<wbr>การ<wbr>ของ
+nms ได้<wbr>ก้าว<wbr>หน้า<wbr>ขึ้น<wbr>เป็น<wbr>ลำ<wbr>ดับ การ<wbr>สร้าง<wbr>ความ<wbr>เชื่อ<wbr>มั่น<wbr>ให้กับผู้<wbr>ใช้<wbr>บน<wbr>เครือ<wbr>ข่าย<wbr>เป็น<wbr>สิ่ง<wbr>สำคัญ
+nms จึง<wbr>เป็น<wbr>สิ่ง<wbr>ที่<wbr>มี<wbr>ความ<wbr>จำ<wbr>เป็น<wbr>และ<wbr>เข้า<wbr>มา<wbr>มี<wbr>บท<wbr>บาท<wbr>สำคัญ<wbr>ใน<wbr>เทคโนโลยี<wbr>เครือ<wbr>ข่าย<wbr>คอมพิวเตอร์<wbr><wbr></font></font></font></dd>
+
+<p>
+<hr noshade><font face="ms sans serif"><font color="#000000"><font size=-1>เขียน<wbr>โดย
+: รศ.ยืน ภู่วรวรรณ<wbr><wbr></font></font></font></td>
+</tr>
+</table></center>
+</body>
+</html>

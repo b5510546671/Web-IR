@@ -1,0 +1,329 @@
+<html>
+
+<head>
+
+<title>ku proxy/cache server setting</title>
+
+</head>
+
+<style type="text/css">
+
+a {color: #0000ff; text-decoration: none}
+
+a:hover {color: #ff0001}
+
+</style>
+
+<body bgcolor="#dae4dd" text="black">
+
+<font face="ms sans serif" size="-1"> 
+
+<center>
+
+  <img src="images/kucache_top.jpg" border=0> 
+
+</center>
+
+
+
+<!------contents---------> <br>
+
+<spacer type=horizontal size=70>สำนักบริการคอมพิวเตอร์ได้มีการเปลี่ยนแปลงการให้บริการ 
+
+proxy/cache server บนเครือข่ายนนทรี เพื่อเพิ่มประสิทธิภาพการเเชื่อมต่ออินเตอร์เน็ตและรองรับปริมาณการเรียกใช้อินเตอร์เน็ตที่มีเพิ่มมากขึ้น 
+
+เครื่องที่ให้บริการก็คือ <b><font color="#800080">cache.ku.ac.th</font></b> ซึ่งประกอบด้วยเครื่องเชิร์ฟเวอร์  ibm netfinity 5000 จำนวน
+
+3 เครื่อง ดังรูป โดยที่เครื่อง cache.ku.ac.th จะมีการกระจายโหลด(load balancing)แบบอัตโนมัติไปยังเครื่องทั้ง 
+
+3 เพื่อแบ่งเบาภาระการเรียกใช้งานอินเตอร์เน็ตไม่ให้หนักไปเครื่องใดเครื่องหนึ่ง 
+
+<br>
+
+<spacer type=horizontal size=70>
+
+เครื่อง cache.ku.ac.th เชื่อมต่อกับระบบ proxy/cache<b><font color="#800080">(cache1.nectec.or.th และ cache2.nectec.or.th)</font></b> ของไทยสาร(nectec) ด้วยความเร็ว 
+
+2 mbps 
+
+<p><spacer type=horizontal size=70><img src="images/cache_config.jpg" border=0 alt="system configuration"> 
+
+  <br>
+
+  <center>
+
+    <img src="images/kucache_pic.gif" border=1 valign=center> <br>
+
+    รูปแสดง system configuration ของเครื่อง proxy/cache server บนเครือข่ายนนทรี 
+
+  </center>
+
+<p>
+
+<center>
+
+  <table bgcolor="#ffffd4" cellspacing="2" cellpadding="5" border="0" width=70%>
+
+    <tr> 
+
+      <td valign=top bgcolor="#d4ffaa"><font face="ms sans serif" size="-1" color="#8a5ea2"><b>server 
+
+        name <br>
+
+        ip address <br>
+
+        gateway <br>
+
+        subnet mask <br>
+
+        dns server</b></font></td>
+
+      <td valign=top bgcolor="#ffffff"><font face="ms sans serif" size="-1">cache.ku.ac.th 
+
+        <br>
+
+        158.108.5.2,158.108.5.3,158.108.5.4 <br>
+
+        158.108.5.1 <br>
+
+        255.255.255.192 <br>
+
+        158.108.2.67,158.108.32.3</font></td>
+
+  </table>
+
+</center>
+
+<p><spacer type=horizontal size=70> 
+
+<p><font color="#800000"><b>การตั้งค่า browser ให้ชี้มาที่ proxy/cache server 
+
+  สามารถทำได้ 2 ทางคือ</b></font> <!--------automatic proxy configuration-------> 
+
+  <br>
+
+  <spacer type=horizontal size=80><img src="images/arrow.jpg" border=0 hspcae=7><img src="images/cache_auto.jpg" border=0 alt="การตั้งค่าแบบ automatic proxy configuration"> 
+
+  <br>
+
+  <br>
+
+  <spacer type=horizontal size=110><font color="#800040"><b>1.โปรแกรมเน็ตสเค็ปเนวิกเกเตอร์ 
+
+  (netscape navigator)</b></font> <br>
+
+  <spacer type=horizontal size=140>เลือกเมนู options > network preferences แล้วคลิกที่ 
+
+  proxies เลือก automatic proxy configuration และใส่ชื่อใน configuration location(url) 
+
+  เป็น <b>http://cache.ku.ac.th/autoconfig.pac</b> ดังรูปที่ 1 
+
+<p> 
+
+  <center>
+
+    <img src="images/auto_nav.jpg" border=0 valign=center> <br>
+
+    <b>รูปที่ 1</b> หน้าต่าง preferences ของโปรแกรม netscape navigator เพื่อตั้งค่า 
+
+    automatic proxy configuration 
+
+  </center>
+
+<p><br>
+
+  <spacer type=horizontal size=110><font color="#800040"><b>2.โปรแกรมเน็ตสเค็ปคอมมิวนิเคเตอร์ 
+
+  (netscape communicatorator)</b></font> <br>
+
+  <spacer type=horizontal size=140>เลือกเมนู edit > preference แล้วคลิกที่ advanced 
+
+  > proxies เลือก automatic proxy configuration และใส่ชื่อใน configuration location(url) 
+
+  เป็น <b>http://cache.ku.ac.th/autoconfig.pac</b> ดังรูปที่ 2 
+
+<p> 
+
+  <center>
+
+    <img src="images/auto_com.jpg" border=0 valign=center> <br>
+
+    <b>รูปที่ 2</b> หน้าต่าง preferences ของโปรแกรม netscape communicator เพื่อตั้งค่า 
+
+    automatic proxy configuration 
+
+  </center>
+
+  <!--------manual proxy configuration-------> 
+
+<p><br>
+
+  <spacer type=horizontal size=80><img src="images/arrow.jpg" border=0 hspcae=7><img src="images/cache_manual.jpg" border=0 alt="การตั้งค่าแบบ maual proxy configuration"> 
+
+  <br>
+
+  <br>
+
+  <spacer type=horizontal size=110><font color="#800040"><b>1.โปรแกรมเน็ตสเค็ปเนวิกเกเตอร์ 
+
+  (netscape navigator)</b></font> <br>
+
+  <spacer type=horizontal size=140>เลือกเมนู options > network preferences แล้วคลิกที่ 
+
+  proxies เลือก manual proxy configuration ให้คลิกที่ปุ่ม view แล้วใส่ชื่อของ 
+
+  proxy/cache server เป็น <b>cache.ku.ac.th</b> และหมายเลข port เป็น <b>8080</b> 
+
+  ในรายการของโปรโตคอล <b>http , ftp และ gopher</b> และใส่ <b>*.ku.ac.th,158.108.*</b> 
+
+  ในช่อง "no proxy for:" ดังรูปที่ 3 และ 4 
+
+<p>
+
+<center>
+
+  <table border=0 cellspacing=0 cellpadding=0>
+
+    <tr> 
+
+      <td align=center valigm=top><img src="images/manual_nav1.jpg" border=0 valign=center> 
+
+        <br>
+
+        <font face="ms sans serif" size="-1"><b>รูปที่ 3</b> หน้าต่าง preferences 
+
+        ของโปรแกรม netscape navigator เพื่อตั้งค่า manual proxy configuration</font></td>
+
+      <td align=center valigm=top><img src="images/manual_nav2.jpg" border=0 valign=center> 
+
+        <br>
+
+        <font face="ms sans serif" size="-1"><b>รูปที่ 4</b> หน้าต่าง manual proxy 
+
+        configuration ของโปรแกรม netscape navigator</font></td>
+
+  </table>
+
+</center>
+
+<br>
+
+<spacer type=horizontal size=110><font color="#800040"><b>2.โปรแกรมเน็ตสเค็ปคอมมิวนิเคเตอร์ 
+
+(netscape communicatorator)</b></font> <br>
+
+<spacer type=horizontal size=140>เลือกเมนู edit > preference แล้วคลิกที่ advanced 
+
+> proxies เลือก manual proxy configuration ให้คลิกที่ปุ่ม view แล้วใส่ชื่อของ 
+
+proxy/cache server เป็น <b>cache.ku.ac.th</b> และหมายเลข port เป็น <b>8080</b> 
+
+ในรายการของโปรโตคอล <b>http , ftp และ gopher</b> และใส่ <b>*.ku.ac.th,158.108.*</b> 
+
+ในช่อง "do not use proxy server for addresses beginning with:" ดังรูปที่ 5 และ 
+
+6 
+
+<p>
+
+<center>
+
+  <table border=0 cellspacing=0 cellpadding=0>
+
+    <tr> 
+
+      <td align=center valign=top><img src="images/manual_com1.jpg" border=0 valign=center> 
+
+        <br>
+
+        <font face="ms sans serif" size="-1"><b>รูปที่ 5</b> หน้าต่าง preferences 
+
+        ของโปรแกรม netscape navigator เพื่อตั้งค่า manual proxy configuration</font></td>
+
+      <td align=center valign=top><img src="images/manual_com2.jpg" border=0 valign=center> 
+
+        <br>
+
+        <font face="ms sans serif" size="-1"><b>รูปที่ 6</b> หน้าต่าง manual proxy 
+
+        configuration ของโปรแกรม netscape navigator</font></td>
+
+  </table>
+
+</center>
+
+<br>
+
+<spacer type=horizontal size=110><font color="#800040"><b>3.โปรแกรมอินเตอร์เน็ตเอ็กโปเรอร์ 
+
+(internet explorer)</b></font> <br>
+
+<spacer type=horizontal size=140>เลือกเมนู view > internet options แล้วคลิกที่ 
+
+connection ให้ทำเครื่องหมายที่รายการ access the internet using a proxy server 
+
+แล้วคลิกที่ปุ่ม advanced ให้ใส่ชื่อของ proxy/cache server เป็น <b>cache.ku.ac.th</b> 
+
+และหมายเลข port เป็น <b>8080</b> ในรายการของโปรโตคอล <b>http , ftp และ gopher</b> 
+
+และใส่ <b>*.ku.ac.th;158.108.*</b> ในช่อง "do not use proxy server for addresses 
+
+beginning with:" ดังรูปที่ 7 และ 8 
+
+<p>
+
+<center>
+
+  <table border=0 cellspacing=0 cellpadding=0>
+
+    <tr> 
+
+      <td align=center valign=top><img src="images/manual_ie1.jpg" border=0 valign=center> 
+
+        <br>
+
+        <font face="ms sans serif" size="-1"><b>รูปที่ 7</b> หน้าต่าง internet 
+
+        options ของโปรแกรม internet explorer เพื่อตั้งค่า manual proxy configuration</font></td>
+
+      <td align=center valign=top><img src="images/manual_ie2.jpg" border=0 valign=center> 
+
+        <br>
+
+        <font face="ms sans serif" size="-1"><b>รูปที่ 8</b> หน้าต่าง proxy settings 
+
+        ของโปรแกรม internet explorer</font></td>
+
+  </table>
+
+</center>
+
+</font> 
+
+
+<hr>
+
+<center><font face="ms sans serif" size="-1"><b>last updated:</b> 18  january  2000 <br>
+
+  <b>written by: </b> ฝ่ายเครือข่ายและสื่อสาร สำนักบริการคอมพิวเตอร์ มหาวิทยาลัยเกษตรศาสตร์ 
+
+  </font> 
+
+</center></body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

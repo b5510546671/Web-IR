@@ -1,0 +1,230 @@
+<html>
+<head>
+    <title>คณิตศาสตร์ -  ความเบี่ยงเบน</title>
+</head>
+<body>
+<center><table border width=25% cellpadding=7>
+<tr>
+<td bgcolor="#c0c0c0">
+<center><table cellpadding=7 border>
+<tr><td bgcolor="gold"><center><font face="ms sans serif" size=+1 color="#cc33cc">ความเบี่ยงเบน</center>
+</table></center>
+</table></center>
+
+<p>
+<center><table width=90%>
+<tr><td><dd><font face="ms sans serif" color="red" size=+1>ใน<font color="brown" size=-1>ชีวิต<wbr>ประจำ<wbr>วัน<wbr>เรา<wbr>ใช้<wbr>สถิติ<wbr>โดย<wbr>ที่<wbr>เรา<wbr>ไม่<wbr>รู้<wbr>ตัว<wbr>อยู่<wbr>มาก<wbr>มาย<wbr>  เช่น<wbr> สงกรานต์<wbr>ปี<wbr>นี้<wbr>มี<wbr>คน<wbr>ขึ้น<wbr>ไป<wbr>เที่ยว<wbr>เชียง<wbr>ใหม่<wbr>กัน<wbr>มาก<wbr> ส่วน<wbr>ใหญ่<wbr>มา<wbr>จาก<wbr>กรุงเทพ<wbr>มหานคร<wbr>  ความ<wbr>หมาย<wbr>ใน<wbr>ที่<wbr>นี้<wbr>คือ<wbr>  กลุ่ม<wbr>คน<wbr>ที่<wbr>มา<wbr>เที่ยว<wbr>เชียง<wbr>ใหม่<wbr>มี<wbr>กระจัด<wbr>กระจาย<wbr>จาก<wbr>ที่<wbr>ต่าง ๆ<wbr> แต่<wbr>กลุ่ม<wbr>คน<wbr>ที่<wbr>มา<wbr>มาก<wbr>ที่<wbr>สุด<wbr>คือ<wbr> มา<wbr>จาก<wbr>กรุงเทพ<wbr>มหนคร
+
+<p><font face="ms sans serif"><dd>คราว<wbr>นี้<wbr>ถ้า<wbr>ดู<wbr>กัน<wbr>ใน<wbr>แง่<wbr>ของ<wbr>สถิติ<wbr> เรา<wbr>ต้อง<wbr>การ<wbr>ดู<wbr>ความ<wbr>แปร<wbr>ปรวน<wbr>ของ<wbr>ข้อมูล<wbr> เช่น<wbr> เรา<wbr>มี<wbr>ข้อมูล<wbr>อยู่<wbr>สอง<wbr>ชุด<wbr> คือ
+
+<p>
+<dd>ข้อมูลชุดที่ 1&nbsp;&nbsp;&nbsp; 10, 12, 14
+<dd>ข้อมูลชุดที่ 2&nbsp;&nbsp;&nbsp; 30, 5, 1
+
+<p>
+<dd>ข้อ<wbr>มูล<wbr>ทั้ง<wbr>สอง<wbr>ชุด<wbr>นี้<wbr>ให้<wbr>ค่า<wbr>เฉลี่ย<wbr>เท่า<wbr>กัน<wbr>คือ<wbr> 12<wbr> แต่<wbr>หาก<wbr>พิจารณา<wbr>ที่<wbr>พิสัย<wbr> (range)<wbr> จะ<wbr>พบ<wbr>ว่า<wbr> ขอบ<wbr>เขต<wbr>ของ<wbr>ข้อ<wbr>มูล<wbr>ชุด<wbr>ที่<wbr>สอง<wbr>มี<wbr>การ<wbr>กระจาย<wbr>ตัว<wbr>กว้าง<wbr>กว่า<wbr> 
+คือ<wbr> จาก<wbr> 1<wbr> ถึง<wbr> 30<wbr>  เรา<wbr>จะ<wbr>เห็น<wbr>ว่า<wbr> ชุด<wbr>ที่<wbr> 1<wbr> มี<wbr>การ<wbr>รวม<wbr>กลุ่ม<wbr>กัน<wbr> กระจาย<wbr>ตัว<wbr>น้อย<wbr>กว่า<wbr> ทาง<wbr>สถิติ<wbr>เรา<wbr>คำนวณ<wbr>ค่า<wbr>ความ<wbr>เบี่ยง<wbr>เบน<wbr>นี้<wbr> และ<wbr>เรียก<wbr>ว่า<wbr> <font color="blue">วาเรียนซ์<wbr> (varience)
+</table></center>
+<p>
+<center><table border width=95%>
+<tr  align=center valign=abscenter bgcolor="#ddffff">
+
+<td width=23%><font face="ms sans serif" color="black" size=-1>ใช้<wbr>สัญลักษณ์&nbsp;<img src="sima2.gif" height=33 width=30 align=absbottom><br>
+<font face="ms sans serif" color="black" size=-1>(อ่าน<wbr>ว่า<wbr>ซิกมา<wbr> ยก<wbr>กำลัง<wbr>สอง)
+
+<td width=23%  valign=bottom><font face="ms sans serif" color="black" size=-1>ใช้<wbr>สัญลักษณ์<font size=+1><b> s</b><sup>2</sup>
+
+<td  width=27% valign=bottom><font face="ms sans serif" color="black" size=-1>ใช้<wbr>สัญลักษณ์&nbsp;<img src="sima1.gif" height=23 width=25 align=abscenter>
+
+<td valign=bottom><font face="ms sans serif" color="black" size=-1>และ <font size=+1><b>s</b>
+
+<tr  align=center bgcolor="#ddffff"><td height=50><font face="ms sans serif" color="brown" size=-1> แทน<wbr>วาเรียนซ์<wbr>ของ<wbr>ประชากร
+           <td><font face="ms sans serif" color="brown" size=-1>แทน<wbr>วาเรียนซ์<wbr>ของ<wbr>ประชากร
+           <td><font face="ms sans serif" color="brown" size=-1>แทน<wbr>ส่วน<wbr>เบี่ยง<wbr>เบน<wbr>มาตรฐาน<wbr>ของ<wbr>ประชากร
+           <td><font face="ms sans serif" color="brown" size=-1> แทน<wbr>ส่วน<wbr>เบี่ยง<wbr>เบน<wbr>มาตรฐาน<wbr>ของ<wbr>ตัว<wbr>แทน
+</table></center>
+<p>
+<dd><font face="ms sans serif" color="black" size=-1><img src="star.gif">&nbsp;&nbsp;<font color="blue">วาเรียนซ์<wbr> <font color="black">คือ<wbr> ผล<wbr>บวก<wbr>ของ<wbr>กำลัง<wbr>สอง<wbr>ของ<wbr>ความ<wbr>แตก<wbr>ต่าง<wbr>ระหว่าง<wbr>แต่<wbr>ละ<wbr>ค่า<wbr> กับ<wbr>ค่า<wbr>เฉลี่ย<wbr> หาร<wbr>ด้วย<wbr>จำนวน<wbr>ซึ่ง<wbr>น้อย<wbr>กว่า<wbr>จำนวน<wbr>ค่า<wbr>ทั้งหมด<wbr>หนึ่ง<wbr>
+
+<p><dd>ดังนั้น<wbr> ถ้า<wbr>ประชากร<wbr>มี<wbr>
+<b>x<sub>1</sub>, x<sub>2</sub>, . . ., x<sub>n</sub></b> และ<wbr>มี&nbsp;<img src="mue.gif" height=23 width=23 align=absbottom>เป็น<wbr>ค่า<wbr>เฉลี่ย<wbr> วาเรียนซ์<wbr>ที่<wbr>ได้
+
+<center><table>
+<tr><td><img src="sima2.gif"><font  face="ms sans serif" size=+1><b> =</b><img src="a1.gif"  align=abscenter>
+<tr><td><img src="sima2.gif"><font  face="ms sans serif" size=+1><b> =</b><img src="a2.gif"  align=abscenter>
+</table></center>
+
+<p><font size=-1><dd>สำหรับ<wbr>วาเรียนซ์<wbr>ของ<wbr>ตัว<wbr>แทน<wbr> หา<wbr>ได้<wbr>จาก<font size=+1> &nbsp;<b>s = </b><img src="a2.gif"  align=center>
+
+<dd><font face="ms sans serif" color="black" size=-1>การ<wbr>หา<wbr>ค่า<wbr>เฉลี่ย<wbr>และ<wbr>วาเรียนซ์<wbr>ทำ<wbr>ให้<wbr>เข้า<wbr>ใจ<wbr>ลักษณะ<wbr>ของ<wbr>ข้อ<wbr>มูล<wbr>การ<wbr>กระจาย<wbr>ตัว<wbr>ของ<wbr>ข้อมูล<wbr> เช่น
+<p>
+<center><table>
+<tr bgcolor="#ffffa5" align=center>
+ <td><font face="ms sans serif" color="black" size=-1>ชุด<wbr>ข้อมูล<wbr> a<wbr>  มี<wbr>ข้อมูล
+ <td><font face="ms sans serif" color="black" size=-1>0
+ <td><font face="ms sans serif" color="black" size=-1>48
+ <td><font face="ms sans serif" color="black" size=-1>49
+ <td><font face="ms sans serif" color="black" size=-1>51
+ <td><font face="ms sans serif" color="black" size=-1>52
+ <td><font face="ms sans serif" color="black" size=-1>100
+<tr bgcolor="#ffc0c0" align=center>
+ <td><font face="ms sans serif" color="black" size=-1>ชุด<wbr>ข้อมูล<wbr> b<wbr> มี<wbr>ข้อมูล
+ <td><font face="ms sans serif" color="black" size=-1>47
+ <td><font face="ms sans serif" color="black" size=-1>48
+ <td><font face="ms sans serif" color="black" size=-1>49
+ <td><font face="ms sans serif" color="black" size=-1>51
+ <td><font face="ms sans serif" color="black" size=-1>52
+ <td><font face="ms sans serif" color="black" size=-1>53
+</table></center>
+
+<dd><table width=70%>
+<tr>
+<td  width=10% valign=middle height=40><font face="ms sans serif" color="black" size=-1>ทั้ง<wbr>สอง<wbr>ข้อมูล<wbr>มี<wbr>ค่า<wbr>เฉลี่ย
+
+<td width=5% align=left  align=absbottom><img src="bar.gif" height=30>
+
+<td valign=middle><font face="ms sans serif" color="black" size=-1>เท่ากับ<wbr> 50<wbr> เท่า<wbr>กัน<wbr> แต่<wbr>พิสัย<wbr>ต่าง<wbr>กัน<wbr> ความ<wbr>แปร<wbr>ปรวน<wbr>ของ<wbr>ข้อมูล<wbr>พิจารณา<wbr>ได้<wbr>จาก<wbr>วาเรียนซ์
+</table>
+
+<p>
+<table width=100%>
+<tr>
+<td width=50%><font face="ms sans serif" color="#c000c0" size=-1>ข้อมูล<wbr>ชุด a
+<td align=left><font face="ms sans serif" color="#c000c0" size=-1>ข้อมูล<wbr>ชุด b
+</table>
+
+<p>
+<table border align=left width=40% bgcolor="#efdfef">
+<tr align=center>
+ <td valign=middle><font face="ms sans serif" color="black" size=-1>ข้อมูล
+ <td valign=bottom><img src="datbar.gif">
+ <td valign=bottom><img src="datbar2.gif">
+<tr align=center>
+ <td><font face="ms sans serif" color="black" size=-1>0
+ <td><font face="ms sans serif" color="black" size=-1>-50
+ <td><font face="ms sans serif" color="black" size=-1>2500
+<tr align=center>
+ <td><font face="ms sans serif" color="black" size=-1>48
+ <td><font face="ms sans serif" color="black" size=-1>-2
+ <td><font face="ms sans serif" color="black" size=-1>4
+<tr align=center>
+ <td><font face="ms sans serif" color="black" size=-1>49
+ <td><font face="ms sans serif" color="black" size=-1>-1
+ <td><font face="ms sans serif" color="black" size=-1>1
+<tr align=center>
+ <td><font face="ms sans serif" color="black" size=-1>51
+ <td><font face="ms sans serif" color="black" size=-1>1
+ <td><font face="ms sans serif" color="black" size=-1>1
+<tr align=center>
+ <td><font face="ms sans serif" color="black" size=-1>52
+ <td><font face="ms sans serif" color="black" size=-1>2
+ <td><font face="ms sans serif" color="black" size=-1>4
+<tr align=center>
+ <td><font face="ms sans serif" color="black" size=-1>100
+ <td><font face="ms sans serif" color="black" size=-1>50
+ <td><font face="ms sans serif" color="black" size=-1>2500
+<tr align=center  valign=top>
+ <td colspan=2 align=right><font face="ms sans serif" color="black" size=-1>ผลรวม
+ <td><font face="ms sans serif" color="black" size=-1>5010
+</table>
+
+<center><table border width=40% bgcolor="#e7f2f3">
+<tr align=center>
+ <td valign=middle><font face="ms sans serif" color="black" size=-1>ข้อมูล
+ <td valign=bottom><img src="datbar.gif">
+ <td valign=bottom><img src="datbar2.gif">
+<tr align=center>
+ <td><font face="ms sans serif" color="black" size=-1>47
+ <td><font face="ms sans serif" color="black" size=-1>-3
+ <td><font face="ms sans serif" color="black" size=-1>9
+<tr align=center>
+ <td><font face="ms sans serif" color="black" size=-1>48
+ <td><font face="ms sans serif" color="black" size=-1>-2
+ <td><font face="ms sans serif" color="black" size=-1>4
+<tr align=center>
+ <td><font face="ms sans serif" color="black" size=-1>49
+ <td><font face="ms sans serif" color="black" size=-1>-1
+ <td><font face="ms sans serif" color="black" size=-1>1
+<tr align=center>
+ <td><font face="ms sans serif" color="black" size=-1>51
+ <td><font face="ms sans serif" color="black" size=-1>1
+ <td><font face="ms sans serif" color="black" size=-1>1
+<tr align=center>
+ <td><font face="ms sans serif" color="black" size=-1>52
+ <td><font face="ms sans serif" color="black" size=-1>2
+ <td><font face="ms sans serif" color="black" size=-1>4
+<tr align=center>
+ <td><font face="ms sans serif" color="black" size=-1>53
+ <td><font face="ms sans serif" color="black" size=-1>3
+ <td><font face="ms sans serif" color="black" size=-1>9
+<tr align=center>
+ <td colspan=2 align=right><font face="ms sans serif" color="black" size=-1>ผลรวม
+ <td><font face="ms sans serif" color="black" size=-1>28
+</table></center>
+
+<br clear=all>
+<table width=100%>
+<tr>
+<td width=50%><font face="ms sans serif" color="black" size=-1>เมื่อ<wbr>นำ<wbr>มา<wbr>หา<wbr>รด้วย <b><font size=+1>s </font></b>= 1002<br>วาเรียนซ์<wbr>ของ<wbr>ข้อมูล<wbr>ชุด a<wbr> มี<wbr>ค่า<wbr>เท่ากับ<wbr> 1002
+<td align=left valign=top><font face="ms sans serif" color="black" size=-1>วาเรียนซ์<wbr> ของ<wbr>ข้อมูล<wbr>ชุด a<wbr> มี<wbr>ค่า<wbr>เท่ากับ<wbr>  28/5<wbr> ได้<wbr> 5.6
+</table>
+
+<p>
+<center><table width=90%>
+<tr>
+<td><dd><font face="ms sans serif" color="brown" size=-1>เห็น<wbr>ได้<wbr>ชัด<wbr>ว่า<wbr>ข้อมูล<wbr>สอง<wbr>ชุด<wbr>มี<wbr>จำนวน<wbr>ข้อมูล<wbr>เท่ากัน<wbr> มี<wbr>ค่า<wbr>เฉลี่ย<wbr>เท่ากัน<wbr> แต่<wbr>การ<wbr>เปรียบ<wbr>เทียบ<wbr>ข้อมูล<wbr>ยัง<wbr>มี<wbr>ความ<wbr>แตก<wbr>ต่าง<wbr>กัน<wbr> ใน<wbr>เรื่อง<wbr>ความ<wbr>ปรวน<wbr>แปร<wbr> ข้อมูล<wbr>ชุด a<wbr> มี<wbr>ความ<wbr>ปรวน<wbr>แปร<wbr> หรือ<wbr> มี<wbr>วาเรียนซ์<wbr>สูง<wbr>กว่า<wbr> ข้อมูล<wbr>ชุด b
+<p>
+<dd>การ<wbr>ใช้<wbr>งาน<wbr>ใน<wbr>ชีวิต<wbr>ประจำ<wbr>วัน<wbr>อาจ<wbr>พบ<wbr>เห็น<wbr>ได้<wbr> เช่น<wbr>  เมื่อ<wbr>ต้อง<wbr>การ<wbr>ลงทุน<wbr>ใน<wbr>การ<wbr>ซื้อ<wbr>หุ้น<wbr>กิจ<wbr>การ<wbr>บริษัท<wbr>ใน<wbr>ตลาด<wbr>หลัก<wbr>ทรัพย์<wbr> โดย<wbr>พิจารณา<wbr>จาก<wbr>บริษัท<wbr>สาม<wbr>บริษัท<wbr> คือ<wbr> บริษัท<wbr>รุ่งเรือง<wbr> บริษัท<wbr>ค้าดี<wbr> และ<wbr>บริษัท<wbr>กิจการ<wbr>ดี<wbr> ข้อมูล<wbr>ที่<wbr>เก็บ<wbr>ย้อน<wbr>หลัง<wbr>สิบ<wbr>ปี<wbr> โดย<wbr>ข้อมูล<wbr>ทั้ง<wbr>สิบ<wbr>ปี<wbr>ประกอบ<wbr>ด้วย<wbr>ข้อมูล<wbr> การ<wbr>ปัน<wbr>ผล<wbr> เมื่อ<wbr>นำ<wbr>เอา<wbr>ข้อมูล<wbr>ปันผล<wbr>ทั้ง<wbr>สิบ<wbr>ปี<wbr>มา<wbr>คิด<wbr>หา<wbr>ค่า<wbr>สำคัญ<wbr>ทาง<wbr>สถิติ<wbr> ได้<wbr>ผล<wbr> ดังนี้
+</table></center>
+<br>&nbsp;
+<center><table  border width="55%" >
+<tr align=center bgcolor="#e5e1e1">
+  <td width="35%" height=30><font face="ms sans serif" color="blue" size=-1>บริษัท
+  <td><font face="ms sans serif" color="blue" size=-1>ค่<wbr>าเฉลี่ย<wbr>การ<wbr>ปันผล %
+  <td><font face="ms sans serif" color="blue" size=-1>ความ<wbr>เบี่ยง<wbr>เบน<wbr>มาตรฐาน %
+<tr align=center>
+  <td align=left><font face="ms sans serif" color="brown" size=-1>บริษัท<wbr>รุ่งเจริญ<br>บริษัท<wbr>ค้าดี<br>บริษัท<wbr>กิจการดี
+  <td><font face="ms sans serif" color="brown" size=-1><center>8</center><center>5</center><center>5</center>
+  <td><font face="ms sans serif" color="brown" size=-1><center>5</center><center>2</center><center>1</center>
+</table></center>
+<p>
+<img src="man.gif" align=left><dd><font color="red" size=+1>คำ<font color="brown" size=-1>ถาม<wbr>มี<wbr>อยู่<wbr>ว่า<wbr> เรา<wbr>จะ<wbr>เลือก<wbr>ลงทุน<wbr>ใน<wbr>กิจการ<wbr>บริษัท<wbr>ใด<wbr>ดี<wbr> เพราะ<wbr>ถ้า<wbr>ได้<wbr>ปัน<wbr>ผล<wbr>เฉลี่ย<wbr>สูง<wbr> แต่<wbr>มี<wbr>ความ<wbr>แปร<wbr>ปรวน<wbr>สูง<wbr> บาง<wbr>ปี<wbr>อาจ<wbr>ได้<wbr>ต่ำ<wbr> บาง<wbr>ปี<wbr>อาจ<wbr>ได้<wbr>สูง<wbr> หรือ<wbr>มี<wbr>ความ<wbr>เสี่ยง<wbr>มาก
+<p>
+<dd>เพื่อ<wbr>ให้<wbr>มี<wbr>เงื่อน<wbr>ไข<wbr>การ<wbr>ตัด<wbr>สิน<wbr>ใจ<wbr>ได้<wbr>ง่าย<wbr>ขึ้น<wbr> 
+เรา<wbr>มี<wbr>การ<wbr>วัด<wbr> <font color="blue">ค่า<wbr>ด้วย<wbr>สัมประสิทธิ์<wbr>ของ<wbr>ความ<wbr>ผัน<wbr>แปร<wbr> 
+(coefficient of variation) <font color="brown">ซึ่ง<wbr>ค่า<wbr>นี้<wbr>เป็น<wbr>ค่า<wbr>ส่วน<wbr>ความ<wbr>เบี่ยง<wbr>เบน<wbr>มาตรฐาน<wbr>คิด<wbr>เป็น<wbr>เปอร์<wbr>เซนต์<wbr>ของ<wbr>ค่า<wbr>เฉลี่ย
+<center><font face="ms sans serif" color="black" size=+1>cv =&nbsp;<img src="thai.gif"  align=center><font size=-1>* 100</center>
+<p>
+<dd><font color="brown">ดังนั้น<wbr> จาก<wbr>ข้อมูล<wbr>ที่<wbr>ได้<wbr>มา<wbr>จะ<wbr>เห็น<wbr>ว่า<wbr>ทั้ง<wbr>สาม<wbr>บริษัท<wbr>มี<wbr>ค่า<wbr> cv แตก<wbr>ต่าง<wbr>กัน
+<p>
+<dd><table>
+<tr>
+  <td><font face="ms sans serif" color="brown" size=-1>cv ของ<wbr>บริษัท<wbr>รุ่งเจริญ 
+  <td><font face="ms sans serif" color="brown" size=-1>(5/8) * 100
+  <td><font face="ms sans serif" color="brown" size=-1>= 62.5 %
+<tr>
+  <td><font face="ms sans serif" color="brown" size=-1>cv ของ<wbr>บริษัท<wbr>ค้าดี
+  <td><font face="ms sans serif" color="brown" size=-1>(2/5) * 100
+  <td><font face="ms sans serif" color="brown" size=-1>= 40 %
+<tr>
+  <td><font face="ms sans serif" color="brown" size=-1>cv ของ<wbr>บริษัท<wbr>กิจการดี
+  <td><font face="ms sans serif" color="brown" size=-1>(1/5) * 100
+  <td><font face="ms sans serif" color="brown" size=-1>= 20 %
+</table>
+<p>
+<p>
+<center><table width=90%>
+<tr>
+<td><font face="ms sans serif" color=black size=-1><dd>ข้อมูล<wbr>นี้<wbr>เป็น<wbr>ข้อมูล<wbr>ช่วย<wbr>ใน<wbr>การ<wbr>ตัด<wbr>สิน<wbr>ใจ<wbr> ถ้า<wbr>เรา<wbr>ต้อง<wbr>การ<wbr><font color="red">ความ<wbr>เสี่ยง<wbr> <font color="brown">โดย<wbr>อาจ<wbr>ได้<wbr>ปัน<wbr>ผล<wbr>สูง<wbr>ใน<wbr>บาง<wbr>ปี<wbr>  ก็<wbr>ต้อง<wbr><font color="red">เลือก<wbr>บริษัท<wbr>รุ่ง<wbr>เจริญ<wbr><font color="brown"> แต่<wbr>ถ้า<wbr>ต้อง<wbr>การ<wbr><font color="blue">ความ<wbr>แน่นอน<wbr><font color="brown">ก็<wbr>ต้อง<wbr>เลือก<wbr><font color="blue">บริษัท<wbr>กิจการ<wbr>ดี
+</table></center>
+<br clear=all>
+<hr noshade size=2 width=100% align=center>
+<table width=50% align=right>
+<tr> 
+<td bgcolor="#e3e4ff" align=right><font  face="ms sans serif"  color="brown" size=-1>ที่มา: รศ. ยืน ภู่วรวรรณ, สำนักบริการคอมพิวเตอร์  มหาวิทยาลัย<wbr>เกษตรศาสตร์
+</table>
+<br clear=all>
+<hr noshade size=2 width=50% align=right>
+</body>
+</html>
+

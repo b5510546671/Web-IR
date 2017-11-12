@@ -1,0 +1,49 @@
+<html>
+<head>
+<title>schoolnet - mathematics ---- เลขจำนวนเฉพาะ (prime)</title>
+</head>
+<body>
+<a href="prime.htm"><img src="primenm.gif" height=40 border=0 align=right></a>
+
+<br clear=all>
+<table>
+<dd><table border=3 width=35%>
+<tr align=center><td bgcolor=#dfdfdf><font color="brown" size=-1 face="ms sans serif">ตัว<wbr>อย่าง<wbr>โปรแกรม<wbr>การ<wbr>หา<wbr>เลข<wbr>จำนวน<wbr>เฉพาะ<wbr>วิธี<wbr>ที่ <font size=+1 color="red">1<wbr>
+</table>
+<p>
+<center><table border width=65% bgcolor="#e7e8ff">
+<tr><td><font face="ms sans serif"  size=-1>program primelist1;<br>
+var<br>n,q,max:extended;<br>
+begin<br>write(' max = ?  ');<br>
+<dd>(*  &nbsp;prompts you for the maximum:&nbsp;  *)
+<dd>(*  &nbsp;all primes &nbsp;<u><</u> <i>max</i> &nbsp; are printed out  &nbsp;*)<br>
+readln(max);<br>
+write('2');<br>
+n:=3;<br>
+while n<=max  do
+<dd>begin
+<dd>q:=3;
+<dd>qdividesn:=false;
+<dd>(*&nbsp;initialization for the while loop&nbsp;*)
+<dd>while (q*q<=n) and not(qdividesn) &nbsp;do
+<dd>&nbsp;begin
+<dd>&nbsp;qdividesn:=(n=q*int(n/q));
+<dd>&nbsp;q:=q+2;
+<dd>&nbsp;end;
+<dd>if &nbsp;not(qdividesn) &nbsp;then &nbsp;write(',',n:0:0);
+<dd>n:=n+2;
+<dd>end;<br>
+end.
+</table></center>
+
+<br clear=all>
+<hr noshade size=2 width=100%>
+<table width=50% align=right>
+<tr> 
+<td bgcolor="#e3e4ff" align=right><font  face="ms sans serif"  color="brown" size=-1>ที่มา: รศ. ยืน ภู่วรวรรณ, สำนักบริการคอมพิวเตอร์  มหาวิทยาลัย<wbr>เกษตรศาสตร์
+</table>
+<br clear=all>
+<hr noshade size=2 width=50% align=right>
+
+</body>
+</htm>

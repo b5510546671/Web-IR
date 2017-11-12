@@ -1,0 +1,145 @@
+<html>
+<head>
+<title>สมรรถนะเชิงเปรียบเทียบของชุมสายเอทีเอ็ม</title>
+</head>
+<body bgcolor=white text=#14167c>
+<font face = "ms sans serif" size = -1>
+<table cols=1 width="100%" bgcolor="#d9ffaa" >
+<tr>
+<td><font face = "ms sans serif">
+<center><b>สมรรถนะเชิงเปรียบเทียบของชุมสายเอทีเอ็ม</b></center>
+</td>
+</tr>
+</table><p>
+
+<dd>atm เป็น<wbr>การ<wbr>ทำ<wbr>ให้<wbr>โหมดการ<wbr>ส่ง<wbr>ผ่าน<wbr>ง่ายเข้า โดย<wbr>อยู่<wbr>บน<wbr>พื้น<wbr>ฐาน<wbr>ของ atm สวิทช์ (เซลล์สวิทช์) ซึ่ง<wbr>ส่วน<wbr>ควบ<wbr>คุม<wbr>การ<wbr>ไหล<wbr>ของ<wbr>ข้อ<wbr>มูล<wbr>และ<wbr>ควบ<wbr>คุม<wbr>ข้อ<wbr>ผิด<wbr>พลาด<wbr>ไม่<wbr>ได้<wbr>เกิด<wbr>ขึ้น<wbr>ใน<wbr>โครง<wbr>ข่าย atm เส้น<wbr>ทางภาย<wbr>ใน atm สวิทช์ ถูก<wbr>กระ<wbr>ทำ<wbr>บน<wbr>พื้น<wbr>ฐาน<wbr>ของ vci (virtual circuit identifier) และ<wbr><wbr>/หรือ vpi (virtual path identifier) ถูก<wbr>รวม<wbr>อยู่<wbr>ใน<wbr>เซลล์ header ปัจจัย<wbr>หลัก 2 ประการ<wbr>ที่<wbr>มี<wbr>ผล<wbr>ต่อ<wbr>หน้า<wbr>ที่<wbr>ของ<wbr>โครง<wbr>สร้าง atm สวิทช์ คือ
+<dd>1. ความ<wbr>เร็ว ซึ่ง<wbr>สูง<wbr>มาก<wbr>ใน<wbr>การ<wbr>ปฏิบัติ<wbr>การ<wbr>เป็น<wbr>ผล<wbr>มา<wbr>จาก<wbr>การ<wbr>จำกัด<wbr>ฟังก์ชั่น<wbr>ของ header ด้วย<wbr>การ<wbr>จำกัด<wbr>ขนาด<wbr>ของ<wbr>เซลล์<wbr>ให้<wbr>มี<wbr>ขนาด<wbr>เล็ก
+<dd>2. คุณสมบัติ<wbr>ทางสถิติ<wbr>ของ atm traffic การ<wbr>เคลื่อน<wbr>ที่<wbr>ของ<wbr>เซลล์ atm จาก<wbr>ช่อง<wbr>สัญญาณ atm ลอจิก<wbr>ที่<wbr>ทางเข้า<wbr>ไป<wbr>ยัง<wbr>ทา<wbr>งอ<wbr>อก<wbr>หนึ่ง ๆ แสดง<wbr>คุณสมบัติ<wbr>โดย (1) พอร์ททางกายภาพ<wbr>ของอินพุท<wbr>/เอาท์พุท โดย<wbr>ตัว<wbr>มัน<wbr>เอง<wbr>ถูก<wbr>นิยาม<wbr>โดย vci และ<wbr><wbr>/หรือ vpi
+<dd>ใน<wbr>งาน<wbr>วิจัย<wbr>จำนวน<wbr>มาก<wbr>ได้<wbr>อธิบาย<wbr>เกี่ยวกับโครง<wbr>สร้าง<wbr>ของ atm สวิทช์ บาง<wbr>ส่วน<wbr>สร้าง<wbr>ขึ้น<wbr>แล้ว และ<wbr>บาง<wbr>ส่วน<wbr>ยัง<wbr>อยู่<wbr>ภาย<wbr>ใต้<wbr>การ<wbr>ทด<wbr>ลอง ไม่<wbr>มี<wbr>โครง<wbr>สร้าง<wbr>ใด<wbr>แยก<wbr>ประเภท<wbr>ไว้<wbr>ใน<wbr>ทิศ<wbr>ทางเดียว<wbr>กัน เท่า<wbr>ที่<wbr>รู้<wbr>มา<wbr>ยัง<wbr>ไม่<wbr>มี<wbr>การ<wbr>แยก<wbr>ประเภท atm สวิทช์ใด ๆ อย่าง<wbr>เป็น<wbr>ทางการ<wbr>ด้วย<wbr>ซ้ำ
+<dd>มี<wbr>ผู้<wbr>รู้<wbr>บาง<wbr>คน<wbr>ได้<wbr>เสนอ<wbr>ไว้ 3 ชนิด คือ shared-memory, shared-medium และ space-division แต่<wbr>ก็<wbr>ไม่<wbr>ได้<wbr>อธิบาย<wbr>ถึง<wbr>ลักษณะ<wbr>อื่น ๆ ของสวิทช์ เช่น ใน<wbr>ชนิด shared-medium เรา<wbr>ไม่<wbr>ทราบ<wbr>ว่า<wbr>เทคนิคกา<wbr>รสวิทช์แบบ<wbr>ใด<wbr>ที่<wbr>จะ<wbr>เป็น<wbr>เส้น<wbr>ทางหลัก<wbr>ใน<wbr>โครง<wbr>สร้าง อาจ<wbr>จะ<wbr>เป็น<wbr>รูป<wbr>แบบ<wbr>ของ<wbr>การ<wbr>บล็อก<wbr>การ<wbr>ควบ<wbr>คุม<wbr>จาก<wbr>ศูนย์<wbr>กลาง<wbr>และ<wbr>การ<wbr>วาง<wbr>ตำแหน่ง<wbr>ของบัฟเฟอร<wbr>์
+<dd>ผู้<wbr>เชี่ยว<wbr>ชาญ<wbr>อีก<wbr>ราย<wbr>กล่าว<wbr>ถึง<wbr>ชนิด<wbr>ของ blacking และ non-blocking ขณะ<wbr>ที่<wbr>บาง<wbr>คน<wbr>สน<wbr>ใจ<wbr>เฉพาะบัฟเฟอร์สำหรับ<wbr>ชนิด space-division เท่า<wbr>นั้น
+<dd>ใน<wbr>บท<wbr>ความ<wbr>นี้<wbr>จึง<wbr>ขอ<wbr>แนะ<wbr>นำ<wbr>ทฤษฎี<wbr>ทั่ว<wbr>ไป<wbr>แบบ<wbr>ใหม่<wbr>สำหรับ<wbr>การ<wbr>แยก<wbr>ประเภท atm สวิทช์ ซึ่ง<wbr>อยู่<wbr>บน<wbr>พื้น<wbr>ฐาน<wbr>ของ<wbr>ตัว<wbr>แปร 6 ตัว อัน<wbr>ได้<wbr>แก่
+<dd>(1) การ<wbr>เชื่อม<wbr>ต่อ<wbr>ภาย<wbr>ในสวิทช์
+<dd>(2) การ<wbr>ควบ<wbr>คุมสวิทช์
+<dd>(3) เทคนิค<wbr>การสวิทช์
+<dd>(4) การ<wbr>วาง<wbr>ตำแหน่งบัฟเฟอร์ใน<wbr>อุปกรณ์สวิทช์
+<dd>(5) มี<wbr>การ<wbr>บล็อก<wbr>ภาย<wbr>ในสวิทช์
+<dd>(6) โครง<wbr>สร้างสวิทช์
+<p>
+<h3>การ<wbr>แยก<wbr>ประเภท<wbr>ของ atm สวิทช์<wbr></h3>
+<dd>การ<wbr>ออก<wbr>แบบ<wbr>โครง<wbr>สร้าง atm สวิทช์ที่<wbr>แตก<wbr>ต่าง<wbr>กัน<wbr>สามารถ<wbr>ทำ<wbr>ได้<wbr>โดย<wbr>อยู่<wbr>บน<wbr>พื้น<wbr>ฐาน<wbr>ของ<wbr>มาตร<wbr>ฐาน คือ (1) การ<wbr>ส่ง<wbr>ผ่าน<wbr>ข้อ<wbr>มูล<wbr>ความ<wbr>เร็ว<wbr>สูง (>1 git/s) (2) มี<wbr>ค่า<wbr>หน่วง<wbr>เวลา<wbr>น้อย<wbr>มาก (<lms) โดย<wbr>เฉพาะ<wbr>สำหรับ isochronous traffic (3) ความ<wbr>น่า<wbr>จะ<wbr>เป็น<wbr>ของ<wbr>การ<wbr>สูญ<wbr>เสีย<wbr>ต่ำ (<10-9) (4) บริการ<wbr>แบบ<wbr>หลาย<wbr>จุด (5) modularity และ (6) ราคา<wbr>อุปกรณ์<wbr>ต่ำ ด้วย<wbr>เหตุ<wbr>ผล<wbr>เหล่า<wbr>นี้ atm สวิทช์ควร<wbr>จะ<wbr>มี<wbr>พื้น<wbr>ฐาน<wbr>อยู่<wbr>บน<wbr>โครง<wbr>สร้าง<wbr>แบบ<wbr>ขนาน
+<dd>มาตร<wbr>ฐาน<wbr>ที่<wbr>ใช้<wbr>สำหรับ<wbr>แยก<wbr>ประเภท<wbr>โครง<wbr>สร้าง atm เรา<wbr>อาจ<wbr>สรุป<wbr>ได้ 6 จุด<wbr>ด้วย<wbr>กัน ได้<wbr>แก่
+<p>
+<h3>ลิงค์ (link)</h3>
+<dd>เรา<wbr>สามารถ<wbr>นิยาม<wbr>การ<wbr>เชื่อม<wbr>ต่อ<wbr>ภาย<wbr>ใน atm สวิทช์ได้ 2 ชนิด คือ (1) dedicated link เป็น<wbr>การ<wbr>เชื่อม<wbr>ต่อ<wbr>ระหว่าง<wbr>อุปกรณ์สวิทช์ ซึ่ง<wbr>ถูก<wbr>ใช้<wbr>อย่าง<wbr>จำกัด โดย<wbr>การ<wbr>ติด<wbr>ต่อ<wbr>สื่อ<wbr>สาร<wbr>หนึ่ง<wbr>ครั้ง ณ เวลา<wbr>หนึ่ง (2) statistical link อาจ<wbr>จะ<wbr>ถูก<wbr>ใช้<wbr>โดย<wbr>ผู้<wbr>ใช้<wbr>ทุก<wbr>คน โดย<wbr>จะ<wbr>มี<wbr>ประสิทธิภาพ<wbr>มาก<wbr>ตราบ<wbr>เท่า<wbr>ที่<wbr>ยัง<wbr>มี<wbr>ความ<wbr>ยืด<wbr>หยุ่น<wbr>ของ<wbr>แบบสวิทช์เข้า<wbr>มา<wbr>เกี่ยว<wbr>ข้อง ข้อ<wbr>เสีย<wbr>คือ<wbr>ผล<wbr>ที่<wbr>จำกัด<wbr>ของ<wbr>การ<wbr>ส่ง<wbr>ผ่าน<wbr>และ<wbr>ผล<wbr>ตอบ<wbr>สนอง<wbr>ทางเวลา
+<p>
+<h3>การ<wbr>ควบ<wbr>คุม<wbr><wbr></h3>
+<dd>หมาย<wbr>ถึง<wbr>การ<wbr>ควบ<wbr>คุม<wbr>เซลล์<wbr>ภาย<wbr>ใน<wbr>โครง<wbr>สร้างสวิทช์ การ<wbr>ควบ<wbr>คุม<wbr>นี้<wbr>ถูก<wbr>กระ<wbr>ทำ<wbr>บน<wbr>ทางเดิน<wbr>เซลล์ เนื่อง<wbr>จาก<wbr>ต้อง<wbr>จำกัด<wbr>อุปกรณ์ vlsi ดัง<wbr>นั้น<wbr>เรา<wbr>จึง<wbr>ต้อง<wbr>การ<wbr>ที่<wbr>จะ<wbr>กระจาย<wbr>การ<wbr>ควบ<wbr>คุม<wbr>ภาย<wbr>ใน<wbr>โครง<wbr>สร้าง atm สวิทช์กล<wbr>ไก "self-routing" ใน banyan สวิทช์เป็น<wbr>ตัว<wbr>อย่าง<wbr>ที่<wbr>ดี<wbr>ของ<wbr>การ<wbr>กระจาย<wbr>การ<wbr>ควบ<wbr>คุม<wbr>เส้น<wbr>ทาง ซึ่ง<wbr>ถูก<wbr>กระ<wbr>ทำ<wbr>ใน<wbr>แต่<wbr>ละ<wbr>อุปกรณ์สวิทช์ตาม<wbr>ทางเดิน<wbr>ทั้ง<wbr>หมด<wbr>จากอินพุตพอร์ทไป<wbr>ยัง<wbr>เอาท์พุทพอร<wbr>์ทของ atm สวิทช<wbr>์
+<dd>อัลกอ<wbr>ริ<wbr>ทึม<wbr>ของ<wbr>เส้น<wbr>ทางทำ<wbr>งาน<wbr>ด้วย<wbr>การ<wbr>บรรจุ<wbr>ข้อ<wbr>มูล<wbr>ต่าง ๆ ลง<wbr>ใน<wbr>ส่วน<wbr>ที่<wbr>ต่อ<wbr>ท้าย header ไป<wbr>ยัง<wbr>เซลล์<wbr>โดย<wbr>การ<wbr>ควบ<wbr>คุม<wbr>ทั่ว ๆ ไป =ภาย<wbr>ใน โครง<wbr>สร้างสวิทช์ใน dqdb สวิทช์ การ<wbr>ควบ<wbr>คุม<wbr>ถูก<wbr>กำหนด<wbr>ด้วย<wbr>วิธี<wbr>การ<wbr>กระจาย<wbr>ด้วย<wbr>เหมือน<wbr>กัน
+<p>
+<h3>เทคนิค<wbr>กา<wbr>รสวิทช์<wbr></h3>
+<dd>สามารถ<wbr>แบ่ง<wbr>ออก<wbr>เป็น 5 ประเภท คือ (1) space division (2) การก<wbr>รอง<wbr>ตำแหน่ง (address fitering) (3) การ<wbr>เปลี่ยน<wbr>แปลง time slot (4) fdm และ (5) เทคนิค<wbr>การ<wbr>ผสมสวิทช์ อย่าง<wbr>ไร<wbr>ก็<wbr>ตาม tdm เป็น<wbr>พื้น<wbr>ฐาน<wbr>สำหรับ<wbr>ทุก ๆ ชนิด<wbr>ของ<wbr>เทคนิค<wbr>การสวิทช์
+<p>
+<b><font color=#835353>1) space divison atm switches</b></font>
+<dd>ใน<wbr>โครง<wbr>สร้าง<wbr>ชนิด<wbr>นี้ ไม่<wbr>จำ<wbr>เป็น<wbr>ต้อง<wbr>มี<wbr>การ<wbr>ติด<wbr>ต่อ<wbr>ของ<wbr>หน่วย<wbr>ความ<wbr>จำ<wbr>ที่<wbr>ความ<wbr>เร็ว<wbr>มาก<wbr>กว่า 2 เท่า<wbr>ของ<wbr>ความ<wbr>เร็ว<wbr>บน<wbr>เส้น ยิ่ง<wbr>ไป<wbr>กว่า<wbr>นั้น<wbr>การ<wbr>ควบ<wbr>คุมสวิทช์ไม่<wbr>ต้อง<wbr>การ<wbr>ถูก<wbr>ควบ<wbr>คุม<wbr>จาก<wbr>ส่วน<wbr>กลาง แต่<wbr>อาจ<wbr>เป็น<wbr>ไป<wbr>ได้<wbr>สำหรับอินพุทที่<wbr>มี<wbr>ทางเดิน<wbr>แตก<wbr>ต่าง<wbr>กัน<wbr>เพื่อ<wbr>ใช้สวิทช์ใน<wbr>เวลา<wbr>เดียว<wbr>กัน ทั้ง<wbr>หมด<wbr>ถูก<wbr>ใส่<wbr>ที่<wbr>ตำแหน่ง ซึ่ง<wbr>เกิด<wbr>การ<wbr>ขัด<wbr>แย้ง<wbr>กัน หรือ<wbr>ไว้<wbr>ที่<wbr>ด้าน<wbr>บน<wbr>ของ<wbr>ตำแหน่ง space-division ซึ่ง<wbr>มี 2 ชนิด คือ crossbar สวิทช์ และ banyan-based สวิทช์
+<p>
+<b><font color=#835353>2) การก<wbr>รอง<wbr>ตำแหน่ง (address fitering)</b></font>
+<dd>เซลล์<wbr>ทั้ง<wbr>หมด<wbr>ที่<wbr>มา<wbr>ถึง<wbr>บน<wbr>เส้นอินพุทจะ<wbr>ถูกมัลติ<wbr>เพล็กซ์ไป<wbr>ยัง<wbr>ตัว<wbr>กลาง<wbr>ความ<wbr>เร็ว<wbr>สูง ซึ่ง<wbr>ทำ<wbr>ให้<wbr>แบนด์วิดท์รวม<wbr>เท่ากับ n เท่า<wbr>ของ<wbr>ความ<wbr>เร็ว<wbr>เส้นอินพุทหนึ่ง<wbr>เส้น เซลล์<wbr>ทั้ง<wbr>หมด<wbr>จะ<wbr>ถูก demultiplex โดย<wbr>การ<wbr>ช่วย<wbr>เหลือ<wbr>ของ<wbr>ตัว<wbr>กรอง<wbr>ตำแหน่ง<wbr>ที่<wbr>จุด<wbr>เชื่อม<wbr>ต่อกับเอาท์พุท ตัว<wbr>อย่าง<wbr>ของสวิทช์ชนิด<wbr>นี้<wbr>คือ "atom สวิทช์<wbr>" (atm output-buffer modular switch)
+<p>
+<b><font color=#835353>3) การ<wbr>เปลี่ยน<wbr>แปลง time slot</b></font>
+<dd>เป็น<wbr>เทคนิคชั้น<wbr>เยี่ยม โดย<wbr>เฉพาะ<wbr>ในดิจิตอลสวิทช์ หรือ spc (stored program control) สวิทช์ใน atm สวิทช์เซลล์<wbr>ทั้ง<wbr>หมด<wbr>ที่<wbr>เข้า<wbr>มา<wbr>และ<wbr>ออก<wbr>ไป จาก<wbr>โครง<wbr>สร้างสวิทช์จะ<wbr>ถูก<wbr>จัด<wbr>กลุ่ม<wbr>ใน<wbr>คำ<wbr>สั่ง<wbr>ควบ<wbr>คุม<wbr>โดยอัลกอ<wbr>ริ<wbr>ทึม<wbr>ส่วน<wbr>กลาง ขึ้น<wbr>อยู่กับโครง<wbr>สร้างสวิทช์ ตัว<wbr>อย่าง<wbr>ของ<wbr>เทคนิคกา<wbr>รสวิทช์ชนิด<wbr>นี้<wbr>คือ coprin หรือ prelude สวิทช์ ซึ่ง<wbr>เสนอ<wbr>โดย cnet จาก<wbr>ฝรั่งเศส อัน<wbr>เป็น<wbr>หนึ่ง<wbr>ในสวิทช์แบบ<wbr>แรก ๆ
+<p>
+<b><font color=#835353>4) fdm (frequency division multiplexing)</b></font>
+<dd>เทคนิคกา<wbr>รสวิทช์แบบ<wbr>นี้<wbr>ได้<wbr>รับ<wbr>ความ<wbr>สน<wbr>ใจ<wbr>มาก จากเครื่องมือ photonic switch ซึ่ง<wbr>อยู่<wbr>นอก<wbr>เหนือ<wbr>จาก<wbr>ขอบ<wbr>เขต<wbr>ของ<wbr>บท<wbr>ความ<wbr>นี้ เส้น<wbr>ทางของ<wbr>เซลล์<wbr>ทั้ง<wbr>หมด<wbr>จะ<wbr>ใช้<wbr>ความ<wbr>แตก<wbr>ต่าง<wbr>ของ<wbr>ความ<wbr>ถี่<wbr>มา<wbr>ช่วย
+<p>
+<b><font color=#835353>5) การ<wbr>ผสม<wbr>เทคนิคต่าง ๆ ของสวิทช์<wbr></b></font>
+<dd>atm สวิทช์อาจ<wbr>จะ<wbr>เป็น<wbr>พื้น<wbr>ฐาน<wbr>ของ<wbr>เทคนิค<wbr>การ<wbr>สวิทช์ทั่ว<wbr>ไป เช่น<wbr>ตัว<wbr>อย่าง<wbr>ของ<wbr>โครง<wbr>สร้าง knock out switch ซึ่ง<wbr>มี n 2 เส้น<wbr>ทางที่<wbr>ไม่<wbr>ต่อ<wbr>เนื่อง<wbr>กัน<wbr>ระหว่างอินพุททั้ง<wbr>หมด<wbr>และ<wbr>เอาท์พุตทั้ง<wbr>หมด อัน<wbr>เป็น<wbr>ชนิด<wbr>หนึ่ง<wbr>ของ<wbr>เทคนิคแบบ n:l concentrator (ตัว<wbr>รวม) ซึ่ง<wbr>เลือก l เป็น<wbr>ทา<wbr>งอ<wbr>อก<wbr>ของ<wbr>เซลล์<wbr>ทั้ง<wbr>หมด<wbr>ระหว่าง n ทางเข้า<wbr>ของ<wbr>เซลล์<wbr>ทั้ง<wbr>หมด ค่า l จะ<wbr>ไม่<wbr>ใหญ่<wbr>มาก<wbr>เพื่อ<wbr>ที่<wbr>จะ<wbr>ให้<wbr>เกิด<wbr>การ<wbr>สูญ<wbr>เสีย<wbr>ต่ำ สำหรับ<wbr>อัตรา<wbr>การ<wbr>สูญ<wbr>เสีย 10-6 เรา<wbr>ต้อง<wbr>การ l=8 สำหรับ<wbr>โหลด 0.9
+<p>
+<h3>การบัฟเฟอร์ใน<wbr>อุปกรณ์สวิทช์<wbr></h3>
+<dd>m.g.hluchyj และ m.j.karol ได้<wbr>แยก<wbr>ประเภท<wbr>ของ<wbr>อุปกรณ์สวิทช์เป็น 4 รูป<wbr>แบบ คือ (1) การ<wbr>จัด<wbr>ลำ<wbr>ดับ<wbr>ทางอินพุท (2) ไม่<wbr>มี<wbr>การ<wbr>จัด<wbr>ลำ<wbr>ดับ<wbr>ทางอินพุท (input smoothing) (3) การ<wbr>จัด<wbr>ลำ<wbr>ดับ<wbr>ทางเอาท์พุท และ (4) ความ<wbr>สมบูรณ์<wbr>ของ<wbr>การ<wbr>ใช้บัฟเฟอร์ร่วม<wbr>กัน ใน<wbr>ที่<wbr>นี้<wbr>สน<wbr>ใจ<wbr>เซลล์สวิทช์แบบ space-division เพราะ<wbr>ใน<wbr>ตัว<wbr>ของ<wbr>มัน<wbr>เอง<wbr>มี<wbr>ประสิทธิภาพ<wbr>สูง ซึ่ง<wbr>สามารถ<wbr>จะ<wbr>กำหนด<wbr>ขอบ<wbr>เขต<wbr>โดย<wbr>การ<wbr>ใช้<wbr>เทคนิค<wbr>นี้
+<dd>จริง ๆ แล้ว<wbr>เรา<wbr>สามารถ<wbr>นิยาม<wbr>รูป<wbr>แบบ<wbr>ทั่ว<wbr>ไป<wbr>ได้<wbr>มาก<wbr>กว่า<wbr>นี้ เพื่อ<wbr>ที่<wbr>จะ<wbr>ใช้<wbr>ใน<wbr>การ<wbr>แยก<wbr>ประเภท<wbr>ของ<wbr>โครง<wbr>สร้าง atm สวิทช์ ใน<wbr>ที่<wbr>นี้<wbr>เรา<wbr>จะ<wbr>ใช้<wbr>เพียง 5 แบบ<wbr>คือ (1) การ<wbr>จัด<wbr>ลำ<wbr>ดับ<wbr>ทางอินพุท (2) การ<wbr>จัด<wbr>ลำ<wbr>ดับ<wbr>ทางเอาท์พุต (3) การ<wbr>จัด<wbr>ลำ<wbr>ดับ<wbr>ทั้ง<wbr>ทางอินพุทและ<wbr>เอาท์พุต (4) การ<wbr>ใช้บัฟเฟอร์ร่วม<wbr>กัน และ (5) ไม่<wbr>มีบัฟเฟอร<wbr>์
+<dd>อุปกรณ์สวิทช์ใน atm สวิทช์สามารถ<wbr>พิจารณา<wbr>ว่า<wbr>มี n อินพุท และ n เอาท์พุท และ<wbr>ทำ<wbr>งาน<wbr>ด้วย<wbr>ความ<wbr>เร็ว c เท่า โดย<wbr>เปรียบ<wbr>เทียบกับความ<wbr>เร็ว<wbr>ของ<wbr>เส้นอินพุทหรือ<wbr>เอาท์พุท โดย 1<c<n โดย<wbr>ที่ c อาจ<wbr>เรียก<wbr>ว่า<wbr>ความ<wbr>เร่ง (speed-up) ของ<wbr>อุปกรณ์สวิทช์ดัง<wbr>รูป<wbr>ที่ 1
+
+<p><center><img src="atm_1_1.jpg"></center><p>
+
+<dd>เรา<wbr>มา<wbr>ดู<wbr>ต่อ<wbr>ไป<wbr>ว่า<wbr>จะ<wbr>จัด<wbr>ระบบบัฟเฟอร์ที่<wbr>อุปกรณ์สวิทช์ได้<wbr>อย่าง<wbr>ไร ความ<wbr>เร็ว<wbr>ที่<wbr>เพิ่ม<wbr>ขึ้น<wbr>มี<wbr>ผล<wbr>กระ<wbr>ทบกับการ<wbr>จัด<wbr>ระบบ<wbr>นี้ เรา<wbr>สามารถ<wbr>แยก<wbr>เป็น<wbr>กรณี<wbr>ดัง<wbr>นี้
+<dd>ถ้า c=1 (ความ<wbr>เร็ว<wbr>ของสวิทช์จะ<wbr>มี<wbr>ค่า<wbr>เดียวกับความ<wbr>เร็ว<wbr>ของอินพุทหรือ<wbr>เอาท์พุท) จะ<wbr>มี<wbr>เพียง<wbr>เซลล์<wbr>เดียว<wbr>ที่<wbr>เวลา<wbr>หนึ่ง<wbr>สามารถ<wbr>ไป<wbr>ถึง<wbr>เอาท์พุทที่<wbr>กำหนด ใน<wbr>กรณี<wbr>นี้<wbr>ถ้า<wbr>มี<wbr>เซลล์<wbr>มาก<wbr>กว่า<wbr>หนึ่ง<wbr>เซลล์<wbr>เข้า<wbr>มา<wbr>จากอินพุทที่<wbr>แตก<wbr>ต่าง<wbr>กัน และ<wbr>พยายาม<wbr>ที่<wbr>จะ<wbr>ไป<wbr>ยัง<wbr>เอาท์พุทเหมือน<wbr>กัน เซลล์<wbr>เหล่า<wbr>นี้<wbr>จะ<wbr>คอย<wbr>จน<wbr>กระทั่ง<wbr>ถึง time slot ถัด<wbr>ไป ยก<wbr>เว้น<wbr>ถ้า<wbr>มี<wbr>เซลล์<wbr>เดียว<wbr>ก็<wbr>ไม่<wbr>ต้อง<wbr>คอย ดัง<wbr>นั้น<wbr>จึง<wbr>ต้อง<wbr>การ<wbr>อินพุท<wbr>บัฟเฟอร์<wbr>มา<wbr>จัด<wbr>ตำแหน่ง<wbr>ของ<wbr>เซลล์<wbr>ให้<wbr>อยู่<wbr>อย่าง<wbr>เหมาะ<wbr>สม เพื่อ<wbr>ให้<wbr>แก้<wbr>ไข<wbr>ใน<wbr>ส่วน<wbr>ที่<wbr>เกิด<wbr>การ<wbr>ช่วง<wbr>ชิง<wbr>ทางเฟสผิด<wbr>พลาด
+<dd>ถ้า c=n หมาย<wbr>ถึง<wbr>ใน 1 time slot เซลล์<wbr>ทั้ง<wbr>หมด<wbr>จาก<wbr>ทุก ๆ อินพุท<wbr>สามารถ<wbr>ที่<wbr>จะ<wbr>ส่ง<wbr>ผ่าน<wbr>ไป<wbr>ยัง<wbr>เอาท์พุท<wbr>หนึ่ง ๆ ที่<wbr>กำหนด โดย<wbr>ปราศ<wbr>จาก<wbr>การ<wbr>ช่วง<wbr>ชิง<wbr>ใด ๆ ซึ่ง<wbr>เสมือน<wbr>เอาท์พุท<wbr>บัฟเฟอร์<wbr>ให้<wbr>ประสิทธิภาพ<wbr>สูง<wbr>สุด<wbr>ใน<wbr>กรณี<wbr>นี้ เรา<wbr>จึง<wbr>ต้อง<wbr>การ<wbr>เฉพาะ<wbr>เอาท์พุท<wbr>บัฟเฟอร์<wbr>เท่านั้น
+<dd>ถ้า<wbr>ความ<wbr>เร็ว<wbr>ที่<wbr>เพิ่ม<wbr>เท่ากับ c โดย<wbr>ที่ 1 < c < n ใน<wbr>กรณี<wbr>นี้<wbr>เห็น<wbr>ได้<wbr>ชัด<wbr>ว่า<wbr>เรา<wbr>ต้อง<wbr>การ<wbr>ทั้ง<wbr>อินพุท<wbr>และ<wbr>เอาท์พุทบัฟเฟอร์
+<dd>สามารถ<wbr>เพิ่ม<wbr>อุปกรณ์<wbr>โดย<wbr>ยอม<wbr>ให้<wbr>มี<wbr>การ<wbr>กำหนด<wbr>อินพุท<wbr>และ<wbr>เอาท์พุท<wbr>บัฟเฟอร์
+<dd>ไม่<wbr>มีบัฟเฟอร์
+<dd>1) การ<wbr>เข้า<wbr>คิว<wbr>ทาง<wbr>อินพุท
+
+<p><center><img src="atm_1_2.jpg"></center><p>
+
+<dd>บัฟเฟอร์ได้<wbr>ถูก<wbr>วาง<wbr>ตำแหน่ง<wbr>ไว้<wbr>ที่อินพุทของ nonblocking switch ดัง<wbr>รูป<wbr>ที่ 2 เซลล์<wbr>ทั้ง<wbr>หมด<wbr>ได้<wbr>เข้า<wbr>ไป<wbr>ยัง<wbr>เอาท์พุท<wbr>พอร์ท<wbr>ที่<wbr>เหมือน<wbr>กัน ทำ<wbr>ให้<wbr>เกิด<wbr>การ<wbr>ช่วง<wbr>ชิง<wbr>ขึ้น จะ<wbr>มี<wbr>เพียง<wbr>เซลล์<wbr>เดียว<wbr>ที่<wbr>ได้<wbr>รับ<wbr>อนุญาต<wbr> ณ เวลา<wbr>หนึ่ง<wbr>ส่วน<wbr>เซลล์<wbr> อื่น ๆ <wbr>ต้อง<wbr>คอย<wbr>จน<wbr>กระทั่ง<wbr>ถึง time slot  <wbr>ถัด<wbr>ไป <wbr>กรณี<wbr>นี้<wbr>ได้<wbr>พิสูจน์<wbr>แล้ว<wbr>ว่า<wbr> การ<wbr>ส่ง<wbr>ผ่าน<wbr>สูง<wbr>สุด <wbr>มี<wbr>ค่า<wbr>เท่ากับ 0586 <wbr>เมื่อ n มี<wbr>ค่า<wbr>มาก ๆ
+<dd>2) การ<wbr>เข้า<wbr>คิว<wbr>ทาง<wbr>เอาท์พุท
+
+<p><center><img src="atm_1_3.jpg"></center><p>
+
+<dd>บัฟเฟอร์ของ<wbr>โครง<wbr>สร้างสวิทช์ถูก<wbr>วาง<wbr>ใน<wbr>ตำแหน่ง<wbr>เอาท์พุทเช่น<wbr>เดียวกับการ<wbr>เข้า<wbr>คิว<wbr>แบบ fifo ซึ่ง<wbr>จะ<wbr>มี<wbr>ความ<wbr>เร็ว<wbr>ภาย<wbr>ใน<wbr>เท่ากับ n เปรียบ<wbr>เทียบกับความ<wbr>เร็ว<wbr>ทางอินพุทและ<wbr>เอาท์พุท เซลล์<wbr>ทั้ง<wbr>หมด
+จะ<wbr>เข้า<wbr>มา<wbr>ที่ time slot เดียว<wbr>กัน และ<wbr>อาจ<wbr>จะ<wbr>ใช้<wbr>เป็น<wbr>ทางเดิน<wbr>ไป<wbr>ยัง<wbr>เอาท์พุท ปัญหา<wbr>การ<wbr>ช่วง<wbr>ชิง<wbr>จึง<wbr>ไม่<wbr>เกิด<wbr>ขึ้น การ<wbr>ดำ<wbr>เนิน<wbr>การ<wbr>เช่น<wbr>นี้<wbr>จะ<wbr>มี<wbr>ความ<wbr>ยุ่ง<wbr>ยาก<wbr>มาก<wbr>กว่า ถ้า<wbr>โครง<wbr>สร้างสวิทช์มี<wbr>ขนาด<wbr>ใหญ่ เรา<wbr>ยัง<wbr>สามารถ<wbr>เตรียม<wbr>เอาท์พุทบัฟเฟอร์ใน<wbr>หน<wbr>ทางอื่น<wbr>ได้<wbr>อีก ยก<wbr>ตัว<wbr>อย่าง<wbr>เช่น ใน knock out switch ต้อง<wbr>การ n:l concentrator ที่<wbr>แต่<wbr>ละ<wbr>เอาท์พุทเพื่อ<wbr>ลด<wbr>จำนวน<wbr>ของบัฟเฟอร์
+<dd>3) การ<wbr>เข้า<wbr>คิว<wbr>ทางอินพุทและ<wbr>เอาท์พุท
+
+<p><center><img src="atm_1_4.jpg"></center><p>
+
+<dd>ใน<wbr>กรณี<wbr>ที่ 1 < c < n ดัง<wbr>รูป<wbr>ที่ 4 ซึ่ง<wbr>เป็น<wbr>กรณี<wbr>ที่<wbr>เหมาะ<wbr>สม<wbr>สำหรับ<wbr>การ<wbr>ดำ<wbr>เนิน<wbr>งาน ที่<wbr>เรา<wbr>ไม่<wbr>ต้อง<wbr>การ<wbr>ความ<wbr>เร็ว<wbr>สูง<wbr>มาก<wbr>นัก<wbr>ใน<wbr>อุปกรณ์สวิทช<wbr>์
+<dd>4) การ<wbr>ใช้บัฟเฟอร์ร่วม<wbr>กัน
+
+<p><center><img src="atm_1_5.jpg"></center><p>
+
+<dd>รูป<wbr>ที่ 5 ได้<wbr>เสนอ<wbr>การ<wbr>ใช้บัฟเฟอร์ร่วม<wbr>กัน ซึ่ง<wbr>ได้<wbr>แยก<wbr>ประเภท<wbr>ชนิด<wbr>ของสวิทช์ออก<wbr>เป็น 2 แบบ<wbr>ตาม<wbr>เส้น<wbr>ทางการ<wbr>แบ่ง<wbr>หน่วย<wbr>ความ<wbr>จำ ซึ่ง<wbr>สามารถ<wbr>แยก<wbr>ประเภท<wbr>ได้<wbr>ดัง<wbr>นี้
+<dd>การ<wbr>แบ่ง<wbr>อย่าง<wbr>สมบูรณ์ (complete partitioning) 
+โดย<wbr>หน่วย<wbr>ความ<wbr>จำ<wbr>จะ<wbr>ถูก<wbr>แบ่ง<wbr>ออก<wbr>จาก<wbr>กัน<wbr>ให้<wbr>กลาย<wbr>เป็น n บัฟเฟอร์
+<dd>full sharing โดย<wbr>ที่<wbr>การ<wbr>เข้า<wbr>คิว<wbr>ทั้ง<wbr>หมด สามารถ<wbr>แบ่ง<wbr>ที่<wbr>ปลาย<wbr>หน่วย<wbr>ความ<wbr>จำ ซึ่ง<wbr>สามารถ<wbr>ออก<wbr>แบบบัฟเฟอร์ชนิด<wbr>นี้ เช่น<wbr>เดียวกับเอาท์พุทบัฟเฟอร<wbr>์
+<dd>ขนาด<wbr>ของ<wbr>หน่วย<wbr>ความ<wbr>จำ<wbr>อาจ<wbr>จะ<wbr>ถูก<wbr>ลด<wbr>โดย<wbr>การ<wbr>เปลี่ยน<wbr>จาก complete partitioning ไป<wbr>เป็น full sharing ทั้ง<wbr>หมด<wbr>นี้<wbr>มา<wbr>จาก<wbr>ความ<wbr>จริง<wbr>ที่<wbr>ว่า เซลล์<wbr>ทุก<wbr>เซลล์<wbr>สามารถ<wbr>แบ่ง<wbr>ได้<wbr>บน<wbr>พื้น<wbr>ที่<wbr>ทั้ง<wbr>หมด<wbr>ใน<wbr>หน่วย<wbr>ความ<wbr>จำ<wbr>เช่น<wbr>เดียวกับอัตรา<wbr>การ<wbr>สูญ<wbr>เส<wbr><wbr>ียของ<wbr>เซลล์<wbr>จะ<wbr>ถูก<wbr>ลด<wbr>ลง<wbr>ใน<wbr>กรณี<wbr>ต่อ<wbr>มา
+<dd>5) ไม่<wbr>มี<wbr>การบัฟเฟอร์
+<dd>ใน<wbr>กรณี<wbr>นี้<wbr>เรา<wbr>ไม่<wbr>ต้อง<wbr>การบัฟเฟอร์ใด ๆ อย่าง<wbr>ใน<wbr>กรณี<wbr>ก่อน<wbr>หน้า<wbr>นี้ throungput ถูก<wbr>จำกัด<wbr>อยู่<wbr>ที่ 0.586 ซึ่ง<wbr>ค่า<wbr>นี้<wbr>เป็น<wbr>ค่า<wbr>เดียวกับกรณี<wbr>ของอินพุทบัฟเฟอร์ เมื่อ<wbr>เซลล์<wbr>ทั้ง<wbr>หมด<wbr>เกิด<wbr>การ<wbr>สูญ<wbr>เสีย<wbr>ใน<wbr>ขณะ<wbr>เกิด<wbr>การ<wbr>ช่วง<wbr>ชิง<wbr>ของเฟส เห็น<wbr>ได้<wbr>ชัด<wbr>ว่า<wbr>อัตรา<wbr>การ<wbr>สูญ<wbr>เสีย<wbr>ของ<wbr>เซลล์<wbr>มี<wbr>ค่า<wbr>สูง<wbr>เพราะ<wbr>ไม่<wbr>สามารถ<wbr>ทำ<wbr>ให้<wbr>เซลล์<wbr>ทั้ง<wbr>หมด<wbr>ไม่<wbr>มี<wbr><wbr>การ<wbr>สูญ<wbr>เสีย<wbr>ใน<wbr>ขณะ<wbr>เกิด<wbr>การ<wbr>ช่วง<wbr>ชิง<wbr>ใน<wbr>ช่วง time slot ถัด<wbr>ไป
+<dd>การ<wbr>เปรียบ<wbr>เทียบ<wbr>ระหว่าง 5 ประเภท ของ<wbr>โครง<wbr>สร้างสวิทช์ได้<wbr>อธิบาย<wbr>ไว้<wbr>อย่าง<wbr>คร่าว ๆ บท<wbr>สรุป<wbr>หลัก ๆ คือ (1) การ<wbr>เข้า<wbr>คิว<wbr>ทางอินพุทเป็น<wbr>โครง<wbr>สร้าง<wbr>อย่าง<wbr>ง่าย โดย<wbr>ที่<wbr>ความ<wbr>เร็ว<wbr>การ<wbr>ส่ง<wbr>ถูก<wbr>จำกัด<wbr>ที่ 0.586 (2) การ<wbr>เข้า<wbr>คิว<wbr>ทาง เอาท์พุทได้<wbr>รับ throughput/delay ดี<wbr>ที่<wbr>สุด โดย<wbr>การ<wbr>ทำ<wbr>การ<wbr>แยกบัฟเฟอร์ที่<wbr>แต่<wbr>ละ<wbr>เอาท์พุท โดย<wbr>มี<wbr>การก<wbr>ระ<wbr>ทำ<wbr>ที่<wbr>ดี<wbr>ที่<wbr>สุด<wbr>อยู่<wbr>ที่<wbr>จุด c=4 (4) การ<wbr>ใช้บัฟเฟอร์ร่วม<wbr>กัน<wbr>โดย<wbr>ต้อง<wbr>การ<wbr>หน่วย<wbr>ความ<wbr>จำ<wbr>ความ<wbr>เร็ว<wbr>สูง ซึ่ง<wbr>อาจ<wbr>จะ<wbr>เป็น<wbr>ไป<wbr>ไม่<wbr>ได้<wbr>สำหรับ<wbr>อุปกรณ์สวิทช์ขนาด<wbr>ใหญ่ สำหรับ complete partitioning ประสิทธิภาพ<wbr>จะ<wbr>คล้ายกับเอาท์พุทบัฟเฟอร์ (5) ไม่<wbr>มีบัฟเฟอร์ คือ ไม่<wbr>ต้อง<wbr>การ<wbr>หน่วย<wbr>ความ<wbr>จำ<wbr>ใด ๆ ที่<wbr>อุปกรณ์สวิทช์ทั้ง<wbr>หมด ซึ่ง<wbr>มี<wbr>อัตรา<wbr>การ<wbr>สูญ<wbr>เสีย<wbr>ของ<wbr>เซลล์<wbr>สูง
+
+<p><h3>การ<wbr>บล็อก<wbr>ใน<wbr>โครง<wbr>สร้าง<wbr>ภาย<wbr>ในสวิทช์<wbr></h3>
+
+<dd>y.oie ได้<wbr>จัด<wbr>กลุ่ม atm ออก<wbr>เป็น 2 กลุ่ม คือ (1) blocking switches (2) nonblocking switches นิยาม<wbr>ของ "blocking" ใน<wbr>ที่<wbr>นี้<wbr>จะ<wbr>เป็น<wbr>การ<wbr>บล็อก<wbr>ภาย<wbr>ใน หมาย<wbr>ความ<wbr>ว่า<wbr>ภาย<wbr>ใน<wbr>หนึ่ง time slot จะ<wbr>มี<wbr>การ<wbr>ช่วง<wbr>ชิง<wbr>มาก<wbr>กว่า<wbr>หนึ่ง<wbr>เซลล์ สำหรับ<wbr>การ<wbr>ลิงค์<wbr>ภาย<wbr>ใน<wbr>ที่<wbr>เหมือน<wbr>กัน การ<wbr>บล็อก<wbr>ทางเอาท์พุทจะ<wbr>เกิด<wbr>ขึ้น<wbr>เมื่อ<wbr>มี<wbr>เซลล์<wbr>มาก<wbr>กว่า<wbr>หนึ่ง<wbr>เซลล์<wbr>ส่ง<wbr>ไป<wbr>ยัง<wbr>พอร์ท<wbr>เอาท์พุท<wbr>ที่<wbr>เหมือน<wbr>กัน
+<dd>ใน<wbr>ความ<wbr>เป็น<wbr>จริง<wbr>แล้ว การ<wbr>แบ่ง<wbr>แยก<wbr>ออก<wbr>เป็น<wbr>ประเภท<wbr>เหล่า<wbr>นั้น<wbr>สามารถ<wbr>มอง<wbr>เช่น<wbr>เดียว<wbr>กับ<wbr>กรณี<wbr>พิเศษ<wbr>ของ<wbr>ประเภท<wbr>อื่น ๆ เช่น การ<wbr>เข้า<wbr>คิว<wbr>ทาง<wbr>อินพุท<wbr>ของ hluchyj และ karol หรือ ชนิด space-division ของ f.a.tobagi ใน<wbr>กรณี nonblocking switch ที่<wbr>ปราศ<wbr>จากบัฟเฟอร์<wbr>ทาง<wbr>อินพุท
+
+<p><h3>โครง<wbr>สร้างสวิทช์<wbr></h3>
+<dd>m.liatanti และ a.roveri ได้<wbr>นำ<wbr>เสนอ atm สวิทช์โดย<wbr>แบ่ง<wbr>โครง<wbr>สร้าง<wbr>เป็น 2 รูป<wbr>แบบ คือ (1) single stage (2) multistage
+<dd>ใน<wbr>โครง<wbr>สร้าง atm สวิทช์แบบ single stage เซลล์<wbr>จะ<wbr>ถูกสวิทช์<wbr>ใน<wbr>เฟส<wbr>เดียว ขณะ<wbr>ที่ multistage switch เซลล์<wbr>จะ<wbr>ถูก<wbr>สวิทช์<wbr>ผ่าน<wbr>เฟส<wbr>จำนวน<wbr>มาก โดย<wbr>ความ<wbr>หมาย<wbr>ทั้ง<wbr>หมด<wbr>ของ<wbr>การ<wbr>จัด<wbr>การ<wbr>ร่วม<wbr>กัน<wbr>ของ<wbr>อุปกรณ์<wbr>สวิทช์<wbr>ทั่ว ๆ ไป<wbr>ใน stage ที่<wbr>มี<wbr>การ<wbr>ติด<wbr>ต่อ<wbr>กัน<wbr>ใน<wbr>มุม<wbr>มอง<wbr>ทั่ว ๆ ไป<wbr>ใน single stage atm สวิทช์ จะ<wbr>ให้<wbr>ค่า<wbr>ประสิทธิภาพ<wbr>ของ throughput/delay ดี<wbr>ที่<wbr>สุด เพราะ<wbr>มี<wbr>ความ<wbr>หน่วง<wbr>ที่<wbr>เกี่ยว<wbr>ข้องกับความ<wbr>แอ<wbr>อัด<wbr>ทางเอาท์พุทเท่า<wbr>นั้น ไม่<wbr>มี<wbr>ความ<wbr>แอ<wbr>อัด<wbr>ภาย<wbr>ใน<wbr>เหมือนกับใน<wbr>กรณี<wbr>ของ multistage atm สวิทช์
+<dd>ผล<wbr>ลัพธ์<wbr>ที่<wbr>น่า<wbr>สน<wbr>ใจ<wbr>สำหรับ<wbr>กรณี multistage มี<wbr>ดัง<wbr>นี้
+<ul>
+<li>ปริมาณ<wbr>ที่<wbr>ผ่าน<wbr>โครง<wbr>ข่าย<wbr>ลด<wbr>ลง<wbr>เมื่อ<wbr>ขนาด<wbr>เพิ่ม<wbr>ขึ้น
+<li>ปริมาณ<wbr>ที่<wbr>ผ่าน<wbr>โครง<wbr>ข่าย<wbr>เพิ่ม<wbr>ขึ้น<wbr>เมื่อ<wbr>เพิ่ม<wbr>ขนาด<wbr>อุปกรณ์สวิทช<wbr>์
+<li>ใน<wbr>กรณี<wbr>ของ single บัฟเฟอร์ปริมาณ<wbr>ที่<wbr>ผ่าน (t) เพิ่ม<wbr>เมื่อ<wbr>ขนาด<wbr>อุปกรณ์สวิทช์เพิ่ม แต่<wbr>ใน multiple บัฟเฟอร์ปริมาณ<wbr>ที่<wbr>ผ่าน (t) จะ<wbr>ลด<wbr>ลง<wbr>เมื่อ<wbr>เพิ่ม<wbr>ขนาด<wbr>อุปกรณ์สวิทช<wbr>์
+</ul>
+<p><h3>ตัว<wbr>อย่าง<wbr>การ<wbr>แยก<wbr>ประเภท<wbr><wbr></h3>
+<dd>3 atm สวิทช์ได้<wbr>มี<wbr>การ<wbr>นำ<wbr>ขึ้น<wbr>มาก<wbr>ล่า<wbr>วอ<wbr>ย่าง<wbr>ละเอียด<wbr>ดัง<wbr>ตัว<wbr>อย่าง
+<dd>dqdb switch (distributed queue dual bus)
+<dd>นำ<wbr>มา<wbr>ใช้<wbr>โดย<wbr>คณะ<wbr>กรรมการ<wbr>ของ iee 802.6 ดัง<wbr>เช่น ได้<wbr>เสนอ<wbr>งาน<wbr>ของ man (metropolitan area network) dqdb สวิทช์สามารถ<wbr>จัด<wbr>อยู่<wbr>ใน<wbr>จำพวก atm สวิทช์ เพราะ<wbr>มี<wbr>โครง<wbr>สร้าง<wbr>ที่<wbr>เหมือน<wbr>กัน<wbr>กับ<wbr>โครง<wbr>สร้าง<wbr>ของ<wbr>เซลล์ atm โครง<wbr>สร้าง dqdb สวิทช์ ประกอบ<wbr>ด้วย<wbr>ส่วน<wbr>หลัก ๆ ของ<wbr>บัสแบบ<wbr>สอง<wbr>ทางดัง<wbr>แสดง<wbr>ใน<wbr>รูป 6
+
+<p><center><img src="atm_1_6.jpg"></center><p>
+
+<dd>ทุก ๆ สถานี<wbr>สามารถ<wbr>สื่อสาร<wbr>กับสถานี<wbr>อื่น ๆ โดย<wbr>การ<wbr>ส่ง<wbr>ข้อ<wbr>มูล<wbr>บนบัส a หรือบัส b ขึ้น<wbr>อยู่กับความ<wbr>เหมาะ<wbr>สม<wbr>ของ<wbr>สถานี<wbr>รับ slot generators จะ<wbr>ส่ง<wbr>เซลล์<wbr>ที่<wbr>ถูก<wbr>จำกัด<wbr>ความ<wbr>ยาว โดย<wbr>ใช้<wbr>เทคนิค asynchronous streams ซึ่ง<wbr>เป็น<wbr>เทคนิคที่<wbr>ยาก<wbr>มาก แต่<wbr>ละ<wbr>สถานี<wbr>จะ<wbr>เก็บ<wbr>จำนวน<wbr>เซลล์ atm ทั้ง<wbr>หมด<wbr>ที่<wbr>คอย<wbr>ที่<wbr>ทางเข้า<wbr>ใน<wbr>หน่วย<wbr>ความ<wbr>จำ<wbr>สถานะ<wbr>ปัจจุบัน
+<dd>ส่วน<wbr>ตัว counter จะ<wbr>ถูก<wbr>ยก<wbr>เลิก<wbr>เมื่อ<wbr>มี<wbr>ความ<wbr>ต้อง<wbr>การ<wbr>หนึ่ง ๆ จากสล็อทที่<wbr>ว่าง<wbr>ที่<wbr>ผ่าน<wbr>สถานี<wbr>ใน<wbr>หนึ่ง<wbr>ทิศ<wbr>ทาง (เช่น downstream) และ<wbr>เพิ่ม<wbr>ความ<wbr>ต้อง<wbr>การ<wbr>หนึ่ง ๆ เข้า<wbr>ไป<wbr>ใน<wbr>แต่<wbr>ละสล็อท ด้วย<wbr>บิทเฉพาะ "request control" เป็น<wbr>การ<wbr>ชี้<wbr>ให้<wbr>เห็น<wbr>ว่า โหนดมี<wbr>เซลล์<wbr>ที่<wbr>คอย<wbr>สำหรับ<wbr>การ<wbr>ส่ง<wbr>ผ่าน ถ้า<wbr>บิทแรก<wbr>เป็น "busy bit" แสดง<wbr>ว่า slot มี<wbr>ข้อ<wbr>มูล<wbr>บรรจุ<wbr>อยู่<wbr>เต็ม<wbr>เมื่อ "request counter" เท่ากับศูนย์ สถานี<wbr>สามารถ<wbr>ส่ง<wbr>เซลล์<wbr>ในสล็อทแรก<wbr>ด้วย "busy bit" เท่ากับศูนย์ ความ<wbr>เหมาะ<wbr>สม<wbr>เช่น<wbr>นี้<wbr>แสดง<wbr>ว่า<wbr>สถานี<wbr>ด้าน down stream ไม่<wbr>ต้อง<wbr>การ<wbr>สล็อทว่าง
+<dd>atm สวิทช์ ชนิด<wbr>นี้<wbr>ประกอบ<wbr>ด้วย (1) statistical link เพราะ<wbr>ว่า<wbr>ทุก ๆ สถานี<wbr>ใช้ 2 บัส เหมือน<wbr>กัน (2) กระจาย<wbr>การ<wbr>ควบ<wbr>คุม เพราะ<wbr>การ<wbr>ควบ<wbr>คุม<wbr>จะ<wbr>ถูก<wbr>กระจาย<wbr>ไป<wbr>ทุก ๆ สถานี (3) การ<wbr>คัด<wbr>เลือก<wbr>ตำแหน่ง (address filtering) ใช้<wbr>สำหรับ<wbr>เทคนิคกา<wbr>รสวิทช์ เพราะ<wbr>กา<wbr>รสวิทช์นี้<wbr>ขึ้น<wbr>อยู่กับข้อ<wbr>มูล<wbr>ที่<wbr>ถูก<wbr>บรรจุ<wbr>อยู่<wbr>ใน header (4) อินพุทบัฟเฟอร์เพราะ<wbr>เซลล์<wbr>ทั้ง<wbr>หมด<wbr>จะ<wbr>เก็บ<wbr>ไว้<wbr>ที่<wbr>สถานี<wbr>ส่ง<wbr>ก่อน<wbr>ที่<wbr>จะ<wbr>มี<wbr>การ<wbr>ส่ง<wbr>ออก<wbr>ไป (5) รูป<wbr>แบบ<wbr>กา<wbr>รบล็อคเพราะ<wbr>ว่า<wbr>สถานี<wbr>ไม่<wbr>สามารถ<wbr>ส่ง<wbr>เซลล์ atm เมื่อสล็อททั้ง<wbr>หมด<wbr>ยัง<wbr>ไม่<wbr>ว่าง (6) single stage เพราะ<wbr>การ<wbr>ส่ง<wbr>ถูก<wbr>กระ<wbr>ทำ<wbr>ใน 1 step ระหว่าง<wbr>สถานี<wbr>ส่ง<wbr>และ<wbr>สถานี<wbr>รับ
+<p><h3>banyan switch</h3>
+
+<p><center><img src="atm_1_7.jpg"></center><p>
+
+<dd>banyan สวิทช์ประกอบ<wbr>ด้วย<wbr>อุปกรณ์สวิทช์แบบ n x n ดัง<wbr>แสดง<wbr>ใน<wbr>รูป<wbr>ที่ 7
+<dd>จำนวน<wbr>ของ stage สัมพันธ์กับจำนวนอินพุท<wbr>/เอาท์พุทพอร์ททั้ง<wbr>หมด โดย<wbr>ความ<wbr>สัมพันธ์
+<dd>s = logn n
+<dd>ซึ่ง s = จำนวน<wbr>ของ stage ทั้ง<wbr>หมด
+<dd>n = จำนวน<wbr>ทั้ง<wbr>หมด<wbr>ของอินพุท<wbr>/เอาท์พุท พอร์<wbr>ท
+<dd>n = ขนาด<wbr>ของ<wbr>อุปกรณ์สวิทช์ (จำนวน<wbr>ของอินพุท<wbr>/เอาท์พุต พอร์ท)
+<dd>ใน<wbr>รูป<wbr>ที่ 7 เป็น<wbr>การ<wbr>แสดง banyan สวิทช์แบบ 8 x 8 ซึ่ง<wbr>ประกอบ<wbr>ด้วย 2 x 2 se นิยาม<wbr>ของ banyan สวิทช์ ได้<wbr>รวม<wbr>ถึง<wbr>การ<wbr>ประยุกต์<wbr>รูป<wbr>แบบ<wbr>ทางเดิน<wbr>เฉพาะ ซึ่ง<wbr>ถูก<wbr>เรียก<wbr>ว่า "self routing" การ<wbr>เคลื่อน<wbr>ที่<wbr>ของ<wbr>เซลล์<wbr>ทั้ง<wbr>หมด<wbr>ผ่าน banyan สวิทช์ ถูก<wbr>ควบ<wbr>คุม<wbr>โดย<wbr>ตำแหน่ง<wbr>ปลาย<wbr>ทาง ซึ่ง<wbr>ต้อง<wbr>เป็น<wbr>รูป<wbr>แบบ<wbr>เฉพาะ<wbr>สำหรับ<wbr>ทุก ๆ เอาท์พุทพอร์ทของสวิทช์ การ<wbr>เคลื่อน<wbr>ที่<wbr>นี้<wbr>สามารถ<wbr>หา<wbr>ได้<wbr>ใน s ขั้น<wbr>ตอน<wbr>ใน<wbr>แต่<wbr>ละ<wbr>ขั้น<wbr>ตอน<wbr>อุปกรณ์สวิทช์จะ<wbr>หา<wbr>ตัว<wbr>เลข<wbr>ของ<wbr>ตำแหน่ง<wbr>ปลาย<wbr>ทางที่<wbr>เกี่ยว<wbr>ข้องกับ stage
+<dd>บน<wbr>พื้น<wbr>ฐาน<wbr>ของ<wbr>ค่า<wbr>ตัว<wbr>เลข<wbr>นี้<wbr>อุปกรณ์สวิทช์จะ<wbr>สร้าง<wbr>ทางเดิน<wbr>ไป<wbr>ยัง stage ต่อ<wbr>ไป ข้อ<wbr>ได้<wbr>เปรียบ<wbr>ของ<wbr>กล<wbr>ไก self routing คือ<wbr>สามารถ<wbr>ใช้<wbr>เป็นเครื่องมือ<wbr>ใน<wbr>ฮาร์ดแวร์ และ<wbr>กล<wbr>ไก<wbr>นี้<wbr>ยัง<wbr>ต้อง<wbr>การ<wbr>ควบ<wbr>คุม<wbr>จาก<wbr>ส่วน<wbr>กลาง (central control) สำหรับ<wbr>ตั้ง<wbr>ค่า<wbr>เริ่ม<wbr>ต้น<wbr>ของ virtual connection หน้า<wbr>ที่<wbr>การ<wbr>เลือก<wbr>เส้น<wbr>ทางและ<wbr>กา<wbr>รสวิทช์จะ<wbr>กระจาย<wbr>ครอบ<wbr>คลุม<wbr>อุปกรณ์<wbr>สวิทช์ทั้ง<wbr>หมด และ<wbr>สามารถ<wbr>ทำ<wbr>ใน<wbr>ลักษณะ<wbr>ขนาน<wbr>ได้
+<dd>ดัง<wbr>นั้น atm สวิทช์นี้<wbr>สามารถ<wbr>รวม<wbr>ตาม<wbr>การ<wbr>แบ่ง<wbr>แยก<wbr>ประเภท<wbr>ได้<wbr>คือ (1) statistical link คือ<wbr>การ<wbr>ติด<wbr>ต่อ<wbr>ทั่ว ๆ ไป อาจ<wbr>จะ<wbr>ผ่าน<wbr>ลิงค์<wbr>เดียว<wbr>กัน (2) การ<wbr>กระจาย<wbr>การ<wbr>ควบ<wbr>คุม ยก<wbr>เว้น<wbr>การ<wbr>จัด<wbr>ระบบ<wbr>เริ่ม<wbr>ต้น<wbr>ของ virtual connection ซึ่ง<wbr>ใช้<wbr>การ<wbr>ควบ<wbr>คุม<wbr>จาก<wbr>ส่วน<wbr>กลาง (3) space-division (4) อินพุท เอาท์พุท อินพุท<wbr>/เอาท์พุท การ<wbr>ใช้บัฟเฟอร์ร่วม<wbr>กัน<wbr>หรือ<wbr>ไม่<wbr>มีบัฟเฟอร์โดย<wbr>ขึ้น<wbr>อยู่กับที่<wbr>ตั้ง<wbr>ของบัฟเฟอร์ (5) เกิด<wbr>การ<wbr>บล็อก<wbr>เพราะ<wbr>มี<wbr>เซลล์ atm มาก<wbr>กว่า 2 เซลล์<wbr>ที่<wbr>ไม่<wbr>สามารถ<wbr>ผ่าน<wbr>ลิงค์<wbr>ภาย<wbr>ใน<wbr>ได้<wbr>ใน<wbr>เวลา<wbr>เดียว<wbr>กัน (6) multistage เพราะ<wbr>ทางเดิน<wbr>ถูก<wbr>กระ<wbr>ทำ<wbr>ใน s ครั้ง<wbr>สัมพันธ์กับจำนวน stage (s) ภาย<wbr>ใน banyan สวิทช์
+
+<p>
+<hr noshade>
+เขียนโดย : ณรงค์ โชติสัมฤทธิ์<br>
+ที่ปรึกษา : ดร.อานนท์  ทับเที่ยง<br>
+นิตยสาร telecom ฉบับเดือนเมษายน 2538 <br>
+last update : 16/07/1999<br>
+</body>
+</html>

@@ -1,0 +1,364 @@
+<html>
+<head>
+  <title>giga ethernet</title>
+</head>
+<body bgcolor="ffffff" text="000000" link="0000ff" vlink="800080">
+<table width=100% bgcolor=d5aaff>
+    <tr><!-- row 1 -->
+      <td align = center><b>เครือข่ายความเร็วสูง gigabit ethernet</b></td>
+    </tr>
+</table>
+
+
+<table bgcolor=white width = 100%>
+  <tr>
+<td><img src="banner.gif" width="361" height="198" border=0>
+<td>
+<ul type = square>
+   <li><a href="#sect1">บท<wbr>นำ<wbr></a>
+       <li><a href="#sect2">หลัก<wbr>การ<wbr>พื้น<wbr>ฐาน<wbr></a>
+       <li><a href="#sect3">carrier extension กับ throughput</a>
+       <li><a href="#sect4">เท<wbr>คนิค packet bursting</a>
+       <li><a href="#sect5">buffer distributor</a>
+       <li><a href="#sect6">สาย<wbr>สัญญาณ<wbr></a>
+       <li><a href="#sect7">การ<wbr>เปลี่ยน<wbr>ไป<wbr>ใช้ gigabit ethernet</a>
+       <li><a href="#sect8">gigabit ethernet กับ atm</a>
+       <li><a href="#sect9">คุณภาพ<wbr>ของ<wbr>การ<wbr>บริการ (quality
+   of service, qos)</a>
+       <li><a href="#sect10">สรุป<wbr></a>
+   </ul>
+
+
+       </tr>
+   </table>
+
+   <a name = "sect1">
+   <table width = 100% bgcolor = d0d0ff>
+   <tr>
+   <td align = center><b>บท<wbr>นำ<wbr></b>
+   </table>
+
+   <dd>ปัจจุบัน<wbr>เครือ<wbr>ข่าย<wbr>คอมพิวเตอร์<wbr>ได้<wbr>มี<wbr>บท<wbr>บาท<wbr>ต่อ<wbr>ชีวิต<wbr>ประจำ<wbr>วัน<wbr>มาก<wbr>ขึ้น<wbr>ทุก<wbr>ขณะ
+การ<wbr>เจริญ<wbr>เติบ<wbr>โต<wbr>ของ<wbr>เครือ<wbr>ข่าย<wbr>คอมพิวเตอร์<wbr>เหล่า<wbr>นี้<wbr>เป็น<wbr>ไป<wbr>อย่าง<wbr>ต่อ<wbr>เนื่อง<wbr>
+และ<wbr>ยัง<wbr>ไม่<wbr>มี<wbr>สัญญา<wbr>น<wbr>บ่ง<wbr>บอก<wbr>ว่า<wbr>จะ<wbr>มี<wbr>การ
+ชลอ<wbr>ตัว<wbr>แต่<wbr>อย่าง<wbr>ใด   เครือ<wbr>ข่าย<wbr>แบบ<wbr>ท้องถิ่น<wbr>ใน<wbr>องค์กร<wbr>ต่างๆ ตลอด<wbr>จน บริษัท สถานศึกษา<wbr>ส่วน<wbr>ใหญ่<wbr>กว่า<wbr>80%
+จะ<wbr>นิยม<wbr>ใช้<wbr>เครือ<wbr>ข่าย ethernet ส่วน<wbr>ที่<wbr>เหลือ<wbr>ก็<wbr>จะ<wbr>เป็น<wbr>พวก
+fddi/cddi, atm และ<wbr>อื่นๆ  ด้วย<wbr>ความ<wbr>ต้อง<wbr>การ<wbr>การ<wbr>ส่ง<wbr>ผ่าน<wbr>ข้อ<wbr>มูล<wbr>ที่<wbr>เพิ่ม<wbr>ขึ้น<wbr>อย่าง<wbr>รวด<wbr>เร็ว<wbr>ตาม<wbr>ขนาด<wbr>และ<wbr>จำนวน<wbr>
+เครื่อง<wbr>คอมพิวเตอร์<wbr>ที่<wbr>ต่อ<wbr>อยู่<wbr>บน<wbr>เครือ<wbr>ข่าย
+ตลอด<wbr>จน<wbr>การ<wbr>เติบ<wbr>โต<wbr>ของ internet อย่าง<wbr>รวด<wbr>เร็ว จึง<wbr>ทำ<wbr>ให้<wbr>เครือ<wbr>ข่าย
+ethernet แบบ<wbr>ดั้งเดิม<wbr>ที่<wbr>มี<wbr>ความ<wbr>เร็ว<wbr>ใน<wbr>การ<wbr>ส่ง<wbr>ผ่าน<wbr>ข้อ<wbr>มูล<wbr>อยู่<wbr>ที่
+10 mbps  เริ่ม<wbr>จะ<wbr>ไม่<wbr>สามารถ<wbr>ตอบ<wbr>สนอง<wbr>ความ<wbr>ต้อง<wbr>การ<wbr>ของ<wbr>ผู้<wbr>ใช้<wbr>ได้<wbr>อย่าง<wbr>มี<wbr>ประสิทธิภาพ
+   <dd>gigabit ethernet (ieee802.3z)เป็น<wbr>มาตรฐาน<wbr>ใหม่<wbr>ของ<wbr>เทคโนโลยี<wbr>เครือ<wbr>ข่าย<wbr>ท้องถิ่น
+(lan-local area-network) ที่<wbr>พัฒนา<wbr>มา<wbr>จาก
+เครือ<wbr>ข่าย<wbr>แบบ ethernet แบบ<wbr>เก่า<wbr>ที่<wbr>มี<wbr>ความ<wbr>เร็ว 10 mbps
+ให้<wbr>สามารถ<wbr>รับ<wbr>ส่ง<wbr>ข้อ<wbr>มูล<wbr>ได้<wbr>ที่<wbr>ระดับ<wbr>ความ<wbr>เร็ว 1 gbps ทั้ง<wbr>นี้<wbr>เทคโนโลยี<wbr>นี้
+ยัง<wbr>คง<wbr>ใช้<wbr>กลไก
+csms/cd ใน<wbr>การ<wbr>ร่วม<wbr>ใช้<wbr>สื่อ<wbr>เหมือน<wbr>ethernet แบบ<wbr>เก่า หาก<wbr>แต่<wbr>มี<wbr>การ<wbr>พัฒนา<wbr>และ<wbr>ดัด<wbr>แปลง<wbr>ให้<wbr>สามารถ<wbr>รอง<wbr>รับ<wbr>ความ<wbr>เร็ว<wbr>ใน<wbr>ระดับ
+1 gbps ได้
+   <dd>gigabit ethernet เป็น<wbr>ส่วน<wbr>เพิ่ม<wbr>ขยาย<wbr>จาก 10 mbps และ
+   100 mbps ethernet (มาตรา<wbr>ฐาน ieee 802.3 และ ieee802.3u
+   ตาม<wbr>ลำดับ<wbr>) โดย<wbr>ที่<wbr>มัน<wbr>ยัง<wbr>คง<wbr>ความ<wbr>เข้า<wbr>กัน<wbr>ได้<wbr>กับ<wbr>มาตรา<wbr>ฐาน<wbr>แบบ<wbr>เก่า<wbr>อย่าง<wbr>100%
+   gigabit ethernet ยัง<wbr>สนับสนุน<wbr>การ<wbr>ทำงาน<wbr>ใน mode
+   full-duplex โดย<wbr>จะ<wbr>เป็นการ<wbr>ทำงาน<wbr>ใน<wbr>การ<wbr>เชื่อม<wbr>ต่อ<wbr>ระหว่าง
+   switch กับ switch และ<wbr>ระหว่าง switch กับ end station
+    ส่วน<wbr>การ<wbr>เชื่อม<wbr>ต่อ<wbr>ผ่าน
+   repeater, hub ซึ่ง<wbr>จะ<wbr>เป็น<wbr>ลักษณะ<wbr>ของ<wbr>shared-media (ซึ่ง<wbr>ใช้<wbr>กลไก
+   csma/cd) gigabit ethernet จะ<wbr>ทำงาน<wbr>ใน  mode half-duplex
+   ซึ่ง<wbr>สามารถ<wbr>จะ<wbr>ใช้<wbr>สาย<wbr>สัญญาณ<wbr>ได้<wbr>ทั้ง<wbr>สาย<wbr>ทองแดง<wbr>และ<wbr>เส้น<wbr>ใย<wbr>แก้ว<wbr>นำ<wbr>แสง
+
+   <br>
+
+   <center><center><img src="giga1.gif" width="550" height="346"
+   border=0></center></center>
+   <br>
+   <center>รูป<wbr>ที่ 1 แสดง<wbr>ส่วน<wbr>ประกอบ<wbr>ต่างๆ<wbr>ของ gigabit ethernet
+   ซึ่ง<wbr>ได้<wbr>มี<wbr>การ<wbr>รวม fiber channel เข้า<wbr>ไว้<wbr>ด้วย </center>
+   <p>
+   </a>
+
+
+   <a name = "sect2">
+   <table width = 100% bgcolor = d0d0ff>
+   <tr>
+   <td align = center><b>หลัก<wbr>การ<wbr>พื้น<wbr>ฐาน<wbr></b>
+   </table>
+
+   <dd>หลัก<wbr>การ<wbr>พื้น<wbr>ฐาน<wbr>ที่<wbr>สำคัญ<wbr>ของ gigabit ethernet (ieee802.3z)
+   คือ<wbr>การ<wbr>ปรับ<wbr>แก้<wbr>ส่วน<wbr>ของ mac layer (media access
+   control layer) โดย<wbr>กลไก<wbr>ที่<wbr>เรียก<wbr>ว่า carrier extension
+   โดย<wbr>กลไก<wbr>ตัว<wbr>นี้<wbr>จะ<wbr>ทำ<wbr>การ<wbr>เพิ่ม<wbr>ความ<wbr>ยาว<wbr>ของ<wbr>เฟ<wbr>รม<wbr>ที่<wbr>มี<wbr>ขนาด<wbr>น้อย<wbr>กว่า
+   512 ไบต์ โดย<wbr>จะ<wbr>ทำ<wbr>การ<wbr>เพิ่ม<wbr>ข้อ<wbr>มูล<wbr>เข้า<wbr>ไป<wbr>ยัง<wbr>ส่วน<wbr>ท้าย<wbr>ของ<wbr>เฟ<wbr>รม<wbr>เพื่อ<wbr>ให้<wbr>เฟ<wbr>รม<wbr>ข้อ<wbr>มูล<wbr>นั้น<wbr>มี<wbr>ขนาด<wbr>เท่า<wbr>กับ
+   512 ไบต์ เหตุ<wbr>ที่<wbr>ต้อง<wbr>ทำ<wbr>เช่น<wbr>นี้<wbr>เนื่อง<wbr>มา<wbr>จาก<wbr>ว่า<wbr>ใน ethernet
+   แบบ<wbr>แรก<wbr>ที่<wbr>ความ<wbr>เร็ว 10mbps (ieee802.3) นั้น<wbr>ได้<wbr>มี<wbr>การ<wbr>กำหนด<wbr>ออก<wbr>แบบ<wbr>เอา<wbr>ไว้<wbr>ว่า<wbr>จะ<wbr>ต้อง<wbr>สามารถ
+   ตรวจ<wbr>จับ (detect) การ<wbr>ชน<wbr>การ<wbr>ของ<wbr>ข้อ<wbr>มูล (collision) ได้<wbr>เมื่อ<wbr>เครื่อง<wbr>คอมพิวเตอร์<wbr>เครือ<wbr>ข่าย<wbr>ที่<wbr>อยู่<wbr>ห่าง<wbr>กัน
+   2 กิโล<wbr>เมตร ส่ง<wbr>ข้อ<wbr>มูล<wbr>ที่<wbr>มี<wbr>ความ<wbr>ยาว 64
+   ไบต์<wbr>ออก<wbr>มา<wbr>ใน<wbr>จังหวะ<wbr>เวลา<wbr>ที่<wbr>ทำ<wbr>ให้<wbr>เกิด<wbr>การ<wbr>ชน<wbr>กัน<wbr>ของ<wbr>ข้อ<wbr>มูล
+   (roundtrip propagation delay) ซึ่ง<wbr>เมื่อ<wbr>เกิด<wbr>การ<wbr>ชน<wbr>กัน<wbr>ขึ้น
+   mac layer จะ<wbr>เป็น<wbr>ตัว<wbr>ที่<wbr>ตรวจ<wbr>พบ<wbr>และ<wbr>มัน<wbr>จะ<wbr>ทำ<wbr>การ<wbr>ส่ง<wbr>สัญญาณ<wbr>เพื่อ<wbr>ให้<wbr>เครื่อง<wbr>ที่<wbr>ส่ง<wbr>ข้อ<wbr>มูล<wbr>ชน<wbr>กัน<wbr>หยุด<wbr>การ<wbr>ส่ง<wbr>ข้อ<wbr>มูล
+   และ<wbr>ทำ<wbr>การ<wbr>สุ่ม<wbr>เวลา<wbr>เริ่ม<wbr>ต้น<wbr>เพื่อน<wbr>ที่<wbr>จะ<wbr>ทำ<wbr>การ<wbr>ส่ง<wbr>ข้อ<wbr>มูล<wbr>นั้น<wbr>ใหม่<wbr>อีก<wbr>ครั้ง
+   และ<wbr>ใน 100 mbps (ieee802.3u)ก็<wbr>ใช้<wbr>ข้อ<wbr>กำหนด<wbr>นี้ แต่<wbr>ความ<wbr>เร็ว<wbr>ที่<wbr>เพิ่ม<wbr>ขึ้น<wbr>ได้<wbr>มา<wbr>จาก<wbr>การ<wbr>เพิ่ม<wbr>สัญญาณ<wbr>นาฬิกา<wbr>ใน<wbr>การ<wbr>ส่ง<wbr>ข้อ<wbr>มูล<wbr>ให้<wbr>เร็ว<wbr>ขึ้น<wbr>เป็น
+   10 เท่า<wbr>จาก<wbr>ของ<wbr>เดิม ทำ<wbr>ให้<wbr>เวลา<wbr>ที่<wbr>ต้อง<wbr>ใช้<wbr>ใน<wbr>การ<wbr>ส่ง<wbr>ข้อ<wbr>มูล<wbr>ลด<wbr>ลง
+   10 เท่า  ซึ่ง<wbr>ทำ<wbr>ให้<wbr>ระยะ<wbr>ห่าง<wbr>สูง<wbr>สุด<wbr>ระหว่าง<wbr>เครื่อง<wbr>ใน<wbr>เครือ<wbr>ข่าย<wbr>ลด<wbr>ลง
+   10 เท่า<wbr>เช่น<wbr>กัน
+   คือ จาก 2 กิโล<wbr>เมตร<wbr>เหลือ<wbr>เพียง  200 เมตร<wbr>แต่<wbr>เมื่อ<wbr>มี<wbr>การ<wbr>เพิ่ม<wbr>ความ<wbr>เร็ว<wbr>ขึ้น<wbr>อีก
+   10 เท่า<wbr>ใน gigabit ethernet จึง<wbr>ทำ<wbr>ให้<wbr>ระยะ<wbr>ห่าง<wbr>ดัง<wbr>กล่าว<wbr>ลด<wbr>ลง<wbr>เหลือ<wbr>เพียง
+   20 เมตร<wbr>บน<wbr>สาย utp cat5 ซึ่ง<wbr>ไม่<wbr>สามารถ<wbr>ใช้<wbr>งาน<wbr>ได้<wbr>ใน<wbr>สภาพ<wbr>การ<wbr>ทำงาน<wbr>จริง
+   ดัง<wbr>นั้น carrier extension นี่<wbr>เอง<wbr>ที่<wbr>จะ<wbr>เข้า<wbr>มา<wbr>ทำ<wbr>ให้<wbr>สามารถ<wbr>ตัว<wbr>จับ<wbr>การ<wbr>ชน<wbr>กัน<wbr>ของ<wbr>ข้อ<wbr>มูล<wbr>เมื่อ<wbr>เครื่อง<wbr>คอมพิวเตอร์<wbr>บน<wbr>เครือ<wbr>ข่าย<wbr>อยู่<wbr>ห่าง<wbr>กัน<wbr>ที่<wbr>ระยะ
+   200 เมตร
+   <dd>ขนาด<wbr>ของ<wbr>เฟ<wbr>รม<wbr>ที่<wbr>เล็ก<wbr>ที่สุด<wbr>ของ gigabit ethernet ซึ่ง<wbr>มี<wbr>ค่า<wbr>เท่า<wbr>กับ
+   512 ไบต์<wbr>นั้น<wbr>จะ<wbr>ทำ<wbr>ให้<wbr>สามารถ<wbr>ตรวจ<wbr>จับ<wbr>การ<wbr>ชน<wbr>กัน<wbr>ของ<wbr>ข้อ<wbr>มูล<wbr>ได้<wbr>ที่<wbr>ความ<wbr>เร็ว<wbr>ใน<wbr>การ<wbr>ส่ง<wbr>ข้อ<wbr>มูล<wbr>เท่า<wbr>กับ
+   1 gbps  และ<wbr>ระยะ<wbr>ห่าง<wbr>สูง<wbr>สุด<wbr>ที ่ 200 เมตร ทั้ง<wbr>นี้<wbr>ทาง<wbr>คณะ<wbr>ทำงาน<wbr>ที่<wbr>กำหนด<wbr>มาตรฐาน
+   ieee802.3z ได้<wbr>ลด<wbr>จำนวน repeater hop ลง<wbr>จาก
+   100base-t(ieee802.3u)  ที่<wbr>อนุญาต<wbr>ให้<wbr>มี<wbr>ได้ 2 hop (และ
+   4 hop ใน 10base-t) ลง<wbr>เหลือ<wbr>เพียง  1 hop  เท่า<wbr>นั้น  ทั้ง<wbr>นี้<wbr>เพื่อ<wbr>เหตุผล<wbr>ใน<wbr>เรื่อง<wbr>การ<wbr>ลด<wbr>เวลา<wbr>ใน<wbr>การ<wbr>ตรวจ<wbr>สอบ<wbr>การ<wbr>ชน<wbr>กัน<wbr>ของ<wbr>ข้อ<wbr>มูล
+   นอกจาก<wbr>นี้<wbr>ค่า<wbr>พารามิเตอร์<wbr>อื่นๆ<wbr>ทาง<wbr>วิศวกรรม<wbr>(ค่า<wbr>ทาง<wbr>ไฟฟ้า<wbr>)
+    ใน ieee802.3z จะ<wbr>ไม่<wbr>มี<wbr>การ<wbr>เผื่อ safety factor อีก<wbr>ต่อ<wbr>ไป<wbr>ดัง<wbr>นั้น<wbr>ถ้า<wbr>ผู้<wbr>ผลิต<wbr>แต่<wbr>ละ<wbr>ยี่ห้อ<wbr>ไม่<wbr>ได้<wbr>ใช่<wbr>ค่า<wbr>พารามิเตอร์<wbr>ที่<wbr>ตรง<wbr>กัน<wbr>จริงๆ
+   ก็<wbr>จะ<wbr>ทำ<wbr>ให้<wbr>เกิด<wbr>ปัญหา<wbr>เมื่อ<wbr>นำ<wbr>เอา อุปกรณ์ gigabit ethernet
+   ของ<wbr>ต่าง<wbr>ผู้<wbr>ผลิต<wbr>มา<wbr>ต่อ<wbr>เชื่อม<wbr>กัน<wbr>ได้
+   <p>
+   </a>
+
+   <a name = "sect3">
+   <table width = 100% bgcolor = d0d0ff>
+   <tr>
+   <td align = center><b>carrier extension กับ throughput</b>
+   </table>
+
+   <dd>การ<wbr>ที่<wbr>ต้อง<wbr>เพิ่ม<wbr>ขนาด<wbr>ของ<wbr>เฟ<wbr>รม<wbr>ที่<wbr>เล็ก<wbr>ว่า 512 ไบต์<wbr>ด้วย<wbr>ส่วน<wbr>ข้อ<wbr>มูล<wbr>พิเศษ<wbr>ต่อ<wbr>ท้าย<wbr>เพื่อ<wbr>ให้<wbr>มี<wbr>ขนาด<wbr>เท่า<wbr>กับ
+   512 ไบต์<wbr>นั้น<wbr>จะ<wbr>ทำ<wbr>ให้<wbr>ค่า
+   throughput ลด<wbr>ลง<wbr>เมื่อ<wbr>มี<wbr>การ<wbr>ส่ง<wbr>ข้อ<wbr>มูล<wbr>ที่<wbr>มี<wbr>ขนาด<wbr>น้อย<wbr>กว่า
+   512 ไบต์<wbr>เป็น<wbr>จำนวน<wbr>มาก ซึ่ง<wbr>ใน<wbr>กรณี<wbr>ที่<wbr>แย่<wbr>ที่สุด<wbr>คือ<wbr>การ<wbr>ส่ง<wbr>เฟ<wbr>รม<wbr>ขนาด
+   64 ไบต์<wbr>ต่อ<wbr>เนื่อง<wbr>กัน<wbr>ที่<wbr>ความ<wbr>เร็ว
+   1 gbps จะ<wbr>ทำ<wbr>ให้ throughput ประมาณ 12% หรือ 120 mbps
+   เท่า<wbr>นั้น<wbr>เอง
+   <dd>แต่<wbr>ใน<wbr>การ<wbr>ใช้<wbr>งาน<wbr>จริง<wbr>การ<wbr>คำนวณ<wbr>หา<wbr>ค่า throughput นั้น<wbr>จะ<wbr>หา<wbr>จาก
+   ขนาด<wbr>เฉลี่ย<wbr>ของ<wbr>เฟ<wbr>รม<wbr>ที่<wbr>มี<wbr>การ<wbr>ส่ง<wbr>ผ่าน<wbr>ใน เครือ<wbr>ข่าย<wbr>นั้นๆ โดย<wbr>ค่า<wbr>นี้<wbr>จะ<wbr>ได้<wbr>จาก<wbr>การ<wbr>เก็บ<wbr>สถิติ<wbr>แล้ว<wbr>หา<wbr>เป็น<wbr>ค่า<wbr>เฉลี่ย<wbr>ออก<wbr>มา
+   ซึ่ง<wbr>ส่วน<wbr>มาก<wbr>จะ<wbr>ได้<wbr>ค่า<wbr>เฉลี่ย<wbr>ดัง<wbr>กล่าว<wbr>อยู่<wbr>ใน<wbr>ช่วง 200-500
+   ไบต์ ซึ่ง<wbr>จะ<wbr>ทำ<wbr>ให้<wbr>ได้ throughput ประมาณ 300-400 mbps
+   ซึ่ง<wbr>น่า<wbr>จะ<wbr>เพียง<wbr>พอ<wbr>ต่อ<wbr>ความ<wbr>ต้อง<wbr>การ<wbr>ใน<wbr>เครือ<wbr>ข่าย<wbr>ใน<wbr>องค์กร<wbr>ต่างๆ
+   <dd>อนึ่ง<wbr>วิธี<wbr>การ<wbr>ทำ carrier extensionนั้น<wbr>จะ<wbr>ใช้<wbr>ใน<wbr>การ<wbr>กรณี<wbr>ที่<wbr>เป็นการ<wbr>รับ<wbr>ส่ง<wbr>ข้อ<wbr>มูล<wbr>แบบ
+   half-duplex เท่า<wbr>นั้น เพราะ<wbr>ใน<wbr>การ<wbr>รับ<wbr>ส่ง<wbr>ข้อ<wbr>มูล<wbr>แบบ
+   fulle-duplex นั้น<wbr>จะ<wbr>มี<wbr>การ<wbr>ใช้<wbr>สาย<wbr>รับ<wbr>และ<wbr>ส่ง แยก<wbr>กัน<wbr>คน<wbr>ละ<wbr>ชุด<wbr>จึง<wbr>ไม่<wbr>มี<wbr>การ<wbr>ชน<wbr>กัน<wbr>ของ<wbr>ข้อ<wbr>มูล<wbr>ที่<wbr>วิ่ง<wbr>สวน<wbr>ทาง<wbr>กัน<wbr>(collision)
+   จึง<wbr>ทำ<wbr>ให้<wbr>ไม่<wbr>ต้อง<wbr>กังวล<wbr>กับ<wbr>การ<wbr>ตรวจ<wbr>จับ<wbr>การ<wbr>ชน<wbr>กัน<wbr><p>
+   <p>
+   </a>
+
+   <a name = "sect4">
+   <table width = 100% bgcolor = d0d0ff>
+   <tr>
+   <td align = center><b>เท<wbr>คนิค packet bursting</b>
+   </table>
+   <dd>packet bursting เป็น<wbr>เท<wbr>คนิค<wbr>ที่<wbr>จะ<wbr>ลด<wbr>ข้อ<wbr>เสีย<wbr>ของ<wbr>การ<wbr>ใช้
+   carrier extension เท<wbr>คนิค<wbr>นี้<wbr>จะ<wbr>ทำงาน<wbr>โดย<wbr>การ<wbr>เก็บ<wbr>รวบ<wbr>รวม
+      เฟ<wbr>รม<wbr>ที่<wbr>มี<wbr>ขนาด<wbr>เล็ก<wbr>กว่า
+   512 ไบต์<wbr>หลายๆ<wbr>เฟ<wbr>รม<wbr>รวม<wbr>กัน<wbr>ให้<wbr>มี<wbr>ขนาด<wbr>มาก<wbr>กว่า 512 ไบต์ แล้ว<wbr>จึง<wbr>ทำ<wbr>การ<wbr>ส่ง<wbr>ออก<wbr>ไป
+   ซึ่ง<wbr>การ<wbr>ที่<wbr>จะ<wbr>ทำ<wbr>อย่าง<wbr>นี้<wbr>ได้<wbr>ต้อง<wbr>เป็นการ<wbr>ทำงาน<wbr>ร่วม<wbr>กัน<wbr>ระหว่าง<wbr>ตัว<wbr>แอ<wbr>พพ<wbr>ลิ<wbr>เค<wbr>ชั่น<wbr>และ<wbr>ตัว
+   gigabit interface card  ซึ่ง<wbr>แอ<wbr>พพ<wbr>ลิ<wbr>เค<wbr>ชั่น<wbr>ที่<wbr>มี<wbr>อยู่<wbr>ปัจจุบัน<wbr>จะ<wbr>ต้อง<wbr>ได้<wbr>รับ<wbr>แก้<wbr>ไข<wbr>เพื่อ<wbr>ให้<wbr>มี<wbr>ความ<wbr>สามารถ<wbr>ใน<wbr>การ<wbr>จัด<wbr>การ<wbr>กับ<wbr>ข้อ<wbr>มูล<wbr>wbr<wbr>>wb
+    โดย<wbr>ลักษณะ<wbr>ที่<wbr>จะ<wbr>มี<wbr>การ<wbr>เก็บ<wbr>รวบ<wbr>รวม<wbr>เฟ<wbr>รม<wbr>ข้อ<wbr>มูล<wbr>ให้<wbr>ได้<wbr>ขนาด<wbr>ที่<wbr>ต้อง<wbr>การ<wbr>แล้ว<wbr>ส่ง<wbr>ออก<wbr>ไป<wbr>ที<wbr>เดียว<wbr>นี่<wbr>เอง<wbr>ทำ<wbr>wbr<wbr>>wb<wbr>r<wb<wbr>r>>w<wbr>b<wbr><wbr>r<wb<wbr><wb<wbr>r>r<wbr>>>w<wbr><w<wbr>br>b<wbr><wb<wbr>r><wbr><wb<wbr>r>r<wbr><w<wbr>b<<wbr>wbr><wbr><wb<<wbr>wbr>r<wbr>>r<wbr><w<wbr>br>>>
+   เช่น<wbr>การ<wbr>ขอ<wbr>เปิด<wbr>เน็ตเวิร์ค<wbr>ไฟล์ หรือ<wbr>การ<wbr>ตอบ<wbr>รับ (acknowledge)
+   ซึ่ง<wbr>ปัญหา<wbr>นี้<wbr>กำลัง<wbr>อยู่<wbr>ใน<wbr>ระหว่าง<wbr>การ<wbr>ตัดสิน<wbr>ว่า<wbr>จะ<wbr>ให้<wbr>มี<wbr>การ<wbr>แก้<wbr>ไข<wbr>อย่างไร
+   โดย<wbr>อาจ<wbr>จะ<wbr>ให้<wbr>เป็น<wbr>หน้าที่<wbr>ของ
+   protocol ที่<wbr>จะ<wbr>ทำ<wbr>หน้าที่<wbr>แก้<wbr>ปัญหา<wbr>ให้<wbr>ส่วน<wbr>นี้ หรือ<wbr>อาจ<wbr>จะ<wbr>แก้<wbr>ที่<wbr>ตัว
+   packet bursting ให้<wbr>มี<wbr>การ<wbr>กำหนด<wbr>เวลา<wbr>ใน<wbr>การ<wbr>รวบ<wbr>รวม<wbr>เฟ<wbr>รม<wbr>ที่<wbr>มี<wbr>ขนาด<wbr>เล็ก<wbr>กว่า
+   512 ไบต์ ซึ่ง<wbr>ถ้า<wbr>เกิน<wbr>เวลา<wbr>ที่<wbr>กำหนด<wbr>แล้ว<wbr>แต่<wbr>ว่า<wbr>ยัง<wbr>ไม่<wbr>สามารถ<wbr>รวบ<wbr>รวม<wbr>ข้อ<wbr>มูล<wbr>ได้<wbr>มาก<wbr>ว่า
+   512 ไบต์ ก็<wbr>ให้<wbr>ทำ<wbr>การ<wbr>ส่ง<wbr>ออก<wbr>ไป<wbr>โดย<wbr>ใช้<wbr>วิธี carrier
+   extension
+   <p>
+   </a>
+
+
+   <a name = "sect5">
+   <table width = 100% bgcolor = d0d0ff>
+   <tr>
+   <td align = center><b>buffer distributor</b>
+   </table>
+   <dd>buffer distributor เป็น<wbr>อุปกรณ์<wbr>ของ gigabit ethernet
+   ที่<wbr>สามารถ<wbr>เพิ่ม<wbr>ประสิทธิภาพ<wbr>ของ<wbr>ระบบ<wbr>ได้<wbr>โดย<wbr>ลด<wbr>ข้อ<wbr>จำกัด<wbr>ของ
+   carrier
+   extension โดย<wbr>อุปกรณ์<wbr>นี้<wbr>จะ<wbr>มี<wbr>การ<wbr>ทำงาน<wbr>ที่<wbr>รวม<wbr>คุณลักษณะ<wbr>ของ
+   repeaterและ switch เข้า<wbr>ด้วย<wbr>กัน  อุปกรณ์<wbr>นี้<wbr>จะ<wbr>ใช้<wbr>การ<wbr>เชื่อม<wbr>ต่อ<wbr>แบบ
+   full-duplex และ flow control(ieee802.3x) มัน<wbr>สามารถ<wbr>ทำงาน<wbr>เหมือน<wbr>กับ<wbr>repeater
+   คือ<wbr>ส่ง<wbr>ข้อ<wbr>มูล<wbr>ทุก packet ไป<wbr>ยัง<wbr>ทุกๆ<wbr>port ที่<wbr>มี<wbr>การ<wbr>เชื่อม<wbr>ต่อ<wbr>อยู่
+   และ<wbr>สามารถ<wbr>ทำงาน<wbr>ใน<wbr>ลักษณะ<wbr>ของ switchคือ<wbr>การ<wbr>รับ<wbr>ข้อ<wbr>มูล<wbr>จาก<wbr>หลาย<wbr>port
+   ได้<wbr>พร้อม<wbr>กัน<wbr>แล้ว<wbr>นำ<wbr>ข้อ<wbr>มูล<wbr>นั้น<wbr>ไป<wbr>เก็บ<wbr>ไว้<wbr>ใน<wbr>หน่วย<wbr>ความ<wbr>จำ<wbr>(buffer)
+   และ<wbr>เมื่อ<wbr>มี<wbr>การ<wbr>เขียน<wbr>ลง<wbr>จน<wbr>เต็ม<wbr>ทาง<wbr>อุปกรณ์<wbr>นี้<wbr>ก็<wbr>จะ<wbr>ใช้ flow
+   control ส่ง<wbr>สัญญาณ<wbr>ให้<wbr>โหน<wbr>ด<wbr>ที่<wbr>ส่ง<wbr>ขอ<wbr>มูล<wbr>นั้น<wbr>หยุด<wbr>คอย<wbr>จน<wbr>กว่า
+   buffer นั้น<wbr>จะ<wbr>ว่าง<wbr>ลง<wbr>อีก<wbr>ครั้ง
+   (หลังจาก<wbr>อุปกรณ์<wbr>ได้<wbr>ทำ<wbr>การ<wbr>ส่ง<wbr>ข้อ<wbr>มูล<wbr>ใน<wbr>buffer เหล่า<wbr>นั้น<wbr>ไป<wbr>ยัง<wbr>ปลาย<wbr>ทาง<wbr>เรียบร้อย<wbr>แล้ว<wbr>)
+   วิธี<wbr>นี้<wbr>ก็<wbr>จะ<wbr>สามารถ<wbr>ให้ throughput ได้<wbr>เกือบ 100% แต่<wbr>ข้อ<wbr>จำกัด<wbr>ของ<wbr>วิธี<wbr>นี้<wbr>คือ<wbr>ทุก<wbr>โหน<wbr>ด<wbr>ที่<wbr>เชื่อม<wbr>ต่อ<wbr>กับ<wbr>อุปกรณ์<wbr>นี้<wbr>จะ<wbr>ต้อง<wbr>เป็น<wbr>แบบ<wbr>full-duplex
+   และ<wbr>สนับสนุน<wbr>มาตรา<wbr>ฐาน ieee 802.3x ด้วย
+   <p>
+   </a>
+
+   <a name = "sect6">
+   <table width = 100% bgcolor = d0d0ff>
+   <tr>
+   <td align = center><b>สาย<wbr>สัญญาณ<wbr></b>
+   </table>
+   <dd>ใน<wbr>ปัจจุบัน<wbr>แม้<wbr>ว่า<wbr>ทาง<wbr>ผู้<wbr>ที่<wbr>กำหนด<wbr>มาตรา<wbr>ฐาน ieee802.3z
+   จะ<wbr>ได้<wbr>กำหนด<wbr>ให้<wbr>สามารถ<wbr>ใช้<wbr>สาย utp cat5สำหรับ<wbr>รอง<wbr>รับ<wbr>ความ<wbr>เร็ว<wbr>ใน<wbr>ระดับ
+   1 gbps ได้<wbr>แต่<wbr>ก็<wbr>ยัง<wbr>ไม่<wbr>มี<wbr>ผลิต<wbr>ภัณฑ์<wbr>ใน<wbr>ท้อง<wbr>ตลาด<wbr>(เป็น<wbr>ผลิต<wbr>ภัณฑ์<wbr>ที่<wbr>ออก<wbr>มา<wbr>ก่อน<wbr>มี<wbr>การ<wbr>ประกาศ<wbr>ใช้<wbr>มาตรา<wbr>ฐาน<wbr>)ชิ้น<wbr>ใด<wbr>ใช้<wbr>สาย<wbr>utp
+   cat5 เป็น<wbr>สาย<wbr>สัญญาณ<wbr>โดย<wbr>ทั้ง<wbr>หมด<wbr>เลือก<wbr>ใช้<wbr>เส้น<wbr>ใย<wbr>แก้ว<wbr>นำ<wbr>แสง<wbr>(optic
+   fiber) ซึ่ง<wbr>ถ้า<wbr>เป็น<wbr>สาย<wbr>แบบ multi-mode ขนาด 62.5 micron
+   และ<wbr>ใช้<wbr>ความ<wbr>ยาว<wbr>คลื่น<wbr>แสง 780 nanometer จะ<wbr>ได้<wbr>ระยะ<wbr>ไกล<wbr>ประมาณ
+   550
+   เมตร แต่<wbr>ถ้า<wbr>ใช้<wbr>สาย<wbr>แบบ single-mode ที่<wbr>ใช้<wbr>ความ<wbr>ยาว<wbr>คลื่น<wbr>แสง
+   1300 nanometer จะ<wbr>ทำ<wbr>ให้<wbr>ส่ง<wbr>ได้<wbr>ไกล<wbr>มาก<wbr>กว่า 2 กิโล<wbr>เมตร
+    เป็น<wbr>ที่<wbr>ทราบ<wbr>กัน<wbr>ว่า<wbr>การ<wbr>ใช้<wbr>เส้น<wbr>ใย<wbr>แก้ว<wbr>นำ<wbr>แสง<wbr>นั้น<wbr>จะ<wbr>ทำ<wbr>ให้<wbr>เกิด<wbr>ค่า<wbr>ใช้<wbr>จ่าย<wbr>ที่<wbr>สูง<wbr>ทั้ง<wbr>นี้<wbr>เนื่อง<wbr>มา<wbr>จาก<wbr>ค่า<wbr>wbr<wbr>>wbr<wbr><wbr>><wbr>wbr<wbr><wb<wbr>r><w<wbr>br<wbr>>><w<wbr>,
+   หัว<wbr>ต่อ<wbr>และ<wbr>อุปกรณ์<wbr>ที่<wbr>เกี่ยว<wbr>ข้อง
+   ตลอด<wbr>จน<wbr>ค่า<wbr>ใช้<wbr>ใจ<wbr>ใน<wbr>การ<wbr>ติด<wbr>ตั้ง<wbr>สาย และ<wbr>ค่า<wbr>บำรุง<wbr>รักษา ทำ<wbr>ให้<wbr>ทาง<wbr>คณะ<wbr>ทำงาน<wbr>เกี่ยว<wbr>กับ<wbr>มาตรา<wbr>ฐาน
+   ieee 802.3zได้<wbr>พยายาม<wbr>เสนอ<wbr>ให้<wbr>มี<wbr>การ<wbr>ใช้<wbr>สาย<wbr>ทองแดง<wbr>แบบ<wbr>อื่น<wbr>เพื่อ<wbr>นำ<wbr>มา<wbr>ใช้<wbr>งาน<wbr>ใน<wbr>ระยะ<wbr>ที่<wbr>ไม่<wbr>เกิน
+   30 เมตร ซึ่ง<wbr>ปัญหา<wbr>ที่<wbr>เกิด<wbr>ขึ้น<wbr>กับ<wbr>สาย<wbr>ทองแดง<wbr>คือ<wbr>การ<wbr>เกิด
+   echo เมื่อ<wbr>สัญญาณ<wbr>ไฟฟ้า<wbr>วิ่ง<wbr>ผ่าน<wbr>จาก<wbr>ตัว<wbr>ทองแดง<wbr>ไป<wbr>ยัง<wbr>วัตถุ<wbr>อื่น<wbr>ที่<wbr>เป็น<wbr>ทาง<wbr>ผ่าน<wbr>ของ<wbr>สัญญาณ
+   เช่น หัว<wbr>ต่อ rj45  ซึ่ง<wbr>การ<wbr>เกิด<wbr>echo นี้<wbr>ก็<wbr>มี<wbr>ใน ethernet
+   แบบ 10 และ 100 mbps แต่<wbr>ว่า<wbr>ยัง<wbr>ไม่<wbr>มี<wbr>ผล<wbr>มาก<wbr>เมื่อ<wbr>เทียบ<wbr>กับ<wbr>การ<wbr>รับ<wbr>ส่ง<wbr>ที่<wbr>ความ<wbr>เร็ว
+   1
+   gbps
+   <p>
+   </a>
+
+   <a name = "sect7">
+   <table width = 100% bgcolor = d0d0ff>
+   <tr>
+   <td align = center><b>การ<wbr>เปลี่ยน<wbr>ไป<wbr>ใช้ gigabit ethernet</b>
+   </table>
+   <dd>ทาง<wbr>คณะ<wbr>ทำงาน<wbr>ของ ieee802.3z ได้<wbr>เสนอ<wbr>การ<wbr>นำ<wbr>อุปกรณ์ gigabit
+   ethernet ไป<wbr>ใช้<wbr>ทด<wbr>แทน<wbr>น<wbr>อุปกรณ์<wbr>ต่างๆ<wbr>ที่<wbr>มี<wbr>อยู่<wbr>แล้ว<wbr>เพื่อ<wbr>เพิ่ม<wbr>ความ<wbr>เร็ว<wbr>ใน<wbr>การ<wbr>รับ<wbr>ส่ง<wbr>ข้อ<wbr>มูล<wbr>โดย<wbr>แบ่ง<wbr>ได้<wbr>เป็น
+   5 ขั้น<wbr>ตอน<wbr>ดัง<wbr>นี้
+   <dd>1. เพิ่ม<wbr>ความ<wbr>เร็ว<wbr>ของ switch-to-server linkวิธี<wbr>การ<wbr>เพิ่ม<wbr>ความ<wbr>เร็ว<wbr>ที่<wbr>ง่าย<wbr>ที่สุด<wbr>ก็<wbr>คือ<wbr>การ<wbr>เพิ่ม<wbr>ความ<wbr>เร็ว<wbr>ใน<wbr>การ<wbr>รับ<wbr>ส่ง<wbr>ข้อ<wbr>มูล<wbr>ระหว่าง<wbr>ตัว
+   gigabit switch กับ serverประสิทธิภาพ<wbr>สูง<wbr>ซึ่ง<wbr>ติด<wbr>ตั้ง
+   gigabit interface card รูป<wbr>ที่ 2.1 และ 2.2 แสดง<wbr>การ<wbr>เปลี่ยน<wbr>แปลง<wbr>จาก<wbr>อุปกรณ์<wbr>เครือ<wbr>ข่าย<wbr>แบบ
+   ethernet/fast ethernet ไป<wbr>เป็น gigabit ethernet <p>
+   <center><img src="giga2.gif" width="550" height="229"
+   border=0></center><br>
+   <center>รูป<wbr>ที่ 2.1 แสดง<wbr>เครือ<wbr>ข่าย<wbr>ก่อน<wbr>เปลี่ยน<wbr>มา<wbr>ใช้<wbr>อุปกรณ์
+   gigabit ethernet</center><p>
+   <center><img src="giga3.gif" width="550" height="204"
+   border=0></center>
+   <center>รูป<wbr>ที่ 2.2 แสดง<wbr>เครือ<wbr>ข่าย<wbr>หลัง<wbr>เปลี่ยน<wbr>มา<wbr>ใช้<wbr>อุปกรณ์
+   gigabit ethernet</center><p>
+
+   <dd>2. การ<wbr>แทน<wbr>ที่<wbr>เครือ<wbr>ข่าย<wbr>แกน<wbr>หลัก<wbr>ที่<wbr>ใช้ fast ethernet
+   อยู่<wbr>ก่อน<wbr>ใน<wbr>เครือ<wbr>ข่าย<wbr>ขนาด<wbr>เล็ก<wbr>จน<wbr>ถึง<wbr>ขนาด<wbr>กลาง<wbr>ที่<wbr>ใช้ fast
+   ethernet  switch
+   เป็น<wbr>อุปกรณ์<wbr>เครือ<wbr>ข่าย<wbr>แกน<wbr>หลัก<wbr>(backbone switch) ก็<wbr>อาจ<wbr>จะ<wbr>รอง<wbr>รับ<wbr>ความ<wbr>ต้อง<wbr>การ<wbr>ใน<wbr>รับ<wbr>ส่ง<wbr>ข้อ<wbr>มูล<wbr>ที่<wbr>มี<wbr>ปริมาณ<wbr>เพิ่ม<wbr>ขึ้น<wbr>อย่าง<wbr>รวด<wbr>เร็ว<wbr>ไม่<wbr>ได้
+   การ<wbr>นำ
+   gigabit ethernet switch มา<wbr>ทำ<wbr>หน้าที่<wbr>เป็น<wbr>backbone switch
+   แทน<wbr>ก็<wbr>จะ<wbr>ทำ<wbr>ให้<wbr>สามารถ<wbr>เพิ่ม bandwidth ได้<wbr>อย่าง<wbr>เพียง<wbr>พอ<wbr>ต่อ<wbr>ความ<wbr>ต้อง<wbr>การ<wbr>ใน<wbr>ปัจจุบัน<wbr>และ<wbr>อนาคต
+   รูป<wbr>ที่ 3.1 และ 3.2 แสดง<wbr>การ<wbr>เปลี่ยน<wbr>แปลง<wbr>จาก<wbr>อุปกรณ์<wbr>เครือ<wbr>ข่าย<wbr>แบบ
+   ethernet/fast ethernet ไป<wbr>เป็น gigabit ethernet
+
+   <p>
+   <img src="giga4.gif" width="550" height="200" border=0><br>
+   <center>รูป<wbr>ที่ 3.1 แสดง<wbr>เครือ<wbr>ข่าย<wbr>ก่อน<wbr>เปลี่ยน<wbr>มา<wbr>ใช้<wbr>อุปกรณ์
+   gigabit ethernet</center><p>
+   <img src="giga5.gif" width="550" height="193" border=0>
+      <br>
+   <center>รูป<wbr>ที่ 3.2 แสดง<wbr>เครือ<wbr>ข่าย<wbr>หลัง<wbr>เปลี่ยน<wbr>มา<wbr>ใช้<wbr>อุปกรณ์
+   gigabit ethernet</center><p>
+
+   <dd>3. เพิ่ม<wbr>ความ<wbr>เร็ว<wbr>ของ switch-to-switch link ใน<wbr>เครือ<wbr>ข่าย<wbr>ที่<wbr>มี<wbr>ขนาด<wbr>ใหญ่<wbr>ขึ้น<wbr>และ<wbr>มี
+   ethernet/fast ethernet switch/repeater อยู่<wbr>จะ<wbr>ทำ<wbr>ให้<wbr>มี<wbr>ปริมาณ<wbr>ข้อ<wbr>มูล<wbr>ที่<wbr>ต้อง<wbr>ส่ง<wbr>ผ่าน<wbr>ระหว่าง<wbr>switch/repeater
+   ที่<wbr>มี<wbr>server ต่อ<wbr>อยู่<wbr>ด้วย<wbr>นั้น<wbr>สูง<wbr>มาก<wbr>จน<wbr>ต้อง<wbr>การ<wbr>การ<wbr>เพิ่ม<wbr>ขยาย
+   การ<wbr>นำ gigabit ethernet เข้า<wbr>มา<wbr>แทน<wbr>ที่ ethernet/fast ethernet
+   switch/repeater เหล่า<wbr>นี้<wbr>ก็<wbr>จะ<wbr>สามารถ<wbr>เพิ่ม<wbr>ประสิทธิภาพ<wbr>โดย<wbr>รวม<wbr>ของ<wbr>ระบบ<wbr>ได้
+   รูป<wbr>ที่ 4.1 และ 4.2 แสดง<wbr>การ<wbr>เปลี่ยน<wbr>แปลง<wbr>จาก<wbr>อุปกรณ์<wbr>เครือ<wbr>ข่าย<wbr>แบบ
+   ethernet/fast ethernet ไป<wbr>เป็น gigabit ethernet <p>
+   <img src="giga6.gif" width="550" height="262" border=0><br>
+   <center>รูป<wbr>ที่ 4.1 แสดง<wbr>เครือ<wbr>ข่าย<wbr>ก่อน<wbr>เปลี่ยน<wbr>มา<wbr>ใช้<wbr>อุปกรณ์
+   gigabit ethernet</center><p>
+   <img src="giga7.gif" border=0><br>
+   <center>รูป<wbr>ที่ 4.2 แสดง<wbr>เครือ<wbr>ข่าย<wbr>หลัง<wbr>เปลี่ยน<wbr>มา<wbr>ใช้<wbr>อุปกรณ์
+   gigabit ethernet</center><p>
+
+
+   <dd>4. การ<wbr>แทน<wbr>ที่<wbr>เครือ<wbr>ข่าย<wbr>แกน<wbr>หลัก<wbr>ที่<wbr>ใช้ shared fddi
+   อยู่<wbr>ก่อน<wbr>เครือ<wbr>ข่าย<wbr>ที่<wbr>ใช้<wbr>เทคโนโลยี fddi สามารถ<wbr>จะ<wbr>ทำ<wbr>การ<wbr>เปลี่ยน<wbr>มา<wbr>ใช้
+   gigabit
+   ethernet  ได้<wbr>โดย<wbr>การ<wbr>นำ<wbr>เอา gigabit ethernet switch/repeater
+   ไป<wbr>แทน<wbr>ที่ fddi concentrator หรือ<wbr>อาจ<wbr>จะ<wbr>เพียง<wbr>นำ gigabit
+   ethernet
+   interface card ไป<wbr>เปลี่ยน<wbr>กับ fddi interface card ใน<wbr>router
+   ที่<wbr>มี<wbr>ใช้<wbr>งาน<wbr>อยู่<wbr>แล้ว ทั้ง<wbr>นี้<wbr>การ<wbr>เปลี่ยน<wbr>แปลง<wbr>นี้<wbr>ไม่<wbr>ต้อง<wbr>มี<wbr>การ<wbr>ลงทุน<wbr>เกี่ยว<wbr>กับ<wbr>เรื่อง<wbr>สาย<wbr>สัญญาณ<wbr>เลย
+   เนื่อง<wbr>จาก fddi ส่วน<wbr>มาก<wbr>ก็<wbr>จะ<wbr>ใช้ เส้น<wbr>ใย<wbr>แก้ว<wbr>นำ<wbr>แสง<wbr>เป็น<wbr>พื้น<wbr>ฐาน<wbr>อยู่<wbr>แล้ว
+   รูป<wbr>ที่ 5.1 และ 5.2 แสดง<wbr>การ<wbr>เปลี่ยน<wbr>แปลง<wbr>จาก<wbr>อุปกรณ์<wbr>เครือ<wbr>ข่าย<wbr>แบบ
+   ethernet/fast ethernet ไป<wbr>เป็น gigabit ethernet <p>
+   <img src="giga8.gif" border=0><br>
+   <center>รูป<wbr>ที่ 5.1 แสดง<wbr>เครือ<wbr>ข่าย<wbr>ก่อน<wbr>เปลี่ยน<wbr>มา<wbr>ใช้<wbr>อุปกรณ์
+   gigabit ethernet</center><p>
+
+   <img src="giga9.gif" border=0><br>
+   <center>รูป<wbr>ที่ 5.2 แสดง<wbr>เครือ<wbr>ข่าย<wbr>ก่อน<wbr>เปลี่ยน<wbr>มา<wbr>ใช้<wbr>อุปกรณ์
+   gigabit ethernetเอกสาร<wbr>อ้ง<wbr>อิง<wbr></center><p>
+
+   <dd> 5. การ<wbr>ใช้ network interface card ที่<wbr>เครื่อง high-end
+   desktop
+   ใน<wbr>การ<wbr>ปรับปรุง<wbr>เพื่อ<wbr>เพิ่ม<wbr>ความ<wbr>เร็ว<wbr>ของ<wbr>ระบบ<wbr>ขั้น<wbr>สุด<wbr>ท้าย<wbr>ก็<wbr>คือ<wbr>การ<wbr>เพิ่ม<wbr>ความ<wbr>เร็ว<wbr>ระหว่าง
+   อุปกรณ์ gigabit ethernet switch/repeater กับ<wbr>เครื่อง
+   desktop ระดับ hi-end ที่<wbr>ติด<wbr>ตั้ง gigabit ethernet interface
+   card ทั้ง<wbr>นี้<wbr>เพื่อ<wbr>รอง<wbr>รับ<wbr>ปริมาณ<wbr>ข้อ<wbr>มูล<wbr>ที่<wbr>สูง<wbr>มากๆ เช่น
+   แอ<wbr>พพ<wbr>ลิ<wbr>เค<wbr>ชั่น<wbr>ประเภท<wbr>วิ<wbr>ดี<wbr>โอ<wbr>ทั้ง<wbr>หลาย (vdo-editing, vod)
+   หรือ<wbr>งาน<wbr>ประเภท data ware house
+
+   <p>
+   </a>
+   <a name = "sect8">
+   <table width = 100% bgcolor = d0d0ff>
+   <tr>
+   <td align = center><b>gigabit ethernet กับ atm</b>
+   </table>
+   <dd>ด้วย<wbr>ความ<wbr>เร็ว<wbr>ใน<wbr>ระดับ 1 gbps และ<wbr>ราคา<wbr>ต่อ port ของ
+   gigabit ethernet ที่<wbr>ถูก<wbr>กว่า เทคโนโลยี atm ทำ<wbr>ให้<wbr>ดู<wbr>เหมือน<wbr>ว่า
+   gigabit
+   ethernet อาจ<wbr>จะ<wbr>มา<wbr>แทน<wbr>ที่ atm ใน<wbr>อนาคต แต่<wbr>โดย<wbr>ความ<wbr>เป้<wbr>น<wbr>จริง<wbr>พื้น<wbr>ฐาน<wbr>ทาง<wbr>ด้าน<wbr>การ<wbr>ออก<wbr>แบบ<wbr>ปล้ว<wbr>จะ<wbr>พบ<wbr>ว่า
+   เทคโนโลยี<wbr>ทั้ง<wbr>สอง<wbr>นั้น ออก<wbr>แบบ<wbr>มา<wbr>บน<wbr>พื้น<wbr>ฐาน<wbr>ที่<wbr>ต่าง<wbr>กัน<wbr>ออก<wbr>ไป
+   ทำ<wbr>ให้<wbr>แต่<wbr>ละ<wbr>อัน<wbr>นั้น<wbr>มี<wbr>ข้อ<wbr>ดี<wbr>ข้อ<wbr>เสีย<wbr>ต่าง<wbr>ออก<wbr>ไป นั่น<wbr>คือ gigabit
+   ethernet นั้น<wbr>ออก<wbr>แบบ<wbr>โดย<wbr>มี<wbr>จุด<wbr>ประสงค์<wbr>หลัก<wbr>ใน<wbr>การ<wbr>เข้า<wbr>กัน<wbr>ได้<wbr>กับ<wbr>ethernet
+   รุ่น<wbr>ก่อนๆ<wbr>ที่<wbr>ได้<wbr>มี<wbr>ใช้<wbr>กัน<wbr>อย่าง<wbr>แพร่<wbr>หลาย<wbr>แล้ว<wbr>ใน<wbr>ปัจจุบัน<wbr>นี้
+   ซึ่ง<wbr>จะ<wbr>มี<wbr>ข้อ<wbr>เสีย<wbr>ตรง<wbr>ที่<wbr>ว่า<wbr>มัน<wbr>จะ<wbr>ออก<wbr>แบบ<wbr>มา<wbr>เพื่อ<wbr>การ<wbr>รับ<wbr>ส่อง<wbr>ข้อ<wbr>มูล<wbr>คอมพิวเตอร์<wbr>เท่า<wbr>นั้น
+   ใน<wbr>ขณะ<wbr>ที่<wbr>เทคโนโลยี atm เป็น<wbr>เทคโนโลยี<wbr>ใหม่<wbr>แล้<wbr>สามารถ<wbr>จะ<wbr>สนับสนุน
+   ethernetแต่<wbr>ก็<wbr>จะ<wbr>มี<wbr>ราคา<wbr>ต่อ port ที่<wbr>แพง<wbr>กว่า gigabit ethernet
+   ส่วน<wbr>ข้อ<wbr>ดี<wbr>ของ atm คือ<wbr>การ<wbr>ที่<wbr>มัน<wbr>ออก<wbr>แบบ<wbr>มา<wbr>โดย<wbr>ให้<wbr>มี<wbr>ขนาด<wbr>ของ<wbr>เฟ<wbr>รม<wbr>ของ<wbr>ข้อ<wbr>มูล<wbr>(จะ<wbr>เรียก<wbr>ว่า
+   cell)ที่<wbr>มี<wbr>ขนาด<wbr>คง<wbr>ที่<wbr>ซึ่ง<wbr>จะ<wbr>ไม่<wbr>มี<wbr>ปัญหา<wbr>เรื่อง<wbr>throughput
+   อย่าง gigabit ethernetดัง<wbr>ที่<wbr>ได้<wbr>กล่าว<wbr>มา<wbr>แล้ว<wbr>ข้าง<wbr>ต้น นอกจาก<wbr>นี้<wbr>เทคโนโลยี
+   atmได้<wbr>ออก<wbr>แบบ<wbr>มา<wbr>เพื่อ<wbr>รอง<wbr>รับ<wbr>ข้อ<wbr>มูล<wbr>ได้<wbr>หลาย<wbr>ประเภท<wbr>ทั้ง<wbr>ข้อ<wbr>มูล<wbr>ที่<wbr>ขึ้น<wbr>และ<wbr>ไม่<wbr>ขึ้น<wbr>กับ<wbr>เวลา<wbr>จริง<wbr>(non-real-time
+   และ real-time data)
+
+   <p>
+   </a>
+
+   <a name = "sect9">
+   <table width = 100% bgcolor = d0d0ff>
+   <tr>
+   <td align = center><b>คุณภาพ<wbr>ของ<wbr>การ<wbr>บริการ (quality of
+   service, qos)</b>
+   </table>
+   <dd>qos เป็น<wbr>ระดับ<wbr>ใน<wbr>การ<wbr>ให้<wbr>บริการ<wbr>ข้อ<wbr>มูล<wbr>ซึ่ง<wbr>มัน<wbr>จะ<wbr>รับ<wbr>ประกัน<wbr>อัตรา<wbr>ความ<wbr>เร็ว<wbr>ใน<wbr>การ<wbr>ส่ง<wbr>ข้อ<wbr>มูล<wbr>หนึ่งๆ<wbr>ที่<wbr>อยู่<wbr>ใน<wbr>ร<wbr>ดับ<wbr>เดียว<wbr>wbr<wbr>>w<wbr>br<<wbr>wbr<wbr>>>w<wbr><wb<wbr>r>br<wbr><<wb
+   bandwidth ที่<wbr>จะ<wbr>ถูก<wbr>กำหนด<wbr>ไว้<wbr>ให้<wbr>โดย<wbr>เฉพาะ<wbr>(dedicated bandwidth)
+   ซึ่ง<wbr>สามารถ<wbr>พบ<wbr>บริการ<wbr>เหล่า<wbr>นี้<wbr>ได้<wbr>ใน เทคโนโลยี atm ซึ่ง<wbr>เป็นการ<wbr>ใช้
+   qos กับ real-time data เพื่อ<wbr>ให้ gigabit ethernet สามารถ<wbr>รอง<wbr>รับ<wbr>การ<wbr>รับ<wbr>ส่ง<wbr>ข้อ<wbr>มูล<wbr>เวลา<wbr>จริง
+   (real-time data) และ<wbr>สนับสนุน<wbr>qos คณะ<wbr>ทำงาน<wbr>ของ
+   ieee802.3z จึง<wbr>ได้<wbr>ทดลอง<wbr>นำ<wbr>เอา<wbr>กลไก rsvp (resource reservation
+   protocol) มา<wbr>ใช้<wbr>เพื่อ<wbr>ให้ gigabit สามารถ<wbr>รอง<wbr>รับ qos ซึ่ง<wbr>ก็<wbr>ยัง<wbr>ไม่<wbr>ได้<wbr>มี<wbr>การ<wbr>ประกาศ<wbr>เป็น<wbr>มาตรา<wbr>ฐาน<wbr>ออก<wbr>มา
+   ณ<wbr>.<wbr>ขณะ<wbr>นี้
+
+   <a name = "sect10">
+   <table width = 100% bgcolor = d0d0ff>
+   <tr>
+   <td align = center><b>สรุป<wbr></b>
+   </table>
+   <dd>ใน<wbr>ปัจจุบัน<wbr>มาตรา<wbr>ฐาน<wbr>gigabit ethernet (ieee802.3z)ยัง<wbr>อยู่<wbr>ใน<wbr>ระหว่าง<wbr>การ<wbr>พิจารณา<wbr>ประกาศ<wbr>ใช้<wbr>อย่าง<wbr>เป็น<wbr>ทาง<wbr>การ
+   ซึ่ง<wbr>หมาย<wbr>ความ<wbr>ว่า<wbr>อาจ<wbr>จะ<wbr>มี<wbr>การ<wbr>ปรับปรุง<wbr>แก้<wbr>ไข<wbr>ใน<wbr>ราย<wbr>ละเอียด<wbr>ของ<wbr>ค่า<wbr>พารามิเตอร์<wbr>ต่าง<wbr>ได้<wbr>อีก
+   จึง<wbr>นับ<wbr>เป็นการ<wbr>เร็ว<wbr>เกิน<wbr>ไป<wbr>ที่<wbr>จะ<wbr>จัด<wbr>หา<wbr>อุปกรณ์ gigabit ethernet
+   ใน<wbr>ท้อง<wbr>ตลาด<wbr>มา<wbr>ใช้<wbr>ทั้ง<wbr>นี้<wbr>เนื่อง<wbr>ด้วย<wbr>เหตุผล<wbr>ทาง<wbr>ด้าน<wbr>ความ<wbr>เข้า<wbr>กัน<wbr>ได้<wbr>กับ<wbr>อุปกรณ์<wbr>ใน<wbr>แบบ<wbr>เดียว<wbr>กัน<wbr>ของ<wbr>ต่าง<wbr>ผู้<wbr>ผลิต<wbr>ซึ่ง<wbr>อาจ<wbr>wb<wbr>r><wbr>wb<<wbr>wbr<wbr>>r><wb<wbr>r>w<wbr>b<<<wbr>wbr><wbr>wbr<wbr><wb<wbr>r>>r><wbr><w<wbr>b<wbr>r>w<w<wbr>br>b<wbr><<<<wbr>wbr><wbr>wbr<wbr>><w<wbr>br><wbr>wbr<wbr><w<wbr>br><wbr><wb<<wbr>wbr
+   และ gigabit ethernet ก็<wbr>ไม่<wbr>สาร<wbr>มา<wbr>รถ<wbr>จะ<wbr>ใช้<wbr>ทด<wbr>แทน<wbr>เทคโนโลยี
+   atm ได้ ดัง<wbr>นั้น<wbr>การ<wbr>นำ gigabit ethernet มา<wbr>ใช้<wbr>ให้<wbr>ได้<wbr>ประโยชน์<wbr>สูง<wbr>สุด<wbr>ก็<wbr>คือ<wbr>การ<wbr>นำ<wbr>มา<wbr>เพิ่ม<wbr>ประสิทธิ์<wbr>ภาพ<wbr>ใน<wbr>การ<wbr>รับ<wbr>ส่ง<wbr>ข้อ<wbr>มูล<wbr>ของ<wbr>เครือ<wbr>ข่าย
+   ethernet ที่<wbr>มี<wbr>อยู่<wbr>เดิม<wbr>ให้<wbr>ดี<wbr>ขึ้น<wbr>ดัง<wbr>ที่<wbr>กล่าว<wbr>มา<wbr>แล้ว<wbr>ข้าง<wbr>ต้น
+
+ 
+<p>
+</a>
+<hr noshade>
+
+</body>
+</html>

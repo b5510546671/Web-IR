@@ -1,0 +1,97 @@
+<html>
+<head>
+<title>วิธีการหาค่าเฉลี่ย</title>
+</head>
+<body bgcolor=white>
+<table width=100%>
+<tr><td align=right><font size = -1  face="ms sans serif" color="#b0d1d6"><<<a href="method_math.htm">วิธี<wbr>การ<wbr>สร้างโมเดล<wbr>เชิง<wbr>เส้น<wbr>ทางคณิต<wbr>ศาสตร์</a>>></td></tr>
+<tr><td align=center><font  face="ms sans serif" color=blue size=><b>วิธี<wbr>การ<wbr>หา<wbr>ค่า<wbr>เฉลี่ย</b></td><tr>
+</table>
+<p><font  face="ms sans serif">
+<dd><b>พิ</b></font><font  face="ms sans serif" size=-1>จารณา<wbr>จาก<wbr>คู่<wbr>ลำ<wbr>ดับ<wbr>ใดๆ x<sub>n</sub> และ y<sub>n</sub> ที่<wbr>ได้<wbr>จาก<wbr>การ<wbr>ทด<wbr>ลอง ถ้า<wbr>ความ<wbr>สัมพันธ์<wbr>เป็น<wbr>ไป<wbr>ตาม<wbr>สมการ
+
+<p><center><table><tr><td align=center bgcolor = "#faf874">	<font  face="ms sans serif" size=-1 color=brown>	&nbsp;	y = mx + c &nbsp; </td></tr></table></center>
+
+<p><dd>		และ<wbr>ถ้า<wbr>จุด ( x<sub>n</sub> , y<sub>n</sub> ) อยู่<wbr>บน<wbr>เส้น<wbr>ตรง ดัง<wbr>นั้น<wbr>ความ<wbr>สัมพันธ์<wbr>จะ<wbr>เป็น<wbr>ไป<wbr>ตาม<wbr>สมการ
+
+<p><center><table><tr><td align=center bgcolor = "#faf874">	<font  face="ms sans serif" size=-1 color=brown>	&nbsp;	y<sub>n</sub> - mx<sub>n</sub> - c = 0 &nbsp; </td></tr></table></center>			
+
+<p><dd>		หาก<wbr>ถ้า<wbr>จุด ( x<sub>n</sub> , y<sub>n</sub> ) ไม่<wbr>อยู่<wbr>บน<wbr>เส้น<wbr>ตรง<wbr>ของ<wbr>สมการ สิ่ง<wbr>ที่<wbr>ได้ คือ
+
+<p><center><table><tr><td align=center bgcolor = "#faf874">	<font  face="ms sans serif" size=-1 color=brown>	&nbsp;	y<sub>n</sub> - mx<sub>n</sub> - c = r<sub>n</sub> &nbsp; </td></tr></table></center>
+
+<p><center><table><tr><td align=center>	<font  face="ms sans serif" size=-1 >	&nbsp;	เมื่อ r<sub>n</sub> คือ ส่วน<wbr>ต่าง<wbr>ที่<wbr>เกิด<wbr>ขึ้น<wbr> เรียก<wbr>ว่า <font color = brown>residual</font> &nbsp; </td></tr></table></center>
+                                    
+		
+<p><dd>	ค่า<wbr>ของ residual นี้<wbr>คือ ค่า<wbr>ที่<wbr>อยู่<wbr>ใน<wbr>แนว<wbr>ดิ่ง จาก<wbr>จุด<wbr>ที่พล็อตถึง<wbr>เส้น ดัง<wbr>นั้น ค่า<wbr>นี้<wbr>จึง<wbr>เป็น<wbr>ได้<wbr>ทั้ง<wbr>ค่า<wbr>ลบ<wbr>หรือ<wbr>บวก ขึ้น<wbr>อยู่กับตำแหน่ง<wbr>จุด<wbr>ที่พล็อตกับเส้น โดย<wbr>ถ้า<wbr>จุด<wbr>อยู่<wbr>บน<wbr>เส้น<wbr>ค่า r จะ<wbr>มี<wbr>ค่า<wbr>เป็น 0
+<p><dd>	หรือ<wbr>ถ้า<wbr>มี<wbr>จุด n จุด<wbr>เขียน<wbr>ได้<wbr>เป็น
+<p><center><table><tr><td align=center bgcolor = "#faf874">	<font  face="ms sans serif" size=-1 color=brown>	&nbsp;		y<sub>1</sub> - mx<sub>1</sub> - c - y<sub>2</sub> - mx<sub>2</sub> - c + ...+ y<sub>m</sub> - mx<sub>n</sub> - c = 0
+ &nbsp; </td></tr></table></center>			
+
+<p><dd>             เรา<wbr>เขียน<wbr>สมการ<wbr>ใหม่<wbr>เป็น
+
+<p><center><table><tr><td align=center bgcolor = "#faf874">	<font  face="ms sans serif" size=-1 color=brown>	&nbsp;	( y<sub>1</sub> + y<sub>2</sub> + ...+y<sub>n</sub> ) - m( x<sub>1</sub> + x<sub>2</sub> + ...+ x<sub>n</sub> ) - nc = 0 &nbsp; </td></tr>
+<tr><td align=center><font  face="ms sans serif" size=-1>หรือ</td></tr>
+<tr><td align=center bgcolor = "#faf874">	<font  face="ms sans serif" size=-1 color=brown>	&nbsp;	( ผล<wbr>บวก<wbr>ของ<wbr>ค่า y ) - m( ผล<wbr>บวก<wbr>ของ<wbr>ค่า x ) - nc = 0 <sub>&nbsp;</sub> </td></tr></table></center>
+ 	
+<p><dd>	จาก<wbr>สมการ<wbr>นี้<wbr>ทำ<wbr>ให้<wbr>เรา<wbr>หา<wbr>ค่า m และ c ไม่<wbr>ได้<wbr>เพราะ<wbr>มี<wbr>ตัว<wbr>แปรไม่<wbr>ทราบ<wbr>ค่า<wbr>ใน<wbr>หนึ่ง<wbr>สมการ<wbr>สอง<wbr>ตัว<wbr>แปร เรา<wbr>จึง<wbr>ทำ<wbr>ได้<wbr>ด้วย<wbr>การ<wbr>แบ่ง<wbr>ข้อ<wbr>มูล<wbr>กราฟ<wbr>เส้น<wbr>ตรง<wbr>นี้<wbr>ออก<wbr>เป็น<wbr>สองชุด เพื่อ<wbr>จะ<wbr>ได้<wbr>สอง<wbr>สมการ ดัง<wbr>ตัว<wbr>อย่าง	
+<p>
+<center><table width=40% border=0>
+<tr>
+     <td width=20%>
+     <table border=1 width=100%>
+     <tr bgcolor = "#40ffff"><th colspan=2><font  face="ms sans serif" size=-1>กลุ่มที่ 1	</th></tr>
+     <tr bgcolor = "#40ffff"><th width=50%><font  face="ms sans serif" size=-1>x</th><th width=50%><font  face="ms sans serif" size=-1>y</th></tr>
+          <tr bgcolor = "#d6fafa" align=center><td><font  face="ms sans serif" size=-1>0</td><td><font  face="ms sans serif" size=-1>5.0</td></tr>
+          <tr bgcolor = "#d6fafa" align=center><td><font  face="ms sans serif" size=-1>1</td><td><font  face="ms sans serif" size=-1>4.4</td></tr>
+          <tr bgcolor = "#d6fafa" align=center><td><font  face="ms sans serif" size=-1>2</td><td><font  face="ms sans serif" size=-1>3.6</td></tr>
+          <tr bgcolor = "#d6fafa" align=center><td><font  face="ms sans serif" size=-1>3</td><td><font  face="ms sans serif" size=-1>3.2</td></tr>
+      </table></td>
+      <td width=20%>
+     <table border=1 width=100%>
+     <tr bgcolor = "#a1a3fb"><th colspan=2><font  face="ms sans serif" size=-1>กลุ่มที่ 2	</th></tr>
+     <tr bgcolor = "#a1a3fb"><th width=50%><font  face="ms sans serif" size=-1>x</th><th width=50%><font  face="ms sans serif" size=-1>y</th></tr>
+          <tr bgcolor = "#e9e9fd" align=center><td><font  face="ms sans serif" size=-1>4</td><td><font  face="ms sans serif" size=-1>1.8</td></tr>
+          <tr bgcolor = "#e9e9fd" align=center><td><font  face="ms sans serif" size=-1>5</td><td><font  face="ms sans serif" size=-1>1.6</td></tr>
+          <tr bgcolor = "#e9e9fd" align=center><td><font  face="ms sans serif" size=-1>6</td><td><font  face="ms sans serif" size=-1>1.1</td></tr>
+          <tr bgcolor = "#e9e9fd" align=center><td><font  face="ms sans serif" size=-1>7</td><td><font  face="ms sans serif" size=-1>0.1</td></tr>
+      </table></td></tr>
+<tr><td width=20%>
+     <table border=1 width=100%>
+     <tr bgcolor = "#40ffff"><th width=50%><font  face="ms sans serif" size=-1 color=brown>6</th><th><font  face="ms sans serif" size=-1 color=brown>16.2</th></tr>
+      </table></td>
+     <td width=20%>
+     <table border=1 width=100%>
+     <tr bgcolor = "#a1a3fb"><th width=50%><font  face="ms sans serif" size=-1 color=brown>22</th><th><font  face="ms sans serif" size=-1 color=brown>4.6</th></tr>
+      </table></td>
+
+</tr></table></center>     
+<p><dd>ดัง<wbr>นั้น<wbr>จึง<wbr>นำ<wbr>มา<wbr>เขียน<wbr>สมการ เป็น<wbr>สอง<wbr>สมการ<wbr>ได้
+<p><center>
+<table cellspacing=10>
+<tr><td align=center bgcolor = "#faf874"><font  face="ms sans serif" size=-1 color=brown>
+      &nbsp; 16.2  - 6m - 4c = 0 &nbsp;</td>
+     <td align=center bgcolor = "#faf874"><font  face="ms sans serif" size=-1 color=brown>
+      &nbsp; 4.6  - 22m - 4c = 0&nbsp; </td></tr>
+</table></center>
+
+<p><center>
+<table cellspacing=10>
+<tr><td align=center valign=top rowspan=2><font  face="ms sans serif" size=-1>สิ่ง<wbr>ที่<wbr>ได้ คือ </td><td align=center bgcolor = "#faf874"><font  face="ms sans serif" size=-1 color=brown>
+      &nbsp; m = -0.725&nbsp; </td></tr>
+<tr><td align=center bgcolor = "#faf874"><font  face="ms sans serif" size=-1 color=brown>
+      &nbsp; c = 5.14&nbsp; </td></tr>
+</table></center>
+<p><center>
+<table cellspacing=10>
+<tr><td align=center><font  face="ms sans serif" size=-1> เมื่อ<wbr>เขียน<wbr>เป็น<wbr>สมการ  </td>
+     <td align=center bgcolor = "#faf874"><font  face="ms sans serif" size=-1 color=brown>
+      &nbsp; y = 0.725x + 5.14&nbsp; </td></tr>
+</table></center>
+<p>&nbsp;
+<hr width="100%">
+<i>ที่มา : รศ. ยืน ภู่วรวรรณ, สำนักบริการคอมพิวเตอร์ มหาวิทยาลัยเกษตรศาสตร์</i>
+
+
+</body>
+</html>

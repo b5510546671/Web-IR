@@ -1,0 +1,75 @@
+<html>
+<head>
+<title>schoolnet - mathematics ---- เลขจำนวนเฉพาะ (prime)</title>
+</head>
+<body>
+<a href="prime.htm"><img src="primenm.gif" height=40 border=0 align=right></a>
+
+<br clear=all>
+<table>
+<dd><table border=3 bgcolor=#dfdfdf>
+<tr align=center><td><font color="brown" size=-1 face="ms sans serif">ตัว<wbr>อย่าง<wbr>โปรแกรม<wbr>การ<wbr>หา<wbr>เลข<wbr>จำนวน<wbr>เฉพาะ<wbr>วิธี<wbr>ที่ <font size=+1 color="red">2<wbr>
+</table>
+<p>
+<center><table border width=65% bgcolor="#e7e8ff">
+<tr><td><font face="ms sans serif"  size=-1>program primelist1;<br>
+const<br>size = 1000;<br>
+(* &nbsp;&nbsp;this is the maximum number of primes to be found,  &nbsp;&nbsp;*)<br>
+(*  &nbsp;&nbsp;and can be adjusted as required  &nbsp;&nbsp;*)<br>
+var<br>
+n:  &nbsp;extended;<br>
+i,j,no_primes: &nbsp;integer;<br>
+p: &nbsp;array[1..size] &nbsp;of extended;<br>
+pass: &nbsp;boolean;<br>
+<br>
+begin<br>
+write &nbsp;('number of primes = ?  &nbsp;')<br>
+readln (no_primes); &nbsp;(* &nbsp;&nbsp;this is <u><</u> <i>size</i> &nbsp;&nbsp;*)<br>
+p[1]:= 2;<br>
+p[2]:= 3;<br>
+writeln (2,',',3); n:=3;<br>
+for &nbsp;i:= 3 &nbsp;to&nbsp; no_primes &nbsp;do<br>
+&nbsp;begin
+<dd>pass:= &nbsp;false;
+<dd>while &nbsp;not(pass) &nbsp;do
+<dd>(* &nbsp;&nbsp;so long as a new prime is not&nbsp;&nbsp; *)
+<dd>(* &nbsp;&nbsp;discovered the program &nbsp;&nbsp;*)
+<dd>(* &nbsp;&nbsp;adds 2 to <i>n</i> and tries again &nbsp;&nbsp;*)
+<dd>&nbsp;begin
+<dd>&nbsp;n:= n + 2;
+<dd>&nbsp;j:= 2;
+<dd>&nbsp;(* &nbsp;&nbsp;start by trial-dividing by the 2nd prime, 3 *)
+<dd>&nbsp;pass:= true;
+<dd>&nbsp;while &nbsp;(pass &nbsp;&nbsp;and &nbsp;(j < i) &nbsp;and &nbsp;(p[&nbsp;j&nbsp;]*p[&nbsp;j&nbsp;]&nbsp;<=n))&nbsp; do<br>
+<img src="spacer.gif">begin<br>
+<img src="spacer.gif">pass:=&nbsp;not(n&nbsp;=&nbsp;p[&nbsp;j&nbsp;]&nbsp;*&nbsp;int(n/p[&nbsp;j&nbsp;]&nbsp;));<br>
+<img src="spacer.gif">(*&nbsp;&nbsp;the number &nbsp;<i>n</i> passes this test if it is not &nbsp;&nbsp;*)<br>
+<img src="spacer.gif">(*&nbsp;&nbsp;divisble by the &nbsp;<i>j</i>th&nbsp; prime &nbsp;&nbsp;*)<br>
+<img src="spacer.gif">j:=&nbsp;j&nbsp;+&nbsp;1<br>
+<img src="spacer.gif">end;
+<dd>&nbsp;if&nbsp; pass &nbsp;then
+<dd>&nbsp;(*&nbsp;&nbsp;if &nbsp;<i>n</i>&nbsp; passes all the tests it is added to <i>p</i>&nbsp;&nbsp;*)<br>
+<img src="spacer.gif">begin<br>
+<img src="spacer.gif">p[&nbsp;i&nbsp;]:=&nbsp;n;<br>
+<img src="spacer.gif">write(',',n:0:0);<br>
+<img src="spacer.gif">&nbsp;(*&nbsp;&nbsp;and also written to the screen &nbsp;&nbsp;*)<br>
+<img src="spacer.gif">end;<br>
+<dd>&nbsp;end;
+<dd>&nbsp;(*&nbsp;&nbsp;if &nbsp;not(pass) &nbsp;then 2 is added to&nbsp; <i>n</i>&nbsp; and we
+<dd>&nbsp;(try again;&nbsp;&nbsp;*)
+<dd>&nbsp;(*&nbsp;&nbsp;if pass &nbsp;&nbsp;then we go on to the next value of &nbsp;&nbsp;<i>i</i>&nbsp;&nbsp;*)<br>
+&nbsp;end;<br>
+end.
+</table></center>
+
+<br clear=all>
+<hr noshade size=2 width=100%>
+<table width=50% align=right>
+<tr> 
+<td bgcolor="#e3e4ff" align=right><font  face="ms sans serif"  color="brown" size=-1>ที่มา: รศ. ยืน ภู่วรวรรณ, สำนักบริการคอมพิวเตอร์  มหาวิทยาลัย<wbr>เกษตรศาสตร์
+</table>
+<br clear=all>
+<hr noshade size=2 width=50% align=right>
+
+</body>
+</htm>

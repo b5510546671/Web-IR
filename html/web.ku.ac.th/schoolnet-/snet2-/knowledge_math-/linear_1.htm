@@ -1,0 +1,67 @@
+<html>
+<head>
+<title>แบบจำลองรูปทั่วไปของปัญหาการโปรแกรมเชิงเส้น</title>
+</head>
+<body  bgcolor = white>
+<center><font face="ms sans serif"><font color="#0000ff"><font ><b>แบบ<wbr>จำลอง<wbr>รูป<wbr>ทั่ว<wbr>ไป<wbr>ของ<wbr>ปัญหา<wbr>การ<wbr>โปรแกรม<wbr>เชิง<wbr>เส้น</b></font></font></font></center>
+
+<p>
+<font face="ms sans serif" color=brown><dd><b>การ</b></font><font face="ms sans serif" size=-1>สร้าง<wbr>แบบ<wbr>จำลอง<wbr>ของ<wbr>ปัญหา<wbr>การ<wbr>โปรแกรม<wbr>เชิง<wbr>เส้น<wbr>ที่<wbr>กล่าว<wbr>มา<wbr>แล้ว<wbr>เรา<wbr>จะ<wbr>ได้<wbr>แบบ<wbr>จำลอรูป<wbr>ทั่ว<wbr>ไป<wbr><wbr>ของ<wbr>ปัญหา<wbr>การ<wbr>ดำ<wbr>เนิน<wbr>การ<wbr>เชิง<wbr>เส้น<wbr>ของ<wbr>ปัญหา<wbr>ทั้ง<wbr>สอง<wbr>แบบ<wbr>ดัง<wbr>นี้
+<ul>
+<dd><li> 	<font color = "#ebadad" ><b><font size=>ปั</font>ญหา<wbr>การ<wbr>ดำ<wbr>เนิน<wbr>โครง<wbr>การ<wbr>เชิง<wbr>เส้น<wbr>ค่า<wbr>สูง<wbr>สุด</b></font>
+<p>
+<center><table border=0>
+<tr><td bgcolor="#f7dddd"><font face="ms sans serif" size=-1>&nbsp;&nbsp;  <b>ตัว<wbr>แปร</b> </td><td bgcolor="#fbf5f5"><font face="ms sans serif" size=-1>&nbsp;&nbsp;     :&nbsp;&nbsp;  x<sub>1</sub> + x<sub>2</sub>, x<sub>3</sub>,…<wbr>x<sub>n</sub>&nbsp;&nbsp;<img src="greater.gif">&nbsp;&nbsp; 0 </td><td><font face="ms sans serif" size=-1>&nbsp;&nbsp;              …<wbr><font color = brown>(1)</font>&nbsp;&nbsp;</td></tr>
+
+<tr><td rowspan=4 bgcolor="#f7dddd" valign=top><font face="ms sans serif" size=-1>&nbsp;&nbsp;  <b>เงื่อน<wbr>ไข<wbr>บังคับ</b> </td><td bgcolor="#fbf5f5"><font face="ms sans serif" size=-1>&nbsp;&nbsp;     :&nbsp;&nbsp;  a<sub>11</sub>x<sub>1</sub> +a<sub>12</sub>x<sub>2</sub> +…<wbr>+ a<sub>1n</sub>x<sub>n</sub>&nbsp;&nbsp;<img src="less.gif">&nbsp;&nbsp; b<sub>1</sub></td></tr>
+
+<tr><td bgcolor="#fbf5f5"><font face="ms sans serif" size=-1>&nbsp;&nbsp;     :&nbsp;&nbsp;  a<sub>21</sub>x<sub>1</sub> +a<sub>22</sub>x<sub>2</sub> +…<wbr>+ a<sub>2n</sub>x<sub>n</sub>&nbsp;&nbsp;<img src="less.gif">&nbsp;&nbsp; b<sub>2</sub></td><td><font face="ms sans serif" size=-1>&nbsp;&nbsp;              …<wbr><font color = brown>(2)</font>&nbsp;&nbsp;</td></tr>
+
+<tr><td bgcolor="#fbf5f5"><font face="ms sans serif" size=-1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     :&nbsp;&nbsp; <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    :&nbsp;&nbsp;</td></tr>
+
+<tr><td bgcolor="#fbf5f5"><font face="ms sans serif" size=-1>&nbsp;&nbsp;     :&nbsp;&nbsp;  a<sub>m1</sub>x<sub>1</sub> +a<sub>m2</sub>x<sub>2</sub> +…<wbr>+ a<sub>mn</sub>x<sub>n</sub>&nbsp;&nbsp;<img src="less.gif">&nbsp;&nbsp; b<sub>m</sub></td></tr>
+
+<tr><td bgcolor="#f7dddd"><font face="ms sans serif" size=-1>&nbsp;&nbsp;  <b>เป้า<wbr>หมาย</b> </td><td bgcolor="#fbf5f5"><font face="ms sans serif" size=-1>&nbsp;&nbsp;     :&nbsp;&nbsp;  p &nbsp;=&nbsp; p<sub>1</sub>x<sub>1</sub> +p<sub>2</sub>x<sub>2</sub>+…<wbr>+p<sub>n</sub>x<sub>n</sub>      &nbsp;&nbsp; =&nbsp;&nbsp;    max&nbsp;&nbsp;</td><td><font face="ms sans serif" size=-1>&nbsp;&nbsp;              …<wbr><font color = brown>(3)</font>&nbsp;&nbsp;</td></tr>
+</table></center>
+<p><dd>               ปัญหา<wbr>การ<wbr>โปรแกรม<wbr>เชิง<wbr>เส้น<wbr>ค่า<wbr>สูง<wbr>สุด สามารถ<wbr>จะ<wbr>เขียน<wbr>ใน<wbr>รูป<wbr>ย่อ<wbr>ได้<wbr>เป็น
+<p><center><table border=0>
+<tr><td bgcolor="#f7dddd"><font face="ms sans serif" size=-1>&nbsp;&nbsp;  <b>ตัว<wbr>แปร</b> </td><td bgcolor="#fbf5f5"><font face="ms sans serif" size=-1>&nbsp;&nbsp;     :&nbsp;&nbsp;  x<sub>j</sub>&nbsp;&nbsp;<img src="greater.gif">&nbsp;&nbsp; 0&nbsp;&nbsp;,&nbsp;&nbsp;j&nbsp;&nbsp;=&nbsp;&nbsp;1,&nbsp;2,&nbsp;...,&nbsp;n&nbsp;&nbsp; </td><td><font face="ms sans serif" size=-1>&nbsp;&nbsp;              …<wbr><font color = brown>(4)</font>&nbsp;&nbsp;</td></tr>
+
+<tr><td  bgcolor="#f7dddd" valign=top><font face="ms sans serif" size=-1>&nbsp;&nbsp;  <b>เงื่อน<wbr>ไข<wbr>บังคับ</b> </td><td bgcolor="#fbf5f5"><font face="ms sans serif" size=-1>&nbsp;&nbsp;     :&nbsp;&nbsp;  <img src="sum.gif" align="abscenter">a<sub>ij</sub>x<sub>j</sub>&nbsp;&nbsp;<img src="less.gif">&nbsp;&nbsp;b<sub>i</sub>&nbsp;&nbsp;i&nbsp;&nbsp;=&nbsp;&nbsp;1,&nbsp;2,&nbsp;...,&nbsp;m&nbsp;&nbsp;</td><td><font face="ms sans serif" size=-1>&nbsp;&nbsp;              …<wbr><font color = brown>(5)</font>&nbsp;&nbsp;</td></tr>
+
+<tr><td bgcolor="#f7dddd"><font face="ms sans serif" size=-1>&nbsp;&nbsp;  <b>เป้า<wbr>หมาย</b> </td><td bgcolor="#fbf5f5"><font face="ms sans serif" size=-1>&nbsp;&nbsp;     :&nbsp;&nbsp;  p &nbsp;=&nbsp; <img src="sum.gif" align="abscenter">&nbsp;&nbsp;p<sub>j</sub>x<sub>j</sub>     &nbsp;&nbsp; =&nbsp;&nbsp;    max</td><td><font face="ms sans serif" size=-1>&nbsp;&nbsp;              …<wbr><font color = brown>(6)</font>&nbsp;&nbsp;</td></tr>
+</table></center>
+<p>
+<dd><li> 	<font color = "#ebadad" ><b><font size=>ปั</font>ญหา<wbr>การ<wbr>โปรแกรม<wbr>เชิง<wbr>เส้น<wbr>ค่า<wbr>ต่ำ<wbr>สุด</b></font>
+<p><center><table border=0>
+<tr><td bgcolor="#f7dddd"><font face="ms sans serif" size=-1>&nbsp;&nbsp;  <b>ตัว<wbr>แปร</b> </td><td bgcolor="#fbf5f5"><font face="ms sans serif" size=-1>&nbsp;&nbsp;     :&nbsp;&nbsp;  x<sub>j</sub>&nbsp;&nbsp;<img src="greater.gif">&nbsp;&nbsp; 0&nbsp;&nbsp;,&nbsp;&nbsp;j&nbsp;&nbsp;=&nbsp;&nbsp;1,&nbsp;2,&nbsp;...,&nbsp;n&nbsp;&nbsp; </td><td><font face="ms sans serif" size=-1>&nbsp;&nbsp;              …<wbr><font color = brown>(7)</font>&nbsp;&nbsp;</td></tr>
+<tr><td rowspan=4 bgcolor="#f7dddd" valign=top><font face="ms sans serif" size=-1>&nbsp;&nbsp;  <b>เงื่อน<wbr>ไข<wbr>บังคับ</b> </td><td bgcolor="#fbf5f5"><font face="ms sans serif" size=-1>&nbsp;&nbsp;     :&nbsp;&nbsp;  a<sub>11</sub>x<sub>1</sub> +a<sub>12</sub>x<sub>2</sub> +…<wbr>+ a<sub>1n</sub>x<sub>n</sub>&nbsp;&nbsp;<img src="greater.gif">&nbsp;&nbsp; b<sub>1</sub></td></tr>
+
+<tr><td bgcolor="#fbf5f5"><font face="ms sans serif" size=-1>&nbsp;&nbsp;     :&nbsp;&nbsp;  a<sub>21</sub>x<sub>1</sub> +a<sub>22</sub>x<sub>2</sub> +…<wbr>+ a<sub>2n</sub>x<sub>n</sub>&nbsp;&nbsp;<img src="greater.gif">&nbsp;&nbsp; b<sub>2</sub></td><td><font face="ms sans serif" size=-1>&nbsp;&nbsp;              …<wbr><font color = brown>(8)</font>&nbsp;&nbsp;</td></tr>
+
+<tr><td bgcolor="#fbf5f5"><font face="ms sans serif" size=-1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     :&nbsp;&nbsp; <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    :&nbsp;&nbsp;</td></tr>
+
+<tr><td bgcolor="#fbf5f5"><font face="ms sans serif" size=-1>&nbsp;&nbsp;     :&nbsp;&nbsp;  a<sub>m1</sub>x<sub>1</sub> +a<sub>m2</sub>x<sub>2</sub> +…<wbr>+ a<sub>mn</sub>x<sub>n</sub>&nbsp;&nbsp;<img src="greater.gif">&nbsp;&nbsp; b<sub>m</sub></td></tr>
+
+<tr><td bgcolor="#f7dddd"><font face="ms sans serif" size=-1>&nbsp;&nbsp;  <b>เป้า<wbr>หมาย</b> </td><td bgcolor="#fbf5f5"><font face="ms sans serif" size=-1>&nbsp;&nbsp;     :&nbsp;&nbsp;  p &nbsp;=&nbsp; c<sub>1</sub>x<sub>1</sub> +c<sub>2</sub>x<sub>2</sub>+…<wbr>+c<sub>n</sub>x<sub>n</sub>      &nbsp;&nbsp; =&nbsp;&nbsp;    min&nbsp;&nbsp;</td><td><font face="ms sans serif" size=-1>&nbsp;&nbsp;              …<wbr><font color = brown>(9)</font>&nbsp;&nbsp;</td></tr>
+</table></center>
+<p><dd>     ทำนอง<wbr>เดียวกับปัญหา<wbr>การ<wbr>ดำ<wbr>เนิน<wbr>การ<wbr>เชิง<wbr>เส้น<wbr>ค่า<wbr>ต่ำ<wbr>สุด สามารถ<wbr>จะ<wbr>เขียน<wbr>ใน<wbr>รูป<wbr>ย่อ<wbr>ได้<wbr>เป็น
+<p><center><table border=0>
+<tr><td bgcolor="#f7dddd"><font face="ms sans serif" size=-1>&nbsp;&nbsp;  <b>ตัว<wbr>แปร</b> </td><td bgcolor="#fbf5f5"><font face="ms sans serif" size=-1>&nbsp;&nbsp;     :&nbsp;&nbsp;  x<sub>j</sub>&nbsp;&nbsp;<img src="greater.gif">&nbsp;&nbsp; 0&nbsp;&nbsp;,&nbsp;&nbsp;j&nbsp;&nbsp;=&nbsp;&nbsp;1,&nbsp;2,&nbsp;...,&nbsp;n&nbsp;&nbsp; </td><td><font face="ms sans serif" size=-1>&nbsp;&nbsp;              …<wbr><font color = brown>(10)</font>&nbsp;&nbsp;</td></tr>
+
+<tr><td  bgcolor="#f7dddd" valign=top><font face="ms sans serif" size=-1>&nbsp;&nbsp;  <b>เงื่อน<wbr>ไข<wbr>บังคับ</b> </td><td bgcolor="#fbf5f5"><font face="ms sans serif" size=-1>&nbsp;&nbsp;     :&nbsp;&nbsp;  <img src="sum.gif" align="abscenter">a<sub>ij</sub>x<sub>j</sub>&nbsp;&nbsp;<img src="greater.gif">&nbsp;&nbsp;b<sub>i</sub>&nbsp;&nbsp;i&nbsp;&nbsp;=&nbsp;&nbsp;1,&nbsp;2,&nbsp;...,&nbsp;m&nbsp;&nbsp;</td><td><font face="ms sans serif" size=-1>&nbsp;&nbsp;              …<wbr><font color = brown>(11)</font>&nbsp;&nbsp;</td></tr>
+
+<tr><td bgcolor="#f7dddd"><font face="ms sans serif" size=-1>&nbsp;&nbsp;  <b>เป้า<wbr>หมาย</b> </td><td bgcolor="#fbf5f5"><font face="ms sans serif" size=-1>&nbsp;&nbsp;     :&nbsp;&nbsp;  c &nbsp;=&nbsp; <img src="sum.gif" align="abscenter">&nbsp;&nbsp;c<sub>j</sub>x<sub>j</sub>     &nbsp;&nbsp; =&nbsp;&nbsp;    min</td><td><font face="ms sans serif" size=-1>&nbsp;&nbsp;              …<wbr><font color = brown>(12)</font>&nbsp;&nbsp;</td></tr>
+</table></center>
+</ul>
+<p>
+<dd>
+<!center><table border=1 cellspacing = 5 cellpadding = 5 align=right>
+<tr bgcolor="#f7dddd" align=center><td><font face="ms sans serif" size=-1><b> <a href="linear_2.htm">การ<wbr>หา<wbr>คำ<wbr>ตอบ<wbr>ของ<wbr>ปัญหา<wbr>การ<wbr>โปรแกรม<wbr>เชิง<wbr>เส้น</a></b></td></tr></table>
+<!/center>
+<p>                                                                                 
+<hr>
+ที่มา : เอกสารคณิตศาสตร์ กข. brand's summer camp ปี 1998                                                                                
+
+</body>
+</html>

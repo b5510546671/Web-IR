@@ -1,0 +1,148 @@
+<html>
+
+<head>
+
+<title>nontrinet troubleshooting</title>
+
+</head>
+
+<style type="text/css">
+
+a {color: #0000ff; text-decoration: none}
+
+a:hover {color: #ff0001}
+
+</style>
+
+<body bgcolor="#dae4dd" text="black">
+
+<font face="ms sans serif" size="-1"> 
+
+<center>
+
+  <img src="images/telnet_top.jpg" border=0 width="466" height="47"> 
+
+</center>
+
+<!------contents check3---------> <br>
+
+<spacer type=horizontal size=70>ใช้ในการติดต่อ (login) เข้าสู่อุปกรณ์เครือข่ายหรือเครื่องคอมพิวเตอร์ที่มีระบบปฎิบัติการเป็น 
+
+unix หรือ linux เป็นต้น โดยใช้โปรโตคอลเทลเน็ตในการติดต่อ ซึ่งการใช้คำสั่ง telnet 
+
+ผู้ใช้ (user) ไม่จำเป็นต้องนั่งตรงหน้าเครื่องคอมพิวเตอร์ (console) ถึงจะสามารถติดต่อเครื่องคอมพิวเตอร์นั้นได้ 
+
+ผู้ใช้สามารถติดต่อ (login) จากที่ไหนก็ได้โดยที่ผู้ใช้จะต้องมีบัญชีผู้ใช้อยู่บนเครื่องนั้นก่อน<br>
+
+<spacer type=horizontal size=70>รูปแบบการเรียกใช้คำสั่งมีดังต่อไปนี้ <br>
+
+<br>
+
+<spacer type=horizontal size=70><font color="blue"><b>telnet [ ชื่อเครื่อง(domain 
+
+name)หรือหมายเลข ip-address]</b></font><br>
+
+<br>
+
+<spacer type=horizontal size=70>โดยที่ผู้ใช้สามารถเรียกใช้ผ่านทาง ms-dos prompt 
+
+ของ window หรือไปที่ start > run แล้วพิมพ์คำสั่ง <font color="blue"><i>telnet 
+
+ชื่อเครื่องหรือหมายเลข ip address</i></font> แล้วกดปุ่ม ok<br>
+
+<spacer type=horizontal size=70>หลังจากที่กดปุ่ม ok จะมีหน้าต่างถามชื่อบัญชีผู้ใช้(account 
+
+name) และรหัสผ่าน(password) ผู้ใช้ต้องใส่ชื่อบัญชีผู้ใช้และรหัสผ่านของเครื่องที่ทำการติดต่อนั้น 
+
+ขณะที่ผู้ใช้พิมพ์รหัสผ่าน บนหน้าต่างจะไม่ปรากฏตัวอักษรใดๆ ขึ้นมาทั้งนี้เพื่อความปลอดภัยและป้องกันไม่ให้คนอื่นเห็นรหัสผ่าน 
+
+ซึ่งเมื่อระบบทำการตรวจสอบชื่อบัญชีผู้ใช้และรหัสผ่านว่าถูกต้อง จะแสดงเครื่องหมายเตรียมพร้อม 
+
+(prompt) ขึ้นมา ในกรณีที่ผู้ใช้ใส่บัญชีผู้ใช้หรือรหัสผ่านไม่ถูกต้อง บนหน้าต่างจะขึ้นคำว่า 
+
+login incorrect และจะให้ผู้ใช้ทำการ log in ใหม่อีกครั้งหนึ่ง<br>
+
+<spacer type=horizontal size=70>ยกตัวอย่างเช่น การติดต่อ (log in) กับเครื่องเชิร์ฟเวอร์นนทรีเพื่อทำการรับ-ส่งจดหมายอิเล็กทรอนิกส์ 
+
+(e-mail) 
+
+<p>
+
+<center><table border="0" cellspacing="0" cellpadding="0">
+
+  <tr>
+
+    <td align=center valign=top><img src="images/telnet_pic1.jpg"  valign=center><br>
+
+     <font face="ms sans serif" size="-1"> <b>รูปที่ 1</b> หน้าต่างการใช้คำสั่ง telnet ตามด้วยชื่อเครื่องคอมพิวเตอร์</font>
+
+     </td>
+
+    <td align=center valign=top><img src="images/telnet_pic2.jpg"  valign=center><br>
+
+      <font face="ms sans serif" size="-1"> <b>รูปที่ 2</b> หน้าต่างการใช้คำสั่ง telnet   ตามด้วยหมายเลข ip address</font>
+
+    </td>
+
+  </tr>
+
+  <tr>
+
+    <td align=center colspan=2 valign=top><br><img src="images/telnet_pic3.jpg"  valign=center><br>
+
+      <font face="ms sans serif" size="-1"> <b>รูปที่ 3</b> หน้าต่างการใช้คำสั่ง  telnet  หลังจากที่ติดต่อกับเครื่องเชิร์ฟเวอร์นนทรีได้
+
+</font></td>
+
+  </tr>
+
+  <tr>
+
+      <td align=center  valign=top colspan=2><br><img src="images/telnet_pic4.jpg"  valign=center><br>
+
+      <font face="ms sans serif" size="-1"> <b>รูปที่ 4</b> หน้าต่างการใช้คำสั่ง  telnet  หลังจากที่ติดต่อกับเครื่องเชิร์ฟเวอร์นนทรีไม่ได้
+
+    </font></td>
+
+  </tr>
+
+</table></center>
+
+
+
+<p> 
+
+  <hr>
+
+  <center>
+
+    <font size="-1"><b>last updated:</b> 18 january 2000 <br>
+
+    <b>written by: </b> ฝ่ายเครือข่ายและสื่อสาร สำนักบริการคอมพิวเตอร์ มหาวิทยาลัยเกษตรศาสตร์ 
+
+    </font> 
+
+  </center>
+
+ 
+
+</font> 
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,161 @@
+<!doctype html public "html.dtd">
+<html>
+<head>
+<title>internet proxy-services</title>
+</head>
+
+<body bgcolor=white>
+<table width=100% bgcolor=ffcc99>
+    <tr><!-- row 1 -->
+      <td align = center><b>ความ<wbr>รู้<wbr>เกี่ยวกับ internet proxy-services</b></td>
+    </tr>
+</table>
+
+<br>
+<center><table>
+    <tr><!-- row 1 -->
+      <td align = center><img src="banner.gif" width="344" height="258" alt="internet proxy-service" border=0></td>
+      <td>
+<ul type="disk">
+    <li><a href="#sect1">ความ<wbr>เป็น<wbr>มา<wbr><wbr></a>
+    <li><a href="#sect2">ปัญหา<wbr>ที่<wbr>พบ<wbr><wbr></a>
+    <li><a href="#sect3">แนว<wbr>ทางแก้<wbr>ปัญหา<wbr><wbr></a>
+    <li><a href="#sect4">proxy server services</a>
+    <li><a href="#sect5">ข้อ<wbr>เสีย<wbr><wbr></a>
+    <li><a href="#sect6">ตัว<wbr>อย่าง<wbr>การ<wbr>ทำ<wbr>งาน<wbr><wbr></a>
+</ul>
+</td>
+    </tr>
+</table></center>
+<br>
+
+
+<a name="sect1">
+<dl>
+<table bgcolor = "ffcc90" width = 100%>
+  <tr><!-- row 1 -->
+     <td align = center><b>ความ<wbr>เป็น<wbr>มา<wbr><wbr></b></td>
+  </tr>
+</table>
+<dd>ปัจจุบัน<wbr>เครือ<wbr>ข่าย<wbr>คอมพิวเตอร์<wbr>ที่<wbr>สื่อ<wbr>สาร<wbr>ด้วย<wbr>โปรโต<wbr>คอล tcp/ip ได้<wbr>มี<wbr>การ<wbr>นำ<wbr>ไป<wbr>ใช้<wbr>อย่าง<wbr>กว้าง<wbr>ขวาง
+และ<wbr>มี<wbr>การ<wbr>เชื่อ<wbr>ต่อ<wbr>กัน<wbr>เป็น<wbr>จำนวน<wbr>มาก จน<wbr>กลาย<wbr>เป็น<wbr>เครือ<wbr>ข่าย<wbr>ความพิวเตอร์ที่<wbr>ใหญ่<wbr>ที่<wbr>สุด<wbr>เครือ<wbr>ข่าย<wbr>หนึ่ง
+จน<wbr>ได้<wbr>รับ<wbr>การ<wbr>ขนาน<wbr>นาม<wbr>ว่า <u>อภิมหา<wbr>เครือ<wbr>ข่าย<wbr><wbr></u> (internet)  จาก<wbr>จุด<wbr>เริ่ม<wbr>ต้น<wbr>ของ<wbr>การ<wbr>ใช้อินเตอร์เน็<wbr>ต
+มี<wbr>คอมพิวเตอร์<wbr>ที่<wbr>เชื่อม<wbr>ต่อกับเครือ<wbr>ข่าย<wbr>เพียง 4 เครื่อง จน<wbr>ถึง<wbr>ปัจจุบัน<wbr>เวลา<wbr>ผ่าน<wbr>ไป<wbr>ประมาณ 30 ปี
+มี<wbr>คอมพิวเตอร์<wbr>เชื่อม<wbr>ต่อกับเครือ<wbr>ข่าย<wbr>เพิ่ม<wbr>มาก<wbr>ขึ้น<wbr>ถึง 16 ล้านเครื่อง และ<wbr>มี<wbr>ผู้<wbr>ใช้<wbr>มาก<wbr>กว่า 1,000 ล้าน<wbr>คน
+และ<wbr>ยัง<wbr>มี<wbr>แนวโน้มที่<wbr>มาก<wbr>ขึ้น<wbr>เป็น<wbr>ทวี<wbr>คูณ
+<dd><br>
+<dd>เมื่อ<wbr>ปริมาณ<wbr>ของเครื่องคอมพิวเตอร์<wbr>ที่<wbr>เชื่อม<wbr>ต่อกับเครือ<wbr>ข่าย<wbr>และ<wbr>จำนวน<wbr>ผู้<wbr>ใช้อินเตอร์เ<wbr>น็ตเพิ่ม<wbr>มาก<wbr>ขึ้น ทำ<wbr>ให้<wbr>ปริมาณ
+ข้อ<wbr>มูล<wbr>ที่<wbr>ผ่าน<wbr>เข้า<wbr>ออก<wbr>ใน<wbr>เครือ<wbr>ข่าย<wbr>มี<wbr>จำนวน<wbr>สูง<wbr>ขึ้น<wbr>เรื่อย ๆ ทำ<wbr>ให้<wbr>เกิด<wbr>ปัญหา<wbr>การ<wbr>คับ<wbr>คั่ง<wbr>ของ<wbr>ข้อ<wbr>มูล<wbr>ปริมาณ<wbr>มาก
+<p>
+</dl>
+</a>
+
+<a name="sect2">
+<table bgcolor = "ffcc90" width = 100%>
+  <tr><!-- row 1 -->
+     <td align = center><b>ปัญหา<wbr>ที่<wbr>พบ<wbr><wbr></td>
+  </tr>
+</table>
+<dl>
+<dt>
+<dd>เมื่อ<wbr>จำนวน<wbr>ของ<wbr>ข้อ<wbr>มูล<wbr>มี<wbr>ปริมาณ<wbr>เพิ่ม<wbr>ขึ้น<wbr>อย่าง<wbr>ทวี<wbr>คูณ ทำ<wbr>ให้<wbr>เครือ<wbr>ข่าย<wbr>ที่<wbr>มี<wbr>อยู่เดิมนั้น ต้อง<wbr>รับ<wbr>ภาระ<wbr>ใน<wbr>การ
+บริการ<wbr>ข้อ<wbr>มูล<wbr>จำนวน<wbr>มาก บาง<wbr>เครือ<wbr>ข่าย<wbr>ไม่<wbr>สามารถ<wbr>ให้<wbr>บริการ<wbr>ใด ๆ ได้<wbr>เลย หรือ<wbr>บาง<wbr>เครือ<wbr>ข่าย<wbr>ไม่<wbr>สามารถ<wbr>บริการ<wbr>ได้
+เท่ากับความ<wbr>ต้อง<wbr>การ<wbr>ของ<wbr>ผู้<wbr>ใช้<wbr>เช่น เกิด<wbr>ความ<wbr>ล่าช้อของ<wbr>ข้อ<wbr>มูล หรือ มี<wbr>การ<wbr>สูญ<wbr>หาย<wbr>เกิด<wbr>ขึ้น<wbr>บ่อย<wbr>ครั้ง<wbr>จน<wbr>ไม่<wbr>สามารถ<wbr>ที่<wbr>จะ<wbr>ยอม<wbr>รับ<wbr>ได้
+<dd>ถึง<wbr>แม้<wbr>ใน<wbr>ปัจจุบัน<wbr>เทคโนโลยี ของ<wbr>สาย<wbr>นำ<wbr>สัญญาณ<wbr>จะ<wbr>พัฒนา<wbr>ขึ้น<wbr>จากเดิมมาก กล่าว<wbr>คือ<wbr>สามารถ<wbr>ที่<wbr>จะ<wbr>ส่ง<wbr>ข้อ<wbr>มูล<wbr>ได้
+ด้วย<wbr>ความ<wbr>เร็ว<wbr>ที่<wbr>สูง<wbr>ขึ้น<wbr>กว่าเดิมมาก<wbr>แล้ว<wbr>ก็<wbr>ตาม แต่<wbr>ก็<wbr>ยัง<wbr>ไม่<wbr>เพียง<wbr>พอ<wbr>ต่อ<wbr>ความ<wbr>ต้อง<wbr>การ<wbr>ใช้<wbr>อยู่<wbr>ดี
+<p>
+</dl>
+</a>
+
+
+<a name="sect3"><dl>
+<table bgcolor = "ffcc90" width = 100%>
+  <tr><!-- row 1 -->
+     <td align = center><b>แนว<wbr>ทางแก้<wbr>ปัญหา<wbr><wbr></b></td>
+  </tr>
+</table>
+<dt>
+<dd>มี<wbr>กลุ่ม<wbr>คน<wbr>หลาย<wbr>กลุ่ม<wbr>ที่<wbr>พยายาม<wbr>ที่<wbr>จะ<wbr>แก้<wbr>ปัญหา<wbr>ที่<wbr>เกิด<wbr>ขึ้น<wbr>นี้ ทั้ง<wbr>ที่<wbr>เน้น<wbr>การ<wbr>แก้<wbr>ปัญหา<wbr>ความ<wbr>คับ<wbr>คั่ง<wbr>ของ<wbr>ปริมาณ<wbr>ข้อ<wbr>มูล 
+ <ol>
+ <dd><li>แนว<wbr>ความ<wbr>ความ<wbr>คิด<wbr>หนึ่ง<wbr>ที่<wbr>น่า<wbr>สน<wbr>ใจ<wbr>คือ การ<wbr>นำ<wbr>ข้อ<wbr>มูล<wbr>ที่<wbr>ต้อง<wbr>ใช้<wbr>บ่อย ๆ มา<wbr>เก็บ<wbr>ไว้<wbr>ให้<wbr>ใกล้<wbr>เรา<wbr>ที่<wbr>สุด นั้น<wbr>คือ<wbr>การ<wbr>นำ<wbr>ข้อ<wbr>มูล
+ที่<wbr>มี<wbr>ใน<wbr>ที่<wbr>ต่าง ๆ ที่<wbr>สมาชิก<wbr>ใน local network ต้อง<wbr>การ<wbr>ใช้<wbr>บ่อย<wbr>ครั้ง<wbr>มา<wbr>เก็บ<wbr>ไว้<wbr>ใน local network เช่น การ<wbr>ทำ ftp server ภาย<wbr>ใน<wbr>หน่วย<wbr>งาน 
+ซึ่ง<wbr>จะ<wbr>ทำ<wbr>การ mirrors ข้อ<wbr>มูล<wbr>จาก ftp site ต่าง ๆ ที่<wbr>มี<wbr>ข้อ<wbr>มูล<wbr>น่า<wbr>ใช้<wbr>มา<wbr>เก็บ<wbr>ไว้ เพื่อ<wbr>ลด<wbr>ปริมาณ<wbr>การ<wbr>ติด<wbr>ต่อกับภาย<wbr>นอก<wbr>เครือ<wbr>ข่าย ซึ่ง<wbr>จะ<wbr>ทำ<wbr>ให้
+การ<wbr>ติด<wbr>ต่อกับเครือ<wbr>ข่าย<wbr>ภาย<wbr>นอก<wbr>มี<wbr>ความ<wbr>คล่อง<wbr>ตัว<wbr>สูง<wbr>ขึ้น
+ <dd><li>อีก<wbr>แนว<wbr>ความ<wbr>คิด<wbr>หนึ่ง<wbr>ที่<wbr>มี<wbr>ผู้<wbr>นำ<wbr>มา<wbr>ประยุกต์<wbr>จน<wbr>สามารถ<wbr>ใช้<wbr>งาน<wbr>ได้<wbr>จริง<wbr>คือ การ<wbr>คัด<wbr>เลือก<wbr>การ<wbr>ติด<wbr>ต่อ<wbr>ที่<wbr>ไม่<wbr>ต้อง<wbr>การ<wbr>การ<wbr>โต้<wbr
+>ตอบ
+แบบ<wbr>ทัน<wbr>ที<wbr>ทัน<wbr>ใด เช่น ftp, http มา<wbr>พัฒนา<wbr>จน<wbr>ได้ server ที่<wbr>มี<wbr>ลักษณะ<wbr>การ<wbr>ทำ<wbr>งาน<wbr>เช่น<wbr>เดียวกับข้อ 1 ซึ่ง<wbr>การ<wbr>ทำ<wbr>งาน<wbr>ของ server ลักษณะ<wbr>นี้<wbr>คือ
+เมื่อ client  ต้อง<wbr>การ<wbr>ข้อ<wbr>มูล<wbr>ใด<wbr>ที่<wbr>เป็น<wbr>ลักษณะ<wbr>ของ http หรือ ftp จะ<wbr>ติด<wbr>ต่อ<wbr>ผ่าน proxy server หาก<wbr>ข้อ<wbr>มูล<wbr>นั้น<wbr>ปรากฎ<wbr>อยู่<wbr>บน proxy ก็<wbr>จะ<wbr>นำ<wbr>ข้อ<wbr>มูล<wbr>นั้น<wbr>มา<wbr>
+ใช้
+แต่<wbr>ถ้า<wbr>ไม่<wbr>พบ proxy ก็<wbr>จะ<wbr>ติด<wbr>ต่อ<wbr>ไป<wbr>ยัง<wbr>ปลาย<wbr>ทาง<wbr>(แหล่ง<wbr>ที่ client ต้อง<wbr>การ<wbr>ข้อ<wbr>มูล) และ<wbr>สำเนา<wbr>ข้อ<wbr>มูล<wbr>นั้น<wbr>มา<wbr>เก็บ<wbr>ที่ server
+ <center>
+ <img src="proxy-1.gif"> <br>
+ภาพ<wbr>แสดง<wbr>การ<wbr>ทำ<wbr>งาน<wbr>ของ proxy server <br>
+ </center>
+ </ol>
+<p>
+</dl>
+</a>
+
+
+<a name="sect4">
+<table bgcolor = "ffcc90" width = 100%>
+  <tr><!-- row 1 -->
+     <td align = center><b>proxy server service</b></td>
+  </tr>
+</table>
+<dl>
+<dt>
+ <dd>การ<wbr>เชื่อม<wbr>ต่อ proxy server กัน<wbr>จน<wbr>เป็น<wbr>เครือ<wbr>ข่าย<wbr>ก็<wbr>เป็น<wbr>ระบบ<wbr>ที่<wbr>ช่วย<wbr>ให้<wbr>ปริมาณ<wbr>ข้อ<wbr>มูล<wbr>ที่<wbr>ต้อง<wbr>วิ่ง<wbr>เข้า<wbr><wbr>-ออก ลด<wbr>ลง<wbr>ได้<wbr>มาก
+ดัง<wbr>ตัว<wbr>อย่าง<wbr>ที่<wbr>ยก<wbr>มา เป็น<wbr>การ<wbr>จำลอง<wbr>ว่า ถ้า<wbr>ผู้<wbr>ใช้ web อยู่<wbr>ที่<wbr>มหาวิทยาลัย<wbr>เกษตร<wbr>ศาสตร์ ต้อง<wbr>การ link ไป<wbr>ที่<wbr>บริษัท<wbr>ใน<wbr>ประเทศ
+หาก เคย<wbr>มี<wbr>ผู้ link ไป<wbr>ยัง site นี้<wbr>แล้ว ก็<wbr>จะ<wbr>ไม่<wbr>มี<wbr>การ download ข้อ<wbr>มูล<wbr>ที่<wbr>มี<wbr>อยู่<wbr>แล้ว<wbr>ใน proxy มา<wbr>อีก ซึ่ง<wbr>จะ<wbr>ทำ<wbr>ให้<wbr>ลด<wbr>ปริมาณ
+ของ data-stream ลง<wbr>ไป<wbr>ใน<wbr>ระดับ<wbr>หนึ่ง   หรือ<wbr>หาก<wbr>ไม่<wbr>มี<wbr>ข้อ<wbr>มูล<wbr>ใน proxy.ku.ac.th ก็<wbr>จะ<wbr>ไป<wbr>ตรวจ<wbr>ใน proxy.ac.th ไป<wbr>เป็น<wbr>ทอด ๆ
+หาก<wbr>ไม่<wbr>มี<wbr>ข้อ<wbr>มูล<wbr>อยู่<wbr>ใน proxy server ใด ๆ เลย ก็<wbr>จะ<wbr>ไป<wbr>อ่าน<wbr>ข้อ<wbr>มูล<wbr>จาก web-site นั้น
+ <center>
+ <img src="proxy-map.gif"> <br>
+ภาพ<wbr>แสดง<wbr>การ<wbr>เชื่อม<wbr>ต่อ<wbr>กัน<wbr>ระหว่าง proxy server จน<wbr>เป็น<wbr>ระบบ<wbr>ขนาด<wbr>ใหญ่
+ </center>
+<dd>
+
+<p>
+</dl>
+</a>
+
+<a name="sect5"><dl>
+<table bgcolor = "ffcc90" width = 100%>
+  <tr><!-- row 1 -->
+     <td align = center><b>ข้อ<wbr>เสีย<wbr><wbr></b></td>
+  </tr>
+</table>
+
+<dt>
+ <dd>ข้อ<wbr>เสีย<wbr>ของ<wbr>ระบบ<wbr>นี้<wbr>คือ บาง<wbr>ครั้ง<wbr>อาจ<wbr>ไม่<wbr>ได้<wbr>ข้อ<wbr>มูล<wbr>ที่<wbr>ใหม่<wbr>ที่<wbr>สุด เนื่อจาก proxy server บาง<wbr>ที่ มี<wbr>การ update ข้อ<wbr>มูล<wbr>เป็น<wbr>ประจำ แต่<wbr>บาง<wbr>ที่<wbr>ไม่<wbr>ค่
+อย<wbr>มี<wbr>การ update ข้อ<wbr>มูล<wbr>เท่า<wbr>ใด<wbr>นัก
+
+<p>
+</dl>
+</a>
+
+<a name="sect6"><dl>
+<table bgcolor = "ffcc90" width = 100%>
+  <tr><!-- row 1 -->
+     <td align = center><b>ตัว<wbr>อย่าง<wbr>การ<wbr>ทำ<wbr>งาน<wbr>ของ proxy</b></td>
+  </tr>
+</table>
+<dt>
+ <ol>
+  <li>client ร้อง<wbr>ขอ<wbr>ข้อ<wbr>มูล<wbr>จาก proxy server
+  <li>proxy server ตรวจ<wbr>สอบ<wbr>ข้อ<wbr>มูล<wbr>ที่<wbr>จะ download ว่า ข้อ<wbr>มูล<wbr>ใน disk กับข้อ<wbr>มูล<wbr>ที่ server ปลาย<wbr>ทาง อัน<wbr>ไหน ใหม่<wbr>ที่<wbr>สุด
+หาก<wbr>ข้อ<wbr>มูล<wbr>ที่<wbr>ปลาย<wbr>ทางใหม่<wbr>กว่า<wbr>ก็<wbr>จะ download มา<wbr>เก็บ<wbr>ไว้<wbr>ใน disk ก่อน จาก<wbr>นั้น<wbr>จึง<wbr>ส่ง<wbr>กลับ<wbr>ไป<wbr>ให้ client
+  <li>client นำ<wbr>ข้อ<wbr>มูล<wbr>ที่<wbr>ได้<wbr>ไป<wbr>แสดง<wbr>ผล หรือ นำ<wbr>ไป<wbr>ใช้<wbr>งาน
+ </ol>
+
+<p>
+</dl>
+</a>
+
+<hr noshade>
+<address>รวบรวมโดย : คุณาวุฒิ สืบเสน ภาควิชาวิศวกรรมคอมพิวเตอร์
+มหาวิทยาลัยเกษตรศาสตร์</address>
+
+</body>
+</html>

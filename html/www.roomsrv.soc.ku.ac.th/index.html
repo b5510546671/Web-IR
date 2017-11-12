@@ -1,0 +1,797 @@
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="shortcut icon" href="images/favicon.png?33">
+
+        
+        <!--
+        <link href='http://fonts.googleapis.com/css?family=open+sans:400,300,600,400italic,700,800' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=raleway:300,200,100' rel='stylesheet' type='text/css'>
+        -->
+
+        <!-- bootstrap core css -->
+        <link href="/js/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="/fonts/font-awesome-4/css/font-awesome.min.css">
+
+        <link rel="stylesheet" type="text/css" href="/js/jquery.nanoscroller/nanoscroller.css" />
+
+        <link rel="stylesheet" type="text/css" href="/js/bootstrap.switch/bootstrap-switch.min.css" />
+
+        <link rel="stylesheet" type="text/css" href="/js/bootstrap.slider/slider.css" />
+        <link rel="stylesheet" type="text/css" href="/js/jquery.icheck/skins/square/blue.css">
+        <link rel="stylesheet" type="text/css" href="/js/jquery.niftymodals/css/component.css" />
+
+        <!-- template css -->
+        <link href="/css/style.css" rel="stylesheet" />
+        <link href="/css/global.css" rel="stylesheet" />
+
+        <script src="/js/jquery-1.10.2.js"></script>
+        <link rel="stylesheet" type="text/css" href="/assets/63c0a695/pager.css" />
+<title>roomsys</title>
+    </head>
+
+    <body>
+
+        <!-- fixed navbar -->
+        <div id="head-nav" class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="fa fa-gear"></span>
+            </button>
+            <a class="navbar-brand" href="#"><span>roomsys</span> <span class='hidden-xs'>ระบบจองห้องประชุม/ห้องคอมพิวเตอร์  กดเมนูเข้าสู่ระบบก่อน>เมนูประจำวัน>จองใช้ห้อง>เพิ่มรายการจอง</span></a>
+        </div>
+        <div class="clearfix"></div>
+            </div>
+</div>
+
+        <div id="cl-wrapper">
+            <!-- sidebar -->
+
+            <div class="cl-sidebar">
+    <div class="cl-toggle"><i class="fa fa-bars"></i></div>
+    <div class="cl-navblock">
+        <div class="menu-space">
+            <div class="content">
+                <ul class="cl-vnavigation">
+                    <li class="active"><a tabindex="-1" href="/index.php?r=calendar"><i class="fa fa-calendar"></i><span>ปฏิทินการใช้ห้อง</span></a></li>
+                    <li ><a tabindex="-1" href="/index.php?r=query/room"><i class="fa fa-building-o"></i><span>รายละเอียดห้องประชุม</span></a></li>
+                    <li ><a tabindex="-1" href="/index.php?r=roomtable"><i class="fa fa-th-list"></i><span>ตารางการใช้ห้องประจำวัน</span></a></li>
+                    <li ><a tabindex="-1" href="/index.php?r=site/login"><i class="fa fa-user"></i><span><strong>เข้าสู่ระบบ</strong></span></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="text-right collapse-button" style="padding:7px 9px;">
+            <input type="text" class="form-control search" readonly="true" value='roomsys 1.0.3'>
+            <button id="sidebar-collapse" class="btn btn-default" style=""><i style="color:#fff;" class="fa fa-angle-left"></i></button>
+        </div>
+    </div>
+</div>
+            <div class="container-fluid" id="pcont">
+                <!--
+                <div class="page-head">
+                    <h2>blank page</h2>
+                    <ol class="breadcrumb">
+                        <li><a href="#">home</a></li>
+                        <li><a href="#">category</a></li>
+                        <li class="active">sub category</li>
+                    </ol>
+                </div>
+                -->
+                                    <div class="page-head">
+                        <ol class="breadcrumb">
+<li class="active">ปฏิทินการใช้ห้อง</li></ol><!-- breadcrumbs -->
+                    </div>
+                
+                <div class="cl-mcont">
+                    <input type='hidden' id='room_id'>
+<div class="row">
+    <div class="col-sm-12 col-md-12">
+        <div class="block-flat">
+            <header>
+                <span class="widget-icon"> <i class="fa fa-table"></i></span>
+                <h2>ปฏิทินการใช้ห้อง</h2>	
+                <div class="clearfix"></div>
+            </header>
+
+            <div class='content'>
+                <div class='row no-margin-bottom'>
+                    <div class='col-md-12'>
+                        <div class="form-group col-sm-8 col-md-8 padding-small">
+                            <div class="input-group">
+                                <input type='text' id='room_name' readonly="" class='form-control' style='font-size: 16px'>
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn btn-default" onclick="roommodal()"><i class="fa fa-building-o"></i>เฉพาะห้องที่ต้องการ</button>
+                                    <button type="button" class="btn btn-default" onclick="clearroom()">แสดงทุกห้อง</button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="divcalendar">
+                    <style type="text/css" media="all">
+    //table.okv_calendar {border:1px solid #aaa; border-collapse: collapse; font-family: tahoma, geneva, sans-serif; font-size: 13px; width: 100%;}
+    //.okv_calendar td {border:1px solid #aaa; border-collapse: collapse; clear: both;}
+    .okv_calendar .blank {background: #f9f9f9; cursor: default !important;}
+
+    .okv_calendar .calendar_y_m {border-spacing: 0px; padding: 0;}
+
+    .okv_calendar .calendar_y_m table.calendar_year_month {border: none; border-collapse: collapse; width: 100%;}
+    .okv_calendar .calendar_y_m table.calendar_year_month td {border: none; border-right: 1px solid #67a0ce;}
+    .okv_calendar .calendar_y_m table.calendar_year_month td:last-child {border: none;}
+    .okv_calendar .month_year {background: #428bca; color: #fff; font-weight: bold; font-size: 16px; padding: 5px; text-align: center;}
+
+    .okv_calendar .prev_month, 
+    .okv_calendar .next_month,
+    .okv_calendar .prev_year, 
+    .okv_calendar .next_year {
+        background: #428bca; color: #000; font-weight: bold; text-align: center; width:30px;
+    }
+
+    .okv_calendar .prev_month a, 
+    .okv_calendar .next_month a,
+    .okv_calendar .prev_year a, 
+    .okv_calendar .next_year a{
+        color: #fff; display: block; line-height: 30px; text-decoration: none;
+    }
+
+    .okv_calendar .prev_month a:hover, 
+    .okv_calendar .next_month a:hover,
+    .okv_calendar .prev_year a:hover, 
+    .okv_calendar .next_year a:hover{
+        color:#f2881f;
+    }
+
+    .okv_calendar .calendar_date {font-size: 15px; font-style: italic; height:60px; padding: 5px; vertical-align: top; width:14.2%;text-align: right}
+    .okv_calendar .calendar_date a {color: #143270; text-decoration: none;}
+    .okv_calendar .calendar_date .calendar_appointment {cursor: pointer; color:#555; display: inline-block; float: right; font-size: 13px; font-style: normal; vertical-align: top; width:80%;}
+    .okv_calendar .calendar_date .special_day {color:#555; display: inline-block; font-size: 12px; vertical-align: top; width:98%;}
+    .okv_calendar .calendar_week_day {background: #ddd; font-weight: bold; padding: 5px; text-align: center; width:14.2%;}
+    .okv_calendar .click_date {background: #ddf4ff;}
+    .okv_calendar .current_date {background: #fcf8e3;}
+    //.okv_calendar .have_appointment {background: #fff8f1;}
+
+    .okv_calendar .calendar_week_day {
+        border: 1px solid #ddd;
+        background: #eee;
+    }
+
+    .fc-event-inner{
+        cursor:pointer;
+        overflow: hidden;
+        width: 100%;
+        background-color: #2494f2;
+
+        border-top-left-radius:0.2em;
+        border-top-right-radius:0.2em;
+        border-bottom-right-radius:0.2em;
+        border-bottom-left-radius:0.2em; 
+    }
+    .fc-event-title {
+        padding: 0 1px;
+        font-size:11px;
+        color: #fff;
+        padding-right:5px;
+    }
+</style>
+
+<input type='hidden' id='start_date' value='2017-08-01'>
+<div class='table-responsive'>
+    <!--start calendar-->
+<table class="okv_calendar table">
+<tr><td class="calendar_y_m" colspan="7">
+
+<table class="calendar_year_month">
+<tr>
+<td class="prev_year"><a href="/index.php?r=calendar/ajaxcalendar&get_year=2016&get_month=08&get_date=01"><i class='fa fa-angle-double-left'></i></a></td>
+<td class="prev_month"><a href="/index.php?r=calendar/ajaxcalendar&get_year=2017&get_month=07&get_date=01"><i class='fa fa-angle-left'></i></td>
+<td class="month_year">สิงหาคม 2560</td>
+<td class="next_month"><a href="/index.php?r=calendar/ajaxcalendar&get_year=2017&get_month=09&get_date=01"><i class='fa fa-angle-right'></i></a></td>
+<td class="next_year"><a href="/index.php?r=calendar/ajaxcalendar&get_year=2018&get_month=08&get_date=01"><i class='fa fa-angle-double-right'></i></a></td>
+</tr>
+</table>
+
+</td></tr>
+<tr>
+<td class="calendar_week_day">อา.</td>
+<td class="calendar_week_day">จ.</td>
+<td class="calendar_week_day">อ.</td>
+<td class="calendar_week_day">พ.</td>
+<td class="calendar_week_day">พฤ.</td>
+<td class="calendar_week_day">ศ.</td>
+<td class="calendar_week_day">ส.</td>
+</tr>
+<tr>
+<td class="calendar_date blank">&nbsp;</td>
+<td class="calendar_date blank">&nbsp;</td>
+<td class="calendar_date ">1</td>
+<td class="calendar_date have_appointment ">2<a href='javascript:void(0)' onclick='showevent("2017-08-02")'><div class="fc-event-inner"><span class="fc-event-title">มีรายการจอง</span></div></a>&nbsp;</td>
+<td class="calendar_date ">3</td>
+<td class="calendar_date ">4</td>
+<td class="calendar_date ">5</td>
+</tr>
+<tr>
+<td class="calendar_date ">6</td>
+<td class="calendar_date have_appointment ">7<a href='javascript:void(0)' onclick='showevent("2017-08-07")'><div class="fc-event-inner"><span class="fc-event-title">มีรายการจอง</span></div></a>&nbsp;</td>
+<td class="calendar_date ">8</td>
+<td class="calendar_date have_appointment ">9<a href='javascript:void(0)' onclick='showevent("2017-08-09")'><div class="fc-event-inner"><span class="fc-event-title">มีรายการจอง</span></div></a>&nbsp;</td>
+<td class="calendar_date ">10</td>
+<td class="calendar_date ">11</td>
+<td class="calendar_date ">12<br /><span class="special_day">วันแม่<br /></span></td>
+</tr>
+<tr>
+<td class="calendar_date ">13</td>
+<td class="calendar_date have_appointment ">14<a href='javascript:void(0)' onclick='showevent("2017-08-14")'><div class="fc-event-inner"><span class="fc-event-title">มีรายการจอง</span></div></a>&nbsp;</td>
+<td class="calendar_date have_appointment ">15<a href='javascript:void(0)' onclick='showevent("2017-08-15")'><div class="fc-event-inner"><span class="fc-event-title">มีรายการจอง</span></div></a>&nbsp;</td>
+<td class="calendar_date have_appointment ">16<a href='javascript:void(0)' onclick='showevent("2017-08-16")'><div class="fc-event-inner"><span class="fc-event-title">มีรายการจอง</span></div></a>&nbsp;</td>
+<td class="calendar_date ">17</td>
+<td class="calendar_date ">18</td>
+<td class="calendar_date ">19</td>
+</tr>
+<tr>
+<td class="calendar_date have_appointment ">20<a href='javascript:void(0)' onclick='showevent("2017-08-20")'><div class="fc-event-inner"><span class="fc-event-title">มีรายการจอง</span></div></a>&nbsp;</td>
+<td class="calendar_date have_appointment ">21<a href='javascript:void(0)' onclick='showevent("2017-08-21")'><div class="fc-event-inner"><span class="fc-event-title">มีรายการจอง</span></div></a>&nbsp;</td>
+<td class="calendar_date ">22</td>
+<td class="calendar_date have_appointment ">23<a href='javascript:void(0)' onclick='showevent("2017-08-23")'><div class="fc-event-inner"><span class="fc-event-title">มีรายการจอง</span></div></a>&nbsp;</td>
+<td class="calendar_date ">24</td>
+<td class="calendar_date have_appointment ">25<a href='javascript:void(0)' onclick='showevent("2017-08-25")'><div class="fc-event-inner"><span class="fc-event-title">มีรายการจอง</span></div></a>&nbsp;</td>
+<td class="calendar_date have_appointment ">26<a href='javascript:void(0)' onclick='showevent("2017-08-26")'><div class="fc-event-inner"><span class="fc-event-title">มีรายการจอง</span></div></a>&nbsp;</td>
+</tr>
+<tr>
+<td class="calendar_date ">27</td>
+<td class="calendar_date current_date have_appointment ">28<a href='javascript:void(0)' onclick='showevent("2017-08-28")'><div class="fc-event-inner"><span class="fc-event-title">มีรายการจอง</span></div></a>&nbsp;</td>
+<td class="calendar_date ">29</td>
+<td class="calendar_date have_appointment ">30<a href='javascript:void(0)' onclick='showevent("2017-08-30")'><div class="fc-event-inner"><span class="fc-event-title">มีรายการจอง</span></div></a>&nbsp;</td>
+<td class="calendar_date have_appointment ">31<a href='javascript:void(0)' onclick='showevent("2017-08-31")'><div class="fc-event-inner"><span class="fc-event-title">มีรายการจอง</span></div></a>&nbsp;</td>
+<td class="calendar_date blank">&nbsp;</td>
+<td class="calendar_date blank">&nbsp;</td>
+</tr>
+</table>
+<!--end calendar-->
+</div>
+<br/>
+
+<script>
+    $(function () {
+        $(".prev_year,.prev_month,.next_month,.next_year").on("click", 'a', function (event) {
+            event.preventdefault();
+            var url = $(this).attr("href");
+            if (url != undefined) {
+                loadcalendar(url);
+            }
+            return true;
+        });
+    });
+</script>                </div>
+
+                <!-- แสดง grid รายการจองประจำเดือน -->
+                <div id="divgridview">
+                    <div class='table-responsive'>
+    <table class='table table-bordered th-bg hover' id="mytable">
+        <thead>
+            <tr>
+                <th>รายการจองใช้ห้องประจำเดือน</th>
+                <th width="100"></th>
+            </tr>
+        </thead>
+        <tbody>
+                            <tr>
+                    <td valign='top'>
+                        <div class="media">
+                            <div class="media-left">
+                                <img src='/fileupload/room/4_1.jpg?763' class="img-responsive" style="width: 100px;"/>
+                            </div>
+                            <div class="media-body">
+                                <div>
+                                    <div class='pull-left'>
+                                        <h4 class='media-heading' style="margin-top:0px">ห้องสัมมนาขนาดใหญ่ 2-404 (ห้องโสตทัศนูปกรณ์)</h4>
+                                    </div>
+                                    <div class='pull-right' style="font-size:11px">
+                                        <span class="label label-primary">อนุมัติ</span><i class='label label-default'>31/07/2560 เวลา 14:25:04</i>
+                                    </div>
+                                </div>
+                                <div class='clearfix'></div>
+
+                                <div>
+                                    <strong>วันที่ใช้ห้อง </strong> 02 ส.ค. 60 เวลา 09:00                                    <strong>&nbsp;&nbsp;ถึงวันที่&nbsp;&nbsp;</strong> 02 ส.ค. 60 เวลา 11:00                                </div>
+                                <div>
+                                    <strong>ผู้ขอใช้ </strong>นางสาวรุ่งนภา อดิศรมงคล<strong>&nbsp;&nbsp;&nbsp;สำหรับแผนก </strong>ภาควิชานิติศาสตร์                                </div>
+                                <div>
+                                    <strong>วาระการประชุม </strong>บรรยายวิชา 01453222                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="text-center nowrap">
+                        <a href="javascript:void(0);" onclick="return showeventmore('25')" class="label label-info"><i class="fa fa-list-alt"></i> รายละเอียด</a>                    </td>
+                </tr>
+                                <tr>
+                    <td valign='top'>
+                        <div class="media">
+                            <div class="media-left">
+                                <img src='/fileupload/room/4_1.jpg?271' class="img-responsive" style="width: 100px;"/>
+                            </div>
+                            <div class="media-body">
+                                <div>
+                                    <div class='pull-left'>
+                                        <h4 class='media-heading' style="margin-top:0px">ห้องสัมมนาขนาดใหญ่ 2-404 (ห้องโสตทัศนูปกรณ์)</h4>
+                                    </div>
+                                    <div class='pull-right' style="font-size:11px">
+                                        <span class="label label-primary">อนุมัติ</span><i class='label label-default'>31/07/2560 เวลา 14:24:43</i>
+                                    </div>
+                                </div>
+                                <div class='clearfix'></div>
+
+                                <div>
+                                    <strong>วันที่ใช้ห้อง </strong> 07 ส.ค. 60 เวลา 09:00                                    <strong>&nbsp;&nbsp;ถึงวันที่&nbsp;&nbsp;</strong> 07 ส.ค. 60 เวลา 11:00                                </div>
+                                <div>
+                                    <strong>ผู้ขอใช้ </strong>นางสาวรุ่งนภา อดิศรมงคล<strong>&nbsp;&nbsp;&nbsp;สำหรับแผนก </strong>ภาควิชานิติศาสตร์                                </div>
+                                <div>
+                                    <strong>วาระการประชุม </strong>บรรยายวิชา 01453222                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="text-center nowrap">
+                        <a href="javascript:void(0);" onclick="return showeventmore('26')" class="label label-info"><i class="fa fa-list-alt"></i> รายละเอียด</a>                    </td>
+                </tr>
+                                <tr>
+                    <td valign='top'>
+                        <div class="media">
+                            <div class="media-left">
+                                <img src='/fileupload/room/4_1.jpg?557' class="img-responsive" style="width: 100px;"/>
+                            </div>
+                            <div class="media-body">
+                                <div>
+                                    <div class='pull-left'>
+                                        <h4 class='media-heading' style="margin-top:0px">ห้องสัมมนาขนาดใหญ่ 2-404 (ห้องโสตทัศนูปกรณ์)</h4>
+                                    </div>
+                                    <div class='pull-right' style="font-size:11px">
+                                        <span class="label label-primary">อนุมัติ</span><i class='label label-default'>31/07/2560 เวลา 14:25:14</i>
+                                    </div>
+                                </div>
+                                <div class='clearfix'></div>
+
+                                <div>
+                                    <strong>วันที่ใช้ห้อง </strong> 09 ส.ค. 60 เวลา 09:00                                    <strong>&nbsp;&nbsp;ถึงวันที่&nbsp;&nbsp;</strong> 09 ส.ค. 60 เวลา 11:00                                </div>
+                                <div>
+                                    <strong>ผู้ขอใช้ </strong>นางสาวรุ่งนภา อดิศรมงคล<strong>&nbsp;&nbsp;&nbsp;สำหรับแผนก </strong>ภาควิชานิติศาสตร์                                </div>
+                                <div>
+                                    <strong>วาระการประชุม </strong>บรรยายวิชา 01453222                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="text-center nowrap">
+                        <a href="javascript:void(0);" onclick="return showeventmore('27')" class="label label-info"><i class="fa fa-list-alt"></i> รายละเอียด</a>                    </td>
+                </tr>
+                                <tr>
+                    <td valign='top'>
+                        <div class="media">
+                            <div class="media-left">
+                                <img src='/fileupload/room/4_1.jpg?557' class="img-responsive" style="width: 100px;"/>
+                            </div>
+                            <div class="media-body">
+                                <div>
+                                    <div class='pull-left'>
+                                        <h4 class='media-heading' style="margin-top:0px">ห้องสัมมนาขนาดใหญ่ 2-404 (ห้องโสตทัศนูปกรณ์)</h4>
+                                    </div>
+                                    <div class='pull-right' style="font-size:11px">
+                                        <span class="label label-primary">อนุมัติ</span><i class='label label-default'>31/07/2560 เวลา 14:24:54</i>
+                                    </div>
+                                </div>
+                                <div class='clearfix'></div>
+
+                                <div>
+                                    <strong>วันที่ใช้ห้อง </strong> 14 ส.ค. 60 เวลา 09:00                                    <strong>&nbsp;&nbsp;ถึงวันที่&nbsp;&nbsp;</strong> 14 ส.ค. 60 เวลา 11:00                                </div>
+                                <div>
+                                    <strong>ผู้ขอใช้ </strong>นางสาวรุ่งนภา อดิศรมงคล<strong>&nbsp;&nbsp;&nbsp;สำหรับแผนก </strong>ภาควิชานิติศาสตร์                                </div>
+                                <div>
+                                    <strong>วาระการประชุม </strong>บรรยายวิชา 01453222                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="text-center nowrap">
+                        <a href="javascript:void(0);" onclick="return showeventmore('28')" class="label label-info"><i class="fa fa-list-alt"></i> รายละเอียด</a>                    </td>
+                </tr>
+                                <tr>
+                    <td valign='top'>
+                        <div class="media">
+                            <div class="media-left">
+                                <img src='/fileupload/room/4_1.jpg?867' class="img-responsive" style="width: 100px;"/>
+                            </div>
+                            <div class="media-body">
+                                <div>
+                                    <div class='pull-left'>
+                                        <h4 class='media-heading' style="margin-top:0px">ห้องสัมมนาขนาดใหญ่ 2-404 (ห้องโสตทัศนูปกรณ์)</h4>
+                                    </div>
+                                    <div class='pull-right' style="font-size:11px">
+                                        <span class="label label-primary">อนุมัติ</span><i class='label label-default'>09/08/2560 เวลา 15:20:53</i>
+                                    </div>
+                                </div>
+                                <div class='clearfix'></div>
+
+                                <div>
+                                    <strong>วันที่ใช้ห้อง </strong> 15 ส.ค. 60 เวลา 14:00                                    <strong>&nbsp;&nbsp;ถึงวันที่&nbsp;&nbsp;</strong> 15 ส.ค. 60 เวลา 17:00                                </div>
+                                <div>
+                                    <strong>ผู้ขอใช้ </strong>นางสุภาพร หรุ่นสกุล<strong>&nbsp;&nbsp;&nbsp;สำหรับแผนก </strong>ภาควิชารัฐศาสตร์และรัฐประศาสนศาสตร์                                </div>
+                                <div>
+                                    <strong>วาระการประชุม </strong>สอนชดเชย                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="text-center nowrap">
+                        <a href="javascript:void(0);" onclick="return showeventmore('49')" class="label label-info"><i class="fa fa-list-alt"></i> รายละเอียด</a>                    </td>
+                </tr>
+                                <tr>
+                    <td valign='top'>
+                        <div class="media">
+                            <div class="media-left">
+                                <img src='/fileupload/room/4_1.jpg?75' class="img-responsive" style="width: 100px;"/>
+                            </div>
+                            <div class="media-body">
+                                <div>
+                                    <div class='pull-left'>
+                                        <h4 class='media-heading' style="margin-top:0px">ห้องสัมมนาขนาดใหญ่ 2-404 (ห้องโสตทัศนูปกรณ์)</h4>
+                                    </div>
+                                    <div class='pull-right' style="font-size:11px">
+                                        <span class="label label-primary">อนุมัติ</span><i class='label label-default'>31/07/2560 เวลา 14:25:28</i>
+                                    </div>
+                                </div>
+                                <div class='clearfix'></div>
+
+                                <div>
+                                    <strong>วันที่ใช้ห้อง </strong> 16 ส.ค. 60 เวลา 09:00                                    <strong>&nbsp;&nbsp;ถึงวันที่&nbsp;&nbsp;</strong> 16 ส.ค. 60 เวลา 11:00                                </div>
+                                <div>
+                                    <strong>ผู้ขอใช้ </strong>นางสาวรุ่งนภา อดิศรมงคล<strong>&nbsp;&nbsp;&nbsp;สำหรับแผนก </strong>ภาควิชานิติศาสตร์                                </div>
+                                <div>
+                                    <strong>วาระการประชุม </strong>บรรยายวิชา 01453222                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="text-center nowrap">
+                        <a href="javascript:void(0);" onclick="return showeventmore('29')" class="label label-info"><i class="fa fa-list-alt"></i> รายละเอียด</a>                    </td>
+                </tr>
+                                <tr>
+                    <td valign='top'>
+                        <div class="media">
+                            <div class="media-left">
+                                <img src='/fileupload/room/4_1.jpg?840' class="img-responsive" style="width: 100px;"/>
+                            </div>
+                            <div class="media-body">
+                                <div>
+                                    <div class='pull-left'>
+                                        <h4 class='media-heading' style="margin-top:0px">ห้องสัมมนาขนาดใหญ่ 2-404 (ห้องโสตทัศนูปกรณ์)</h4>
+                                    </div>
+                                    <div class='pull-right' style="font-size:11px">
+                                        <span class="label label-primary">อนุมัติ</span><i class='label label-default'>16/08/2560 เวลา 18:46:52</i>
+                                    </div>
+                                </div>
+                                <div class='clearfix'></div>
+
+                                <div>
+                                    <strong>วันที่ใช้ห้อง </strong> 20 ส.ค. 60 เวลา 08:00                                    <strong>&nbsp;&nbsp;ถึงวันที่&nbsp;&nbsp;</strong> 20 ส.ค. 60 เวลา 16:00                                </div>
+                                <div>
+                                    <strong>ผู้ขอใช้ </strong>นายเอกชัย กันอินทร์<strong>&nbsp;&nbsp;&nbsp;สำหรับแผนก </strong>ภาควิชาจิตวิทยา                                </div>
+                                <div>
+                                    <strong>วาระการประชุม </strong>จัดโครงการเตรียมความพร้อมนิสิตสาขาจิตวิทยาพัฒนาการ ปีการศึกษา 2560                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="text-center nowrap">
+                        <a href="javascript:void(0);" onclick="return showeventmore('53')" class="label label-info"><i class="fa fa-list-alt"></i> รายละเอียด</a>                    </td>
+                </tr>
+                                <tr>
+                    <td valign='top'>
+                        <div class="media">
+                            <div class="media-left">
+                                <img src='/fileupload/room/4_1.jpg?424' class="img-responsive" style="width: 100px;"/>
+                            </div>
+                            <div class="media-body">
+                                <div>
+                                    <div class='pull-left'>
+                                        <h4 class='media-heading' style="margin-top:0px">ห้องสัมมนาขนาดใหญ่ 2-404 (ห้องโสตทัศนูปกรณ์)</h4>
+                                    </div>
+                                    <div class='pull-right' style="font-size:11px">
+                                        <span class="label label-primary">อนุมัติ</span><i class='label label-default'>31/07/2560 เวลา 20:08:21</i>
+                                    </div>
+                                </div>
+                                <div class='clearfix'></div>
+
+                                <div>
+                                    <strong>วันที่ใช้ห้อง </strong> 21 ส.ค. 60 เวลา 09:00                                    <strong>&nbsp;&nbsp;ถึงวันที่&nbsp;&nbsp;</strong> 21 ส.ค. 60 เวลา 11:00                                </div>
+                                <div>
+                                    <strong>ผู้ขอใช้ </strong>นางสาวรุ่งนภา อดิศรมงคล<strong>&nbsp;&nbsp;&nbsp;สำหรับแผนก </strong>ภาควิชานิติศาสตร์                                </div>
+                                <div>
+                                    <strong>วาระการประชุม </strong>บรรยายวิชา 01453222                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="text-center nowrap">
+                        <a href="javascript:void(0);" onclick="return showeventmore('30')" class="label label-info"><i class="fa fa-list-alt"></i> รายละเอียด</a>                    </td>
+                </tr>
+                                <tr>
+                    <td valign='top'>
+                        <div class="media">
+                            <div class="media-left">
+                                <img src='/fileupload/room/4_1.jpg?362' class="img-responsive" style="width: 100px;"/>
+                            </div>
+                            <div class="media-body">
+                                <div>
+                                    <div class='pull-left'>
+                                        <h4 class='media-heading' style="margin-top:0px">ห้องสัมมนาขนาดใหญ่ 2-404 (ห้องโสตทัศนูปกรณ์)</h4>
+                                    </div>
+                                    <div class='pull-right' style="font-size:11px">
+                                        <span class="label label-primary">อนุมัติ</span><i class='label label-default'>31/07/2560 เวลา 20:08:30</i>
+                                    </div>
+                                </div>
+                                <div class='clearfix'></div>
+
+                                <div>
+                                    <strong>วันที่ใช้ห้อง </strong> 23 ส.ค. 60 เวลา 08:00                                    <strong>&nbsp;&nbsp;ถึงวันที่&nbsp;&nbsp;</strong> 23 ส.ค. 60 เวลา 11:00                                </div>
+                                <div>
+                                    <strong>ผู้ขอใช้ </strong>นางสาวรุ่งนภา อดิศรมงคล<strong>&nbsp;&nbsp;&nbsp;สำหรับแผนก </strong>ภาควิชานิติศาสตร์                                </div>
+                                <div>
+                                    <strong>วาระการประชุม </strong>บรรยายวิชา 01453222                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="text-center nowrap">
+                        <a href="javascript:void(0);" onclick="return showeventmore('31')" class="label label-info"><i class="fa fa-list-alt"></i> รายละเอียด</a>                    </td>
+                </tr>
+                                <tr>
+                    <td valign='top'>
+                        <div class="media">
+                            <div class="media-left">
+                                <img src='/fileupload/room/10_1.jpg?808' class="img-responsive" style="width: 100px;"/>
+                            </div>
+                            <div class="media-body">
+                                <div>
+                                    <div class='pull-left'>
+                                        <h4 class='media-heading' style="margin-top:0px">ห้องปฏิบัติการคอมพิวเตอร์ 4-602</h4>
+                                    </div>
+                                    <div class='pull-right' style="font-size:11px">
+                                        <span class="label label-primary">อนุมัติ</span><i class='label label-default'>04/08/2560 เวลา 13:18:25</i>
+                                    </div>
+                                </div>
+                                <div class='clearfix'></div>
+
+                                <div>
+                                    <strong>วันที่ใช้ห้อง </strong> 25 ส.ค. 60 เวลา 12:00                                    <strong>&nbsp;&nbsp;ถึงวันที่&nbsp;&nbsp;</strong> 25 ส.ค. 60 เวลา 17:00                                </div>
+                                <div>
+                                    <strong>ผู้ขอใช้ </strong>นางสาวภัทรกร ศรีวะรมย์<strong>&nbsp;&nbsp;&nbsp;สำหรับแผนก </strong>สำนักงานเลขานุการคณะ                                </div>
+                                <div>
+                                    <strong>วาระการประชุม </strong>จัดอบรมนิสิต                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="text-center nowrap">
+                        <a href="javascript:void(0);" onclick="return showeventmore('46')" class="label label-info"><i class="fa fa-list-alt"></i> รายละเอียด</a>                    </td>
+                </tr>
+                        </tbody>
+    </table>
+</div>
+
+<div class="row">
+    <div class='col-sm-12'>
+        <div class="pull-left">
+            <div id="datatable_info" class="datatables_info">ค้นเจอทั้งหมด <strong>15</strong> รายการ</div>
+        </div>
+        <div class='pull-right'>
+            <div class="datatables_paginate paging_bs_normal">
+                <ul class="pagination pagination-sm" id="yw0"><li class="first hidden"><a href="/index.php?r=calendar/ajaxlist"><<</a></li>
+<li class="previous hidden"><a href="/index.php?r=calendar/ajaxlist"><</a></li>
+<li class="page selected"><a href="/index.php?r=calendar/ajaxlist">1</a></li>
+<li class="page"><a href="/index.php?r=calendar/ajaxlist&amp;page=2">2</a></li>
+<li class="next"><a href="/index.php?r=calendar/ajaxlist&amp;page=2">></a></li>
+<li class="last"><a href="/index.php?r=calendar/ajaxlist&amp;page=2">>></a></li></ul>            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $(".pagination").on("click", 'a', function (event) {
+            event.preventdefault();
+            var url = $(this).attr("href");
+            if (url != undefined) {
+                loadgridview(url);
+            }
+            return true;
+        });
+    });
+</script>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- modal รายการจอง -->
+<div class="modal fade colored-header" id="mymodal" tabindex="-1" role="dialog" aria-labelledby="mymodallabel" aria-hidden="true" data-backdrop="true">
+</div>
+
+<!-- modal รายละเอียดการจอง-->
+<div class="modal fade colored-header" id="mymodaldetailmore" tabindex="-1" role="dialog" aria-labelledby="mymodallabel" aria-hidden="true" data-backdrop="true">
+</div>
+
+<div class="modal fade colored-header" id="mymodalroom" tabindex="-1" role="dialog" aria-labelledby="mymodallabel" aria-hidden="true" data-backdrop="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header" style='padding:10px'>
+                <button type="button" class="close" data-dismiss="modal" aria-label="close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="mymodallabel">เลือกห้องประชุม</h4>
+            </div>
+
+            <div class='modal-body'>
+                <div class="row">
+                    <div class="col-sm-8 col-md-6 col-lg-5">
+                        <div class="input-group">
+                            <input class="form-control" type="text" id="txtsearchroommodal" placeholder="ค้นหา..." autofocus="true">
+                            <span class="input-group-btn">
+                                <button type="button" class="btn btn-primary" onclick="loadgridroommodal()"><i class="fa fa-search"></i> ค้นหา</button>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="divgridroommodal"></div>
+            </div>
+
+        </div>  <!-- end modal-content -->
+    </div>      <!-- end modal-dialog modal-lg -->
+</div>          <!-- end modal -->
+
+<script type='text/javascript'>
+    $(function () {
+        $('#txtsearchroommodal').keydown(function (e) {
+            if ((e.keycode == 13)) {
+                loadgridroommodal();
+                return true;
+            }
+        });
+
+        $('#divgridroommodal #mytable').highlight($('#txtsearch').val());
+    });
+
+    function loadgridroommodal(url) {
+        url = typeof url !== 'undefined' ? url : "/index.php?r=roomdialog/ajaxlistmodal";
+        var p = {};
+        p['txtsearch'] = $('#txtsearchroommodal').val();
+
+        $('#divgridroommodal').load(url, p);
+        $('#txtsearchroommodal').focus();
+        return true;
+    }
+</script>
+
+<script type='text/javascript'>
+    function loadcalendar(url) {
+        url = typeof url !== 'undefined' ? url : "/index.php?r=calendar/ajaxcalendar";
+
+        var p = {};
+        p['room_id'] = $('#room_id').val();
+        p['start_date'] = $('#start_date').val();
+
+        $('#divcalendar').load(url, p, function () {
+            loadgridview();
+        });
+        return true;
+    }
+
+    function loadgridview(url) {
+        url = typeof url !== 'undefined' ? url : "/index.php?r=calendar/ajaxlist";
+
+        var p = {};
+        p['room_id'] = $('#room_id').val();
+        p['start_date'] = $('#start_date').val();
+
+        $('#divgridview').load(url, p);
+        return true;
+    }
+    
+    function showevent(start_date) {
+        var p = {};
+        p['start_date'] = start_date;
+        p['room_id'] = $('#room_id').val();
+        $('#mymodal').load("/index.php?r=calendar/ajaxdetail", p, function () {
+            $('#mymodal').modal('show');
+        });
+        return true;
+    }
+
+    function showeventmore(reserv_id) {
+        var p = {};
+        p['reserv_id'] = reserv_id;
+        $('#mymodaldetailmore').load("/index.php?r=calendar/ajaxdetailmore", p, function () {
+            $('#mymodaldetailmore').modal('show');
+        });
+        return true;
+    }
+    
+    
+    //เปิด modal room
+    function roommodal() {
+        loadgridroommodal();
+        $('.modal').on('shown.bs.modal', function () {
+            //$('.modal .modal-body').css('height', getmodalheightbody());
+            $('#txtsearchroommodal').focus();
+        });
+        $('#mymodalroom').modal({show: true});
+    }
+
+    //เลือกหมวดจาก modal
+    function roommodalselect(id, code) {
+        $('#room_id').val(id);
+        $('#room_name').val(code);
+        $('#mymodalroom').modal('hide');
+
+        var str = $('#start_date').val();
+        var res = str.split("-");
+        loadcalendar("/index.php?r=calendar/ajaxcalendar&get_year=" + res[0] + "&get_month=" + res[1] + "&get_date=01");
+    }
+
+    function clearroom() {
+        $('#room_id').val('');
+        $('#room_name').val('');
+
+        var str = $('#start_date').val();
+        var res = str.split("-");
+        loadcalendar("/index.php?r=calendar/ajaxcalendar&get_year=" + res[0] + "&get_month=" + res[1] + "&get_date=01");
+    }
+</script>                </div>
+            </div> 
+
+        </div>
+
+        <div class="modalloading"><!-- place at bottom of page --></div>
+
+        <script type="text/javascript" src="/js/jquery.nanoscroller/jquery.nanoscroller.js"></script>
+        <script type="text/javascript" src="/js/behaviour/general.js"></script>
+
+        <!--
+        <script type="text/javascript" src="/js/jquery.ui/jquery-ui.js"></script>
+        -->
+
+        <script type="text/javascript" src="/js/jquery.nestable/jquery.nestable.js"></script>
+        <script type="text/javascript" src="/js/bootstrap.switch/bootstrap-switch.min.js"></script>
+
+        <script type="text/javascript" src="/js/bootstrap.slider/bootstrap-slider.js"></script>
+        <script type="text/javascript" src="/js/jquery.icheck/icheck.min.js"></script>
+        <script type="text/javascript" src="/js/bootbox.min.js"></script> 
+
+        <!-- validation -->
+        <script type="text/javascript" src="/js/jquery.validation/jquery.validate.min.js"></script>
+        <script type="text/javascript" src="/js/jquery.validation/localization/messages_th.js"></script>
+
+        <script src="/js/jquery.highlight-4.js"></script>
+
+        <script src="/js/app.js"></script>
+        <script type="text/javascript">
+            $body = $("body");
+            $(document).on({
+                ajaxstart: function () {
+                    $body.addclass("loading");
+                },
+                ajaxstop: function () {
+                    $body.removeclass("loading");
+                }
+            });
+
+            $(document).ready(function () {
+                //initialize the javascript
+                app.init();
+            });
+        </script>
+
+        <!-- bootstrap core javascript
+        ================================================== -->
+        <!-- placed at the end of the document so the pages load faster -->
+        <script src="/js/bootstrap/js/bootstrap.min.js"></script>
+    </body>
+</html>

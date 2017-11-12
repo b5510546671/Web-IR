@@ -1,0 +1,561 @@
+<html>
+<head>
+  <title>เลือกการบูตใน config.sys ให้ถูกใจ</title>
+</head>
+<body bgcolor="ffffff" text="000000" link="0000ff" vlink="800080">
+<font face = "ms sans serif" size = -1>
+   <table width=100% bgcolor=ffdebd>
+       <tr><!-- row 1 -->
+         <td align = center><font face = "ms sans serif"
+   size = -1><b>เลือก<wbr>การ<wbr>บูต<wbr>ใน config.sys ให้<wbr>ถูก<wbr>ใจ<wbr></b></font></td>
+       </tr>
+   </table>
+   <br>
+   <dd>ด้วย<wbr>ความ<wbr>สามารถ<wbr>ที่<wbr>จะ<wbr>ทำ<wbr>การ<wbr>ปรับ<wbr>แต่ง<wbr>ไฟล์ config.sys
+   ให้<wbr>สามารถ<wbr>ทำ<wbr>การ<wbr>เลือก<wbr>ข้อ<wbr>กำหนด<wbr>ใน<wbr>การ<wbr>จัด<wbr>สภาพ<wbr>แวด<wbr>ล้อม (environment)
+   ของ<wbr>ดอส<wbr>ใน<wbr>ขณะ<wbr>ทำ<wbr>การ<wbr>บูต<wbr>เครื่อง<wbr>ได้<wbr>หรือ<wbr>ที่<wbr>เรียก<wbr>ว่า multiple
+   configuration ซึ่ง<wbr>ใช้<wbr>คำ<wbr>สั่ง<wbr>ที่<wbr>มี<wbr>ให้<wbr>ใน<wbr>ไมโคร<wbr>ซอฟท์ดอส<wbr>ตั้งแต่<wbr>เวอร์ชัน
+   6 เป็น<wbr>ต้น<wbr>ไป ใน<wbr>การ<wbr>ปรับ<wbr>แต่ง<wbr>หรือ<wbr>เลือก<wbr>ข้อ<wbr>กำหนด<wbr>ต่างๆ ใน<wbr>ไฟล์
+   config.sys ก็<wbr>เพื่อ<wbr>ที่<wbr>จะ<wbr>ให้<wbr>เกิด<wbr>ความ<wbr>เหมาะ<wbr>สม<wbr>กับ<wbr>มา<wbr>ใช้<wbr>งาน<wbr>โปรแกรม<wbr>หรือ<wbr>แอ<wbr>พพ<wbr>ลิ<wbr>เค<wbr>ชัน<wbr>นั้น
+   ๆ เพราะ
+   โปรแกรม<wbr>ต่างๆ ต้อง<wbr>การ<wbr>สภาพ<wbr>แวด<wbr>ล้อม<wbr>ที่<wbr>เหมาะ<wbr>สมใน<wbr>การ<wbr>ทำงาน<wbr>ที่<wbr>แตก<wbr>ต่าง<wbr>กัน
+   เช่น ใน<wbr>การ<wbr>ทำงาน<wbr>ปกติ<wbr>เป็น<wbr>ประจำ<wbr>ผู้<wbr>ใช้<wbr>ใช้<wbr>แอ<wbr>พพ<wbr>ลิ<wbr>-เค<wbr>ชัน<wbr>บน<wbr>วินส์โดส์<wbr>ใน<wbr>การ<wbr>ทำงาน<wbr>ซึ่ง<wbr>ต้อง<wbr>มี<wbr>การ<wbr>ตั้ง<wbr>ค่า<wbr>สภาพ<wbr>แวด<wbr>ล้อม<wbr>ใน
+   config.sys หรือ<wbr>ไดรฟ์เวอร์<wbr>สำหรับ<wbr>อุปกรณ์<wbr>ต่าง<wbr>มาก<wbr>มาย<wbr>แต่<wbr>ใน<wbr>บาง<wbr>ครั้ง<wbr>ผู้<wbr>ใช้<wbr>ต้อง<wbr>การ<wbr>เล่น<wbr>เกมส์<wbr>ซึ่ง<wbr>ไม่<wbr>ต้อง<wbr>การ<wbr>ใช้<wbr>ไดรฟ์เวอร์<wbr>หรือ<wbr>สภาพ<wbr>แวด<wbr>ล้อม<wbr>ดัง<wbr>wbr>w<wbr>br>w<wbr><wb<wbr>r>br><wbr>w<<wbr>wbr><wbr><w<wbr>b<wb<wbr>r>r><wbr>br<wbr>><<wbr>wbr<wbr>>w<<wbr><wb<wbr>r><wbr>wb<wbr>r><<wbr>wbr><wbr><w<<wbr>wbr>b<wbr><w<wbr>b<wbr
+   ๆ เมื่อ<wbr>เป็น<wbr>เช่น<wbr>นี้<wbr>ผู้<wbr>ใช้<wbr>ก็<wbr>ต้อง<wbr>คอย<wbr>มา<wbr>แก้<wbr>ไข<wbr>ค่า<wbr>ใน config.sys
+   หใม่<wbr>เมื่อ<wbr>ต้<wbr>กง<wbr>การ<wbr>เล่น<wbr>เกมส์<wbr>เพื่อ<wbr>ให้<wbr>เหลือ<wbr>หน่วย<wbr>ความ<wbr>จำ<wbr>สำหรับ<wbr>การ<wbr>เล่น<wbr>เกมส์<wbr>มาก
+   ๆ เป็น<wbr>ต้น<wbr>ดัง<wbr>นั้น<wbr>จึง<wbr>ไม่<wbr>เป็นการ<wbr>สะดวก<wbr>อย่าง<wbr>แน่<wbr>นอน ถ้า<wbr>ผู้<wbr>ใช้<wbr>ต้อง<wbr>มาก<wbr>คอย<wbr>นั่ง<wbr>แก้<wbr>ไข<wbr>ข้อ<wbr>กำหนด<wbr>ต่างๆ
+   ใน<wbr>ไฟล์ config.sys ให้<wbr>มี<wbr>สภาพ<wbr>แวด<wbr>ล้อม<wbr>ให้<wbr>เหมาะ<wbr>สม<wbr>กับ<wbr>โปรแกรม
+   หรือ<wbr>แอ<wbr>พพ<wbr>ลิ<wbr>เค<wbr>ชัน<wbr>ต้อง<wbr>ต้อง<wbr>การ<wbr>จะ<wbr>ใช้<wbr>งาน<wbr>อยู่<wbr>บ่อย ๆ
+   <p>
+   <font face = "ms sans serif" size = +1 color = a2510f><b>หน้า<wbr>ตา<wbr>การ<wbr>ใช้<wbr>งาน<wbr>ที่<wbr>แสน<wbr>ง่าย<wbr></b></font>
+   <dd>    ความ<wbr>สามารถ<wbr>ที่<wbr>จะ<wbr>เลือก<wbr>ข้อ<wbr>กำหนด<wbr>ใน<wbr>การ<wbr>บูต<wbr>ใน<wbr>ไฟล์ config.sys
+   จะ<wbr>ช่วย<wbr>ขจัด<wbr>ปัญหา<wbr>กวน<wbr>ใจ<wbr>ใน<wbr>การ<wbr>ปรับ<wbr>แต่ง<wbr>ข้อ<wbr>กำหนด<wbr>สำหรับ<wbr>โปรแกรม<wbr>หรือ<wbr>แอ<wbr>พพ<wbr>ลิ<wbr>เค<wbr>ชัน<wbr>แต่างๆ
+   ลง<wbr>ไป<wbr>ได้<wbr>มาก<wbr>ที<wbr>เดียว<wbr>โดย<wbr>ผู้<wbr>ใช้<wbr>เขียน<wbr>หรือ<wbr>ตั้ง<wbr>ค่า<wbr>ใน config.sys
+   เพียง<wbr>ครั้ง<wbr>เดียว<wbr>แล้ว<wbr>ใช้<wbr>คำ<wbr>ลั่ว<wbr>ใน<wbr>ไมโคร<wbr>ซอฟท์ดอส<wbr>ตั้งแต่<wbr>เวอร์ชัน
+   6 เป็น<wbr>ต้น<wbr>ไป เข้า<wbr>มา<wbr>ช่วย<wbr>ใน<wbr>การ<wbr>เลือก<wbr>ติด<wbr>ตั้ง<wbr>ค่า<wbr>ข้อ<wbr>กำหนด<wbr>ใน<wbr>การ<wbr>ใช้<wbr>งาน<wbr>ใน<wbr>ขณะ<wbr>บูต<wbr>เครื่อง
+   การ<wbr>เลือก<wbr>ติด<wbr>ตั้ง<wbr>ข้อ<wbr>กำหนด<wbr>การ<wbr>บูต<wbr>ใน<wbr>การ<wbr>ทำงาน โดย<wbr>จะ<wbr>แสดง<wbr>หัว<wbr>ข้อ<wbr>ให้<wbr>เลือก<wbr>จัด<wbr>การ<wbr>สภาพ<wbr>แวด<wbr>ล้อม<wbr>ได<wbr>เตา<wbr>ม<wbr>ต้อง<wbr>การ<wbr>ที่<wbr>ตั้ง<wbr>ไว้
+   ตัว<wbr>รายการ<wbr>เมนู<wbr>สามารถ<wbr>สร้าง<wbr>ได้<wbr>โดย<wbr>ง่าย โดย<wbr>ใช้<wbr>คำ<wbr>สั่ง<wbr>เพียง<wbr>ไม่<wbr>กี่<wbr>คำ<wbr>สั่ง<wbr>คุณ
+   ๆ ก็<wbr>สามารถ<wbr>สร้าง config.sys ที่<wbr>สามารถ<wbr>เลือก<wbr>ข้อ<wbr>กำหนด<wbr>ใน<wbr>การ<wbr>ติด<wbr>ตั้ง<wbr>ได้
+   และ<wbr>ยัง<wbr>สามารถ<wbr>เลือก<wbr>สี<wbr>สรร<wbr>ตาม<wbr>ใจ<wbr>ชอบ<wbr>ได้<wbr>อีก<wbr>ด้วย
+
+   <p>
+   <font face = "ms sans serif" size = +1 color = a2510f><b>คำ<wbr>สั่ง<wbr>สำหรับ<wbr>การ<wbr>ทำ
+   multiple configuration</b></font><br>
+   <dd>คำ<wbr>สั่ง<wbr>สำหรับ<wbr>การ<wbr>ปรับ<wbr>แต่ง<wbr>ไฟล์ config.sys ให้<wbr>สามารถ<wbr>ทำ<wbr>การ<wbr>เลือก<wbr>ข้อ<wbr>กำหนด<wbr>(multiple
+   configuration)
+   โดย<wbr>ใช้<wbr>คำ<wbr>สั่ง<wbr>ที่<wbr>มา<wbr>กับ<wbr>ไมโคร<wbr>ซอหท์ดอส<wbr>ที่<wbr>เวอร์ชัน 6 หรือ<wbr>สูง<wbr>กว่า
+   มี<wbr>ดัง<wbr>นี้
+   <dd>1.  menuitem
+   <dd>2.  menu default
+   <dd>3.  menucolor
+   <dd>4.  submenu
+   <dd>5.  numlock
+   <dd>6.  include
+   <dd> ซึ่ง<wbr>แต่<wbr>ละ<wbr>ตัว<wbr>มี<wbr>การ<wbr>ใช้<wbr>งาน<wbr>และ<wbr>ราย<wbr>ละเอียด<wbr>ดัง<wbr>นี้
+
+   <ul type = square>
+   <b><li>menuitem</b>
+    <dd>เป็น<wbr>คำ<wbr>สั่ง<wbr>ที่<wbr>เป็น<wbr>ตัว<wbr>กำหนด<wbr>ชื่อ<wbr>ของ config ย่อย<wbr>ลง<wbr>ไป<wbr>สำหรับ<wbr>งาน<wbr>แต<wbr>ละ<wbr>งาน<wbr>เฉพาะ<wbr>ที่<wbr>ต้อง<wbr>การ<wbr>สภาพ<wbr>แวด<wbr>ล้อม<wbr>ที่<wbr>แตก<wbr>ต่าง<wbr>กัน<wbr>ออก<wbr>ไป
+   มี<wbr>รูป<wbr>แบบ<wbr>การ<wbr>ใช้<wbr>ดัง<wbr>นี้
+    <p><b>รูป<wbr>แบบ<wbr></b><br>
+   <dd><b>menuitem configname,menutext</b><p>
+   <dd><b>configname</b> เป็น<wbr>ชื่อ<wbr>ของ config ที่<wbr>เรา<wbr>ตั้ง<wbr>ไว้<wbr>สำหรับ<wbr>งาน<wbr>แต่<wbr>ละ<wbr>งาน<wbr>ที่<wbr>ต้อง<wbr>การ<wbr>สภาพ<wbr>แวด<wbr>ล้อม<wbr>ที่<wbr>แตก<wbr>ต่าง<wbr>กัน<wbr>ออก<wbr>ไป
+    <dd><b>menutext</b> เป็น<wbr>ข้อ<wbr>ความ<wbr>ที่<wbr>จะ<wbr>แสดง<wbr>ถึง<wbr>หัว<wbr>ข้อ<wbr>ที่<wbr>เกี่ยว<wbr>กับ
+   config ของ<wbr>คุณ โดย<wbr>ข้อ<wbr>ความ<wbr>นี้<wbr>จะ<wbr>แสดง<wbr>ที่<wbr>ตัว<wbr>เมนู
+   <p>
+   <center>
+   <table border = 1 bgcolor = c0c0c0 width = 60%>
+       <tr><!-- row 1 -->
+         <td><b>ตัวอย่าง<wbr></b><br>
+   <dd> menuitem games, config for play games
+   <dd> (games)
+   <dd> device=c: sys
+   <dd> device=c/emm386.exe noems</td>
+   </table>
+    </center>
+   <p>
+    <dd>ดัง<wbr>นั้น<wbr>เวลา<wbr>ที่<wbr>ทำงาน<wbr>ที่<wbr>หน้า<wbr>จอ<wbr>จะ<wbr>มี<wbr>การ<wbr>แสดง<wbr>หัว<wbr>ข้อ<wbr>ที่<wbr>ชื่อ<wbr>ว่า
+   config for play games ขึ้น<wbr>มา<wbr>ให้<wbr>ผู้<wbr>ใช้<wbr>ได้<wbr>เลือก
+
+
+   <p><b> <li>menudefaut</b>
+    <dd>เป็น<wbr>คำ<wbr>สั่ง<wbr>สำหรับ<wbr>ตั้ง<wbr>ค่า<wbr>หัว<wbr>ข้อ<wbr>ของ config ที่<wbr>ต้อง<wbr>การ<wbr>ให้<wbr>โปรแกรม<wbr>ทำ<wbr>อย่าง
+   อัตโนมัติ<wbr>ใน<wbr>กรณี<wbr>ที่<wbr>ผู้<wbr>ใช่<wbr>ไม่<wbr>มี<wbr>การ<wbr>เลือก<wbr>หัว<wbr>ข้อ<wbr>ที่<wbr>ต้อง<wbr>การ<wbr>ใน<wbr>เมนู<wbr>ที่<wbr>แสดง<wbr>โดย<wbr>เมื่อ<wbr>หมด<wbr>เวลา<wbr>ที่<wbr>ได้<wbr>ตั้ง<wbr>เอา<wbr>ไว้<wbr>wbr>wbr
+   ก็<wbr>จะ<wbr>ทำ<wbr>การ<wbr>โหล<wbr>ด<wbr>เอา<wbr>คำ<wbr>สั่ง<wbr>ใน config ที่<wbr>ได้<wbr>กำหนด<wbr>ไว้<wbr>แล้ว<wbr>ที่<wbr>ตอน<wbr>ต้น<wbr>ของ<wbr>คำ<wbr>สั่ง<wbr>นี้<wbr>ไป<wbr>ทำ<wbr>การ<wbr>จัด<wbr>การ<wbr>ปรับ<wbr>สภาพ<wbr>แวด<wbr>ล้อม<wbr>โดย<wbr>อัตโนมัติ<wbr>คำ<wbr>สั่ง<wbr>นี้<wbr>จะ<wbr>ทำ<wbr>wbr<wbr>>wb<wbr>r<w<wbr>br>
+   config ที่<wbr>เลือก<wbr>ไว้<wbr>โดย<wbr>คำ<wbr>สั่ง<wbr>นี้<wbr>มี<wbr>แถบ<wbr>สว่าง<wbr>(highlight)
+   ป<wbr>รา<wbr>กฎ<wbr>ให้<wbr>ผู้<wbr>ใช้<wbr>ทราบ นอกจาก ยัง<wbr>สามารถ<wbr>ที่<wbr>จะ<wbr>ทำ<wbr>การ ตั้ง<wbr>ค่า<wbr>เวลา<wbr>ใน<wbr>การ<wbr>รอ<wbr>รับ<wbr>การ<wbr>เลือก<wbr>หัว<wbr>ข้อ<wbr>ที่<wbr>ผู้<wbr>ใช้<wbr>เลือก
+   ถ้า<wbr>พ้น<wbr>ระยะ<wbr>เวลา<wbr>ที่<wbr>กำหนด<wbr>ไป<wbr>แล้ว<wbr>(time out) โปรแกรม<wbr>จะ<wbr>โหล<wbr>ด<wbr>คำ<wbr>สั่ง<wbr>ใน<wbr>หัว<wbr>ข้อ
+   config ที่<wbr>กำหนด<wbr>ไว้<wbr>ไป<wbr>ปฎิบัติ<wbr>การ คำ<wbr>สั่ง<wbr>นี้<wbr>มี<wbr>รูป<wbr>แบบ<wbr>การ<wbr>ใช้<wbr>งาน<wbr>ดัง<wbr>นี้
+   <p><b>รูป<wbr>แบบ<wbr></b><br>
+   <dd><b>menudefault configname, timeout</b><p>
+    <dd><b>configname </b>คือ ชื่อ<wbr>ของ<wbr>หัว<wbr>ข้อ config ที่<wbr>จะ<wbr>ให้<wbr>ทำงาน<wbr>เมื่อ<wbr>พ้น<wbr>ระยะ<wbr>เวลา<wbr>ที่<wbr>กำหนด
+   โดย<wbr>ที่<wbr>หน้า<wbr>จอ<wbr>จะ<wbr>แสดง<wbr>แถบ<wbr>สว่าง<wbr>คลุม<wbr>หัว<wbr>ข้อ<wbr>ที่<wbr>ได้<wbr>ตั้ว<wbr>ไว้
+    <dd><b>time out</b> หมาย<wbr>ถึง<wbr>ตัว<wbr>เลข<wbr>บอก<wbr>ระยะ<wbr>เวลา<wbr>ที่<wbr>รอ<wbr>ให้<wbr>ผู้<wbr>ใช้<wbr>ทำ<wbr>การ<wbr>เลือก<wbr>หัว<wbr>ข้อ<wbr>ใน<wbr>เมนู<wbr>ที่<wbr>ต้อง<wbr>การ
+   ถ้า<wbr>หมด<wbr>ระยะ<wbr>เวลา<wbr>ที่<wbr>กำหนด<wbr>ไป<wbr>แล้ว<wbr>จะ<wbr>โหล<wbr>ด<wbr>หัว<wbr>ข้อ config  ที่<wbr>ได้<wbr>ตั้ง<wbr>ไว้<wbr>ไป<wbr>ทำงาน<wbr>ดัง<wbr>ที่<wbr>ได้<wbr>กล่าว<wbr>ไป<wbr>แล้ว<wbr>ระยะ<wbr>เวลา<wbr>ที่<wbr>กำหนด<wbr>ได้<wbr>จะ<wbr>มี<wbr>ค่า
+   0-90 วินาที และ<wbr>ขณะ<wbr>รอ<wbr>รับ<wbr>ค่า<wbr>จะ<wbr>แสดง<wbr>เวลา<wbr>ที่<wbr>รอ<wbr>รับ<wbr>ไป<wbr>ด้วย
+    <dd>ชื่อ<wbr>ของ configname นั้น<wbr>ต้อง<wbr>ได้<wbr>รับ<wbr>การ<wbr>ตั้ง<wbr>ค่า<wbr>หรือ<wbr>มี<wbr>ไว้<wbr>แล้ว<wbr>จาก<wbr>คำ<wbr>สั่ง
+   menuitem
+
+   <p>
+   <center>
+   <table border = 1 bgcolor = c0c0c0 width = 60%>
+       <tr><!-- row 1 -->
+         <td><b>ตัวอย่าง<wbr></b><br>
+    <dd>mnudefault games,20
+   </table>
+   </center><p>
+   <dd> หมาย<wbr>ถึง กำหนด<wbr>ให้<wbr>โหล<wbr>ด<wbr>คำ<wbr>สั่ง<wbr>การ<wbr>จัด<wbr>การ<wbr>สภาพ<wbr>แวด<wbr>ล้อม<wbr>ใน<wbr>หัว<wbr>ข้อ
+   ganmes ไป<wbr>ปฏิบัติ<wbr>เมื่อ<wbr>ผู้<wbr>ใช้<wbr>ไม่<wbr>มี<wbr>การ<wbr>เลือก<wbr>หัว<wbr>ข้อ<wbr>ใด<wbr>หัว<wbr>ข้อ<wbr>หนึ่ง<wbr>ใน<wbr>เมนู<wbr>ที่<wbr>แสดง<wbr>บน<wbr>หน้า<wbr>จอ
+   หรือ<wbr>พ้น<wbr>เวลา 20 วินาที<wbr>ที่<wbr>กำหนด<wbr>ไป<wbr>แล้ว
+   <dd> คำ<wbr>สั่ง<wbr>นี้<wbr>จะ<wbr>ไม่<wbr>มี<wbr>ก็<wbr>ได้<wbr>ถ้า<wbr>ไม่<wbr>มี<wbr>โปรแกรม<wbr>จะ<wbr>ไม่<wbr>ทำ<wbr>การ<wbr>โหล<wbr>ด<wbr>คำ<wbr>สั่ง<wbr>ใน<wbr>หัว<wbr>ข้อ<wbr>ใด
+   ๆ ไป<wbr>ปฏิบัติ<wbr>งาน จะ<wbr>หยุด<wbr>รอ<wbr>รับ<wbr>ค่า<wbr>ที่<wbr>ที่<wbr>ผู้<wbr>ใช้<wbr>เลือก ส่วน<wbr>เวลา
+   time out อาจ<wbr>จะ<wbr>ไม่<wbr>มี<wbr>ก็<wbr>ได้<wbr>โดย<wbr>ถ้า<wbr>ไม่<wbr>มี<wbr>หรือ<wbr>ไม่<wbr>ใส่<wbr>ก็<wbr>จะ<wbr>มี<wbr>การ<wbr>ทำงาน<wbr>ที่<wbr>เหมือน<wbr>กับ<wbr>ผู้<wbr>ใช้<wbr>ไม่<wbr>ได้<wbr>ใส่<wbr>คำ<wbr>สั่ง<wbr>wbr<wbr>>wb<wbr>r<<wbr>wbr>>wb
+   แต่<wbr>จะ<wbr>แตก<wbr>ต่าง<wbr>กัน<wbr>ตรง<wbr>ที่<wbr>ว่า จะ<wbr>เป็นการ<wbr>ตั้ง<wbr>ค่า<wbr>แถบ<wbr>สว่าง<wbr>ให้<wbr>ไป<wbr>อยู่<wbr>ที่<wbr>หัว<wbr>ข้อ<wbr>ที่<wbr>ได้<wbr>กำหนด<wbr>ไว้<wbr>ได้
+   โดย<wbr>ถ้า<wbr>ผู้<wbr>ใช้<wbr>กด<wbr>คีย์ enter เลย<wbr>โปรแกรม<wbr>จะ<wbr>เอา<wbr>ค่า<wbr>หัว<wbr>ข้อ<wbr>ที่<wbr>แถบ<wbr>สว่าง<wbr>นั้น<wbr>ป<wbr>รา<wbr>กฎ<wbr>อยู่<wbr>ไป<wbr>ใช้<wbr>งาน
+   ส่วน<wbr>ถ้า<wbr>ไม่<wbr>ใส่<wbr>คำ<wbr>สั่ง<wbr>นี้<wbr>จะ<wbr>ทำ<wbr>การ<wbr>ตั้ง<wbr>แถบ<wbr>สว่าง<wbr>ไว้<wbr>ที่<wbr>หัว<wbr>ข้อ<wbr>แรก<wbr>ทันที
+   <p>
+   <b><li>menucolor</b>
+   <dd>เป็น<wbr>คำ<wbr>สั่ง<wbr>สำหรับ<wbr>กำหนด<wbr>สี<wbr>สรร<wbr>ของ<wbr>โปรแกรม<wbr>ว่า<wbr>ต้อง<wbr>การ<wbr>จะ<wbr>ให้<wbr>แสดง<wbr>สี<wbr>อะไร
+   โดย<wbr>มี<wbr>สี<wbr>ให้<wbr>เลือก<wbr>ได<wbr>ตาม<wbr>ตาราง<wbr>ด้าน<wbr>ล่าง ผู้<wbr>ใช้<wbr>สามารถ<wbr>ที่<wbr>จะ<wbr>เลือก<wbr>สี<wbr>ใช้<wbr>งาน<wbr>ได้<wbr>ตาม<wbr>ใจ<wbr>ชอบ<wbr>โดย<wbr>สามารถ<wbr>กำหนด<wbr>สี<wbr>พื้น
+   (background) สี<wbr>ตัว<wbr>อักษร<wbr>(foreground) ที่<wbr>จะ<wbr>แสดง<wbr>ได้<wbr>การ<wbr>ใช้<wbr>คำ<wbr>สั่ง<wbr>นี้<wbr>มี<wbr>รูป<wbr>แบบ<wbr>ดัง<wbr>นี้
+   <p><b>รูป<wbr>แบบ<wbr></b><br>
+   <dd><b>menucolor foreground,background</b><p>
+   <dd><b>foreground</b>  คือ สี<wbr>ของ<wbr>ตัว<wbr>อักษร<wbr>ที่<wbr>จะ<wbr>แสดง ใส่<wbr>ค่า<wbr>เป็น<wbr>ตัว<wbr>เลข<wbr>หรือ<wbr>เป็น<wbr>ชื่อ<wbr>ของ<wbr>สี<wbr>ก็<wbr>ได้
+   <dd><b>background</b> คือ สี<wbr>ของ<wbr>พื้น<wbr>ที่<wbr>จะ<wbr>แสดง ใส่<wbr>ค่า<wbr>เป็น<wbr>ตัว<wbr>เลข<wbr>หรือ<wbr>เป็น<wbr>ชื่อ<wbr>สี<wbr>ก็<wbr>ได้
+   <p>
+   <center>
+   <table border = 0 width = 80%>
+   <tr align="center" valign="bottom">
+   <td bgcolor=#00ffff><font face="ms sans serif" size=-1><b>
+   code</b></font></td>
+   <td bgcolor=#00ffff><font face="ms sans serif" size=-1><b>
+   สี<wbr></b></font></td>
+   <td bgcolor=#00ffff><font face="ms sans serif" size=-1><b>
+   code</b></font></td>
+   <td bgcolor=#00ffff><font face="ms sans serif" size=-1><b>
+   สี<wbr></b></font></td>
+   </tr>
+   <tr align="center" valign="bottom">
+   <td bgcolor=#ccffcc><font face="ms sans serif" size=-1>
+   0</font></td>
+   <td bgcolor=#ccffff><font face="ms sans serif" size=-1>
+   ดำ<wbr></font></td>
+   <td bgcolor=#ccffcc><font face="ms sans serif" size=-1>
+   8</font></td>
+   <td bgcolor=#ccffff><font face="ms sans serif" size=-1>
+   เทา<wbr></font></td>
+   </tr>
+   <tr align="center" valign="bottom">
+   <td bgcolor=#ccffcc><font face="ms sans serif" size=-1>
+   1</font></td>
+   <td bgcolor=#ccffff><font face="ms sans serif" size=-1>
+   น้ำเงิน<wbr></font></td>
+   <td bgcolor=#ccffcc><font face="ms sans serif" size=-1>
+   9</font></td>
+   <td bgcolor=#ccffff><font face="ms sans serif" size=-1>
+   น้ำเงิน<wbr>อ่อน<wbr></font></td>
+   </tr>
+   <tr align="center" valign="bottom">
+   <td bgcolor=#ccffcc><font face="ms sans serif" size=-1>
+   2</font></td>
+   <td bgcolor=#ccffff><font face="ms sans serif" size=-1>
+   เขียว<wbr></font></td>
+   <td bgcolor=#ccffcc><font face="ms sans serif" size=-1>
+   10</font></td>
+   <td bgcolor=#ccffff><font face="ms sans serif" size=-1>
+   เขียว<wbr>อ่อน<wbr></font></td>
+   </tr>
+   <tr align="center" valign="bottom">
+   <td bgcolor=#ccffcc><font face="ms sans serif" size=-1>
+   3</font></td>
+   <td bgcolor=#ccffff><font face="ms sans serif" size=-1>
+   ฟ้า<wbr></font></td>
+   <td bgcolor=#ccffcc><font face="ms sans serif" size=-1>
+   11</font></td>
+   <td bgcolor=#ccffff><font face="ms sans serif" size=-1>
+   ฟ้า<wbr>อ่อน<wbr></font></td>
+   </tr>
+   <tr align="center" valign="bottom">
+   <td bgcolor=#ccffcc><font face="ms sans serif" size=-1>
+   4</font></td>
+   <td bgcolor=#ccffff><font face="ms sans serif" size=-1>
+   แดง<wbr></font></td>
+   <td bgcolor=#ccffcc><font face="ms sans serif" size=-1>
+   12</font></td>
+   <td bgcolor=#ccffff><font face="ms sans serif" size=-1>
+   แดง<wbr>อ่อน<wbr></font></td>
+   </tr>
+   <tr align="center" valign="bottom">
+   <td bgcolor=#ccffcc><font face="ms sans serif" size=-1>
+   5</font></td>
+   <td bgcolor=#ccffff><font face="ms sans serif" size=-1>
+   ม่วง<wbr></font></td>
+   <td bgcolor=#ccffcc><font face="ms sans serif" size=-1>
+   13</font></td>
+   <td bgcolor=#ccffff><font face="ms sans serif" size=-1>
+   ม่วง<wbr>อ่อน<wbr></font></td>
+   </tr>
+   <tr align="center" valign="bottom">
+   <td bgcolor=#ccffcc><font face="ms sans serif" size=-1>
+   6</font></td>
+   <td bgcolor=#ccffff><font face="ms sans serif" size=-1>
+   น้ำตาล<wbr></font></td>
+   <td bgcolor=#ccffcc><font face="ms sans serif" size=-1>
+   14</font></td>
+   <td bgcolor=#ccffff><font face="ms sans serif" size=-1>
+   เหลือง<wbr></font></td>
+   </tr>
+   <tr align="center" valign="bottom">
+   <td bgcolor=#ccffcc><font face="ms sans serif" size=-1>
+   7</font></td>
+   <td bgcolor=#ccffff><font face="ms sans serif" size=-1>
+   ขาว<wbr></font></td>
+   <td bgcolor=#ccffcc><font face="ms sans serif" size=-1>
+   15</font></td>
+   <td bgcolor=#ccffff><font face="ms sans serif" size=-1>
+   ขาว<wbr>สว่าง<wbr></font></td>
+   </tr>
+   </table>
+   </center><br>
+   <center><b>ตาราง<wbr>แสดง<wbr>สี<wbr>ที่<wbr>ใช้<wbr>กับ<wbr>คำ<wbr>สั่ง menucolor</b><p></center>
+
+   <dd> หมาย<wbr>ความ<wbr>ว่า<wbr>ให้<wbr>แสดง<wbr>สี<wbr>ตัว<wbr>อักษร<wbr>สี<wbr>แดง<wbr>และ<wbr>บน<wbr>พื้น<wbr>สี<wbr>ดำ
+
+   <b><li>submenu</b><br>
+   <dd> ใน<wbr>บาง<wbr>ครั้ง<wbr>ใน<wbr>หัว<wbr>ข้อ<wbr>ใหญ่ ๆ ที่<wbr>ผู้<wbr>ใช้<wbr>สร่าง<wbr>ขึ้น<wbr>มา<wbr>ยัง<wbr>ให้<wbr>ราย<wbr>ละเอียด<wbr>ใน<wbr>การ<wbr>ปรับ<wbr>แต่ง<wbr>จัด<wbr>การ<wbr>สภาพ<wbr>แวด<wbr>ล้อม<wbr>ได<wbr>ละเอียด<wbr>มาก<wbr>นัก
+   ผู้<wbr>ใช้<wbr>สามารถ<wbr>ใช้<wbr>คำ<wbr>สั่ง submenu ช่วย<wbr>ใน<wbr>การ<wbr>สร้าง<wbr>เมนู<wbr>รอง<wbr>หรือ<wbr>เมนู<wbr>ย่อย<wbr>สำหรับ<wbr>หัว<wbr>ข้อ<wbr>นั้น
+   ๆ ให้<wbr>เลือก<wbr>ใช้<wbr>งาน<wbr>ได้<wbr>อีก<wbr>เมนู<wbr>หนึ่ง ยก<wbr>ตัวอย่าง เช่น ใน<wbr>หัว<wbr>ข้อ<wbr>ใหญ่<wbr>มี<wbr>config
+    สำหรับ<wbr>โปรแกรม<wbr>เกมส์<wbr>คือ<wbr>หัว<wbr>ข้อ games และ<wbr>ผู้<wbr>ใช้<wbr>ได้<wbr>ส<wbr>น้า<wbr>ง<wbr>เมนู<wbr>ย่อย<wbr>ของ<wbr>หัว<wbr>ข้อ<wbr>นี้<wbr>ด้วย<wbr>คำ<wbr>สั่ง
+   submenu และ<wbr>ใน submenu  นี้<wbr>ผู้<wbr>ใช้<wbr>ก็<wbr>สามารถ<wbr>ที่<wbr>จะ<wbr>ทำ<wbr>หัว<wbr>ข้อ
+   config สำหรับ<wbr>ปรับ<wbr>แต่ง<wbr>และ<wbr>จัด<wbr>การ<wbr>กับ<wbr>สภาพ<wbr>แวด<wbr>ล้อม<wbr>ของ<wbr>โปรแกรม<wbr>เกมส์<wbr>แต่<wbr>ละ<wbr>ตัว<wbr>ได้
+   รูป<wbr>แบบ<wbr>การ<wbr>ใช้<wbr>คำ<wbr>สั่ง<wbr>มี<wbr>ดัง<wbr>นี้
+   <p>
+   <b>รูป<wbr>แบบ<wbr></b>
+   <dd><b>submenu congigname, menutext </b>
+   <p>
+   <dd><b>configname</b> คือ<wbr>ชื่อ<wbr>ของ<wbr>หัว<wbr>ข้อ config ที่<wbr>จะ<wbr>ทำ<wbr>ให้<wbr>มี<wbr>เมนู<wbr>ย่อย
+   <dd> <b>menutext</b> คือ ข้อ<wbr>ความ<wbr>ที่<wbr>จะ<wbr>แสดง<wbr>บน<wbr>หน้า<wbr>จอ<wbr>ใน<wbr>หัว<wbr>ข้อ<wbr>ของ<wbr>เมนู<wbr>หลัก<wbr>ที่<wbr>จะ<wbr>เลือก<wbr>เข้า<wbr>มา<wbr>สู่<wbr>เมนู<wbr>ย่อย
+   <p>
+   <center>
+   <table border = 1 bgcolor = c0c0c0>
+   <tr>
+   <td><b>ตัวอย่าง<wbr></b>
+   <dd>[menu]
+   <dd>submenu dos,  application for dos
+   <dd>menuitem win,  boot windows
+   <dd>menuitem nor,  normal boot !<p>
+
+   <dd>[dos]
+   <dd>menuitem a,  game application
+   <dd>menuitem b,   dos appication &lt;load vsafe &gt;
+   <dd>menucolor 15, 1
+   <p>
+   <dd>[a]
+   <dd>device = c:\dos\himem.sys
+   <dd>devicehigh = c:\dos\emm386.exe noems
+   <dd>devicehigh = c:\dos\ansi.sys
+   <dd>devicehigh = c:\dos\setver.exe
+   <dd>dos=umb,high
+   <dd>stacks=0,0
+   <dd>files=25
+   <p>
+
+   <dd>[b]
+   <dd>devicdhigh = c:\dos\vsasf.sys
+   </td>
+   </tr>
+   </table>
+   </center>
+   <p>
+
+
+   <dd>จาก<wbr>ตัวอย่าง<wbr>จะ<wbr>เห็น<wbr>ว่า<wbr>เรา<wbr>ได้<wbr>ทำ<wbr>การ<wbr>สร้าง<wbr>หัว<wbr>ข้อ dos
+    ไว้<wbr>ให้<wbr>มี<wbr>เมนู<wbr>ย่อย<wbr>ลง<wbr>ไป<wbr>ด้วย<wbr>คำ<wbr>สั่ง submenu และ<wbr>ใน<wbr>เมนู<wbr>ย่อย<wbr>ที่<wbr>สร้าง<wbr>ขึ้น<wbr>จะ<wbr>มี<wbr>หัว<wbr>ข้อ<wbr>ย่อย<wbr>ลง<wbr>ไป<wbr>อีก
+   2 หัว<wbr>ข้อ<wbr>คือ<wbr>หัว<wbr>ข้อ a และ b โดย<wbr>หัว<wbr>ข้อ a นั้น<wbr>ไว้<wbr>สำหรับ<wbr>การ<wbr>จัด<wbr>กา<wbr>รส<wbr>สภาพ<wbr>แวด<wbr>ล้อม<wbr>สำหรับ<wbr>เล่น<wbr>เกมส์<wbr>ส่วน<wbr>ใน<wbr>หัว<wbr>ข้อ
+   b ไว้<wbr>สำหรับ<wbr>การ<wbr>ทำงาน dos ทั่วๆ ไป
+   <p>
+   <center>
+   <table border = 0 bgcolor = c0c0c0 width = 50%>
+   <tr>
+   <td>
+   <dd>ms-dos 6 startup menu
+   <dd>1. application for dos
+   <dd>2. boot windows
+   <dd>3. normal boot !
+   <dd>enter a choise  : 1<p><p><p>&nbsp;&nbsp;
+   <dd>f5 =  bypass startup files  f8=confirm each config.sys
+   line
+   </table>
+   </center>
+   <br>
+   <center><b>รูป<wbr>แสดง<wbr>หน้า<wbr>ตา<wbr>เมนู<wbr>หลัก<wbr>ที่<wbr>เกิด<wbr>จาก<wbr>โปรแกรม<wbr>ดัง<wbr>ตัวอย่าง<wbr></b></center>
+   <p>
+
+
+   <center>
+   <table border = 0 bgcolor = c0c0c0 width = 50%>
+   <tr>
+   <td>
+   <dd>ms-dos 6 startup menu
+   <dd>1. game application dos
+   <dd>2. dos application &lt;load vsafe&gt;
+   <dd>enter a choise  : 1<p><p><p>&nbsp;&nbsp;
+   <dd>f5 =  bypass startup files  f8=confirm each config.sys
+   line
+   </table>
+   </center>
+   <br>
+   <center><b>รูป<wbr>แสดง<wbr>หน้า<wbr>ตา<wbr>เมนู<wbr>ย่อย<wbr>ที่<wbr>เกิด<wbr>หลังจาก<wbr>เลือก<wbr>หัว<wbr>ข้อ
+   application for dos จาก<wbr>เมนู<wbr>หลัก<wbr>รูป<wbr>บน<wbr></b></center>
+   <p>
+
+   <dd> ใน submenu ผู้<wbr>ใช้<wbr>สามารถ<wbr>ที่<wbr>จะ<wbr>ใช้<wbr>คำ<wbr>สั่ง menuitem,
+   menudefault, menucolor ฯลฯ  หรือ<wbr>คำ<wbr>สั่ง<wbr>ที่<wbr>ใช้<wbr>กับ<wbr>เมนู<wbr>หลัก<wbr>กับ<wbr>เมนู<wbr>ย่อย<wbr>ใน
+   submenu นี้<wbr>ได้<wbr>เช่น<wbr>กัน
+   <p>
+   <b><li>include</b><br>
+   <dd> เป็น<wbr>คำ<wbr>สั่ง<wbr>ที่<wbr>ช่ววย<wbr>ให้<wbr>ผู้<wbr>ใช้<wbr>ไม่<wbr>ต้อง<wbr>ทำ<wbr>การ<wbr>เขียน<wbr>คำ<wbr>สั่ง<wbr>ใน
+   config ใน<wbr>แต่<wbr>ละ<wbr>หัว<wbr>ข้อ<wbr>ซ้ำ<wbr>กัน โดย<wbr>ถ้า<wbr>ทุก<wbr>หัว<wbr>ข้อ<wbr>ของ<wbr>config
+   ของ<wbr>ผู้<wbr>ใช้<wbr>มี<wbr>คำ<wbr>สั่ง<wbr>ที่<wbr>ใช้<wbr>ซ้ำ<wbr>กัน<wbr>บ่อย ๆ ผู้<wbr>ใช้<wbr>อาจ<wbr>จะ<wbr>สร้าง<wbr>หัว<wbr>ข้อ
+   config พิเศษ<wbr>ขึ้น<wbr>มา<wbr>อีก<wbr>หัว<wbr>ข้อ<wbr>หนึ่ง<wbr>ที่<wbr>บรรจุ<wbr>คำ<wbr>สั่ง<wbr>ที่<wbr>ซ้ำ
+   ๆ กัน<wbr>นี้<wbr>ไว้ แล้ว<wbr>ถ้า<wbr>ใน config หัว<wbr>ข้อ<wbr>ไหน<wbr>ใช้<wbr>คำ<wbr>สั่ง<wbr>นี้
+   ผู้<wbr>ใช้<wbr>สามารถ<wbr>รถ<wbr>รวม<wbr>เอา<wbr>หัว<wbr>ข้อ<wbr>พิเศษ<wbr>นี้<wbr>เข้า<wbr>กับ config นั้น
+   ๆ หัว<wbr>ข้อ config สร้าง<wbr>เหมือน<wbr>หัว<wbr>ข้อ config ทั่ว ๆ ไป<wbr>ไม่<wbr>มี<wbr>ข้อ<wbr>กำหนด<wbr>พิเศษ<wbr>แต่<wbr>อย่าง<wbr>ใด
+   การ<wbr>ใช้<wbr>งาน<wbr>คำ<wbr>สั่ง<wbr>นี้<wbr>ใช้<wbr>งาน<wbr>ดัง<wbr>นี้ รูป<wbr>แบบ
+   <p>
+   <b>รูป<wbr>แบบ<wbr></b>
+   <dd> <b>include configname</b><p>
+
+   <dd><b>configname</b> คือ ชื่อ<wbr>ของ<wbr>หัว<wbr>ข้อ config ที่<wbr>ผู้<wbr>ใช้<wbr>สร้าง<wbr>ขึ้น<wbr>มาก<wbr>เก็บ<wbr>คำ<wbr>สั่ง<wbr>ที่<wbr>ใช้<wbr>ซ้ำ<wbr>กัน<wbr>บ่อย
+   ๆ
+   <dd>ผู้<wbr>ใช้<wbr>จะ<wbr>เห็น<wbr>ได้<wbr>ว่า<wbr>ใน<wbr>หัว<wbr>ข้อ nor เรา<wbr>ได้<wbr>จาก include
+   คำ<wbr>สั่ง<wbr>ทั้ง<wbr>หมด<wbr>ใน<wbr>หัว<wbr>ข้อ win มา<wbr>รวม<wbr>กัน<wbr>กับ<wbr>คำ<wbr>สั่ง vsafe.sys
+   ดัง<wbr>นั้น<wbr>ผู้<wbr>ใช้<wbr>สามารถ<wbr>ลด<wbr>ความ<wbr>ซับ<wbr>ซ้อน<wbr>ของ<wbr>คำ<wbr>สั่ง<wbr>ได้ เป็น<wbr>อย่าง<wbr>มาก
+   ทำ<wbr>ให้<wbr>สามารถ<wbr>แก้<wbr>ไข<wbr>หรือ<wbr>ไล่<wbr>การ<wbr>ทำงาน<wbr>ได้<wbr>ง่าย สะดวก<wbr>ขึ้น<wbr>และ<wbr>ที่<wbr>สำคัญ<wbr>ทำ<wbr>ให้<wbr>ไฟล์
+   config.sys มี<wbr>ขนาด<wbr>ที่<wbr>ลด<wbr>ลง
+   <p>
+   <center>
+   <table border = 1 bgcolor = c0c0c0>
+   <tr>
+   <td><b>ตัวอย่าง<wbr></b>
+   <dd>[menu]
+   <dd>menuitem win,  boot windows
+   <dd>menuitem nor,  normal boot !<p>
+   <dd>menudefault win, 10
+   <dd>menucolor 14, 3
+   <dd>[win]
+   <dd>device = c:\dos\himem.sys
+   <dd>devicehigh = c:\dos\emm386.exe noems
+   <dd>devicehigh = c:\dos\ansi.sys
+   <dd>devicehigh = c:\dos\setver.exe
+   <dd>dos=umb,high
+   <dd>stacks=0,0
+   <dd>files=25
+   <p>
+
+   <dd>[nor]
+   <dd><b>include win</b>
+   <dd>devicdhigh = c:\dos\vsasf.sys
+   </td>
+   </tr>
+   </table>
+   </center>
+   <p>
+
+   <b><li>numlock</b><br>
+   <dd>เป็น<wbr>คำ<wbr>สั่ง<wbr>ที่<wbr>จะ<wbr>เป็นการ<wbr>กด<wbr>คีย์ numlock on และ off
+   ให้<wbr>โดย<wbr>อัตโนมัติ<wbr>ที<wbr>น<wbr>ที<wbr>ที่<wbr>เปิด<wbr>เครื่อง โดย<wbr>เมื่อ numlock
+   on จะ<wbr>ทำ<wbr>ให้ kekypad ที่<wbr>อยู่<wbr>ด้าน<wbr>ขวา<wbr>บน<wbr>คีย์<wbr>ตัว<wbr>เลข แต่<wbr>ถ้า
+   numlock off คีย์<wbr>ร<wbr>จะ<wbr>ทำ<wbr>หน้าที่<wbr>เป็น คีย์<wbr>ควบ<wbr>คุม<wbr>ทิศ<wbr>ทาง page
+   up, page down, up, down,left, right เพื่อ<wbr>ประโยชน์<wbr>ใน<wbr>การ<wbr>ใช้<wbr>บังคับ<wbr>การ<wbr>เลือก<wbr>หัว<wbr>ข้อ<wbr>ใน<wbr>เมนู<wbr>ที่<wbr>ผู้<wbr>ใช้<wbr>ได้<wbr>สร้าง<wbr>ขึ้น
+   มี<wbr>การ<wbr>ใช้<wbr>งาน<wbr>ดัง<wbr>นี้
+   <p>
+   <b> รูป<wbr>แบบ </b><br>
+   <dd><b>nmlock off</b> หมาย<wbr>ถึง บังคับ keypad ให้<wbr>ทำ<wbr>หน้าที่<wbr>บังคับ<wbr>ทิศ<wbr>ทาง
+   <dd><b> numlock on </b> หมาย<wbr>ถึง บังคับ keypad  ให้<wbr>ทำ<wbr>หน้าที่<wbr>เป็น<wbr>คีย์<wbr>ตัว<wbr>เลข
+   <dd> ผู้<wbr>ใช้<wbr>สามารถ<wbr>ทราบ<wbr>สภาวะ<wbr>ของ<wbr>คีย์ numlock ว่า<wbr>อยู่<wbr>ใน<wbr>สภาวะ
+   on หรือ off ได้<wbr>จาก<wbr>ไฟล์ numlock ที่<wbr>อยู่<wbr>บน<wbr>ครีย์<wbr>บอร์ด
+   <p>
+   </ul>
+
+
+   <font face = "ms sans serif" size = +1 color = a2510f><b>สร้าง<wbr>เมนู<wbr>สำหรับ<wbr>การ<wbr>เลือก<wbr>ติด<wbr>ตั้ง<wbr>ข้อ<wbr>กำหนด
+   (multiple configuration)</b></font>
+
+   <dd>ใน<wbr>การ<wbr>สร้าง<wbr>เมนู<wbr>สำหรับ<wbr>การ<wbr>เลือก<wbr>ติด<wbr>ตั้ง<wbr>ข้อ<wbr>กำหนด<wbr>นั้น<wbr>ไม่<wbr>ได้<wbr>ยาก<wbr>เย็น<wbr>อะไร<wbr>เลย
+   ผู้<wbr>ใช้<wbr>เพียง<wbr>แต่<wbr>คำ<wbr>สั่ง<wbr>ที่<wbr>ได้<wbr>เรียน<wbr>รู้<wbr>ไป<wbr>แล้ว<wbr>ข้าง<wbr>ต้น<wbr>นำ<wbr>มา<wbr>ประกอบ<wbr>เรียง<wbr>กัน<wbr>เข้า<wbr>ไว้<wbr>ใน<wbr>ไฟล์
+   config.sys แต่<wbr>มี<wbr>จำ<wbr>กำหนด<wbr>เล็ก<wbr>น้อย ข้อ<wbr>กำหนด<wbr>ที่<wbr>ว่า<wbr>นี้<wbr>คือ
+    ต้อง<wbr>มี<wbr>หัว<wbr>ข้อ<wbr>หลัก<wbr>ที่<wbr>เก็บ<wbr>คำ<wbr>สั่ง<wbr>ใน<wbr>การ<wbr>แสดง<wbr>รายการ<wbr>หลัก ซึ่ง<wbr>หัว<wbr>ข้อ<wbr>ที่<wbr>ว่า<wbr>นั้น<wbr>ก็<wbr>คือ<wbr>หัว<wbr>ข้อ<wbr>ที่<wbr>ชื่อ<wbr>เมนู
+   menu ซึ่ง<wbr>ถ้า<wbr>จะ<wbr>เปรียบ<wbr>กับ<wbr>โปรแกรม<wbr>โดย<wbr>ทั่ว ๆ ไป<wbr>หัว<wbr>ข้อ menu
+   นั้น<wbr>ก็<wbr>คือ<wbr>โปรแกรม<wbr>หลัก<wbr>นั่น<wbr>เอง หัว<wbr>ข้อ menu นี้<wbr>จะ<wbr>เป็น<wbr>ตัว<wbr>บอก<wbr>ดอส<wbr>ว่า<wbr>นี้<wbr>เป็น<wbr>จุด<wbr>เริ่ม<wbr>ต้น<wbr>หรือ<wbr>หัว<wbr>ข้อ<wbr>แร<wbr>ที่<wbr>จะ<wbr>ต้อง<wbr>ทำ
+   ซึ่ง<wbr>ผู้<wbr>ใช้<wbr>ไม่<wbr>สามารถ<wbr>ที่<wbr>จะ<wbr>เปลี่ยน<wbr>เป็น<wbr>ชื่อ<wbr>อื่น<wbr>ได้ สรุป<wbr>แล้ว<wbr>ผู้<wbr>ใช้<wbr>ต้อง<wbr>มี<wbr>หัว<wbr>ข้อ<wbr>หลัก<wbr>ที่<wbr>ชื่อ
+   menu ไว้<wbr>เสมอ และ<wbr>ที่<wbr>สำคัญ<wbr>หัว<wbr>ข้อ<wbr>ทุก<wbr>หัว<wbr>ข้อ<wbr>ต้อง<wbr>เขียน<wbr>อยู่<wbr>ใน<wbr>เรื่อง<wbr>หมาย
+   ( )เสมอ และ<wbr>ชื่อ<wbr>ของ<wbr>หัว<wbr>ข้อ<wbr>ที่<wbr>ตั้ง<wbr>มี<wbr>ความ<wbr>ยาว<wbr>ได้<wbr>ถึง 70 ตัว<wbr>อักษร<wbr>แต่<wbr>ต้อง<wbr>ไม่<wbr>ช่อง<wbr>ว่าง<wbr>และ<wbr>เครื่อง<wbr>หมาย<wbr>ต่างๆ
+   ดัง<wbr>นี้
+   \/,;=[ ]<p>
+
+
+   <p>
+   <center>
+   <table border = 1 bgcolor = c0c0c0>
+   <tr>
+   <td><b>ตัวอย่าง<wbr></b><br>
+   <b>โปรแกรม<wbr>ใน<wbr>ไฟล์ config.sys</b>
+   <dd>rem  this multi config
+   rem is write
+   <dd>rem by
+   <dd>rem  microcomputer user
+   <p>
+
+   <dd>[menu]
+   <dd>submenu enter,  entertain
+   <dd>menuitem win,  boot windows
+   <dd>menuitem nor,  normal boot !
+   <dd>menudefault win, 10
+   <dd>menucolor 14, 3
+
+
+   <dd>[enter]
+   <dd>menuitem game,   game application
+   <dd>menuitem dos,   dos appication &lt;load vsafe &gt;
+   <dd>menucolor 15, 1
+
+   <dd>[game]
+   <dd>device = c:\dos\himem.sys
+   <dd>devicehigh = c:\dos\emm386.exe noems
+   <dd>devicehigh = c:\dos\ansi.sys
+   <dd>devicehigh = c:\dos\setver.exe
+   <dd>dos=umb,high
+   <dd>stacks=0,0
+   <dd>files=25
+   <p>
+
+   <dd>[nor]
+   <dd>include a
+   <dd>devicdhigh = c:\dos\vsasf.sys
+
+   <p>
+   <dd>[win]
+   <dd>device = c:\dos\himem.sys
+   <dd>devicehigh = c:\dos\emm386.exe noems
+   <dd>devicehigh = c:\dos\ansi.sys
+   <dd>devicehigh = c:\dos\setver.exe
+   <dd>dos=umb,high
+   <dd>devicehigh=c:\windows\ifshlp.sys
+
+   <p>
+   <dd>[normal]
+   <dd>device = c:\dos\himem.sys
+   <dd>devicehigh = c:\dos\emm386.exe
+   <dd>dos=umb,high
+   <dd>devicehigh=c:\mouse\lmouse
+
+   </td>
+   </tr>
+   </table>
+   </center>
+   <p>
+
+   <dd>จาก<wbr>โปรแกรม<wbr>ตัวอย่าง<wbr>เรา<wbr>จะ<wbr>ออก<wbr>แบบ<wbr>หน้า<wbr>ตา<wbr>หรือ<wbr>หัว<wbr>ข้อ<wbr>ที่<wbr>จะ<wbr>ติดต่อ<wbr>กับ<wbr>ผู้<wbr>ใช้<wbr>มี
+   3 หัว<wbr>ข้อ<wbr>และ<wbr>มี<wbr>เมนู<wbr>ย่อย<wbr>อีก 1 หัว<wbr>ข้อ<wbr>โดย<wbr>ให้<wbr>หัว<wbr>ข้อ entertain
+   มี<wbr>รายการ<wbr>เมนู<wbr>ย่อย<wbr>อยู่ และ<wbr>ใน<wbr>รายการ<wbr>เมนู<wbr>ย่อย<wbr>นั้น<wbr>มี<wbr>หัว<wbr>ข้อ<wbr>ให้<wbr>เลือก<wbr>อีก
+   2 หัว<wbr>ข้อ<wbr>คือ game application ซึ่ง<wbr>เป็น config ที่<wbr>สำหรับ<wbr>ปรับ<wbr>แต่ง<wbr>สำหรับ<wbr>การ<wbr>เล่น<wbr>เมส์
+   และ<wbr>หัว<wbr>ข้อ dos application &lt;load vsafe&gt; สำหรับ<wbr>การ<wbr>ใช้<wbr>งาน<wbr>บน<wbr>ดอส
+
+   <p>
+   <center>
+   <table border = 0 bgcolor = c0c0c0 width = 50%>
+   <tr>
+   <td>
+   <dd>ms-dos 6 startup menu
+   <dd>1. entertain
+   <dd>2. <b>boot windows</b>
+   <dd>3. normal boot !
+   <dd>enter a choise  : 2<p><p><p>&nbsp;&nbsp;
+   <dd>f5 =  bypass startup files  f8=confirm each config.sys
+   line
+   </table>
+   </center>
+   <br>
+   <center><b>รูป<wbr>แสดง<wbr>หน้า<wbr>ตา<wbr>เมนู<wbr>หลัก<wbr>ที่<wbr>เกิด<wbr>จาก<wbr>โปรแกรม<wbr>ดัง<wbr>ตัวอย่าง<wbr></b></center>
+   <p>
+   <p>
+   <center>
+   <table border = 0 bgcolor = c0c0c0 width = 50%>
+   <tr>
+   <td>
+   <dd>ms-dos 6 startup menu
+   <dd>1. game application for dos
+   <dd><b>2. dos application &lt;load vsafe&gt;</b>
+   <dd>enter a choise  : 2<p><p><p>&nbsp;&nbsp;
+   <dd>f5 =  bypass startup files  f8=confirm each config.sys
+   line
+   </table>
+   </center>
+   <br>
+   <center><b>รูป<wbr>แสดง<wbr>หน้า<wbr>ตา<wbr>เมนู<wbr>ย่อย<wbr>ที่<wbr>เกิด<wbr>หลังจาก<wbr>เลือก<wbr>หัว<wbr>ข้อ
+   application for dos จาก<wbr>เมนู<wbr>หลัก<wbr>บน<wbr></b></center>
+   <p>
+   <dd>หลังจาก<wbr>ที่<wbr>ทำ<wbr>การ<wbr>แก้<wbr>ไข<wbr>ไฟล์ config.sys ตาม<wbr>โปรแกรม<wbr>ข้าง<wbr>ต้น<wbr>แล้ว<wbr>ผู้<wbr>ใช้<wbr>จำเป็น<wbr>จะ<wbr>ต้อง<wbr>แก้<wbr>ไข<wbr>ไฟล์
+   autoexec.bet เพื่อ<wbr>ให้<wbr>สามารถ<wbr>รับ<wbr>กับ config.sys ตัว<wbr>ใหม่<wbr>ซึ่ง<wbr>การ<wbr>แก้<wbr>ไข<wbr>นั้น<wbr>จะ<wbr>พูด<wbr>กัน<wbr>ใน<wbr>หัว<wbr>ข้อ<wbr>ต่อ<wbr>ไป<wbr>นี้
+
+   <p>
+   <font face = "ms sans serif" size = +1 color = a2510f><b>ปรับ<wbr>รูป<wbr>แบบ<wbr>ไฟล์
+   autoexec.bat ใหม่<wbr></font></b>
+   <dd>ประโยชน์<wbr>จาก<wbr>การ<wbr>ปรับ<wbr>แต่ง<wbr>ไฟล์ config.sys ให้<wbr>สามารถ<wbr>ทำ<wbr>การ<wbr>เลือก<wbr>ข้อ<wbr>กำหนด<wbr>ได้
+   (multiple configuration) ทำ<wbr>ให้<wbr>ผู้<wbr>ใช้<wbr>สามารถ<wbr>ทำ<wbr>การ<wbr>เลือก<wbr>ข้อ<wbr>กำหนด<wbr>ใน<wbr>ไฟล์
+   autoexec.bat ได้<wbr>โดย<wbr>ปริ<wbr>ยา<wbr>ยา เพราะ<wbr>ว่า<wbr>ค่า<wbr>ตัว<wbr>เลือก<wbr>ที่<wbr>ถูก<wbr>ลือ<wbr>ก<wbr>จาก<wbr>เมนู<wbr>ใน
+   config.sys สามารถ<wbr>ที่<wbr>จะ<wbr>ส่ง<wbr>ผล<wbr>ข้าม<wbr>มา<wbr>ยัง<wbr>ไฟล์ autoexec.bat
+   ได้<wbr>ด้วย โดย<wbr>ใน<wbr>ตอน<wbr>ต้น<wbr>ของ<wbr>ไฟล์ autoexec.bat จำเป็น<wbr>ต้อง<wbr>ที่<wbr>จะ<wbr>ใส่<wbr>คำ<wbr>สั่ง<wbr>ที่<wbr>รีบ<wbr>ค่า<wbr>จาก<wbr>ไฟล์
+   config.sys แล้ว<wbr>นำ<wbr>ค่า<wbr>ที่<wbr>รับ<wbr>ได้<wbr>มา<wbr>ทำ<wbr>การ<wbr>เปรียบเทียบ<wbr>กับ<wbr>หัว<wbr>ข้อ<wbr>ที่<wbr>กำหนด<wbr>เพื่อ<wbr>ที่<wbr>จะ<wbr>ได้<wbr>กระโดด<wbr>ไป<wbr>ทำงาน<wbr>ตาม<wbr>คำ<wbr>สั่ง<wbr>ที่<wbr>รับ<wbr>ค่า<wbr>wbr<wbr>>wbr
+   config.sys แล้ว<wbr>นำ<wbr>ค่า<wbr>ที่<wbr>รับ<wbr>ได้<wbr>มา<wbr>ทำ<wbr>การ<wbr>เปรียบเทียบ<wbr>กับ<wbr>หัว<wbr>ข้อ<wbr>ที่<wbr>กำหนด<wbr>เพื่อ<wbr>ที่<wbr>จะ<wbr>ได้<wbr>กระโดด<wbr>ไป<wbr>ทำงาน<wbr>ตาม<wbr>คำ<wbr>สั่ง<wbr>ที่<wbr>บรรจุ<wbr>อยู่<wbr>wbr<wbr>>w<wbr>br<<wbr>wb<wbr>r>>w<wbr><wb<wbr>r>br<wbr><<<wbr>wbr
+   (label) ใน<wbr>ไฟล์ autoexec.bat ย่อย ๆ แต่<wbr>ละ<wbr>หัว<wbr>ข้อ<wbr>ต้อง<wbr>ใส่<wbr>ตัว<wbr>ปิด<wbr>ท้าย<wbr>เพื่อ<wbr>เป็นการ<wbr>บังคับ<wbr>ให้<wbr>กระโดด<wbr>ไป<wbr>จบ<wbr>โปรแกรม<wbr>ซึ่ง<wbr>ก็<wbr>เป็นการ<wbr>จบ<wbr>การ<wbr>ทำงาน<wbr>ของ<wbr>รายการ<wbr>เมนู<wbr>ทั้ง<wbr>หมด<wbr>wb<wbr>r>wb<wbr><wb<wbr>r>r<wbr>>wb<w<wbr>br><<wbr>wb<wbr><wb<wbr>r>r<wbr>>r<<wbr>wbr>>wb<w<w<wbr>br><wbr>br><<<wbr>wbr<wbr>>wb<
+   config.sys คือ <b>goto%config%</b> ซึ่ง<wbr>ต้อง<wbr>ใส่<wbr>ไว้<wbr>ตอน<wbr>ต้น<wbr>ใน<wbr>ไฟล์
+   autoexec.bat  ดัง<wbr>โปรแกรม<wbr>ตัวอย่าง<wbr>ด้าน<wbr>ล่าง ซึ่ง<wbr>จะ<wbr>เห็น<wbr>ว่า
+   2 บรรทัด<wbr>แรก<wbr>เป็น<wbr>คำ<wbr>สั่ง<wbr>ดอส<wbr>ใส่<wbr>ไว้<wbr>เพื่อ<wbr>ทำ<wbr>การ<wbr>ไม่<wbr>ให้<wbr>แสดง<wbr>ผล<wbr>การ<wbr>ทำ<wbr>ลาน<wbr>และ<wbr>ล้าง<wbr>หน้า<wbr>จอ
+   จาก<wbr>นั้น<wbr>ค่อย<wbr>รับ<wbr>ค่า<wbr>เข้า<wbr>มา และ<wbr>หัว<wbr>ข้อ<wbr>ใน<wbr>ไฟล์ autoexec.bat
+   จะ<wbr>ตรง<wbr>กับ<wbr>หัว<wbr>ข้อ<wbr>ใน<wbr>ไฟล์ config.sys แต่<wbr>หัว<wbr>ข้อ<wbr>ใน<wbr>ไฟล์ autoexec.bay
+   จะ<wbr>ใช้<wbr>เครื่อง<wbr>หมาย โค<wbr>ลอน<wbr>(:)แทน<wbr>เครื่อง<wbr>หมาย () เพราะ<wbr>คำ<wbr>สั่ง
+   <b>goto%config%</b> จะ<wbr>เปรียบเทียบ<wbr>ค่า<wbr>ที่<wbr>รับ<wbr>เข้า<wbr>มา<wbr>และ<wbr>ตอน<wbr>ท้าย<wbr>ของ<wbr>ทุก<wbr>หัว<wbr>ข้อ<wbr>ย่อย<wbr>จะ<wbr>ใส่<wbr>คำ<wbr>สั่ง
+   goto end เพื่อ<wbr>ที่<wbr>จะ<wbr>กระโดด<wbr>ไป<wbr>ยัง  ลา<wbr>เบล ที่<wbr>ชื่อ end เป็นการ<wbr>จบ<wbr>การ<wbr>ทำงาน
+   <p>
+   <center>
+   <table border = 0 bgcolor = c0c0c0 width = 50%>
+   <tr>
+   <td>
+   <b>ตัวอย่าง<wbr><br>
+   โปรแกรม<wbr>ใน<wbr>ไฟล์ autoexec.bat ที่<wbr>สัมพันธ์<wbr>กับ<wbr>ไฟล์ config.sys
+   ใน<wbr>การ<wbr>ทำ multiple configuration ใน<wbr>หัว<wbr>ข้อ<wbr>ที่<wbr>แล้ว
+   </b>
+   <dd>rem    this multi autoexec.bat
+   <dd>rem    is write
+   <dd>rem     by
+   <dd>rem   microcomputer user
+   <dd>@echo off
+   <dd>cls
+   <dd>goto %config%
+   <dd>goto end
+   <p>
+   <dd>:game
+   <dd>c:\windows\smartdrv.exe /e:/4096/b:8192
+   <dd>loadhigh=lmouse
+   <dd>c:\dos\bootsafe
+   <dd>cd review
+   <dd>call driver.bat
+   <dd>cd\
+   <dd>goto end
+   <p>
+
+   <dd>:dos
+   <dd>c:\windows\smartdrv.exe
+   <dd>prompt $p$g$e[1;36;40m
+   <dd>path c:\execl;c:\winword;c:\windows;c:\dos;
+   </table>
+   </center>
+   <p>
+   <hr noshade>
+   ที่<wbr>มา : พี<wbr>ระ<wbr>พงษ์ สร<wbr>สีห์  วารสาร<wbr>ไมโคร<wbr>คอมพิวเตอร์ ยู<wbr>สเซอร์
+   ฉบับ<wbr>ที่ 11 (ตุลาคม 2537)
+
+</body>
+</html>

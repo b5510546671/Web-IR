@@ -1,0 +1,173 @@
+<!doctype html public "-//w3c//dtd xhtml 1.0 transitional//en" "http://www.w3.org/tr/xhtml1/dtd/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>online graduate request forms</title>
+<link rel="stylesheet" href="style.css" type="text/css">
+
+<script language=javascript>
+function check()
+{
+	chk1=document.getelementbyid('stu_id');
+	chk2=document.getelementbyid('personal_id');
+	chk3=document.getelementbyid('email');
+	
+	if (chk1.value=="")
+	{
+		alert("à¸à¸£à¸¸à¸à¸²à¹à¸ªà¹à¹à¸¥à¸à¸à¸£à¸°à¸à¸³à¸à¸±à¸§à¸à¸´à¸ªà¸´à¸");
+		chk1.focus();
+		return false;
+	}
+	else if (chk2.value=="")
+	{
+		alert("à¸à¸£à¸¸à¸à¸²à¹à¸ªà¹à¹à¸¥à¸à¸à¸±à¸à¸£à¸à¸£à¸°à¸à¸²à¸à¸ 5 à¸«à¸¥à¸±à¸à¸ªà¸¸à¸à¸à¹à¸²à¸¢");
+		chk2.focus();
+		return false;
+	}
+	else if (chk3.value=="")
+	{
+		alert("à¸à¹à¸²à¸à¸¢à¸±à¸à¹à¸¡à¹à¹à¸à¹à¸à¸£à¸­à¸à¸­à¸µà¹à¸¡à¸¥à¹");
+		chk3.focus();
+		return false;
+	}
+
+}
+</script>
+<script language="javascript">
+function numbers(e){
+	var keynum;
+	var keychar;
+	var numcheck;
+	if(window.event) {
+		keynum = e.keycode;
+	}
+	else if(e.which) {
+		keynum = e.which;
+	}
+	if(keynum == 13 || keynum == 8 || typeof(keynum) == "undefined"){
+		return true;
+	}
+	keychar= string.fromcharcode(keynum);
+	numcheck = /^[0-9]$/;
+	return numcheck.test(keychar);}
+</script>
+
+</head>
+
+<body class="onecolfixctrhdr">
+
+<div id="container">
+  <div id="header">
+  <img src="images/ogrf_b.jpg" width="780" height="90" />
+<!-- end #header --></div>
+  <div id="maincontent">
+    <h3><br>à¸£à¸°à¸à¸à¸¢à¸·à¹à¸à¸à¸³à¸£à¹à¸­à¸à¸à¹à¸²à¸à¸£à¸°à¸à¸à¸­à¸­à¸à¹à¸¥à¸à¹</h3>
+    <p>    
+    <form id="form1" name="form1" method="post" action="login.php" enctype="multipart/form-data" onsubmit="return check();">
+    <strong>à¸à¸£à¸¸à¸à¸²à¸£à¸°à¸à¸¸à¸à¹à¸­à¸¡à¸¹à¸¥à¹à¸«à¹à¸à¸¹à¸à¸à¹à¸­à¸/à¸à¸£à¸à¸à¹à¸§à¸</strong>
+      <table width="600" border="0" cellspacing="3" cellpadding="3" align="center">
+      <tr>
+        <td width="50%" align="right">à¸£à¸«à¸±à¸ªà¸à¸£à¸°à¸à¸³à¸à¸±à¸§à¸à¸´à¸ªà¸´à¸ : </td>
+        <td width="50%"><input type="text" name="stu_id" id="stu_id" size="10" maxlength="10" onkeypress='return numbers(event);' /></td>
+      </tr>
+      <tr>
+        <td align="right">à¹à¸¥à¸à¸à¸µà¹à¸à¸±à¸à¸£à¸à¸£à¸°à¸à¸³à¸à¸±à¸§à¸à¸£à¸°à¸à¸²à¸à¸ (5à¸à¸±à¸§à¸ªà¸¸à¸à¸à¹à¸²à¸¢): </td>
+        <td><input type="password" name="personal_id" id="personal_id" size="5" maxlength="5" onkeypress='return numbers(event);' /></td>
+      </tr>
+      <tr>
+        <td align="right">à¸§à¸±à¸à¹à¸à¸·à¸­à¸à¸à¸µà¹à¸à¸´à¸ : </td>
+        <td>
+          <select name="date_in" id="date_in">
+<option value="01">1</option><option value="02">2</option><option value="03">3</option><option value="04">4</option><option value="05">5</option><option value="06">6</option><option value="07">7</option><option value="08">8</option><option value="09">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28" selected="selected" >28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option>          </select>
+          <select name="month_in" id="month_in">
+<option value="à¸¡.à¸.">à¸¡à¸à¸£à¸²à¸à¸¡</option><option value="à¸.à¸.">à¸à¸¸à¸¡à¸ à¸²à¸à¸±à¸à¸à¹</option><option value="à¸¡à¸µ.à¸.">à¸¡à¸µà¸à¸²à¸à¸¡</option><option value="à¹à¸¡.à¸¢.">à¹à¸¡à¸©à¸²à¸¢à¸</option><option value="à¸.à¸.">à¸à¸¤à¸©à¸ à¸²à¸à¸¡</option><option value="à¸¡à¸´.à¸¢.">à¸¡à¸´à¸à¸¸à¸à¸²à¸¢à¸</option><option value="à¸.à¸.">à¸à¸£à¸à¸à¸²à¸à¸¡</option><option value="à¸ª.à¸." selected="selected" >à¸ªà¸´à¸à¸«à¸²à¸à¸¡</option><option value="à¸.à¸¢.">à¸à¸±à¸à¸¢à¸²à¸¢à¸</option><option value="à¸.à¸.">à¸à¸¸à¸¥à¸²à¸à¸¡</option><option value="à¸.à¸¢.">à¸à¸¤à¸¨à¸à¸´à¸à¸²à¸¢à¸</option><option value="à¸.à¸.">à¸à¸±à¸à¸§à¸²à¸à¸¡</option>          </select>
+          <select name="year_in" id="year_in">
+<option value="2557">2557</option><option value="2556">2556</option><option value="2555">2555</option><option value="2554">2554</option><option value="2553">2553</option><option value="2552">2552</option><option value="2551">2551</option><option value="2550">2550</option><option value="2549">2549</option><option value="2548">2548</option><option value="2547">2547</option><option value="2546">2546</option><option value="2545">2545</option><option value="2544">2544</option><option value="2543">2543</option><option value="2542">2542</option><option value="2541">2541</option><option value="2540">2540</option><option value="2539">2539</option><option value="2538">2538</option><option value="2537">2537</option><option value="2536">2536</option><option value="2535">2535</option><option value="2534">2534</option><option value="2533">2533</option><option value="2532">2532</option><option value="2531">2531</option><option value="2530">2530</option><option value="2529">2529</option><option value="2528">2528</option><option value="2527">2527</option><option value="2526">2526</option><option value="2525">2525</option><option value="2524">2524</option><option value="2523">2523</option><option value="2522">2522</option><option value="2521">2521</option><option value="2520">2520</option><option value="2519">2519</option><option value="2518">2518</option><option value="2517">2517</option><option value="2516">2516</option><option value="2515">2515</option><option value="2514">2514</option><option value="2513">2513</option><option value="2512">2512</option><option value="2511">2511</option><option value="2510">2510</option><option value="2509">2509</option><option value="2508">2508</option><option value="2507">2507</option><option value="2506">2506</option><option value="2505">2505</option><option value="2504">2504</option><option value="2503">2503</option><option value="2502">2502</option><option value="2501">2501</option><option value="2500">2500</option><option value="2499">2499</option><option value="2498">2498</option><option value="2497">2497</option><option value="2496">2496</option><option value="2495">2495</option><option value="2494">2494</option><option value="2493">2493</option><option value="2492">2492</option><option value="2491">2491</option><option value="2490">2490</option><option value="2489">2489</option><option value="2488">2488</option><option value="2487">2487</option><option value="2486">2486</option><option value="2485">2485</option><option value="2484">2484</option><option value="2483">2483</option><option value="2482">2482</option><option value="2481">2481</option><option value="2480">2480</option><option value="2479">2479</option><option value="2478">2478</option><option value="2477">2477</option><option value="2476">2476</option><option value="2475">2475</option>          </select></td>
+      </tr>
+      <tr>
+        <td align="right">&nbsp;</td>
+        <td><input type="submit" name="submit" id="submit" value="submit" /></td>
+      </tr>
+    </table>
+    </form>
+	<br />
+<center>
+  <font color="#ff0000"><strong>à¸ªà¸³à¸«à¸£à¸±à¸à¸à¸¹à¹à¸ªà¸³à¹à¸£à¹à¸à¸à¸²à¸£à¸¨à¸¶à¸à¸©à¸²à¸à¸µà¹à¸­à¸à¸¸à¸¡à¸±à¸à¸´à¸à¸£à¸´à¸à¸à¸² à¸§à¸±à¸à¸à¸µà¹ <u>31 à¸.à¸. 2560</u><br />
+  à¸ªà¸²à¸¡à¸²à¸£à¸à¸¢à¸·à¹à¸à¸à¸­à¸«à¸à¸±à¸à¸ªà¸·à¸­à¸£à¸±à¸à¸£à¸­à¸à¸ªà¸³à¹à¸£à¹à¸à¸à¸²à¸£à¸¨à¸¶à¸à¸©à¸²à¹à¸à¹à¸à¸±à¹à¸à¹à¸à¹à¸§à¸±à¸à¸à¸µà¹ <u>29 à¸ª.à¸. 2560</u> à¹à¸à¹à¸à¸à¹à¸à¹à¸<br />
+  à¸«à¸²à¸à¸¢à¸·à¹à¸à¸à¸³à¸£à¹à¸­à¸à¸­à¸­à¸à¹à¸¥à¸à¹à¸¡à¸²à¸à¹à¸­à¸à¸à¸°à¸¢à¸±à¸à¹à¸¡à¹à¸ªà¸²à¸¡à¸²à¸£à¸à¸à¸³à¹à¸à¸´à¸à¸à¸²à¸£à¹à¸à¹<br />
+  à¹à¸à¸¢à¸à¸´à¸ªà¸´à¸à¸à¸°à¹à¸à¹à¸£à¸±à¸à¸«à¸à¸±à¸à¸ªà¸·à¸­à¸£à¸±à¸à¸£à¸­à¸à¸§à¹à¸²à¸ªà¸³à¹à¸£à¹à¸à¸à¸²à¸£à¸¨à¸¶à¸à¸©à¸²à¹à¸à¹à¸à¸±à¹à¸à¹à¸à¹à¸§à¸±à¸à¸à¸µà¹ <u>31 à¸ª.à¸. 2560</u></strong></font>
+</center>
+<!--	<br />
+<center>
+  <font color="#ff00ff"><strong>à¸ªà¸³à¸«à¸£à¸±à¸à¸à¸¹à¹à¸ªà¸³à¹à¸£à¹à¸à¸à¸²à¸£à¸¨à¸¶à¸à¸©à¸²à¸à¸µà¹à¸­à¸à¸¸à¸¡à¸±à¸à¸´à¸à¸£à¸´à¸à¸à¸² à¸§à¸±à¸à¸à¸µà¹ <u>15 à¸ª.à¸. 2559</u><br />
+  à¸ªà¸²à¸¡à¸²à¸£à¸à¸¢à¸·à¹à¸à¸à¸­à¸«à¸à¸±à¸à¸ªà¸·à¸­à¸£à¸±à¸à¸£à¸­à¸à¸ªà¸³à¹à¸£à¹à¸à¸à¸²à¸£à¸¨à¸¶à¸à¸©à¸²à¹à¸à¹à¸à¸±à¹à¸à¹à¸à¹à¸§à¸±à¸à¸à¸µà¹ <u>30 à¸ª.à¸. 2559</u> à¹à¸à¹à¸à¸à¹à¸à¹à¸<br />
+  à¸«à¸²à¸à¸¢à¸·à¹à¸à¸à¸³à¸£à¹à¸­à¸à¸­à¸­à¸à¹à¸¥à¸à¹à¸¡à¸²à¸à¹à¸­à¸à¸à¸°à¸¢à¸±à¸à¹à¸¡à¹à¸ªà¸²à¸¡à¸²à¸£à¸à¸à¸³à¹à¸à¸´à¸à¸à¸²à¸£à¹à¸à¹<br />
+  à¹à¸à¸¢à¸à¸´à¸ªà¸´à¸à¸à¸°à¹à¸à¹à¸£à¸±à¸à¸«à¸à¸±à¸à¸ªà¸·à¸­à¸£à¸±à¸à¸£à¸­à¸à¸§à¹à¸²à¸ªà¸³à¹à¸£à¹à¸à¸à¸²à¸£à¸¨à¸¶à¸à¸©à¸²à¹à¸à¹à¸à¸±à¹à¸à¹à¸à¹à¸§à¸±à¸à¸à¸µà¹ <u>2 à¸.à¸¢. 2559</u></strong></font>
+</center>
+-->
+	<br />
+	<table width="700" border="1" cellspacing="1" cellpadding="5" align="center">
+      <tr>
+        <td align="center"><a href="http://www2.grad.ku.ac.th/news/publicshow.php?id=3203" target="_blank">à¸à¸£à¸°à¸à¸²à¸¨à¸à¸±à¸à¸à¸´à¸à¸§à¸´à¸à¸¢à¸²à¸¥à¸±à¸¢ à¹à¸£à¸·à¹à¸­à¸ à¸à¸²à¸£à¸à¸­à¸«à¸à¸±à¸à¸ªà¸·à¸­à¸£à¸±à¸à¸£à¸­à¸à¸à¹à¸²à¸à¸£à¸°à¸à¸à¸¢à¸·à¹à¸à¸à¸³à¸£à¹à¸­à¸à¸­à¸­à¸à¹à¸¥à¸à¹ (ogrf)</a></td>
+      </tr>
+      <tr>
+        <td align="left"><font color="#ff0000"><u><strong>à¸à¹à¸­à¹à¸à¸°à¸à¸³</strong></u></font></td>
+      </tr>
+      <tr>
+        <td>
+        	<table cellpadding="3">
+            	<tr>
+                	<td>- for international  student >> <a href="index_en.php"><font color="#ff0000"><u>english version</u></font></a>
+                    </td>
+				</tr>
+               <tr>
+                	<td>- à¸à¸²à¸£à¹à¸à¹à¸à¸²à¸à¸£à¸°à¸à¸à¸¢à¸·à¹à¸à¸à¸³à¸£à¹à¸­à¸à¸­à¸­à¸à¹à¸¥à¸à¹ à¸ªà¸²à¸¡à¸²à¸£à¸à¹à¸à¹à¹à¸à¹à¹à¸à¸à¸²à¸°<font color="#ff0000"><u>à¸à¸´à¸ªà¸´à¸à¸à¸µà¹à¹à¸à¹à¸²à¸¨à¸¶à¸à¸©à¸²à¸£à¸«à¸±à¸ªà¸à¸±à¹à¸à¹à¸à¹à¸£à¸«à¸±à¸ª 48 à¹à¸à¹à¸à¸à¹à¸à¹à¸</u></font>
+                    </td>
+				</tr>
+                <tr>
+                	<td>- à¸à¸¹à¹à¸¢à¸·à¹à¸à¸à¸­à¸«à¸à¸±à¸à¸ªà¸·à¸­à¸£à¸±à¸à¸£à¸­à¸à¸à¹à¸­à¸<font color="#ff0000"><u>à¸à¸´à¸¡à¸à¹à¹à¸à¹à¸ªà¸à¸à¸£à¸²à¸¢à¸¥à¸°à¹à¸­à¸µà¸¢à¸à¸à¸³à¸£à¹à¸­à¸</u></font> à¹à¸à¸·à¹à¸­à¹à¸à¹à¹à¸à¸à¸²à¸£à¸à¸³à¸£à¸°à¹à¸à¸´à¸à¹à¸¥à¸°à¸£à¸±à¸à¸«à¸à¸±à¸à¸ªà¸·à¸­à¸£à¸±à¸à¸£à¸­à¸ ***
+                    </td>
+				</tr>
+                <tr>
+                	<td>- à¸à¸¹à¹à¸¢à¸·à¹à¸à¸à¸­à¸«à¸à¸±à¸à¸ªà¸·à¸­à¸£à¸±à¸à¸£à¸­à¸à¸à¸£à¸§à¸à¸ªà¸­à¸à¸ªà¸à¸²à¸à¸°à¸à¸³à¸£à¹à¸­à¸ à¹à¸à¸¢à¸à¸°à¸à¹à¸­à¸à¸à¸¶à¹à¸à¸ªà¸à¸²à¸à¸°à¸§à¹à¸² <font color="#ff0000"><u>âà¹à¸à¹à¸à¸à¸¥à¸à¸´à¸ªà¸´à¸ à¸­à¸à¸¸à¸¡à¸±à¸à¸´ à¹à¸¥à¸°à¸£à¸±à¸à¹à¸­à¸à¸ªà¸²à¸£à¸à¸·à¸â</u></font> à¸à¹à¸­à¸ à¸à¸¶à¸à¸à¸°à¸à¸´à¸à¸à¹à¸­à¸à¸­à¸£à¸±à¸à¸«à¸à¸±à¸à¸ªà¸·à¸­à¸£à¸±à¸à¸£à¸­à¸à¹à¸à¹
+                    </td>
+				</tr>
+                <tr>
+                	<td>- à¸à¸¹à¹à¸¢à¸·à¹à¸à¸à¸­à¸«à¸à¸±à¸à¸ªà¸·à¸­à¸£à¸±à¸à¸£à¸­à¸à¸à¹à¸­à¸à¹à¸à¸£à¸µà¸¢à¸¡<font color="#ff0000"><u>à¸£à¸¹à¸à¸à¸à¸²à¸ 1 à¸à¸´à¹à¸§ (à¸à¸±à¸à¸à¸­à¸à¸à¸²à¸§à¸­à¸­à¸)</u></font> (à¸à¸²à¸¡à¸à¸³à¸à¸§à¸à¸à¸µà¹à¸à¸­) à¸ªà¸³à¸«à¸£à¸±à¸à¸à¸´à¸à¸¥à¸à¸à¸à¸«à¸à¸±à¸à¸ªà¸·à¸­à¸£à¸±à¸à¸£à¸­à¸ à¸à¸¹à¹à¸¢à¸·à¹à¸à¸à¸­à¸«à¸à¸±à¸à¸ªà¸·à¸­à¸£à¸±à¸à¸£à¸­à¸à¸à¸²à¸¢à¸à¸¹à¸à¹à¸à¸à¹à¸ à¸à¸¹à¹à¸¢à¸·à¹à¸à¸à¸­à¸«à¸à¸±à¸à¸ªà¸·à¸­à¸£à¸±à¸à¸£à¸­à¸à¸«à¸à¸´à¸à¹à¸à¹à¸à¸à¸²à¸¢à¸ªà¸¸à¸ à¸²à¸ à¹à¸ªà¸·à¹à¸­à¸¡à¸µà¸à¸ à¹à¸¡à¹à¸ªà¸§à¸¡à¹à¸ªà¸·à¹à¸­à¸¢à¸·à¸
+                    </td>
+				</tr>
+                <tr>
+                	<td>-	à¸à¸±à¹à¸à¸à¸²à¸£à¸à¸´à¸à¸à¹à¸­à¸à¸­à¸£à¸±à¸à¸«à¸à¸±à¸à¸ªà¸·à¸­à¸£à¸±à¸à¸£à¸­à¸ 1.à¸à¸à¸à¸±à¸à¸£à¸à¸´à¸§à¸à¸´à¸à¸à¸²à¸¡à¸à¸³à¸£à¹à¸­à¸à¸à¸£à¹à¸­à¸¡à¸¢à¸·à¹à¸à¸£à¸¹à¸à¸à¹à¸²à¸¢à¹à¸¥à¸°à¸à¸±à¸à¸£à¸à¸£à¸°à¸à¸³à¸à¸±à¸§à¸à¸´à¸ªà¸´à¸à¸«à¸£à¸·à¸­<br />
+               	    à¸à¸±à¸à¸£à¸à¸£à¸°à¸à¸³à¸à¸±à¸§à¸à¸£à¸°à¸à¸²à¸à¸ 2.à¸à¸³à¸£à¸°à¹à¸à¸´à¸</td>
+				</tr>
+                <tr>
+                	<td>- à¸à¸²à¸£à¸­à¸­à¸à¸«à¸à¸±à¸à¸ªà¸·à¸­à¸£à¸±à¸à¸£à¸­à¸à¹à¸à¹à¹à¸§à¸¥à¸²à¹à¸à¸à¸²à¸£à¸à¸³à¹à¸à¸´à¸à¸à¸²à¸£ <font color="#ff0000"><u>2 à¸§à¸±à¸à¸à¸³à¸à¸²à¸£à¸à¸±à¸à¹à¸</u></font>
+                    </td>
+				</tr>
+                <tr>
+                	<td>- à¸à¸¹à¹à¸¢à¸·à¹à¸à¸à¸­à¸«à¸à¸±à¸à¸ªà¸·à¸­à¸£à¸±à¸à¸£à¸­à¸à¸ªà¸²à¸¡à¸²à¸£à¸à¸¡à¸²à¸à¸­à¸£à¸±à¸à¸«à¸à¸±à¸à¸ªà¸·à¸­à¸£à¸±à¸à¸£à¸­à¸à¹à¸<font color="#ff0000"><u>à¸§à¸±à¸à¹à¸§à¸¥à¸²à¸£à¸²à¸à¸à¸²à¸£à¹à¸à¹à¸²à¸à¸±à¹à¸</u></font> (à¸§à¸±à¸à¸à¸±à¸à¸à¸£à¹à¸à¸¶à¸à¸§à¸±à¸à¸¨à¸¸à¸à¸£à¹)
+                    </td>
+				</tr>
+                <tr>
+                	<td>- à¸¡à¸µà¸à¸±à¸à¸«à¸²à¸à¸²à¸£à¹à¸à¹à¸à¸²à¸à¸£à¸°à¸à¸ à¸à¸´à¸à¸à¹à¸­ 02-9428445 à¸à¹à¸­ 409 à¸à¸¸à¸à¸ à¸²à¸ªà¸à¸à¸¨à¹
+                    </td>
+				</tr>
+                <tr>
+                	<td>- à¸ªà¸­à¸à¸à¸²à¸¡à¸£à¸²à¸¢à¸¥à¸°à¹à¸­à¸µà¸¢à¸à¹à¸à¸´à¹à¸¡à¹à¸à¸´à¸¡ à¸à¸´à¸à¸à¹à¸­ 02-9428445 à¸à¹à¸­ 107,226 à¸à¸¸à¸à¸à¸à¸à¸à¸£</td>
+				</tr>
+			</table>
+            </td>
+      </tr>
+    </table>
+    <br />
+	  <!-- end #maincontent -->
+	</p>
+</div>
+  <div id="footer">
+    <p>à¸à¸±à¸à¸à¸´à¸à¸§à¸´à¸à¸¢à¸²à¸¥à¸±à¸¢ à¸¡à¸«à¸²à¸§à¸´à¸à¸¢à¸²à¸¥à¸±à¸¢à¹à¸à¸©à¸à¸£à¸¨à¸²à¸ªà¸à¸£à¹ <br />
+à¸à¸¹à¹ à¸à¸. 1104 à¸à¸à¸.à¹à¸à¸©à¸à¸£à¸¨à¸²à¸ªà¸à¸£à¹ à¹à¸à¸à¸à¸à¸¸à¸à¸±à¸à¸£ à¸à¸£à¸¸à¸à¹à¸à¸à¸¯ 10903<br />
+à¹à¸à¸£à¸¨à¸±à¸à¸à¹ 02-942-8445-9 e-mail: fgra@ku.ac.th</p>
+  <!-- end #footer --></div>
+<!-- end #container --></div>
+</body>
+</html>

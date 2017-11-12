@@ -1,0 +1,512 @@
+
+<html>
+<head>
+   <title>สถาปัตยกรรมทั่วไปของชิปตระกูลต่าง ๆ</title>
+</head>
+<body>
+<center><table cols=1 width="100%" bgcolor="#99ff99" >
+<tr>
+<td>
+<center><b><font face="ms sans serif"><font color="#3333ff"><font size=-1>สถาปัตยกรรม<wbr>ทั่ว<wbr>ไป<wbr>ของ<wbr>ชิปตระกูล<wbr>ต่างๆที่<wbr>น่า<wbr>ใจ<wbr><wbr></font></font></font></b></center>
+</td>
+</tr>
+</table></center>
+<p>
+<center><table border cols=2 width="86%" >
+<tr valign=top>
+<td><img src="pinaqua.gif" alt="”" hspace=7 border=0 pic1.gif ” [ pic1 ] “ height=20 width=20 align=texttop><font face="ms sans serif"><font size=-1><a href="#1">4040
+(year 1971)</a></font></font>
+<p><img src="pinred.gif" alt="”" hspace=7 border=0 pic5.gif ” [ pic1 ] “ height=20 width=20 align=texttop><font face="ms sans serif"><font size=-1><a href="#2">8080
+,zilog z80, z-8000 (1974)</a></font></font>
+
+<p><img src="pingreen.gif" hspace=7 border=0 height=20 width=20 align=texttop><font face="ms sans serif"><font size=-1><a href="#3">intel
+8086 ,ibm 's choice (1978)</a></font></font>
+
+<p><img src="pinaqua.gif" alt="”" hspace=7 border=0 pic1.gif ” [ pic1 ] “ height=20 width=20 align=texttop><font face="ms sans serif"><font size=-1><a href="#4">amd 29000 ,aflexible register set(1978)</a></font></font>
+
+<p><img src="pinyellw.gif" hspace=7 border=0 height=20 width=20 align=texttop><font face="ms sans serif"><font size=-1><a href="#5">motolola
+8800, late elegant (mid 1988)</a></font></font></td>
+
+<td><img src="pingreen.gif" hspace=7 border=0 height=20 width=20 align=texttop><font face="ms sans serif"><font size=-1><a href="#6">cpu
+860</a></font></font>
+<p><img src="pinyellw.gif" alt="”<wbr>" hspace=7 border=0 pic6.gif ” [ pic1 ] “ height=20 width=20 align=texttop><font face="ms sans serif"><font size=-1><a href="#7">motorola
+68000</a></font></font>
+<p><img src="pinaqua.gif" alt="”<wbr>" hspace=7 border=0 pic1.gif ” [ pic1 ] “ height=20 width=20 align=texttop><font face="ms sans serif"><font size=-1><a href="#8">ibm
+rs/6000 power chip (1990)</a></font></font>
+<p><img src="pinred.gif" alt="”<wbr>" hspace=7 border=0 pic5.gif ” [ pic1 ] “ height=20 width=20 align=texttop><font face="ms sans serif"><font size=-1><a href="#9">dec
+alpha (1992)</a></font></font></td>
+</tr>
+</table></center>
+<p>
+
+<table width="95%">
+<tr>
+</td>
+<a name="1"></a><b><font face="ms sans serif"><font color="#990000"><font size=-1>4004
+(nov 1971)</font></font></font></b>
+<br><img src="z_rainbo.gif" height=5 width=576>
+<dd>
+<font face="ms sans serif"><font size=-1>เป็น<wbr>แบบ 4 bit ใช้<wbr>สำหรับเครื่องคิด<wbr>เลข
+เก็บ<wbr>ข้อ<wbr>มูล<wbr>ใช้ 4 bit เก็บ instruction 8 bit ส่วน<wbr>โปรแกรม<wbr>แยก<wbr>จาก<wbr>ส่วน<wbr>เก็บ<wbr>ข้อ<wbr>มูล
+โดย<wbr>เก็บ<wbr>ข้อ<wbr>มูล 1 k bit และ pc ขนาด 12 bit สำหรับ โปรแกรม<wbr>ขนาด<wbr><wbr>4 k (ใช้<wbr>ใน<wbr>รูป<wbr>แบบ
+stack 4 ชั้น<wbr>ใช้กับ คำ<wbr>สั่ง call และ ret) และ มี register เอ<wbr>นก<wbr>ประสงค์<wbr>ขนาด
+4 bit 16 register</font></font></dd>
+
+<p><a name="2"></a><b><font face="ms sans serif"><font color="#990000"><font size=-1>8080
+(1974)</font></font></font></b>
+<br><img src="z_rainbo.gif" height=5 width=576>
+<dd>
+<font face="ms sans serif"><font size=-1>8008 ประกอบ<wbr>ด้วย<wbr>ค่า pc และ ค่า
+add ขนาด 14 bit address bus ขนาด 16 bit data bus ขนาด 8 bit ส่วน<wbr>ประกอบ<wbr>ภาย<wbr>ใน
+มี register ขนาด 8 bit จำนวน 7 ตัว (a,b,c,d,e,h,l) stack poiter ขนาด 16
+bit stack ขนาด 8 ชั้น pc ขนาด 16 bit มี i/o port มาก<wbr>ถึง 256 port</font></font></dd>
+<b><font face="ms sans serif"><font color="#990000"><font size=-1></font></font></font></b>
+<p><b><font face="ms sans serif"><font color="#990000"><font size=-1>zilog
+z-80</font></font></font></b>
+<br><img src="z_rainbo.gif" height=5 width=576>
+<dd>
+<font face="ms sans serif"><font size=-1>พัฒนา<wbr>จาก 8080 เก็บ<wbr>ข้อ<wbr>มูล<wbr>แบบ 8
+bit และ<wbr>เก็บ address ขนาด 16 bit สาม<wbr>รถ<wbr>ทำ<wbr>ทุก opcode ของ 8080 ได้ และ<wbr>เพิ่ม<wbr>อีก
+80 ชุด ชุด<wbr>คำ<wbr>สั่ง<wbr>ที่<wbr>มี<wbr>ขนาด 1,4,8 และ 16 bit ชุด<wbr>ของ register มี เป็น 2 เท่า
+นอก<wbr>จาก<wbr>นี้<wbr>ยัง<wbr>มี<wbr>ระบบ<wbr>ปฏิบัติ<wbr>การ<wbr>ที่<wbr>รวด<wbr>เร็ว หรือ การ interrupt z80 เพิ่ม register
+ที่<wbr>ใช้<wbr>เป็น index 2 ตัวฃ คือ ix,iy และ interrupt มี<wbr>ลักษณะ<wbr>เป็นเวกเตอร์ ซึ่ง<wbr>ทำ<wbr>การ
+relocate ได้ ทำ<wbr>งาน<wbr>ที่ อัตรา clock ของ z-80 = 2.5 mhz z-80-h = 6mhz</font></font></dd>
+
+<p><b><font face="ms sans serif"><font color="#990000"><font size=-1>zilog
+z-8000 ,another direct competitor</font></font></font></b>
+<br><img src="z_rainbo.gif" height=5 width=576>
+<dd>
+<font face="ms sans serif"><font size=-1>z-8000 เผย<wbr>แพร่<wbr>หลัง<wbr>จาก 8086 ได้<wbr>ไม่<wbr>นาน
+แต่<wbr>มี<wbr>ประสิทธิภาพ<wbr>ที่<wbr>มี processor ขนาด 16 bit แต่<wbr>สามารถ<wbr>ทำ<wbr>ให้ address เพิ่ม<wbr>ได้<wbr>ถึง
+23 bit โดย<wbr>ใช้ register ใน<wbr>แบบ segment (ทำ<wbr>ให้<wbr>เพิ่ม 7 bit z-8000 มี register
+ขนาด 16 bit จำนวน 16 ตัว แต่<wbr>ขนาด register ยือหยุ่น<wbr>ได้ register 8 ตัว<wbr>แรก
+ของ z-8000 สามารถ<wbr>ใช้<wbr>เป็น register ขนาด 8 bit จำนวน 16 ตัว<wbr>ได้ (โดย<wbr>กำหนด<wbr>เป็น
+rh0,rl0,rh1,....) หรือ 16 ตัว สามารถ<wbr>รวม<wbr>เป็น register ขนาด 32 bit จำนวน
+8 ตัว โดย<wbr>ใช้<wbr>เป็น register เอ<wbr>นก<wbr>ประสงค์ register 15 ใช้<wbr>เก็บ stack pointer
+,register 14 ใช้<wbr>เก็บ stack segment (ทั้ง<wbr>สอง register อ้าง<wbr>อิง<wbr>เป็น 35 bit
+(rr214)) ชุด<wbr>คำ<wbr>สั่ง<wbr>เป็น<wbr>แบบ 32 bit สามารถ<wbr>เพิ่ม<wbr>เป็น<wbr>ทวี<wbr>คูณ<wbr><wbr>(เป็น 64 bit) และ
+แบ่ง<wbr>ลด<wbr>ลง<wbr>ได้ z-800 เป็น<wbr>รุ่น<wbr>แรก<wbr>ใน<wbr>แบบ 2 โหมด โหมดแรก<wbr>สำหรับ<wbr>ระบบ os(operating
+system) และ<wbr>อีก<wbr>โหมดใช้<wbr>สำหรับ โปรแกรม<wbr>ของ<wbr>ผู้<wbr>ใช้<wbr>ใน<wbr>ส่วน<wbr>โหมดสำหรับผู<wbr>&amp;eacut
+e;ใช้<wbr>จะ<wbr>ซ่อน<wbr>ส่วน<wbr>ที่<wbr>ซับ<wbr>ซ้อน<wbr>เกี่ยวกับการ ; interrupt และ<wbr>ส่วนนที่<wbr>ไม่<wbr>จำ<wbr>เป็น<wbr>ต้อง<wbr>ทราบ
+z-800 มี<wbr>วง<wbr>จร refresh ram อัตโนมัติ มี<wbr>ข้อ<wbr>เสีย<wbr>ที่<wbr>บาง<wbr>ครั้ง<wbr>ก็<wbr>ทำ<wbr>งาน<wbr>ช้า แต่<wbr>ก็<wbr>เป็น<wbr>ผล<wbr>มา<wbr>จาก
+feature ต่างๆที่<wbr>มี รุ่น<wbr>ถัด<wbr>มา ก็<wbr>คือ z-8000 เป็น<wbr>ที่<wbr>รู้<wbr>จัก<wbr>ใน<wbr>ปี 1986 พร้อมๆกั<wbr>บ
+cpu รุ่น 32 bit mc68020 และ intel 80386 แต่ z-80000 มี<wbr>ข้อ<wbr>ที่<wbr>ดี<wbr>กว่า<wbr>เล็ก<wbr>น้อย
+z-80000 ขยาย<wbr>ได้<wbr>เต็ม<wbr>ที่<wbr>ถึง 32 bit สำหรับ addressing mode ของ z-8000 ทำ<wbr>การ<wbr>เพิ่ม
+segment addressing มาก<wbr>กว่า 24 bit และ<wbr>ยัง<wbr>มี<wbr>การ<wbr>เพิ่ม mmu(ใน cpu 68020 ไม่<wbr>มี<wbr>แต่<wbr>เพิ่ม<wbr>ลง<wbr>ไป<wbr>ใน
+68030) ซึ่ง<wbr>เพิ่ม chip 16 line 256-byte เพื่อ<wbr>ประสาน<wbr>งานกับ cache ได้<wbr>อย่าง<wbr>เต็ม<wbr>ที่
+z-80000 เป็นมัลติ<wbr>โปรดซสเซอร์ เพราะ<wbr>มี<wbr>การ<wbr>กำหนด memory pages นอก<wbr>ยาก<wbr>นี้<wbr>ยัง<wbr>ใช้
+coprocessor ช่วย<wbr>ใน<wbr>การ ดู<wbr>การ<wbr>ทำ<wbr>งาน<wbr>ของ data bus และ<wbr>บ่ง<wbr>บอก<wbr>คำ<wbr>สั่ง<wbr>ที่<wbr>ใช้<wbr>สำหรับ
+cpu z-8000 ทำ<wbr>งาน<wbr>เป็น pipeline (6 stage) รุ่น<wbr>ที่<wbr>ทำ<wbr>การ pipeline อย่าง<wbr>เต็ม<wbr>ที่<wbr>คือ<wbr>รุ่น
+80486 และ 68040 ออก<wbr>มา<wbr>ใน<wbr>ปี 1991</font></font></dd>
+<b><font face="ms sans serif"><font color="#990000"><font size=-1></font></font></font></b>
+<p><a name="3"></a><b><font face="ms sans serif"><font color="#990000"><font size=-1>intel
+8086 , ibm ‘<wbr>s choice (1978 )</font></font></font></b>
+<br><img src="z_rainbo.gif" height=5 width=576>
+<dd>
+<font face="ms sans serif"><font size=-1>เซ็กเม้นต์รีจีสเตอร์<wbr>( คูณ<wbr>ด้วย
+16 หรือ ชิปซ้าย<wbr><wbr>4บิต )ที่<wbr>แอดเดรส เหตุ<wbr>ผล<wbr>ของ<wbr>ความ<wbr>ไม่<wbr>ประสบ<wbr>ความ<wbr>สำเร็จ<wbr>ใน<wbr>การ<wbr>ขยาย<wbr>เนื้อ<wbr>ที่<wbr>ของ<wbr>แอดเดรส<wbr>โดย<wbr>ไม่<wbr>ต้อง<wbr>อาศัย<wbr>การเพิ<wbr>่มแอดเดรส<wbr>บิตซึ่ง<wbr>อาจ<wbr>ทำ<wbr>ได้<wbr>โดย<wbr>การ<wbr>ใช้<wbr>พอยเตอร<wbr>์
+2 ตัว<wbr>ซึ่ง<wbr>ชี้<wbr>ค่า<wbr>เดียว<wbr>กัน<wbr>แต่<wbr>ต่าง memory location กัน หรือ พอยเตอร์ 2 ตัว<wbr>ซึ่ง<wbr>ชี้<wbr>ค่า<wbr>ต่าง<wbr>กัน<wbr>ที่
+memory location เดียว<wbr>กัน<wbr>และ<wbr>ถูก<wbr>จำกัด<wbr>ให้<wbr>บรรจุ<wbr>ข้อ<wbr>มูล<wbr>ได้<wbr>แค่ 64 กิโลไบต์แต่<wbr>ผู้<wbr>ประดิษฐ์<wbr>กำลัง<wbr>ประสบ<wbr>ปัญหา
+ทางด้าน<wbr>การ<wbr>ดี<wbr>ไซน์<wbr><wbr></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font size=-1>ถึง<wbr>แม้<wbr>ว่า<wbr>จะ<wbr>ได้<wbr>รับ<wbr>การ<wbr>ยอม<wbr>รับ<wbr>อย่าง<wbr>แพร่<wbr>หลาย<wbr>ใน<wbr>ภาษา<wbr>แอสเซมบลี<wbr>ซึ่ง<wbr>ควบ<wbr>คุม<wbr>เซกเมนต์<wbr>ได้<wbr>อย่าง<wbr><wbr>สมบูรณ์
+แต่<wbr>ใน<wbr>ภาษา<wbr>ชั้น<wbr>สูง<wbr>นั้น<wbr>จะ<wbr>ประสบ<wbr>ปัญหา<wbr>ใน<wbr>การ<wbr>ใช้ near/far pointerและ<wbr>ยัง<wbr>มี<wbr>ผล<wbr>เสีย
+ใน<wbr>ด้าน<wbr>การ<wbr>เพิ่ม<wbr>เนื้อ<wbr>ที่ address ซึ่ง<wbr>จะ<wbr>ทำ<wbr>ได้<wbr>ยาก ใน 80286 ซึ่ง<wbr>ผลิต<wbr>ออก<wbr>มา<wbr>ใน<wbr>ปี
+1982 ได้<wbr>ขยาย<wbr>การ<wbr>ดี<wbr>ไซน์<wbr>ออก<wbr>เป็น 32 บิต โดย<wbr>การ<wbr>เพิ่ม<wbr>โหมดใหม่<wbr>เข้า<wbr>มา ( มี<wbr>กา<wbr>รสวิชชิ่ง<wbr>จาก
+real ไป<wbr>ยัง protected โหมด แต่<wbr>กา<wbr>รสวิชชิ่ง<wbr>กลับ<wbr>นั้น<wbr>ยัง<wbr>ต้อง<wbr>อาศัย bug ใน 80286
+รุ่น<wbr>ก่อน<wbr>ซึ่ง<wbr>ยัง<wbr>คง<wbr>ต้อง<wbr>รักษา<wbr>ไว้ ) ซึ่ง<wbr>ต้อง<wbr>เพิ่ม<wbr>จำนวน<wbr>ของ<wbr>เซกเมนต์<wbr>อย่าง<wbr>มาก<wbr>โดย<wbr>ใช้<wbr>ตัว
+selecter ขนาด 16 บิตสำหรับ “ segment descriptor” ซึ่ง<wbr>บรรจุ location ใน<wbr>แอดเดรส<wbr>ขนาด
+24 บิต , ขนาด<wbr><wbr>( ยัง<wbr>คง<wbr>น้อย<wbr>กว่า 64k ) และ<wbr>มี<wbr>คุณสมบัติ ( vertual memory support)
+ของ segment</font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font size=-1>แต่<wbr>การ<wbr>เข้า<wbr>ถึง memory ยัง<wbr>คง<wbr>ถูก<wbr>จำกัด<wbr>แค่
+64k segments จน<wbr>กระทั่ง 80386 ได้<wbr>ผลิต<wbr>ออก<wbr>มา<wbr>ใน<wbr>ปี 1985 ซึ่ง<wbr>รวม<wbr>ถึง<wbr>การ<wbr>พัฒนา addressing
+: base reg + index reg * scale ( 1,2,4 หรือ 8 บิต ) + displacement ( 8
+หรือ 32 bit constant = 32 bit address ( ใน<wbr>รูป<wbr>แบบ<wbr>ของ paged segme( โดย<wbr>ใช้<wbr>เซกเมนต์<wbr>รีจิสเตอร์ขนาด
+16 บิต 6 ตัว ) คล้ายกับตระกูล ibms / 360 แต่<wbr>ไม่<wbr>เหมือนกับตระกูล motorola
+68030 )ซึ่ง<wbr>จะ<wbr>มี processor โหมดเฉพาะ<wbr><wbr>( รวม<wbr>ถึง<wbr>มี<wbr>การ<wbr>แบ่ง<wbr>แยก paged และ segmented
+โหมด ) ซึ่ง<wbr>สอด<wbr>คล้องกับการ<wbr>ออก<wbr>แบบ<wbr>รุ่น<wbr>ก่อนๆ ใน<wbr>ความ<wbr>เป็น<wbr>จริง<wbr>แล้ว<wbr>จะ<wbr>ถูก<wbr>ต้องกับแอสเซมเบลอร<wbr>์
+code นั้น<wbr>ถูก<wbr>เขียน<wbr>สำหรับ 8008 ซึ่ง<wbr>สามารถ run บน pentium pro ได้<wbr>ใน 80386
+นั้น<wbr>ได้<wbr>เพิ่ม mnu เข้า<wbr>มา<wbr>เพื่อ security modes ( หรือ<wbr>เรียก<wbr>ว่า “<wbr>ring” ของ system
+services,application services,application ) และ<wbr>ยัง<wbr>มี opcode ใหม่<wbr>ซึ่ง<wbr>มี<wbr>รูป<wbr>แบบ<wbr>คล้ายกั<wbr>บ
+z-80</font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font size=-1>80486 ซึ่ง<wbr>ผลิต<wbr>ออก<wbr>มา<wbr>ใน<wbr>ปี 1989 ได้<wbr>มี<wbr>การ<wbr>เพิ่ม
+pipelines อย่าง<wbr>สมบูรณ์ มี<wbr>แคช 8k บน<wbr>ชิปรวมกับ fpu (เป็น<wbr>พื้น<wbr>ฐาน<wbr>ของ eight elemant
+80- บิตแส<wbr>ตก<wbr><wbr>-orientted fpuใน 80387 fpu )และ<wbr>มี<wbr>การ<wbr>เพิ่ม clack เป็น 2 เท่า<wbr><wbr>(
+คล้าย z-280 ) ใน<wbr>เพนเทียม<wbr>ซึ่ง<wbr>ผลิต<wbr>ออก<wbr>มา<wbr>ใน<wbr>ปลาย<wbr>ปี 1993 เป็น<wbr>แบบ superscalar
+( 1 integer unit และ singel fpu ) กับแบ่ง<wbr>แยก 8k i/d แคช<wbr></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font size=-1>เพนเทียม เป็น<wbr>ชื่อ<wbr>ซึ่ง<wbr>ใช้<wbr>แทน 80586
+เพราะ<wbr>ว่า<wbr>ชื่อ 586 นั้น<wbr>ไม่<wbr>สามารถ<wbr>ป้อง<wbr>กัน<wbr>บริษัท<wbr>อื่นๆ ที่<wbr>พยายาม<wbr>จะ<wbr>ลอก<wbr>เลียน<wbr>แบบ<wbr>ได้
+และ<wbr>ใน<wbr>ความ<wbr>เป็น<wbr>จริง<wbr>นั้น pentium มี<wbr>ลักษณะ<wbr>คล้ายกับ cpu จาก nexgen รุ่น nx586
+ซึ่ง<wbr>ผลิต<wbr>ออก<wbr>มา<wbr>ใน<wbr>ปี 1995 80x86 เป็น cloned processors มาก<wbr>ที่<wbr>สุด จาก nec v20/
+v30( ซึ่ง<wbr>มี cloned เร็ว<wbr>กว่า 8088/8086 ( สามารถ run บน 8085 ได้ amd และ
+cyrix clones ของ 80386 และ 80486 ไป<wbr>ถึง pentium</font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font size=-1>สถาปัตยกรรม<wbr>รุ่น<wbr>ก่อนๆนั้น<wbr>จะ<wbr>ทำ<wbr>การ<wbr>ให้<wbr>การ
+compatible บน<wbr><wbr>cpu ของ<wbr>เพนเทียม<wbr><wbr>( nx586 / nx686, amd k5 )และ “<wbr>pentium pro”
+ไม่<wbr>เป็น clone เพนเทียม<wbr>แต่<wbr>มี<wbr>การ<wbr>เลียน<wbr>แบบ hardware decoder เป็น<wbr>พิเศษ ซึ่ง<wbr>จะ<wbr>เปลี่ยน<wbr>คำ<wbr>สั่ง<wbr>ใน
+เพนเทียม<wbr>ไป<wbr>ยัง risc ( คำ<wbr>สั่ง<wbr>ที่ executed บน risc cores จะ<wbr>เร็ว<wbr>กว่า<wbr>บน<wbr>เพนเทียม
+( cyrix / ibm 6x86 ซึ่ง<wbr>ผลิต<wbr>ออก<wbr>มา<wbr>ใน<wbr>ช่วง<wbr>ต้น<wbr>ปี 1996 ยัง<wbr>คง executed คำ<wbr>สั่ง<wbr>ของ
+80x86 ใน 2 pipelines แต่<wbr>เร็ว<wbr>กว่า<wbr>เพนเทียม ซึ่ง<wbr>ทำ<wbr>ให้<wbr>ตอน<wbr>นี้<wbr>เกิด<wbr>ข่าว<wbr>ลือ<wbr>ที่<wbr>ว่า
+ibm กำลัง<wbr>พัฒนา<wbr><wbr>?าร์ดแวร์ที่<wbr>แปลง<wbr>คำ<wbr>สั่ง<wbr>เพนเทียม<wbr>สำหรับ power pc ใน cpu รุ่น
+power pc 615 ซึ่ง<wbr>เลิก<wbr>ใช้<wbr>ไป<wbr>แล้ว<wbr><wbr></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font size=-1>เพนเทียม<wbr>โปร หรือ<wbr>อีก<wbr>ชื่อ<wbr>หนึ่ง<wbr>ว่า
+p6 เป็น 1 หรือ 2 ชิป<wbr>( cpu plus 256k หรือ 512k l2 cache - l/d l1 cache(
+อัน<wbr>ละ 8 กิโลไบต์ ) ซึ่ง<wbr>อยู่<wbr>บน cpu เป็น super piplined processor ประกอบ<wbr>ด้วย
+3 decoder ( complex instruction 1 ตัว , simpler ones 2ตัว ) ทำ<wbr>หน้า<wbr>ที่<wbr>แปลง<wbr>คำ<wbr>สั่ง<wbr>ใน
+80x86 ไป<wbr>เป็น micro-ops ( one per simpler decoder + up to four from the
+complex decoder = three to six per cycle ) ขึ้น<wbr>ไป<wbr>เป็น 5 micro ops ซึ่ง<wbr>ปกติ<wbr>มี<wbr>แค่
+3 เท่า<wbr>นั้น สามารถ<wbr>ก่อ<wbr>ให้<wbr>เกิด<wbr>ผล<wbr>ใน<wbr>ระบบ parallel และ order ( 6 unit - fpu ,
+2 integer , 1 load/store )ใน 80x86 instruction อาจ<wbr>จะ<wbr>สร้าง micro-ops ใน
+cpu คล้ายกับ nx586 และ amd k5 เพราะ<wbr>ฉะนั้น<wbr>จะ<wbr>ได้<wbr>อัตรา<wbr>คำ<wbr>สั่ง<wbr>ต่ำ ใน<wbr>ความ<wbr>เป็น<wbr>จริง<wbr>แล้ว<wbr>จะ<wbr>ประสบ<wbr>ปัญหา<wbr>ใน<wbr>ด้าน
+handing instruction ซึ่ง<wbr>เป็น<wbr>การ<wbr>วาง<wbr>แนว<wbr>ทางใน pentium pro โดย<wbr>มี<wbr>การ<wbr>เลียน<wbr>แบบ<wbr>คำ<wbr>สั่ง<wbr>ขนาด
+16 บิต ซึ่ง execute ได้<wbr>ช้า<wbr>กว่า<wbr>บน<wbr>เพนเทียม<wbr><wbr></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font size=-1>amd k5 แปลง 80x86 code ไป<wbr>เป็น
+rops ( risc operation ) ซึ่ง execute บน<wbr>พื้น<wbr>ฐาน<wbr>ของ risc core บน superscalar
+amd 29k ขึ้น<wbr>ไป<wbr>จน<wbr>ถึง 4 rops สามารถ<wbr>ส่ง<wbr>ไป<wbr>ถึง 6 units ( 2 integer , 1 fpu ,
+2 load/store , 1 branch unit ) และ 5 สามารถ<wbr>แสดง<wbr>ผล<wbr>ที่<wbr>เวลา<wbr>นั้น<wbr>ได้ ความ<wbr>ซับ<wbr>ซ้อน<wbr>ใน<wbr>การ<wbr>ใช้<wbr>สัญญาณ<wbr>นาฬิกา<wbr>ที่<wbr>มี<wbr>ความ<wbr>เร็ว<wbr>ต่ำ<wbr>สำหรับ
+k5 นั้น<wbr>จะ<wbr>เร็ว<wbr>กว่า amd ที่<wbr>ซื้อ<wbr>ลิขสิทธิ์ nexgen และ<wbr>รวม<wbr>การ<wbr>ดี<wbr>ไซน์<wbr>สำหรับ k6
+รุ่น<wbr>ต่อ<wbr>ไป<wbr><wbr></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font size=-1>nexgen / amd nx586 ซึ่ง<wbr>ผลิต<wbr>ออก<wbr>มา<wbr>ใน<wbr>ช่วง<wbr>ปลาย<wbr>ปี
+1994 นั้น<wbr>สามารถ execute micro-ops ( risc86 code ) หาก<wbr>มอง<wbr>ไป<wbr>แล้ว<wbr>พบ<wbr>ว่า<wbr>โปรแกรม<wbr>ที่<wbr>ถูก<wbr>เขียน<wbr>ด้วย
+risc86 จะ<wbr>เร็ว<wbr>กว่า<wbr>หรือ<wbr>เท่ากับ x86 program แต่<wbr>จะ<wbr>ไม่<wbr>ค่อย<wbr>นิยม<wbr>ใช้ มี<wbr>ลักษณะ<wbr>เฉพาะ<wbr>คือปรระ<wbr>กอบ<wbr>ด้วย
+16k i/d l1 cache 2 ตัว , l2 cache bus ( คล้ายกับใน pentium pro 2- chip
+module )</font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font size=-1>nx586 ที่<wbr>ประสบ<wbr>ความ<wbr>สำเร็จ<wbr>นั้น k6
+( ผลิต<wbr>ออก<wbr>มา<wbr>ใน<wbr>ปี 1996 ) ประกอบ<wbr>ด้วย<wbr>แคช 3 ชิ้น ชิ้น<wbr>ละ 32k สําหรับ<wbr>ข้อ<wbr>มูล<wbr>และ<wbr>คำ<wbr>สั่ง
+และ<wbr>อีก 16k สำหรับ<wbr>บรรจุ<wbr>ข้อ<wbr>มูล<wbr>การ decode คำ<wbr>สั่ง<wbr>และ<wbr>ยัง<wbr>ได้<wbr>นำ fpu ไป<wbr>รวม<wbr>ไว้<wbr>ใน
+chip และ<wbr>ขจัด cache bus ของ nx586 อย่าง<wbr>ไร<wbr>ก็<wbr>ตาม<wbr>ก็<wbr>ยัง<wbr>คง<wbr>รูป<wbr>แบบ<wbr>ความ<wbr>เป็น pin
+ไว้ อีก<wbr>ทั้ง<wbr>ยัง compatible กับ p54c model pentium ส่วน decoder อื่นๆนั้น
+จะ<wbr>มี<wbr>การ<wbr>เพิ่ม 2 complex decoder ซึ่ง<wbr>แตก<wbr>ต่าง<wbr>จาก pentium pro ซึ่ง<wbr>ใช้ 1 complex
+decoder และ 2 simple decoder และ<wbr>เพิ่ม micro -ops จาก 4 เป็น 6 ( ไป<wbr>ยัง 7
+unit - load , store , complex/simple integer , fpu , branch , multimedia
+)</font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font size=-1>amd ได้<wbr>รับ<wbr>อนุญาต<wbr>จาก mmx ( matrix
+math extension ) ให้<wbr>ผลิต cpus ซึ่ง<wbr>ขณะ<wbr>นั้น<wbr>ทาง intel ก็<wbr>กำลัง<wbr>พัฒนา pentium
+และ pentium pro อยู่ โดย mmx นั้น<wbr>มี<wbr>ลักษณะ<wbr>คล้าย<wbr>คลึงกับ sparc vis หรือ hp-pa
+max โดย mmx instruction นั้น<wbr>จะ<wbr>แสดง<wbr>การ<wbr>จัด<wbr>การ integer เป็น<wbr>กลุ่ม ๆ ของ 8 ,
+16 ,32 , bit word ใช้ 80 bit fpu stack 64 bit register 8 ตัว ( สวิชชิ่ง<wbr>ระหว่าง
+fpu และ mmx โหมดที่<wbr>ต้อง<wbr>การ มัน<wbr>ยาก<wbr>ที่<wbr>จะ<wbr>ใช้ stack และ mmx register ที่<wbr>เวลา<wbr>เดียว<wbr>กัน
+cyrix ตั้ง<wbr>ใจ<wbr>จะ<wbr>ใช้ clones ของ instruction นี้<wbr>ไป<wbr>สร้าง m2 cpu</font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font size=-1>intel ได้<wbr>ร่วม<wbr>มือกับ hewlett-packard
+ที่<wbr>จะ<wbr>พัฒนา processor ขนาด 64 บิต รุ่น<wbr>ต่อ<wbr>ไป โดย<wbr>ให้ compatible กับ 80x86
+ซึ่ง<wbr>ใช้<wbr>คำ<wbr>สั่ง<wbr>ใน<wbr>การ<wbr>แปลง<wbr>หรือ coprocessor บน<wbr>พื้น<wbr>ฐาน<wbr>เทคโนโลยี<wbr>ของ very long
+instruction word ซึ่ง<wbr>อาจ<wbr>จะ<wbr>นำ<wbr>ออก<wbr>มา<wbr>เปิด<wbr>เผย<wbr>ใน<wbr>ไม่<wbr>ช้า<wbr>นี้<wbr><wbr></font></font></dd>
+<b><font face="ms sans serif"><font color="#990000"><font size=-1></font></font></font></b>
+<p><a name="4"></a><b><font face="ms sans serif"><font color="#990000"><font size=-1>amd
+29000 , a flexible register set (1987)</font></font></font></b>
+<br><img src="z_rainbo.gif" height=5 width=576>
+<dd>
+<font face="ms sans serif"><font size=-1>amd 29000 เป็น risc cpu อีก<wbr>รุ่น<wbr>หนึ่ง<wbr>ซึ่ง<wbr>พัฒนา<wbr>มา<wbr>จาก
+berkeley risc ( และ<wbr>เป็น<wbr>โปรเจคของ ibm 801) มี<wbr>ความ<wbr>ทัน<wbr>สมัย<wbr>กว่า 29000 รุ่น<wbr>ก่อน<wbr>ซึ่ง<wbr>เป็น<wbr>แบบ
+bitslice ( ผลิต<wbr>ออก<wbr>มา<wbr>ใน<wbr>กลาง<wbr>ปี 1981 ) มี<wbr>ความ<wbr>คล้าย<wbr>คลึงกับ sparc ซึ่ง<wbr>ออก<wbr>มา<wbr>หลัง<wbr>จาก<wbr>นั้น<wbr>ไม่<wbr>นาน
+29000นี้<wbr>ประกอบ<wbr>ด้วย<wbr>เซต<wbr>ของ register ซึ่ง<wbr>ใหญ่<wbr>มาก<wbr>รวม<wbr>อยู่<wbr>ใน local และ grobal
+set แต่<wbr>อย่าง<wbr>ไร<wbr>ก็<wbr>ตาม 29000 นี้<wbr>ได้<wbr>นา<wbr>ออก<wbr>มาจาหน่าย<wbr>ก่อน sparc ที่<wbr>มี<wbr>การ<wbr>จัด<wbr>การ<wbr>ทางด้าน
+register ที่<wbr>ดี<wbr>กว่า<wbr><wbr></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font size=-1>29000 นั้น<wbr>ประกอบ<wbr>ด้วย 64 grobal
+register ซึ่ง<wbr>ใน sparc นั้น<wbr>มี<wbr>แค่ 8 อีก<wbr>ทั้ง<wbr>การ allocate ขนาด<wbr>ของ<wbr>ตัว<wbr>แปรยัง<wbr>ใช้<wbr>จาก
+128 รีจิสเตอร์ stack cache สำหรับ stcak fram ที่<wbr>ถูก<wbr>บ่ง<wbr>บอก<wbr>โดย stack pointer(
+เป็น<wbr>รุ่น<wbr>ของ isar regisler ใน fairchild f8 cpu ) พอยเตอร์ที่<wbr>ชี้ caller‘<wbr>s
+frameคือ current frame ซึ่ง<wbr>คล้ายกับแส<wbr>ตก<wbr>ธรรม<wbr>ดา spill และ fill จะ<wbr>เกิด<wbr>ขึ้น<wbr>ที่<wbr>ส่วน<wbr>ท้าย<wbr>ของ
+แคชเท่า<wbr>นั้น และ<wbr>รีจีสเตอร์จะ<wbr>เป็น<wbr>ตัว loaded/saved ค่า<wbr>ของ<wbr>หน่วย<wbr>ความ<wbr>จำ<wbr>แส<wbr>ตก<wbr>ซึ่ง<wbr>ค่า<wbr>นี้<wbr>จะ<wbr>แปรตาม<wbr>ขนาด<wbr>ของวินโดว์จาก
+1 ถึง 128 รีจิสเตอร์แต่<wbr>จะ<wbr>ยืด<wbr>หยุ่น<wbr>ตาม<wbr>ความ<wbr>ใหญ่<wbr>ของ โก<wbr>ลบอลรีจิสเตอร์ ทำ<wbr>ให้<wbr>การ<wbr>แบ่ง<wbr>สรร<wbr>รีจีสเตอร์จะ<wbr>ง่า<wbr>ยก<wbr>ว่า<wbr>ใน
+sparc</font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font size=-1>ไม่<wbr>มี<wbr>อะไร<wbr>พิเศษ<wbr>ใน<wbr>การ<wbr>คอนดิชั่นโคด<wbr>รีจีสเตอร<wbr>์
+ซึ่ง<wbr>รีจีสเตอร์โดย<wbr>ทั่ว<wbr>ไป<wbr>จะ<wbr>อาศัย<wbr>หลัก<wbr>การ<wbr>แทน<wbr>ที่ อย่าง<wbr>ไร<wbr>ก็<wbr>ตาม<wbr>คอนดิชั่นโคด<wbr>ยัง<wbr>คง<wbr>ถูก<wbr>เก็บ<wbr>รักษา<wbr>ไว้<wbr>ถึง<wbr>แม้<wbr>ว่า<wbr>บาง<wbr>ครั้ง<wbr>จะ<wbr>ต้อง<wbr>ทำ<wbr>โหมดที่<wbr>ซับ<wbr>ซ้อน<wbr>มาก<wbr>ขึ้น
+คำ<wbr>สั่ง<wbr>หนึ่ง<wbr>อาจ<wbr>จะ<wbr>ต้อง<wbr>ทำ<wbr>ก่อน fetch บับเฟอร์<wbr>( ใช้ burth โหมด ) เพราะ<wbr>ฉะนั้น<wbr>สิ่ง<wbr>แรก<wbr>ที่<wbr>ต้อง<wbr>ทำ
+ก่อน<wbr>เริ่ม<wbr>คำ<wbr>สั่ง<wbr>ใหม่<wbr>คือ<wbr>การ<wbr>แคชถัด<wbr>มา<wbr>คือ<wbr>การ<wbr>แคช branch ( ขึ้น<wbr>ไป<wbr>เป็น 16 ) ส่วน
+cache supplies instruction นั้น<wbr>จะ<wbr>ทำ<wbr>ช่วง<wbr>ดีเลย์ใน<wbr>การ<wbr>เข้า<wbr>ถึง<wbr>หน่วย<wbr>ความ<wbr>จำ<wbr><wbr></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font size=-1>รีจีสเตอร์จะ<wbr>ไม่<wbr>ถูก saved ระหว่าง<wbr>การอินเทอรัพต<wbr>์
+สิ่ง<wbr>สำคัญ<wbr>ของ<wbr>การ<wbr>ทำอินเทอรัพต์คือ<wbr>ต้อง<wbr>คิด<wbr>ว่า ทำ<wbr>อย่าง<wbr>ไร<wbr>ถึง<wbr>คุ้ม<wbr>ค่า ดัง<wbr>นั้น<wbr>จึง<wbr>ต้อง<wbr>จัด<wbr>ทำ<wbr>รูป<wbr>แบบ<wbr>ของ<wbr>การ<wbr>ควบ<wbr>คุม<wbr>การ<wbr>เข้า<wbr>ถึง<wbr>รีจีสเตอร<wbr>์
+โดย<wbr>รีจีสเตอร์ทั้ง<wbr>หมด<wbr>สามารถ<wbr>ป้อง<wbr>กัน<wbr>ได้<wbr><wbr>&nbsp; ในบลอก<wbr>ของ 4 จาก<wbr>การ<wbr>เข้า<wbr>ถึง สิ่ง<wbr>นี้<wbr>ทำ<wbr>ให้
+29000 สามารถ<wbr>ใช้<wbr>ประ<wbr>โยชน์<wbr>สำหรับ<wbr>แอบพลิเคชั่นต่างๆได้ ซึ่ง<wbr>สิ่ง<wbr>นี้<wbr>จะ<wbr>ถูก<wbr>ใช้<wbr>งาน<wbr>โดย
+processor มาก<wbr>ที่<wbr>สุด อย่าง<wbr>ไร<wbr>ก็<wbr>ตาม<wbr>สิ่ง<wbr>นี้<wbr>ก็<wbr>เป็น<wbr>ตัว<wbr>ยืน<wbr>ยันว ่าทำไม risc processor
+ถึง<wbr>ได้<wbr>รับ<wbr>ความ<wbr>นิยม<wbr>สูง<wbr>สุด 29000 ได้<wbr>ทำ<wbr>การ<wbr>เพิ่ม mmu และ<wbr>ยัง<wbr>สนับสนุน 29027 fpu
+, superscalar 29050 ซึ่ง<wbr>ผลิต<wbr>ออก<wbr>มา<wbr>ใน<wbr>ปี<wbr><wbr>1990 ได้<wbr>รวม<wbr>เอา fpu ซึ่ง<wbr>ได้<wbr>ออก<wbr>แบบ<wbr>ใหม่<wbr>โดย<wbr>ใช้
+4 instruction ซึ่ง<wbr>สามารถ<wbr>ส่ง<wbr>ไป execute out of order และ speculatively</font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font size=-1>ใน<wbr>ช่วง<wbr>ปลาย<wbr>ปี 1995 บริษัท advanced
+micro devices ได้<wbr>เลิก<wbr>พัฒนา 29k ซึ่ง<wbr>ได้<wbr>ประ<wbr>โยชน์<wbr>มาก<wbr>กว่า clones ของ intel
+80x86 processor ถึง<wbr>แม้<wbr>ว่า<wbr>จะ<wbr>พัฒนา superscalar ไป<wbr>มาก<wbr>แล้ว<wbr>เพื่อ<wbr>ผลิต amd 29000
+รุ่น<wbr>ใหม่ ซึ่ง<wbr>มี<wbr>การ<wbr>เพิ่ม fpu ( ออก<wbr>แบบ<wbr>มา<wbr>จาก 29050 ) เข้า<wbr>ไป<wbr>เพื่อ<wbr>จะ shared
+กับ k5 ( ออก<wbr>มา<wbr>ใน<wbr>ปี 1995 ) เป็น processor ซึ่ง compatible กับเพนเทียม (
+k5 สามารถ<wbr>แปลง<wbr>คำ<wbr>สั่ง<wbr>ของ 80x86 ไป<wbr>เป็น risc ได้<wbr><wbr></font></font></dd>
+<b><font face="ms sans serif"><font color="#990000"><font size=-1></font></font></font></b>
+<p><a name="5"></a><b><font face="ms sans serif"><font color="#990000"><font size=-1>motolola
+8800,late but elegant(mid 1988)</font></font></font></b>
+<br><img src="z_rainbo.gif" height=5 width=576>
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>motolola
+88000 ซึ่ง<wbr>ออก<wbr>มา<wbr>ถัด<wbr>จาก<wbr>รุ่น 78000 นั้น<wbr>เป็น processor ขนาด 32 บิต และ<wbr>ยัง<wbr>เป็น<wbr>หนึ่ง<wbr>ใน
+processor เครื่องแรกๆ ของ<wbr>แบบ risc โดย<wbr>มี<wbr>พื้น<wbr>ฐาน cpu มา<wbr>จาก harvard architecture
+( คล้ายกับ fairchild / intergraph clipper c100 (1986))แต่<wbr>ละบัสจะ<wbr>มี<wbr>แคชแยก<wbr>กัน<wbr>ดัง<wbr>นั้นเ<wbr>ว
+ลา<wbr>เข้า<wbr>ถึง ข้อ<wbr>มูล<wbr>และ<wbr>คำ<wbr>สั่ง จะ ไม่<wbr>เกิด<wbr>ขึ้น<wbr>พร้อม<wbr>กัน ถ้า<wbr>ไม่<wbr>นับ<wbr>ส่วน<wbr>นี้<wbr>แล้ว<wbr>จะ<wbr>มี<wbr>ความ<wbr>คล้าย<wbr>คลึงกั<wbr>บ
+สถาปัตยกรรม<wbr>ของ hewlett packard precision ( hp / pa ) ซึ่ง<wbr>มี<wbr>การ<wbr>ออก<wbr>แบบ<wbr>ให้<wbr>มี<wbr>การ<wbr>เพิ่ม
+รีจีสเตอร์สำหรับ<wbr>ควบ<wbr>คุม<wbr>สถานะ<wbr>มาก<wbr>มาย ซึ่ง<wbr>ใช้<wbr>ใน<wbr>โหมดการ<wbr>ควบ<wbr>คุม ถึง<wbr>แม้<wbr>ว่า 88000
+จะ<wbr>มี<wbr>การ<wbr>เพิ่ม<wbr>สิ่ง<wbr>ต่างๆเข้า<wbr>มา<wbr>มาก<wbr>กว่า คือ<wbr>มี<wbr>ชุด<wbr>คำ<wbr>สั่ง<wbr>ที่<wbr>มี<wbr>ขนาด<wbr>เล็ก<wbr>และ<wbr>สวย<wbr>งา
+มและ<wbr>มี segment addressing น้อย คือ<wbr>จำกัด addressing ที่ 32 บิต แทน<wbr>ที่<wbr>จะ<wbr>เป็น
+64 บิด<wbr>และ<wbr>ยัง<wbr>มี<wbr><wbr>88200 mmu unit และ<wbr>แคชคู่ ( ได้<wbr>ทำ<wbr>การ<wbr>เพิ่ม multiprocessor เข้า<wbr>มา
+) และ<wbr>ฟังก์ชั่น mmu สำหรับ cpu 88100 ( คล้ายกับ clipper ) ส่วน 88110 ได้<wbr>ทำ<wbr>การ<wbr>เพิ่ม<wbr>แคชและ
+mmu บน<wbr>ชิป<wbr></font></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>88000 ประกอบ<wbr>ด้วย
+user register ขนาด 32 บิต 32 ตัว , 8 distinct internal - alu และ ยูนิทช์จำนวน<wbr>จริง
+( มี<wbr>การ<wbr>ใช้ single register set ร่วม<wbr>กัน ) ใน<wbr>รุ่น 88100 นั้น<wbr>ได้<wbr>ทำ<wbr>การ<wbr>เพิ่ม
+alu สำหรับ<wbr>การ<wbr>คูณ<wbr>เข้า<wbr>มา และ fpu unit ( ประกอบ<wbr>ด้วย<wbr>รีจีสเตอร์ fpu ขนาด 80
+บิต 30 ตัว ) ใน<wbr>รุ่น 88110 ได้<wbr>มี<wbr>การ<wbr>เพิ่ม<wbr>กราฟ<wbr>ฟิก<wbr>เข้า<wbr>ไป โดย bit unit จะ<wbr>ถูก
+pack และ unpack ใน 4 , 8 ,16 บิตจำนวน<wbr>เต็ม<wbr><wbr>( pixels ) และ<wbr>บรรจุ<wbr>ลง<wbr>ใน 32 bit
+word แต่<wbr>ผลิต<wbr>ออก<wbr>มา<wbr>ช้า<wbr>และ<wbr>ไม่<wbr>ได้<wbr>รับ<wbr>ความ<wbr>นิ ยม<wbr>เท่ากับ mips หรือ hp processor</font></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>88000 เป็น
+processor ที่<wbr>ทัน<wbr>สมัย<wbr>และ<wbr>ยัง<wbr>มี<wbr>ระบบ pipeline ( กับ interlocks ) และ<wbr>มี<wbr>ผล<wbr>ทำ<wbr>ให้<wbr>ก้าว
+ไป<wbr>ข้าง<wbr>หน้า ใน 88110 alu สามารถ<wbr>นำ<wbr>ผล<wbr>ไป<wbr>ยัง<wbr>ไซเคิลถัด<wbr>ไป<wbr>ได้ การ loaded / saved
+ใน 88110 จะ<wbr>กระ<wbr>ทำกับบัฟเฟอร์ ดัง<wbr>นั้น processor จึง<wbr>ไม่<wbr>ต้อง<wbr>มี<wbr>การ<wbr>คอย ยก<wbr>เว้น<wbr>เมื่อ<wbr>มี<wbr>กา<wbr>รโห<wbr>ลด<wbr>ค่า<wbr>ไป<wbr>ไว้<wbr>ที่
+หน่วย<wbr>ความ<wbr>จำ จำ<wbr>เป็น<wbr>ต้อง<wbr>มี<wbr>การ<wbr>คอย<wbr>ให้<wbr>มี<wbr>การ<wbr>บัน<wbr>ทึก<wbr>ข้อ<wbr>มูล<wbr>เสร็จ<wbr>สิ้น<wbr>ก่อน<wbr><wbr></font></font></font></dd>
+<b><font color="#990000"></font></b>
+<p><a name="6"></a><b><font color="#990000">cpu 860</font></b>
+<br><img src="z_rainbo.gif" height=5 width=576>
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>cpu รุ่น
+860 มี<wbr>หลาก<wbr>หลาย<wbr>โหมดการ<wbr>ทำ<wbr>งาน จาก scaler mode ไป<wbr>จน<wbr>ถึง superscelar mode (การ<wbr>ทำ<wbr>คำ<wbr>สั่ง<wbr>แบบ<wbr>ไม่<wbr>ต้อง<wbr>รอ<wbr>ให้<wbr>จบ<wbr>ที<wbr>ละ<wbr>คำ<wbr>สั่ง
+จะ<wbr>ทำ<wbr>คำ<wbr>สั่ง<wbr>ไป<wbr>เรื่อย ๆ โดย<wbr>ใช้<wbr>ค่า<wbr>ที่<wbr>มี<wbr>อยู่<wbr>เท่า<wbr>ที่<wbr>สามารถ<wbr>จะ<wbr>ทำ<wbr>ได้) โดย<wbr>ใช้ cach
+ขนาด 8k ใน<wbr>แบบ<wbr>ที่<wbr>จำกัด เป็น vector register ขนาด<wbr>เล็ก (ที่<wbr>ใช้<wbr>ใน supercomputers)
+cache ที่<wbr>นอก<wbr>เหนือ<wbr>จาก<wbr>นี้<wbr>ใช้<wbr>เป็น address เสมือน แทน<wbr>ที่<wbr>จะ<wbr>เป็น<wbr>แบบ<wbr>กายภาพ คำ<wbr>สั่ง<wbr>และ
+data bus แยก จาก<wbr>กัน โดย 4g สำหรับ<wbr>หน่วย<wbr>ความ<wbr>จำ ใช้<wbr>แบบ segmentและ<wbr>ใช้<wbr>หน่วย<wbr>จัด<wbr>การ<wbr>หน่วย<wbr>ความ<wbr>จำ
+สำหรับ<wbr>ที่ เก็บ<wbr>แบบ<wbr>เสมือน 860 มี register ขนาด 32 bit จำนวน 32 ตัว และ register
+แบบ floating point 32 bit จำนวน 32 ตัว 860 เป็น microprocessor ใน<wbr>รุ่น<wbr>แรก
+ๆ ที่<wbr>มี fpu ,integer alu และ 3-d graphic unit (ติด<wbr>อยู่กับ fpu) ใช้<wbr>สำหรับ<wbr>การ<wbr>วาด<wbr>เส้น<wbr><wbr></font></font></font></dd>
+
+<p><a name="7"></a><b><font face="ms sans serif"><font color="#990000"><font size=-1>motorola
+68000</font></font></font></b>
+<br><img src="z_rainbo.gif" height=5 width=576>
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>68000 มี
+16 32-bit register โดย<wbr>แยก<wbr>เป็น data และ address registers 1 address registerไว้<wbr>สำหรับ
+stack pointer และ data registers สามารถ<wbr>ใช้<wbr>สำหรับ<wbr>การ operation ต่างๆซึ่ง<wbr>ประกอบ<wbr>ไป<wbr>ด้วย
+การ<wbr>โต้<wbr>ตอบ<wbr>จาก address register แต่<wbr>ไม่<wbr>เหมือน<wbr>การ<wbr>ใช้<wbr>ข้อ<wbr>มูล<wbr>จาก address เอง การ
+operation บน address register ถูก<wbr>จำกัด<wbr>ใน<wbr>การ move , add / subtract หรือ
+load จาก address operations เหมือนกับ cpu โดย<wbr>ทั่ว<wbr>ไป<wbr>ใน<wbr>เวลา<wbr>เดียว<wbr>กัน 68000สามารถ
+fetch คำ<wbr>สั่ง<wbr>ถัด<wbr>ไป ใน<wbr>ขณะ<wbr>ที่<wbr>ทำ<wbr>การ execution ( 2 stage pipeline ) 68000มี<wbr><wbr>32bitsunits
+ภาย<wbr>ใน ทำ<wbr>ได้<wbr>รวด<wbr>เร็ว สามารถ<wbr>แยก<wbr>แยะ forced segmentation ถูก<wbr>ออก<wbr>แบบ<wbr>สำหรับ<wbr>ขยาย<wbr>ประกอบ<wbr>ไป<wbr>ด้วย
+การ<wbr>ระบุ<wbr>ราย<wbr>ละเอียด<wbr>สำหรับ floating point และ<wbr><wbr>string</font></font></font></dd>
+
+<dd>
+<b><font face="ms sans serif"><font color="#3333ff"><font size=-1>chip
+ตระกูล<wbr>ของ motolora</font></font></font></b></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>1.68000
+มี 16 32-bit register โดย<wbr>แยก<wbr>เป็น data และ address registers 1 address register
+ไว้<wbr>สำหรับ stack pointer และ data registers สามารถ<wbr>ใช้<wbr>สำหรับ<wbr>การ operation
+ต่าง ๆ ซึ่ง<wbr>ประกอบ<wbr>ไป<wbr>ด้วย การ<wbr>โต้<wbr>ตอบ<wbr>จาก address register แต่<wbr>ไม่<wbr>เหมือน<wbr>การ<wbr>ใช้<wbr>ข้อ<wbr>มูล<wbr>จาก
+address เอง การ operation บน address register ถูก<wbr>จำกัด<wbr>ใน<wbr>การ move , add
+/ subtract หรือ load จาก address 68000 มี 32 bits units ภาย<wbr>ใน ทำ<wbr>ได้<wbr>รวด<wbr>เร็ว
+สามารถ<wbr>แยก<wbr>แยะ forced segmentation ถูก<wbr>ออก<wbr>แบบ<wbr>สำหรับ<wbr>ขยาย ประกอบ<wbr>ไป<wbr>ด้วย การ<wbr>ระบุ<wbr>ราย<wbr>ละเอียด<wbr>สำหรับ
+floating point และ string operations เหมือนกับ cpu โดย<wbr>ทั่ว<wbr>ไป<wbr>ใน<wbr>เวลา<wbr>เดียว<wbr>กัน
+68000 สามารถ fetch คำ<wbr>สั่ง<wbr>ถัด<wbr>ไป ใน<wbr>ขณะ<wbr>ที่<wbr>ทำ<wbr>การ execution ( 2 stage pipeline
+)</font></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>2.68010
+รวม<wbr>เข้า<wbr>ไป<wbr>ใน virtual memory support และ special loop mode ( small decrement-and-branch
+loopsสามารถ executed จาก instruction fetch buffer . )</font></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>3.68020
+( 1984 ) ขยาย external data และ address bus เป็น 32 bits และ รวม 256 byte
+cache ใน<wbr>ขณะ<wbr>ที่ 68030 นำ mmu ไว้<wbr>บน chip ส่วน<wbr><wbr></font></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>4.68040
+( 1991 ) รวม<wbr>เข้า<wbr>ใน fully cache harvard busses โดย<wbr>มา<wbr>จาก data และ instructions
+6 stage pipeline และ<wbr>บน chip fpu</font></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>5.68060
+(1994) ขยาย<wbr>การ<wbr>ออก<wbr>แบบ<wbr>เป็น superscalar version เหมือน intel pentium และ ns320xx
+(swordfish) series ที่<wbr>เกิด<wbr>ขึ้น<wbr>ก่อน<wbr>เหมือน nx586 ,amd k5 และ "intel pentium
+pro" stage ที่ 3 ของ 10-stage ใน 68060 pipeline แปลง<wbr>คำ<wbr>สั่ง 680x0 ไป decode
+risc และ<wbr>ใช้ resource renaming ใน<wbr>การ reorder คำ<wbr>สั่ง และ<wbr>ยัง<wbr>มี branch cache
+และ branch ที่<wbr>รวม ใน decoded instruction stream เหมือน at&amp;t hobbit
+และ<wbr>อื่น ๆ มาก<wbr>กว่า การ processor ที่<wbr>ผ่านๆมา<wbr><wbr></font></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>นอก<wbr>จาก<wbr>นี้<wbr>ใน
+68060 ยัง<wbr>ประกอบ<wbr>ไป<wbr>ด้วย การ<wbr>เปลี่ยน<wbr>แปลง power-saving มาก<wbr>มาย<wbr>ที่<wbr>แสดง<wbr>ให้<wbr>เห็น
+ดัง<wbr>นั้น power ที่<wbr>ใช้<wbr>มี<wbr>ระดับ<wbr>ต่ำ<wbr>กว่า 68040 การ<wbr>เปลี่ยน<wbr>แปลง อื่น ๆ คือ simple
+register-register instruction ซึ่ง<wbr>ไม่<wbr>ได้ เกิด<wbr>จาก address ใช้ address stage
+alu ใน<wbr>การ execute 2 cycle ก่อน<wbr><wbr></font></font></font></dd>
+
+<p><a name="8"></a><b><font face="ms sans serif"><font color="#990000"><font size=-1>ibm
+rs/6000 power chip ( 1990 )</font></font></font></b>
+<br><img src="z_rainbo.gif" height=5 width=576>
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>เมื่อ ibm
+ตัด<wbr>สิน<wbr>ใจ<wbr>เข้า<wbr>ร่วม<wbr>ใน<wbr>ตลาด work station ( หลัง<wbr>จาก<wbr>ไม่<wbr>ประสบ<wbr>ความ<wbr>สำเร็จกับ pc/rt
+ซึ่ง<wbr>เป็น<wbr>พื้น<wbr>ฐาน<wbr>บน romp processor ) ได้<wbr>ออก<wbr>แบบ cpu ใหม่ ซึ่ง<wbr>มี<wbr>พื้น<wbr>ฐาน<wbr>ใน<wbr>ส่วน<wbr>ของ<wbr>โครง<wbr>การ
+801 ซึ่ง<wbr>เป็น<wbr>ผู้<wbr>บุก<wbr>เบิก ทฤษฎี risc ซึ่ง risc เป็น<wbr>พื้น<wbr>ฐาน<wbr>ธรรม<wbr>ดา<wbr>สำหรับ<wbr>การ<wbr>ลด<wbr>ชุด<wbr>คำ<wbr>สั่ง
+( reduced instruction set computer ) แต่ ibm เรียก<wbr>ว่า reduced instruction
+set cycles และ<wbr>ส่ง<wbr>เสริม<wbr>กระบวน<wbr>การ<wbr>ที่<wbr>ซับ<wbr>ซ้อน<wbr>ของ processor กับ high level instruction
+มาก<wbr>กว่า cise processor ทั้ง<wbr>หมด และ<wbr>สิ้น<wbr>สุด<wbr>โดย<wbr>จะ<wbr>ได้ cpu ( power 1 ) ที่<wbr>ใน<wbr>ตอน<wbr>เริ่ม<wbr>ต้น
+ประกอบ<wbr>ไป<wbr>ด้วย 5 หรือ 7 ส่วน คือ<wbr><wbr></font></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>1. branch
+unit</font></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>2. point
+unit</font></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>3. floating
+point unit</font></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>4. จะ<wbr>เป็น
+2. หรือ 4. cache chips ( โดย<wbr>แยก<wbr>เป็น data และ instruction cache )</font></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>บาง power
+pc version ( ได้<wbr>รับ<wbr>การ<wbr>พัฒนา<wbr>ร่วม<wbr>กัน<wbr>ระหว่าง ibm apple และ motorola ด้วย motorola
+68000 และ intel 8086 ) มี<wbr>การ<wbr>รวม cache บน chip ( 32 k ใน 601 ) version ใหม่
+มี<wbr>การ<wbr>แบ่ง<wbr>แยก i/d caches. power pc version ยัง<wbr>รวม<wbr>คำ<wbr>สั่ง<wbr>ง่าย ๆ ( simplified
+instruction set ) รวมกับคำ<wbr>สั่ง<wbr>เก่า ๆ ที่<wbr>จำ<wbr>เป็น<wbr><wbr></font></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>ส่วน<wbr>ของ
+branch unit เป็น<wbr>หัว<wbr>ใจ<wbr>ของ cpu และ enables multiple instruction ใน<wbr>การ executed
+1 ครั้ง ประกอบ<wbr>ไป<wbr>ด้วย<wbr>เงื่อน<wbr>ไข<wbr>รหัส register , loop register และ performs
+branches ใน code condition register มี 8 ส่วน ( โดย<wbr>ใน power 1. สงวน 2.
+ไว้<wbr>สำหรับ fixed และ floating point units, และ<wbr>อีก 6 ส่วน สามารถ<wbr>เป็น<wbr>ส่วน
+( หรือ<wbr>รวม<wbr>จาก<wbr>หลาย ๆ คำ<wbr>สั่ง<wbr>ไว้<wbr>ได้ ) และ<wbr>สามารถ<wbr>ตรวจ<wbr>สอบ<wbr>หลาย ๆคำ<wbr>สั่ง และ<wbr>ยัง<wbr>เป็น<wbr>ตัว<wbr>ส่ง
+multiple instructions (ออก<wbr>จาก<wbr>การ<wbr>จัด<wbr>การ ถ้า<wbr>เป็น<wbr>ไป<wbr>ได้ ) เพื่อ<wbr>ความ<wbr>เหมาะ<wbr>สม
+ใน<wbr>ส่วน<wbr>ของ executing คำ<wbr>สั่ง<wbr>ซึ่ง<wbr>ซับ<wbr>ซ้อน ( complex instruction )</font></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>ใน<wbr>ส่วน<wbr>ของ
+branch unit สามารถ<wbr>คาด<wbr>เดา<wbr>ใน<wbr>การ<wbr>แยก<wbr>ส่ง<wbr>คำ<wbr>สั่ง<wbr>และย กเลิก<wbr>ได้ ถ้า<wbr>ไม่<wbr>สามารถ<wbr>แยก<wbr>เป็น<wbr>ส่วน
+ๆ ได้ branch unit ยัง<wbr>จัด<wbr>การกับ procedure โดย<wbr>การ call และ returns บน program
+counter stack ตาม zero-cycles calls เมื่อ<wbr>มี<wbr>การ<wbr>ซ้อน<wbr>ทับ<wbr>กันกับคำ<wbr>สั่ง<wbr>อื่น และ<wbr>สุด<wbr>ท้าย<wbr>ยัง<wbr>จัด<wbr>การกั<wbr>บ
+interrupt โดย<wbr>ปราศ<wbr>จาก<wbr>การ<wbr>เข้า<wbr>แทรก<wbr>ของ software</font></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>the integer
+unit เป็น<wbr>การ<wbr>กำหนด<wbr>รูป<wbr>แบบ<wbr>การ operation ของ integer และ load และ stores ใน
+power1 และ power pc 601 ( version ใหม่ ยัง<wbr>รวม<wbr>ส่วน<wbr>ที่<wbr>เป็น concurrent ใน<wbr>หน่วย<wbr>การ
+load/store ) ทุก version ประกอบ<wbr>ไป<wbr>ด้วย register 32 bit ใน<wbr>ขณะ<wbr>ที่ power pc
+620 และ as register เป็น 64 bits high end power pc-as มี<wbr>จุด<wbr>มุ่ง<wbr>หมาย<wbr>สำหรับ
+as/400 minicomputer series ยัง<wbr>รวม<wbr>ถึง<wbr>การ<wbr>มี<wbr>คำ<wbr>สั่ง<wbr>เลข<wbr>คณิต<wbr>ฐานส<wbr>? ;บ และ คำ<wbr>สั่ง<wbr>เกี่ยวกับตัว<wbr>อักษร
+และ<wbr>การ<wbr>เชื่อม<wbr>ต่อ<wbr>กัน<wbr>สำหรับ matrix coprocessor หน่วย<wbr>ตัว<wbr>เลข<wbr>ทั้ง<wbr>หมด<wbr>สามารถ<wbr>ส่ง<wbr>ผลลัพ<wbr>&amp;c
+edil;์ต่อ<wbr>ไป<wbr>เมื่อ subsequent instructions ต้อง<wbr>การ ก่อน<wbr>ที่<wbr>จะ<wbr>มี<wbr>การ<wbr>เขียน<wbr>สถานะ<wbr>เกิด<wbr>ขึ้น<wbr>และบ<wbr>&amp;ogra
+ve;ง version ยัง<wbr>ประกอบ<wbr>ไป<wbr>ด้วย register พิเศษ ซึ่ง<wbr>ถูก rename สำหรับ<wbr>การ<wbr>คาด<wbr>เดา<wbr>หรือ<wbr>ออก<wbr>จาก<wbr>การ<wbr>จัด<wbr>คำ<wbr><wbr>&amp;ecir
+c;ั่ง execution ใน<wbr>การ<wbr>ขัด<wbr>ขวาง<wbr>การ<wbr>เขียน และ<wbr>ทำ<wbr>ให้<wbr>มัน<wbr>ง่ายใน<wbr>การ<wbr>ทิ้ง<wbr>คำ<wbr>ตอบ<wbr>สำหรับ
+หยุด<wbr>คำ<wbr>สั่ง<wbr>ใน<wbr>การ reorder การ<wbr>ปะทะ ใน<wbr>หน่วย<wbr>ของ branch/dispatch มี<wbr>ร่อง<wbr>รอย<wbr>การ
+rename register ของ integer และ floating point</font></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>ใน<wbr>หน่วย<wbr>ของ
+floating point ยัง<wbr>ประกอบ<wbr>ไป<wbr>ด้วย thirty two 64 bit register และ<wbr>กำหนด<wbr>ชนิด<wbr>ของ
+floating point operations ประกอบ<wbr>ไป<wbr>ด้วย<wbr>คำ<wbr>สั่ง multiply/accumulate และ array
+multiply และ<wbr>การ<wbr>บวก register ถูก load และ store ซึ่ง<wbr>กำหนด<wbr>จุด<wbr>ทศนิยม<wbr>ใน power1
+และ power pc601 โดย<wbr>หน่วย<wbr>ของ<wbr>การ load/store อื่น ๆ fpu ยัง<wbr>ประกอบ<wbr>ไป<wbr>ด้วย rename
+register เหมือน<wbr>บาง cpu อื่น ๆ floating point trap ยัง<wbr>ไม่<wbr>ชัด<wbr>เจน แน่<wbr>นอน เพราะ<wbr>ว่า
+pipelining-normally. traps bit เป็น set ของ<wbr>การ<wbr>ยอม<wbr>รับ<wbr>เลข<wbr>ทศนิยม และ software
+สามารถ<wbr>ตรวจ<wbr>สอบ<wbr>เงื่อน<wbr>ไข<wbr>ใน<wbr>การ<wbr>กำหนด trap ได้ หรือ<wbr>จะ<wbr>ทำ<wbr>การ<wbr>ยุติ<wbr>ได้<wbr>ถ้า<wbr>มี software-operation
+สำหรับ<wbr>การ debugging ยัง<wbr>รวม slower precise trap mode เข้า<wbr>ไป<wbr>อีก<wbr><wbr></font></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>data bus
+มี<wbr>ระยะ<wbr>จาก 32 bit เป็น 256 bit ซึ่ง<wbr>สามารถ<wbr>เพิ่ม<wbr>เป็น<wbr>คำ<wbr>สั่ง 6 คำ<wbr>สั่ง และ 4
+การ load หรือ store ใน<wbr>เวลา<wbr>เดียว<wbr>กัน โดย power pc 601 ใช้ motorola 88000
+microprocessor bus มาก<wbr>กว่า version ใน<wbr>ปัจจุบัน<wbr>ซึ่ง<wbr>ใช้ power pc โดย<wbr>กำหนด
+bus โดย<wbr>เฉพาะ บาง<wbr>ที<wbr>ก็<wbr>ใช้กับ 128 bit ‘ back side ‘ bus ใช้<wbr>ใน<wbr>การ<wbr>เข้า<wbr>ถึง l2.cache</font></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>ibm power
+cpu ทั้ง<wbr>หมด<wbr>มี<wbr>ประสิทธิภาพ ทำ<wbr>ให้<wbr>คิด<wbr>ถึง<wbr>การ<wbr>ออก<wbr>แบบ mainframe ซึ่ง<wbr>คุณสมบัติ<wbr>ทั้ง<wbr>หมด<wbr>เหมือนกั<wbr>บ
+" weird and innovative " และ<wbr>ยัง<wbr>ใช้ risc ด้วย มี<wbr>ความ<wbr><wbr>iซับ<wbr>ซ้อน<wbr>สูง ทำ<wbr>ให้<wbr>มี<wbr>ประสิทธิภาพ
+แต่<wbr>ต้อง<wbr>กำหนด clock rate ของ<wbr>การ<wbr>ออก<wbr>แบบ<wbr>ที่<wbr>แน่<wbr>นอน<wbr><wbr></font></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>clock rate
+สูง ๆ ได้<wbr>รับ<wbr>การ<wbr>พัฒนา<wbr>จาก exponential technology ทำ<wbr>การ<wbr>ขยาย<wbr>ชนิด<wbr>ของ<wbr>เทคโนโลยี
+intel พบ<wbr>ถึง<wbr>ความ<wbr>จำ<wbr>เป็น<wbr>ใน<wbr>การ<wbr>เก็บ pentium และ pentium pro cpu ไว้<wbr>ใช้<wbr>ใน<wbr>การ<wbr>แข่ง<wbr>ขัน
+และ embedded version ยัง<wbr>ได้<wbr>รับ<wbr>การ<wbr>แนะ<wbr>นำ<wbr>จาก ibm และ motorolo</font></font></font></dd>
+
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1></font></font></font></dd>
+
+<p><a name="9"></a><b><font face="ms sans serif"><font color="#990000"><font size=-1>dec
+alpha การ<wbr>ออก<wbr>แบบ<wbr>สำหรับ<wbr>อนาคต (1992)</font></font></font></b>
+<br><img src="z_rainbo.gif" height=5 width=576>
+<dd>
+<font face="ms sans serif"><font color="#000000"><font size=-1>สถาปัตยกรรม<wbr>ของ
+dec alpha ได้<wbr>รับ<wbr>การ<wbr>ออก<wbr>แบบ<wbr>ตาม dec สำหรับ<wbr>การ<wbr>ดำ<wbr>เนิน<wbr>ชีวิต<wbr>ใน<wbr>ระยะ<wbr>เวลา 25 ปี ผู้<wbr>เปลี่ยน<wbr>แปลง<wbr>หลัก<wbr>คือ
+pal calls ( หรือ set คำ<wbr>สั่ง writable ที่<wbr>แน่<wbr>นอน ) แต่<wbr>ยัง<wbr>ได้<wbr>รับ<wbr>การ<wbr>ผสม<wbr>ผสาน<wbr>ของ<wbr>ลักษณะ<wbr>เด่น
+ใน<wbr>การ<wbr>รวบ<wbr>รวม<wbr>ที่<wbr>แน่<wbr>นอน<wbr>ของ คุณสมบัติ<wbr>ที่<wbr>ไม่<wbr>มี<wbr>ข้อ<wbr>กำหนด<wbr>ที่<wbr>ชัด<wbr>เจน chip ของ alpha
+ตัว<wbr>แรก<wbr>คือ 21064 alpha คือ สถาปัตยกรรม 64 bit ( มี 32 bit เป็น instruction
+) ไม่<wbr>สนับสนุน 8- หรือ 16-bit ของ<wbr>การ<wbr>ดำ<wbr>เนิน<wbr>การ แต่<wbr>ต้อง<wbr>ตาม<wbr>การ<wbr>เปลี่ยน<wbr>แปลง ดัง<wbr>นั้น<wbr>จึง<wbr>ไม่<wbr>มี
+function ที่<wbr>สูญ<wbr>หาย alpha 32 bit การ<wbr>ดำ<wbr>เนิน<wbr>การ<wbr>แตก<wbr>ต่าง<wbr>จาก 64 bit เพียง<wbr>แก่<wbr>การ<wbr>ป้อง<wbr>กัน
+overflow alpha ไม่<wbr>สามารถ<wbr>ทำ<wbr>คำ<wbr>สั่ง<wbr>หาร<wbr>ได้ นอก<wbr>จาก<wbr>นี้<wbr>ยัง<wbr>มี<wbr>คุณสมบัติ<wbr>เหมือน mips
+r2000 ซึ่ง<wbr>ประกอบ<wbr>ไป<wbr>ด้วย<wbr>การ<wbr>ใช้ register ทั่ว<wbr>ไป ใน<wbr>การ<wbr>กำหนด<wbr>รหัส<wbr>เงื่อน<wbr>ไข อย่าง<wbr>ไร<wbr>ก็<wbr>ตาม
+alpha ยัง<wbr>มี<wbr>การ interlocked pipeline ดัง<wbr>นั้น<wbr>จึง<wbr>ไม่<wbr>มี register พิเศษ<wbr>สำหรับ<wbr>การ
+คูณ / หาร และ alpha ยัง<wbr>หมาย<wbr>ถึง<wbr>การ<wbr>หลีก<wbr>เลี่ยง<wbr>สัญลักษณ์<wbr>การ<wbr><wbr>&amp; agrave;ติบโต<wbr>ใน<wbr>ส่วน<wbr>ที่<wbr>ซับ<wbr>ซ้อน
+ซึ่ง<wbr>ตระกูล r2000 ทด<wbr>ลอง<wbr>และ<wbr>พัฒนา<wbr>เป็น r8000 และ r10000 กฎ<wbr>ของ alpha ใช้<wbr>ใน<wbr>การ<wbr>ย้าย<wbr>สถาปัตยกรรม
+dec’<wbr>s two prior โดย mips เป็น<wbr>พื้น<wbr>ฐาน<wbr>บนเครื่อง workstation และ vax minicomputer
+ใน<wbr>การ<wbr>ทำ<wbr>แบบ<wbr>นั้น chip สามารถ<wbr>จัด<wbr>เป็น<wbr>ทั้ง ieee และ vax32 และ 64 bit floating
+point operation และ<wbr>ลักษณะ<wbr>เด่น<wbr>ของ privileged architecture library ( pal)
+เรียก set ของ programmable ( ไม่<wbr>มี interruptable ) เขียน<wbr>ใน<wbr>ชุด<wbr>คำ<wbr>สั่ง<wbr>ใน alpha
+โดย<wbr>ทั่ว<wbr>ไป<wbr>ใน programmable มี<wbr>รหัส<wbr>ขนาด<wbr>เล็ก<wbr>ของ western digital mcp-1600 หรือ
+amd am 2910 cpus เป็น<wbr>การ<wbr>เปลี่ยน<wbr>แปลง<wbr>ง่าย ๆ จาก<wbr>ชุด<wbr>คำ<wbr>สั่ง<wbr>อื่น ๆ โดย<wbr>ใช้<wbr><wbr>binary
+translator ( การ<wbr>แปลง<wbr>แบบไบนา<wbr>รี ) โดย<wbr>สนับสนุน operating system ที่<wbr>หลาก<wbr>หลาย
+alpha ยัง<wbr>ได้<wbr>รับ<wbr>การ<wbr>ออก<wbr>แบบ<wbr>เพื่ออนา<wbr><wbr>&amp;curr en;ตสำหรับ 1000-fold เพื่อ<wbr>เพิ่ม<wbr>ใน<wbr>คุณสมบัติ<wbr>เพราะ<wbr>ว่า<wbr>นี่<wbr><wbr>&amp;
+curren;ือ ชุด<wbr>คำ<wbr>สั่ง superscalar ได้<wbr>รับ<wbr>การ reorder และ trap เงื่อน<wbr>ไข ที่<wbr>เป็น<wbr>ไป<wbr>ได้<wbr>ให้<wbr>ชัด<wbr>เจน
+คำ<wbr>สั่ง<wbr>พิเศษ<wbr>ที่<wbr>เหมาะ<wbr>สม<wbr>ใน<wbr>การ syncronise ที่<wbr>เกิด<wbr>ขึ้น<wbr>เมื่อ<wbr>ต้อง<wbr>การ และ<wbr>ไม่<wbr>มี
+branch delay slot เหมือน<wbr>ใน r2000 ตั้ง<wbr>แต่<wbr>ทำ<wbr>การ<wbr>ผลิต<wbr>ราย<wbr>การ<wbr>ปัญหา<wbr>ต่าง ๆ ใน superscalar
+execution และ ปัญหา<wbr>ที่ compatibility กับ extended pipeline แทน<wbr>ที่<wbr>จะ speculative
+executive และ branch cache chip 21064 ได้<wbr>รับ<wbr>การ<wbr>แนะ<wbr>นำ<wbr>ร่วมกับ 1. integer
+2. floating point และ 1 load / store unit 21164 ( ก่อน<wbr>ปี 1995 ) รวม 1.
+integer / load / store unit กับ คำ<wbr>สั่ง byte vector และ 1. floating point
+unit และ เพิ่ม clock speed จาก 200 mhz เป็น 300 mhz และ<wbr>ได้<wbr>รับ<wbr>การ<wbr>แนะ<wbr>นำ<wbr>ความ<wbr>คิด<wbr>ที่<wbr>เป็น
+1. level 2. cache บน chip 21264 ขยาย<wbr>เป็น 4 integer unit , 2 different floating
+point unit กับความ<wbr>สามารถ<wbr>ใน<wbr>การ load 4 ,dispatch 6 และ retire eight instruction
+ต่อ cycle สามารถ<wbr>เพิ่ม<wbr>ได้<wbr>ถึง 500 mhz ,multimedia ขยาย คำ<wbr>แนะ<wbr>นำ<wbr>ด้วย 21264
+เป็น simple แต่<wbr>ประกอบ<wbr>ไป<wbr>ด้วย vis-type motion estimation ( mpeg )</font></font></font></dd>
+<p>
+<hr width="100%">
+<i><font face="ms sans serif"><font size=-2>รวบรวมจาก บทเรียน online วิชา 204323 ไมโครโปรเซสเซอร์และการออกแบบไมโครคอมพิวเตอร์ รศ.ยืน ภู่วรวรรณ </font></font></i>
+</td>
+</tr>
+</table>
+
+</body>
+</html>

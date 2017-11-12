@@ -1,0 +1,157 @@
+<html>
+<head>
+<title>การเชื่อมโยงระบบ unix กับระบบเครือข่าย dos</title>
+</head>
+<body bgcolor="ffffff" text="000000" link="0000ff" vlink="800080">
+
+<table width=100% bgcolor=ffd9b3>
+    <tr><!-- row 1 -->
+      <td width = 100% align = center><b>การเชื่อมโยงระบบ unix กับระบบเครือข่าย dos</b></td>
+    </tr>
+</table>
+
+<dd>ใน<wbr>ปัจจุบัน ระบบ<wbr>เครือ<wbr>ข่าย<wbr>คอมพิวเตอร์<wbr>เริ่ม<wbr>นิยม<wbr>ใช้<wbr>กัน<wbr>มาก<wbr>เพื่อ<wbr>เชื่อม<wbr>โยง<wbr>เครื่อง<wbr>คอมพิวเตอร์<wbr>หลาย
+   ๆ ระบบ<wbr>เข้า<wbr>ด้วย<wbr>กัน<wbr>ทำ<wbr>ให้<wbr>การ share ข้อ<wbr>มูล<wbr>หรือ resource
+   เป็น<wbr>ไป<wbr>ด้วย<wbr>ดี
+   จะ<wbr>เห็น<wbr>ว่า<wbr>ความ<wbr>สำคัญ<wbr>ของ<wbr>การ<wbr>เชื่อม<wbr>โยง<wbr>ระหว่าง<wbr>เครื่อง<wbr>คอมพิวเตอร์<wbr>ใน<wbr>เครือ<wbr>ข่าย<wbr>คอมพิวเตอร์<wbr>ที่<wbr>มี<wbr>ระบบ<wbr>ปฏิบัติการ<wbr>ต่าง<wbr>กัน
+   เช่น  pc คอมพิวเตอร์<wbr>ที่<wbr>มี<wbr>ระบบ<wbr>ปฏิบัติการ dos.os/2 หรือ
+   workstation  และ<wbr>คอมพิวเตอร์
+   <dd>ขีด<wbr>ความ<wbr>สามารถ<wbr>ของ<wbr>เครื่อง<wbr>คอมพิวเตอร์<wbr>ได้<wbr>เพิ่ม<wbr>ขึ้น<wbr>อย่าง<wbr>รวด<wbr>เร็ว<wbr>ใน<wbr>ช่วง
+   10 ปี<wbr>ที่<wbr>ผ่าน<wbr>มา และ<wbr>มี<wbr>ส่วน<wbr>ช่วย<wbr>ให้<wbr>บุคลากร<wbr>แต่<wbr>ละ<wbr>หน่วย<wbr>งาน<wbr>ทำงาน<wbr>ได้<wbr>อย่าง<wbr>มี<wbr>ประสิทธิภาพ<wbr>มาก<wbr>ขึ้น
+   ใน<wbr>ภาพ<wbr>รวม<wbr>ของ<wbr>องค์กร<wbr>ใด ๆ ที่<wbr>รวม<wbr>หลาย<wbr>หน่วย<wbr>งาน<wbr>เข้า<wbr>ด้วย<wbr>กัน
+   การ<wbr>เชื่อม<wbr>โยง<wbr>ข่าย<wbr>สาย<wbr>ระหว่าง<wbr>เค<wbr>รื่<wbr>งอ<wbr>คอมพิวเตอร์<wbr>เข้า<wbr>ด้วย<wbr>กัน
+   ก็<wbr>จะ<wbr>เอื้อ<wbr>อำนวย<wbr>ประโยชน์ และ<wbr>ทำ<wbr>ให้<wbr>องค์กร<wbr>นั้น ๆ สามารถ<wbr>ใช้<wbr>ประ<wbr>โยขน์<wbr>จาก<wbr>คอมพิวเตอร์<wbr>ได้<wbr>สะดวก<wbr>รวด<wbr>เร็ว<wbr>มาก<wbr>ยิ่ง<wbr>ขึ้น
+   <dd>ใน<wbr>ปัจจุบัน<wbr>ราคา<wbr>ของ<wbr>ฮาร์ดแวร์<wbr>ได้<wbr>เริ่ม<wbr>ลด<wbr>ลง เครื่อง<wbr>คอมพิวเตอร์<wbr>ที่<wbr>มี<wbr>สมรรถนะ<wbr>สูง<wbr>ที่<wbr>มิ<wbr>ได้<wbr>ใช้<wbr>ระบบ
+   dos เป็น<wbr>ระบบ<wbr>ปฏิบัติการ<wbr>เริ่ม<wbr>ได้<wbr>รับ<wbr>ความ<wbr>นิยม<wbr>มาก<wbr>ขึ้น เช่น
+   sun, hp apollo หรือ dec workstation ซึ่ง<wbr>เครื่อง<wbr>เหล่า<wbr>นี้<wbr>ใช้<wbr>ระบบ<wbr>ปฏิบัติการ
+   unix และ<wbr>ถูก<wbr>ใช้<wbr>อยู่<wbr>ใน<wbr>องค์กร หรือ<wbr>หน่วย<wbr>งาน<wbr>ทาง<wbr>ด้าน<wbr>วิศวกรรม<wbr>ศาสตร์<wbr>และ<wbr>วิทยาศาสตร์<wbr>เป็น<wbr>ส่วน<wbr>ใหญ่
+   ดัง<wbr>นั้น<wbr>การ<wbr>เชื่อม<wbr>โยง<wbr>ระหว่าง pc คอมพิวเตอร์<wbr>กับ<wbr>เครื่อง<wbr>คอมพิวเตอร์<wbr>ที่<wbr>ใช้<wbr>ระบบ<wbr>ปฏิบัติการ<wbr>ที่<wbr>แตก<wbr>ต่าง<wbr>กัน<wbr>โดย<wbr>เฉพาะ<wbr>กับ<wbr>ระบบ
+   unix จะ<wbr>เป็น<wbr>ความ<wbr>ต้อง<wbr>การ<wbr>ของ<wbr>ผู้<wbr>ใช้<wbr>ใน<wbr>หน่วย<wbr>งาน<wbr>ต่าง ๆ
+   <dd>ระบบ unix เป็น<wbr>ระบบ<wbr>ที่<wbr>ยุ่ง<wbr>ยาก<wbr>กว่า<wbr>ระบบ<wbr>ปฏิบัติการ
+   dos มี function หลาย<wbr>อย่าง<wbr>ที่ dos ไม่<wbr>มี ระบบ unix ได้<wbr>รับ<wbr>การ<wbr>ออก<wbr>แบบ<wbr>ให้<wbr>เครื่อง<wbr>คอมพิวเตอร์<wbr>สามารถ<wbr>ทำงาน<wbr>หลาย
+   ๆ อย่าง<wbr>ได้<wbr>ใน<wbr>เวลา<wbr>เดียว<wbr>กัน เช่น<wbr>เดียว<wbr>กับ<wbr>ระบบ<wbr>ปฏิบัติการ<wbr>แบบ
+   os/2 บน<wbr>เครื่อง pc แต่<wbr>ระบบ unix ยัง<wbr>พิเศษ<wbr>ไป<wbr>กว่า<wbr>นั้น เพราะ<wbr>เป็น<wbr>ระบบ<wbr>ที่<wbr>ออก<wbr>แบบ<wbr>ไว้<wbr>ให้<wbr>ผู้<wbr>ใช้<wbr>หลาย
+   ๆ คน<wbr>สามารถ<wbr>ใช้<wbr>งาน<wbr>ได้<wbr>ใน<wbr>เวลา<wbr>เดียว<wbr>กัน<wbr>ได้
+   <dd>ระบบ unix เป็น<wbr>ระบบ<wbr>ปฏิบัติการ<wbr>ที่<wbr>นิยม<wbr>ใช้<wbr>กัน<wbr>มาก<wbr>ใน<wbr>งาน<wbr>ระดับ
+   minicomputer และ workstation เป็น<wbr>ระบบ<wbr>ที่<wbr>ได้<wbr>พัฒนา<wbr>ขึ้น<wbr>มา<wbr>เป็น<wbr>ครั้ง<wbr>แรก
+   เมื่อ<wbr>ประมาณ 20 กว่า<wbr>ปี<wbr>มา<wbr>แล้ว (ค.ศ. 1969) ที่<wbr>ห้อง<wbr>ปฏิบัติการ<wbr>ของ
+   bell lab โดย ken thompson กับ dennis ritchie dennis
+   ritchie คน<wbr>นี้<wbr>ก็<wbr>คือ<wbr>ผู้<wbr>ที่<wbr>พัฒนา<wbr>ภาษา c ขึ้น<wbr>มา<wbr>เป็น<wbr>คน<wbr>แรก<wbr>นั่น<wbr>เอง
+   ระบบ unix ได้<wbr>ถูก<wbr>พัฒนา<wbr>ครั้ง<wbr>แรก<wbr>ลง<wbr>บน<wbr>เครื่อง minicomputer
+   pdp-7 เป็น<wbr>ครั้ง<wbr>แรก<wbr>และ<wbr>ต่อ<wbr>มา<wbr>ได้<wbr>พัฒนา<wbr>บน<wbr>เครื่อง pdp-11
+   ใน<wbr>ปัจจุบัน<wbr>ระบบ<wbr>นี้<wbr>เป็น<wbr>ที่<wbr>นิยม<wbr>แพร่<wbr>หลาย<wbr>และ<wbr>ถูก<wbr>ใช้<wbr>เป็น<wbr>ระบบ<wbr>ปฏิบัติการ<wbr>ใน<wbr>เครื่อง<wbr>คอมพิวเตอร์<wbr>เกือบ<wbr>ทุก<wbr>ระดับ
+   <dd>คุณลักษณะ<wbr>ที่<wbr>สำคัญ<wbr>ของ<wbr>ระบบ unix คือ<wbr>การ<wbr>ที่<wbr>ระบบ<wbr>นี้<wbr>สามารถ<wbr>ทำงาน<wbr>ได้<wbr>หลาย
+   ๆ อย่าง<wbr>พร้อม ๆ กัน (multitasking) และ<wbr>อนุญาต<wbr>ให้<wbr>ผู้<wbr>ใช้<wbr>เครื่อง<wbr>ใช้<wbr>ได้<wbr>ที<wbr>ละ<wbr>หลาย
+   ๆ คน<wbr>ใน<wbr>เวลา<wbr>เดียว<wbr>กัน (multiuser)
+   <dd>โดย<wbr>ปกติ<wbr>แล้ว<wbr>ระบบ multiuser นั้น<wbr>เป็น<wbr>ระบบ<wbr>ที่<wbr>ใช้<wbr>ใน<wbr>เครื่อง<wbr>คอมพิวเตอร์<wbr>ขนาด<wbr>ใหญ่
+   เช่น mainframe หรือ minicomputer เป็น<wbr>ระบบ<wbr>ที่<wbr>ออก<wbr>แบบ<wbr>เพื่อ<wbr>ให้<wbr>มี<wbr>ผู้<wbr>ใช้<wbr>หลาย
+   ๆ คน<wbr>ใน<wbr>เวลา<wbr>เดียว<wbr>กัน หรือ<wbr>เรียก<wbr>ว่า time sharing หรือ multiplexing
+   ข้อ<wbr>ดี<wbr>ของ<wbr>ระบบ<wbr>นี้<wbr>ก็<wbr>คือ<wbr>ผู้<wbr>ใช้<wbr>สามารถ<wbr>ใช้<wbr>ข้อ<wbr>มูล หรือ<wbr>อุปกรณ์<wbr>ต่าง
+   ๆ เช่น printer disk หรือ<wbr>แม้<wbr>แต่ program ร่วม<wbr>กัน<wbr>ได้ แต่<wbr>ข้อ<wbr>เสีย<wbr>ก็<wbr>คือ<wbr>ระบบ<wbr>นี้<wbr>จะ<wbr>มี<wbr>ราคา<wbr>แพง<wbr>มาก
+   และ response time จะ<wbr>ช้า<wbr>เมื่อ<wbr>มี<wbr>ผู้<wbr>ใช้<wbr>หลาย<wbr>คน
+
+   <p>
+   <table bgcolor=ffe1c4 width = 100%>
+       <tr><!-- row 1 -->
+         <td width = 100%><b>ระบบ<wbr>เครือ<wbr>ข่าย<wbr></b></td>
+       </tr>
+   </table>
+
+   <dd>ระบบ<wbr>เครือ<wbr>ข่าย<wbr>ของ unix นั้น<wbr>ได้<wbr>เริ่ม<wbr>มา<wbr>นาน<wbr>แล้ว protocol
+   ที่<wbr>นิยม<wbr>ใช้<wbr>กัน<wbr>มาก<wbr>คือ<wbr>แบบ tcp/ip (transmission control
+   protocol/internet protocol) ซึ่ง<wbr>เป็น protocol ที่<wbr>ได้<wbr>พัฒนา<wbr>และ<wbr>คิด<wbr>ขึ้น<wbr>ใช้<wbr>โดย
+   dod (department of defence) ของ<wbr>ประเทศ<wbr>สหรัฐอเมริกา
+   <dd>เครื่อง<wbr>ไมโคร<wbr>คอมพิวเตอร์ หรือ<wbr>เครื่อง<wbr>คอมพิวเตอร์<wbr>ที่<wbr>เป็น<wbr>ระบบ<wbr>ผู้<wbr>ใช้<wbr>คน<wbr>เดียว
+   เช่น ibm pc หรือ mac ได้<wbr>นิยม<wbr>แพร่<wbr>หลาย<wbr>มาก<wbr>ใน<wbr>ช่วง 10 ปี<wbr>ที่<wbr>ผ่าน<wbr>มา
+   เนื่อง<wbr>จาก<wbr>มี<wbr>โปรแกรม<wbr>ให้<wbr>เลือก<wbr>ใช้<wbr>ได้<wbr>ตรง<wbr>กับ<wbr>ชนิด<wbr>ของ<wbr>งาน<wbr>และ<wbr>ราคา<wbr>ก็<wbr>ไม่<wbr>แพง<wbr>นัก
+   ทุก<wbr>หน่วย<wbr>งาน<wbr>จึง<wbr>พยายาม<wbr>จัด<wbr>ซื้อ<wbr>มา<wbr>ใช้<wbr>แต่<wbr>ละ<wbr>หน่วย<wbr>งาน<wbr>ก็<wbr>จะ<wbr>มี<wbr>เครื่อง<wbr>คอมพิวเตอร์<wbr>พริ้นเตอร์
+   หรือ เลเซอร์<wbr>พริ้นเตอร์ และ<wbr>อุปกรณ์<wbr>อำนวย<wbr>ความ<wbr>สะดวก<wbr>ต่าง
+   ๆ ของ<wbr>ตน<wbr>เอง ทุก<wbr>หน่วย<wbr>งาน<wbr>ก็<wbr>เริ่ม<wbr>เก็บ<wbr>ข้อ<wbr>มูล<wbr>ที่<wbr>จำเป็น<wbr>ของ<wbr>หน่วย<wbr>งาน
+   ซึ่ง<wbr>ก็<wbr>เป็น<wbr>ลัก<wbr>ษ<wbr>ระ database ของ<wbr>แต่<wbr>ละ<wbr>หน่วย<wbr>งาน<wbr>นั่น<wbr>เอง ซึ่ง<wbr>ข้อ<wbr>มูล<wbr>บาง<wbr>อย่าง<wbr>ใน<wbr>แต่<wbr>ละ<wbr>หน่วย<wbr>งาน<wbr>นั้น<wbr>ก็<wbr>ซ้ำ<wbr>ซ้อน
+   อุปกรณ์<wbr>ที่<wbr>ราคา<wbr>สูง เช่น เลเซอร์<wbr>พริ้นเตอร์<wbr>ก็<wbr>ต้อง<wbr>จัด<wbr>ซื้อ<wbr>ทุก<wbr>หน่วย<wbr>งาน<wbr>เช่น<wbr>กัน
+   <dd>ความ<wbr>คิด<wbr>ใน<wbr>การ<wbr>เชื่อม<wbr>โยง<wbr>จึง<wbr>เกิด<wbr>ขึ้น<wbr>และ<wbr>ก่อ<wbr>ให้<wbr>เกิด<wbr>ความ<wbr>สะดวก<wbr>ตาม<wbr>มา
+   เพราะ
+   ผู้<wbr>ใช้<wbr>สามารถ<wbr>ใช้<wbr>ข้อ<wbr>มูล<wbr>ร่วม<wbr>กัน<wbr>ได้<wbr>ก็<wbr>จะ<wbr>ช่วย<wbr>ลด<wbr>ความ<wbr>ซ้ำ<wbr>ซ้อน<wbr>ของ
+   file หรือ<wbr>ข้อ<wbr>มูล หรือ program ที่<wbr>เหมือน ๆ กัน<wbr>ได้
+   ขณะ<wbr>เดียว<wbr>กัน<wbr>ก็<wbr>ทำ<wbr>ให้<wbr>ไม่<wbr>สิ้น<wbr>เปลือง<wbr>เนื้อ<wbr>ที่<wbr>ใน disk ที่<wbr>จะ<wbr>เก็บ<wbr>ข้อ<wbr>มูล<wbr>หรือ
+   program ต่าง ๆ ที่<wbr>จำเป็น<wbr>ที่<wbr>จะ<wbr>ต้อง<wbr>ใช้<wbr>ร่วม<wbr>กัน
+   ผู้<wbr>ใช้<wbr>สามารถ<wbr>ใช้ resource ร่วม<wbr>กัน<wbr>ได้ เช่น<wbr>สามารถ<wbr>ใช้ disk
+   หรือ printer ร่วม<wbr>กัน
+   หน่วย<wbr>งาน<wbr>หรือ<wbr>องค์กร<wbr>สามารถ<wbr>ประหยัด<wbr>เงิน เพราะ<wbr>แทน<wbr>ที่<wbr>จะ<wbr>เป็น<wbr>ต่าง<wbr>คน<wbr>ต่าง<wbr>ซื้อ
+   แต่<wbr>กลับ<wbr>มา<wbr>ใช้<wbr>ร่วม<wbr>กัน<wbr>ได้<wbr>อย่าง<wbr>สะดวก<wbr>สบาย
+   <dd>ใน<wbr>ปัจจุบัน<wbr>การ<wbr>เชื่อม<wbr>โยง<wbr>คอมพิวเตอร์<wbr>ใน<wbr>ระบบ<wbr>ที่<wbr>มี<wbr>ปฏิบัติการ<wbr>เดียว<wbr>กัน
+   เช่น dos ได้<wbr>เพิ่ม<wbr>ขีด<wbr>ความ<wbr>สามารถ<wbr>ขึ้น<wbr>มาก มี<wbr>หลาย<wbr>บริษัท<wbr>ที่<wbr>ผลิต
+   softwere มา<wbr>จำหน่าย<wbr>อยู่<wbr>ใน<wbr>ตลาด และ<wbr>ที่<wbr>นิยม<wbr>ใช้<wbr>กัน<wbr>มาก<wbr>ก็<wbr>มี
+   netware ของ<wbr>บริษัท novell และ lan manager ของ microsoft
+
+   <p>
+   <table bgcolor=ffe1c4 width = 100%>
+       <tr><!-- row 1 -->
+         <td align = center><b>การ<wbr>เชื่อม<wbr>โยง<wbr>คอมพิวเตอร์<wbr>ต่าง<wbr>ระบบ<wbr></b></td>
+       </tr>
+   </table>
+
+
+
+<dd>การ<wbr>พัฒนา<wbr>ระบบ<wbr>เครือ<wbr>ข่าย<wbr>สำหรับ<wbr>คอมพิวเตอร์<wbr>ใน platform
+   เดียว<wbr>กัน<wbr>ได้<wbr>ประสบ<wbr>ความ<wbr>สำเร็จ<wbr>ใน<wbr>ระดับ<wbr>ที่<wbr>น่า<wbr>พอใจ เช่น เครือ<wbr>ข่าย<wbr>ใน<wbr>ระบบ
+   unix, lan ใน<wbr>ระบบ pc
+   <dd>การ<wbr>เชื่อม<wbr>โยง<wbr>เครื่อง<wbr>คอมพิวเตอร์ platform ที่<wbr>ต่าง<wbr>กัน
+   นับ<wbr>ว่า<wbr>เป็น<wbr>สิ่ง<wbr>ที่<wbr>กำลัง<wbr>แพร่<wbr>หลาย และ<wbr>จะ<wbr>เป็น<wbr>สิ่ง<wbr>ที่<wbr>จำเป็น<wbr>ใน<wbr>หมู่<wbr>ผู้<wbr>ใช้<wbr>คอมพิวเตอร์
+   ระบบ unix เริ่ม<wbr>เป็น<wbr>ที่<wbr>นิยม<wbr>มาก<wbr>ขึ้น<wbr>ใน<wbr>เครื่อง<wbr>คอมพิวเตอร์<wbr>ใน<wbr>ระดับ
+   workstation ทำ<wbr>ให้<wbr>การ<wbr>แลก<wbr>เปลี่ยน<wbr>ข้อ<wbr>มูล<wbr>หรือ<wbr>ใช้<wbr>อุปกรณ์<wbr>ร่วม<wbr>กัน<wbr>ระหว่าง<wbr>คอมพิวเตอร์<wbr>ระดับ
+   pc ที่<wbr>มี dos เป็น<wbr>ระบบ<wbr>ปฏิบัติการ<wbr>กับ<wbr>เครื่อง<wbr>คอมพิวเตอร์<wbr>ที่<wbr>มี
+   unix เป็น<wbr>ระบบ<wbr>ปฏิบัติการ<wbr>นับ<wbr>วัน<wbr>ก็<wbr>จะ<wbr>เพิ่ม<wbr>มาก<wbr>ขึ้น การ<wbr>ที่<wbr>จะ<wbr>ให้
+   2 ระบบ<wbr>ที่<wbr>แตก<wbr>ต่าง<wbr>กัน<wbr>ติดต่อ<wbr>กัน หรือ<wbr>พูด<wbr>จาก<wbr>เข้า<wbr>ใจ<wbr>กัน<wbr>นั้น
+   จำเป็น<wbr>จะ<wbr>ต้อง<wbr>มี<wbr>การ<wbr>ใช้ protocol ใน<wbr>การ<wbr>สื่อสาร<wbr>แบบ<wbr>เดียว<wbr>กัน
+   ปัจจุบัน software ที่<wbr>มี<wbr>ผู้<wbr>พัฒนา<wbr>ขึ้น<wbr>มา<wbr>แล้ว<wbr>นั้น สามารถ<wbr>แยก<wbr>ออก<wbr>มา<wbr>เป็น
+   2 แนว<wbr>ทาง<wbr>ใหญ่ ๆ คือ
+   <dd>แนว<wbr>ทาง<wbr>แรก<wbr>คือ การ<wbr>ที่<wbr>นำ dos protocol ไป<wbr>ประยุกต์<wbr>ใช้<wbr>ใน<wbr>ระบบ
+   unix เช่น atlantix axcess, hp lan manager/x hp-ux,
+   ported netware, powerfusion, star group lan manager
+   ฯลฯ
+   <p><center><img src = "picture1.gif" border =0></center>
+   <br><center>รูป<wbr>ที่ 1  dos protocol ใน<wbr>ระบบ unix</center><p>
+   <dd>แนว<wbr>ทาง<wbr>สอง คือ<wbr>การ<wbr>ที่<wbr>นำ unix protocol ไป<wbr>ประยุกต์<wbr>ใช้<wbr>ใน<wbr>ระบบ
+   dos เช่น pc-nfs ของ sun micro system, pc/tcp ของ ftp
+   software, หรือ cu/tcp ของ clarkson university ฯลฯ
+   <p><center><img src = "picture2.gif" border =0></center>
+   <br><center>รูป<wbr>ที่ 2  unix protocol ใน<wbr>ระบบ dos</center><p>
+   <dd>การ<wbr>ประยุกต์<wbr>ใช้ dos protocol ใน unix จะ<wbr>มี<wbr>ข้อ<wbr>ได้<wbr>เปรียบ<wbr>ที่<wbr>ว่า<wbr>จะ<wbr>ไม่<wbr>สิ้น<wbr>เปลือง
+   memory ใน dos workstation แต่<wbr>ที่<wbr>จำเป็น<wbr>คือ<wbr>ต้อง<wbr>ประยุกต์
+   dos protocol ทุก<wbr>ชนิด<wbr>ลง<wbr>ใน<wbr>ระบบ unix ใน<wbr>ขณะ<wbr>ที่<wbr>การ<wbr>ประยุกต์<wbr>ใช้
+   unix protocol ใน<wbr>ระบบ dos ก็<wbr>สามารถ<wbr>ที่<wbr>จะ<wbr>ใช้<wbr>งาน<wbr>กับ<wbr>ทุก<wbr>ระบบ<wbr>ของ
+   unix ได้<wbr>ทันที แต่<wbr>อาจ<wbr>จะ<wbr>มี<wbr>ผล<wbr>กระทบ<wbr>กับ<wbr>การ<wbr>ใช้ memory ของ<wbr>ตัว
+   dos workstation เนื่อง<wbr>จาก<wbr>จะ<wbr>ต้อง<wbr>ใช้ memory ส่วน<wbr>หนึ่ง<wbr>ใน<wbr>การ<wbr>แปลง
+   unix protocol
+
+   <p>
+   <table bgcolor=ffe1c4 width = 100%>
+       <tr><!-- row 1 -->
+         <td><b>ลักษณะ<wbr>การ<wbr>ทำงาน<wbr>ของ software ใน<wbr>ระบบ<wbr>เครือ<wbr>ข่าย<wbr>ต่าง<wbr>ระบบ<wbr></b></td>
+       </tr>
+   </table>
+
+   <dd>software ใน<wbr>ระบบ<wbr>เครือ<wbr>ข่าย<wbr>ดัง<wbr>ที่<wbr>ได้<wbr>ยก<wbr>ตัวอย่าง<wbr>ข้าง<wbr>ต้น<wbr>นั้น
+   มี<wbr>ระบบ<wbr>การ<wbr>ทำงาน<wbr>ที่<wbr>คล้าย<wbr>คลึง<wbr>กัน<wbr>คือ สามารถ<wbr>ทำ<wbr>ให้<wbr>ผู้<wbr>ใช้<wbr>คอมพิวเตอร์<wbr>ที่<wbr>อยู่<wbr>ใน
+   platform หนึ่ง access ไป<wbr>ยัง<wbr>อีก platform หนึ่ง โดย<wbr>ที่<wbr>ผู้<wbr>ใช้<wbr>นั้น<wbr>มิ<wbr>ต้อง<wbr>เสีย<wbr>เวลา<wbr>มา<wbr>นั่ง<wbr>เรียน<wbr>รู้<wbr>วิธี<wbr>การ<wbr>ใช้<wbr>ของ<wbr>อีก<wbr>ระบบ
+   <dd>ระบบ nfs (network file system) เป็น<wbr>ระบบ<wbr>ที่<wbr>พัฒนา<wbr>มา<wbr>จาก<wbr>บริษัท
+   sun micro system และ<wbr>ได้<wbr>รับ<wbr>ความ<wbr>นิยม<wbr>แพร่<wbr>หลาย<wbr>มาก<wbr>จน<wbr>เป็น<wbr>ที่<wbr>ยอม<wbr>รับ<wbr>มาก<wbr>ใน<wbr>ระบบ<wbr>เครือ<wbr>ข่าย<wbr>ของ
+   unix ใน<wbr>เครือ<wbr>ข่าย<wbr>ของ unix network ที่<wbr>ใช้ nfs จะ<wbr>ทำ<wbr>ให้<wbr>ผู้<wbr>ใช้<wbr>สามารถ<wbr>ที่<wbr>จะ
+   access ไป<wbr>ยัง disk ของ<wbr>เครื่อง unix ตัว<wbr>อื่น<wbr>เสมือน<wbr>หนึ่ง<wbr>กับ<wbr>เป็น
+   disk หรือ directory หนึ่ง<wbr>ของ<wbr>เครื่อง<wbr>ตน<wbr>เอง
+   <dd>ส่วน pc-nfs software จะ<wbr>ทำ<wbr>ให้<wbr>เครื่อง pc คอมพิวเตอร์<wbr>สามารถ<wbr>ทำ<wbr>หน้าที่<wbr>เป็น
+   client ของ unix server ได้<wbr>โดย<wbr>สามารถ<wbr>ที่<wbr>จะ access ไป<wbr>ยัง
+   disk ของ unix server เสมือน<wbr>กับ<wbr>เป็น drive อีก<wbr>ตัว<wbr>หนึ่ง<wbr>ของ<wbr>เครื่อง
+   pc เอง
+   <dd>สำหรับ hp-lan manager/x hp-ux software จะ<wbr>อนุญาต<wbr>ให้
+   pc เป็น client ของ unix xerver เช่น<wbr>เดียว<wbr>กับ pc-nfs
+   ผู้<wbr>ใช้ pc สามารถ<wbr>ที่<wbr>จะ access unix file โดย<wbr>ใช้<wbr>คำ<wbr>สั่ง<wbr>ของ
+   dos ผู้<wbr>ใช้ pc ยัง<wbr>สามารถ<wbr>ร่วม<wbr>ใช้<wbr>อุปกรณ์<wbr>ต่าง ๆ ที่<wbr>ใช้<wbr>อยู่<wbr>กับ
+   unix server ได้
+<p>
+<hr noshade>
+
+
+</body>
+</html>

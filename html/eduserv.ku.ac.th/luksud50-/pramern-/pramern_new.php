@@ -1,0 +1,1 @@
+table 'db1.pramern' doesn't exist

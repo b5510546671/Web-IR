@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title></title>
+		<!-- bootstrap framework -->
+            <link rel="stylesheet" href ="/online/templates/admin/bootstrap/css/bootstrap.min.css" />
+            <link rel="stylesheet" href ="/online/templates/admin/bootstrap/css/bootstrap-responsive.min.css" />
+        <!-- gebo blue theme-->
+            <link rel="stylesheet" href ="/online/templates/admin/css/blue.css" id="link_theme" />
+        <!-- breadcrumbs-->
+            <link rel="stylesheet" href ="/online/templates/admin/lib/jbreadcrumbs/css/breadcrumb.css" />
+        <!-- tooltips-->
+            <link rel="stylesheet" href ="/online/templates/admin/lib/qtip2/jquery.qtip.min.css" />
+        <!-- colorbox -->
+            <link rel="stylesheet" href ="/online/templates/admin/lib/colorbox/colorbox.css" />    
+        <!-- code prettify -->
+            <link rel="stylesheet" href ="/online/templates/admin/lib/google-code-prettify/prettify.css" />    
+        <!-- notifications -->
+            <link rel="stylesheet" href ="/online/templates/admin/lib/sticky/sticky.css" />    
+        <!-- splashy icons -->
+            <link rel="stylesheet" href ="/online/templates/admin/img/splashy/splashy.css" />
+		<!-- flags -->
+            <link rel="stylesheet" href ="/online/templates/admin/img/flags/flags.css" />	
+		<!-- calendar -->
+            <link rel="stylesheet" href ="/online/templates/admin/lib/fullcalendar/fullcalendar_gebo.css" />
+            
+        <!-- main styles -->
+            <link rel="stylesheet" href ="/online/templates/admin/css/style.css" />
+			
+            <link rel="stylesheet" href ="/online/templates/admin/http://fonts.googleapis.com/css?family=pt+sans" />
+	
+        <!-- favicon -->
+            <link rel="shortcut icon" href ="/online/templates/admin/favicon.ico" />
+		
+        <!--[if lte ie 8]>
+            <link rel="stylesheet" href ="/online/templates/admin/css/ie.css" />
+        <![endif]-->
+        
+        <script src ="/online/templates/admin/js/jquery.min.js"></script>
+            <script src ="/online/templates/admin/js/jquery-migrate.min.js"></script>
+			<!-- smart resize event -->
+			<script src ="/online/templates/admin/js/jquery.debouncedresize.min.js"></script>
+			<!-- hidden elements width/height -->
+			<script src ="/online/templates/admin/js/jquery.actual.min.js"></script>
+			<!-- js cookie plugin -->
+			<script src ="/online/templates/admin/js/jquery_cookie.min.js"></script>
+			<!-- main bootstrap js -->
+			<script src ="/online/templates/admin/bootstrap/js/bootstrap.min.js"></script>
+			<!-- bootstrap plugins -->
+			<script src ="/online/templates/admin/js/bootstrap.plugins.min.js"></script>
+			<!-- tooltips -->
+			<script src ="/online/templates/admin/lib/qtip2/jquery.qtip.min.js"></script>
+			<!-- jbreadcrumbs -->
+			<script src ="/online/templates/admin/lib/jbreadcrumbs/js/jquery.jbreadcrumb.1.1.min.js"></script>
+			<!-- lightbox -->
+            <script src ="/online/templates/admin/lib/colorbox/jquery.colorbox.min.js"></script>
+            <!-- fix for ios orientation change -->
+			<script src ="/online/templates/admin/js/ios-orientationchange-fix.js"></script>
+			<!-- scrollbar -->
+			<script src ="/online/templates/admin/lib/antiscroll/antiscroll.js"></script>
+			<script src ="/online/templates/admin/lib/antiscroll/jquery-mousewheel.js"></script>
+			<!-- to top -->
+			<script src ="/online/templates/admin/lib/uitotop/jquery.ui.totop.min.js"></script>
+			<!-- mobile nav -->
+			<script src ="/online/templates/admin/js/selectnav.js"></script>
+			<!-- common functions -->
+			<script src ="/online/templates/admin/js/gebo_common.js"></script>
+			
+			<script src ="/online/templates/admin/lib/jquery-ui/jquery-ui-1.10.0.custom.min.js"></script>
+            <!-- touch events for query ui-->
+            <script src ="/online/templates/admin/js/forms/jquery.ui.touch-punch.min.js"></script>
+            <!-- multi-column layout -->
+            <script src ="/online/templates/admin/js/jquery.imagesloaded.min.js"></script>
+            <script src ="/online/templates/admin/js/jquery.wookmark.js"></script>
+            <!-- responsive table -->
+            <script src ="/online/templates/admin/js/jquery.mediatable.min.js"></script>
+            <!-- small charts -->
+            <script src ="/online/templates/admin/js/jquery.peity.min.js"></script>
+            <!-- charts -->
+            <script src ="/online/templates/admin/lib/flot/jquery.flot.min.js"></script>
+            <script src ="/online/templates/admin/lib/flot/jquery.flot.resize.min.js"></script>
+            <script src ="/online/templates/admin/lib/flot/jquery.flot.pie.min.js"></script>
+            <!-- calendar -->
+            <script src ="/online/templates/admin/lib/fullcalendar/fullcalendar.min.js"></script>
+            <!-- sortable/filterable list -->
+            <script src ="/online/templates/admin/lib/list_js/list.min.js"></script>
+            <script src ="/online/templates/admin/lib/list_js/plugins/paging/list.paging.js"></script>
+            <!-- dashboard functions -->
+    
+			<script>
+				$(document).ready(function() {
+					//* show all elements & remove preloader
+					settimeout('$("html").removeclass("js")',1000);
+				});
+			</script>
+			<!--[if let ie 8]>    
+            <script src ="/online/templates/admin/js/ie/html5.js"></script>
+			<script src ="/online/templates/admin/js/ie/respond.min.js"></script>
+			<script src ="/online/templates/admin/lib/flot/excanvas.min.js"></script>
+        <![endif]-->
+		
+		<script>
+			//* hide all elements & show preloader
+			document.documentelement.classname += 'js';
+		</script>	</head>
+	<body>
+		<div id="loading_layer" style="display:none"><img src ="/online/templates/admin/img/ajax_loader.gif" alt="" /></div>
+		<div id="maincontainer" class="clearfix">
+			<header>
+				<div class="navbar navbar-fixed-top">
+					<div class="navbar-inner">
+						<div class="container-fluid">
+							<a class="brand" href ="/online/index.php"><i class="icon-home icon-white"></i> ใบสมัครออน์ไลน์</a>
+														<ul class="nav" id="mobile-nav">
+							<li class="dropdown"><a href ="http://sluse.grad.ku.ac.th"><i class="icon-list-alt icon-white"></i> กลับสู่เว็บไซด์ ku-sluse</a></li>
+							<li class="dropdown"><a href ="/online/index.php/frontpage/register"><i class="icon-list-alt icon-white"></i> สมัครเข้ารับการศึกษา</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>     
+			</header>
+			<div id="contentwrapper">
+				<div class="main_content">
+				<div class="tubbable">
+	<ul class="nav nav-tabs">
+	<li class="active"><a href="#tab1" data-toggle="tab">หลักฐานและขั้นตอนการสมัครปริญญาโท</a></li>
+	<li><a href="#tab2" data-toggle="tab">หลักฐานและขั้นตอนการสมัครปริญญาเอก</a></li>
+</ul>
+
+		<div class="tab-content">
+			<div class="tab-pane active" id="tab1">
+			<p><h3 class="heading">หลักฐานประกอบการสมัครดังนี้</h3>
+<ul>
+<li>สำเนาใบปริญญาบัตร  1 ฉบับ</li>
+<li>สำเนาใบคะแนนการศึกษา (transcript)
+	<ul>
+		<li>ผู้สมัครประเภทที่ 1 สำเร็จการศึกษาแล้ว ให้ใช้สำเนาใบรายงานคะแนนฉบับสภามหาวิทยาลัยหรือสภาสถาบันอนุมัติ (ฉบับที่ระบุชื่อปริญญา วันที่อนุมัติปริญญา พร้อมแสดงคะแนนเฉลี่ยสะสม)ระดับปริญญาตรี จำนวน 1 ฉบับ </li>
+		<li>ผู้สมัครประเภทที่ 2 กำลังศึกษาอยู่ในภาคเรียนสุดท้ายของหลักสูตร ให้ใช้
+			<ul>
+			<li>(ก) สำเนาใบคะแนนระดับปริญญาตรี ที่แสดงผลการเรียนจนถึงภาคต้น ปีการศึกษา 2555 จำนวน 1 ฉบับ</li>
+			<li>(ข) หนังสือรับรองรายวิชาเรียน (บส.บว.3) ที่ระะบุรายวิชาพร้อมทั้งหน่วยกิตการเรียน ภาคปลาย ปีการศึกษา 2555  จำนวน 1 ฉบับ </li>
+			</ul>
+		</li>
+	</ul>
+
+</li>
+<li>หนังสือรับรองตามแบบฟอร์ม (บส.บว.4) จำนวน 3 ฉบับ จากผู้รับรอง 3 คน สำหรับผู้ที่ยังมิได้ทำงานให้อาจารย์ผู้เคยสอนเป็นผู้รับรอง ส่วนผู้ที่ทำงานแล้วให้อาจารย์ผู้เคยสอนหรือผู้บังคับบัญชาเป็นผู้รับรอง </li>
+<li>หนังสือรับรองประสบการณ์การทำงาน (บส.บว.5) สำหรับผู้สมัครหลักสูตรแบบ 1.1</li>
+<li>หลักฐานการเปลี่ยนชื่อ-นามสกุล เช่น ทะเบียนสมรส ใบเปลี่ยนชื่อ (สำหรับผู้สมัครที่มีชื่อ-ชื่อสกุล ไม่ตรงกับในใบรายงานคะแนน) จำนวน 1 ฉบับ</li>
+<li>สำเนาบัตรประจำตัวประชาชน หรือสำเนาบัตรประจำตัวข้าราชการ จำนวน 1 ฉบับ</li>
+<li>สำเนาทะเบียนบ้าน จำนวน 1 ฉบับ</li>
+<li>ใบรับรองแพทย์ จำนวน 1 ฉบับ</li>
+<li>เอกสารแนวคิดการวิจัย (research idea) จำนวน 1 ชุด โดยสามารถส่งภายหลังจากวันที่สมัคร แต่ทั้งนี้ต้องไม่น้อยกว่า 1 สัปดาห์ ก่อนวันประกาศรายชื่อผู้มีสิทธิ์สอบสัมภาษณ์</li>
+</ul>
+
+<br /><br />
+<h3 class="heading">ขั้นตอนการสมัครผ่านระบบออนไลน์ ปริญญาโท</h3>
+<ul>
+<li>กรณีที่ 1 ยื่นเอกสารผ่านระบบออนไลน์
+	<ul>
+	<li>ผู้สมัครดาวน์โหลดเอกสารประกอบการรับสมัคร และกรอกรายละเอียดในแบบฟอร์มให้ถูกต้องครบถ้วน</li>
+	<li>ชำระค่าธรรมเนียมการสมัครสอบ จำนวน 500 บาท ผ่าน ธนาคารกรุงศรีอยุธยา </li>
+	<li>แนบไฟล์หลักฐานประกอบการรับสมัครตามที่กำหนด</li>
+	<li>กรอกข้อมูลใบสมัครผ่านทางระบบออนไลน์ ให้ครบถ้วนและตรงตามความจริง</li>
+	<li>พิมพ์ใบสมัครที่กรอกรายละเอียดเรียบร้อย พร้อมติดรูปถ่าย ขนาด 1 นิ้ว</li>
+	</ul>
+	<p>ทั้งนี้ผู้สมัครจะต้องนำหลักฐานประกอบการรับสมัครตามที่กำหนดไว้  ยื่นต่อโครงการในวันสอบสัมภาษณ์ </p>
+	<p>ในกรณีที่ผู้สมัครยังไม่ได้ส่งไฟล์ เอกสารแนวคิดการวิจัย (research idea) ในวันที่กรอกข้อมูลผ่านระบบออนไลน์  ผู้สมัครจะต้องดำเนินการส่งเอกสารดังกล่าว  ก่อนวันประกาศรายชื่อผู้มีสิทธิ์สอบสัมภาษณ์ ไม่น้อยกว่า 1สัปดาห์  โดยสามารถส่ง
+	e-mail มาที่ <a href="mailto:sluse@ku.ac.th">sluse@ku.ac.th</a></p>
+</li>
+<li>กรณีที่ 2 ส่งเอกสารทางไปรษณีย์
+	<ul>
+	<li>ผู้สมัครดาวน์โหลดเอกสารประกอบการรับสมัคร และกรอกรายละเอียดในแบบฟอร์มให้ถูกต้องครบถ้วน</li>
+	<li>กรอกข้อมูลใบสมัครผ่านทางระบบออนไลน์ ให้ครบถ้วนและตรงตามความจริง</li>
+	<li>พิมพ์ใบสมัครที่กรอกรายละเอียดเรียบร้อย</li>
+	<li>ชำระค่าธรรมเนียมการสมัครสอบ จำนวน 500 บาท ผ่าน ธนาคารกรุงศรีอยุธยา</li>
+	<li>ส่งเอกสารได้แก่ 
+		<ul>
+		<li>ใบสมัครที่กรอกรายละเอียดครบถ้วน</li>
+		<li>สำเนาเอกสารการชำระเงินพร้อมลงนาม</li>
+		<li>หลักฐานประกอบการสมัครตามที่กำหนดไว้</li>
+		</ul>
+	</li>
+	<li>ส่งเอกสารทางไปรษณีย์ลงทะเบียน ภายใน วันที่ 30 เมษายน 2556 (โครงการฯ จะถือวันที่ ที่ทำการไปรษณีย์ต้นทางประทับ ตราวันสุดท้ายของการรับสมัคร) โดยจัดส่งเอกสารทั้งหมดมาที่ 
+		<p>โครงการบัณฑิตศึกษา สาขาวิชาการใช้ที่ดินฯ (ku sluse)<br />
+		ชั้น 3 อาคารวิทยพัฒนา มหาวิทยาลัยเกษตรศาสตร์ วิทยาเขตบางเขน<br />
+		เลขที่ 50 ถนนงามวงศ์วาน แขวงลาดยาว เขตจตุจักร กรุงเทพฯ 10900</p>
+	</li>
+	</ul>
+</li>
+</ul>
+<p>
+สอบถามรายละเอียดเพิ่มเติม :  วันจันทร์-วันศุกร์ (ยกเว้นวันพุธ) เวลา 8.30 น. – 16.30 น. <br />
+วันเสาร์-วันอาทิตย์ เวลา 8.30 น. – 17.30 น. <br />
+โทร 0-2942-8932
+</p>
+
+
+
+
+</p>
+			</div>
+			<div class="tab-pane" id="tab2">
+			<p><h3 class="heading">หลักฐานประกอบการสมัครดังนี้</h3>
+<ul>
+<li>สำเนาใบปริญญาบัตรระดับปริญญาตรีและระดับปริญญาโท อย่างละ ๑ ฉบับ</li>
+<li>สำเนาใบคะแนนการศึกษา (transcript)
+	<ul>
+	<li>ผู้สมัครประเภทที่ 1 สำเร็จการศึกษาแล้ว ให้ใช้สำเนาใบรายงานคะแนนฉบับสภามหาวิทยาลัย หรือสภาสถาบันอนุมัติ (ฉบับที่ระบุชื่อปริญญา วันที่อนุมัติปริญญา พร้อมแสดงคะแนนเฉลี่ยสะสม) ระดับปริญญาตรี จำนวน 1 ฉบับ และปริญญาโท จำนวน 1 ฉบับ</li>
+	<li>ผู้สมัครประเภทที่ 2 กำลังศึกษาอยู่ในภาคเรียนสุดท้ายของหลักสูตร ให้ใช้
+		<ul>
+		<li>(ก) สำเนาใบคะแนนระดับปริญญาโท ที่แสดงผลการเรียนจนถึงภาคต้น ปีการศึกษา 2555 จำนวน 1 ฉบับ</li>
+		<li>(ข) หนังสือรับรองรายวิชาเรียน (บส.บว.3) ที่ระะบุรายวิชาพร้อมทั้งหน่วยกิตการเรียนภาคปลาย ปีการศึกษา 2555 จำนวน 1 ฉบับ กรณีผู้สมัครที่สำเร็จปริญญาตรีในหลักสูตรต่อเนื่องต้องแนบสำเนาใบรายงานคะแนน (transcript) ในระดับ ป.ม. พ.ม. ป.กศ.สูง หรืออนุปริญญา หรือเทียบเท่าอนุปริญญามาด้วย จำนวน 1 ฉบับ</li>
+		<li>(ค) สำเนาใบคะแนนระดับปริญญาตรี (ฉบับที่ระบุชื่อปริญญา วันที่อนุมัติปริญญา  พร้อมแสดงคะแนนเฉลี่ยสะสม)</li>
+		</ul>
+	</li>
+	</ul>
+</li>
+<li>หนังสือรับรองตามแบบฟอร์ม (บส.บว.4) จำนวน 3 ฉบับ จากผู้รับรอง 3 คน สำหรับผู้ที่ยังมิได้ทำงานให้อาจารย์ผู้เคยสอนเป็นผู้รับรอง ส่วนผู้ที่ทำงานแล้วให้อาจารย์ผู้เคยสอนหรือผู้บังคับบัญชาเป็นผู้รับรอง </li>
+<li>หนังสือรับรองประสบการณ์การทำงาน (บส.บว.5) สำหรับผู้สมัครหลักสูตรแบบ 1.1</li>
+<li>หลักฐานการเปลี่ยนชื่อ-นามสกุล เช่น ทะเบียนสมรส ใบเปลี่ยนชื่อ (สำหรับผู้สมัครที่มีชื่อ-ชื่อสกุลไม่ตรงกับใน ใบรายงานคะแนน) จำนวน 1 ฉบับ</li>
+<li>สำเนาบัตรประจำตัวประชาชน หรือสำเนาบัตรประจำตัวข้าราชการ จำนวน 1 ฉบับ</li>
+<li>สำเนาทะเบียนบ้าน จำนวน 1 ฉบับ</li>
+<li>ใบรับรองแพทย์ จำนวน 1 ฉบับ</li>
+<li>หนังสือรับรองประสบการณ์การทำงาน (บส.บว.5) สำหรับผู้สมัครหลักสูตรแบบ 1.1</li>
+<li>เอกสารกรอบแนวคิดโครงการวิจัย (conceptual framework) จำนวน 1 ชุด โดยสามารถส่งภายหลังจากวันที่ สมัคร แต่ทั้งนี้ต้องไม่น้อยกว่า 1 สัปดาห์ ก่อนวันประกาศรายชื่อผู้มีสิทธิ์สอบสัมภาษณ์</li>
+</ul>
+<br /><br />
+<h3 class="heading">ขั้นตอนการสมัครผ่านระบบออนไลน์ ปริญญาโท</h3>
+<ul>
+<li>กรณีที่ 1 ยื่นเอกสารผ่านระบบออนไลน์
+	<ul>
+	<li>ผู้สมัครดาวน์โหลดเอกสารประกอบการรับสมัคร และกรอกรายละเอียดในแบบฟอร์มให้ถูกต้องครบถ้วน</li>
+	<li>ชำระค่าธรรมเนียมการสมัครสอบ จำนวน 500 บาท ผ่าน ธนาคารกรุงศรีอยุธยา </li>
+	<li>แนบไฟล์หลักฐานประกอบการรับสมัครตามที่กำหนด</li>
+	<li>กรอกข้อมูลใบสมัครผ่านทางระบบออนไลน์ ให้ครบถ้วนและตรงตามความจริง</li>
+	<li>พิมพ์ใบสมัครที่กรอกรายละเอียดเรียบร้อย พร้อมติดรูปถ่าย ขนาด 1 นิ้ว</li>
+	</ul>
+	<p>ทั้งนี้ผู้สมัครจะต้องนำหลักฐานประกอบการรับสมัครตามที่กำหนดไว้  ยื่นต่อโครงการในวันสอบสัมภาษณ์  ในกรณีที่ผู้สมัครยังไม่ได้ส่งไฟล์ เอกสารกรอบแนวคิดโครงการวิจัย (conceptual framework) ในวันที่กรอกข้อมูลผ่านระบบออนไลน์  ผู้สมัครจะต้องดำเนินการส่งเอกสารดังกล่าว  ก่อนวันประกาศรายชื่อผู้มีสิทธิ์สอบสัมภาษณ์ ไม่น้อยกว่า 1สัปดาห์  โดยสามารถส่ง e-mail มาที่ sluse@ku.ac.th</p>
+</li>
+<li>กรณีที่ 2 ส่งเอกสารทางไปรษณีย์
+	<ul>
+	<li>ผู้สมัครดาวน์โหลดเอกสารประกอบการรับสมัคร และกรอกรายละเอียดในแบบฟอร์มให้ถูกต้องครบถ้วน</li>
+	<li>กรอกข้อมูลใบสมัครผ่านทางระบบออนไลน์ ให้ครบถ้วนและตรงตามความจริง</li>
+	<li>พิมพ์ใบสมัครที่กรอกรายละเอียดเรียบร้อย</li>
+	<li>ชำระค่าธรรมเนียมการสมัครสอบ จำนวน 500 บาท ผ่าน ธนาคารกรุงศรีอยุธยา</li>
+	<li>ส่งเอกสารได้แก่ 
+		<ul>
+		<li>ใบสมัครที่กรอกรายละเอียดครบถ้วน</li>
+		<li>สำเนาเอกสารการชำระเงินพร้อมลงนาม</li>
+		<li>หลักฐานประกอบการสมัครตามที่กำหนดไว้</li>
+		</ul>
+	</li>
+	<li>ส่งเอกสารทางไปรษณีย์ลงทะเบียน ภายใน วันที่ 30 เมษายน 2556 (โครงการฯ จะถือวันที่ ที่ทำการไปรษณีย์ต้นทางประทับ ตราวันสุดท้ายของการรับสมัคร) โดยจัดส่งเอกสารทั้งหมดมาท
+		<p>โครงการบัณฑิตศึกษา สาขาวิชาการใช้ที่ดินฯ (ku sluse)<br />
+		ชั้น 3 อาคารวิทยพัฒนา มหาวิทยาลัยเกษตรศาสตร์ วิทยาเขตบางเขน<br />
+		เลขที่ 50 ถนนงามวงศ์วาน แขวงลาดยาว เขตจตุจักร กรุงเทพฯ 10900</p></li>
+	</ul>
+</li>
+</ul>
+<p>
+สอบถามรายละเอียดเพิ่มเติม :  วันจันทร์-วันศุกร์ (ยกเว้นวันพุธ) เวลา 8.30 น. – 16.30 น. <br />
+วันเสาร์-วันอาทิตย์ เวลา 8.30 น. – 17.30 น. <br />
+โทร 0-2942-8932
+</p>
+</p>
+			</div>
+		</div>
+				</div>
+			</div>
+			<a href ="javascript:void(0)" class="sidebar_switch on_switch ttip_r" title="hide sidebar">sidebar switch</a>
+<div class="sidebar">
+	<div class="antiscroll">
+		<div class="antiscroll-inner">
+			<div class="antiscroll-content">
+				<div class="sidebar_inner">
+					<br />
+					<div id="side_accordion" class="accordion">		
+						<div class="accordion-group">
+							<div class="accordion-heading">
+								<a href ="#collapseone" data-parent="#side_accordion" data-toggle="collapse" class="accordion-toggle">
+									<i class="icon-folder-close"></i> ข้อมูลหลักสูตร
+								</a>
+							</div>
+							<div class="accordion-body collapse in" id="collapseone">
+								<div class="accordion-inner">
+									<ul class="nav nav-list">
+									<li  ><a href="/online/index.php/frontpage/curriculum/1">หลักสูตรปรัชญาดุษฎีบัณฑิต สาขาวิชาการใช้ที่ดินและการจัดการทรัพยากรธรรมชาติอย่างยั่งยืน</a></li><li  ><a href="/online/index.php/frontpage/curriculum/13">หลักสูตรวิทยาศาสตรมหาบัณฑิต สาขาวิชาการใช้ที่ดินและการจัดการทรัพยากรธรรมชาติอย่างยั่งยืน</a></li>									</ul>
+								</div>
+							</div>
+						</div>
+					</div>	
+					<div class="push"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>		</div>
+	</body>
+</html>

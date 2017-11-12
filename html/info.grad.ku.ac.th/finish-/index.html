@@ -1,0 +1,166 @@
+<!--<!doctype html public "-//w3c//dtd xhtml 1.0 transitional//en" "http://www.w3.org/tr/xhtml1/dtd/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"> -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=tis-620" />
+<link rel="stylesheet" href="css/template_css.css" type="text/css">
+<link rel="stylesheet" href="css/style.css" type="text/css">
+<!--<script language='javascript' src='css/popcalendar.js'></script> -->
+<script language="javascript" src="js/date-picker2.js"></script>
+<title>ku-gdcs</title>
+<script type="text/javascript" language="javascript1.2" src="js/stmenu.js"></script>
+<script>
+function validate(){
+	username = document.getelementbyid('account')
+	//alert(username.value);
+}
+</script>
+<style type="text/css">
+<!--
+a:link {color: #336600; text-decoration: none}
+a:visited {color: #336600; text-decoration: none}
+a:hover {	color: #336600; text-decoration: none}
+.style6 {color: #336600; }
+-->
+</style>
+</head>
+<body background="images/bg.gif">
+<table cellpadding="0" cellspacing="0" align="center" width="90%">
+		<tr>
+			<td background="images/bgleft.gif"width="84"></td>
+			<td>
+				<table cellpadding="0" cellspacing="0" align="center" width="100%">
+					<tr>
+						<td class="bgtopmenu" height="20">
+							<table cellpadding="0" cellspacing="0" width="100%">
+								<tr class="margin2px">
+									<td class="pathway"  background="images/bgtab.gif"></td>
+									<td align="right"  background="images/bgtab.gif"><a href="http://www.grad.ku.ac.th" target="_blank" class="style6"><u>www.grad.ku.ac.th</u></a></td>
+							  </tr>
+							</table>						</td>
+					</tr>
+					<tr>
+						<td height="121" background="images/bgtop.gif">
+							<table cellpadding="0" cellspacing="0" width="100%">
+								<tr>
+									<td><img src="images/topleft.gif" alt="" width="628" height="119" /></td>
+								  <td width="99%"></td>
+									<td align="right"><img src="images/topright.gif" alt="" width="124" height="119" /></td>
+							  </tr>
+							</table>						</td>
+					</tr>
+					<tr>
+						<td height="27" align="right" background="images/bgmenu.gif"><img src="images/arrow.png"> <span class="style6"><a href="index.php">หน้าแรก</a></span>&nbsp;</td>
+			  </tr>
+					<tr><td class="bgshadow" height="2"></td></tr>
+					<tr>
+						<td height="380" valign="top" class="mainbg" align="center">
+							<table cellpadding="0" cellspacing="0" border="0" width="100%">
+								<tr>
+								  <td width="100%" valign="top" class="margin5" colspan="2">
+<script language="javascript">
+function numbers(e){
+	var keynum;
+	var keychar;
+	var numcheck;
+	if(window.event) {
+		keynum = e.keycode;
+	}
+	else if(e.which) {
+		keynum = e.which;
+	}
+	if(keynum == 13 || keynum == 8 || typeof(keynum) == "undefined"){
+		return true;
+	}
+	keychar= string.fromcharcode(keynum);
+	numcheck = /^[0-9]$/;
+	return numcheck.test(keychar);}
+</script>
+
+<script language=javascript>
+function check()
+{
+	var v1a = document.form1.txtcompany;
+	var v2a = document.form1.province;
+	var v3a = document.form1.txtidsearch;
+	if (v1a.value.length<=5 ) 
+	{
+		alert("กรุณากรอกชื่อบริษัทของท่าน (ไม่น้อยกว่า 6 ตัวอักษร)");
+		v1a.focus(); 
+		return false;
+	}
+	else if (v2a.value=="" ) 
+	{
+		alert("กรุณาเลือกจังหวัดที่ตั้งของบริษทของท่าน)");
+		v2a.focus(); 
+		return false;
+	}
+	else if (v3a.value.length<13 ) 
+	{
+		alert("กรุณากรอกเลขบัตรให้ครบ 13 หลัก)");
+		v3a.focus(); 
+		return false;
+	}
+
+}
+</script>
+
+<table width="100%" border="1" align="center">
+	<tr>
+		<td align="center"><br>
+			<form id="form1" name="form1" method="post" action="" onsubmit="return check();">
+				<table width="840" border="1" cellspacing="0" cellpadding="5" align="center">
+					<tr bgcolor='#90c93e'>
+						<td colspan="6" align="center"><font size="3"><strong>กรุณากรอกรายละเอียด</strong></font></td>
+					</tr>
+					<tr>
+						<td width="160" align="right"><font size="2"><b>ชื่อบริษัทของท่าน : </b></font></td>
+						<td width="120">
+<input type="text" maxlength="250" size="20" name="txtcompany" class="text" value=""></td>						<td width="130" align="center">
+<select name="province" id="province"><option value="">จังหวัด</option><option value="-ต่างประเทศ-">-ต่างประเทศ-</option><option value="กรุงเทพมหานคร">กรุงเทพมหานคร</option><option value="กระบี่">กระบี่</option><option value="กาญจนบุรี">กาญจนบุรี</option><option value="กาฬสินธุ์">กาฬสินธุ์</option><option value="กำแพงเพชร">กำแพงเพชร</option><option value="ขอนแก่น">ขอนแก่น</option><option value="จันทบุรี">จันทบุรี</option><option value="ฉะเชิงเทรา">ฉะเชิงเทรา</option><option value="ชลบุรี">ชลบุรี</option><option value="ชัยนาท">ชัยนาท</option><option value="ชัยภูมิ">ชัยภูมิ</option><option value="ชุมพร">ชุมพร</option><option value="เชียงราย">เชียงราย</option><option value="เชียงใหม่">เชียงใหม่</option><option value="ตรัง">ตรัง</option><option value="ตราด">ตราด</option><option value="ตาก">ตาก</option><option value="นครนายก">นครนายก</option><option value="นครปฐม">นครปฐม</option><option value="นครพนม">นครพนม</option><option value="นครราชสีมา">นครราชสีมา</option><option value="นครศรีธรรมราช">นครศรีธรรมราช</option><option value="นครสวรรค์">นครสวรรค์</option><option value="นนทบุรี">นนทบุรี</option><option value="นราธิวาส">นราธิวาส</option><option value="น่าน">น่าน</option><option value="บึงกาฬ">บึงกาฬ</option><option value="บุรีรัมย์">บุรีรัมย์</option><option value="ปทุมธานี">ปทุมธานี</option><option value="ประจวบคีรีขันธ์">ประจวบคีรีขันธ์</option><option value="ปราจีนบุรี">ปราจีนบุรี</option><option value="ปัตตานี">ปัตตานี</option><option value="พระนครศรีอยุธยา">พระนครศรีอยุธยา</option><option value="พะเยา">พะเยา</option><option value="พังงา">พังงา</option><option value="พัทลุง">พัทลุง</option><option value="พิจิตร">พิจิตร</option><option value="พิษณุโลก">พิษณุโลก</option><option value="เพชรบุรี">เพชรบุรี</option><option value="เพชรบูรณ์">เพชรบูรณ์</option><option value="แพร่">แพร่</option><option value="ภูเก็ต">ภูเก็ต</option><option value="มหาสารคาม">มหาสารคาม</option><option value="มุกดาหาร">มุกดาหาร</option><option value="แม่ฮ่องสอน">แม่ฮ่องสอน</option><option value="ยโสธร">ยโสธร</option><option value="ยะลา">ยะลา</option><option value="ร้อยเอ็ด">ร้อยเอ็ด</option><option value="ระนอง">ระนอง</option><option value="ระยอง">ระยอง</option><option value="ราชบุรี">ราชบุรี</option><option value="ลพบุรี">ลพบุรี</option><option value="ลำปาง">ลำปาง</option><option value="ลำพูน">ลำพูน</option><option value="เลย">เลย</option><option value="ศรีสะเกษ">ศรีสะเกษ</option><option value="สกลนคร">สกลนคร</option><option value="สงขลา">สงขลา</option><option value="สตูล">สตูล</option><option value="สมุทรปราการ">สมุทรปราการ</option><option value="สมุทรสงคราม">สมุทรสงคราม</option><option value="สมุทรสาคร">สมุทรสาคร</option><option value="สระแก้ว">สระแก้ว</option><option value="สระบุรี">สระบุรี</option><option value="สิงห์บุรี">สิงห์บุรี</option><option value="สุโขทัย">สุโขทัย</option><option value="สุพรรณบุรี">สุพรรณบุรี</option><option value="สุราษฎร์ธานี">สุราษฎร์ธานี</option><option value="สุรินทร์">สุรินทร์</option><option value="หนองคาย">หนองคาย</option><option value="หนองบัวลำภู">หนองบัวลำภู</option><option value="อ่างทอง">อ่างทอง</option><option value="อำนาจเจริญ">อำนาจเจริญ</option><option value="อุดรธานี">อุดรธานี</option><option value="อุตรดิตถ์">อุตรดิตถ์</option><option value="อุทัยธานี">อุทัยธานี</option><option value="อุบลราชธานี">อุบลราชธานี</option></select>						</td>
+						<td width="310" align="right"><font size="2"><b>เลขประจำตัวประชาชนที่ต้องการตรวจสอบ : </b></font></td>
+						<td width="85"><input type="text" maxlength="13" size="13" name="txtidsearch" class="text" value="" onkeypress='return numbers(event);'></td>
+						<td width="35"><input type="submit" name="submitsearch" value="ค้นหา" class="text"></td>
+					</tr>
+				</table>
+			</form>
+			<br>
+		</td>
+	</tr>
+	<tr>
+		<td>
+
+
+	<table width="700" border="0" align="center">
+		<tr>
+			<td><br><font size="2">*** ระบบนี้จัดทำขึ้นเพื่อให้หน่วยงานภายนอกใช้ตรวจสอบคุณสมบัติของบุคลากรที่สำเร็จการศึกษาในระดับบัณฑิตศึกษาจากมหาวิทยาลัยเกษตรศาสตร์ 
+ เช่น ใช้ในการตรวจสอบประวัติการศึกษาของบุคลากรของหน่วยงาน  ผู้สมัครงาน หรือผู้สมัครเข้าศึกษาต่อ<br>
+				*** ระบบตรวจสอบปริญญา ระดับบัณฑิตศึกษา มหาวิทยาลัยเกษตรศาสตร์ บริการให้ตรวจสอบได้เฉพาะนิสิตที่เข้าศึกษาตั้งแต่ปี 2548 เป็นต้นไป<br><br></font>
+			</td>
+		</tr>
+	</table>
+
+    </td>
+  </tr>
+	<tr align="center">
+	  <td><br><form id="form3" name="form3" method="post" action="check_status.php">
+				<font size="2" color="0000ff">ติดตามสถานะการขอหนังสือรับรองคุณวุฒิ กรุณาใส่เลขที่แบบแจ้งความประสงค์ขอหนังสือรับรองคุณวุฒิของท่าน</font>
+				<input type="text" name="searchid" id="searchid" size="10" maxlength="5" /> 
+				<input name="submit" type="submit" value="ตรวจสอบสถานะ" class="text"/>
+				</form><br></td>
+  </tr>
+</table>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td height="30" background="images/bgbottom.gif"></td>
+					</tr>
+				</table>
+			</td>
+			<td background="images/bgright.gif"width="85"></td>
+		</tr>
+	</table>
+</body>
+</html>

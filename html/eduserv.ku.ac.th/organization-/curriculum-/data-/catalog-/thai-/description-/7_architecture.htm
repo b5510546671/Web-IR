@@ -1,0 +1,1896 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/tr/rec-html40">
+
+<head>
+<meta http-equiv=content-type content="text/html; charset=windows-874">
+<meta name=progid content=word.document>
+<meta name=generator content="microsoft word 11">
+<meta name=originator content="microsoft word 11">
+<link rel=file-list href="7_architecture_files/filelist.xml">
+<title>���ʶһѵ¡�����ʵ��</title>
+<!--[if gte mso 9]><xml>
+ <o:documentproperties>
+  <o:author>dell</o:author>
+  <o:template>normal</o:template>
+  <o:lastauthor>eduserv</o:lastauthor>
+  <o:revision>2</o:revision>
+  <o:totaltime>0</o:totaltime>
+  <o:lastprinted>2003-12-16t08:44:00z</o:lastprinted>
+  <o:created>2004-07-28t03:49:00z</o:created>
+  <o:lastsaved>2004-07-28t03:49:00z</o:lastsaved>
+  <o:pages>1</o:pages>
+  <o:words>4369</o:words>
+  <o:characters>24909</o:characters>
+  <o:company>ku</o:company>
+  <o:lines>207</o:lines>
+  <o:paragraphs>58</o:paragraphs>
+  <o:characterswithspaces>29220</o:characterswithspaces>
+  <o:version>11.5703</o:version>
+ </o:documentproperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:worddocument>
+  <w:displayhorizontaldrawinggridevery>0</w:displayhorizontaldrawinggridevery>
+  <w:displayverticaldrawinggridevery>0</w:displayverticaldrawinggridevery>
+  <w:usemarginsfordrawinggridorigin/>
+  <w:validateagainstschemas/>
+  <w:saveifxmlinvalid>false</w:saveifxmlinvalid>
+  <w:ignoremixedcontent>false</w:ignoremixedcontent>
+  <w:alwaysshowplaceholdertext>false</w:alwaysshowplaceholdertext>
+  <w:compatibility>
+   <w:footnotelayoutlikeww8/>
+   <w:shapelayoutlikeww8/>
+   <w:aligntablesrowbyrow/>
+   <w:forgetlasttabalignment/>
+   <w:layoutrawtablewidth/>
+   <w:layouttablerowsapart/>
+   <w:useword97linebreakingrules/>
+   <w:selectentirefieldwithstartorend/>
+   <w:applybreakingrules/>
+   <w:useword2002tablestylerules/>
+  </w:compatibility>
+  <w:browserlevel>microsoftinternetexplorer4</w:browserlevel>
+ </w:worddocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:latentstyles deflockedstate="false" latentstylecount="156">
+ </w:latentstyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* font definitions */
+ @font-face
+	{font-family:"angsana new";
+	panose-1:2 2 6 3 5 4 5 2 3 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:16777219 0 0 0 65537 0;}
+@font-face
+	{font-family:"cordia new";
+	panose-1:2 11 3 4 2 2 2 2 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:16777219 0 0 0 65537 0;}
+@font-face
+	{font-family:angsanaupc;
+	panose-1:2 2 6 3 5 4 5 2 3 4;
+	mso-font-charset:222;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:16777219 0 0 0 65536 0;}
+@font-face
+	{font-family:dilleniaupc;
+	panose-1:2 2 6 3 5 4 5 2 3 4;
+	mso-font-charset:222;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:16777217 0 0 0 65536 0;}
+@font-face
+	{font-family:cordiaupc;
+	panose-1:2 11 3 4 2 2 2 2 2 4;
+	mso-font-charset:222;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:16777219 0 0 0 65536 0;}
+ /* style definitions */
+ p.msonormal, li.msonormal, div.msonormal
+	{mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:16.0pt;
+	font-family:angsanaupc;
+	mso-ascii-font-family:angsanaupc;
+	mso-fareast-font-family:"cordia new";
+	mso-hansi-font-family:angsanaupc;}
+p.msoheader, li.msoheader, div.msoheader
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	tab-stops:center 216.0pt right 432.0pt;
+	font-size:16.0pt;
+	font-family:angsanaupc;
+	mso-ascii-font-family:angsanaupc;
+	mso-fareast-font-family:"cordia new";
+	mso-hansi-font-family:angsanaupc;}
+p.msofooter, li.msofooter, div.msofooter
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	tab-stops:center 216.0pt right 432.0pt;
+	font-size:16.0pt;
+	font-family:angsanaupc;
+	mso-ascii-font-family:angsanaupc;
+	mso-fareast-font-family:"cordia new";
+	mso-hansi-font-family:angsanaupc;}
+p.msotitle, li.msotitle, div.msotitle
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:center;
+	mso-pagination:none;
+	font-size:15.0pt;
+	font-family:dilleniaupc;
+	mso-ascii-font-family:dilleniaupc;
+	mso-fareast-font-family:"cordia new";
+	mso-hansi-font-family:dilleniaupc;
+	mso-fareast-language:th;
+	layout-grid-mode:line;
+	font-weight:bold;}
+p.msobodytext, li.msobodytext, div.msobodytext
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:none;
+	tab-stops:70.9pt;
+	font-size:15.0pt;
+	font-family:dilleniaupc;
+	mso-ascii-font-family:dilleniaupc;
+	mso-fareast-font-family:"cordia new";
+	mso-hansi-font-family:dilleniaupc;
+	mso-fareast-language:th;
+	layout-grid-mode:line;}
+p.msobodytextindent, li.msobodytextindent, div.msobodytextindent
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:70.9pt;
+	mso-pagination:none;
+	font-size:15.0pt;
+	font-family:dilleniaupc;
+	mso-ascii-font-family:dilleniaupc;
+	mso-fareast-font-family:"cordia new";
+	mso-hansi-font-family:dilleniaupc;
+	mso-fareast-language:th;
+	layout-grid-mode:line;}
+p.msobodytext2, li.msobodytext2, div.msobodytext2
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	font-size:15.0pt;
+	font-family:dilleniaupc;
+	mso-ascii-font-family:dilleniaupc;
+	mso-fareast-font-family:"cordia new";
+	mso-hansi-font-family:dilleniaupc;}
+p.msobodytext3, li.msobodytext3, div.msobodytext3
+	{margin-top:0cm;
+	margin-right:-12.55pt;
+	margin-bottom:0cm;
+	margin-left:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:16.0pt;
+	font-family:cordiaupc;
+	mso-ascii-font-family:cordiaupc;
+	mso-fareast-font-family:"cordia new";
+	mso-hansi-font-family:cordiaupc;}
+p.msobodytextindent2, li.msobodytextindent2, div.msobodytextindent2
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:36.0pt;
+	mso-pagination:none;
+	font-size:15.0pt;
+	font-family:dilleniaupc;
+	mso-ascii-font-family:dilleniaupc;
+	mso-fareast-font-family:"cordia new";
+	mso-hansi-font-family:dilleniaupc;
+	mso-fareast-language:th;
+	layout-grid-mode:line;}
+p.msobodytextindent3, li.msobodytextindent3, div.msobodytextindent3
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-justify:inter-cluster;
+	text-indent:36.0pt;
+	mso-pagination:widow-orphan;
+	font-size:16.0pt;
+	font-family:cordiaupc;
+	mso-ascii-font-family:cordiaupc;
+	mso-fareast-font-family:"cordia new";
+	mso-hansi-font-family:cordiaupc;
+	mso-fareast-language:th;
+	layout-grid-mode:line;}
+ /* page definitions */
+ @page
+	{mso-footnote-separator:url("7_architecture_files/header.htm") fs;
+	mso-footnote-continuation-separator:url("7_architecture_files/header.htm") fcs;
+	mso-endnote-separator:url("7_architecture_files/header.htm") es;
+	mso-endnote-continuation-separator:url("7_architecture_files/header.htm") ecs;}
+@page section1
+	{size:595.3pt 841.9pt;
+	margin:3.0cm 63.8pt 63.8pt 3.0cm;
+	mso-header-margin:2.0cm;
+	mso-footer-margin:2.0cm;
+	mso-page-numbers:1057;
+	mso-even-footer:url("7_architecture_files/header.htm") ef1;
+	mso-footer:url("7_architecture_files/header.htm") f1;
+	mso-paper-source:0;}
+div.section1
+	{page:section1;}
+ /* list definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* style definitions */
+ table.msonormaltable
+	{mso-style-name:"table normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"cordia new";
+	mso-bidi-font-family:"angsana new";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="2050"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=en-us style='tab-interval:36.0pt'>
+
+<div class=section1>
+
+<p class=msonormal align=center style='text-align:center'><b><span lang=th
+style='font-size:26.0pt;font-family:"cordia new";color:black'>���ʶһѵ¡�����ʵ��</span></b><b><span
+style='font-size:26.0pt;font-family:"cordia new";color:black'><o:p></o:p></span></b></p>
+
+<p class=msonormal align=center style='text-align:center'><b><span
+style='font-size:22.0pt;font-family:"cordia new";color:black'>(<span lang=th>�����ԫ�
+</span>240xxx � 249xxx)</span></b><span style='font-size:22.0pt;font-family:
+"cordia new";color:black'><o:p></o:p></span></p>
+
+<p class=msonormal align=center style='text-align:center'><b><span lang=th
+style='font-size:20.0pt;font-family:"cordia new";color:black'>�ң��ԫ�ʶһѵ¡���
+</span></b><b><span style='font-size:20.0pt;font-family:"cordia new";
+color:black'>(240)<o:p></o:p></span></b></p>
+
+<p class=msonormal align=center style='margin-left:14.4pt;text-align:center;
+text-indent:21.6pt'><span style='font-family:"cordia new";color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=msonormal><b><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'>240111<span
+style='mso-spacerun:yes'>&nbsp; </span>��űҹ����͡ẻ<span
+style='mso-spacerun:yes'>&nbsp; </span>(design fundamentals)<span
+style='mso-tab-count:2'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>2(2-0)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><span
+lang=th style='font-family:"cordia new";color:black;mso-fareast-language:th;
+layout-grid-mode:line'><span style='mso-spacerun:yes'>&nbsp;&nbsp; </span><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;</span><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>�ѡɳ���ф�������ѹ��ͧ�ҹ��ȹ��ż�
+ͧ���сͺ���ͧ�� �ƿҧ���෤�ԥ��èѵͧ���сͺ��ż�㹧ҹ�͡ẻ 2 �ե� 3
+�ե� 4 �ե� �ٻ�ç��з����ҧ�ç���ҧ�ҡ�������ԫ�
+��űҹ����͡ẻ�ٻ�ç㹸����ҵ� ��л�ѫ�ҡ���͡ẻ�ͧ����͡ẻ�ҹ��ż�ᢹ���ҧ
+� ���ѧࢻ<o:p></o:p></span></p>
+
+<p class=msonormal><b><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'>240112<span style='mso-tab-count:
+1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp; </span>��űҹ����͡ẻʶһѵ¡���<span
+style='mso-spacerun:yes'>&nbsp; </span>(architectural design fundamentals)<span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>2(2-0)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster;
+text-indent:36.0pt'><span style='font-family:"cordia new";color:black'><span
+style='mso-spacerun:yes'>&nbsp;</span><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;</span><span lang=th>�ƿҧ����͡ẻʶһѵ¡��������űҹ
+�ѵ��ǹ������ �������͹��ƿҧ���һ ����ǵ�駾ĵԡ���������㹷��ѡ�����
+����͡ẻ�����ҧ���͡�������
+�է�ծ���ѡ������ѳ�ҡ��ʶһѵ¡������������ѡ�����
+�������ңͧʶһѵ¡�����鹶���֡�� �ǥ����դ㹡���͡ẻ ������ҧ�ç��������ѡࡳ��㹡���͡ẻ�ҥ�÷��ѡ�����</span><o:p></o:p></span></p>
+
+<p class=msonormal><b><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'>240113<span
+style='mso-spacerun:yes'>&nbsp; </span>��ժѵԡ���͡ẻ<span
+style='mso-spacerun:yes'>&nbsp; </span>(studio in design)<span
+style='mso-tab-count:5'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>4(0-8)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-indent:72.0pt'><span lang=th style='font-family:
+"cordia new";color:black'><span style='mso-spacerun:yes'>&nbsp;</span>��ժѵԡ���͡ẻ�ҹ��ȹ��ż�
+ͧ���сͺ </span><span style='font-family:"cordia new";color:black'>2 <span
+lang=th>�ե� </span>3 <span lang=th>�ե� </span>4 <span lang=th>�ե�
+�ͧ�ٻ�ç��з����ҧ ����͡ẻ ���͹��һ���ء��ѻ�ҹ��ż� ʶһѵ¡��� ����͡ẻ�ص��ˡ���
+�������ʶһѵ¡���</span><o:p></o:p></span></p>
+
+<p class=msonormal><b><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'>240114<span
+style='mso-spacerun:yes'>&nbsp; </span>����͡ẻʶһѵ¡��� i<span
+style='mso-spacerun:yes'>&nbsp; </span>(architecture design i)<span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-tab-count:2'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>4(0-8)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster;
+text-indent:36.0pt'><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'><span
+style='mso-spacerun:yes'>&nbsp;</span><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;</span>��ժѵԡ���͡ẻʶһѵ¡��������űҹ
+�����ѵ��ǹ��оĵԡ����ͧ������㹡���͡ẻ��ǹ��сͺ����������ǹ�ͧ�ҥ�þѡ�����
+�͡ẻ��ҹ���������������ѡ��èѵ�ѧ����ǳ
+���ἱ�ѧ�ҥ������ʹ���ͧ�ѻ��ҿ�ǵ����ࢵ��͹ �ç���ҧ��ф�������ͧ�ҥ��<o:p></o:p></span></p>
+
+<p class=msonormal><b><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'>240115<span
+style='mso-spacerun:yes'>&nbsp; </span>�����¹ẻʶһѵ¡���<span
+style='mso-spacerun:yes'>&nbsp; </span>(architecture drawing)<span
+style='mso-tab-count:3'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>2(1-3)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><span
+style='font-family:"cordia new";color:black'><span
+style='mso-spacerun:yes'>&nbsp;</span><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp; </span><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+lang=th>�й�����ͧ�����¹ẻ��о�ʴ��ѳ������㹡����¹ẻ ����֡���ը���¹ẻ�����ɮշҧ�������â�
+�ѡ���ҵ� ��зҧ����ҵ� �֡�ҷҧ��ɮ���л�ժѵԧҹ��ҹ�����է��
+������ѡ������ңͧ�ٻ��ҧ��ҧ� �ҧ�âҥ�ե
+�֡�ҷҧ��ɮ���л�ժѵԧҹ��ҹ��ȹ���է�� ������ѡ��¹��ȹ���ҿ ��¹͡ ����
+��з�ȹ���ҿ�ͧ�ҩҡ�ʧᴴ��шҡ�ʧ� �����駡����ѭ�ҷҧ�ըա��
+���෤�ԥ�ͧ�����¹��ȹ���ҿ�ҡẻʶһѵ¡���</span><o:p></o:p></span></p>
+
+<p class=msonormal><b><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=msonormal><b><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'>240116<span
+style='mso-spacerun:yes'>&nbsp; </span>����ʴ�ẻʶһѵ¡���<span
+style='mso-spacerun:yes'>&nbsp; </span>(architectural presentation)<span
+style='mso-tab-count:3'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>2(1-3)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster;
+text-indent:36.0pt'><span style='font-family:"cordia new";color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+lang=th>��ѡ�����¹�ҿ���´թ�� ��֡ ����չ�� �����ըա����� �
+��л�ժѵԡ�÷ҧ��絪��ҿ�ҥ�÷����¹͡������� �ҿ��ե�ѳ��
+�����ʴطҧ��ż���шҡ�����ҵ�
+������������ҧ��������ö㹡���ʴ��͡㹧ҹʶһѵ¡��������ż�</span><o:p></o:p></span></p>
+
+<p class=msonormal><b><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'>240121<span
+style='mso-spacerun:yes'>&nbsp; </span>෤����շҧ�ҥ�� i<span
+style='mso-spacerun:yes'>&nbsp; </span>(building technology i)<span
+style='mso-tab-count:3'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>3(2-3)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster;
+text-indent:36.0pt'><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'><span
+style='mso-spacerun:yes'>&nbsp; </span><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>��ʴء�����ҧ��鹰ҹ�ҧ��դ��������ç���ҧ�����ǹ��сͺ�ҥ��㹴�ҹ��鹵͹��ü�ե
+�س-���ѵ� �������с�ú��ا�ѡ�� ��ý֡�ѵ��¹ẻ��������´�����ǹ��сͺ��ҧ
+� �ͧ�ç���ҧ�ҥ�÷���仢�ҵ���<o:p></o:p></span></p>
+
+<p class=msonormal><b><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'>240122<span
+style='mso-spacerun:yes'>&nbsp; </span>෤����շҧ�ҥ�� ii<span
+style='mso-spacerun:yes'>&nbsp; </span>(building technology ii)<span
+style='mso-tab-count:2'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>3(2-3)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-indent:36.0pt'><b><span lang=th
+style='font-family:"cordia new";color:black;mso-fareast-language:th;layout-grid-mode:
+line'><span style='mso-spacerun:yes'>&nbsp; </span>��鹰ҹ : 240121 <o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-indent:36.0pt'><span lang=th style='font-family:
+"cordia new";color:black;mso-fareast-language:th;layout-grid-mode:line'><span
+style='mso-spacerun:yes'>&nbsp; </span><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>��ʴء�����ҧ��������ç���ҧ�����ǹ��сͺ�ҥ��㹴�ҹ��ҧ
+� ��鹵͹��ü�ե ���ѵ� ������͡�� ��с�ú��ا�ѡ��
+������¹ẻ��������´�ç���ҧ�������ǹ��сͺ��ҧ �
+�ͧ�ҥ�þѡ����¢�ҵ��硷�����ç���ҧ����сͺ�ѻ �͹��յ �������
+�к��آ��ժ�����ͧ��<o:p></o:p></span></p>
+
+<p class=msonormal><b><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'>240131<span style='mso-tab-count:
+1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp; </span>����ʵ���ç���ҧ�ҧʶһѵ¡���<span
+style='mso-spacerun:yes'>&nbsp; </span>(structural mechanics in
+architecture)<span style='mso-spacerun:yes'>&nbsp;&nbsp; </span>2(2-0)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster;
+text-indent:36.0pt'><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'><span
+style='mso-spacerun:yes'>&nbsp; </span><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>��ѡ��þ�鹰ҹ����ǡѻ��������ţͧ�ѵ��������ç��з���¹͡
+���ѧ�ͧ��ʴ��ç����դ����������ʴ� ���ö�д�ҹ���ѧ
+��с�������ٻ�ͧ��ʴ��ѹ���ͧ�ҡ�ç��з�<o:p></o:p></span></p>
+
+<p class=msonormal><b><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'>240211<span
+style='mso-spacerun:yes'>&nbsp; </span>ࡳ������ǥ����դ����͡ẻʶһѵ¡��� <span
+style='mso-tab-count:1'>&nbsp; </span>i<span style='mso-tab-count:2'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>2(2-0)<o:p></o:p></span></b></p>
+
+<p class=msonormal><b><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>(architectural design criteria and concepts i)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster;
+text-indent:36.0pt'><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'><span
+style='mso-spacerun:yes'>&nbsp; </span><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>�է�ծ�����ǥ����դ��ҧ
+� 㹡�����ҧʶһѵ¡����ʹյ ���ѧࢻ
+ࡳ���������ƿҧ㹡���͡ẻ�ҥ�õ����ҿ�ǵ���� ��û�ժѵԧҹ�͡ẻ��т�鹵͹
+��ô��թ�ҹ �����ҧ����ٻ�ç ���������������èѵͧ���сͺ㹧ҹʶһѵ¡���<o:p></o:p></span></p>
+
+<p class=msonormal><b><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'>240213<span
+style='mso-spacerun:yes'>&nbsp; </span>����͡ẻʶһѵ¡��� ii (architectural
+design ii)<span style='mso-tab-count:3'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>4(0-8)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster;
+text-indent:36.0pt'><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'><span
+style='mso-spacerun:yes'>&nbsp; </span><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>��ժѵԡ���͡ẻ��ҹ�ѡ����¢�ҵ���
+�ҥ���ҹ�óт�ҵ��� ������ʶҹ��һ�� ����ç���¹ ���鹤����դ�ҧ����͡ẻ
+��èѵ����ǳ���ἱ�ѧ�ҥ������ʹ���ͧ�ѻ��ҿ�ǵ����ࢵ��͹ �ӹ֧�֧�ç���ҧ
+������� ����к��ҹ�óٻ����ͧ�ҥ��<o:p></o:p></span></p>
+
+<p class=msonormal><b><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'>240214<span style='mso-tab-count:
+1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp; </span>����͡ẻʶһѵ¡��� iii<span
+style='mso-spacerun:yes'>&nbsp; </span>(architectural design iii)<span
+style='mso-tab-count:2'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>4(0-8)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster;
+text-indent:36.0pt'><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'><span
+style='mso-spacerun:yes'>&nbsp; </span><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>��ժѵԡ���͡ẻ��ҹ�ѡ����¢�ҵ�˭�
+�ҥ���ҹ�óл������ҥ�þҳԫ�좹ҵ��� ����ҥ���ѹ��ҡ��
+���鹤����դ�ҧ����͡ẻ
+��èѵ�ѧ����ǳ���ἱ�ѧ�ҥ������ʹ���ͧ�ѻ��ҿ�ǵ����ࢵ��͹ �ӹ֧�֧�ç���ҧ
+������� ����к��ҹ�óٻ����ͧ�ҥ��<o:p></o:p></span></p>
+
+<p class=msonormal><b><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=msonormal><b><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'>240217<span style='mso-tab-count:
+1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp; </span>����͡ẻ��ҧʶһѵ¡��� i<span
+style='mso-spacerun:yes'>&nbsp; </span>(sketch design i)<span style='mso-tab-count:
+4'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>2(0-6)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster;
+text-indent:36.0pt'><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>��ժѵԡ���͡ẻ��ҧ�дѻ
+1 ���ͽ֡������͡ẻ��ж��·ʹ�ǥ����դ���ͧ�� ��觻�сͺ����
+�ҹ�͡ẻ��ǹ��сͺ�ҧʶһѵ¡��� �ҥ�ê��ǥ��� �ҥ�â�ҵ���
+��ǹ��сͺ�ҧ����ʶһѵ¡��� �ҹ�������� ��чҹ�͡ẻ�ţ���� ��дѻ�����������ѻ���һ�ժѵԧҹ<o:p></o:p></span></p>
+
+<p class=msonormal><b><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'>240218<span style='mso-tab-count:
+1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp; </span>����͡ẻ��ҧʶһѵ¡��� ii<span
+style='mso-spacerun:yes'>&nbsp; </span>(sketch design ii)<span
+style='mso-tab-count:3'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>2(0-6)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster;
+text-indent:36.0pt'><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'><span
+style='mso-spacerun:yes'>&nbsp;</span><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;</span>��ժѵԡ���͡ẻ��ҧ�дѻ 2
+���ͽ֡������͡ẻ��ж��·ʹ�ǥ����դ���ͧ�鹫�觻�сͺ���§ҹ�͡ẻ��ǹ��сͺ�ҧʶһѵ¡���
+�ҥ�ê��ǥ��� �ҥ�â�ҵ��� ��ǹ��сͺ�ҧ����ʶһѵ¡��� �ҹ��������
+��чҹ�͡ẻ�ţ���� ��дѻ�����������ѻ���һ�ժѵԧҹ<o:p></o:p></span></p>
+
+<p class=msonormal><b><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'>240221<span
+style='mso-spacerun:yes'>&nbsp; </span>෤���������ǵ�����ҧ�ҥ�� i<span
+style='mso-spacerun:yes'>&nbsp; </span>(building environmental technology
+i)<span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>3(2-3)<o:p></o:p></span></b></p>
+
+<p class=msonormal><b><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp; </span>��鹰ҹ : 240122 <o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster;
+text-indent:36.0pt'><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'><span
+style='mso-spacerun:yes'>&nbsp; </span><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>��������ѹ��෤����շҧ�ҥ��
+����ʹ���ͧ�ѻ����ǵ������ҥ�â�ҵ��� ������ǩ����������鹷�������ҧ
+����͡ẻ�к��آ��ժ�š���͡ẻ �ػ�ó���с�õդ����к���è��¹���к�¹��
+��áөѵ������� ��û�ͧ�ѹ�ѥ����� ��÷��к������͹��с���͡ẻ�к�俿��
+������ҹ�ѻ�ҹ�͡ẻʶһѵ¡����ҥ�÷��ѡ����� ����ҥ���ҹ�ó�
+��ý֡�ѵ��¹ẻ�ҹ�к��آ��ժ�� �к�俿�ҷ����������ͧ�ѻ�ҹʶһѵ¡���<o:p></o:p></span></p>
+
+<p class=msonormal><b><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'>240222<span
+style='mso-spacerun:yes'>&nbsp; </span>෤����շҧ�ҥ�� iii<span
+style='mso-spacerun:yes'>&nbsp; </span>(building technology iii)<span
+style='mso-tab-count:4'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>3(2-3)<o:p></o:p></span></b></p>
+
+<p class=msonormal><b><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp; </span>��鹰ҹ : 240221 <o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster;
+text-indent:36.0pt'><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'><span
+style='mso-spacerun:yes'>&nbsp; </span><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>��������
+������ф͹��յ������������ͧ�� ���������ç���ҧ�����ǹ��сͺ�ç���ҧ�ҥ�â�ҵ��ҧ
+����ҥ���ҹ�ó� ��ҿ�ǵ�����ҧ����ҿ �к��ҹ�ҡ �к���� �к���ѧ �к���ѧ��
+����к���û�ͧ�ѹ������� �ҵðҹ�����¹ẻ������ҧ�ҹʶһѵ¡���
+����к����ǡ����������ǣ�ͧ<o:p></o:p></span></p>
+
+<p class=msonormal><b><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'>240231<span
+style='mso-spacerun:yes'>&nbsp; </span>�к��ç���ҧ�ҹʶһѵ¡���<span
+style='mso-spacerun:yes'>&nbsp; </span>(structural system in architecture)<span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>2(2-0)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-indent:36.0pt'><span lang=th
+style='font-family:"cordia new";color:black;mso-fareast-language:th;layout-grid-mode:
+line'><span style='mso-spacerun:yes'>&nbsp; </span><span style='mso-tab-count:
+1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>�ǥ����դ㹡���͡ẻ
+������͡���ç���ҧ㹧ҹʶһѵ¡��� ��������ѡ�������ǡѻ�ç ��ʴ�<span
+style='mso-spacerun:yes'>&nbsp; </span>�ٻ��ҧ ��с�������ٻ�ѹ���ͧ�ҡ�ç<o:p></o:p></span></p>
+
+<p class=msonormal><b><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'>240232<span
+style='mso-spacerun:yes'>&nbsp;
+</span>����͡ẻ�ç���ҧ��������������ѻ�ҹʶһѵ¡���<span style='mso-tab-count:
+1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>2(2-0)<o:p></o:p></span></b></p>
+
+<p class=msonormal><b><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp; </span>(timber &amp; steel design for
+architecture)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-indent:36.0pt'><span lang=th
+style='font-family:"cordia new";color:black;mso-fareast-language:th;layout-grid-mode:
+line'><span style='mso-spacerun:yes'>&nbsp; </span><span style='mso-tab-count:
+1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>�س���ѵԣͧ���
+����͡ẻ�ҹ ����ѻ�ç�ѵ����ç�֧ �ç������ ��т�͵�ͧ͢�ç���ҧ����������
+�س���ѵ���с���͡ẻ�ç���ҧ���� ��͡�˹�㹡���͡ẻ�ͧ<span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span>������ʫ� ����͡ẻ�ҹ
+����ѻ�ç�ѵ����ç�֧ ��õ��ẻ����ش��������������<o:p></o:p></span></p>
+
+<p class=msonormal><b><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'>240241<span
+style='mso-spacerun:yes'>&nbsp; </span>ʶһѵ¡�����<span style='mso-tab-count:
+1'>&nbsp;&nbsp;&nbsp; </span> (thai architecture)<span style='mso-tab-count:
+5'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>2(2-0)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster;
+text-indent:36.0pt'><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'><span
+style='mso-spacerun:yes'>&nbsp; </span><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>���觷��������է�ծţͧͧ���сͺʶһѵ¡�����
+�֡����н֡�ѵ��¹����ª�դ��ҧ � ��ǹ��сͺ�ͧʶһѵ¡�����
+�֡���ǥ����դ㹡���͡ẻ����ҧ�ѧ��л���ª������¢ͧʶһѵ¡�����
+���������ٻ�ç��с��������ҧ㹧ҹʶһѵ¡�����<span
+style='mso-spacerun:yes'>&nbsp; </span>�ա���֡�ҹ͡ʶҹ���<o:p></o:p></span></p>
+
+<p class=msonormal><b><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'>240243<span
+style='mso-spacerun:yes'>&nbsp; </span>����ѵ���ʵ��ʶһѵ¡��� i<span
+style='mso-spacerun:yes'>&nbsp; </span>(history of architecture i)<span
+style='mso-tab-count:2'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>3(3-0)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster;
+text-indent:36.0pt'><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'><span
+style='mso-spacerun:yes'>&nbsp;</span><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>����֡�����ͧ������ǡѻ����ѵ���ʵ����оѳ�ҡ�÷ҧʶһѵ¡���
+������ѻ�է�ծũҡ�ѩ��µ�ҧ�
+ẻ���ҧ�ҥ��㹴�ҹ�ѳ�ҡ�÷ҧ�ç���ҧ��зҧ�ըա�á�����ҧ
+�ѹ���ͧ�ҡ�ѳ���������է�ҡ�âͧʶһѵ¡���㹻��������л���������§
+������ҧ�ҥ�÷�����͡����з������ǵ����
+�����駡�õ�駶�蹰ҹ�ͧ��������ҥ����ϳ�ԡ��˹��ᶺ����µ��ѹ��������û��
+��������¡�͹����ѵ���ʵ�쨹�֧�ؤ���ѹ<o:p></o:p></span></p>
+
+<p class=msonormal><b><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'>240244<span
+style='mso-spacerun:yes'>&nbsp; </span>����ѵ���ʵ��ʶһѵ¡��� ii<span
+style='mso-spacerun:yes'>&nbsp; </span>(history of architecture ii)<span
+style='mso-tab-count:3'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>3(3-0)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster;
+text-indent:36.0pt'><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'><span
+style='mso-spacerun:yes'>&nbsp;</span><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>����ѵ���ʵ����оѳ�ҡ�÷ҧʶһѵ¡���
+��������¤�����¹�͹�鹨��֧ʶһѵ¡���ẻ�͸ԥ ������ѡ������������к��ç���ҧ<span
+style='mso-spacerun:yes'>&nbsp;
+</span>��с�����º��º������ҧʶһѵ¡����͸ԥ�ҡ����ȵ�ҧ �
+��ҥ������û��ҧ ��ҿ�������ҥ������û ���¤��ʵ�ȵ���ɷ�� 15
+��с������¹�ŧ�ҧʶһѵ¡����������¿�鹿���ż�է�ҡ�� ������ʶһ�ԡ����͡ẻʶһѵ¡������
+� 㹻�����ե��� ������� �ѧ��� ��л������� ����с�ó�ͧ�š���ѹ��
+��оѳ�ҡ�âͧʶһѵ¡���㹻������¿�鹿���ż�է�ҡ�� �������է�ծŵ�ҧ �
+�ͧ��û���ѵ��ص��ˡ���
+�ѹ�յ���ѳ��������ʶһѵ¡�������������е���ǥդ��л�ѫ�ңͧʶһ�ԡ
+��ʹ���ŧҹ�ͧʶһ�ԡ��鹹ӣͧ�š��ԧ����ѵ���ʵ��<o:p></o:p></span></p>
+
+<p class=msonormal><b><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'>240261<span
+style='mso-spacerun:yes'>&nbsp; </span>����͡ẻ���������ǵ�����ࢵ��͹
+(design for tropical environment) 2(2-0)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster;
+text-indent:36.0pt'><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'><span
+style='mso-spacerun:yes'>&nbsp; </span><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>������ѻ��ҿ�ǵ����
+����ҡ����с������ҿ�����ҥ�ͧ�š ����й��ʺ�� ������������������»�
+������͡�ٻẻ�ѵ��ǹ�ͧ�ҥ�� ����ҧ��ȷҧ�ҥ�� ����͡ẻ���ѹᴴ
+��äǻ�����þѵ��ҹ�ͧ������� ��������������������ѹ ��äǻ���������͹
+��с������ʴؾ�����ͧ ������͡���ٻ�ç����ç���ҧ�����ҿ����ҡ�� ����ҧ�ѧ
+��áѹ����л�ͧ�ѹ����������ͧ��ʴ� ��û�ͧ�ѹ���§ ��û�ͧ�ѹ�ѹ��ҽ��
+��с�û�ͧ�ѹ�ѵ�� �����ŧ��ҧ � �ӵѻ���
+����ըա��㹡���͡ẻ���������ǵ�����ࢵ��͹<o:p></o:p></span></p>
+
+<p class=msonormal><b><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'>240271<span
+style='mso-spacerun:yes'>&nbsp;
+</span>��û���ء�������������㹧ҹʶһѵ¡���<span style='mso-tab-count:
+4'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>2(1-2)<o:p></o:p></span></b></p>
+
+<p class=msonormal><b><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>(computer applications in architecture)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='margin-right:-3.55pt;text-indent:36.0pt'><span
+lang=th style='font-family:"cordia new";color:black;mso-fareast-language:th;
+layout-grid-mode:line'><span style='mso-spacerun:yes'>&nbsp; </span><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>������ͧ��÷ҧ��ҹ����������ыϳ������
+������㹧ҹ�͡ẻʶһѵ¡��� ������������� � �������ǣ�ͧ �ҹ���������
+������ҿ��сͺ ��÷���������� �ҹ��ҿ�ԡ��ҧ � �����¹ẻ�ͧ�ե� ���ͧ��
+����ʴ�ẻ����ե� ����ǻ�����������鹰ҹ㹡�����������ҧ �
+���͹��ҩѵ����ش�ҿ�ŧҹ�ҧʶһѵ¡��� ������ҧ���ྨ�����ʴ��ŧҹ�ҧʶһѵ¡���<o:p></o:p></span></p>
+
+<p class=msonormal><b><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'>240311<span style='mso-tab-count:
+1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp; </span>ࡳ������ǥ����դ����͡ẻʶһѵ¡���
+ii<span style='mso-tab-count:3'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>2(2-0)<o:p></o:p></span></b></p>
+
+<p class=msonormal><b><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp; </span>(architectural design criteria and
+concepts ii)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster;
+text-indent:36.0pt'><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'><span
+style='mso-spacerun:yes'>&nbsp; </span><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>��������
+�ƿҧ ��л�ѫ�ҷҧ����͡ẻ�ͧ������ҧ��ä�ҹʶһѵ¡���㹪�ǧ����ȵ���ɷ��
+19 ��е�ȵ���ɷ�� 20 ࡳ������ǥդ㹡���͡ẻ�ҥ�û�������ҧ �
+�����ҧ㹧ҹʶһѵ¡��� ����ʴ��͡ �ѡɳ�੾����фس��ңͧ�ҹʶһѵ¡���<o:p></o:p></span></p>
+
+<p class=msonormal><b><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'>240313<span
+style='mso-spacerun:yes'>&nbsp; </span>����͡ẻʶһѵ¡��� iv<span
+style='mso-spacerun:yes'>&nbsp; </span>(architectural design iv)<span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>4(0-8)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster;
+text-indent:36.0pt'><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'><span
+style='mso-spacerun:yes'>&nbsp; </span><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>��ժѵԡ���͡ẻ�ҥ�þѡ��������¤�ͺ����
+�ҥ���ҹ�óл������ҥ�á���֡�� ����ҥ�÷�����ç���ҧ��ǧ���ҧ
+�����ǥ����դ�ҧ����͡ẻ ��èѵ�ѧ����ǳ���ἱ�ѧ�ҥ��
+����ʹ���ͧ�ѻ��ҿ�ǵ����ࢵ��͹ �ӹ֧�֧�ç���ҧ�������
+����к��ҹ�óٻ����ͧ�ҥ��<o:p></o:p></span></p>
+
+<p class=msonormal><b><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'>240314<span
+style='mso-spacerun:yes'>&nbsp; </span>����͡ẻʶһѵ¡��� v<span
+style='mso-spacerun:yes'>&nbsp; </span>(architectural design v)<span
+style='mso-tab-count:2'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style='mso-tab-count:1'> </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>4(0-8)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster;
+text-indent:36.0pt'><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'><span
+style='mso-spacerun:yes'>&nbsp; </span><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>��ժѵԡ���͡ẻ�ҥ���ҹ�óл������ҥ��ʶҹ������
+�ҥ���ӹѡ�ҹ����ҥ�÷��ӡ���ѱ��� ���鹤����դ�ҧ����͡ẻ
+��èѵ�ҧ�ѧ����ǳ���ἱ�ѧ�ҥ������ʹ���ͧ�ѻ��ҿ�ǵ����ࢵ��͹
+�ӹ֧�֧�ç���ҧ ��������ͧ�ҥ������к��ҹ�óٻ����ͧ�ҥ��<o:p></o:p></span></p>
+
+<p class=msonormal><b><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'>240317<span
+style='mso-spacerun:yes'>&nbsp; </span>����͡ẻ��ҧʶһѵ¡��� iii<span
+style='mso-spacerun:yes'>&nbsp; </span>(sketch design iii)<span
+style='mso-tab-count:3'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>2(0-6)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster;
+text-indent:36.0pt'><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'><span
+style='mso-spacerun:yes'>&nbsp; </span><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>��ժѵԡ���͡ẻ��ҧ�дѻ
+3 ���ͽ֡������͡ẻ��ж��·ʹ�ǥ����դ���ͧ�鹫�觻�сͺ���� �ҥ�â�ҵ���
+����ҥ�â�ҵ��ҧ ��ǹ��сͺ�ҧ����ʶһѵ¡��� �ҹ��������
+��чҹ�͡ẻ�ţ���� ��дѻ�����������ѻ���һ�ժѵԧҹ<o:p></o:p></span></p>
+
+<p class=msonormal><b><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'>240318<span
+style='mso-spacerun:yes'>&nbsp; </span>����͡ẻ��ҧʶһѵ¡��� iv (sketch
+design iv)<span style='mso-tab-count:3'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>2(0-6)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster;
+text-indent:36.0pt'><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'><span
+style='mso-spacerun:yes'>&nbsp; </span><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>��ժѵԡ���͡ẻ��ҧ�дѻ
+4 ���ͽ֡������͡ẻ��ж��·ʹ�ǥ����դ���ͧ�鹫�觻�сͺ���� �ҥ�â�ҵ���
+����ҥ�â�ҵ��ҧ ��ǹ��сͺ�ҧ����ʶһѵ¡��� �ҹ��������
+��чҹ�͡ẻ�ţ���� ��дѻ�����������ѻ���һ�ժѵԧҹ<o:p></o:p></span></p>
+
+<p class=msonormal><b><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'>240321<span
+style='mso-spacerun:yes'>&nbsp; </span>෤���������ǵ�����ҧ�ҥ�� ii<span
+style='mso-spacerun:yes'>&nbsp; </span>(building environmental technology ii)<span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>3(2-3)<o:p></o:p></span></b></p>
+
+<p class=msonormal><b><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp; </span>��鹰ҹ : 240222 <o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster;
+text-indent:36.0pt'><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'><span
+style='mso-spacerun:yes'>&nbsp; </span><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>��������ѹ�������ҧ෤����շҧ�ҥ�áѻ����ǵ��������ѻ�ҥ�ê�ǧ���ҧ
+��ҵ��ҧ �к��ç���ҧ ����͡ẻ�к���ѧ�����������´��µ��㹧ҹʶһѵ¡���
+������ҹ�ѻ��ɮբͧ���§ ��с�äǻ������§�����ҥ�� ��ɮա���ͧ���
+��с���͡ẻ�ʧ���ҧ ��ժѵԡ�÷��ͧ ��ẻ���ͧ�����¹ẻ<o:p></o:p></span></p>
+
+<p class=msonormal><b><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'>240322<span
+style='mso-spacerun:yes'>&nbsp; </span>෤����շҧ�ҥ�� iv<span
+style='mso-spacerun:yes'>&nbsp; </span>(building technology iv)<span
+style='mso-tab-count:4'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>3(2-3)<o:p></o:p></span></b></p>
+
+<p class=msonormal><b><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp; </span>��鹰ҹ : 240321 <o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster;
+text-indent:36.0pt'><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'><span
+style='mso-spacerun:yes'>&nbsp; </span><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>�ըա�á�����ҧ�ҥ�ä͹��յ���������
+�ç���ҧ��������ѻ�ҥ���ҹ�óъش�ѡ����·�����ҵðҹ�٧
+�������ҥ�÷ҧ�٧����ҥ�ê�ǧ���ҧ �ҥ�÷��������ǹ������ٻ ���鹡�����к��ç���ҧ
+��ǹ��сͺ��ҧ � �ͧ�ç���ҧ ��ʴء�����ҧ ����к����ǡ����������ǣ�ͧ
+��ý֡�ѵ��¹ẻ��¡�û�сͺẻ<o:p></o:p></span></p>
+
+<p class=msonormal><b><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'>240331<span
+style='mso-spacerun:yes'>&nbsp;
+</span>����͡ẻ�͹��յ�������������ѻ�ҹʶһѵ¡���<span style='mso-tab-count:
+3'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>3(3-0)<o:p></o:p></span></b></p>
+
+<p class=msonormal><b><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp; </span>(reinforced concrete design for
+architecture)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster;
+text-indent:36.0pt'><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'><span
+style='mso-spacerun:yes'>&nbsp; </span><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>�س���ѵԣͧ�͹��յ������������
+�ĵԡ����ͧ�ҹ�͹��յ����������������˹ѡ��÷ء�дѻ��ҧ�
+�ը��͡ẻ�����ѡ˹����ç��ҹ
+���������������͡ẻ����ٻ˹�ҵѵ�����������׹��� ��фҹ�ٻ˹�ҵѵ��ƿ�
+��������������ѻ�ç�֧����ç�ѵ �ç�֧���§ �ç�ִ˹�ǧ���硻�͡ ����͡ẻ���
+��ҷ���ѻ���˹ѡẻ�ç�ٹ��������§�ٹ�� �ҹ�ҡ<o:p></o:p></span></p>
+
+<p class=msonormal><b><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'>240334<span
+style='mso-spacerun:yes'>&nbsp; </span>����ҧ�ѧ����ǳ ���ʶһѵ¡������ǩ<span
+style='mso-spacerun:yes'>&nbsp; </span><span style='mso-tab-count:2'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>2(2-0)<o:p></o:p></span></b></p>
+
+<p class=msonormal><b><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp; </span>(site planning and architectural survey)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><span
+lang=th style='font-family:"cordia new";color:black;mso-fareast-language:th;
+layout-grid-mode:line'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp; </span><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>��鹵͹����ҧ�ѧ����ǳ
+�ըա���红�����㹡�����ǩ�ҧʶһѵ¡��� �����ҹ��ҿ���ի����
+���������ũҡ������ǩ㹡�÷�ἱ���
+����͡ẻ�ҧ�ѧ����ǳ���ͺʹͧ�����ҿ�ǵ���� ����֡�ҡ���ҧ�ѧ����ǳ��դ��ҧ �
+�����������ó��֡��<o:p></o:p></span></p>
+
+<p class=msonormal><b><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'>240341<span
+style='mso-spacerun:yes'>&nbsp; </span>ʶһѵ¡�������<span
+style='mso-spacerun:yes'>&nbsp; </span>(interior architecture)<span
+style='mso-tab-count:5'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>2(1-3)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-indent:36.0pt'><span lang=th style='font-family:
+"cordia new";color:black;mso-fareast-language:th;layout-grid-mode:line'><span
+style='mso-spacerun:yes'>&nbsp; </span><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>��á�˹�����ҵ÷����ҧ���������������ѻ��èѵ�ҧ����ͧ���͹����ʹ���ͧ�ѻ����͡ẻʶһѵ¡������͡�û���ء���٧�ش㹡����ҹ<o:p></o:p></span></p>
+
+<p class=msonormal><b><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'>240361<span
+style='mso-spacerun:yes'>&nbsp; </span>����ʶһѵ¡���<span
+style='mso-spacerun:yes'>&nbsp; </span>(landscape architecture)<span
+style='mso-tab-count:4'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style='mso-tab-count:1'> </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>2(1-3)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster;
+text-indent:36.0pt'><span style='font-family:"cordia new";color:black'><span
+style='mso-spacerun:yes'>&nbsp; </span><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+lang=th>����ѵ���ф������ңͧ����ʶһѵ¡������ѧࢻ
+��ѡ��â����űҹ�ҧ����ʶһѵ¡����ѡɳ�੾�����ͧ���сͺ�ҧ���է�ȹ� �ç
+�ٻ�ç ����ٻ���ҧ�����ҵ� ��з�����������ҧ���
+��èѵͧ���сͺ�����ҧ��ҧ��
+��ȹ��ҿ㹡���ҧ�ѧ�ç���ҧ�����ʶһѵ¡��������ʴؾת�ѹ���</span><o:p></o:p></span></p>
+
+<p class=msonormal><b><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'>240371<span
+style='mso-spacerun:yes'>&nbsp;
+</span>��û���ء����������������٧㹧ҹʶһѵ¡���<span style='mso-tab-count:
+2'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>2(1-2)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-indent:36.0pt'><b><span lang=th
+style='font-family:"cordia new";color:black;mso-fareast-language:th;layout-grid-mode:
+line'><span style='mso-spacerun:yes'>&nbsp; </span>(advanced computer
+applications in architecture)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster;
+text-indent:36.0pt'><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'><span
+style='mso-spacerun:yes'>&nbsp; </span><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>�����ϳ���������ͧҹ�ʴ��ҿẻ����ե�
+����ͧ�ҿ����ե� �����ըյ�ҧ �<span style='mso-spacerun:yes'>&nbsp;&nbsp;
+</span>������� ������������� �����෤�ԥ�ʧ-�� ������ҧ�ҿ����͹���
+�����������ǩ��������ǹ�ͺ�ҥ�� ����ǻ����ŧҹ���͹������ҧ���ྨ
+���ʴ��ҿ����͹���������§<o:p></o:p></span></p>
+
+<p class=msonormal><b><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=msonormal><b><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'>240411<span
+style='mso-spacerun:yes'>&nbsp; </span>ࡳ������ǥ����դ����͡ẻʶһѵ¡���
+iii<span style='mso-tab-count:3'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>2(2-0)<o:p></o:p></span></b></p>
+
+<p class=msonormal><b><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>(architectural design criteria and concepts iii)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster;
+text-indent:36.0pt'><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'><span
+style='mso-spacerun:yes'>&nbsp; </span><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>��кǹ����͡ẻ
+��ɮա���͡ẻ��ԧ���º��º�����ҧ�ŧҹ�ͧʶһ�ԡ�������¾ѳ�ҡ�âͧ�ǥ����դ���������ͧʶһѵ¡���㹻ѩ�غѹ���͹ҥ�
+�ӵѻ��鹵͹��ъ�դ�ͧ�����ҧ �������ըա���������ͷ����ҧ�ͧ�ԩ������ҧ<span
+style='mso-spacerun:yes'>&nbsp; </span>�<o:p></o:p></span></p>
+
+<p class=msonormal><b><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'>240413<span
+style='mso-spacerun:yes'>&nbsp; </span>����͡ẻʶһѵ¡��� vi<span
+style='mso-spacerun:yes'>&nbsp; </span>(architecture design vi)<span
+style='mso-tab-count:2'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>4(0-8)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-indent:36.0pt'><span lang=th style='font-family:
+"cordia new";color:black;mso-fareast-language:th;layout-grid-mode:line'><span
+style='mso-spacerun:yes'>&nbsp; </span><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>��ժѵԡ���͡ẻ�ҥ�þҳԫ������ҥ���ҹ�óт�ҵ��ҧ�������ٹ���ä���ç���
+�ٹ���ѳ����� �ծը�ѳ�� �����ҥ�÷ҧ��ʹ� �����ǥ����դ�ҧ����͡ẻ
+��èѵ�ҧ�ѧ����ǳ
+���ἱ�ѧ�ҥ������ʹ���ͧ�ѻ��ҿ�ǵ����ࢵ��͹�ӹ֧�֧�ç���ҧ�������
+����к��ҹ�óٻ����ͧ�ҥ��<o:p></o:p></span></p>
+
+<p class=msonormal><b><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'>240414<span
+style='mso-spacerun:yes'>&nbsp; </span>����͡ẻʶһѵ¡��� vii<span
+style='mso-spacerun:yes'>&nbsp; </span>(architectural design vii)<span
+style='mso-tab-count:2'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>4(0-8)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster;
+text-indent:36.0pt'><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'><span
+style='mso-spacerun:yes'>&nbsp; </span><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>��ժѵԡ���͡ẻ�ҥ���ҹ�óл������ҥ��ʶҹ��һ�ţ�ҵ�˭�<span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span>����ҥ�÷�����ç���ҧ��ǧ���ҧ
+�������ҥ�����ʾ�ҥ���ͻ�ъ����йէ��ȡ��
+�����ǥ����դ�ҧ����͡ẻ��èѵ�ҧ�ѧ����ǳ
+���ἱ�ѧ�ҥ������ʹ���ͧ�ѻ��ҿ�ǵ����ࢵ��͹ �ӹ֧�֧�ç���ҧ �������
+����к��ҹ�óٻ����ͧ�ҥ��<o:p></o:p></span></p>
+
+<p class=msonormal><b><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'>240417<span
+style='mso-spacerun:yes'>&nbsp; </span>����͡ẻ��ҧʶһѵ¡��� v<span
+style='mso-spacerun:yes'>&nbsp; </span>(sketch design v)<span style='mso-tab-count:
+3'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>2(0-6)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster;
+text-indent:36.0pt'><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'><span
+style='mso-spacerun:yes'>&nbsp; </span><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>��ժѵԡ���͡ẻ��ҧ�дѻ
+5 ���ͽ֡������͡ẻ��ж��·ʹ�ǥ����դ���ͧ�鹫�觻�сͺ���� �ҥ�â�ҵ��ҧ
+����ҥ�â�ҵ�˭� ��ǹ��сͺ�ҧ����ʶһѵ¡��� �ҹ��������
+��чҹ�͡ẻ�ţ���� ��дѻ�����������ѻ���һ�ժѵԧҹ<o:p></o:p></span></p>
+
+<p class=msonormal><b><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'>240418<span
+style='mso-spacerun:yes'>&nbsp; </span>����͡ẻ��ҧʶһѵ¡��� vi<span
+style='mso-spacerun:yes'>&nbsp; </span>(sketch design vi)<span
+style='mso-tab-count:3'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>2(0-6)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-indent:36.0pt'><span lang=th
+style='font-family:"cordia new";color:black;mso-fareast-language:th;layout-grid-mode:
+line'><span style='mso-spacerun:yes'>&nbsp; </span><span style='mso-tab-count:
+1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>��ժѵԡ���͡ẻ��ҧ�дѻ
+6 ���ͽ֡㹡���͡ẻ��ж��·ʹ�ǥ����դ���ͧ�鹫�觻�сͺ���� �ҥ�â�ҵ��ҧ
+����ҥ�â�ҵ�˭� ��ǹ��сͺ�ҧ����ʶһѵ¡��� �ҹ��������
+��чҹ�͡ẻ�ţ���� ��дѻ�����������ѻ���һ�ժѵԧҹ<o:p></o:p></span></p>
+
+<p class=msonormal><b><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'>240421<span
+style='mso-spacerun:yes'>&nbsp; </span>෤���������ǵ�����ҧ�ҥ�� iii
+(building environmental technology iii)<span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp; </span>3(2-3)<o:p></o:p></span></b></p>
+
+<p class=msonormal><b><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp; </span>��鹰ҹ : 240322 <o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-indent:36.0pt'><span lang=th style='font-family:
+"cordia new";color:black;mso-fareast-language:th;layout-grid-mode:line'><span
+style='mso-spacerun:yes'>&nbsp; </span><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>�ǥ����դ㹡���͡ẻࢵʺ��
+���ŵ����ҳ������͹����觼�ҹ��ǡ�ҧ ��äӹǳ������͹����դ���
+��ҡ�ö���෤�����͹����ͧ��ѧ��ҹ�͡�ͧ�ҥ�� ��ҡ�ö���෤�����͹����ͧ��ѧ��
+�ҥ�â�ҵ�˭� ��с�èѵ�������ӹ�¤����дǡ��ҥ�� ��÷��ͧ ��������ͧ���
+ẻ���ͧ��с����¹ẻ<o:p></o:p></span></p>
+
+<p class=msonormal><b><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=msonormal><b><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=msonormal><b><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'>240422<span
+style='mso-spacerun:yes'>&nbsp; </span>෤����շҧ�ҥ�� v<span
+style='mso-spacerun:yes'>&nbsp; </span>(building technology v)<span
+style='mso-tab-count:3'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>3(2-3)<o:p></o:p></span></b></p>
+
+<p class=msonormal><b><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp; </span>��鹰ҹ : 240421 <o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster;
+text-indent:36.0pt'><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'><span
+style='mso-spacerun:yes'>&nbsp;</span><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;</span>�к��ç���ҧ�ҥ���٧
+��с�á�����ҧ�ҥ�ä͹��յ��������� �ç���ҧ���� ����֧�ç���ҧ������ٻ
+�к����ǡ�����ҧ � �������ǣ�ͧ�ѻ��û����ѵ��ѧ�ҹ �к���ͧ�ѹ�ѥ�����
+����ѻ�ҥ���ҹ�óт�ҵ�˭� ��ý֡�ѵ��¹ẻ������ҧ�����¡�û�сͺẻ<o:p></o:p></span></p>
+
+<p class=msonormal><b><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'>240441<span
+style='mso-spacerun:yes'>&nbsp; </span>����ҧ�ѧ���ͧ��с���ҧἱ�ҥ���ͧ��<span
+style='mso-tab-count:5'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>2(2-0)<o:p></o:p></span></b></p>
+
+<p class=msonormal><b><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp; </span>(introduction to urban and regional planning)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-indent:36.0pt'><span lang=th style='font-family:
+"cordia new";color:black;mso-fareast-language:th;layout-grid-mode:line'><span
+style='mso-spacerun:yes'>&nbsp; </span><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>���ѳ�ҡ�õ�駶�蹰ҹ�ͧ������
+���鹶֧��������¹�ŧ��ҿ��ó�
+�ѭ������ըա����䢷����������ͧ�ѻ������ǵ����㹾�鹷���дѻ��ҧ �
+(��������ͧ�ҥ��л����) �ͧ�������<o:p></o:p></span></p>
+
+<p class=msonormal><b><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'>240451<span
+style='mso-spacerun:yes'>&nbsp; </span>��ú������ç���ʶһѵ¡��� i<span
+style='mso-spacerun:yes'>&nbsp; </span>(architectural project management i)<span
+style='mso-tab-count:1'> </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>3(3-0)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-indent:36.0pt'><span lang=th
+style='font-family:"cordia new";color:black;mso-fareast-language:th;layout-grid-mode:
+line'><span style='mso-spacerun:yes'>&nbsp; </span><span style='mso-tab-count:
+1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>��èѵ���ͧ��ú�������ص��ˡ�����á�����ҧ
+�֡�ҥ���������鹵͹㹰ҹ�ʶһ�ԡ<o:p></o:p></span></p>
+
+<p class=msonormal><b><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'>240452<span
+style='mso-spacerun:yes'>&nbsp; </span>��ú������ç���ʶһѵ¡��� ii<span
+style='mso-spacerun:yes'>&nbsp; </span>(architectural project management ii)<span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>3(3-0)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster;
+text-indent:36.0pt'><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'><span
+style='mso-spacerun:yes'>&nbsp; </span><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>��á�˹��ç���ҧ
+���ҷ���˹�ҷ��ͧ�ӹѡ�ҹ�͡ẻ ����ҧἱ ��äǻ���
+��с���ѵ����է���ҿ�ͧ�ҹ��ӹѡ�ҹ
+����ҧἱ����ƿҧ��ժѵ����ͺ������ӹѡ�ҹ ����ç��á�����ҧ�����������
+���ǥդ ����ըա�õ�ҧ �<o:p></o:p></span></p>
+
+<p class=msonormal><b><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'>240453<span
+style='mso-spacerun:yes'>&nbsp; </span>������ǩ����ҳ��л���ҳ�ҥ�<span
+style='mso-spacerun:yes'>&nbsp; </span>(quantity survey and cost
+estimation)<span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp; </span>2(1-2)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-indent:36.0pt'><span lang=th
+style='font-family:"cordia new";color:black;mso-fareast-language:th;layout-grid-mode:
+line'><span style='mso-spacerun:yes'>&nbsp; </span><span style='mso-tab-count:
+1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>��ѡ�������к���û���ҳ�ҥ�
+��äդ�ӹǳ��ʴ� �ç�ҹ �ػ�ó���ф�������㹡�á�����ҧ ��ʹ����äդ���� ����
+��фդ����������� �<o:p></o:p></span></p>
+
+<p class=msonormal><b><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'>240461<span
+style='mso-spacerun:yes'>&nbsp; </span>ʶһѵ¡�������׹<span
+style='mso-spacerun:yes'>&nbsp; </span>(sustainable architecture)<span
+style='mso-tab-count:3'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>3(3-0)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-indent:36.0pt'><span lang=th
+style='font-family:"cordia new";color:black;mso-fareast-language:th;layout-grid-mode:
+line'><span style='mso-spacerun:yes'>&nbsp; </span><span style='mso-tab-count:
+1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>������ͧ��á�ô�ç�������ҧ����׹
+�ѹ���ͧ�ҩҡ�ԡĵ��ó���ҿ�ǵ���� �����¹�ҡʶһѵ¡�����鹶��
+��觵ͺ�ѻ�ѻ��ҿ�����ҡ����фӹ֧�֧��ҿ�ǵ����
+�ѹ�������ؤ����ͧʶһѵ¡���
+�������ǹ����㹡�ê��»����ѵ������ѧ�ҹ����ѻ�š�ͧ���<span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><o:p></o:p></span></p>
+
+<p class=msonormal><b><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'>240462<span
+style='mso-spacerun:yes'>&nbsp; </span>���͹��ѡ���ѧ�ҹ㹧ҹʶһѵ¡���(energy
+conservation in architecture) 3(3-0)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-indent:36.0pt'><span lang=th style='font-family:
+"cordia new";color:black;mso-fareast-language:th;layout-grid-mode:line'><span
+style='mso-spacerun:yes'>&nbsp;</span><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;</span>����͡ẻ�ҥ�û����ѵ��ѧ�ҹ
+����ѡ���������ͧ��������������ͧ��
+�������������шѵ��áѻ������ѧ�ҹ��ҥ�â�ҵ�˭�<span
+style='mso-spacerun:yes'>&nbsp; </span><o:p></o:p></span></p>
+
+<p class=msonormal><b><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'>240551<span
+style='mso-spacerun:yes'>&nbsp; </span>��û�ժѵ��ԫҫվʶһѵ¡���<span
+style='mso-spacerun:yes'>&nbsp; </span>(professional practice)<span
+style='mso-tab-count:3'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>2(2-0)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster;
+text-indent:36.0pt'><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'><span
+style='mso-spacerun:yes'>&nbsp;</span><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;</span>��鹵͹��ҧ �
+㹡�кǹ��û�ժѵ��ԫҫվʶһѵ¡��� �����������õդ��͡ѻ�����ҩ�ҧ�͡ẻ
+�����ҧἱ�ҹ ����֡�ҷ֧���������ͧ�ç���
+��á�˹���������´�ͧ���ͷ������� ��ч�����ҳ ��û���ҹ�ҹ�ѻ���ǡ��ңҵ�ҧ �
+����ʹ���ҧ �ҹ�͡ẻ ��с����¹ẻ������ҧ
+��ú�������с�èѵ��������ӹѡ�ҹʶһ�ԡ �ⱥѭ�ѵ��������º��û�ժѵ��ԫҫվ
+����ҷ㹡�û�ժѵ��ԫҫվ ��û�сǵ�ҥ� ��äǻ����ҹ������ҧ
+��õ�ǩ�ѻ�ҹ������ҧ��с�õդ�����ǩ�ͺ�ŧҹ�����������
+����т�鹵͹�����繡���֡�ҷ֧�ըա�÷��㹷�ɮ�
+��з����ѹ����㹡�û�ժѵ��ԫҫվʶһѵ¡���<o:p></o:p></span></p>
+
+<p class=msonormal><b><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'>240561<span
+style='mso-spacerun:yes'>&nbsp; </span>��û����թ��ҿ�ǵ�����ҥ��<span
+style='mso-spacerun:yes'>&nbsp; </span>(evaluation of building environment)<span
+style='mso-tab-count:1'>&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>2(2-0)<o:p></o:p></span></b></p>
+
+<p class=msonormal><b><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp; </span>��鹰ҹ : 240414 ��� 240441<o:p></o:p></span></b></p>
+
+<p class=msobodytextindent3><span style='font-family:"cordia new";color:black'><span
+style='mso-spacerun:yes'>&nbsp; </span><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+lang=th>��鹰ҹ��û����թ��ҿ�ǵ�����ҥ��
+�ѹ����ǣ�ͧ�ѻ����͡ẻ����ͧ�ԩ�óҷ֧����������ҧ����ǵ����
+��чҹʶһѵ¡���
+���ͤ�������ó���觡���͡ẻ�������ö�ͺʹͧ��������׹��ҹ�������¤ǻ���س��ҷ�����ѻ���ͧ�����ҿ�ǵ���������</span><o:p></o:p></span></p>
+
+<p class=msonormal><b><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'>240597<span
+style='mso-spacerun:yes'>&nbsp; </span>������ʶһѵ¡���<span
+style='mso-spacerun:yes'>&nbsp; </span>(architectural design seminar)<span
+style='mso-tab-count:2'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>2(2-0)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-indent:36.0pt'><span lang=th
+style='font-family:"cordia new";color:black;mso-fareast-language:th;layout-grid-mode:
+line'><span style='mso-spacerun:yes'>&nbsp; </span><span style='mso-tab-count:
+1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>��������л����թ�żѭ�ҵ�ҧ
+� 㹻ѩ�غѹ�������ǣ�ͧ�ѻ����͡ẻ ��с�ú������ç����ҥ�â�ҵ�˭�
+���������ͧ�ç��ô�ҹ��õ�ҵ �ǥ����դ��л�ѫ��㹡���͡ẻ �š�з���ҧ �
+㹡���͡ẻ ��з����դ��鹵����ҿ�ǵ���������ѧ�����ҹ�ҥ�â�ҵ�˭�<o:p></o:p></span></p>
+
+<p class=msonormal><b><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'>240598<span
+style='mso-spacerun:yes'>&nbsp; </span>�ç�ҹ�է�ҹծ���<span
+style='mso-spacerun:yes'>&nbsp; </span>(thesis proposal)<span style='mso-tab-count:
+4'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>3(1-4)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-indent:36.0pt'><span lang=th
+style='font-family:"cordia new";color:black;mso-fareast-language:th;layout-grid-mode:
+line'><span style='mso-spacerun:yes'>&nbsp; </span><span style='mso-tab-count:
+1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>������͡�ç��÷����֡������͡ẻ
+��ä鹤����ң��������͡�˹�������ͧ��âͧ�ç���
+��������´����ǡѻ�ͺࢵ�ͧ�ҹ�����֡������͡ẻ��;ԩ�óҵ�ҹ��ҿ�ǵ����
+��ф���������ҹ����թ ��������т�ͺѧ�ѻ����ǡѻ��á�����ҧ�ҥ�õ��������
+������͡����� ��û����թ�س��ңͧ�ҥ�û��������ǡѹ��觡�����ҧ�����
+��������´ ������ͧ��âͧ�ç��� �ǥ����դ�ҧʶһѵ¡���
+���ǡ����������ʶһѵ¡���<o:p></o:p></span></p>
+
+<p class=msonormal><b><span lang=th style='font-family:"cordia new";color:black;
+mso-fareast-language:th;layout-grid-mode:line'>240599<span
+style='mso-spacerun:yes'>&nbsp; </span>�է�ҹծ���<span
+style='mso-spacerun:yes'>&nbsp; </span>(thesis) <span style='mso-tab-count:
+7'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>9<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-indent:36.0pt'><span lang=th
+style='font-family:"cordia new";color:black;mso-fareast-language:th;layout-grid-mode:
+line'><span style='mso-spacerun:yes'>&nbsp; </span><span style='mso-tab-count:
+1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;</span>��á�˹��ǥ����դ�ҧʶһѵ¡���
+���ǡ�������ʴ��ŧҹ�͡ẻ��ҧ�ҡ�ç�ҹ�է�ҹծ��� �����䢻ѭ���ǥ����դ
+����ʴ��ŧҹ�͡ẻʶһѵ¡����¡����¹ẻ ��с�÷���蹨��ͧ�ҥ��
+�������駡�����ǩ����ҳ��л���ҳ�ҥ�<o:p></o:p></span></p>
+
+<p class=msonormal><span style='font-family:"cordia new";color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=msonormal><span style='font-family:"cordia new";color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=msonormal><span style='font-family:"cordia new";color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=msonormal align=center style='text-align:center'><b><span
+style='font-size:20.0pt;font-family:"cordia new";color:black'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=msonormal align=center style='text-align:center'><b><span
+style='font-size:20.0pt;font-family:"cordia new";color:black'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=msonormal><b><span style='font-size:20.0pt;font-family:"cordia new";
+color:black'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=msonormal align=center style='text-align:center'><b><span lang=th
+style='font-size:20.0pt;font-family:"cordia new";color:black'>�ң��ԫ�����ʶһѵ¡�����ʵ��
+</span></b><b><span style='font-size:20.0pt;font-family:"cordia new";
+color:black'>(241)<o:p></o:p></span></b></p>
+
+<p class=msonormal align=center style='text-align:center'><span
+style='font-size:20.0pt;font-family:"cordia new";color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=msonormal><b><span style='font-family:"cordia new";color:black'>241211<span
+style='mso-spacerun:yes'>&nbsp; </span><span lang=th>����͡ẻ����ʶһѵ¡��� </span>i<span
+style='mso-spacerun:yes'>&nbsp; </span>(landscape architectural design i)<span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>4(0-8)<o:p></o:p></span></b></p>
+
+<p class=msonormal><b><span style='font-family:"cordia new";color:black'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp; </span><span lang=th>��鹰ҹ </span>: 240213<span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp; </span><o:p></o:p></span></b></p>
+
+<p class=msonormal><span style='font-family:"cordia new";color:black'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp; </span><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+lang=th>��ժѵԡ���͡ẻ����ʶһѵ¡��������űҹ �����ٻ�ç�����ҵ�<span
+style='mso-spacerun:yes'>&nbsp;
+</span>��ɮա���͡ẻ���ͧ����оĵԡ���������㹡���͡ẻ��ҿ�ǵ������ҵ��� </span><o:p></o:p></span></p>
+
+<p class=msonormal><b><span style='font-family:"cordia new";color:black'>241212<span
+style='mso-spacerun:yes'>&nbsp; </span><span lang=th>����͡ẻ��ҧ����ʶһѵ¡���
+</span>i (landscape architectural sketch design i) 1(0-3)<o:p></o:p></span></b></p>
+
+<p class=msonormal><b><span style='font-family:"cordia new";color:black'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp; </span><span lang=th>��鹰ҹ </span>: 240217 <o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><span
+style='font-family:"cordia new";color:black'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;</span><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;</span><span lang=th>��ժѵԡ���͡ẻ��ҧ����ʶһѵ¡��������űҹ���ҿ�ǵ������ҵ��硴��·�ɮ�
+����͡ẻ���ͧ������ٻ�ç�����ҵ�<span style='mso-spacerun:yes'>&nbsp;
+</span>���·ʹ�ǥ����դ��ٻẻ�ͧ�ҹ�â�ҿ�������ҷ���˹�</span><o:p></o:p></span></p>
+
+<p class=msonormal><b><span style='font-family:"cordia new";color:black'>241231<span
+style='mso-spacerun:yes'>&nbsp; </span><span lang=th>����͡ẻ������ҧ����ʶһѵ¡���
+</span>i<span style='mso-spacerun:yes'>&nbsp; </span><span style='mso-tab-count:
+5'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>3(2-3) <span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;</span>(landscape architectural
+construction design i)<o:p></o:p></span></b></p>
+
+<p class=msonormal><b><span style='font-family:"cordia new";color:black'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp; </span><span lang=th>��鹰ҹ </span>: 240121 <o:p></o:p></span></b></p>
+
+<p class=msobodytext3 style='text-align:justify;text-justify:inter-cluster'><span
+style='font-family:"cordia new";color:black'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+lang=th>����ʵ���ç���ҧ �ç���ҧ��� �͹��յ �������
+��ѡ����͡ẻ�����¹ẻ�ҹ������ҧ����ʶһѵ¡��� ����ç���ҧ�ҥ�þѡ����¢�ҵ���<span
+style='mso-spacerun:yes'>&nbsp; </span>�ѭ�ѡɳ��ҵðҹ㹡����¹ẻ</span></span><span
+lang=fr style='font-family:"cordia new";color:black;mso-ansi-language:fr'><o:p></o:p></span></p>
+
+<p class=msonormal><b><span style='font-family:"cordia new";color:black'>241232<span
+style='mso-spacerun:yes'>&nbsp; </span><span lang=th>����͡ẻ������ҧ����ʶһѵ¡���
+</span>ii<span style='mso-spacerun:yes'>&nbsp; </span><span style='mso-tab-count:
+5'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>3(2-3)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-indent:36.0pt'><b><span style='font-family:"cordia new";
+color:black'><span style='mso-spacerun:yes'>&nbsp; </span>(landscape
+architectural construction design ii)<span style='mso-tab-count:1'>&nbsp; </span><o:p></o:p></span></b></p>
+
+<p class=msonormal><span style='font-family:"cordia new";color:black'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp; </span><b><span lang=th>��鹰ҹ </span>: 241231
+<o:p></o:p></b></span></p>
+
+<p class=msonormal style='text-indent:36.0pt'><b><span style='font-family:"cordia new";
+color:black'><span style='mso-spacerun:yes'>&nbsp; </span><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></b><span
+lang=th style='font-family:"cordia new";color:black'>������ǩ��鹷������͡ẻ������ҧ�ҹ�ѧ����ǳ
+��û�ѻ�дѻ��鹷�� ����͡ẻ�к��к�¹�ӽ�ǵթ����к��к�¹����թ</span><span
+style='font-family:"cordia new";color:black'><o:p></o:p></span></p>
+
+<p class=msonormal><b><span style='font-family:"cordia new";color:black'>241241<span
+style='mso-spacerun:yes'>&nbsp; </span><span lang=th>����ѵ���ʵ������ʶһѵ¡���<span
+style='mso-spacerun:yes'>&nbsp; </span></span>(history of landscape
+architecture)<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>3(3-0)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><span
+style='font-family:"cordia new";color:black'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp; </span><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+lang=th>���ѳ�ҡ����оѳ�ҡ�âͧ����ʶһѵ¡����ͧ�ѳ�������ҧ�
+������է�ծŷҧ������ʵ�� ����ѵ���ʵ�� �ѧ�� ��ѫ�� ��������
+��с���ʴ��͡�ҧʶһѵ¡��� �ҡ�ؤ��ҳ�֧ȵ���ɷ�� </span>19<span
+style='mso-spacerun:yes'>&nbsp; </span><span lang=th>������������ԧ���º��º��ǥդ����͡ẻ
+�ѡɳ� ����է�ծţͧ�ٻẻ �ա���֡�ҹ͡ʶҹ���</span><o:p></o:p></span></p>
+
+<p class=msonormal><b><span style='font-family:"cordia new";color:black'>241311<span
+style='mso-spacerun:yes'>&nbsp; </span><span lang=th>����͡ẻ����ʶһѵ¡��� </span>ii<span
+style='mso-spacerun:yes'>&nbsp; </span>(landscape architectural design ii)<span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>4(0-8)<o:p></o:p></span></b></p>
+
+<p class=msonormal><b><span style='font-family:"cordia new";color:black'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp; </span><span lang=th>��鹰ҹ </span>: 241211 <o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster;
+text-indent:36.0pt'><span style='font-family:"cordia new";color:black'><span
+style='mso-spacerun:yes'>&nbsp; </span><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+lang=th>��ժѵԡ���͡ẻ����ʶһѵ¡��������űҹ���ҿ�ǵ����������ѻ��͹
+����红��������͹��������������鹷����м����
+����͡ẻ�к��ѭ�������ҿ�ǵ�����ʶһѹ ʶҹ�֡�� �ç��þҳԫ¡���
+�ٹ������<span style='mso-spacerun:yes'>&nbsp; </span>�ǹ�ҹ�ó��дѻ����� ���
+�ç����ص��ˡ��� ��ѡ����͡ẻ��ҿ�ǵ�����ࢵ��͹���</span><o:p></o:p></span></p>
+
+<p class=msonormal><b><span style='font-family:"cordia new";color:black'>241312<span
+style='mso-spacerun:yes'>&nbsp; </span><span lang=th>����͡ẻ����ʶһѵ¡��� </span>iii<span
+style='mso-spacerun:yes'>&nbsp; </span>(landscape architectural design iii)<span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>4(0-8)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-indent:36.0pt'><b><span style='font-family:"cordia new";
+color:black'><span style='mso-spacerun:yes'>&nbsp; </span><span lang=th>��鹰ҹ
+</span>: 241311 <o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster;
+text-indent:36.0pt'><span style='font-family:"cordia new";color:black'><span
+style='mso-spacerun:yes'>&nbsp; </span><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+lang=th>��ժѵԡ���͡ẻ����ʶһѵ¡�����鹡�ҧ���ҿ�ǵ�������ѻ��͹
+����͡ẻ�к��ѭ�� ��û�ѻ�дѻ��鹷�� ����͡ẻ�к��к�¹��
+����ҧ�ѧ�ç��÷��ѡ����� ������ ��ͺѧ�ѻ����ٻẻ��èѵ��÷��թ
+��͡�˹������㹡���͡ẻ����ҧ�ѧ�ç��÷��ѡ�ҡ�ҡ�� ʹ������ �ٹ�����
+�ǹʹء �ǹ�ѵ�� �ǹ�ġ���ʵ�� �ǹ�ء��ҵ� ʹ���թ ���ʶҹբ�����ū�<span
+style='mso-spacerun:yes'>&nbsp; </span></span><o:p></o:p></span></p>
+
+<p class=msonormal style='margin-left:36.0pt;text-indent:-36.0pt'><b><span
+style='font-family:"cordia new";color:black'>241313<span
+style='mso-spacerun:yes'>&nbsp; </span><span lang=th>����͡ẻ��ҧ����ʶһѵ¡���
+</span>ii <span style='mso-tab-count:5'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>1(0-3)<span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span><o:p></o:p></span></b></p>
+
+<p class=msonormal style='margin-left:36.0pt'><b><span style='font-family:"cordia new";
+color:black'><span style='mso-spacerun:yes'>&nbsp; </span>(landscape
+architectural sketch design ii)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-indent:36.0pt'><b><span style='font-family:"cordia new";
+color:black'><span style='mso-spacerun:yes'>&nbsp; </span><span lang=th>��鹰ҹ
+</span>: 241212 <o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><span
+style='font-family:"cordia new";color:black'><span
+style='mso-spacerun:yes'>&nbsp;</span><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;</span><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;</span><span lang=th>��ժѵԡ���͡ẻ��ҧ����ʶһѵ¡��������űҹ
+����͡ẻ��с���ҧ�ѧ��������´���է�ȹ����ҿ�ǵ����������ѻ��͹ ʶһѹ
+ʶҹ�֡�� �ç��þҳԫ¡��� �ٹ������ �ǹ�ҹ�ó��дѻ�����
+����ç����ص��ˡ��� ���·ʹ�ǥ����դ��ٻẻ�ͧ�ҹ�â�ҿ����ҷ���˹�</span><o:p></o:p></span></p>
+
+<p class=msonormal style='margin-left:36.0pt;text-indent:-36.0pt'><b><span
+style='font-family:"cordia new";color:black'>241314<span
+style='mso-spacerun:yes'>&nbsp; </span><span lang=th>����͡ẻ��ҧ����ʶһѵ¡���
+</span>iii <span style='mso-tab-count:5'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>1(0-3)<span
+style='mso-spacerun:yes'>&nbsp; </span><o:p></o:p></span></b></p>
+
+<p class=msonormal style='margin-left:36.0pt'><b><span style='font-family:"cordia new";
+color:black'><span style='mso-spacerun:yes'>&nbsp; </span>(landscape
+architecture sketch design iii)<span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><o:p></o:p></span></b></p>
+
+<p class=msonormal><b><span style='font-family:"cordia new";color:black'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp; </span><span lang=th>��鹰ҹ </span>: 241313 <o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster;
+text-indent:36.0pt'><span style='font-family:"cordia new";color:black'><span
+style='mso-spacerun:yes'>&nbsp;</span><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;</span><span lang=th>��ժѵԡ���͡ẻ��ҧ����ʶһѵ¡�����鹡�ҧ</span></span><span
+lang=th style='font-family:"cordia new";color:black;mso-ansi-language:fr'> </span><span
+lang=th style='font-family:"cordia new";color:black'>�͡ẻ����ҧ�ѧ��������´���է�ȹ����ҿ�ǵ�������ѻ��͹
+�ç��÷��ѡ����� �ç��÷��ѡ�ҡ�ҡ�� ʹ������ �ٹ����� �ǹʹء �ǹ�ѵ��
+�ǹ�ġ���ʵ�� �ǹ�ء��ҵ� ʹ���թ ���ʶҹբ�����ū�
+���·ʹ�ǥ����դ��ٻẻ�ͧ�ҹ�â�ҿ����ҷ���˹�</span><span
+style='font-family:"cordia new";color:black'><o:p></o:p></span></p>
+
+<p class=msonormal><b><span style='font-family:"cordia new";color:black'>241331<span
+style='mso-spacerun:yes'>&nbsp; </span><span lang=th>����͡ẻ������ҧ����ʶһѵ¡���<span
+style='mso-spacerun:yes'>&nbsp; </span></span>iii<span style='mso-tab-count:
+5'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>3(2-3)<o:p></o:p></span></b></p>
+
+<p class=msonormal><b><span style='font-family:"cordia new";color:black'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp; </span>(landscape architectural construction
+design iii)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-indent:36.0pt'><b><span style='font-family:"cordia new";
+color:black'><span style='mso-spacerun:yes'>&nbsp; </span><span lang=th>��鹰ҹ
+</span>: 241232 <o:p></o:p></span></b></p>
+
+<p class=msobodytextindent3><span style='font-family:"cordia new";color:black;
+layout-grid-mode:both'><span style='mso-spacerun:yes'>&nbsp; </span><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+lang=th>����͡ẻ�ҹ������ҧ�������ǣ�ͧ�ѻ�к��ҹ�óٻ���㹧ҹ����ʶһѵ¡���
+�ҹ�к��ż�зҹ��������ʶһѵ¡��� �ҹ�к�俿������ʧ���ҧ �ҹ������ҧ��й��
+��ӿ� ��ӵ� �ǹ���ҵ����ҥ��</span><o:p></o:p></span></p>
+
+<p class=msonormal><b><span style='font-family:"cordia new";color:black'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=msonormal><b><span style='font-family:"cordia new";color:black'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=msonormal><b><span style='font-family:"cordia new";color:black'>241332<span
+style='mso-spacerun:yes'>&nbsp; </span><span lang=th>����͡ẻ������ҧ����ʶһѵ¡���<span
+style='mso-spacerun:yes'>&nbsp; </span></span>iv<span style='mso-tab-count:
+5'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>3(2-3)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-indent:36.0pt'><b><span style='font-family:"cordia new";
+color:black'><span style='mso-spacerun:yes'>&nbsp; </span>(landscape
+architectural construction </span></b><b><span lang=fr style='font-family:"cordia new";
+color:black;mso-ansi-language:fr'>design </span></b><b><span style='font-family:
+"cordia new";color:black'>iv)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-indent:36.0pt'><b><span style='font-family:"cordia new";
+color:black'><span style='mso-spacerun:yes'>&nbsp; </span><span lang=th>��鹰ҹ
+</span>: 241331 <o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster;
+text-indent:36.0pt'><span style='font-family:"cordia new";color:black'><span
+style='mso-spacerun:yes'>&nbsp;</span><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;</span><span lang=th>����͡ẻ�ҹ������ҧ����ʶһѵ¡���
+��ᾧ�ѹ�թ �ѹ� �ҧ�ҵ �ҹ����ʴ� �к��ѭ�� �ç���ҧ��фس���ѵԣͧ�թ
+��û�ѻ��ا��ҿ��鹷�� </span><o:p></o:p></span></p>
+
+<p class=msonormal><b><span style='font-family:"cordia new";color:black'>241361<span
+style='mso-spacerun:yes'>&nbsp; </span><span lang=th>������������鹷���ç���<span
+style='mso-spacerun:yes'>&nbsp; </span></span>(site analysis)<span
+style='mso-tab-count:5'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>3(2-3)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><span
+style='font-family:"cordia new";color:black'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp; </span><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+lang=th>��ѡ������������鹷���ç��� �է�ծţͧ�ѩ��¸����ҵ� �ѳ�����
+����ع�����ҿ ���ǩᨧ�ѻ��ѿ�ҡ� �����թ�س��ҿ�鹷���ç���
+�������������������ͧ�������թ</span><o:p></o:p></span></p>
+
+<p class=msonormal><b><span style='font-family:"cordia new";color:black'>241362<span
+style='mso-spacerun:yes'>&nbsp; </span><span lang=th>������է�����է�ȹ�</span><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp; </span> (landscape ecology)<span
+style='mso-tab-count:5'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>3(3-0)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster;
+text-indent:36.0pt'><span style='font-family:"cordia new";color:black'><span
+style='mso-spacerun:yes'>&nbsp; </span><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+lang=th>�ç���ҧ ˹�ҷ�� ��с������¹�ŧ��к������ ������ ��鹷��������
+������ ��鹷���դ�������� ��� �����ҹ ���ٻẻ�ԧ��鹷�����դ�ҡ�������͹���ͧ�ѵ����
+�ת ��ѧ�ҹ ���ҵ� ��й����к������
+�������¹�ŧ�ͧ���է�ȹ��������������¹�</span><o:p></o:p></span></p>
+
+<p class=msonormal><b><span style='font-family:"cordia new";color:black'>241363<span
+style='mso-spacerun:yes'>&nbsp; </span><span lang=th>෤�ԥ��������������է�ȹ�<span
+style='mso-spacerun:yes'>&nbsp; </span></span>(landscape analysis techniques)<span
+style='mso-tab-count:2'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>3(2-3)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><span
+style='font-family:"cordia new";color:black'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp; </span><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+lang=th>�ǥդ��зѡ�тͧ�ըա����ҹ ����� ��с�÷�ἱ���
+��û���ء�����ҿ���·ҧ�ҡ�� �ҿ���´������ �к��ҥ�ҿԡѵ���´������
+㹧ҹ����ʶһѵ¡���</span><o:p></o:p></span></p>
+
+<p class=msonormal><b><span style='font-family:"cordia new";color:black'>241371<span
+style='mso-spacerun:yes'>&nbsp; </span><span lang=th>��û���ء�������������㹧ҹ����ʶһѵ¡���</span><span
+style='mso-tab-count:3'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>2(1-2)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-indent:36.0pt'><b><span style='font-family:"cordia new";
+color:black'><span style='mso-spacerun:yes'>&nbsp; </span>(computer
+applications in landscape architecture)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-indent:36.0pt'><b><span style='font-family:"cordia new";
+color:black'><span style='mso-spacerun:yes'>&nbsp; </span><span lang=th>��鹰ҹ
+</span>: 240271 <o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster;
+text-indent:36.0pt'><span style='font-family:"cordia new";color:black'><span
+style='mso-spacerun:yes'>&nbsp; </span><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+lang=th>�����������������͡���͡ẻ�ҹ�ҧ����ʶһѵ¡���
+������ҧ�ٻ���ͧ���ի���� ������ҧ�ٻ </span>3 <span lang=th>�ե�
+��á�����ҧ��чҹ���ǡ����ҧ����ʶһѵ¡��� ��с�û���ҳ�ҥҡ�����ҧ</span><o:p></o:p></span></p>
+
+<p class=msonormal><b><span style='font-family:"cordia new";color:black'>241411<span
+style='mso-spacerun:yes'>&nbsp; </span><span lang=th>����͡ẻ����ʶһѵ¡��� </span>iv<span
+style='mso-spacerun:yes'>&nbsp; </span>(landscape architectural design iv)<span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>4(0-8)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-indent:36.0pt'><b><span style='font-family:"cordia new";
+color:black'><span style='mso-spacerun:yes'>&nbsp; </span><span lang=th>��鹰ҹ
+</span>: 241312 <o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster;
+text-indent:36.0pt'><span style='font-family:"cordia new";color:black'><span
+style='mso-spacerun:yes'>&nbsp; </span><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+lang=th>��ժѵԡ���͡ẻ����ʶһѵ¡�����鹡�ҧ
+�������������ҿ�ǵ��������ƿҧ�ͧ������է�����է�ȹ�
+�к����ʹ�ȷҧ������ʵ�����ͪ���㹡�õѵ�թ� ����͡ẻ���ͤ�������׹
+�������������л����թ�س�ҿ���է�ȹ�ҧ��µ� ����͡ẻ��с���ҧ�ѧ���է�ȹ���дѻ�����ҥ
+�к���鹷���������դ��� ���է�ȹ�ҧ��ǧ �ط�ҹ��觪ҵ����ǹ�ط�ҹ
+���͹��ѡ���鹷���½�� ���͹��ѡ���鹷�����͡���ɵ�
+��ÿ�鹿پ�鹷�����������<span style='mso-spacerun:yes'>&nbsp;
+</span>����ҧ�ѧ�ԧ��������͡�÷�ͧ�����</span><o:p></o:p></span></p>
+
+<p class=msonormal><b><span style='font-family:"cordia new";color:black'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=msonormal><b><span style='font-family:"cordia new";color:black'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=msonormal><b><span style='font-family:"cordia new";color:black'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=msonormal><b><span style='font-family:"cordia new";color:black'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=msonormal><b><span style='font-family:"cordia new";color:black'>241412<span
+style='mso-spacerun:yes'>&nbsp; </span><span lang=th>����͡ẻ����ʶһѵ¡��� </span>v<span
+style='mso-spacerun:yes'>&nbsp; </span>(landscape architectural design v)<span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>4(0-8)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-indent:36.0pt'><b><span style='font-family:"cordia new";
+color:black'><span style='mso-spacerun:yes'>&nbsp; </span><span lang=th>��鹰ҹ
+</span>: 241411 <o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><span
+style='font-family:"cordia new";color:black'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;</span><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;</span><span lang=th>��ժѵԡ���͡ẻ����ʶһѵ¡�������٧
+����͡ẻ����ҧ�ѧ���է�ȹ����ͧ ���է�ȹ������� ��о�鹷�����ѵ���ʵ��
+�������������л����թ�س�ҿ���է�ȹ�ҧ��µ� ���͡���͹��ѡ�� ��ѻ��ا
+��鹿���ҿ�ǵ�������ͧ����ǥդ��þѳ�ҷ������׹ </span><o:p></o:p></span></p>
+
+<p class=msonormal><b><span style='font-family:"cordia new";color:black'>241413<span
+style='mso-spacerun:yes'>&nbsp; </span><span lang=th>����͡ẻ��ҧ����ʶһѵ¡���
+</span>iv<span style='mso-spacerun:yes'>&nbsp; </span><span style='mso-tab-count:
+5'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>1(0-3)<span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span><o:p></o:p></span></b></p>
+
+<p class=msonormal style='margin-left:36.0pt'><b><span style='font-family:"cordia new";
+color:black'><span style='mso-spacerun:yes'>&nbsp; </span>(landscape
+architectural sketch design iv)<span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-indent:36.0pt'><b><span style='font-family:"cordia new";
+color:black'><span style='mso-spacerun:yes'>&nbsp; </span><span lang=th>��鹰ҹ
+</span>: 241314 <o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster;
+text-indent:36.0pt'><span style='font-family:"cordia new";color:black'><span
+style='mso-spacerun:yes'>&nbsp; </span><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+lang=th>��ժѵԡ���͡ẻ��ҧ����ʶһѵ¡�������٧ ����͡ẻ����ҧ�ѧ��������´���է�ȹ��鹷���դ������͹ѹ��ҡ��
+���͹��ѡ����ҿ�ǵ�����ҧ�����ҵ�����ѳ�����
+����ѡ�ҥس��ҷҧ����ѵ���ʵ��ͧ��鹷�� �к���鹷���������դ���
+��鹷ҧ���͡�÷�ͧ������ԧ����� �ҧ�թ��� �ط�ҹ�զ� ���է�ȹ�ҧ��ǧ
+���·ʹ�ǥ����դ��ٻẻ�ͧ�ҹ�â�ҿ����ҷ���˹�</span><o:p></o:p></span></p>
+
+<p class=msonormal style='margin-left:36.0pt;text-indent:-36.0pt'><b><span
+style='font-family:"cordia new";color:black'>241414<span
+style='mso-spacerun:yes'>&nbsp; </span><span lang=th>����͡ẻ��ҧ����ʶһѵ¡���
+</span>v<span style='mso-spacerun:yes'>&nbsp; </span><span style='mso-tab-count:
+5'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>1(0-3)<span
+style='mso-spacerun:yes'>&nbsp; </span><o:p></o:p></span></b></p>
+
+<p class=msonormal style='margin-left:36.0pt'><b><span style='font-family:"cordia new";
+color:black'><span style='mso-spacerun:yes'>&nbsp; </span>(landscape
+architectural sketch design v)<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-indent:36.0pt'><b><span style='font-family:"cordia new";
+color:black'><span style='mso-spacerun:yes'>&nbsp; </span><span lang=th>��鹰ҹ
+</span>: 241413 <span lang=th>����͡ẻ��ҧ����ʶһѵ¡��� </span>iv<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-indent:36.0pt'><span style='font-family:"cordia new";
+color:black'><span style='mso-spacerun:yes'>&nbsp; </span><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+lang=th>��ժѵԡ���͡ẻ��ҧ����ʶһѵ¡�������٧ ����͡ẻ����ҧ�ѧ��������´���է�ȹ����ͧ<span
+style='mso-spacerun:yes'>&nbsp; </span>���է�ȹ�������
+������է�ȹ�㹾�鹷���鹿��ࢵ���ͧ
+���·ʹ�ǥ����դ��ٻẻ�ͧ�ҹ�â�ҿ����ҷ���˹�</span><o:p></o:p></span></p>
+
+<p class=msonormal><b><span style='font-family:"cordia new";color:black'>241415<span
+style='mso-spacerun:yes'>&nbsp; </span><span lang=th>�ת��ó�ѻ����͡ẻ<span
+style='mso-spacerun:yes'>&nbsp; </span></span>(plant and design)<span
+style='mso-tab-count:4'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>2(1-3)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><span
+style='font-family:"cordia new";color:black'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;</span><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+lang=th>��ɮա���͡ẻ��с�èѵͧ���сͺ�ͧ��ʴؾת��ó ��� �ٻ�ç ��
+��м�������� �����ҹ੾����ш��ͧ�ת���ъ�դ �է�ծŷ���ռŵ���к������
+�ѧ��èѵ����� ��͡�˹��ҧ෤�ԥ
+��á�����ҧ����ʶһѵ¡�������դ�������ǣ�ͧ�ѻ��ʴؾת��ó</span><o:p></o:p></span></p>
+
+<p class=msonormal><b><span style='font-family:"cordia new";color:black'>241416<span
+style='mso-spacerun:yes'>&nbsp; </span><span lang=th>����͡ẻ�ѵ�ǹ<span
+style='mso-spacerun:yes'>&nbsp; </span></span>(garden design)<span
+style='mso-tab-count:5'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>3(2-3)<o:p></o:p></span></b></p>
+
+<p class=msonormal><span style='font-family:"cordia new";color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;</span><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+lang=th>��ɮ���л�ժѵԡ���͡ẻ�ѵ�ǹ ����ѵ�������ѳ�ҡ�âͧ����͡ẻ�ѵ�ǹ
+�������ҧ�ת�ǹ ������͡��ʴؾת��ó ෤�ԥ��èѵ�ǹ ��ô�����к��ا�ѡ���ǹ</span><o:p></o:p></span></p>
+
+<p class=msonormal><b><span style='font-family:"cordia new";color:black'>241441<span
+style='mso-spacerun:yes'>&nbsp; </span><span lang=th>�ǥդ㹧ҹ����ʶһѵ¡���<span
+style='mso-spacerun:yes'>&nbsp; </span></span>(concepts in landscape
+architecture)<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>2(2-0)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-indent:36.0pt'><b><span style='font-family:"cordia new";
+color:black'><span style='mso-spacerun:yes'>&nbsp; </span><span lang=th>��鹰ҹ
+</span>: 241241 <o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster;
+text-indent:36.0pt'><span style='font-family:"cordia new";color:black'><span
+style='mso-spacerun:yes'>&nbsp; </span><span lang=th>����ңͧ��ɮ�����ǥդ㹧ҹ����ʶһѵ¡���
+��ż� ʶһѵ¡��� �ѧ���ͧ ������է�� ���������ʵ�� ȵ���ɷ��</span>19 <span
+lang=th>���֧���»ѩ�غѹ</span><o:p></o:p></span></p>
+
+<p class=msonormal><b><span style='font-family:"cordia new";color:black'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=msonormal><b><span style='font-family:"cordia new";color:black'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=msonormal><b><span style='font-family:"cordia new";color:black'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=msonormal><b><span style='font-family:"cordia new";color:black'>241442<span
+style='mso-spacerun:yes'>&nbsp; </span><span lang=th>���͹��ѡ������ʶһѵ¡����ҧ����ѵ���ʵ��</span><span
+style='mso-tab-count:4'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>2(2-0)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-indent:36.0pt'><b><span style='font-family:"cordia new";
+color:black'><span style='mso-spacerun:yes'>&nbsp; </span>(historical landscape
+architecture conservation)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-indent:36.0pt'><span style='font-family:"cordia new";
+color:black'><span style='mso-spacerun:yes'>&nbsp;</span><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;</span><span lang=th>���͹��ѡ����п�鹿٧ҹ����ʶһѵ¡����ҧ����ѵ���ʵ������ѳ�����
+������ ��ͺѧ�ѻ���ʹ���ѭ�ҹҹҫҵէ���ӥѭ
+������ͧ��÷���պ��ҷ�ѻ�ԩ������ҹ͹��ѡ��</span><o:p></o:p></span></p>
+
+<p class=msonormal><b><span style='font-family:"cordia new";color:black'>241443<span
+style='mso-spacerun:yes'>&nbsp; </span><span lang=th>����͡ẻ�ѧ��������ͧҹ����ʶһѵ¡���</span><span
+style='mso-tab-count:4'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>3(2-3)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-indent:36.0pt'><b><span style='font-family:"cordia new";
+color:black'><span style='mso-spacerun:yes'>&nbsp; </span>(community planning
+for landscape architecture)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-indent:36.0pt'><span style='font-family:"cordia new";
+color:black'><span style='mso-spacerun:yes'>&nbsp;</span><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;</span><span lang=th>��ɮ���л�ժѵԡ���͡ẻ�ѧ�����
+�ѩ��·ҧ����ҿ ���ɰ�ԩ ����ѧ�� </span><o:p></o:p></span></p>
+
+<p class=msonormal><b><span style='font-family:"cordia new";color:black'>241444<span
+style='mso-spacerun:yes'>&nbsp; </span><span lang=th>����ʶһѵ¡�����鹶��<span
+style='mso-spacerun:yes'>&nbsp; </span></span>(vernacular landscape
+architecture)<span style='mso-tab-count:2'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>2(2-0)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><span
+style='font-family:"cordia new";color:black'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp; </span><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+lang=th>����ңͧ�ǥդ ��ѫ��
+����ٻẻ����ҡ�㹧ҹ����ʶһѵ¡�����鹶�蹢ͧ����тͧ�����������ҥ����µ��ѹ�͡��§��
+������º��º������������է�ծţͧ��ҿ�ǵ���� �ѧ�� �������� ��ʹ�
+����ѳ���������ռŵ���ҿ�ѡɳ���с���ʴ��͡�ͧ�ҹ����ʶһѵ¡�������з�ͧ���</span><o:p></o:p></span></p>
+
+<p class=msonormal><b><span style='font-family:"cordia new";color:black'>241451<span
+style='mso-spacerun:yes'>&nbsp; </span><span lang=th>��û���ҳ�ҥ�㹧ҹ����ʶһѵ¡���<span
+style='mso-spacerun:yes'>&nbsp; </span></span><span style='mso-tab-count:5'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>2(1-2)<span
+style='mso-spacerun:yes'>&nbsp; </span><o:p></o:p></span></b></p>
+
+<p class=msonormal style='margin-left:36.0pt'><b><span style='font-family:"cordia new";
+color:black'><span style='mso-spacerun:yes'>&nbsp; </span>(landscape
+architectural cost estimation)<span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp; </span><o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><span
+style='font-family:"cordia new";color:black'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+lang=th>��ѡ����ըա�û���ҳ�ҥҧҹ�ҧ����ʶһѵ¡���㹢��������ç���
+����͡ẻ ��т�鹡�����ҧ ��äӹǳ��ʴ� �ç�ҹ �ػ�ó� ��äդ���� ����
+��������㹡�á�����ҧ��ф�����������</span><o:p></o:p></span></p>
+
+<p class=msonormal style='margin-left:36.0pt;text-indent:-36.0pt'><b><span
+style='font-family:"cordia new";color:black'>241452<span
+style='mso-spacerun:yes'>&nbsp; </span><span lang=th>��û�ժѵ��ԫҫվ����ʶһѵ¡���<span
+style='mso-spacerun:yes'>&nbsp; </span></span><span style='mso-tab-count:6'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>2(2-0)<span
+style='mso-spacerun:yes'>&nbsp; </span><o:p></o:p></span></b></p>
+
+<p class=msonormal style='margin-left:36.0pt'><b><span style='font-family:"cordia new";
+color:black'><span style='mso-spacerun:yes'>&nbsp; </span>(landscape
+architectural professional practice)<span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><o:p></o:p></span></b></p>
+
+<p class=msobodytextindent3><span style='font-family:"cordia new";color:black;
+layout-grid-mode:both'><span style='mso-spacerun:yes'>&nbsp; </span><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+lang=th>��û�ժѵ��ԫҫվ ���¸����ԫҫվ ��äӹ֧�֧��ҿ�ǵ����
+�������������º��ҧ�������ǣ�ͧ ��ô��թ�ҹ��ӹѡ�ҹ �����ҧ�ѭ��
+��èѵ������͡���ẻ������ҧ ��ú����çҹ������ҧ ��с���ԩ��</span><o:p></o:p></span></p>
+
+<p class=msonormal style='margin-left:36.0pt;text-indent:-36.0pt'><b><span
+style='font-family:"cordia new";color:black'>241461<span
+style='mso-spacerun:yes'>&nbsp; </span><span lang=th>������է���ҥʹ�����ͧҹ����ʶһѵ¡���
+</span><span style='mso-tab-count:4'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>1(0-3)<span
+style='mso-spacerun:yes'>&nbsp; </span><o:p></o:p></span></b></p>
+
+<p class=msonormal style='margin-left:36.0pt'><b><span style='font-family:"cordia new";
+color:black'><span style='mso-spacerun:yes'>&nbsp; </span>(field ecology for
+landscape architecture)<o:p></o:p></span></b></p>
+
+<p class=msonormal><span style='font-family:"cordia new";color:black'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp; </span><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+lang=th>������ǩ�����ҵ�㹾�鹷���ԧ
+�����ӥѭ�ͧ�к��������ф�����ҡ���·ҧ����ҿ�������ʶһѵ¡���</span><o:p></o:p></span></p>
+
+<p class=msonormal><b><span style='font-family:"cordia new";color:black'>241462<span
+style='mso-spacerun:yes'>&nbsp; </span><span lang=th>����ҧ�ѧ�ԧ�����<span
+style='mso-spacerun:yes'>&nbsp; </span></span>(ecological planning)<span
+style='mso-tab-count:5'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>3(1-4)<o:p></o:p></span></b></p>
+
+<p class=msonormal><b><span style='font-family:"cordia new";color:black'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp; </span><span lang=th>��鹰ҹ </span>: 241362 <o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-indent:36.0pt'><span style='font-family:"cordia new";
+color:black'><span style='mso-spacerun:yes'>&nbsp; </span><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+lang=th>����͡ẻ��с���ҧ�ѧ��ҿ�ǵ��������ƿҧ������է�����է�ȹ�
+�ѡ��ҿ�ͧ���թ ��ѿ�ҡø����ҵ� ��ф�����ͧ��âͧ������ </span><o:p></o:p></span></p>
+
+<p class=msonormal><b><span style='font-family:"cordia new";color:black'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=msonormal><b><span style='font-family:"cordia new";color:black'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=msonormal><b><span style='font-family:"cordia new";color:black'>241463<span
+style='mso-spacerun:yes'>&nbsp; </span><span lang=th>�������������л����թ�س�ҿ���է�ȹ�ҧ��µ�</span><span
+style='mso-tab-count:3'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>3(3-0)<o:p></o:p></span></b></p>
+
+<p class=msonormal><b><span style='font-family:"cordia new";color:black'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp; </span>(visual landscape quality analysis and
+assessment)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-indent:36.0pt'><span style='font-family:"cordia new";
+color:black'><span style='mso-spacerun:yes'>&nbsp; </span><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+lang=th>�س�ҿ���է�ȹ�ҧ��µ���с�û���ء�����кǹ����������������������ѻ��ժ��ҧ����ҿ
+�ѳ���������ѧ�� ��ѡ��� ��ɮ� ���෤�ԥ㹡������������л����թ�س�ҿ�ҧ��µ�</span><o:p></o:p></span></p>
+
+<p class=msonormal><b><span style='font-family:"cordia new";color:black'>241471<span
+style='mso-spacerun:yes'>&nbsp; </span><span lang=th>�к����ʹ��������ʵ��㹧ҹ����ʶһѵ¡���</span><span
+style='mso-tab-count:4'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>3(2-3)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-indent:36.0pt'><b><span style='font-family:"cordia new";
+color:black'><span style='mso-spacerun:yes'>&nbsp; </span>(geographic
+information system for landscape architecture)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-indent:36.0pt'><b><span style='font-family:"cordia new";
+color:black'><span style='mso-spacerun:yes'>&nbsp; </span><span lang=th>��鹰ҹ
+</span>: 241363 <o:p></o:p></span></b></p>
+
+<p class=msobodytextindent3><span style='font-family:"cordia new";color:black;
+layout-grid-mode:both'><span style='mso-spacerun:yes'>&nbsp;</span><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;</span><span lang=th>�ǥդ��с�û���ء�����к����ʹ�ȷҧ������ʵ��
+��èѵ��â�����
+���������������ʴ��ţ��������͡���ҧἱ����͡ẻ����ʶһѵ¡���</span><o:p></o:p></span></p>
+
+<p class=msonormal><b><span style='font-family:"cordia new";color:black'>241597<span
+style='mso-spacerun:yes'>&nbsp; </span><span lang=th>������<span
+style='mso-spacerun:yes'>&nbsp; </span></span>(seminar)<span style='mso-tab-count:
+8'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>1<o:p></o:p></span></b></p>
+
+<p class=msonormal><span style='font-family:"cordia new";color:black'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+lang=th>��ù��ʹ������ի�����ǣ�ͷ����ʹ㨷ҧ����ʶһѵ¡�����дѻ��ԭ�ҵ��</span><o:p></o:p></span></p>
+
+<p class=msonormal><b><span style='font-family:"cordia new";color:black'>241598<span
+style='mso-spacerun:yes'>&nbsp; </span><span lang=th>�ç�ҹ�է�ҹծ���<span
+style='mso-spacerun:yes'>&nbsp; </span></span>(thesis proposal)<span
+style='mso-tab-count:5'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>3(1-4)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-indent:36.0pt'><b><span style='font-family:"cordia new";
+color:black'><span style='mso-spacerun:yes'>&nbsp; </span><span lang=th>��鹰ҹ
+</span>: 241332 <span lang=th>��� </span>241412<o:p></o:p></span></b></p>
+
+<p class=msonormal><b><span style='font-family:"cordia new";color:black'><span
+style='mso-spacerun:yes'>&nbsp; </span><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;</span><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></b><span
+lang=th style='font-family:"cordia new";color:black'>������͡��ǣ���ç�����о�鹷��
+��á�˹�������ͧ��âͧ�ç�����тͺࢵ����֡�� ���������ͧ�ç���
+��������т�ͺѧ�ѻ�������ǣ�ͧ �ó��֡�� ����������������ػ������</span><span
+style='font-family:"cordia new";color:black'><o:p></o:p></span></p>
+
+<p class=msonormal><b><span style='font-family:"cordia new";color:black'>241599<span
+style='mso-spacerun:yes'>&nbsp; </span><span lang=th>�է�ҹծ���<span
+style='mso-spacerun:yes'>&nbsp; </span></span>(thesis)<span style='mso-tab-count:
+8'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>9<o:p></o:p></span></b></p>
+
+<p class=msonormal><b><span style='font-family:"cordia new";color:black'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp; </span><span lang=th>��鹰ҹ </span>:
+241598<span style='mso-spacerun:yes'>&nbsp; </span><o:p></o:p></span></b></p>
+
+<p class=msobodytextindent3><span style='font-family:"cordia new";color:black;
+layout-grid-mode:both'><span style='mso-spacerun:yes'>&nbsp; </span><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+lang=th>ࡳ������ǥդ㹡���͡ẻ�ҡ�����ػ�ԫҿ�鹰ҹ </span>241598 <span
+lang=th>�ç�ҹ�է�ҹծ���<span style='mso-spacerun:yes'>&nbsp;
+</span>�͡ẻ��й��ʹͼŧҹ����ش���� ��ͤ�с�����õ������º�է�ҹծ���</span><o:p></o:p></span></p>
+
+</div>
+
+</body>
+
+</html>

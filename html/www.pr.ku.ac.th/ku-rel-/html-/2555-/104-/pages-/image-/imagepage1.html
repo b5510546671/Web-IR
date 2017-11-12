@@ -1,0 +1,109 @@
+<!doctype html public "-//w3c//dtd xhtml 1.0 transitional//en" "http://www.w3.org/tr/xhtml1/dtd/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<link href="../../css/stylesheet.css" rel="stylesheet" type="text/css" />
+<script language="javascript1.1">
+		var playing = 0
+		var timeoutid = 0
+		var slideshownextlink = "../../pages/image/imagepage2.html"
+		var slideshowdelay = 3000
+
+		// browser detection	
+		var agt = navigator.useragent.tolowercase();
+		var is_ie = (agt.indexof("msie") != -1);
+
+		if (location.href.indexof("?") != -1) {
+			urlquery = location.href.split("?")
+			playing = parseint(urlquery[1])
+		}
+		
+		if (playing == 1) {
+			startslideshow()
+		}
+	
+		function slideshow() {
+			window.location.href = slideshownextlink + "?" + "1"
+			timeoutid = setinterval("slideshow()", slideshowdelay);
+		}
+
+		function startslideshow() {
+			cleartimeout(timeoutid)
+			timeoutid = setinterval("slideshow()", slideshowdelay);
+		}
+
+		function stopslideshow() {
+			cleartimeout(timeoutid)
+			if (is_ie) {
+				faketimeoutid = setinterval("redirectdelay()", 0);
+			}
+			else {
+				redirectdelay();
+			}
+		}
+		
+		function redirectdelay() {
+			temparray = window.location.href.split("?")
+			window.location.href = temparray[0]
+		}
+</script>
+</head>
+<body>
+<div id="wrapper">
+<div id="logohead">
+<img src="../../images/logo/headerlogo.jpg" />
+</div>
+<div id="pagehead">
+<div class="left">à¸à¹à¸²à¸§à¸¡à¸«à¸²à¸§à¸´à¸à¸¢à¸²à¸¥à¸±à¸¢à¹à¸à¸©à¸à¸£à¸¨à¸²à¸ªà¸à¸£à¹ â» à¸à¸£à¸°à¸à¸²à¸ªà¸±à¸¡à¸à¸±à¸à¸à¹ à¸¡à¸. â» 15/7/2555</div>
+<div class="clearer">â </div>
+</div>
+<div class="imagenav">
+<div class="left">
+<strong>slideshow:â </strong>
+<a href="javascript:void(0)" name="slideshowcontrol" onclick="startslideshow()">start</a>â |â <a href="javascript:void(0)" name="slideshowcontrol" onclick="stopslideshow()">stop</a>
+</div>
+<div class="right">previousâ â |â â 
+			<a href="../../index.html">home</a>â â |â â 
+			<a href="../../pages/image/imagepage2.html">next</a>
+</div>
+<div class="clearer">â </div>
+</div>
+<div id="mainimage">
+<img src="../../images/image/scan0001.jpg" width="564" height="800" />
+</div>
+<div class="metatitle">
+<h2 class="metatitle1">scan0001</h2>
+<span class="imagemetatitle2">19/7/2555 14:27:15</span>
+<div class="clearer">â </div>
+</div>
+<div class="metabox">
+<table>
+<tr>
+<td width="30%">
+<div class="metaitem">
+<strong>image properties</strong>
+</div>
+</td>
+<td>
+<div class="metaitem">564x800x24b</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="imagenav">
+<div class="left">
+<strong>slideshow:â </strong>
+<a href="javascript:void(0)" name="slideshowcontrol" onclick="startslideshow()">start</a>â |â <a href="javascript:void(0)" name="slideshowcontrol" onclick="stopslideshow()">stop</a>
+</div>
+<div class="right">previousâ â |â â 
+			<a href="../../index.html">home</a>â â |â â 
+			<a href="../../pages/image/imagepage2.html">next</a>
+</div>
+<div class="clearer">â </div>
+</div>
+<div class="seppad">
+<hr class="low" />
+</div>
+</div>
+</body>
+</html>

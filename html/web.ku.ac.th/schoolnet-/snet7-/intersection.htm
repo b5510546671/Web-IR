@@ -1,0 +1,101 @@
+
+<html>
+<head>
+  
+   <title>โอเปอเรชั่นของเซต (set operations)</title>
+</head>
+<body>
+<b><font color="#3366ff"><font face="monotype sorts"><font size=+2>+</font></font><font face="dilleniaupc"><font size=+3>อินเตอร์เซคชั่น
+(intersection)</font></font></font></b>
+<br><b><font face="dilleniaupc"><font color="#ff0000"><font size=+1>&nbsp;&nbsp;
+</font><font size=+2>อินเตอร์เซคชั่น</font></font><font color="#000000"><font size=+1>ของเซต
+a และ b คือเซตที่ประกอบด้วยสมาชิกซึ่งเป็นสมาชิกของทั้งเซต a และเซต bเขียนแทนด้วย
+<i>a
+</i></font></font></font><i><font color="#000000"><font size=+1><font face="symbol">ว</font><font face="dilleniaupc">
+b</font></font></font></i></b>
+<br><font size=+1><font face="dilleniaupc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>&nbsp;<font color="#ff0000">
+นั่นคือ&nbsp;&nbsp; </font><i><font color="#3333ff">a</font></i></b></font><b><i><font color="#3333ff"><font face="symbol">ว</font><font face="dilleniaupc">b
+= {x/x</font><font face="symbol">ฮ</font><font face="dilleniaupc">a และ
+x </font><font face="symbol">ฮ</font><font face="dilleniaupc">b }</font></font></i></b></font>
+<p><font color="#ffcc00">&nbsp;<font face="dilleniaupc"><font size=+1><b>ตัวอย่างที่
+1</b></font></font></font><font face="dilleniaupc"><font size=+1> กำหนด
+u = {1, 2, 3, ... ,10} , a = {1, 3, 5, 7} และ b = {2, 4, 6, 8}</font></font>
+<br><font size=+1><font face="dilleniaupc">&nbsp;<u>วิธีทำ</u></font><font face="symbol">\</font><font face="dilleniaupc">a
+</font><font face="symbol">ว</font><font face="dilleniaupc"> b = { } =
+</font><font face="symbol">ฦ</font></font>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<font size=+1><font face="dilleniaupc">b </font><font face="symbol">ว</font><font face="dilleniaupc">
+a = { } = </font><font face="symbol">ฦ</font></font>
+<p><font color="#ffcc00">&nbsp;<font size=+1><b><font face="dilleniaupc">ตัวอย่างที่
+2 </font></b></font></font><font face="cordiaupc"><font size=+1>กำหนด u
+= {1, 2, 3, ... ,10} , a = {2, 4, 6, 8} และ b = {4, 5, 7}</font></font>
+<br><font size=+1><font face="dilleniaupc">&nbsp;<u>วิธีทำ</u></font><font face="symbol">\</font><font face="dilleniaupc">a
+</font><font face="symbol">ว</font><font face="dilleniaupc"> b = { 4}</font></font>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font size=+1><font face="dilleniaupc">b
+</font><font face="symbol">ว</font><font face="dilleniaupc">
+a = { 4}</font></font>
+<p><font face="dilleniaupc"><font size=+1><b><font color="#ffcc00">ตัวอย่างที่
+3 </font></b>กำหนด u = {1, 2, 3, ... ,10} , a = {1, 2,3} และ b = {1, 2,
+3, 4}</font></font>
+<br><font size=+1><font face="dilleniaupc">&nbsp;<u>วิธีทำ</u></font><font face="symbol">\</font><font face="dilleniaupc">a
+</font><font face="symbol">ว</font><font face="dilleniaupc"> b = {1, 2,
+3 } = a</font></font>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font size=+1><font face="dilleniaupc">b
+</font><font face="symbol">ว</font><font face="dilleniaupc">
+a = {1, 2, 3 } = a</font></font>
+<p><font size=+1><font face="dilleniaupc">a</font><font face="symbol">ฬ</font><font face="dilleniaupc">
+b </font><font face="symbol">:</font><font face="dilleniaupc"> a </font><font face="symbol">ว</font><font face="dilleniaupc">
+b = a = b </font><font face="symbol">ว</font><font face="dilleniaupc">
+a</font></font>
+<p><font size=+1><font face="dilleniaupc"><b><font color="#ffcc00">ตัวอย่างที่
+4&nbsp;&nbsp;</font></b> </font><font face="cordiaupc">กำหนด u = {a, b,
+c, d, e, f} , a = {a, b, c, d, e } และ b = {a, d, e}</font></font>
+<br><font size=+1><u><font face="dilleniaupc">วิธีทำ</font></u><font face="symbol">\</font><font face="dilleniaupc">a
+</font><font face="symbol">ว</font><font face="dilleniaupc"> b = {a, d,
+e}</font></font>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font size=+1><font face="dilleniaupc">b
+</font><font face="symbol">ว</font><font face="dilleniaupc">
+a = {a, d, e}</font></font>
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <font size=+1><font face="dilleniaupc">b</font><font face="symbol">ฬ</font><font face="dilleniaupc">
+a </font><font face="symbol">:</font><font face="dilleniaupc"> a </font><font face="symbol">ว</font><font face="dilleniaupc">
+b = b = b </font><font face="symbol">ว</font><font face="dilleniaupc">
+a</font></font>
+<p><font face="dilleniaupc"><font size=+1><b><font color="#ffcc00">ตัวอย่างที่
+5</font></b> กำหนด a ={a, b, c}</font></font>
+<br><font size=+1><font face="symbol">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+\</font><font face="dilleniaupc"> a </font><font face="symbol">ว</font><font face="dilleniaupc">
+a = {a, b, c} = a</font></font>
+<p><font face="dilleniaupc"><font size=+1><b><font color="#ffcc00">ตัวอย่างที่
+6</font></b> กำหนด a ={a, b, c}</font></font>
+<br><font size=+1><font face="symbol">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+\</font><font face="dilleniaupc"> a </font><font face="symbol">วฦ</font><font face="dilleniaupc">
+= </font><font face="symbol">ฦว</font><font face="dilleniaupc"> a = { }
+= </font><font face="symbol">ฦ</font></font>
+<p><font face="dilleniaupc"><font size=+1><b><font color="#ffcc00">ตัวอย่างที่
+7 </font></b>กำหนด u = {1, 2, 3, ... ,10} และ a = {1, 2,3}</font></font>
+<br><font size=+1><font face="symbol">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+\</font><font face="dilleniaupc"> a </font><font face="symbol">ว</font><font face="dilleniaupc">
+u = a </font><font face="symbol">ว</font><font face="dilleniaupc"> u =
+{1, 2, 3} = a</font></font>
+<p><b><font face="cordiaupc"><font color="#ff6600"><font size=+2>สรุปจากตัวอย่าง</font></font></font></b>
+<br><img src="orange.gif" height=14 width=14><i><font size=+1>a <font face="symbol">ว</font>
+b = b <font face="symbol">ว</font> a</font></i>
+<br><img src="orange.gif" height=14 width=14><i> <font size=+1>ถ้า a<font face="symbol">ฬ</font>
+b แล้ว a <font face="symbol">ว</font> b = b <font face="symbol">ว</font>
+a = a</font></i>
+<br><img src="orange.gif" height=14 width=14><i> <font size=+1>ถ้า b<font face="symbol">ฬ</font>
+a แล้ว a <font face="symbol">ว</font> b = b <font face="symbol">ว</font>
+a = b</font></i>
+<br><img src="orange.gif" height=14 width=14><i> <font size=+1>a
+<font face="symbol">ว</font>
+a = a</font></i>
+<br><img src="orange.gif" height=14 width=14><font size=+1> <i>a
+<font face="symbol">วฦ</font>
+=<font face="symbol">ฦ</font> <font face="symbol">ว</font> a = a</i></font>
+<br><img src="orange.gif" height=14 width=14><i><font size=+1> a
+<font face="symbol">ว</font>
+u = a <font face="symbol">ว</font> u = u</font></i>
+<br><b><font color="#3366ff"><font size=+2><font face="cordiaupc"><a href="kku_38.htm">กลับ</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="difference.htm">ต่อไป</a></font><font face="monotype sorts"><a href="difference.htm">+</a></font></font></font></b>
+</body>
+</html>

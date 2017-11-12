@@ -1,0 +1,789 @@
+<html>
+<head>
+  <title>ไมโครโปรเซสเซอร์ 64 บิต</title>
+</head>
+
+   <body bgcolor="ffffff" text="000000" link="0000ff"
+   vlink="800080">
+   <table width=100% bgcolor=ffc891>
+       <tr><!-- row 1 -->
+         <td align = center><font face = "ms sans serif"><b>ไมโคร<wbr>โปรเซสเซอร์
+   64 บิต<wbr></b></font></td>
+       </tr>
+   </table>
+   <font face = "ms sans serif" size = -1>
+
+   <dd>จาก<wbr>คอมพิวเตอร์<wbr>ใน<wbr>หลาย ๆ รุ่น<wbr>ที่<wbr>ผ่าน<wbr>มา เรา<wbr>มี<wbr>คอมพิวเตอร์<wbr>ระบบ
+   8 บิต หรือ<wbr>ชิ<wbr>พ<wbr>แบบ 8 บิต แล้ว<wbr>ก็<wbr>มา 16 บิต  จึง<wbr>ถึง<wbr>ปัจจุบัน<wbr>ที่<wbr>ใช้<wbr>กัน<wbr>ส่วน<wbr>ใหญ่
+   ซึ่ง<wbr>ก็<wbr>เป็น<wbr>แบบ 32 บิต<wbr>และ<wbr>คอมพิวเตอร์<wbr>รุ่น<wbr>ถัด<wbr>ไป<wbr>ที่<wbr>กำลัง<wbr>จะ<wbr>ก้าว<wbr>เข้า<wbr>มา<wbr>แทน<wbr>ก็<wbr>คือ<wbr>แบบ<wbr>64
+   บิต<wbr>นี้<wbr>เอง โดย<wbr>เหตุผล<wbr>ความ<wbr>จำเป็น<wbr>หลาย ๆ อย่าง<wbr>ที่<wbr>แบบ 32
+   บิต ยัง<wbr>ไม่<wbr>เพียง<wbr>พอ ซึ่ง<wbr>จะ<wbr>เป็น<wbr>อย่างไร<wbr>นั้น<wbr>ก็<wbr>ติด<wbr>ตาม<wbr>ได้<wbr>จาก<wbr>บท<wbr>ความ<wbr>นี้
+
+   <p>
+   <table width=100% bgcolor=ffdcb9>
+       <tr><!-- row 1 -->
+         <td><font face = "ms sans serif"><b>อะไร<wbr>คือ<wbr>ขนาด<wbr>ของ<wbr>ชีพ<wbr></b></font></td>
+       </tr>
+   </table>
+
+
+
+   <dd>ชิ<wbr>พ 64 บิต<wbr>หรือ<wbr>ระบบ 64 บิต<wbr>นั้น แท้<wbr>จริง<wbr>แล้ว<wbr>ใช้<wbr>อะไร<wbr>มา<wbr>เป็น<wbr>มาตรฐาน<wbr>ใน<wbr>กาง<wbr>กล่าว<wbr>เช่น<wbr>นั้น
+   เรา<wbr>คง<wbr>ต้อง<wbr>มา<wbr>พูด<wbr>เรื่อง<wbr>นี้<wbr>กัน<wbr>หน่อย<wbr>ผู้<wbr>เขียน<wbr>เชื่อ<wbr>แน่<wbr>ว่า<wbr>ยัง<wbr>มี<wbr>อีก<wbr>หลาย<wbr>ท่าน<wbr>ยัง<wbr>ไม่<wbr>ทราบ<wbr>ที่<wbr>มา
+   แล้ว<wbr>เข้า<wbr>ใจ<wbr>ผิด<wbr>ว่า<wbr>ดู<wbr>ที่<wbr>ขนาด<wbr>ดา<wbr>ต้า<wbr>บัส<wbr>บ้าง<wbr>หรือ<wbr>ดู<wbr>ที่<wbr>ขนาด<wbr>แอด<wbr>เด<wbr>รส<wbr>บัส<wbr>บ้าง
+   ซึ่ง<wbr>ยัง<wbr>ไม่<wbr>ถูก<wbr>ต้อง<wbr>เสมอ<wbr>ไป เพราะ<wbr>ขนาด<wbr>ดัง<wbr>กล่าว<wbr>อาจ<wbr>จะ<wbr>มาก<wbr>กว่า<wbr>หรือ<wbr>น้อย<wbr>กว่า<wbr>ขนาด<wbr>ชิ<wbr>พ<wbr>จริง
+   ๆ ก็<wbr>ได้ แล้ว<wbr>แต่<wbr>กา<wbr>รอ<wbr>อำ<wbr>แบบ<wbr>มา<wbr>ใช้<wbr>งาน ขนาด<wbr>ชิ<wbr>พ<wbr>จะ<wbr>ต้อง<wbr>ดูด<wbr>จาก<wbr>ขนาด<wbr>รี<wbr>จิสเตอร์<wbr>จำนวน<wbr>เต็ม
+   (integerregister) เท่า<wbr>นั้น
+   <dd>    ยก<wbr>ตัวอย่าง<wbr>เช่น ใน<wbr>ชิ<wbr>พ 8088 ซึ่ง<wbr>มี<wbr>รี<wbr>จิสเตอร์<wbr>ขนาด
+   16 บิต แต่<wbr>มี<wbr>ขนาด<wbr>ดา<wbr>ต้า<wbr>บัส<wbr>เป็ฯ 8 บิต และ<wbr>มี<wbr>ขนาด<wbr>แด<wbr>เด<wbr>รส<wbr>บัส<wbr>เป็น
+   20 บิต ส่วน<wbr>ชิ<wbr>พ 8086 ซึ่ง<wbr>มี<wbr>สถาปัตยกรรม<wbr>เดียว<wbr>กับ 8088
+   ทุก<wbr>อย่าง ยก<wbr>เว้น<wbr>เพียง<wbr>ดา<wbr>ต้า<wbr>บัส<wbr>มี<wbr>ขนาด 16 บิต (ซึ่ง<wbr>ถ้า<wbr>เป็น<wbr>ปัจจุบัน<wbr>นี้<wbr>อิน<wbr>เท<wbr>ล<wbr>คง<wbr>จะ<wbr>เรียก<wbr>ชิ<wbr>พ
+   8088 ว่า 8086sx ดัง<wbr>เช่น<wbr>ที่<wbr>เรียก<wbr>ชิ<wbr>พ 386sx ซึ่ง<wbr>มี<wbr>ขนาด
+   ดา<wbr>ต้า<wbr>บัส<wbr>แค่ 16 บิต และ<wbr>อย่าง 386dx ก็<wbr>มี<wbr>ขนาด<wbr>ดา<wbr>ต้า<wbr>บัส<wbr>เป็น
+   24 บิต ขณะ<wbr>ที่ 386 แท้<wbr>แล้ว<wbr>ขนาด<wbr>บัส<wbr>จะ<wbr>เป็ฯ 32 บิต จริง
+   <dd>    ถ้า<wbr>เป็น<wbr>ของ<wbr>มอ<wbr>โน<wbr>โร<wbr>ลา<wbr>คือ ไมโคร<wbr>โปรเซสเซอร์<wbr>ตระกูล 680x0
+   ซึ่ง<wbr>มี<wbr>ขนาด<wbr>รี<wbr>จิสเตอร์ 32 บิต แต่<wbr>เพียง 68020,68030 และ<wbr>68040
+   เท่า<wbr>นั้น<wbr>ที่<wbr>มี<wbr>ขนาด<wbr>ดา<wbr>ต้า<wbr>บัส<wbr>และ<wbr>แอด<wbr>เด<wbr>รส<wbr>บัส<wbr>เท่า<wbr>กัน<wbr>คือ 32
+   บิต ส่วน 6800 มี<wbr>ขนาด<wbr>ดา<wbr>ต้า<wbr>บัส<wbr>เป็น 64 บิต<wbr>และ<wbr>แอด<wbr>เด<wbr>รส<wbr>บัส<wbr>เป็น
+   24 บิต
+           สรุป<wbr>ก็<wbr>คือ "ขนาด<wbr>ของ<wbr>ชิ<wbr>พ<wbr>ใด ๆ จะ<wbr>ใช้<wbr>มาตรฐาน<wbr>ตาม<wbr>ขนาด<wbr>รี<wbr>จิสเตอร์<wbr>ระบุ<wbr>เท่า<wbr>นั้น<wbr>"
+
+
+   <p>
+   <table width=100% bgcolor=ffdcb9>
+       <tr><!-- row 1 -->
+         <td><font face = "ms sans serif"><b>สถาปัตยกรรม<wbr>ของ<wbr>ซีพียู<wbr></b></font></td>
+       </tr>
+   </table>
+
+           <dd>เมื่อ<wbr>พิจารณา<wbr>ตาม<wbr>โครง<wbr>สร้าง<wbr>ทาง<wbr>ด้าน<wbr>สถาปัตยกรรม จะ<wbr>สามารถ<wbr>แยก<wbr>ลักษณะ<wbr>ของ<wbr>ซีพียู<wbr>ได้
+   2 แบบ<wbr>ด้วย<wbr>กัน<wbr>คือ  intruction set architecture (isa)
+   และ<wbr>แบบ harware implementation แบบ isa หรือ สถาปัตยกรรม<wbr>ด้าน<wbr>ชุด<wbr>คำ<wbr>สั่ง
+   จะ<wbr>เป็น<wbr>แบบ<wbr>ที่<wbr>มอง<wbr>เห็น<wbr>ใน<wbr>ระดับ<wbr>ซอฟต์แวร์<wbr>จาก<wbr>ภาษา<wbr>ชั่น<wbr>ต่ำ เช่น
+   ภาษา<wbr>แด<wbr>ส<wbr>เซ<wbr>มบ<wbr>ลี<wbr>ที่<wbr>สามารถ<wbr>กระทำ<wbr>กับ<wbr>รี<wbr>จิสแตอร์<wbr>และ<wbr>แอด<wbr>เด<wbr>รส<wbr>ได้
+   ส่วน<wbr>ระดับ<wbr>อาร์ดแวร์<wbr>จะ<wbr>มอง<wbr>ทาง<wbr>ด้าน<wbr>ฟิ<wbr>สิ<wbr>คัล<wbr>แอด<wbr>เด<wbr>รส<wbr>และ<wbr>ทาง<wbr>ด้าน<wbr>ดา<wbr>ต้า<wbr>บัส
+   <p>
+   <center>
+   <table border = 0>
+   <tr align="center" valign="bottom">
+   <td bgcolor=#ffcc99 colspan=7><font face="ms sans serif"
+   size=-2><b>
+   cpu characteristics</b></font></td>
+   </tr>
+   <tr valign="bottom">
+   <td bgcolor=#ffcc99 align="right"><font face="ms sans
+   serif" size=-2>
+   &nbsp;</font></td>
+   <td bgcolor=#ffcc99 align="center"><font face="ms sans
+   serif" size=-2><b>
+   &nbsp;</b></font></td>
+   <td bgcolor=#ffcc99 align="center"><font face="ms sans
+   serif" size=-2><b>
+   &nbsp;</b></font></td>
+   <td bgcolor=#ffcc99 colspan=2 align="center"><font
+   face="ms sans serif" size=-2><b>
+   isa characteristics</b></font></td>
+   <td bgcolor=#ffcc99 colspan=2 align="center"><font
+   face="ms sans serif" size=-2><b>
+   hardware implementation</b></font></td>
+   </tr>
+   <tr align="center" valign="bottom">
+   <td bgcolor=#ffcc99><font face="ms sans serif" size=-2><b>
+   cpu</b></font></td>
+   <td bgcolor=#ffcc99><font face="ms sans serif" size=-2><b>
+   year</b></font></td>
+   <td bgcolor=#ffcc99><font face="ms sans serif" size=-2><b>
+   size</b></font></td>
+   <td bgcolor=#ffcc99><font face="ms sans serif" size=-2><b>
+   innteger</b></font></td>
+   <td bgcolor=#ffcc99><font face="ms sans serif" size=-2><b>
+   generated</b></font></td>
+   <td bgcolor=#ffcc99><font face="ms sans serif" size=-2><b>
+   physical</b></font></td>
+   <td bgcolor=#ffcc99><font face="ms sans serif" size=-2><b>
+   data</b></font></td>
+   </tr>
+   <tr valign="bottom">
+   <td bgcolor=#ffcc99 align="right"><font face="ms sans
+   serif" size=-2>
+   &nbsp;</font></td>
+   <td bgcolor=#ffcc99 align="center"><font face="ms sans
+   serif" size=-2><b>
+   released</b></font></td>
+   <td bgcolor=#ffcc99 align="center"><font face="ms sans
+   serif" size=-2><b>
+   called</b></font></td>
+   <td bgcolor=#ffcc99 align="center"><font face="ms sans
+   serif" size=-2><b>
+   register size</b></font></td>
+   <td bgcolor=#ffcc99 align="center"><font face="ms sans
+   serif" size=-2><b>
+   user address size</b></font></td>
+   <td bgcolor=#ffcc99 align="center"><font face="ms sans
+   serif" size=-2><b>
+   address size</b></font></td>
+   <td bgcolor=#ffcc99 align="center"><font face="ms sans
+   serif" size=-2><b>
+   bus size</b></font></td>
+   </tr>
+   <tr valign="bottom">
+   <td bgcolor=#ffcc99 align="right"><font face="ms sans
+   serif" size=-2>
+   &nbsp;</font></td>
+   <td bgcolor=#ffcc99 align="center"><font face="ms sans
+   serif" size=-2><b>
+   &nbsp;</b></font></td>
+   <td bgcolor=#ffcc99 align="center"><font face="ms sans
+   serif" size=-2><b>
+   &nbsp;</b></font></td>
+   <td bgcolor=#ffcc99 align="center"><font face="ms sans
+   serif" size=-2><b>
+   (r)</b></font></td>
+   <td bgcolor=#ffcc99 align="center"><font face="ms sans
+   serif" size=-2><b>
+   (v)</b></font></td>
+   <td bgcolor=#ffcc99 align="center"><font face="ms sans
+   serif" size=-2><b>
+   (a)</b></font></td>
+   <td bgcolor=#ffcc99 align="center"><font face="ms sans
+   serif" size=-2><b>
+   (d)</b></font></td>
+   </tr>
+   <tr valign="bottom">
+   <td bgcolor=#ffcc99 align="left"><font face="ms sans
+   serif" size=-2>
+   ded pdp-11/45</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   1973</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   16</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   16</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   16*</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   18</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   32</font></td>
+   </tr>
+   <tr valign="bottom">
+   <td bgcolor=#ffcc99 align="left"><font face="ms sans
+   serif" size=-2>
+   dec pdp-11/70</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   1976</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   16</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   16</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   16*</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   22</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   32</font></td>
+   </tr>
+   <tr valign="bottom">
+   <td bgcolor=#ffcc99 align="left"><font face="ms sans
+   serif" size=-2>
+   dec vax-11/780</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   1978</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   32</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   32</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   31</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   32</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   64</font></td>
+   </tr>
+   <tr valign="bottom">
+   <td bgcolor=#ffcc99 align="left"><font face="ms sans
+   serif" size=-2>
+   imb s/360</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   1964</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   32</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   32</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   24</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   24</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   8-128</font></td>
+   </tr>
+   <tr valign="bottom">
+   <td bgcolor=#ffcc99 align="left"><font face="ms sans
+   serif" size=-2>
+   ibm s/370xa</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   1983</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   32</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   32</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   31</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   32</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   128</font></td>
+   </tr>
+   <tr valign="bottom">
+   <td bgcolor=#ffcc99 align="left"><font face="ms sans
+   serif" size=-2>
+   ibm esa/370</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   1988</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   32</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   32</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   31*</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   32</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   128</font></td>
+   </tr>
+   <tr valign="bottom">
+   <td bgcolor=#ffcc99 align="left"><font face="ms sans
+   serif" size=-2>
+   ibm risc system/6000</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   1990</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   323</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   32</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   32*</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   32</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   64-128</font></td>
+   </tr>
+   <tr valign="bottom">
+   <td bgcolor=#ffcc99 align="left"><font face="ms sans
+   serif" size=-2>
+   hp precision</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   1986</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   32</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   32</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   32*</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   32</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   32-64</font></td>
+   </tr>
+   <tr valign="bottom">
+   <td bgcolor=#ffcc99 align="left"><font face="ms sans
+   serif" size=-2>
+   intel 386dx</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   1985</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   32</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   32</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   32*</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   32</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   32</font></td>
+   </tr>
+   <tr valign="bottom">
+   <td bgcolor=#ffcc99 align="left"><font face="ms sans
+   serif" size=-2>
+   intel 386sx</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   1987</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   32</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   32</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   32*</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   24</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   16</font></td>
+   </tr>
+   <tr valign="bottom">
+   <td bgcolor=#ffcc99 align="left"><font face="ms sans
+   serif" size=-2>
+   intel 860</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   1989</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   64</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   32</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   32</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   32</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   64</font></td>
+   </tr>
+   <tr valign="bottom">
+   <td bgcolor=#ffcc99 align="left"><font face="ms sans
+   serif" size=-2>
+   intel 486dx</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   1989</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   32</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   32</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   32*</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   32</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   32</font></td>
+   </tr>
+   <tr valign="bottom">
+   <td bgcolor=#ffcc99 align="left"><font face="ms sans
+   serif" size=-2>
+   intel 486sx</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   1991</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   32</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   32</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   32*</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   32</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   32</font></td>
+   </tr>
+   <tr valign="bottom">
+   <td bgcolor=#ffcc99 align="left"><font face="ms sans
+   serif" size=-2>
+   mips r2000</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   1986</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   32</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   32</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   31</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   32</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   32</font></td>
+   </tr>
+   <tr valign="bottom">
+   <td bgcolor=#ffcc99 align="left"><font face="ms sans
+   serif" size=-2>
+   mips r4000</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   1990</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   64</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   64</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   40-62</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   36</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   64</font></td>
+   </tr>
+   <tr valign="bottom">
+   <td bgcolor=#ffcc99 align="left"><font face="ms sans
+   serif" size=-2>
+   motorola 68000</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   1980</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   32</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   32</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   24</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   24</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   16</font></td>
+   </tr>
+   <tr valign="bottom">
+   <td bgcolor=#ffcc99 align="left"><font face="ms sans
+   serif" size=-2>
+   motorola 68020</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   1985</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   32</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   32</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   32</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   32</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   32</font></td>
+   </tr>
+   <tr valign="bottom">
+   <td bgcolor=#ffcc99 align="left"><font face="ms sans
+   serif" size=-2>
+   motorola 68030</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   1987</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   32</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   32</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   32</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   32</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   32</font></td>
+   </tr>
+   <tr valign="bottom">
+   <td bgcolor=#ffcc99 align="left"><font face="ms sans
+   serif" size=-2>
+   motorola 68040</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   1990</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   32</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   32</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   32</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   32</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   32</font></td>
+   </tr>
+   <tr valign="bottom">
+   <td bgcolor=#ffcc99 align="left"><font face="ms sans
+   serif" size=-2>
+   sun sparc</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   1987</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   32</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   32</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   32</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   36</font></td>
+   <td bgcolor=#ffcc00 align="center"><font face="ms sans
+   serif" size=-2>
+   32-64</font></td>
+   </tr>
+   </table><br>
+   <center><b>ตาราง<wbr>ที่ 1 ตาราง<wbr>เปรียบเทียบ<wbr>ซีพียู<wbr></b></center><p>
+   </center>
+
+           <dd>ดัง<wbr>ตาราง<wbr>ที่ 1 สถาปัตยกรรม<wbr>ของ<wbr>ซีพียู<wbr>ด้าน isa จะ<wbr>มอง<wbr>เห็น<wbr>ขนาด<wbr>รี<wbr>จิสเตอร์<wbr>จำนวน<wbr>เต็ม<wbr>มี<wbr>ขนาด<wbr>กว้าง
+   r
+   บิต<wbr>และ<wbr>มอง<wbr>เห็น<wbr>แอด<wbr>เด<wbr>รส<wbr>มี<wbr>ขนาด<wbr>กว้าง v บิต เมื่อ<wbr>จะ<wbr>ทำ<wbr>การ<wbr>โปรแกรม<wbr>ซึ่ง
+   v ก็<wbr>คือ เวอร์ชวล<wbr>แอด<wbr>เด<wbr>รส<wbr>หรือ<wbr>แอด<wbr>เด<wbr>รส<wbr>เสมือน ซึ่ง<wbr>สามารถ<wbr>ถูก<wbr>เยน<wbr>เนอร์<wbr>เร<wbr>ต<wbr>ได้
+   2 แบบ คือ
+   <dd>1.  โดย<wbr>การ<wbr>ใช้<wbr>รี<wbr>จิสเตอร์<wbr>อ้าง<wbr>โดย<wbr>ตรง<wbr>เลย ซึ่ง<wbr>ก็<wbr>จะ<wbr>อ้าง<wbr>ขนาด<wbr>แอด<wbr>เด<wbr>รส<wbr>ได้<wbr>น้อย<wbr>กว่า<wbr>หรือ<wbr>เท่า<wbr>กับ
+   r
+   <dd>2.  โดย<wbr>การ<wbr>แบ่ง<wbr>ส่วน<wbr>เป็น<wbr>ส่วน<wbr>เซกเมนต์<wbr>รี<wbr>จิสเตอร์<wbr>และ<wbr>ส่วน<wbr>ออ<wbr>ป<wbr>เซต<wbr>เมื่อ<wbr>นำ<wbr>ทั้ง
+   2 ส่วน<wbr>มา<wbr>รวม<wbr>กัน<wbr>จึง<wbr>ได้<wbr>เป็น<wbr>เวอร์ชวล<wbr>แอด<wbr>เด<wbr>รส ซึ่ง<wbr>วิธี<wbr>นี้<wbr>ก็<wbr>ทำ<wbr>เพื่อ<wbr>ขยาย<wbr>ความ<wbr>สามารถ<wbr>ใน<wbr>การ<wbr>อ้าง<wbr>แอด<wbr>เด<wbr>รส<wbr>ให้<wbr>มาก<wbr>กว่า
+   r นั่ง<wbr>เอง
+           <dd>หลังจาก<wbr>ได้<wbr>เวอร์ชวล<wbr>เม<wbr>ม<wbr>โมรี<wbr>แล้ว<wbr>ก็<wbr>จะ<wbr>ต้อง<wbr>ผ่าน<wbr>ส่วน<wbr>จัด<wbr>การ<wbr>เม<wbr>ม<wbr>โมรี<wbr>(memory
+   menagement)เสีย<wbr>ก่อน จึง<wbr>เป็น<wbr>ระดับ<wbr>ฮาร์ดแวร์<wbr>ต่อ<wbr>ไป โดย<wbr>จะ<wbr>เป็น<wbr>ฟิ<wbr>สิ<wbr>คัล<wbr>แอด<wbr>เด<wbr>รส<wbr>ที่<wbr>มี<wbr>ขนาด
+    a ใน<wbr>การ<wbr>ที่<wbr>จะ<wbr>อ้างอิง<wbr>หน่วย<wbr>ความ<wbr>จำ<wbr>จริง ๆ ได้ และ<wbr>การ<wbr>อ้างอิง<wbr>หน่วย<wbr>ความ<wbr>จำ<wbr>แต่<wbr>ละ<wbr>ครั้ง<wbr>จะ<wbr>มี<wbr>การ<wbr>ส่ง<wbr>ผ่าน<wbr>ข้อ<wbr>มูล<wbr>กัน<wbr>คราว<wbr>ละ
+   d บิต ขนาด<wbr>ที่<wbr>ว่า<wbr>นี้<wbr>ก็<wbr>คือ<wbr>ขนาด<wbr>ของ<wbr>ดา<wbr>ต้า<wbr>บัส<wbr>นั่น<wbr>เอง ดัง<wbr>รูป<wbr>ที่
+   1
+
+
+
+   <center><p><img src = "bit2.gif" border = 1><p><b>รูป<wbr>ที่
+   1 ขนาด<wbr>ของ<wbr>ดา<wbr>ต้า<wbr>เบส<wbr></b><p></center>
+   <p>
+   <table width=100% bgcolor=ffdcb9>
+       <tr><!-- row 1 -->
+         <td><font face = "ms sans serif"><b>เมื่อ<wbr>เพิ่ม<wbr>ขนาด<wbr>รี<wbr>จิสเตอร์<wbr>ประสิทธิภาพ<wbr>ก็<wbr>เพิ่ม<wbr></b></font></td>
+       </tr>
+   </table>
+
+
+           <dd>ถ้า<wbr>เรา<wbr>เพิ่ม<wbr>ขนาด<wbr>รี<wbr>จิสเตอร์<wbr>เป็น 64 บิต ก็<wbr>จะ<wbr>ทำ<wbr>ให้<wbr>โปรแกรม<wbr>ที่<wbr>มี<wbr>ลักษณะ<wbr>ต่อ<wbr>ไป<wbr>นั้<wbr>มี<wbr>ประสิทธิภาพ<wbr>เพิ่ม<wbr>ขึ้น<wbr>อีก<wbr>มาก
+   <dd>- ใช้<wbr>ส<wbr>ตริ<wbr>ง<wbr>ที่<wbr>มี<wbr>ความ<wbr>ยา<wbr>วก<wbr>มาก ๆ โปรแกรม<wbr>บาง<wbr>โปรแกรม<wbr>สามารถ<wbr>เพิ่ม<wbr>ประสิทธิภาพ<wbr>ได้<wbr>ถึง
+   2 เท่า<wbr>ที่<wbr>เดียว หาก<wbr>เปลี่ยน<wbr>จาก<wbr>ระบบ 32 บิต<wbr>มา<wbr>ใช้<wbr>ระบบ 64
+   บิต เพราะ<wbr>จะ<wbr>ทำ<wbr>ให้<wbr>ระบบ<wbr>ปฏิบัติการ<wbr>ใช้<wbr>เวลา<wbr>น้อย<wbr>ลง<wbr>10 ถึง<wbr>20
+   เปอร์เซ็นต์<wbr>ใน<wbr>การ<wbr>ที่<wbr>จะ<wbr>เคลียร์<wbr>ค่า<wbr>ใน<wbr>หน่วย<wbr>ความ<wbr>จำ<wbr>หรือ<wbr>เมื่อ<wbr>ทำ<wbr>การ<wbr>ก็<wbr>อบ<wbr>ปี้<wbr>กลุ่ม<wbr>ข้อ<wbr>มูล<wbr>ขนาด<wbr>ใหญ่
+   และ<wbr>ทำ<wbr>ให้<wbr>ความ<wbr>แตก<wbr>ต่าง<wbr>ระหว่าง ซีพียู<wbr>กับ i/o ดี<wbr>ไวซ์<wbr>สามารถ<wbr>ลด<wbr>ลง<wbr>ได้<wbr>เมื่อ<wbr>ทำ<wbr>ให้<wbr>ข้อ<wbr>มูล<wbr>เล็ก<wbr>ลง<wbr>โดย<wbr>ทำ<wbr>การ<wbr>ย่อย<wbr>ขนาด
+   (compression) เสีย<wbr>ก่อน แล้ว<wbr>จึง<wbr>จัด<wbr>เก็บ<wbr>และ<wbr>ทำ<wbr>การ<wbr>ขยาย (decompression)
+   ก่อน<wbr>ที่<wbr>จะ<wbr>นำ<wbr>ข้อ<wbr>มูล<wbr>ไป<wbr>ใช้ วิธี<wbr>การ<wbr>ย่อ<wbr>และ<wbr>ขยาย<wbr>ข้อ<wbr>มูล<wbr>นี้<wbr>ต้อง<wbr>จัด<wbr>การ<wbr>กับ<wbr>ข้อ<wbr>มูล<wbr>ขนาด<wbr>ใหญ่
+   ถ้า<wbr>เรา<wbr>ใช้<wbr>ระบบ 64 บิต ก็<wbr>จะ<wbr>ทำ<wbr>ได้<wbr>อย่าง<wbr>รวด<wbr>เร็ว<wbr>มาก<wbr>ขึ้น
+   <dd>- เป็น<wbr>กราฟิก โปรแกรม<wbr>ทาง<wbr>ด้าน<wbr>กราฟิก นอกจาก<wbr>จะ<wbr>มี<wbr>การ<wbr>คำนวณ<wbr>มาก<wbr>มาย<wbr>อยู่<wbr>แล้ว
+   โดย<wbr>เฉพาะ<wbr>จอ<wbr>มอนิเตอร์<wbr>แบบ<wbr>สี<wbr>ที่<wbr>มี<wbr>ความ<wbr>ละเอียด<wbr>สูง ๆ ถ้า<wbr>เรา<wbr>สามารถ<wbr>เพิ่ม<wbr>ความ<wbr>เร็ว<wbr>ทาง<wbr>ด้าน<wbr>นี้<wbr>ให้<wbr>สูง<wbr>ยิ่ง<wbr>ขึ้น
+   โดย<wbr>ที่<wbr>ไม่<wbr>ต้อง<wbr>ใช้<wbr>ชิ<wbr>พ<wbr>ที่<wbr>ช่วย<wbr>งาน<wbr>ด้าน<wbr>กราฟิก<wbr>(graphic support
+   chips) ก็<wbr>โดย<wbr>การ<wbr>เพิ่ม<wbr>เป็น<wbr>ระบบ 64 บิต เพราะ<wbr>มัน<wbr>จะ<wbr>ทำ<wbr>ให้<wbr>การ<wbr>ทำ
+   scroll การ<wbr>ฟิว<wbr>แอ<wbr>เรีย<wbr>และ<wbr>อื่นๆ ที่<wbr>ต้อง<wbr>อาศัย<wbr>พื้น<wbr>ที่<wbr>ว่าง<wbr>ขนาด<wbr>ใหญ่<wbr>เพื่อ<wbr>กระทำ<wbr>การ<wbr>ดัง<wbr>กล่าว
+   สามารถ<wbr>ทำ<wbr>ได้<wbr>อย่าง<wbr>สบาย ๆ ซึ่ง<wbr>วิธี<wbr>การ<wbr>เพิ่ม<wbr>เป็น 64 บิต
+   นี้<wbr>จะ<wbr>เพิ่ม<wbr>ประสิทธิภาพ<wbr>ได้<wbr>ถึง<wbr>2 เท่า<wbr>ของ<wbr>แบบ 32 บิต และ<wbr>เมื่อ<wbr>เทียบ<wbr>กัน<wbr>ทาง<wbr>ด้าน<wbr>ประสิทธิภาพ<wbr>ต่อ<wbr>ราคา<wbr>แล้ว<wbr>ยัง<wbr>ถูก<wbr>ว้า<wbr>แบบ<wbr>ซื้อ<wbr>ชิ<wbr>พ<wbr>ช่วย<wbr>อีก<wbr>ด้วย
+   <dd>- มี<wbr>การ<wbr>คำนวณ<wbr>สูง แม้<wbr>ว่า<wbr>ชิ<wbr>พ<wbr>ส่วน<wbr>ใหญ่<wbr>สามารถ<wbr>ที่<wbr>จะ<wbr>ทำ<wbr>การ<wbr>บวก
+   ลบ<wbr>เลข<wbr>จำนวน<wbr>เต็ม<wbr>แบบ<wbr>ความ<wbr>ละเอียด<wbr>สูง ๆ ได้ เช่น การ<wbr>บวก<wbr>แบบ
+   64 บิต 96 บิต หรือ 128 บิต<wbr>ได้<wbr>อย่าง<wbr>รวด<wbr>เร็ว<wbr>ก็<wbr>ตาม<wbr>แต่<wbr>ถ้า<wbr>เป็นการ<wbr>คูณ<wbr>และ<wbr>หาร<wbr>ขนาด<wbr>ความ<wbr>ละเอียด<wbr>สูง
+   ๆ ดัง<wbr>กล่าว<wbr>จะ<wbr>ทำ<wbr>ช้า<wbr>มาก ๆ<wbr>ดัง<wbr>เช่น<wbr>การ<wbr>ทำ<wbr>การ<wbr>เข้า<wbr>รหัส<wbr>ข้อ<wbr>มูล<wbr>(cryptography)
+   ซึ่ง<wbr>ต้อง<wbr>มี<wbr>การ<wbr>คำนวณ<wbr>การ<wbr>คูณ<wbr>การ<wbr>หาร<wbr>กับ<wbr>ตัว<wbr>เลข<wbr>ขนาด<wbr>ใหญ่ ๆ การ<wbr>คำนวณ<wbr>ด้าน<wbr>การ<wbr>เงิน<wbr>การ<wbr>คลัง<wbr>ระดับ<wbr>ประเทศ<wbr>ซึ่<wbr>รี<wbr>จิสเตอร์<wbr>ขนาด
+   32 บิต<wbr>ก็<wbr>อาจ<wbr>จะ<wbr>ไม่<wbr>สามารถ<wbr>เก็บ<wbr>จำนวน<wbr>เงิน<wbr>ขนาด<wbr>นี้<wbr>ได้ ต้อง<wbr>ใช้<wbr>รี<wbr>จิสเตอร์<wbr>ขนาด
+   64 บิต<wbr>จึง<wbr>จะ<wbr>พี<wbr>ยง<wbr>พอ
+
+
+   <p>
+   <table width=100% bgcolor=ffdcb9>
+       <tr><!-- row 1 -->
+         <td><font face = "ms sans serif"><b>ว่า<wbr>ด้วย<wbr>เม<wbr>ม<wbr>โมรี<wbr></b></font></td>
+       </tr>
+   </table>
+
+
+           <dd>จาก<wbr>ที่<wbr>กล่าว<wbr>ไป<wbr>ตอน<wbr>ต้น<wbr>ถึง<wbr>เหตุผล<wbr>ที่<wbr>จะ<wbr>ต้อง<wbr>เพิ่ม<wbr>ขนาด<wbr>รี<wbr>จิสเตอร์<wbr>เป็น
+   64 บิต ก็<wbr>ยัง<wbr>มี<wbr>อีก<wbr>เหตุผล<wbr>หนึ่ง<wbr>ที่<wbr>น่า<wbr>สนับสนุน<wbr>นั่น<wbr>ก็<wbr>คือ<wbr>เรื่อง<wbr>เม<wbr>ม<wbr>โมรี
+   ถ้า<wbr>เรา<wbr>เพิ่ม<wbr>เป็น<wbr>ระบบ 64 บิต<wbr>ก็<wbr>จะ<wbr>ทำ<wbr>ให้<wbr>การ<wbr>อ้าง<wbr>แอด<wbr>เด<wbr>รส<wbr>ใน<wbr>เม<wbr>ม<wbr>โมรี<wbr>มาก<wbr>ขึ้น<wbr>กว่า<wbr>เดิม<wbr>อีก<wbr>มาก<wbr>มาย
+           <dd>จาก<wbr>ที่<wbr>ได้<wbr>กล่าว<wbr>ไป<wbr>เมื่อ<wbr>ตอน<wbr>ต้น<wbr>ถึง<wbr>เรื่อง<wbr>เวอร์ชวล<wbr>เม<wbr>ม<wbr>โมรี<wbr>และ<wbr>ฟิ<wbr>สิ<wbr>คัล<wbr>เม<wbr>ม<wbr>โมรี<wbr>ไป<wbr>แล้ว
+   จะ<wbr>พบ<wbr>ว่า<wbr>ขนาด<wbr>เม<wbr>ม<wbr>โมรี<wbr>ที่<wbr>โปรแกรม<wbr>หรือ<wbr>ซอฟต์แวร์<wbr>จะ<wbr>เห็น<wbr>ได้<wbr>นั้น<wbr>ก็<wbr>ขึ้น<wbr>กับ<wbr>ขนาด<wbr>ของ<wbr>เวอร์ชวล<wbr>เม<wbr>ม<wbr>โมรี<wbr>นั่น<wbr>เอง
+   ดัง<wbr>นั่น<wbr>ใน<wbr>ระบบ<wbr>คอมพิวเตอร์<wbr>ส่วน<wbr>ใหญ่<wbr>จะ<wbr>ออก<wbr>แบบ<wbr>ให้<wbr>ขนาด<wbr>สูง<wbr>สุด<wbr>ของ<wbr>เวอร์ชววล<wbr>เมน<wbr>โมรี<wbr>มาก<wbr>กว่า<wbr>ขยาด<wbr>ของ<wbr>ฟิ<wbr>สิ<wbr>คัล<wbr>เม<wbr>มม<wbr>โมรี
+   และ<wbr>หา<wbr>ผู้<wbr>ใช้<wbr>ต้อง<wbr>การ<wbr>ที่<wbr>เพ่<wbr>มิ<wbr>ประสิทธิภาพ<wbr>ก็<wbr>ทำ<wbr>ได้<wbr>โดย<wbr>การ<wbr>เพิ่ม<wbr>ขนาด<wbr>ฟิ<wbr>สิ<wbr>คับ<wbr>เม<wbr>ม<wbr>โมรี<wbr>ไป<wbr>ภาย<wbr>หลัง
+   แต่<wbr>การ<wbr>เพิ่ม<wbr>ก็<wbr>จำกัด<wbr>เพียง<wbr>ขนาด<wbr>สูง<wbr>สุด<wbr>ของ<wbr>เวอร์<wbr>ชวน<wbr>เม<wbr>ม<wbr>โมรี<wbr>เท่า<wbr>นั้น
+   นั่น<wbr>ก็<wbr>คือ<wbr>หาก<wbr>ยัง<wbr>ขืน<wbr>เพิ่ม<wbr>ฟิ<wbr>สิ<wbr>คัล<wbr>เม<wbr>ม<wbr>โมรี<wbr>ต่อ<wbr>ไป<wbr>อีก มัน<wbr>ก็<wbr>ไม่<wbr>มี<wbr>ประโยชน์<wbr>อะไร<wbr>แล้ว
+   เพราะ<wbr>ซอฟต์แวร์<wbr>จะ<wbr>ใช้<wbr>ประโยชน์<wbr>จาก<wbr>ส่วน<wbr>ที่<wbr>เกิน<wbr>ไป<wbr>กว่า<wbr>ขนาด<wbr>ของ<wbr>เวอร์ชวล<wbr>เม<wbr>ม<wbr>โมรี<wbr>ไม่<wbr>ได้
+   ยุด<wbr>วิกฤต<wbr>ของ 32 บิต
+
+   <center><img src = bit1.gif border = 1></center><br><center><b>รูป<wbr>ที่
+   2 เปรียบเทียบ<wbr>เม<wbr>ม<wbr>โมรี<wbr>เพิ่ม<wbr>ขึ้น<wbr>ทุก ๆ 2 ปี<wbr></b></center><p>
+           <dd>จาก<wbr>รูป<wbr>ที่ 2 ซึ่ง<wbr>เป็นการ<wbr>ศึกษา<wbr>เรื่อง<wbr>เม<wbr>ม<wbr>โมรี<wbr>ที่<wbr>เพิ่ม<wbr>ขึ้น<wbr>ใน<wbr>ทุก
+   ๆ 2 ปี พร้อม<wbr>กับ<wbr>ได้<wbr>ทำ<wbr>การ<wbr>ทำนาย<wbr>ว่า<wbr>ขนาด<wbr>ของ<wbr>เวอร์ชวล<wbr>เม<wbr>ม<wbr>โมรี
+   ที่<wbr>ด้าง<wbr>ได้ 32 บิต จะ<wbr>ถึง<wbr>จุด<wbr>ที่<wbr>เริ่ม<wbr>วิกฤต<wbr>คือ ไม่<wbr>เพียง<wbr>พอ<wbr>สำหรับ<wbr>ซอฟต์แวร์<wbr>ใหญ่
+   ๆ โดย<wbr>ข้อ<wbr>มูล<wbr>นี้<wbr>นำ<wbr>มา<wbr>จาก "mips computer system       " และ "sun
+   microsysttem" มา<wbr>ศึกษา<wbr>และ<wbr>วาด<wbr>เป็น<wbr>กราฟ<wbr>ใช้<wbr>สเกล<wbr>แบบ<wbr>ลอการิทึม
+   ซึ่ง<wbr>พบ<wbr>ว่า<wbr>อัตรา<wbr>การ<wbr>เพิ่ม<wbr>ของ<wbr>เม<wbr>ม<wbr>โมรี<wbr>จะ<wbr>เป็น<wbr>เส่น<wbr>ตรง<wbr>ใน<wbr>อัตรา
+   2 บิต<wbr>ทุก ๆ 3 ปี เส้น<wbr>กราฟ<wbr>ด้าน<wbr>บน<wbr>แสดง<wbr>ถึง<wbr>ขนาด<wbr>สูง<wbr>สุด<wbr>ของ<wbr>ฟิ<wbr>สิ<wbr>คัล<wbr>เม<wbr>โมรี
+   ส่วน<wbr>กราฟ<wbr>เส้น<wbr>ล่าง<wbr>แสดง<wbr>ขนาด<wbr>ของ<wbr>ฟิ<wbr>สิ<wbr>คับ<wbr>เม<wbr>ม<wbr>โมรี ซึ่ง<wbr>เป็น
+   50 เปอร์เซ็นต์ หรือ<wbr>ครึ่ง<wbr>หนึ่ง<wbr>ของ<wbr>ขนาด<wbr>ที่<wbr>มัก<wbr>จะ<wbr>ถูก<wbr>จำหน่าย<wbr>จาก<wbr>ผู้<wbr>ขาย<wbr>ทั่ว
+   ๆ ไป เมื่อ<wbr>พิจารณา<wbr>กราฟ<wbr>เส้น<wbr>บน<wbr>จะ<wbr>พบ<wbr>ว่า ใน<wbr>ราว<wbr>ปี ค.ศ. 1991
+   จะ<wbr>เริ่ม<wbr>มี<wbr>โปรแกรม<wbr>ที่<wbr>ต้อง<wbr>การ<wbr>อ้าง<wbr>เมน<wbr>โมรี<wbr>ถึง 32 บิต<wbr>แล้ว
+   และ<wbr>พอ<wbr>ราว<wbr>ปี ค.ศ. 1993 หรือ ค.ศ. 1994 จะ<wbr>ต้อง<wbr>การ<wbr>เม<wbr>ม<wbr>โมรี<wbr>สูง<wbr>ขึ้น<wbr>ไป<wbr>อีก
+   จน<wbr>เกิด<wbr>วิกฤตกาล<wbr>ที่<wbr>ไม่<wbr>สามารถ<wbr>พัฒนา<wbr>โปรแกรม<wbr>ให้<wbr>มาก<wbr>ขึ้น<wbr>หรือ<wbr>ใหญ่<wbr>ขึ้น<wbr>ไป<wbr>กว่า<wbr>นี้<wbr>อีก<wbr>แล้ว<wbr>เพราะ<wbr>หาก<wbr>ขนาด<wbr>ฟิ<wbr>สิ<wbr>คัล<wbr>เม<wbr>ม<wbr>โมรี<wbr>wbr<wbr>>w<wbr>br<w<wbr>br>
+   32 บิต ไม่<wbr>พัฒนา<wbr>ให้<wbr>เป็น<wbr>รุ่น<wbr>ถัด<wbr>ไป<wbr>คือ 64 บิต
+
+   <p>
+   <table width=100% bgcolor=ffdcb9>
+       <tr><!-- row 1 -->
+         <td><font face = "ms sans serif"><b>ทำไม<wbr>ต้อง
+   64 บิต<wbr></b></font></td>
+       </tr>
+   </table>
+
+           <dd>จาก<wbr>ความ<wbr>จำเป็น<wbr>ที่<wbr>ต้อง<wbr>เพิ่ม<wbr>เม<wbr>ม<wbr>โมรี<wbr>ให้<wbr>มาก<wbr>ขึ้น<wbr>กว่า<wbr>การ<wbr>อ้าง<wbr>จาก
+   32 บิต ตาม<wbr>ที่<wbr>กล่าว<wbr>มา<wbr>แล้ว สามารถ<wbr>เพิ่ม<wbr>ได้<wbr>โดย<wbr>ยัง<wbr>คง<wbr>ขนาด
+   32 บิต<wbr>ไว้<wbr>เช่น<wbr>เดิม ต้อง<wbr>การ<wbr>แบ่ง<wbr>ออก<wbr>เป็น 2 ส่วน คือ<wbr>เป็น<wbr>เซกเมนต์<wbr>และ<wbr>ออ<wbr>ป<wbr>เซต
+   หรือ<wbr>โดย<wbr>การ<wbr>เพิ่ม ขนาด<wbr>รี<wbr>วิจเตอร์<wbr>เป็น 64 บิต<wbr>ไป<wbr>เลย
+           <dd>ผู้<wbr>อ่าน<wbr>จะ<wbr>สงสัย<wbr>ว่า แล้ว<wbr>ทำไม<wbr>การ<wbr>เพิ่ม<wbr>ขนาด<wbr>รี<wbr>จิสเตอร์<wbr>ต้อง<wbr>เพิ่ม<wbr>เป็น
+   64 บิต  จะ<wbr>เป็น<wbr>ขนาด<wbr>อื่น<wbr>เช่น 48 บิต<wbr>ได้<wbr>หรือ<wbr>ไม่ เพราะ<wbr>อาจ<wbr>เห็น<wbr>ว่า<wbr>ขนาด
+   64 บิต<wbr>คง<wbr>มาก<wbr>เกิน<wbr>ความ<wbr>จำเป็น<wbr>ไป<wbr>หน่อย เหตุผล<wbr>ก็<wbr>คือ<wbr>คือ<wbr>สถาปัตยกรรม<wbr>ของ<wbr>การ<wbr>อ้าง<wbr>แอด<wbr>เด<wbr>รส<wbr>ของ<wbr>ภาษา<wbr>ชั้น<wbr>ต่ำ<wbr>ที่<wbr>สามารถ<wbr>เข้า<wbr>ถึง<wbr>ระดับ<wbr>รี<wbr>จิสเตอร์
+   เช่น ภาษา<wbr>แอสเซมบลี ภาษา<wbr>ซี เมื่อ<wbr>มี<wbr>การ<wbr>อ้าง<wbr>ถึง<wbr>ข้อ<wbr>มูล<wbr>ใน<wbr>แต่<wbr>ละ<wbr>แอด<wbr>เด<wbr>รส<wbr>หนึ่ง
+   ๆ จะ<wbr>มอง<wbr>ข้อ<wbr>มูล<wbr>เป็น<wbr>เวิร์ด แต่<wbr>ละ<wbr>เวิร์ด<wbr>จะ<wbr>มี<wbr>ขนาด 8 บิต หรือ
+   1 ไบต์ และ<wbr>หาก<wbr>ต้อง<wbr>การ<wbr>ข้อ<wbr>มูล<wbr>มาก<wbr>กว่า 1 เวิร์ด<wbr>ขนาด<wbr>ของ<wbr>มัน<wbr>ต้อง<wbr>เพ่<wbr>มิ<wbr>ขึ้น<wbr>คราว<wbr>ละ
+   2 เท่า<wbr>เสมอ เช่น<wbr>เป็น 16 บิต 32 บิต หรือ 64 บิต เป็น<wbr>ต้น
+   นั่น<wbr>ก็<wbr>คือ ถ้า<wbr>หาก<wbr>ใช้ 48 บิต แล้ว<wbr>เรา<wbr>จะ<wbr>ต้อง<wbr>ทำ<wbr>ให้<wbr>การ<wbr>อ้าง<wbr>ข้อ<wbr>มูล<wbr>แต่<wbr>ละ<wbr>แอด<wbr>เด<wbr>รส<wbr>เป็น
+   6 บิต ซึ่ง<wbr>เป็น<wbr>เรื่อง<wbr>ที่<wbr>ทำ<wbr>ได้<wbr>ค่อน<wbr>ข้าง<wbr>ยาก<wbr>ถ้า<wbr>จะ<wbr>มอง<wbr>ถึง<wbr>ขนาด<wbr>ดัง<wbr>กล่าว<wbr>ใน<wbr>ระบบ<wbr>เลข<wbr>ฐาน
+   2 หรือ<wbr>ฐาน 16 ที่<wbr>ใช้ ๆ กัน<wbr>อยู่ แต่<wbr>หาก<wbr>จะ<wbr>ทำ<wbr>ก็<wbr>ได้<wbr>แต่<wbr>อาร์ดแวร์<wbr>ที่<wbr>จัด<wbr>การ<wbr>ส่วน<wbr>นี้<wbr>จะ<wbr>ต้อง<wbr>ช้า<wbr>ลง<wbr>อย่าง<wbr>แน่<wbr>นอน
+   และ<wbr>การ<wbr>เขียน<wbr>โปรแกรม<wbr>ก็<wbr>คง<wbr>ยิ่ง<wbr>ยาก<wbr>ขึ้น<wbr>ไป<wbr>อีก เพราะ<wbr>ไม่<wbr>สอด<wbr>คล้อง<wbr>กับ<wbr>ระบบ<wbr>ฐาน<wbr>เลข
+           <dd>คราว<wbr>นี้<wbr>ก็<wbr>ลอง<wbr>มา<wbr>ดู<wbr>โปรแกรม<wbr>หรือ<wbr>แอ<wbr>พพ<wbr>ลิ<wbr>ค<wbr>เค<wbr>ชัน<wbr>ด้าน<wbr>เหล่า<wbr>นี้<wbr>ที่<wbr>ต้อง<wbr>การ<wbr>ขนาด<wbr>เม<wbr>ม<wbr>โมรี<wbr>มาก
+   ๆ ที่<wbr>ระบบ 32 บิต<wbr>ก็<wbr>ยัง<wbr>ไม่<wbr>เพียง<wbr>พอ หรือ<wbr>เพียง<wbr>พอ<wbr>แต่<wbr>ประสิทธิภาพ<wbr>ยัง<wbr>ต่ำ<wbr>กัน
+   <dd>- ด้าน<wbr>ฐาน<wbr>ข้อ<wbr>มูล ซึ่ง<wbr>ระบบ<wbr>ทาง<wbr>ด้าน<wbr>ฐาน<wbr>ข้อ<wbr>มูล<wbr>จำเป็น<wbr>ต้อง<wbr>เก็บ<wbr>ข้อ<wbr>มูล<wbr>มาก<wbr>มาย
+   โดย<wbr>จัด<wbr>การ<wbr>เก็บ<wbr>เป็น<wbr>ไฟล์  การ<wbr>ที่<wbr>จะ<wbr>แอ็ก<wbr>เซ<wbr>ส<wbr>ข้อ<wbr>มูล<wbr>ที่<wbr>เป็น<wbr>ไฟล์<wbr>เหล่า<wbr>นี้<wbr>ต้อง<wbr>การ<wbr>ความ<wbr>เร็ว<wbr>สูง<wbr>มาก
+   ประสิทธิภาพ<wbr>ของ<wbr>ระบบ<wbr>ถึง<wbr>ดี จาก<wbr>การ<wbr>ที่<wbr>เรา<wbr>รู้ ๆ กัน<wbr>อยู่<wbr>แล้ว<wbr>ว่า
+   ความ<wbr>เร็ว<wbr>ของ<wbr>ซีพียู<wbr>นั้น<wbr>เร็ว<wbr>กว่า<wbr>พวก<wbr>อุปกรณ์<wbr>ภาย<wbr>นอก<wbr>(external
+   device)ทั้ง<wbr>หลาย<wbr>มาก ๆ เช่น หน่วย<wbr>ความ<wbr>จำ<wbr>ดิสค์ เครื่อง<wbr>พิมพ์
+   ดัง<wbr>นั้น<wbr>แม้<wbr>ซีพียู<wbr>จะ<wbr>รวด<wbr>เร็ว<wbr>และ<wbr>มี<wbr>ประสิทธิภาพ<wbr>เพียง<wbr>ใด<wbr>ก็<wbr>ยัง<wbr>ใช้<wbr>ประโยชน์<wbr>ได้<wbr>ไม่<wbr>เต็ม<wbr>ประสิทธิภาพ
+   หรือ<wbr>เกิด boltle neck หรือ<wbr>คอ<wbr>ขวด<wbr>ซึ่ง<wbr>เป็น<wbr>จุด<wbr>อ่อน<wbr>ของ<wbr>ระบบ
+   เพราะ<wbr>ต้อง<wbr>เกิด<wbr>ภาวะ<wbr>รอ<wbr>คอย<wbr>อุปกรณ์<wbr>เหล่า<wbr>นี้<wbr>เสมอ ๆ ดัง<wbr>นั้น<wbr>ใน<wbr>ระบบ<wbr>ปฏิบัติการ<wbr>ที่<wbr>ดี
+   ๆ จะ<wbr>ใช้<wbr>วิธี<wbr>ทำ<wbr>ไฟล์<wbr>แม็พ<wbr>ปิง กล่าว<wbr>คือ นำ<wbr>ไฟ<wbr>ทั้ง<wbr>หมด<wbr>ไป<wbr>แม๊พ<wbr>ไว้<wbr>กับ<wbr>เวอร์ชวล<wbr>เม<wbr>ม<wbr>โมรี<wbr>ทำ<wbr>ให้<wbr>การ<wbr>แอ็ก<wbr>เซ<wbr>ส<wbr>ทำ<wbr>ห้ด<wbr>อย่าง<wbr>รวด<wbr>เร็ว<wbr>ขึ้น<wbr>และ<wbr>มี<wbr>การ<wbr>กัน<wbr>wbr>w<wbr>br>w<wbr><w<wbr>br><wbr>br>w<wbr><wbr><wbr><w<w
+   เพื่อ<wbr>ทำ<wbr>การ<wbr>แค<wbr>ช<wbr>เม<wbr>ม<wbr>โมรี ซึ่ง<wbr>เป็นการ<wbr>หลีก<wbr>เลี่ยง<wbr>การ<wbr>อ่าน<wbr>และ<wbr>เขียน<wbr>ดิสค์<wbr>บ่อย
+   ๆ โดย<wbr>จะ<wbr>แอ็ก<wbr>เซ<wbr>ส<wbr>เมื่อ<wbr>ม่<wbr>ความ<wbr>จำเป็น<wbr>เท่า<wbr>นั้น ดัง<wbr>นั้น<wbr>ถ้า<wbr>หาก<wbr>ขนาด<wbr>ดิสค์<wbr>ใหญ่<wbr>มาก
+   ๆ ก็<wbr>เก็บ<wbr>ไฟล์<wbr>ได้<wbr>มาก ด้วย<wbr>เหตุ<wbr>นี้<wbr>ระบบ<wbr>ฐาน<wbr>ข้อ<wbr>มูล<wbr>จึง<wbr>ต้อง<wbr>การ<wbr>เม<wbr>ม<wbr>โมรี<wbr>สูง<wbr>มาก
+   <dd>- วี<wbr>ดี<wbr>โอ ใน<wbr>การ<wbr>ทำงาน<wbr>ด้ารมัล<wbr>ติ<wbr>มี<wbr>เดีย จำเป็น<wbr>ต้อง<wbr>ใช้<wbr>วิ<wbr>ดี<wbr>โอ<wbr>เพื่อ<wbr>แสดง<wbr>ภาพ<wbr>สำหรับ<wbr>ภาพ<wbr>วิ<wbr>ดี<wbr>โอ<wbr>ใน<wbr>แต่
+    ละ<wbr>เฟ<wbr>รม<wbr>จะ<wbr>ต้อง<wbr>ใช้<wbr>ขนาด<wbr>ถึง 3.75 เม<wbr>กิ<wbr>ไบต์ จาก<wbr>ข้อ<wbr>มูล<wbr>ภาพ<wbr>ที่<wbr>มี<wbr>ความ<wbr>ละเอียด
+   1280x1024 จุด และ<wbr>แต่<wbr>ละ<wbr>จุด<wbr>สามารถ<wbr>อ้างอิง<wbr>สี<wbr>ถึง 24 บิต
+   และ<wbr>การ<wbr>แสดง<wbr>ภาพ<wbr>ของ<wbr>วิ<wbr>ดี<wbr>โอ<wbr>ต้อง<wbr>ใช้<wbr>ถึง 24 เฟ<wbr>รม ภาย<wbr>ใน<wbr>เวลา<wbr>1
+   วินาที ซึ่ง<wbr>ถ้า<wbr>ระบบ<wbr>คอมพิวเตอร์<wbr>เป็น<wbr>แบบ 32 บิต มี<wbr>ขนาด<wbr>หน่วย<wbr>ความ<wbr>จำ
+   4 จิ<wbr>กะ<wbr>ไบต์<wbr>ก็<wbr>ใช้<wbr>เก็บ<wbr>อิม<wbr>เม<wbr>จ เหล่า<wbr>นี้<wbr>ได้ 160 เพ<wbr>จ
+   <dd>- cad แอ<wbr>พพ<wbr>ลิ<wbr>เค<wbr>ชัน<wbr>ทาง<wbr>ด้าน cad(computer aided design)
+   ซึ่ง<wbr>ใช้<wbr>ออก<wbr>แบบ<wbr>โครง<wbr>สร้าง<wbr>ต่างๆ เมื่อ<wbr>นำ<wbr>มา<wbr>ใช้<wbr>ใน<wbr>ระบบ<wbr>เน็ต<wbr>เวร์ก<wbr>ขนาด<wbr>ใหญ่
+   ๆ ซึ่ง<wbr>ต้อง<wbr>การ<wbr>ขนาด<wbr>หน่วย<wbr>ความ<wbr>จำ<wbr>มาก<wbr>มาย<wbr>เพื่อ<wbr>ให้<wbr>เซอร์ฟเวอร์ใช่<wbr>ใน<wbr>การ<wbr>เก็บ<wbr>ข้อ<wbr>มูล<wbr>และ<wbr>ก็<wbr>จะ<wbr>มี<wbr>เครื่อง<wbr>เดสค์<wbr>ท้อป
+   ที่<wbr>จะ<wbr>ขอ<wbr>ให้<wbr>บริการ<wbr>จาก<wbr>เซอร์ฟเวอร์<wbr>เพื่อ<wbr>ใช้<wbr>ข้อ<wbr>มูล<wbr>จาก<wbr>ฐาน<wbr>ข้อ<wbr>มูล<wbr>เซอร์ฟเวอร์<wbr>มา<wbr>ทำงาน<wbr>ด้าน<wbr>ซิ<wbr>มู<wbr>เล<wbr>ชัน
+   หรือ<wbr>งาน<wbr>จำลอง
+   <dd>- gis (geographic information) เป็น<wbr>ระบบ<wbr>ที่<wbr>รวม<wbr>เอา<wbr>ทั้ง<wbr>แผน<wbr>ที่
+   อิม<wbr>เม<wbr>จ และ<wbr>ข้อ<wbr>มูล<wbr>จำนวน<wbr>มาก เข้า<wbr>ไว้<wbr>ใน<wbr>ระบบ<wbr>เดียว<wbr>กัน ก็<wbr>จำเป็น<wbr>ต้อง<wbr>ใช้<wbr>หน่วย<wbr>ความ<wbr>จำ
+   ขนาด<wbr>มหาศาล<wbr>เพื่อ<wbr>เพิ่ม<wbr>ประสิทธิภาพ<wbr>ให้<wbr>กับ<wbr>มัน
+   <dd>- การ<wbr>จัด<wbr>การ<wbr>ด้าน number crunching ซึ่ง<wbr>ต้อง<wbr>ใช้<wbr>กับ<wbr>ตัว<wbr>เลข<wbr>ที่<wbr>มี<wbr>ขนาด<wbr>ใหญ่<wbr>และ<wbr>มี<wbr>การ<wbr>คำนวณ<wbr>มา<wbr>กก<wbr>มาย
+   ซับ<wbr>ซ้อน<wbr>สูง ซึ่ง<wbr>โปรแกรม<wbr>ลักษณะ<wbr>ดัง<wbr>กล่าว<wbr>นั้น<wbr>ต้อง<wbr>การ<wbr>หน่วย<wbr>ความ<wbr>จำ<wbr>มาก<wbr>มาย
+   เพื่อ<wbr>เก็บ<wbr>และ<wbr>คำนวณ<wbr>ตัว<wbr>เลข<wbr>เหล่า<wbr>นี้ เรียก<wbr>ว่า ยิ่ง<wbr>มาก<wbr>ยิ่ง<wbr>ดี<wbr>ที<wbr>เดียว
+
+   <p>
+   <table width=100% bgcolor=ffdcb9>
+       <tr><!-- row 1 -->
+         <td><font face = "ms sans serif"><b>ส่ง<wbr>ท้าย<wbr></b></font></td>
+       </tr>
+   </table>
+
+   <dd>ผู้<wbr>อ่าน<wbr>คง<wbr>จะ<wbr>เห็น<wbr>ข้อ<wbr>ดี<wbr>ของ<wbr>ระบบ<wbr>คอมพิวเตอร์<wbr>แบบ 64 บิต
+   ตาม<wbr>ที่<wbr>ผู้<wbr>เขียน<wbr>ได้<wbr>ให้<wbr>เหตุผล<wbr>ไป<wbr>ใน<wbr>หลาย ๆ แง่<wbr>กัน<wbr>บ้าง<wbr>แล้ว<wbr>นะ<wbr>ครับ
+   แล้ว<wbr>ก็<wbr>โปรด<wbr>เตรียม<wbr>ตัว<wbr>เตรียม<wbr>ใจ<wbr>กัน<wbr>ได้<wbr>แล้ว เพราะ<wbr>มัน<wbr>กำลัง<wbr>จะ<wbr>มา<wbr>แทน<wbr>ระบบ<wbr>32
+   บิต ที่<wbr>ใช้ ๆ กัน<wbr>ใน<wbr>ปัจจุบัน<wbr>นี้ ผู้<wbr>เขียน<wbr>ก็<wbr>ยอม<wbr>รับ<wbr>ครับ<wbr>ว่า<wbr>ขนาด
+   64 บิต มัน<wbr>ใหญ่<wbr>มหาศาล<wbr>จริง ๆ และ<wbr>ก็<wbr>คง<wbr>ต้อง<wbr>ยอม<wbr>รับ<wbr>อีก<wbr>เช่น<wbr>กัน<wbr>ว่า
+   เมื่อ<wbr>ถึง<wbr>เวลา<wbr>นั้น<wbr>แล้ว<wbr>มัน<wbr>อาจ<wbr>จะ<wbr>ไม่<wbr>พอ<wbr>อี<wbr>ก็<wbr>ได้ เพราะ<wbr>ความ<wbr>ต้อง<wbr>การ<wbr>ของ<wbr>คน<wbr>เรา<wbr>ไม่<wbr>มี<wbr>ขีด<wbr>กำจัด
+   อย่าง<wbr>เมื่อ<wbr>ก่อน<wbr>ที่<wbr>ไอ<wbr>บีเอ็ม<wbr>ออก<wbr>ไมโคร<wbr>คอมพิวเตอร์<wbr>เอกซ์<wbr>ที<wbr>มา<wbr>ใหม่
+   ๆ มี<wbr>หน่วย<wbr>ความ<wbr>จำ 640 กิโล<wbr>ไบต์ ก็<wbr>คุย<wbr>ได้<wbr>แล้ว<wbr>ว่า<wbr>เหลือ<wbr>เฟือ<wbr>แล้ว<wbr>เดี๋ยว<wbr>นี้<wbr>เป็น<wbr>ไง<wbr>ครับ
+   พวก<wbr>แอ<wbr>พพ<wbr>ลิ<wbr>เค<wbr>ชัน ที่<wbr>ออก<wbr>มา<wbr>ใหม่ ๆ ตอน<wbr>นี้<wbr>ที่<wbr>มี<wbr>ความ<wbr>สามารถ<wbr>สูง
+   ๆ ขนาด<wbr>หน่วย<wbr>ความ<wbr>จำ 640 เค เรียก<wbr>ว่า<wbr>ไม่<wbr>ต้อง<wbr>คุย<wbr>กัน<wbr>แล้ว<wbr>มัน<wbr>ดู<wbr>เล็ก<wbr>ไป<wbr>เลย<wbr>ด้วย<wbr>ซ้ำ
+   <dd>    ท้าย<wbr>นี้<wbr>ผู้<wbr>เขียน<wbr>หวัง<wbr>ว่า<wbr>บท<wbr>ความ<wbr>ชุด<wbr>นี้<wbr>คง<wbr>ทำ<wbr>ให้<wbr>ผู้<wbr>อ่าน<wbr>เห็น<wbr>ความ<wbr>สำคัญ<wbr>ของ
+   ระบบ 64 บิต ที่<wbr>กำลัง<wbr>เป็น
+   เท<wbr>ค<wbr>โน<wbr>โย<wbr>ลี<wbr>ทาง<wbr>ด้าน<wbr>ชิ<wbr>พ ที่<wbr>กำลัง<wbr>ก้าว<wbr>มา<wbr>ใหม่<wbr>นี้<wbr>นะ<wbr>ครับ<wbr>.....
+
+   <p>
+   <hr noshade>
+   ที่<wbr>มา : อนันต์ กิต<wbr>ติ<wbr>บรรลุ วารสาร<wbr>ไมโคร<wbr>คอมพิวเตอร์ เล่ม<wbr>ที่
+   78 (มกราคม 2535)
+
+   </body>
+
+</html>

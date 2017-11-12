@@ -1,0 +1,18 @@
+Web re-ranking (lecture 10)
+1. Implement two programs (with any programming language, e.g., Python, Java):
+    1.1) One for creating the "urlmap.txt" and "webgraph.txt" files, as an example in the slide 4.
+    1.2) The other for calculating PageRank scores and storing them into the "page_scores.txt" file, as an example in the slide 5.
+
+2. Modify the "IndexFiles.java" and "SearchFiles.java" files to index and search pages based on their PageRank scores.
+
+3. Send all of above four programs to the class' CloudBox under your "reranking" folder.
+
+Web interfacing (lecture 11)
+1. Modify the Lucene searching interface:
+    1.1) Provide the search results looks like Google, i.e., title, short description (text snippet), and url.
+    1.2) Provide the ranking options, e.g., only cosine sim., only PageRank score, or the combination of both.
+
+2. Send all as a zip file to the class' CloudBox under your "luceneweb" folder.
+
+------------------
+Deadline: Wed. 15 Nov. 2017 before mid night

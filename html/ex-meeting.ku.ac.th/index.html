@@ -1,0 +1,226 @@
+
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-874">
+<title>emeeting : the paperless meeting.</title>
+<style type="text/css">
+<!--
+.footer {font-family:tahoma;font-size:10px; color:#595959;}
+.alpha1 {
+	filter: alpha(opacity=95, finishopacity=60, style=1, startx=50, starty=0, finishx=50, finishy=150);
+}
+.btn{
+	font-family: "microsoft sans serif", "ms sans serif", "tahoma";
+	font-size: 8pt;
+	width : 50 px;
+	color: #003399;
+	padding-right: 3px;
+	padding-left: 3px;
+	border: 1px solid #cccccc;
+	filter: progid:dximagetransform.microsoft.gradient(gradienttype=0,startcolorstr="#ffffff",endcolorstr="#457cb3");
+}
+-->
+</style>
+<link href="css/papyrus.css" rel="stylesheet" type="text/css">
+<script language="javascript" type="text/javascript">
+function submit()
+{
+  document.form1.submit;
+}
+function reset() {
+	document.form1.txtuname.value="";
+	document.form1.txtpwd.value="";
+	//document.emailform.comments.value="";
+}
+</script>
+
+<style type="text/css">
+<!--
+.style2 {font-family: "microsoft sans serif", "ms sans serif"}
+.pophelp{
+	background-color: #ffffff; 
+	border: 1px #a1a5a9 solid; 
+	font-family: "microsoft sans serif", "ms sans serif";
+	padding: 3px;
+	font-size: 8pt;
+}
+.banner{
+	font-family: "microsoft sans serif", "ms sans serif", "tahoma";
+	font-size: 8pt;
+	color: #003399;
+	padding-right: 3px;
+	padding-left: 3px;
+	/*border: 1px solid #cccccc;*/
+	filter: progid:dximagetransform.microsoft.gradient(gradienttype=0,startcolorstr="#000054a6",endcolorstr="#ff006699");
+}
+.txtbanner{
+	font-family: "eucrosiaupc";
+	font-size: 25px;
+	font-weight: bold;
+	color: #ffffff;
+	padding-left: 10px;
+	filter:progid:dximagetransform.microsoft.dropshadow(offx=2, offy=-1, color='#006699', positive='true');
+	width:380;
+}
+.txtorg{
+	font-family: "eucrosiaupc";
+	font-size: 28px;
+	font-style: italic;
+	font-weight: bold;
+	color: #ffffff;
+	text-align: center;
+	filter:progid:dximagetransform.microsoft.dropshadow(offx=1, offy=-1, color='#0033ff', positive='true');
+	width:100%;
+}
+.copyright {
+	font-weight: bold; font-size: 8pt; color: #ffffff; font-family: tahoma; text-decoration: none
+}
+
+-->
+</style>
+</head>
+<body bgcolor="whitesmoke" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onload="form1.txtuname.focus()">
+<!--  ======= pophelp ===========  -->
+<div id='pophelp' style='position:absolute;visibility:hidden;border:0px ridge;width:130'>
+<table class="pophelp" width="100%" cellpadding="0" cellspacing="0" align="center">
+<tr><td><a href="pmanual/user_guide.pdf" target="_blank">¤ùèá×í¼ùéãªé</a></td></tr>
+<tr><td><a href="pmanual/admin_guide.pdf" target="_blank">¤ùèá×í¼ùé¨ñ´¡òã»ãðªøá</a></td></tr>
+</table>
+</div>
+<script>
+function showhelp(obj,obj2){
+	x = document.getelementbyid(obj).offsetleft + document.getelementbyid('mainbox').offsetleft;
+	y = document.getelementbyid(obj).offsettop + document.getelementbyid('mainbox').offsettop + 101;
+	document.getelementbyid(obj2).style.left = x;
+	document.getelementbyid(obj2).style.top = y;
+	document.getelementbyid(obj2).style.visibility = "";
+}
+</script>
+<script event=onclick() for=document>pophelp.style.visibility = "hidden";</script>
+<!--  =========================  -->
+<table width="100%" height="100%" cellpadding="0" cellspacing="0" align="center">
+<tr>
+<td>
+<table width="798" cellpadding="0" cellspacing="0" align="center" id="mainbox">
+    <tr>
+        <td style="border-width:1; border-color:rgb(180,180,180); border-style:solid;">
+		<table width="798"  border="0" cellpadding="0" cellspacing="0" align="center" bgcolor="white">
+			<tr>
+				<td colspan="3"  style="border-bottom:1 solid rgb(180,180,180)">
+				<table width="100%"  border="0" cellpadding="0" cellspacing="0">
+				  <tr>
+					<td valign="top" width="77" height="72"><img height="72" src="images/logo.png" width="77" border="0"></td>
+					<td valign="top" width="1" background="images/dot.gif"><img height="1" src="images/tr.gif" width="1" border="0"></td>
+					<td valign="center" bgcolor="#ffffff">
+					<!-- table2 -->
+					  <table id=table2 cellspacing=0 cellpadding=0 width="100%" border=0>
+						<tbody>
+						<tr>
+						  <td class="banner" height="35" valign="bottom"><div class="txtbanner">ãðºº¡òã»ãðªøáíôàåç¡·ãí¹ô¡êì</div></td>
+						 </tr>
+						<tr>
+						  <td background="images/index_emeeting_02.gif" height="36" valign="bottom"><div class="txtorg">áëòçô·âòåñâà¡éµãèòêµãì</div></td>
+						</tr>
+					</tbody>
+					</table>
+					<!-- table2 -->
+					</td>
+				</tr>
+				</table>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="3" height="20">
+				<table class=inbox width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;" height="20" align="center">
+					<tr>
+					<td>&nbsp;</td>
+<!-- 
+					<td width="25"><img src="images/icon_reg.png" border="0"></td>
+					<td width="58" align="center" valign="middle" nowrap><a href="register/" target="_blank">å§·ðàºõâ¹</a></td>
+ -->
+					<td width="25"><img src="images/icon_guide.png" border="0"></td>
+					<td width="50" align="center" valign="middle" nowrap id="helpmenu"><a href="#" onmouseover="showhelp('helpmenu','pophelp');">¤óá¹ð¹ó</a></td>
+					<td width="25"><img src="images/icon_contract.png" border="0"></td>
+					<td width="30" align="center" valign="middle" nowrap><a href="process/contract.php?mailto=cpcvrt@ku.ac.th" target="_blank">µô´µèí</a></td>
+					<td width="25"><img src="images/icon_stat.png" border="0"></td>
+					<td width="78" align="center" valign="middle" nowrap><a href="show_stat.php" target="_blank">ê¶ôµô¡òããªé§ò¹</a></td>
+					<td width="25"><img src="images/icon_admin.png" border="0"></td>
+					<td width="60" align="center" valign="middle" nowrap><a href="cpanel/" target="_blank">¼ùé´ùáåãðºº</a></td>
+					</tr>
+				</table>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="3">
+				<table width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse;" align="center">
+				<tr>
+				<td width="380" height="374" background="images/index_emeeting_06.gif" align="center"  valign="top" style="padding-top: 25px">
+				<fieldset style="width:324" height="270" style="padding: 5px;border:0;background-image:url('images/bg_member_login.gif')">
+				 <legend><font size="2" face="microsoft sans serif, ms sans serif, sans-serif"></font></legend>
+				 <table width="100%" height="260" cellpadding="0" cellspacing="0" style="border-collapse:collapse;" align="center">
+					<tr><td align="center"><img src="images/index_emeeting_04.gif" width="304" height="117" alt=""></td></tr>
+					<tr><td align="center">
+						<form name="form1" method="post" action="/index.php">
+						  <table width="95%" border="0" cellpadding="0" cellspacing="0">
+							<tr><td align="right"><img src="images/member_login.gif" width="304" height="21"></td></tr>
+							<tr>
+							  <td >
+						  <table width="98%" height="74"  border="0" align="right" cellpadding="0" cellspacing="0">
+							<tr>
+							  <td width="29%" class="bld_blue">username </td>
+							  <td width="71%"><input name="txtuname" type="text" class="frm" id="txtuname"></td>
+							</tr>
+							<tr>
+							  <td class="bld_blue">password</td>
+							  <td><input name="txtpwd" type="password" class="frm" id="txtpwd"></td>
+							</tr>
+							<tr>
+							  <td height="24" class="bld_blue">¡òã»ãðªøá</td>
+							  <td><select name="orgid" class="frm" id="orgid" style="width:210 px"><option value="">àå×í¡¡òã»ãðªøá</option><option value="1">¡òã»ãðªøáêàòáëòçô·âòåñâà¡éµãèòêµãì</option><option value="2">¡òã»ãðªøá¤³ð¡ããá¡òãºãôëòãáëòçô·âòåñâà¡éµãèòêµãì</option><option value="3">¡òã»ãðªøá ¡.º.á. áëòçô·âòåñâà¡éµãèòêµãì</option></select></td>
+							</tr>
+							<tr>
+							  <td height="24" class="bld_blue">&nbsp;</td>
+							  <td>
+							  <input name="submit" type="submit" id="submit" value="submit" class="btn">
+							  <input name="reset" type="reset" id="reset" value="reset" class="btn">
+								</td>
+							</tr>
+						  </table>
+							</td>
+							</tr>
+						  </table>
+						  </form>	
+						</td>
+					</tr>
+				</table>
+			</fieldset>
+				</td>
+				<td colspan="2"><img src="images/index_emeeting_07.gif" width="418" height="374" alt=""></td>
+			</tr>
+		</table>
+		</td>
+		</tr>
+		<tr>
+			<td><img src="images/spacer.gif" width="305" height="1" alt=""></td>
+			<td><img src="images/spacer.gif" width="62" height="1" alt=""></td>
+			<td><img src="images/spacer.gif" width="431" height="1" alt=""></td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+	<tr>
+		<td style="border-width:1; border-color:rgb(180,180,180); border-style:solid;">
+		<table style="border-collapse: collapse" bordercolor=#111111 height=20 cellspacing=0 cellpadding=0 width="100%" bgcolor=#d0d0d0 border=0>
+		  <tr>
+			<td class=copyright>copyright &copy; office of computer services, kasetsart university</td>
+			<td class=copyright align=right>e-meeting[papyrus] v.3.0 : nov. 2007</td>
+		  </tr>
+		</table>
+		</td>
+	</tr>
+</table>
+</td>
+</tr>
+</table>
+</body>
+</html>

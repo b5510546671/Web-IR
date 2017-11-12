@@ -1,0 +1,120 @@
+<html>
+<head>
+<title>สารพัน unix ตอน sa กับการรักษาความปลอดภัยข้อมูล</title>
+</head>
+<body bgcolor=white text=black>
+<font face = "ms sans serif" size = -1>
+<table cols=1 width="100%" bgcolor="#d9ffaa" >
+<tr>
+<td><font face = "ms sans serif">
+<center><b>สารพัน unix ตอน sa กับการรักษาความปลอดภัยข้อมูล</b></center>
+</td>
+</tr>
+</table><br>
+<p>
+<dd>ระบบ<wbr>คอมพิวเตอร์<wbr>ที่<wbr>ให้<wbr>บริการ<wbr>แก่<wbr>ผู้<wbr>ใช้<wbr>งาน<wbr>หลาย ๆ คน<wbr>พร้อม<wbr>กัน เช่น ยูนิกซ์ หรือ<wbr>ระบบ<wbr>ใด<wbr>ก็<wbr>ตาม ถ้า<wbr>ปล่อย<wbr>ให้<wbr>ผู้<wbr>ใช้<wbr>งาน<wbr>ภาย<wbr>ใน<wbr>ระบบ<wbr>ทุก<wbr>คน<wbr>สามารถ<wbr>จัด<wbr>การกับระบบ<wbr>ได้<wbr>ตาม<wbr>ใจ<wbr>ชอบ<wbr>ของ<wbr>แต่<wbr>ละ<wbr>คน<wbr>แล้ว ความ<wbr>ยุ่ง<wbr>ยาก<wbr>และ<wbr>ปัญหา<wbr>ต่าง ๆ ย่อม<wbr>ตาม<wbr>มา<wbr>ไม่<wbr>หยุด<wbr>หย่อน<wbr>เป็น<wbr>แน่ ดัง<wbr>นั้น<wbr>ใน<wbr>ระบบ<wbr>ดัง<wbr>กล่าว<wbr>จึง<wbr>ต้อง<wbr>มี<wbr>กรรม<wbr>วิธี<wbr>การ<wbr>ป้อง<wbr>กัน<wbr>ปัญหา<wbr>ที่<wbr>จะ<wbr>เกิด<wbr>ขึ้น<wbr>นี้ ระบบ<wbr>ยูนิกซ์<wbr>ได้<wbr>มี<wbr>การ<wbr>กำหนด<wbr>สิทธิ<wbr>ต่าง ๆ ใน<wbr>การ<wbr>ดำ<wbr>เนิน<wbr>การ<wbr>ของ<wbr>ผู้<wbr>ใช้<wbr>ทุก<wbr>คน<wbr>ใน<wbr>ระบบ<wbr>ให้<wbr>เป็น<wbr>ไป<wbr>ตาม<wbr>ความ<wbr>เหมาะ<wbr>สม โดย<wbr>แบ่ง<wbr>ระดับ<wbr>ความ<wbr>สำคัญ<wbr>ของ<wbr>ผู้<wbr>ใช้<wbr>งาน<wbr>เป็น 2 หรือ<wbr>หลาย<wbr>ระดับ ก็<wbr>แล้ว<wbr>แต่<wbr>ระบบ<wbr>ซึ่ง<wbr>ก็<wbr>มี<wbr>ข้อ<wbr>ได้<wbr>เปรียบ<wbr>และ<wbr>เสีย<wbr>เปรียบ<wbr>แตก<wbr>ต่าง<wbr>กัน<wbr>ไป และ<wbr>กำหนด<wbr>ให้ sa ซึ่ง<wbr>มี<wbr>ชื่อ<wbr>เต็ม ๆ <wbr>ว่า system administrator ที่<wbr>หลาย ๆ  คน<wbr>เรียก<wbr>ว่า root หรือ superuser<wbr> เป็น<wbr>ผู้<wbr>ที่<wbr>มี<wbr>สิทธิ<wbr>พิเศษ<wbr>สามารถ<wbr>ดำ<wbr>เนิน<wbr>การ<wbr>จัด<wbr>การ<wbr>ระบบ<wbr>ได้<wbr>สูง<wbr>สุด<wbr>ให้<wbr>คอย<wbr>ควบ<wbr>คุม<wbr>ดู<wbr>แล<wbr>ให้<wbr>ระบบ<wbr>ทำ<wbr>งาน<wbr>อย่าง<wbr>เป็น<wbr>ระเบียบ<wbr>และ<wbr>มี<wbr>ความ<wbr>คล่อง<wbr>ตัว
+<p>
+<b><font color=green>บริการ<wbr>คือ<wbr>งาน<wbr>ของ sa</font></b><p>
+
+<dd>ตาม<wbr>ความ<wbr>หมาย<wbr>โดย<wbr>ตรง<wbr>ชื่อ<wbr>ของ sa <wbr>ก็<wbr>บอก<wbr>อยู่<wbr>แล้ว<wbr>ว่า<wbr>เป็น<wbr>ผู้<wbr>บริหาร<wbr>ระบบ ดัง<wbr>นั้น<wbr>ลักษณะ<wbr>หน้า<wbr>ที่<wbr>หลัก ๆ ของ sa ก็<wbr>คือ<wbr>การ<wbr>จัด<wbr>การ<wbr>บริหาร<wbr>ให้<wbr>ระบบ<wbr>สามารถ<wbr>สนอง<wbr>ความ<wbr>ต้อง<wbr>การ<wbr>ของ<wbr>ผู้<wbr>ใช้<wbr>ได้<wbr>มาก<wbr>ที่<wbr>สุด<wbr>เท่า<wbr>ที่<wbr>เป็น<wbr><wbr>ไป<wbr>ได้ โดย<wbr>ลักษณะ<wbr>ของ<wbr>งาน<wbr>สามารถ<wbr>แบ่ง<wbr>ออก<wbr>เป็น<wbr>ลักษณะ<wbr>ใหญ่ ๆ ได้<wbr>ดัง<wbr>นี้
+<dd>- เกี่ยวกับผู้<wbr>ใช้<wbr>งาน<wbr>ภาย<wbr>ใน<wbr>ระบบ ผู้<wbr>ใช้<wbr>งาน<wbr>ทุก<wbr>คน<wbr>ใน<wbr>ระบบ<wbr>จะ<wbr>สามารถ<wbr>เข้า<wbr>ใช้<wbr>งาน<wbr>ระบบ<wbr>ได้ จะ<wbr>ต้อง<wbr>ได้<wbr>รับ<wbr>ความ<wbr>เห็น<wbr>ชอบ<wbr>หรือ<wbr>ผ่าน<wbr>การ<wbr>พิจารณา<wbr>ของ sa เสีย<wbr>ก่อน<wbr>ว่า<wbr>สม<wbr>ควร<wbr>หรือ<wbr>ไม่ ดัง<wbr>นั้น<wbr>หน้า<wbr>ที่<wbr>หลัก<wbr>อย่าง<wbr>หนึ่ง<wbr>ของ sa ก็<wbr>คือ การ<wbr>กำหนด<wbr>ชื่อ<wbr>และ<wbr>รหัส<wbr>ผ่าน<wbr>เริ่ม<wbr>ต้น<wbr>ให้กับผู้<wbr>ใช้<wbr>ใหม่ พร้อม<wbr>ทั้ง<wbr>กำหนด<wbr>ความ<wbr>สามารถ<wbr>ใน<wbr>การ<wbr>ใช้<wbr>ทรัพยากร<wbr>ต่าง ๆ ของ<wbr>ผู้<wbr>ใช้<wbr>ด้วย ใน<wbr>ทางตรง<wbr>ข้าม<wbr>กัน<wbr>ก็<wbr>ต้อง<wbr>ลบ<wbr>หรือ<wbr>ปลด<wbr>ผู้<wbr>ใช้<wbr>ออก<wbr>จาก<wbr>ระบบ อีก<wbr>ทั้ง<wbr>จะ<wbr>ต้อง<wbr>ให้<wbr>คำ<wbr>ปรึกษา<wbr>และ<wbr>ไข<wbr>ข้อ<wbr>ข้อง<wbr>ใจ<wbr>ของ<wbr>ผู้<wbr>ใช้<wbr>งาน<wbr>ด้วย
+<dd>- การ<wbr>ติด<wbr>ตั้ง<wbr>ซอฟต์แวร์และ<wbr>ฮาร์ดแวร์<wbr>เข้า<wbr>สู่<wbr>ระบบ จุด<wbr>เด่น<wbr>ของ<wbr>โอ<wbr>เอสแบบมัลติ<wbr>ทาสกิง คือ<wbr>การ<wbr>นำ<wbr>ทรัพยากร<wbr>ต่าง ๆ ที่<wbr>มี<wbr>อยู่<wbr>มา<wbr>ใช้<wbr>ร่วม<wbr>กัน และ<wbr>ทรัพยากร<wbr>ที่<wbr>จะ<wbr>ใช้<wbr>นั้น<wbr>จะ<wbr>แปรผันกับจำนวน<wbr>ผู้<wbr>ใช้<wbr>งาน และ<wbr>ความ<wbr>แตก<wbr>ต่าง<wbr>ของ<wbr>ลักษณะ<wbr>งาน<wbr>นั้น ๆ ด้วย การ<wbr>ติด<wbr>ตั้ง<wbr>ทรัพยากร<wbr>ต่าง ๆ จึง<wbr>เป็น<wbr>สิ่ง<wbr>ที่<wbr>หลีก<wbr>เลี่ยง<wbr>ไม่<wbr>ได้<wbr>เช่น<wbr>กัน sa จะ<wbr>ต้อง<wbr>เป็น<wbr>ผู้<wbr>ติด<wbr>ตั้ง<wbr>หรือ<wbr>ควบ<wbr>คุม<wbr>การ<wbr>ติด<wbr>ตั้ง<wbr>อีก<wbr>ที ไม่<wbr>ว่า<wbr>จะ<wbr>เป็น<wbr>ซอฟต์แวร์ใหม่ หรือ<wbr>ส่วน<wbr>ฮาร์ดแวร์<wbr>ที่<wbr>เพิ่ม<wbr>เติม<wbr>จากเดิ<wbr>ม
+<dd>- การ<wbr>สำรอง<wbr>ข้อ<wbr>มูล เป็น<wbr>การ<wbr>เก็บ<wbr>ข้อ<wbr>มูล<wbr>สำรอง<wbr>ไว้<wbr>เพื่อ<wbr>ใช้<wbr>ทด<wbr>แทน<wbr>ข้อ<wbr>มูล<wbr>บน<wbr>ระบบ ใน<wbr>กรณี<wbr>ที่<wbr>ข้อ<wbr>มูล<wbr>บน<wbr>ระบบ<wbr>เกิด<wbr>ความ<wbr>เสีย<wbr>หาย<wbr>ขึ้น การ<wbr>สำรอง<wbr>ข้อ<wbr>มูล<wbr>ถ้า<wbr>มี<wbr>การ<wbr>ทำ<wbr>บ่อย<wbr>หรือ<wbr>ถี่<wbr>เท่า<wbr>ไร ข้อ<wbr>มูล<wbr>ที่<wbr>สำรองกับข้อ<wbr>มูล<wbr>จริง<wbr>บน<wbr>ระบบ<wbr>ก็<wbr>มี<wbr>ความ<wbr>ใกล้<wbr>เคียง<wbr>กัน<wbr>มาก<wbr>กว่า<wbr>นั้น แต่<wbr>ใน<wbr>การ<wbr>สำรอง<wbr>ข้อ<wbr>มูล<wbr>นั้น<wbr>จะ<wbr>สูญ<wbr>เสีย<wbr>ประสิทธิภาพ<wbr>ของ<wbr>ระบบ<wbr>ไป<wbr>ส่วน<wbr>หนึ่ง และ<wbr>ต้อง<wbr>ใช้<wbr>เวลา<wbr>พอ<wbr>สม<wbr>ควร<wbr>จึง<wbr>เป็น<wbr>หน้า<wbr>ที่<wbr>ของ sa ใน<wbr>การ<wbr>ตัด<wbr>สิน<wbr>ใจ<wbr>ว่า<wbr>จะ<wbr>มี<wbr>การ<wbr>สำรอง<wbr>ข้อ<wbr>มูล<wbr>ใหม่<wbr>ให้<wbr>มี<wbr>ความ<wbr>ถี่<wbr>เท่า<wbr>ไหร่ และ<wbr>กระ<wbr>ทำ<wbr>ใน<wbr>ช่วง<wbr>เวลา<wbr>ไหน แล้ว<wbr>ต้อง<wbr>สำรอง<wbr>ไฟล์<wbr>อะไร<wbr>บ้าง
+<dd>- วิเคราะห์<wbr>และ<wbr>แก้<wbr>ปัญหา<wbr>ต่าง ๆ ที่<wbr>เกิด<wbr>ขึ้น<wbr>ภาย<wbr>ใน<wbr>ระบบ<wbr>ทั้ง<wbr>ซอฟต์แวร์ และ<wbr>ฮาร์ดแวร์
+<dd>- ดู<wbr>แล<wbr>รักษา<wbr>ความ<wbr>ปลอด<wbr>ภัย<wbr>ของ<wbr>ข้อ<wbr>มูล<wbr>และ<wbr>ระบบ ซึ่ง<wbr>จะ<wbr>กล่าว<wbr>ถึง<wbr>ราย<wbr>ละเอียด<wbr>ต่อ<wbr>ไป
+<p>
+<b><font color=green>ใคร<wbr>บ้าง<wbr>สม<wbr>ควร<wbr>เป็น sa</font></b><p>
+
+<dd>เมื่อ<wbr>มอง<wbr>ถึง<wbr>ระดับ<wbr>ความ<wbr>สำคัญ<wbr>แล้ว<wbr>จะ<wbr>เห็น<wbr>ได้<wbr>ว่า sa เป็น<wbr>ผู้<wbr>ที่<wbr>มี<wbr>ความ<wbr>สำคัญ<wbr>สูง<wbr>สุด<wbr>เลย<wbr>ที<wbr>เดียว เพราะ<wbr>ผู้<wbr>เป็น sa นั้น<wbr>จะ<wbr>สามารถ<wbr>ดำ<wbr>เนิน<wbr>การ<wbr>ได้<wbr>ทุก<wbr>อย่าง<wbr>ใน<wbr>ระบบ<wbr>ได้<wbr>ตาม<wbr>ใจ<wbr>ชอบ ดัง<wbr>นั้น<wbr>การ<wbr>เลือก<wbr>สรร<wbr>ผู้<wbr>ใด<wbr>มา<wbr>รับ<wbr>บท<wbr>บาท<wbr>ของ sa นั้น<wbr>จะ<wbr>ต้อง<wbr>มี<wbr>ความ<wbr>พิถีพิถัน<wbr>เป็น<wbr>พิเศษ โดย<wbr>ทั่ว ๆ ไป<wbr>แล้ว<wbr>ลักษณะ<wbr>เด่น ๆ ของ<wbr>ผู้<wbr>ที่<wbr>จะ<wbr>มา<wbr>เป็น sa ก็<wbr>คือ
+<dd>1.  เป็น<wbr>ผู้<wbr>ที่<wbr>มี<wbr>ความ<wbr>รู้<wbr>ความ<wbr>เข้า<wbr>ใจ<wbr>ถึง<wbr>การ<wbr>ทำ<wbr>งาน<wbr>ของ<wbr>ระบบ ไม่<wbr>ว่า<wbr>จะ<wbr>เป็น<wbr>ส่วน<wbr>ของ<wbr>โอ<wbr>เอสเอง<wbr><wbr>, ซอฟต์แวร์<wbr>, ฮาร์ดแวร์ และ<wbr>ต้อง<wbr>สามารถ<wbr>วิเคราะห์<wbr>พร้อม<wbr>กับ<wbr>แก้<wbr>ปัญหา<wbr>ที่<wbr>เกิด<wbr>ขึ้น
+<dd>2.  มี<wbr>ความ<wbr>รอบคอบ<wbr>ละเอียด<wbr>อ่อน เพราะ<wbr>หาก sa กระ<wbr>ทำ<wbr>สิ่ง<wbr>ใด<wbr>ก็<wbr>ตาม<wbr>ผิด<wbr>พลาด<wbr>บาง<wbr>ครั้ง<wbr>จะ<wbr>มี<wbr>ผล<wbr>ต่อ<wbr>ระบบ<wbr>โดย<wbr>รวม
+<dd>3.  เป็น<wbr>ผู้<wbr>ที่<wbr>มี<wbr>ความ<wbr>รับ<wbr>ผิด<wbr>ชอบ<wbr>สูง และ<wbr>เป็น<wbr>ผู้<wbr>เก็บ<wbr>ความ<wbr>ลับ<wbr>ได้<wbr>ดี
+<dd>4.  เป็น<wbr>ผู้<wbr>ที่<wbr>มี<wbr>คุณ<wbr>ธรรม<wbr>ประจำ<wbr>ใจ sa สามารถ<wbr>เข้า<wbr>ไป<wbr>มี<wbr>ส่วน<wbr>รับ<wbr>รู้<wbr>และ<wbr>แก้<wbr>ไข<wbr>เปลี่ยน<wbr>แปลง<wbr>ข้อ<wbr>มูล<wbr>ทุก<wbr>อย่าง<wbr>ใน<wbr>ระบบ<wbr>ได้<wbr>ไม่<wbr>ว่า<wbr>ข้อ<wbr>มูล<wbr>นั้น<wbr>จะ<wbr>เป็น<wbr>ของ<wbr>ใคร<wbr>ก็<wbr>ตาม ดัง<wbr>นั้น<wbr>คุณ<wbr>ธรรม<wbr>จึง<wbr>เป็น<wbr>สิ่ง<wbr>สำคัญ<wbr>ที่ sa ทุก<wbr>คน<wbr>ต้อง<wbr>มี (sa ต้อง<wbr>เป็น<wbr>คน<wbr>ดี<wbr>ครับ)
+<dd>5.  เป็น<wbr>บุคคล<wbr>ที่<wbr>มี<wbr>คุณสมบัติ<wbr>ตาม<wbr>ข้อ 1-4
+<p>
+<b><font color=green>ความ<wbr>ปลอด<wbr>ภัย<wbr>ข้อ<wbr>มูล<wbr><wbr></font></b><p>
+
+<dd>ทุก<wbr>คน<wbr>ต้อง<wbr>การ<wbr>ความ<wbr>เป็น<wbr>ส่วน<wbr>ตัว<wbr>ใน<wbr>การ<wbr>ทำ<wbr>งาน หลาย<wbr>สิ่ง<wbr>หลาย<wbr>อย่าง<wbr>เป็น<wbr>ความ<wbr>ลับ<wbr>ไม่<wbr>อยาก<wbr>ให้<wbr>คน<wbr>อื่น<wbr>รับ<wbr>รู้ เมื่อยูนิกซ์เป็น<wbr>โอ<wbr>เอสแบบ<wbr>หลาย<wbr>ผู้<wbr>ใช้ ถ้า<wbr>ผู้<wbr>หนึ่ง<wbr>ผู้<wbr>ใด<wbr>สามารถ<wbr>เข้า<wbr>ไป<wbr>ก้าว<wbr>ก่าย<wbr>ใน<wbr>การ<wbr>ทำ<wbr>งาน<wbr>ของ<wbr>ผู้<wbr>อื่น<wbr>แล้ว<wbr>ย่อม<wbr>ไม่<wbr>ดี<wbr>แน่ หรือ<wbr>การก<wbr>ระ<wbr>ทำ<wbr>ของ<wbr>บุคคล<wbr>ใด<wbr>บุคคล<wbr>หนึ่ง<wbr>แล้ว<wbr>ส่ง<wbr>ผล<wbr>กระ<wbr>ทบ<wbr>ถึง<wbr>ผู้<wbr>อื่น<wbr>ก็<wbr>ไม่<wbr>ดี<wbr>เช่น<wbr>กัน ดัง<wbr>นั้น<wbr>โอ<wbr>เอสประเภท<wbr>หลาย<wbr>ผู้<wbr>ใช้<wbr>ต้อง<wbr>ออก<wbr>แบบ และ<wbr>มี<wbr>มาตร<wbr>การ<wbr>ใน<wbr>การ<wbr>รักษา<wbr>ความ<wbr>ปลอด<wbr>ภัย<wbr>ข้อ<wbr>มูล<wbr>ใน<wbr>ระบบ<wbr>ด้วย
+<p>
+<b><font color=green>รักษา<wbr>ความ<wbr>ปลอด<wbr>ภัย<wbr>ข้อ<wbr>มูล<wbr>เพื่อ<wbr>อะไร<wbr><wbr></font></b><p>
+
+<dd>สุด<wbr>ยอด<wbr>แห่งการ<wbr>รักษา<wbr>ความ<wbr>ปลอด<wbr>ภัย<wbr>ข้อ<wbr>มูล<wbr>ใน<wbr>ระบบ<wbr>คอมพิวเตอร์<wbr>ใด ๆ ก็<wbr>ตาม คือ<wbr>สามารถ<wbr>รักษา<wbr>คุณสมบัติ<wbr>หลัก ๆ ได้<wbr>ดัง<wbr>นี้ ก็<wbr>นับ<wbr>ได้<wbr>ว่า<wbr>การ<wbr>รักษา<wbr>ความ<wbr>ปลอด<wbr>ภัย<wbr>ข้อ<wbr>มูล<wbr>นั้น<wbr>ประสบ<wbr>ความ<wbr>สำเร็จ<wbr>แล้ว
+<dd>1.  รักษา<wbr>ความ<wbr>ลับ (security) ซึ่ง<wbr>รวม<wbr>ถึง<wbr>ทุก<wbr>สิ่ง<wbr>ทุก<wbr>อย่าง<wbr>ใน<wbr>ระบบ เช่น<wbr>อุปกรณ์<wbr>ต่าง ๆ หรือ<wbr>บรรดา<wbr>แฟ้ม<wbr>ข้อ<wbr>มูล<wbr>จะ<wbr>สามารถ<wbr>เข้า<wbr>ถึง<wbr>ได้<wbr>เฉพาะ<wbr>บุคคล<wbr>ที่<wbr>ได้<wbr>รับ<wbr>สิทธิ<wbr>เท่า<wbr>นั้น
+<dd>2.  รักษา<wbr>ความ<wbr>ปลอด<wbr>ภัย<wbr>เป็น<wbr>หนึ่ง<wbr>เดียว (integrity) ข้อ<wbr>มูล<wbr>ต่าง ๆ จะ<wbr>มี<wbr>การ<wbr>แก้<wbr>ไข<wbr>หรือ<wbr>เปลี่ยน<wbr>แปลง<wbr>ได้<wbr>เพียง<wbr>บุคคล<wbr>ที่<wbr>ได้<wbr>รับ<wbr>สิทธิ<wbr>เท่า<wbr>นั้น ผู้<wbr>อื่น<wbr>จะ<wbr>ทำ<wbr>การ<wbr>เปลี่ยน<wbr>แปลง<wbr>ไม่<wbr>ได้
+<dd>3.  รักษา<wbr>ความ<wbr>สมดุล (avilability) ข้อ<wbr>มูล<wbr>และ<wbr>อุปกรณ์<wbr>ต่าง ๆ ภาย<wbr>ใน<wbr>ระบบ<wbr>จะ<wbr>ต้อง<wbr>เข้า<wbr>ถึง<wbr>ได้<wbr>เสมอ เมื่อ<wbr>ต้อง<wbr>การ<wbr>ใช้ โดย<wbr>มี<wbr>เงื่อน<wbr>ไข<wbr>ว่า<wbr>ผู้<wbr>ใช้<wbr>จะ<wbr>ต้อง<wbr>เป็น<wbr>ผู้<wbr>มี<wbr>สิทธิ<wbr>ใน<wbr>อุปกรณ์<wbr>หรือ<wbr>ข้อ<wbr>มูล<wbr>ต่าง ๆ นั้น
+<p>
+<b><font color=green>สิ่ง<wbr>ที่<wbr>ต้อง<wbr>คำนึง<wbr><wbr></font></b><p>
+
+<dd>การ<wbr>ออก<wbr>แบบ<wbr>รักษา<wbr>ความ<wbr>ปลอด<wbr>ภัย<wbr>ข้อ<wbr>มูล<wbr>เป็น<wbr>สิ่ง<wbr>ที่<wbr>ยาก<wbr>มาก เพราะ<wbr>หาก<wbr>มี<wbr>การ<wbr>ควบ<wbr>คุม<wbr>อย่าง<wbr>จุก<wbr>จิก หยุมหยิม ยุ่ง<wbr>ยาก จน<wbr>ก่อ<wbr>ความ<wbr>วุ่น<wbr>วาย<wbr>แล้ว การ<wbr>ทำ<wbr>งาน<wbr>จะ<wbr>ต้อง<wbr>ใช้<wbr>ความ<wbr>ระ<wbr>มัด<wbr>ระวัง<wbr>อย่าง<wbr>มาก คง<wbr>จะ<wbr>ลำบาก<wbr>ใจ<wbr>ก็<wbr>พอ<wbr>ดู<wbr>ที<wbr>เดียว ระบบ<wbr>การ<wbr>รักษา<wbr>ความ<wbr>ปลอด<wbr>ภัย<wbr>ข้อ<wbr>มูล<wbr>ที่<wbr>ดี นอก<wbr>จาก<wbr>จะ<wbr>ต้อง<wbr>คำนึง<wbr>ถึง<wbr>หลัก<wbr>การ<wbr>ต่าง ๆ แล้ว<wbr>สิ่ง<wbr>ที่<wbr>จะ<wbr>มอง<wbr>ข้าม<wbr>ไม่<wbr>ได้<wbr>คือ ความ<wbr>รู้<wbr>สึก<wbr>ของ<wbr>ผู้<wbr>ใช้<wbr>งาน<wbr>ระบบ<wbr>โดย<wbr>หลัก<wbr>ง่าย ๆ คือ
+<dd>1.  ระบบ<wbr>รักษา<wbr>ความ<wbr>ปลอด<wbr>ภัย<wbr>ต้อง<wbr>ง่ายและ<wbr>ตรง<wbr>ไป<wbr>ตรง<wbr>มา
+<dd>2.  ให้<wbr>สิทธิกับผู้<wbr>ใช้<wbr>น้อย<wbr>ที่<wbr>สุด<wbr>เท่า<wbr>ที่<wbr>จะ<wbr>ทำ<wbr>งาน<wbr>ได้
+<dd>3.  ทำ<wbr>การ<wbr>ตรวจ<wbr>สอบ<wbr>ระบบ<wbr>อย่าง<wbr>รอบคอบ<wbr>ใน<wbr>การ<wbr>เข้า<wbr>ถึง<wbr>หรือ<wbr>การ<wbr>ทำ<wbr>งาน<wbr>ทุก<wbr>อย่าง
+<dd>4.  กำหนด<wbr>สิทธิ<wbr>แบบ<wbr>เจาะ<wbr>จง<wbr>ว่า<wbr>มี<wbr>สิทธิ<wbr>ใด<wbr>บ้าง<wbr>ใน<wbr>ข้อ<wbr>มูล<wbr>และ<wbr>อุปกรณ์<wbr>ต่าง ๆ
+<dd>5.  กล<wbr>ไก<wbr>การ<wbr>รักษา<wbr>ความ<wbr>ปลอด<wbr>ภัย<wbr>ต้อง<wbr>ใช้<wbr>ง่าย เพราะ<wbr>หากยุ่งากแล้ว<wbr>ผู้<wbr>ใช้<wbr>ส่วน<wbr>ใหญ่<wbr>จะ<wbr>ละ<wbr>เลย<wbr>เสีย
+<p>
+<b><font color=green>ใคร<wbr>บ้าง<wbr>จะ<wbr>ทำลาย<wbr>ข้อ<wbr>มูล<wbr><wbr></font></b><p>
+
+<dd>ก่อน<wbr>ที่<wbr>จะ<wbr>กล่าว<wbr>ถึง<wbr>หลัก<wbr>การ<wbr>ป้อง<wbr>กัน<wbr>และ<wbr>การ<wbr>รักษา<wbr>ความ<wbr>ปลอด<wbr>ภัย<wbr>ข้อ<wbr>มูล มา<wbr>ดู<wbr>ซิ<wbr>ว่า<wbr>บุคคล<wbr>กลุ่ม<wbr>ใด<wbr>บ้าง<wbr>ที่<wbr>จะ<wbr>ก่อ<wbr>ให้<wbr>เกิด<wbr>ความ<wbr>เสีย<wbr>หายกับระบบ<wbr>บ้าง ซึ่ง<wbr>บุคคล<wbr>บาง<wbr>กลุ่ม<wbr>นี้ หลาย<wbr>ต่อลหาย<wbr>คน<wbr>อาจ<wbr>จะ<wbr>มอง<wbr>ข้าม<wbr>ไป<wbr>ก็<wbr>ได้
+<p>
+<b>ผู้<wbr>ใช้<wbr>งาน<wbr>ภาย<wbr>ใน<wbr>ระบบ<wbr>เอง<wbr>แต่<wbr>มี<wbr>ความ<wbr>รู้<wbr>ไม่<wbr>เพียง<wbr>พอ<wbr><wbr></b>
+	<dd>บุคคล<wbr>ใน<wbr>กลุ่ม<wbr>นี้<wbr>จัด<wbr>ว่า<wbr>อันตราย<wbr>มาก และ<wbr>ส่วน<wbr>ใหญ่<wbr>จะ<wbr>นึก<wbr>ไม่<wbr>ถึง อันตราย<wbr>ที่<wbr>จะ<wbr>เกิด<wbr>จาก<wbr>กลุ่ม<wbr>นี้<wbr>ส่วน<wbr>ใหญ่<wbr>เป็น<wbr>การก<wbr>ระ<wbr>ทำ<wbr>ที่<wbr>ไม่<wbr>มี<wbr>เจตนา<wbr>ร้าย แต่<wbr>จะ<wbr>เกิด<wbr>จาก<wbr>การ<wbr>ใช้<wbr>คำ<wbr>สั่ง<wbr>โดย<wbr>รู้<wbr>เท่า<wbr>ไม่<wbr>ถึง<wbr>การณ์ เช่น ใช้<wbr>คำ<wbr>สั่ง rm ลบ<wbr>ไฟล์<wbr>สำคัญ ๆ ไป
+<p>
+<b>พวก<wbr>สอด<wbr>รู้<wbr>สอด<wbr>เห็น<wbr>หรือ<wbr>อยาก<wbr>ลอง<wbr>วิชา (hacker)</b>
+	<dd>บุคคล<wbr>กลุ่ม<wbr>นี้<wbr>ส่วน<wbr>ใหญ่<wbr>จะ<wbr>เป็น<wbr>นัก<wbr>คอมพิวเตอร์<wbr>ที่<wbr>มี<wbr>ความ<wbr>สามารถ (แต่<wbr>บาง<wbr>คน<wbr>ขาด<wbr>สามัญ<wbr>สำนึก<wbr>ที่<wbr>ดี) ชอบ<wbr>ชอน<wbr>ไช<wbr>เจาะ<wbr>ระบบ<wbr>ที่<wbr>มี<wbr>การ<wbr>รักษา<wbr>ความ<wbr>ปลอด<wbr>ภัย โดย<wbr>ส่วน<wbr>ใหญ่<wbr>แล้ว<wbr>บุคคล<wbr>กลุ่ม<wbr>นี้<wbr>เมื่อ<wbr>สามารถ<wbr>เจาะ<wbr>เข้า<wbr>ระบบ<wbr>ได้<wbr>แล้ว<wbr>ก็<wbr>จะ<wbr>เพียง<wbr>ประกาศ<wbr>จุด<wbr>อ่อน<wbr><wbr>ของ<wbr>ระบบ<wbr>ให้<wbr>ผู้<wbr>ดู<wbr>แล<wbr>ระบบ<wbr>นั้น<wbr>ทราบ หรือ<wbr>ไม่<wbr>ก็<wbr>อาจ<wbr>จะ<wbr>นำ<wbr>โปรแกรม<wbr>ที่<wbr>สามารถ<wbr>ทำ<wbr>ให้<wbr>ประสิทธิภาพ<wbr>โดย<wbr>รวม<wbr>ของ<wbr>ระบบ<wbr>ลด<wbr>ลง เช่น โปรแกรม<wbr>ลักษณะลูป เพื่อ<wbr>แกล้ง<wbr>ระบบ<wbr>เล่นซะใน<wbr>ช่วง<wbr>เวลา<wbr>หนึ่ง แต่<wbr>ก็<wbr>มี<wbr>ไม่<wbr>น้อย<wbr>ที่<wbr>เข้า<wbr>ไป<wbr>แล้ว<wbr>ทำลาย<wbr>ข้อ<wbr>มูล บุคคล<wbr>กลุ่ม<wbr>นี้<wbr>การ<wbr>ป้อง<wbr>กัน<wbr>จะ<wbr>ทำ<wbr>ได้<wbr>ยาก<wbr>กว่า<wbr>กลุ่ม<wbr>อื่น
+<p>
+<b>พวก<wbr>สอด<wbr>แนม<wbr>ล้วง<wbr>ความ<wbr>ลับ<wbr>ข้อ<wbr>มูล<wbr><wbr></b>
+	<dd>พวก<wbr>นี้<wbr>จะ<wbr>มี<wbr>เจตนา<wbr>ร้าย<wbr>โดย<wbr>จะ<wbr>ล้วง<wbr>ความ<wbr>ลับ<wbr>ข้อ<wbr>มูล โดย<wbr>เฉพาะ<wbr>อย่าง<wbr>ยิ่ง<wbr>ข้อ<wbr>มูล<wbr>ทางธุรกิจ ซึ่ง<wbr>ถือ<wbr>ว่า<wbr>เป็น<wbr>ความ<wbr>ลับ<wbr>สุด<wbr>ยอด<wbr>ของ<wbr>แต่<wbr>ละ<wbr>บริษัท
+<p>
+<center><img src="unix1.jpg"></center><p>
+<b>ผู้<wbr>ใช้<wbr>ที่<wbr>ต้อง<wbr>การ<wbr>ทำลาย<wbr>เอง<wbr><wbr></b>
+	<dd>มี<wbr>จำนวน<wbr>ไม่<wbr>น้อย<wbr>ที่<wbr>ปัญหา<wbr>เกี่ยวกับการ<wbr>รักษา<wbr>ความ<wbr>ปลอด<wbr>ภัย<wbr>ข้อ<wbr>มูล<wbr>เกิด<wbr>จาก<wbr>ผู้<wbr>ใช้<wbr>ภาย<wbr>ใน<wbr>ระบบ<wbr>เอ<wbr><wbr>งที่<wbr>อาจ<wbr>จะ<wbr>ไม่<wbr>พอ<wbr>ใจ<wbr>อะไร<wbr>บาง<wbr>อย่าง เช่น ไม่<wbr>พอ<wbr>ใจ<wbr>ความ<wbr>ยุ่ง<wbr>ยาก<wbr>ของ<wbr>มาตร<wbr>การ<wbr>ต่าง ๆ  <wbr>เลย<wbr>หา<wbr>ทา<wbr>งอ<wbr>อก<wbr>ระบาย<wbr>ออก<wbr>โดย<wbr>การ<wbr>ทำลาย<wbr>ระบบ<wbr>รักษา<wbr>ความ<wbr>ปลอด<wbr>ภัย<wbr>ของ<wbr>ข้อมูล<wbr>ซะเอง
+<p>
+<b><font color=green>มี<wbr>วิธี<wbr>เข้า<wbr>ทำลาย<wbr>ข้อ<wbr>มูล<wbr>อย่าง<wbr>ไร<wbr><wbr></font></b><p>
+
+	<dd>ใน<wbr>ที่<wbr>นี้<wbr>ผม<wbr>คง<wbr>จะ<wbr>ไม่<wbr>ชี้<wbr>ลง<wbr>ไป<wbr>ถึง<wbr>จุด<wbr>อ่อน<wbr>ของ<wbr>ระบบ<wbr>ว่า<wbr>ส่วน<wbr>ไหน หรือ<wbr>ไฟล์<wbr>ไหน<wbr>ที่<wbr>เป็น<wbr>จุด<wbr>อ่อน<wbr>ที่<wbr>สามารถ<wbr>เจาะ<wbr>เข้า<wbr>ไป<wbr>ได้<wbr>นะ<wbr>ครับ เพราะ<wbr>คิด<wbr>ว่า<wbr>คง<wbr>ไม่<wbr>เหมาะ<wbr>เท่า<wbr>ไหร่ แต่<wbr>สิ่ง<wbr>ที่<wbr>จะ<wbr>กล่าว<wbr>คือ<wbr>กล<wbr>วิธี<wbr>พื้น<wbr>ฐาน<wbr>ที่<wbr>ทำ<wbr>กัน เพื่อ<wbr>จะ<wbr>ได้<wbr>ระ<wbr>มัด<wbr>ระวัง<wbr>ยิ่ง<wbr>ขึ้น
+<dd>1.  แอบ<wbr>ดู<wbr>รหัส<wbr>ผ่าน<wbr>ขณะ<wbr>พิมพ์ ซึ่ง<wbr>ส่วน<wbr>ใหญ่<wbr>จะ<wbr>เป็น<wbr>บุคคล<wbr>ที่<wbr>รู้<wbr>จัก<wbr>กัน
+<dd>2.  ใช้เครื่องมือ<wbr>วัด<wbr>ที่<wbr>เรียก<wbr>ว่า เครื่องวิเคราะห์<wbr>โปรโต<wbr>คอล (protocal analyzer) ไป<wbr>ดัก<wbr>จับ<wbr>ทางสาย<wbr>สื่อ
+<dd>3.  ม้า<wbr>โทร<wbr>จัน (trojan horse) เป็น<wbr>การ<wbr>เขียน<wbr>โปรแกรม<wbr>หรือสคริปต์ โดย<wbr>จะ<wbr>ทำ<wbr>การ<wbr>สร้าง<wbr>จอ<wbr>ภาพ<wbr>ให้<wbr>เหมือนกับจอ<wbr>ภาพ<wbr>ตอน<wbr>เริ่ม (login) เข้า<wbr>สู่<wbr>ระบบ<wbr>ทุก<wbr>ประการ โดย<wbr>โปรแกรม<wbr>หรือสคริปต์นั้น จะ<wbr>รอ<wbr>ให้<wbr>ผู้<wbr>ใช้<wbr>ที่<wbr>ไม่<wbr>ระวัง<wbr>พิมพ์<wbr>ชื่อ<wbr>และ<wbr>รหัส<wbr>ผ่าน<wbr>เข้า<wbr>สู่<wbr>โปรแกรม<wbr>แล้ว<wbr>ทำ<wbr>การ<wbr>ส่ง<wbr>ผ่าน<wbr>ชื่อ<wbr>แล<wbr><wbr>ะรหัส<wbr>ผ่าน<wbr>ของ<wbr>ผู้<wbr>ใช้<wbr>ไป<wbr>ยัง<wbr>ตัว<wbr>เอง หรือ<wbr>อาจ<wbr>จะ<wbr>เก็บ<wbr>ใน<wbr>ชื่อ<wbr>ไฟล์<wbr>ใด<wbr>ไฟล์<wbr>หนึ่ง<wbr>ก็<wbr>ได้ ซึ่ง<wbr>ไม่<wbr>เป็น<wbr>ที่<wbr>สะดุด<wbr>ตา หลัง<wbr>จาก<wbr>นั้น<wbr>โปรแกรม<wbr>ก็<wbr>จะ<wbr>เรียกเชลล์ของ login แท้<wbr>จริง<wbr>ออก<wbr>มา ดัง<wbr>ตัว<wbr>อย่าง<wbr>ที่ 1 เป็น<wbr>การ<wbr>สร้าง su ปลอม<wbr>ขึ้น<wbr>มา
+<dd>การ<wbr>ทำ<wbr>งาน<wbr>ของสคริปต์หรือ<wbr>โปรแกรม<wbr>นี้<wbr>เกิด<wbr>ขึ้น<wbr>เนื่อง<wbr>จาก<wbr>ลำ<wbr>ดับ<wbr>การ<wbr>ค้น<wbr>หา<wbr>ในไดเรคทอ<wbr>รี โดย<wbr>ได้<wbr>กำหนด<wbr>การ<wbr>ค้น<wbr>หา<wbr>ที่ไดเรคทอ<wbr>รี<wbr>ตัว<wbr>เอง<wbr>ก่อน ไดเรคทอ<wbr>รี<wbr>ของ<wbr>ระบบ เช่น กำหนด path เป็น :/bin:/usr/bin แทน<wbr>ที่<wbr>จะ<wbr>เป็น /bin:/usr/bin::  ใน<wbr>ส่วน<wbr>นี้<wbr>สามารถ<wbr>กำหนด<wbr>ค่า<wbr>ขึ้น<wbr>ใหม่<wbr>เอง<wbr>ได้<wbr>โดย<wbr>จะ<wbr>นำ<wbr>ไป<wbr>เก็บ<wbr>ไว้<wbr>ที่ .profile
+<dd>4.  ประตู<wbr>กล (trap door) เป็น<wbr>การ<wbr>เขียน<wbr>โปรแกรม<wbr>เล็ก ๆ ขึ้น<wbr>มา<wbr>ทิ้ง<wbr>ไว้ โดย<wbr>โปรแกรม<wbr>นี้<wbr>จะ<wbr>อาศัย<wbr>หลัก<wbr>การ<wbr>อยู่<wbr>ที่<wbr>การ<wbr>เปลี่ยน<wbr>ค่า<wbr>บิต setuid เมื่อ<wbr>ไหร่ที่<wbr>บิตนี้<wbr>ทำ<wbr>งาน<wbr>โปรแกรม<wbr>จะ<wbr>ทำ<wbr>การ<wbr>เปลี่ยน<wbr>ค่า<wbr>ได้ user id เป็น 0 (คือ root) ชั่ว<wbr>คราว แล้ว<wbr>หาก<wbr>เขียน<wbr>โปรแกรม<wbr>ที่<wbr>สามารถ<wbr>สร้างเชลล์ขึ้น<wbr>มา<wbr>ใหม่<wbr>ใน<wbr>ขณะ<wbr>นั้น<wbr>ได้<wbr>ก็<wbr>จะ<wbr>มี<wbr>สิทธิ<wbr>เท่า<wbr>เทียม กับ root ที<wbr>เดียว
+<p>
+<b><font color=green>จะ<wbr>ควบ<wbr>คุม<wbr>และ<wbr>ดู<wbr>แล<wbr>อย่าง<wbr>ไร<wbr><wbr></font></b><p>
+	<dd>การ<wbr>ควบ<wbr>คุม<wbr>และ<wbr>ดู<wbr>แล<wbr>รักษา<wbr>ความ<wbr>ปลอด<wbr>ภัย<wbr>ข้อ<wbr>มูล<wbr>นั้น<wbr>จะ<wbr>ต้อง<wbr>ทำ<wbr>ได้<wbr>ภาย<wbr>นอก<wbr>และ<wbr>ภาย<wbr>ใน<wbr>ระบบ<wbr>ควบ<wbr>คู่<wbr>กัน
+<dd>- การ<wbr>ควบ<wbr>คุม<wbr>ภาย<wbr>นอก<wbr>ระบบ (physical security) เป็น<wbr>การ<wbr>ป้อง<wbr>กัน<wbr>ทางกายภาพ โดย<wbr>ไม่<wbr>ให้<wbr>ผู้<wbr>ที่<wbr>จะ<wbr>มา<wbr>ทำลาย<wbr>ข้อ<wbr>มูล<wbr>กระ<wbr>ทำ<wbr>การ<wbr>ได้ อาจ<wbr>จะ<wbr>ทำ<wbr>ได้ เช่น
+
+<dd>1.  ระ<wbr>มัด<wbr>ระวัง<wbr>บุคคล<wbr>แปลก<wbr>ปลอม<wbr>ที่<wbr>จะ<wbr>เข้า<wbr>มา<wbr>ใช้<wbr>งาน<wbr>ระบบ โดย<wbr>อาจ<wbr>จะ<wbr>มี<wbr>การ<wbr>จัด<wbr>เวร<wbr>ยาม<wbr>คอย<wbr>ดู<wbr>แล
+<dd>2.  ทำ<wbr>การล็อก<wbr>อุปกรณ์<wbr>ที่<wbr>ใช้<wbr>งาน<wbr>ใน<wbr>ระบบ
+<dd>3.  เก็บ<wbr>ข้อ<wbr>มูล<wbr>ที่<wbr>มี<wbr>ความ<wbr>สำคัญ<wbr>ลง<wbr>เทปหรือดิสค์แล้ว<wbr>ลบ<wbr>ข้อ<wbr>มูล<wbr>ใน<wbr>ระบบ<wbr>ออก
+
+<dd>-  การ<wbr>ควบ<wbr>คุม<wbr>ภาย<wbr>ใน<wbr>ระบบ (logical security) เป็น<wbr>การ<wbr>ป้อง<wbr>กัน<wbr>ภาย<wbr>ใน<wbr>ตัว<wbr>ระบบ<wbr>เอง โดย<wbr>จะ<wbr>แบ่ง<wbr>ได้<wbr>เป็น 2 ประการ<wbr>หลัก ๆ คือ
+<dd>1. ป้อง<wbr>กัน<wbr>เกี่ยวกับการ<wbr>ตรวจ<wbr>สอบ<wbr>ผู้<wbr>ใช้
+<dd>2. ป้อง<wbr>กัน<wbr>เกี่ยวกับระบบ<wbr>ไฟล์
+<p>
+<b>การ<wbr>ป้อง<wbr>กัน<wbr>เกี่ยวกับผู้<wbr>ใช้<wbr><wbr></b>
+	<dd>ใน<wbr>ระบบยูนิกซ์ผู้<wbr>ใช้<wbr>ทุก<wbr>คน<wbr>จะ<wbr>มี<wbr>ชื่อ<wbr>รหัส<wbr>ผ่าน<wbr>และ<wbr>ชื่อ<wbr>กลุ่ม โดย<wbr>การ<wbr>เริ่ม<wbr>ต้น<wbr>เข้า<wbr>ทำ<wbr>งาน<wbr>ใน<wbr>ระบบ<wbr>จะ<wbr>มี<wbr>การ<wbr>ตรวจ<wbr>สอบ<wbr>ชื่อ<wbr>และ<wbr>รหัส<wbr>ผ่าน<wbr>ว่า<wbr>ถูก<wbr>ต้อง<wbr>หรือ<wbr>ไม่ และ<wbr>จะ<wbr>ให้<wbr>เข้า<wbr>สู่<wbr>ระบบ<wbr>ได้<wbr>ใน<wbr>กรณี<wbr>ที่<wbr>ชื่อ<wbr>และ<wbr>รหัส<wbr>ผ่าน<wbr>ตรงกับข้อ<wbr>มูล<wbr>ที่<wbr>มี<wbr>อยู่<wbr>ใน<wbr>ระบบ
+	<dd>รหัส<wbr>ผ่าน<wbr>ถือ<wbr>ว่า<wbr>เป็น<wbr>ด่าน<wbr>แรก<wbr>ที่<wbr>มี<wbr>ความ<wbr>สำคัญ<wbr>มาก<wbr>ใน<wbr>การ<wbr>เข้า<wbr>สู่<wbr>ระบบ ดัง<wbr>นั้น<wbr>ส่วน<wbr>ของ<wbr>ไฟล์<wbr>เก็บ<wbr>ข้อ<wbr>มูล<wbr>ผู้<wbr>ใช้<wbr>และ<wbr>รหัส<wbr>ผ่าน<wbr>จึง<wbr>แยก<wbr>เป็น 2 ไฟล์ โดย<wbr>ไฟล์<wbr>หนึ่ง<wbr>จะ<wbr>เก็บ<wbr>รหัส<wbr>แล้ว<wbr>ทำ<wbr>การ<wbr>ซ่อน<wbr>ไว้<wbr>พร้อม<wbr>กำหนด<wbr>ค่า<wbr>ให้<wbr>ผู้<wbr>ดู<wbr>แล<wbr>ระบบ<wbr>เท่า<wbr>นั้น<wbr>จะ<wbr>อ่าน<wbr>ค่า<wbr>ได้ และ<wbr>อีก<wbr>ไฟล์<wbr>หนึ่ง<wbr>คือ /etc/passwd ซึ่ง<wbr>จะ<wbr>ไม่<wbr>แสดง<wbr>รหัส<wbr>ผ่าน<wbr>หรือ<wbr>อาจ<wbr>จะ<wbr>แสดง<wbr>รหัส<wbr>ผ่าน<wbr>แต่<wbr>ได้<wbr>เข้า<wbr>รหัส<wbr>ไว้<wbr>แล้ว ซึ่ง<wbr>ให้<wbr>ทุก<wbr>คน<wbr>สามารถ<wbr>อ่าน<wbr>ได้
+<p>
+<center><img src="unix2.jpg"></center><p>
+<b><font color=green>ทำ<wbr>อย่าง<wbr>ไรกับรหัส<wbr>ผ่าน<wbr>ดี<wbr><wbr></font></b><p>
+
+<dd>1.  เก็บ<wbr>รักษา<wbr>รหัส<wbr>ผ่าน<wbr>เป็น<wbr>ความ<wbr>ลับ
+<dd>2.  ตั้ง<wbr>รหัส<wbr>ผ่าน<wbr>ให้<wbr>มี<wbr>ทั้ง<wbr>พยัญชนะ ตัว<wbr>เลข และ<wbr>สัญลักษณ์<wbr>พิเศษ โดย<wbr>เป็น<wbr>รูป<wbr>แบบ<wbr>ของ<wbr>อักขระ<wbr>ที่<wbr>ไม่<wbr>มี<wbr>ความ<wbr>หมาย เพราะ<wbr>ส่วน<wbr>ใหญ่<wbr>ผู้<wbr>ใช้<wbr>จะ<wbr>นำ<wbr>ชื่อ<wbr>เล่น ชื่อแฟน เบอร์<wbr>โทรศัพท์ ชื่อ<wbr>ดารา ชื่อ<wbr>ตัว<wbr>ละคร<wbr>ใน<wbr>นวนิยาย<wbr>มา<wbr>ใช้ ซึ่ง<wbr>ทำ<wbr>ให้<wbr>การ<wbr>เดา<wbr>ของ<wbr>บรรดา<wbr>ผู้<wbr>ต้อง<wbr>การ<wbr>ล้วง<wbr>ความ<wbr>ลับ<wbr>ทำ<wbr>ได้<wbr>ง่า<wbr>ย
+<dd>3.  หมั่น<wbr>เปลี่ยน<wbr>รหัส<wbr>ผ่าน โดย<wbr>ส่วน<wbr>นี้<wbr>ทางผู้<wbr>ดู<wbr>แล<wbr>ระบบ<wbr>สามารถ<wbr>กำหนด<wbr>ระยะ<wbr>เวลา<wbr>ที่<wbr>ผู้<wbr>ใช้<wbr>จะ<wbr>ต้อง<wbr>ทำ<wbr>การ<wbr>เปลี่ยน<wbr>รหัส<wbr>ผ่านไ<wbr>ด้ การ<wbr>เปลี่ยน<wbr>รหัส<wbr>ผ่าน<wbr>ใช้<wbr>คำ<wbr>สั่ง passwd ดัง<wbr>รูป<wbr>ที่ 2
+<p>
+<b>การ<wbr>ป้อง<wbr>กัน<wbr>เกี่ยวกับระบบ<wbr>ไฟล์<wbr><wbr></b>
+	<dd>ลักษณะ<wbr>ไฟล์<wbr>ใน<wbr>ระบบยูนิกซ์มี<wbr>ลักษณะ<wbr>พิเศษ คือ มี<wbr>ส่วน<wbr>ควบ<wbr>คุม<wbr>การ<wbr>ใช้<wbr>ไฟล์ โดย<wbr>มี<wbr>ส่วน<wbr>กำหนด<wbr>สิทธิ<wbr>ต่าง ๆ ไว้กับไฟล์<wbr>แต่<wbr>ละ<wbr>ไฟล์<wbr>เลย<wbr>ที<wbr>เดียว ซึ่ง<wbr>ส่วน<wbr>นี้<wbr>จะ<wbr>เป็น<wbr>ที่<wbr>ตัด<wbr>สิน<wbr>ว่า<wbr>ใคร<wbr>บ้าง<wbr>จะ<wbr>สามารถ<wbr>ใช้<wbr>ไฟล์<wbr>ได้ และ<wbr>มาก<wbr>น้อย<wbr>เพียง<wbr>ใด โดย<wbr>สิทธิ<wbr>เกี่ยวกับไฟล์<wbr>จะ<wbr>เป็น<wbr>การ<wbr>อ่าน เขียน<wbr>และ<wbr>รัน โดย<wbr>มี<wbr>การ<wbr>แบ่ง<wbr>กลุ่ม<wbr>ผู้<wbr>ใช้<wbr>งาน<wbr>ออก<wbr>เป็น 3 กลุ่ม คือ เจ้า<wbr>ของ (owner) กลุ่ม<wbr>เจ้า<wbr>ของ (group) และ<wbr>ผู้<wbr>ใช้<wbr>อื่น ๆ (other) นอก<wbr>จาก<wbr>นี้<wbr>แล้ว<wbr>ในยูนิกซ์บาง<wbr>ระบบ<wbr>ยัง<wbr>สามารถ<wbr>ให้<wbr>ผู้<wbr>ใช้<wbr>ใส่<wbr>รหัส<wbr>ให้กับไฟล์<wbr>ได้<wbr>โดย<wbr>ใช้<wbr>คำ<wbr>สั่ง crypt (แต่ยูนิกซ์หลาย<wbr>รุ่น<wbr>ที่<wbr>ใช้<wbr>นอก<wbr>ประเทศ<wbr>สหรัฐ<wbr>อเมริกา<wbr>จะ<wbr>ไม่<wbr>พบ<wbr>คำ<wbr>สั่ง<wbr>นี้) แล้ว<wbr>ทำ<wbr>การ<wbr>ใส่<wbr>รหัส ซึ่ง<wbr>รหัส<wbr>นี้<wbr>จะ<wbr>เป็น<wbr>ส่วน<wbr>ที่<wbr>ช่วย<wbr>รักษา<wbr>ความ<wbr>ปลอด<wbr>ภัย<wbr>อีก<wbr>ขึ้น<wbr>หนึ่ง<wbr>ด้วย
+<p>
+<b>สรุป<wbr><wbr></b><p>
+	<dd>ผู้<wbr>ดู<wbr>แล<wbr>ระบบ<wbr>เป็น<wbr>บุคคล<wbr>ที่<wbr>มี<wbr>หน้า<wbr>ที่<wbr>ทำ<wbr>ให้<wbr>ระบบ<wbr>ทำ<wbr>งาน<wbr>ได้<wbr>อย่าง<wbr>มี<wbr>ประสิทธิภาพ<wbr>ให้<wbr>มาก<wbr>ที่<wbr>สุด และ<wbr>ใน<wbr>เรื่อง<wbr>ของ<wbr>การ<wbr>ดู<wbr>แล<wbr>ความ<wbr>ปลอด<wbr>ภัย<wbr>ข้อ<wbr>มูล<wbr>ก็<wbr>ถือ<wbr>เป็น<wbr>สิ่ง<wbr>สำคัญ<wbr>มาก จะ<wbr>ต้อง<wbr>มี<wbr>การ<wbr>วาง<wbr>แผน<wbr>การ<wbr>ดำ<wbr>เนิน<wbr>การ<wbr>ที่<wbr>ดี เพราะ<wbr>หาก<wbr>มาตร<wbr>การ<wbr>ตึง<wbr>หรือ<wbr>หย่อน<wbr>เกิน<wbr>ไป แล้ว<wbr>ย่อม<wbr>จะ<wbr>ก่อ<wbr>ให้<wbr>เกิด<wbr>ความ<wbr>เสีย<wbr>หาย<wbr>แก่<wbr>ระบบ<wbr>ได้ และ<wbr>การ<wbr>รักษา<wbr>ความ<wbr>ปลอด<wbr>ภัย<wbr>ที่<wbr>ดี<wbr>วิธี<wbr>หนึ่ง คือ<wbr>การ<wbr>ไม่<wbr>พยายาม<wbr>มี<wbr>ความ<wbr>ขัด<wbr>แย้ง<wbr>หรือ<wbr>ปัญหากับผู้<wbr>ใช้ เพราะ<wbr>ส่วน<wbr>ใหญ่<wbr>ผู้<wbr>ใช้<wbr>ระบบ<wbr>มี<wbr>ตั้ง<wbr>แต่<wbr>ผู้<wbr>เริ่ม<wbr>ต้น<wbr>ไป<wbr>จน<wbr>ถึง<wbr>ผู้<wbr>เชี่ยว<wbr>ชาญ<wbr>ระบบ<wbr>ยิ่ง<wbr>ใน<wbr>ระบบ<wbr>ที่<wbr>เป็น<wbr>เครือ<wbr>ข่าย<wbr>ยิ่ง<wbr>แล้ว<wbr>ใหญ่ หาก<wbr>เกิด<wbr>ปัญหา<wbr>หรือ<wbr>ข้อ<wbr>ขัด<wbr>แย้ง<wbr>เข้า<wbr>อาจ<wbr>ทำ<wbr>ให้<wbr>มี<wbr>การ<wbr>ก่อ<wbr>กวน<wbr>สร้าง<wbr>ปัญหา<wbr>ให้<wbr>ได้ "สร้าง<wbr>มิตร<wbr>ดี<wbr>กว่า<wbr>ก่อ<wbr>ศัตรู<wbr>นะ<wbr>ครับ<wbr><wbr>" สุภาษิต<wbr>นี้<wbr>บรรดา<wbr>ผู้<wbr>ดู<wbr>แล<wbr>ระบบ<wbr>ควร<wbr>จำ<wbr>ไว้<wbr>สัก<wbr>นิด<wbr>นะ<wbr>ครับ
+
+
+
+
+<p>
+<hr noshade>
+เขียนโดย : สมชาย นำประเสริฐชัย<br>
+ที่มา  :  หนังสือไมโครคอมพิวเตอร์ ฉบับเดือนกุมภาพันธ์ 2536<br>
+last update : 17/03/1999
+</font>
+</body>
+</html>

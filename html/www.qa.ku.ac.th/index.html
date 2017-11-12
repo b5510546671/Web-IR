@@ -1,0 +1,798 @@
+ï»¿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>quality assurance kasetsart university</title>
+	
+    <!-- bootstrap core css -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- custom css -->
+    <link href="css/modern-business.css" rel="stylesheet">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+	
+	<!-- carousel css -->
+    <link href="css/carousel.css" rel="stylesheet">
+	
+	<script type="application/x-javascript"> addeventlistener("load", function() { settimeout(hideurlbar, 0); }, false); function hideurlbar(){ window.scrollto(0,1); } </script>
+	
+	<!-- custom theme files -->
+	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+	<!--web-fonts-->
+	<link href='//fonts.googleapis.com/css?family=oswald' rel='stylesheet' type='text/css'>
+	<link href='//fonts.googleapis.com/css?family=orbitron:500' rel='stylesheet' type='text/css'>
+	<!-- web-fonts -->
+	
+	<script src="js/jquery-3.1.0.js"></script>
+	
+	<!--calender-->
+	<link rel="stylesheet" type="text/css" href="css/calendar.css" />
+	<link rel="stylesheet" type="text/css" href="css/custom_2.css" />
+	<script src="js/modernizr.custom.63321.js"></script>
+	<!-- end calender -->
+
+	<!-- digital clock starts here -->
+	<script type="text/javascript" src="js/moment-with-locales.min.js"></script>
+	<!-- digital clock ends here -->
+	
+    <!-- html5 shim and respond.js ie8 support of html5 elements and media queries -->
+    <!-- warning: respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt ie 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+	<style class="cp-pen-styles">
+/*
+img {
+-webkit-filter: grayscale(100%); 
+filter: grayscale(100%);
+}
+ 
+body {
+-webkit-filter: grayscale(100%);
+filter: grayscale(100%);
+}
+*/	
+	@-webkit-keyframes bugfix {
+	  from {
+		padding: 0;
+	  }
+	  to {
+		padding: 0;
+	  }
+	}
+	/* needed for checkbox hack */
+	h1, p {
+	  color: white;
+	}
+
+	#nav {
+	  position: relative;
+	}
+	#nav ul {
+	  display: none;
+	  width: 100%;
+	  list-style: none;
+	  margin: 0px;
+	  padding: 0px;
+	}
+	#nav ul li a {
+		font-family: 'designil font', 'helvetica', sans-serif;
+		display: block;
+		padding: 0.4em;
+		background: #00a04f ;
+		color: white;
+		text-decoration: none;
+		border-right: 1px solid #ffffff ;
+		background-color: #00a04f ;
+		background-image: -webkit-linear-gradient(#00a04f   , #00a04f  );
+		background-image: -moz-linear-gradient(#00a04f   , #00a04f  );
+		background-image: -o-linear-gradient(#00a04f   , #00a04f  );
+		background-image: linear-gradient(#00a04f   , #00a04f  );
+	}
+	#nav ul li a:hover {
+	  background: #a1ce57  ;
+	}
+	#nav ul li:last-of-type a {
+	  border-right: 0px;
+	}
+	#nav ul li ul li a {
+		padding: 0.2em;
+		padding-left: 0.7em;
+		font-size: 16px;
+		color: #011708;
+		background-image: -webkit-linear-gradient(#ffffff   , #ffffff   );
+		background-image: -moz-linear-gradient(#ffffff   , #ffffff   );
+		background-image: -o-linear-gradient(#ffffff   , #ffffff   );
+		background-image: linear-gradient(#ffffff   , #ffffff   );
+	}
+	#nav ul li ul li a:hover {
+	  background: #a1ce57  ;
+	}
+	#nav ul li ul li ul li a {
+	  padding-left: 3.125em;
+	}
+	#nav input.trigger {
+	  position: absolute;
+	  top: -9999px;
+	  left: -9999px;
+	}
+	#nav input.trigger:checked ~ ul, #nav input.trigger:checked ~ ul li ul {
+	  display: block !important;
+	}
+	@media (min-width: 48em) {
+	  #nav input.trigger:checked ~ ul, #nav input.trigger:checked ~ ul li ul {
+		/* older flexbox */
+		display: -webkit-box;
+		display: -moz-box;
+		display: box;
+		-webkit-box-orient: horizontal;
+		-moz-box-orient: horizontal;
+		box-orient: horizontal;
+		/* newer flexbox */
+		display: flex;
+		flex-direction: row;
+	  }
+	}
+	#nav label {
+	  position: relative;
+	  display: block;
+	  min-height: 2em;
+	  padding: .45em;
+	  font-size: 1.1em;
+	  margin: 0;
+	  cursor: pointer;
+	  background: #419116;
+	  line-height: 2em;
+	  color: #ffffff;
+	}
+	#nav label:after {
+	  position: absolute;
+	  right: 1em;
+	  top: .2em;
+	  content: "\2261";
+	  font-size: 1.8em;
+	  color: white;
+	}
+	@media (min-width: 48em) {
+	  #nav ul {
+		/* older flexbox */
+		display: -ms-flexbox;
+		flex-direction: -ms-row;
+		display: -webkit-box;
+		display: -moz-box;
+		display: box;
+		-webkit-box-orient: horizontal;
+		-moz-box-orient: horizontal;
+		box-orient: horizontal;
+		/* newer flexbox */
+		display: flex;
+		flex-direction: row;
+	  }
+	  #nav ul li {
+		position: relative;
+		text-align: center;
+		/* older flexbox */
+		-ms-flex: 1;
+		-webkit-box-flex: 1;
+		-moz-box-flex: 1;
+		box-flex: 1;
+		/* newer flexbox */
+		flex: 1;
+	  }
+	  #nav ul li ul {
+		display: none !important;
+		position: absolute;
+		top: 2.3em;
+		left: 0;
+		display: block;
+		width: 12em;
+		z-index: 200;
+	  }
+	  #nav ul li ul li {
+		text-align: left;
+	  }
+	  #nav ul li ul li ul {
+		z-index: 300;
+		top: 0px;
+		left: 12.4em;
+	  }
+	  #nav ul li ul li ul li a {
+		padding-left: 30px !important;
+	  }
+	  #nav ul li:hover > ul {
+		display: block !important;
+	  }
+	  #nav label {
+		display: none;
+	  }
+	}
+	</style>
+	<link rel="stylesheet" href="css/adminlte.min.css">
+<style type="text/css">
+<!--
+.style4 {color: #ff0000; font-weight: bold; }
+.style5 {color: #ff0000}
+.style8 {color: #000000}
+.style9 {color: #0000ff}
+.style10 {color: #333333}
+.style12 {color: #000000; font-weight: bold; }
+-->
+</style></head>
+<body>
+    <!-- page content -->
+    <div class="container">
+	<p><img src="images/header2016edit.jpg"></p>
+	  <!-- static navbar -->
+      <nav role="navigation" class="navbar navbar-static-top menu-top" id="nav">
+        <input class="trigger" type="checkbox" id="mainnavbutton">
+			<label for="mainnavbutton" onclick>menu</label>
+              <ul>
+                <li><a target="_blank" href="http://www.qa.ku.ac.th/">à¸«à¸à¹à¸²à¹à¸£à¸</a></li>
+                <li><a target="_blank" href="http://www.qa.ku.ac.th/webqaku/kubatko/aboutus.html">à¹à¸à¸µà¹à¸¢à¸§à¸à¸±à¸à¸ªà¸³à¸à¸±à¸à¸¯</a>
+                   <ul>
+                      <li><a target="_blank"  href="http://qa.ku.ac.th/webqaku/kubatko/aboutus.html"><span class="fa fa-caret-right"></span> à¸à¸£à¸°à¸§à¸±à¸à¸´</a></li>
+                      <li><a target="_blank" href="http://qa.ku.ac.th/webqaku/kubatko/aboutus.html"><span class="fa fa-caret-right"></span> à¸§à¸´à¸ªà¸±à¸¢à¸à¸±à¸¨à¸à¹/à¸à¸±à¸à¸à¸à¸´à¸</a></li>
+                      <li><a target="_blank" href="http://qa.ku.ac.th/webqaku/kubatko/aboutus.html"><span class="fa fa-caret-right"></span> à¸§à¸±à¸à¸à¸¸à¸à¸£à¸°à¸ªà¸à¸à¹</a></li>
+                      <li><a target="_blank" href="html/staffqaku2560.html"><span class="fa fa-caret-right"></span> à¹à¸à¸£à¸à¸ªà¸£à¹à¸²à¸à¸­à¸à¸à¹à¸à¸£</a></li>
+					  <li><a target="_blank" href="pdf/qadecades2013.pdf"><span class="fa fa-caret-right"></span> 1 à¸à¸¨à¸§à¸£à¸£à¸© à¸ªà¸³à¸à¸±à¸à¸à¸²à¸à¸à¸£à¸°à¸à¸±à¸à¸à¸¸à¸à¸ à¸²à¸</a></li>
+                      <li><a target="_blank" href="http://qa.ku.ac.th/webqaku/kubatko/command2558-2559.html"><span class="fa fa-caret-right"></span> à¸à¸³à¸ªà¸±à¹à¸à¹à¸à¹à¸à¸à¸±à¹à¸à¸à¸à¸°à¸à¸£à¸£à¸¡à¸à¸²à¸£ à¸ªà¸³à¸à¸±à¸à¸à¸²à¸à¸à¸£à¸°à¸à¸±à¸à¸à¸¸à¸à¸ à¸²à¸</a></li>
+					  <li><a target="_blank" href="http://qa.ku.ac.th/webqaku/kubatko/assessorqa.html"><span class="fa fa-caret-right"></span> à¸à¸³à¸ªà¸±à¹à¸à¹à¸à¹à¸à¸à¸±à¹à¸à¸à¸à¸°à¸à¸£à¸£à¸¡à¸à¸²à¸£ à¸à¸£à¸°à¹à¸¡à¸´à¸à¸à¸¸à¸à¸ à¸²à¸à¸¯</a></li>
+					  <li><a target="_blank" href="http://qa.ku.ac.th/webqaku/kubatko/tamneap.html"><span class="fa fa-caret-right"></span> à¸à¹à¸²à¹à¸à¸µà¸¢à¸à¸à¸¹à¹à¸à¸£à¸°à¹à¸¡à¸´à¸à¸¯</a></li>
+                  </ul>
+                </li>
+                <li><a target="_blank" href="#">à¸à¸¹à¹à¸¡à¸·à¸­/e-book</a>
+					<ul>
+                      <li><a target="_blank" href="e-book/e-book_in.html"><span class="fa fa-caret-right"></span> à¸à¸¹à¹à¸¡à¸·à¸­à¸ à¸²à¸¢à¹à¸ à¸¡à¸.</a></li>
+                      <li><a target="_blank" href="e-book/e-book_out1.html"><span class="fa fa-caret-right"></span> à¸à¸¹à¹à¸¡à¸·à¸­ à¸ªà¸à¸­.</a></li>
+                      <li><a target="_blank" href="e-book/e-book_out2.html"><span class="fa fa-caret-right"></span> à¸à¸¹à¹à¸¡à¸·à¸­ à¸ªà¸¡à¸¨.</a></li>
+
+                  </ul>
+				</li>
+                <li><a target="_blank" href="#">à¸£à¸²à¸¢à¸à¸²à¸</a>
+					<ul>
+                      <li><a target="_blank" href="html/bookqa_report.html"><span class="fa fa-caret-right"></span> à¸£à¸²à¸¢à¸à¸²à¸à¸à¸£à¸°à¸à¸±à¸à¸à¸¸à¸à¸ à¸²à¸à¸ à¸²à¸¢à¹à¸à¸£à¸°à¸à¸±à¸à¸­à¸¸à¸à¸¡à¸¨à¸¶à¸à¸©à¸² (iqa ku)</a></li>
+					  <li><a target="_blank" href="http://www.qa.ku.ac.th/menul/bookqa_reportoutside1.html"><span class="fa fa-caret-right"></span> à¸£à¸²à¸¢à¸à¸²à¸à¸à¸£à¸°à¸à¸±à¸à¸à¸¸à¸à¸ à¸²à¸à¸ à¸²à¸¢à¸à¸­à¸à¸£à¸°à¸à¸±à¸à¸­à¸¸à¸à¸¡à¸¨à¸¶à¸à¸©à¸² (eqa ku)</a></li>
+					  <li><a target="_blank" href="html/databasesarkufaculty.html"><span class="fa fa-caret-right"></span> à¸£à¸²à¸¢à¸à¸²à¸à¸à¸²à¸£à¸à¸£à¸°à¹à¸¡à¸´à¸à¸à¸¸à¸à¸ à¸²à¸à¸ à¸²à¸¢à¹à¸à¸£à¸°à¸à¸±à¸à¸à¸à¸°</a></li>
+					  <li><a target="_blank" href="html/databasesarkusupport.html"><span class="fa fa-caret-right"></span> à¸£à¸²à¸¢à¸à¸²à¸à¸à¸²à¸£à¸à¸£à¸°à¹à¸¡à¸´à¸à¸à¸¸à¸à¸ à¸²à¸à¸ à¸²à¸¢à¹à¸à¸£à¸°à¸à¸±à¸à¸ªà¸³à¸à¸±à¸ à¸ªà¸à¸²à¸à¸±à¸</a></li>
+                      <li><a target="_blank" href="html/databasesarku_campusreport58.html"><span class="fa fa-caret-right"></span> à¸£à¸²à¸¢à¸à¸²à¸à¸à¸²à¸£à¸à¸£à¸°à¹à¸¡à¸´à¸à¸à¸¸à¸à¸ à¸²à¸à¸ à¸²à¸¢à¹à¸à¸£à¸°à¸à¸±à¸à¸§à¸´à¸à¸¢à¸²à¹à¸à¸</a></li>
+					  <li><a target="_blank" href="http://www.qa.ku.ac.th/webqaku/kubatko/e-sarqaku.html"><span class="fa fa-caret-right"></span> à¸£à¸²à¸¢à¸à¸²à¸à¸à¸²à¸£à¸à¸£à¸°à¹à¸¡à¸´à¸à¸à¸¸à¸à¸ à¸²à¸à¸à¸­à¸à¸ªà¸³à¸à¸±à¸à¸à¸£à¸°à¸à¸±à¸à¸à¸¸à¸à¸ à¸²à¸</a></li>
+					  <li><a target="_blank" href="http://qa.ku.ac.th/menul/bookqa_pr.html"><span class="fa fa-caret-right"></span> à¸£à¸²à¸¢à¸à¸²à¸à¸à¸¥à¸£à¸²à¸à¸§à¸±à¸¥à¸à¸¸à¸à¸ à¸²à¸ à¸¡à¸.</a></li>
+                    </ul>
+				</li>
+                <li><a target="_blank" href="#">à¸à¸²à¸à¸à¹à¸­à¸¡à¸¹à¸¥</a>
+					<ul>
+                      <li><a target="_blank" href="http://qa.ku.ac.th/_db_qabeer/infrm/aaa.php"><span class="fa fa-caret-right"></span> à¸à¸²à¸à¸à¹à¸­à¸¡à¸¹à¸¥à¸à¸¹à¹à¸à¸£à¸°à¹à¸¡à¸´à¸</a></li>
+					  <li><a target="_blank" href="http://qais.ku.ac.th/qainput/login.aspx"><span class="fa fa-caret-right"></span> à¸à¸²à¸à¸à¹à¸­à¸¡à¸¹à¸¥ qais</a></li>
+					  <li><a target="_blank" href="http://www.cheqa.ku.ac.th/"><span class="fa fa-caret-right"></span> à¸à¸²à¸à¸à¹à¸­à¸¡à¸¹à¸¥ che qa ku</a></li>
+					  <li><a target="_blank" href="http://www.cheqa.mua.go.th/"><span class="fa fa-caret-right"></span> à¸à¸²à¸à¸à¹à¸­à¸¡à¸¹à¸¥ che qa online</a></li>
+					  <li><a target="_blank" href="https://tqf.cpe.ku.ac.th/"><span class="fa fa-caret-right"></span> à¸à¸²à¸à¸à¹à¸­à¸¡à¸¹à¸¥ à¸¡à¸à¸­. à¸­à¸­à¸à¹à¸¥à¸à¹</a></li>
+					  <li><a target="_blank" href="http://qa.ku.ac.th/webqaku/kubatko/bestpractice2554.html"><span class="fa fa-caret-right"></span> à¸à¸²à¸à¸à¹à¸­à¸¡à¸¹à¸¥à¹à¸à¸§à¸à¸à¸´à¸à¸±à¸à¸´à¸à¸µà¹à¸à¸µ</a></li>
+					  <li><a target="_blank" href="http://qa.ku.ac.th/webqaku/kubatko/scival_download.html"><span class="fa fa-caret-right"></span> à¸à¸²à¸à¸à¹à¸­à¸¡à¸¹à¸¥ scival</a></li>
+					  <li><a target="_blank" href="http://science.thomsonreuters.com/cgi-bin/jrnlst/jloptions.cgi?pc=master"><span class="fa fa-caret-right"></span> à¸à¸²à¸à¸à¹à¸­à¸¡à¸¹à¸¥ isi</a></li>
+					  <li><a target="_blank" href="http://www.scopus.com/home.url"><span class="fa fa-caret-right"></span> à¸à¸²à¸à¸à¹à¸­à¸¡à¸¹à¸¥ scopus</a></li>
+					  <li><a target="_blank" href="http://www.kmutt.ac.th/jif/public_html/"><span class="fa fa-caret-right"></span> à¸à¸²à¸à¸à¹à¸­à¸¡à¸¹à¸¥ tci</a></li>
+                    </ul>
+				</li>
+                <li><a href="#">à¸à¸³à¸à¸²à¸¡-à¸à¸³à¸à¸­à¸</a>
+					<ul>
+					  <li><a target="_blank" href="webboard/new_topic.php"><span class="fa fa-caret-right"></span> webboard</a></li>
+                      <li><a target="_blank" href="http://qa.ku.ac.th/download/qa%20km13052016.pdf"><span class="fa fa-caret-right"></span> qa à¸£à¸°à¸à¸±à¸à¸«à¸¥à¸±à¸à¸ªà¸¹à¸à¸£</a></li>
+					  <li><a target="_blank" href="#"><span class="fa fa-caret-right"></span> qa à¸£à¸°à¸à¸±à¸à¸à¸à¸°</a></li>
+					  <li><a target="_blank" href="#"><span class="fa fa-caret-right"></span> qa à¸£à¸°à¸à¸±à¸à¸ªà¸à¸²à¸à¸±à¸</a></li>
+					  <li><a target="_blank" href="#"><span class="fa fa-caret-right"></span> q&a qa à¸ªà¸±à¸à¸à¸£</a></li>
+                    </ul>
+				</li>
+              </ul>
+              </ul> 
+            </nav>
+	
+	<div class="row">
+	  <div class="col-md-12">
+		<div id="mycarousel" class="carousel slide">
+		  <div class="carousel-inner">
+		    <article class="item active">
+			  <img src="images/slide1.jpg">
+              </article>
+			<article class="item">
+			  <img src="images/slide2.jpg">
+                <!--div class="carousel-caption">
+				<h4>à¸à¸£à¸°à¸à¸³à¸à¸µ 2559</h4>
+				<p><a target="_blank" href="#" target="_blank" class="btn btn-info btn-sm">read more</a></p>
+			  </div-->
+			</article>
+			<article class="item">         
+              <img src="images/slide3.jpg">
+			   <div class="carousel-caption">
+				<h5>à¸«à¸¥à¸±à¸à¸à¸²à¸£à¸à¸£à¸à¸à¸²à¸à¸à¸­à¸à¸à¸£à¸°à¸à¸²à¸à¸ªà¸¡à¹à¸à¹à¸à¸à¸£à¸°à¸à¸£à¸¡à¸´à¸à¸à¸£à¸¡à¸«à¸²à¸ à¸¹à¸¡à¸´à¸à¸¥à¸­à¸à¸¸à¸¥à¸¢à¹à¸à¸..</h5>
+                <!-
+				<p><a target="_blank" href=https://goo.gl/kyw6y5>read more</a></p>
+                 </div>
+			</article> 
+			<article class="item">
+			  <img src="images/slide4.jpg">
+              <div class="carousel-caption">
+				<h5>à¸¥à¸à¸à¸°à¹à¸à¸µà¸¢à¸à¸­à¸­à¸à¹à¸¥à¸à¹..</h4>
+				<p><a target="_blank" href="https://docs.google.com/forms/d/e/1faipqlscxoikjec-f7fcyedxmgq8qf6x6dohuhxhkj-la0prgwokuyw/viewform" target="_blank" class="btn btn-info btn-sm">read more</a></p>
+			  </div>
+			  <!--div class="carousel-caption">
+				<h5>à¸à¸³à¸«à¸à¸à¸à¸²à¸£à¸­à¸à¸£à¸¡..</h5>
+                <!-
+				<p><a target="_blank" href="pdf/à¸à¸³à¸«à¸à¸à¸à¸²à¸£à¸­à¸à¸£à¸¡à¸à¸à¸à¸§à¸à¸à¸²à¸£à¸à¸£à¸°à¹à¸¡à¸´à¸à¸à¸µ 2560.pdf" target="_blank" class="btn btn-info btn-sm">read more</a></p>
+                </div-->
+			</article>
+			<article class="item">
+			  <img src="images/slide5.jpg">
+			  <div class="carousel-caption">
+				<h5>à¸£à¸²à¸¢à¸¥à¸°à¹à¸­à¸µà¸¢à¸à¹à¸à¸£à¸à¸à¸²à¸£..</h4>
+				<p><a target="_blank" href="pdf/à¸£à¸²à¸¢à¸¥à¸°à¹à¸­à¸µà¸¢à¸à¹à¸à¸£à¸à¸à¸²à¸£à¸ªà¸±à¸¡à¸¡à¸à¸² 15 à¸à¸µ à¸ªà¸à¸..pdf" target="_blank" class="btn btn-info btn-sm">read more</a></p>
+			  </div>
+			</article>
+		  </div>
+		  <!-- indicators -->
+		  <ol class="carousel-indicators">
+			<li data-target="#mycarousel" data-slide-to="0" class="active"></li>
+			<li data-target="#mycarousel" data-slide-to="1"></li>
+			<li data-target="#mycarousel" data-slide-to="2"></li>
+			<li data-target="#mycarousel" data-slide-to="3"></li>
+			<li data-target="#mycarousel" data-slide-to="4"></li>
+		  </ol>
+		  <!-- controls -->
+		  <div class="carousel-controls">
+			  <a class="carousel-control left" href="#mycarousel" data-slide="prev">
+				<span class="fa fa-angle-double-left"></span>
+			  </a>
+			  <a class="carousel-control right" href="#mycarousel" data-slide="next">
+				<span class="fa fa-angle-double-right"></span>
+			  </a>
+		  </div>
+		</div>
+	  </div>
+	</div>
+	
+	<!-- marketing icons section -->
+	<div class="row">
+		<div class="col-lg-12">
+			<h3 class="page-header"></h3>
+	  </div>
+  <div class="col-md-9">
+			<div class="panel with-nav-tabs panel-warning" >
+				<div class="panel-heading" style="background-color: #cc9933; font-family: 'designil font', 'helvetica', sans-serif; font-size: 0.85em;">
+					<ul class="nav nav-tabs">
+						<li class="active"><a target="_blank" href="#tab1info" data-toggle="tab"><i class="fa fa-graduation-cap" aria-hidden="true"></i> à¸à¹à¸²à¸§à¸à¸£à¸°à¸à¸²à¸ªà¸±à¸¡à¸à¸±à¸à¸à¹</a></li>
+						<li><a target="_blank" href="#tab2info" data-toggle="tab"><i class="fa fa-download" aria-hidden="true"></i> à¹à¸­à¸à¸ªà¸²à¸£à¸à¸²à¸§à¸à¹à¹à¸«à¸¥à¸</a></li>
+						<li><a target="_blank" href="#tab3info" data-toggle="tab"><i class="fa fa-envelope-o" aria-hidden="true"></i> à¸à¸à¸«à¸¡à¸²à¸¢à¸à¹à¸²à¸§ qa</a></li>
+						<li><a target="_blank" href="#tab4info" data-toggle="tab"><i class="fa fa-newspaper-o" aria-hidden="true"></i> à¸à¹à¸²à¸§ à¸à¸ªà¸.</a></li>
+						<li><a target="_blank" href="#tab5info" data-toggle="tab"><i class="fa fa-line-chart" aria-hidden="true"></i> à¸à¸²à¸£à¸à¸±à¸à¸­à¸±à¸à¸à¸±à¸à¸¡à¸«à¸²à¸§à¸´à¸à¸¢à¸²à¸¥à¸±à¸¢</a></li>
+					</ul>
+				</div>
+			<div class="panel-body">
+				<div class="tab-content">
+					<div class="tab-pane fade in active" id="tab1info">
+						<div>                      <i class="fa fa-angle-right" aria-hidden="true"></i>  <span class="style8 style10"><span class="style8 style8"><a href="pdf/à¸à¸¹à¹à¸¡à¸·à¸­à¹à¸à¸£à¸à¸à¸²à¸£à¸£à¸²à¸à¸§à¸±à¸¥à¸à¸¸à¸à¸ à¸²à¸ à¸à¸£à¸±à¹à¸à¸à¸µà¹ 11.pdf" target="_blank"><span class="style8"> à¸à¸¹à¹à¸¡à¸·à¸­à¹à¸à¸£à¸à¸à¸²à¸£à¸£à¸²à¸à¸§à¸±à¸¥à¸à¸¸à¸à¸ à¸²à¸ à¸¡à¸«à¸²à¸§à¸´à¸à¸¢à¸²à¸¥à¸±à¸¢à¹à¸à¸©à¸à¸£à¸¨à¸²à¸ªà¸à¸£à¹ à¸à¸£à¸±à¹à¸à¸à¸µà¹ 11 à¸à¸£à¸°à¸à¸³à¸à¸µ 2560</span></a></span><span class="text-danger"> <a target="_blank" href="pdf/anouncefacuty&campus2560.pdf"><span class="style4">new!!</span></a> (18/08/2560)</span><br>    
+                          <i class="fa fa-angle-right" aria-hidden="true"></i><span class="style8"> à¹à¸­à¸à¸ªà¸²à¸£à¸à¸£à¸°à¸à¸­à¸à¸à¸²à¸£à¸à¸£à¸°à¹à¸¡à¸´à¸à¸à¸¸à¸à¸ à¸²à¸à¸à¸²à¸£à¸¨à¸¶à¸à¸©à¸²à¸ à¸²à¸¢à¹à¸ à¸£à¸°à¸à¸±à¸à¸«à¸¥à¸±à¸à¸ªà¸¹à¸à¸£ à¸à¸µà¸à¸²à¸£à¸¨à¸¶à¸à¸©à¸² 2559<a target="_blank" href="pdf/anouncefacuty&campus2560.pdf"><span class="style4"> new!!</span></a> </span> <span class="text-danger">(15/08/2560)</span><br>
+- <a href="pdf/à¸à¸±à¸§à¸­à¸¢à¹à¸²à¸à¸à¸³à¸«à¸à¸à¸à¸²à¸£à¸à¸£à¸°à¹à¸¡à¸´à¸ à¸«à¸¥à¸±à¸à¸ªà¸¹à¸à¸£.docx" target="_blank">à¸à¸±à¸§à¸­à¸¢à¹à¸²à¸à¸à¸³à¸«à¸à¸à¸à¸²à¸£à¸à¸£à¸°à¹à¸¡à¸´à¸à¸¯ à¸£à¸°à¸à¸±à¸à¸«à¸¥à¸±à¸à¸ªà¸¹à¸à¸£</a><span class="text-light-blue"><br>
+- <a href="pdf/template curricurum 59.xlsx" target="_blank">à¸à¸²à¸£à¸²à¸à¸£à¸²à¸¢à¸à¸²à¸à¸à¸¥à¸à¸²à¸£à¸à¸£à¸°à¹à¸¡à¸´à¸à¸¯ (template curricurum59)</a>/ </span><a href="pdf/à¹à¸à¸à¸à¸­à¸£à¹à¸¡à¸£à¸²à¸¢à¸à¸²à¸à¸à¸¥à¸à¸£à¸°à¹à¸¡à¸´à¸à¸«à¸¥à¸±à¸à¸ªà¸¹à¸à¸£.docx" target="_blank">à¸£à¸²à¸¢à¸à¸²à¸à¸à¸¥à¸à¸²à¸£à¸à¸£à¸°à¹à¸¡à¸´à¸à¸¯</a><span class="text-light-blue"> /</span><a href="pdf/à¸à¸±à¸à¸à¸¶à¸à¸ªà¹à¸à¸£à¸²à¸¢à¸à¸²à¸à¸à¸¥à¸à¸²à¸£à¸à¸£à¸°à¹à¸¡à¸´à¸à¸¯ à¸«à¸¥à¸±à¸à¸ªà¸¹à¸à¸£.doc" target="_blank">à¸à¸±à¸à¸à¸¶à¸à¸ªà¹à¸à¸£à¸²à¸¢à¸à¸²à¸à¸¯</a><br>
+- <a href="pdf/à¸«à¸à¸±à¸à¸ªà¸·à¸­à¸£à¸±à¸à¸£à¸­à¸à¸à¸²à¸£à¸à¸¶à¸à¸à¸£à¸°à¸ªà¸à¸à¸²à¸£à¸à¹à¹à¸à¹à¸à¸à¸¹à¹à¸à¸£à¸°à¹à¸¡à¸´à¸à¸¯.doc" target="_blank">à¸«à¸à¸±à¸à¸ªà¸·à¸­à¸£à¸±à¸à¸£à¸­à¸à¸à¸²à¸£à¸à¸¶à¸à¸à¸£à¸°à¸ªà¸à¸à¸²à¸£à¸à¹à¹à¸à¹à¸à¸à¸¹à¹à¸à¸£à¸°à¹à¸¡à¸´à¸à¸¯</a> <span class="text-light-blue">/</span><a href="pdf/à¹à¸à¸à¸²à¸à¸à¸¹à¹à¸ªà¸±à¸à¹à¸à¸à¸à¸²à¸£à¸à¹.docx" target="_blank">à¹à¸à¸à¸²à¸à¸ªà¸³à¸«à¸£à¸±à¸à¸à¸¹à¹à¸ªà¸±à¸à¹à¸à¸à¸à¸²à¸£à¸à¹ </a><br>
+- <a href="https://goo.gl/4qfz9r" target="_blank">à¹à¸à¸à¸ªà¸³à¸£à¸§à¸à¸à¹à¸­à¸à¸²à¸£à¸à¸£à¸°à¹à¸¡à¸´à¸à¸¯ à¸£à¸°à¸à¸±à¸à¸«à¸¥à¸±à¸à¸ªà¸¹à¸à¸£ à¸ªà¸³à¸«à¸£à¸±à¸à¸à¸à¸°à¸à¸£à¸£à¸¡à¸à¸²à¸£à¸à¸£à¸°à¹à¸¡à¸´à¸à¸¯</a><br>
+- <a href="https://goo.gl/q1ma1u" target="_blank">à¹à¸à¸à¸ªà¸³à¸£à¸§à¸à¸à¹à¸­à¸à¸²à¸£à¸à¸£à¸°à¹à¸¡à¸´à¸à¸¯ à¸£à¸°à¸à¸±à¸à¸«à¸¥à¸±à¸à¸ªà¸¹à¸à¸£ à¸ªà¸³à¸«à¸£à¸±à¸à¸«à¸¥à¸±à¸à¸ªà¸¹à¸à¸£à¸à¸µà¹à¸£à¸±à¸à¸à¸²à¸£à¸à¸£à¸°à¹à¸¡à¸´à¸à¸¯</a> <br>
+                           <i class="fa fa-angle-right" aria-hidden="true"></i><span class="style8"> à¸à¸£à¸°à¸à¸²à¸¨à¸¡à¸«à¸²à¸§à¸´à¸à¸¢à¸²à¸¥à¸±à¸¢à¹à¸à¸©à¸à¸£à¸¨à¸²à¸ªà¸à¸£à¹ à¹à¸£à¸·à¹à¸­à¸ à¹à¸à¹à¸à¸à¸±à¹à¸à¸à¸à¸°à¸à¸£à¸£à¸¡à¸à¸²à¸£à¸à¸£à¸°à¹à¸¡à¸´à¸à¸à¸¸à¸à¸ à¸²à¸à¸à¸²à¸£à¸¨à¸¶à¸à¸©à¸²à¸ à¸²à¸¢à¹à¸  à¸à¸£à¸°à¸à¸³à¸à¸µà¸à¸²à¸£à¸¨à¸¶à¸à¸©à¸² </span><a target="_blank" href="pdf/anouncefacuty&campus2560.pdf"><span class="style8">2559 </span><span class="text-danger">(07/08/2560)</span><br>
+				           - <a href="pdf/announceasscurriculum2560.pdf"><span class="style12">à¸£à¸°à¸à¸±à¸à¸«à¸¥à¸±à¸à¸ªà¸¹à¸à¸£</span></a>         <a href="pdf/announceasscurriculum2560edit1.pdf" target="_blank">                                               
+				           à¸à¸à¸±à¸à¹à¸à¹à¹à¸à¸à¸£à¸±à¹à¸à¸à¸µà¹ 1</a> /<a href="pdf/announceasscurriculum2560edit2.pdf" target="_blank">à¸à¸à¸±à¸à¹à¸à¹à¹à¸à¸à¸£à¸±à¹à¸à¸à¸µà¹ 2</a>/ <a href="pdf/announceasscurriculum2560edit3.pdf" target="_blank">à¸à¸à¸±à¸à¹à¸à¹à¹à¸à¸à¸£à¸±à¹à¸à¸à¸µà¹ 3</a></span><a target="_blank" href="pdf/anouncefacuty&campus2560.pdf"><span class="style8"><br>
+			              - <strong>à¸£à¸°à¸à¸±à¸à¸à¸à¸°à¸§à¸´à¸à¸²à¹à¸¥à¸°à¸§à¸´à¸à¸¢à¸²à¹à¸à¸</strong> </span> </a><a href="pdf/announceassf&c60edit1.pdf" target="_blank">à¸à¸à¸±à¸à¹à¸à¹à¹à¸à¸à¸£à¸±à¹à¸à¸à¸µà¹ 1</a><a target="_blank" href="pdf/anouncefacuty&campus2560.pdf"><span class="style8 style10">/</span></a><span class="text-light-blue">à¸à¸à¸±à¸à¹à¸à¹à¹à¸à¸à¸£à¸±à¹à¸à¸à¸µà¹ 2</span><a target="_blank" href="pdf/anouncefacuty&campus2560.pdf"><br> 
+                          <i class="fa fa-angle-right" aria-hidden="true"></i><span class="style8 style10"><a href="pdf/à¸à¸£à¸°à¸à¸²à¸¨à¸­à¸±à¸à¸£à¸²à¸à¹à¸²à¸à¸­à¸à¹à¸à¸.zip" target="_blank"><span class="style8"> à¸à¸£à¸°à¸à¸²à¸¨à¸¡à¸«à¸²à¸§à¸´à¸à¸¢à¸²à¸¥à¸±à¸¢à¹à¸à¸©à¸à¸£à¸¨à¸²à¸ªà¸à¸£à¹ à¹à¸£à¸·à¹à¸­à¸ à¸à¸³à¸«à¸à¸à¸­à¸±à¸à¸£à¸²à¸à¹à¸²à¸à¸­à¸à¹à¸à¸à¸à¸à¸°à¸à¸£à¸£à¸¡à¸à¸²à¸£à¸à¸£à¸°à¹à¸¡à¸´à¸à¸à¸¸à¸à¸ à¸²à¸à¸ à¸²à¸¢à¹à¸ à¸à¸£à¸°à¸à¸³à¸à¸µà¸à¸²à¸£à¸¨à¸¶à¸à¸©à¸² 2559</span></a><span class="text-danger"> (26/07/2560)</span><br>                
+                             <i class="fa fa-angle-right" aria-hidden="true"></i> <span class="style8">à¸à¸²à¸£à¸§à¸´à¹à¸à¸£à¸²à¸°à¸«à¹à¸à¹à¸­à¸¡à¸¹à¸¥à¸à¸²à¸à¸à¸²à¸£à¹à¸à¸´à¸ à¸à¸£à¸°à¸à¸³à¸à¸µà¸à¸à¸à¸£à¸°à¸¡à¸²à¸ 2559 </span><span class="text-danger"> (13/07/2560)</span><br>  
+                             <a target="_blank" href="http://www.planning.ku.ac.th/planning/downloads/cm_data_59/index.php"style8"><span class="style8">  - <span class="style10">à¸à¹à¸­à¸¡à¸¹à¸¥à¸à¹à¸à¸à¸¸à¸à¸£à¸§à¸¡à¸à¸­à¸à¸«à¸¥à¸±à¸à¸ªà¸¹à¸à¸£à¹à¸à¸à¸à¸°à¹à¸¥à¸°à¸à¹à¸à¸à¸¸à¸à¹à¸à¸¥à¸µà¹à¸¢à¸à¹à¸­à¸à¸´à¸ªà¸´à¸ (ftes) à¸à¸­à¸à¸¡à¸«à¸²à¸§à¸´à¸à¸¢à¸²à¸¥à¸±à¸¢à¹à¸à¸©à¸à¸£à¸¨à¸²à¸ªà¸à¸£à¹ à¸à¸°à¸à¸³à¸à¸µà¸à¸à¸à¸£à¸°à¸¡à¸²à¸ 2559 à¸à¸²à¸à¸à¸­à¸à¹à¸à¸à¸à¸²à¸</span></span></a>                          </p>
+                             (<span class="style9">à¸à¸£à¸±à¸à¹à¸à¹à¸à¹à¸­à¸¡à¸¹à¸¥à¸à¸²à¸£à¸²à¸à¸à¸µà¹ 3</span>)
+                             </p>
+                             <p><span class="style10">- à¸à¸²à¸£à¸²à¸à¹à¸ªà¸à¸à¸à¸²à¸£à¸§à¸´à¹à¸à¸£à¸²à¸°à¸«à¹à¸à¹à¸­à¸¡à¸¹à¸¥à¸à¸²à¸à¸à¸²à¸£à¹à¸à¸´à¸à¸à¸µà¹à¸à¸£à¸°à¸à¸­à¸à¹à¸à¸à¹à¸§à¸¢à¸à¹à¸à¸à¸¸à¸à¸à¹à¸­à¸«à¸à¹à¸§à¸¢à¹à¸à¹à¸à¹à¸¥à¸°à¸«à¸¥à¸±à¸à¸ªà¸¸à¸à¸£ à¸à¸£à¸°à¸à¸³à¸à¸µà¸à¸à¸à¸£à¸°à¸¡à¸²à¸ à¸.à¸¨.2559 (<a href="excel/cost59.pdf" target="_blank">file.pdf</a>) (<a href="excel/cost59 (edit1).xlsx" target="_blank">file.excel <span class="style9">à¹à¸à¹à¹à¸</span><span class="style8">)</span></a></span><a target="_blank" href="http://www.edpex.org/2017/04/2.html"><br> 
+					        
+                            <i class="fa fa-angle-right" aria-hidden="true"></i></a><br>  
+					      </p>
+						  <p class="text-right"><a target="_blank" href="http://qa.ku.ac.th/webqaku/kubatko/prqa2560.html"><b>read more</b></a></p>
+					  </div>
+				  </div>
+					<div class="tab-pane fade" id="tab2info"><br>
+                     <div><i class="fa fa-angle-right" aria-hidden="true"></i> <a target="_blank" href="excel/formdataqais.xlsx">à¹à¸à¸à¸à¸­à¸£à¹à¸¡à¸à¸£à¸­à¸à¸ à¸²à¸à¸§à¸´à¸à¸²à¸à¸­à¸à¸«à¸¥à¸±à¸à¸ªà¸¹à¸à¸£à¹à¸à¸£à¸°à¸à¸ qais <span class="style4">new!</span> 15/05/2560</a></div>
+                    <div><i class="fa fa-angle-right" aria-hidden="true"></i> <a target="_blank" href="https://goo.gl/gmwu2t">à¹à¸à¸à¸à¸­à¸£à¹à¸¡à¹à¸ªà¸à¸­à¸£à¸²à¸¢à¸à¸·à¹à¸­à¸à¸à¸°à¸à¸£à¸£à¸¡à¸à¸²à¸£à¸à¸£à¸°à¹à¸¡à¸´à¸à¸à¸¸à¸à¸ à¸²à¸à¸à¸²à¸£à¸¨à¸¶à¸à¸©à¸²à¸ à¸²à¸¢à¹à¸ à¸£à¸°à¸à¸±à¸à¸à¸à¸° à¹à¸¥à¸°à¸§à¸´à¸à¸¢à¸²à¹à¸à¸ à¸à¸£à¸°à¸à¸³à¸à¸µà¸à¸²à¸£à¸¨à¸¶à¸à¸©à¸² 2559 <span class="style4"></span> 24/03/2560</a></div>
+					<div><i class="fa fa-angle-right" aria-hidden="true"></i> <a target="_blank" href="excel/qs graduateemployabilityrankings2016 ...xls">à¹à¸à¸à¸à¸£à¸­à¸à¸à¹à¸­à¸¡à¸¹à¸¥ employer's connection with graduates & partnerships with employers <span class="style4"></span> 16/02/2560</a></div>
+                    <div><i class="fa fa-angle-right" aria-hidden="true"></i> <a target="_blank" href="excel/formsurveycourse.xlsx">à¹à¸à¸à¸à¸­à¸£à¹à¸¡à¸à¸²à¸£à¸ªà¸³à¸£à¸§à¸à¸à¹à¸­à¸¡à¸¹à¸¥à¸à¸²à¸£à¸à¸£à¸°à¹à¸¡à¸´à¸à¸à¸¸à¸à¸ à¸²à¸à¸ à¸²à¸¢à¹à¸ à¸£à¸°à¸à¸±à¸à¸«à¸¥à¸±à¸à¸ªà¸¹à¸à¸£<span class="style5"></span> 20/01/2560</a>						
+                    </div>
+					<div><i class="fa fa-angle-right" aria-hidden="true"></i> <a target="_blank" href="excel/form01&02.xls">à¹à¸à¸à¸à¸­à¸£à¹à¸¡à¹à¸à¸à¸à¸±à¸à¸à¸²à¸à¸£à¸±à¸à¸à¸£à¸¸à¸à¸à¸²à¸¡à¸à¹à¸­à¹à¸ªà¸à¸­à¹à¸à¸°à¸à¸²à¸à¸£à¸²à¸¢à¸à¸²à¸à¸à¸¥à¸à¸²à¸£à¸à¸£à¸°à¹à¸¡à¸´à¸à¸à¸¸à¸à¸ à¸²à¸à¸à¸²à¸£à¸¨à¸¶à¸à¸©à¸²à¸ à¸²à¸¢à¹à¸ (à¸ªà¸à¸. 01) à¹à¸¥à¸°à¹à¸à¸à¸à¸­à¸£à¹à¸¡à¸ªà¸£à¸¸à¸à¸£à¸²à¸¢à¸à¸²à¸à¸à¸¥à¸à¸²à¸£à¸à¸³à¹à¸à¸´à¸à¸à¸²à¸à¸à¸²à¸¡à¹à¸à¸à¸à¸±à¸à¸à¸²à¸à¸£à¸±à¸à¸à¸£à¸¸à¸à¸à¸²à¸¡à¸à¹à¸­à¹à¸ªà¸à¸­à¹à¸à¸°à¸à¸²à¸à¸£à¸²à¸¢à¸à¸²à¸à¸à¸¥à¸à¸²à¸£à¸à¸£à¸°à¹à¸¡à¸´à¸à¸à¸¸à¸à¸ à¸²à¸à¸à¸²à¸£à¸¨à¸¶à¸à¸©à¸²à¸ à¸²à¸¢à¹à¸ (à¸ªà¸à¸. 02) <span class="style5"></span> 27/12/2559</a>
+</div>
+					  <div><i class="fa fa-angle-right" aria-hidden="true"></i> <a target="_blank" href="http://www.qa.ku.ac.th/download/formexpenses2559%20031059.xlsx">à¹à¸à¸à¸à¸­à¸£à¹à¸¡à¸ªà¸£à¸¸à¸à¸à¹à¸²à¹à¸à¹à¸à¹à¸²à¸¢à¹à¸à¸à¸²à¸£à¸à¸£à¸°à¹à¸¡à¸´à¸à¸à¸¸à¸à¸ à¸²à¸à¸à¸²à¸£à¸¨à¸¶à¸à¸©à¸²à¸ à¸²à¸¢à¹à¸ à¸£à¸°à¸à¸±à¸à¸«à¸¥à¸±à¸à¸ªà¸¹à¸à¸£ à¸à¸à¸°à¸§à¸´à¸à¸² à¹à¸¥à¸°à¸«à¸à¹à¸§à¸¢à¸à¸²à¸à¸ªà¸à¸±à¸à¸ªà¸à¸¸à¸
+à¸à¸µà¸à¸²à¸£à¸¨à¸¶à¸à¸©à¸² 2558 03/10/2559 </a>
+						</div>
+						<div class="text-right"><a target="_blank" href="http://www.qa.ku.ac.th/webqaku/kubatko/qa_download.html"><b>read more</b></a></div>
+					</div>
+					<div class="tab-pane fade" id="tab3info">
+                        <div><i class="fa fa-angle-right" aria-hidden="true"></i> <a target="_blank" href="newsqa/newsaug2017.pdf">à¹à¸à¸·à¸­à¸à¸ªà¸´à¸à¸«à¸²à¸à¸¡2560</a></div>
+                        <div><i class="fa fa-angle-right" aria-hidden="true"></i> <a target="_blank" href="newsqa/newsjuly2017.pdf">à¹à¸à¸·à¸­à¸à¸à¸£à¸à¸à¸²à¸à¸¡ 2560</a></div>
+                    	<div><i class="fa fa-angle-right" aria-hidden="true"></i> <a target="_blank" href="newsqa/newsjune2017.pdf">à¹à¸à¸·à¸­à¸à¸¡à¸´à¸à¸¸à¸à¸²à¸¢à¸ 2560</a></div>
+					    <div><i class="fa fa-angle-right" aria-hidden="true"></i> <a target="_blank" href="newsqa/newsmay2017.pdf">à¹à¸à¸·à¸­à¸à¸à¸¤à¸©à¸ à¸²à¸à¸¡ 2560</a></div>
+                        <div><i class="fa fa-angle-right" aria-hidden="true"></i> <a target="_blank" href="newsqa/newsapril2017.pdf">à¹à¸à¸·à¸­à¸à¹à¸¡à¸©à¸²à¸¢à¸ 2560</a></div>
+                        <div><i class="fa fa-angle-right" aria-hidden="true"></i> <a target="_blank" href="newsqa/newsmar2017.pdf">à¹à¸à¸·à¸­à¸à¸¡à¸µà¸à¸²à¸à¸¡ 2560</a></div>
+                        <div><i class="fa fa-angle-right" aria-hidden="true"></i> <a target="_blank" href="newsqa/newsfeb2017.pdf">à¹à¸à¸·à¸­à¸à¸à¸¸à¸¡à¸ à¸²à¸à¸±à¸à¸à¹ 2560</a></div>
+                    	<div><i class="fa fa-angle-right" aria-hidden="true"></i> <a target="_blank" href="newsqa/newsjan2017.pdf">à¹à¸à¸·à¸­à¸à¸¡à¸à¸£à¸²à¸à¸¡ 2560</a></div>
+						<div><i class="fa fa-angle-right" aria-hidden="true"></i> <a target="_blank" href="newsqa/newsdec2016.pdf">à¹à¸à¸·à¸­à¸à¸à¸±à¸à¸§à¸²à¸à¸¡ 2559</a></div>
+						<div><i class="fa fa-angle-right" aria-hidden="true"></i> <a target="_blank" href="newsqa/newsnov2016.pdf">à¹à¸à¸·à¸­à¸à¸à¸¤à¸¨à¸à¸´à¸à¸²à¸¢à¸ 2559</a></div>
+						<div class="text-right"><a target="_blank" href="html/qanews2560.html"><b>read more</b></a></div>
+					</div>
+					<div class="tab-pane fade" id="tab4info">
+                        <div><i class="fa fa-angle-right" aria-hidden="true"></i> <a target="_blank" href="newspaper/newspaper2560/qanewspaper2560.html">à¸à¸µ 2560</a></div>
+					  <div> <i class="fa fa-angle-right" aria-hidden="true"></i> <a target="_blank" href="newspaper/newspaper2559/qanewspaper2559.html" target="_blank">à¸à¸µ 2559</a></div>
+					  <div><i class="fa fa-angle-right" aria-hidden="true"></i> <a target="_blank" href="http://www.qa.ku.ac.th/webqaku/kubatko/qanewspaper2558new.html">à¸à¸µ 2558</a></div>
+						<div class="text-right"><a target="_blank" href="#"><b>read more</b></a></div>
+					</div>
+					<div class="tab-pane fade" id="tab5info">
+						<div><i class="fa fa-angle-right" aria-hidden="true"></i> <a target="_blank" href="http://greenmetric.ui.ac.id">ui green</a></div>
+						<div><i class="fa fa-angle-right" aria-hidden="true"></i> <a target="_blank" href="http://www.4icu.org/th">4 icu</a></div>
+						<div><i class="fa fa-angle-right" aria-hidden="true"></i> <a target="_blank" href="http://www.webometrics.info/en/asia/thailand?sort=asc&order=presence%20rank%2a">webometrics</a></div>
+						<div><i class="fa fa-angle-right" aria-hidden="true"></i> <a target="_blank" href="https://www.topuniversities.com/qs-world-university-rankings">qs ranking</a></div>
+					</div>
+					
+					
+				</div>
+			</div>
+		</div>
+		<div class="panel with-nav-tabs panel-warning" >
+			<div class="panel-heading" style="background-color: #cc9933;font-family: 'designil font', 'helvetica', sans-serif; font-size: 0.85em;">
+				<ul class="nav nav-tabs">
+					<li class="active"><a target="_blank" href="#tab6info" data-toggle="tab"><i class="fa fa-graduation-cap" aria-hidden="true"></i> à¹à¸à¸£à¸à¸à¸²à¸£/à¸à¸´à¸à¸à¸£à¸£à¸¡</a></li>
+					<li><a target="_blank" href="#tab7info" data-toggle="tab"><i class="fa fa-television" aria-hidden="true"></i> vdo clip_qa</a></li>
+					<li><a target="_blank" href="#tab8info" data-toggle="tab"><i class="fa fa-graduation-cap" aria-hidden="true"></i> à¸à¸²à¸£à¸à¸£à¸°à¸à¸±à¸à¸à¸¸à¸à¸ à¸²à¸à¸à¸´à¸à¸à¸£à¸£à¸¡à¸à¸´à¸ªà¸´à¸</a></li>
+					<li class="style8"><a target="_blank" href="#tab9info" data-toggle="tab"> à¸à¸£à¸°à¸à¸²à¸¨à¸£à¸±à¸à¸ªà¸¡à¸±à¸à¸£à¸à¸²à¸</a></li>
+			  </ul>
+			</div>
+		<div class="panel-body">
+			<div class="tab-content">
+			  <div class="tab-pane fade in active" id="tab6info"> 
+              
+               <div>   <i class="fa fa-angle-right" aria-hidden="true"></i><span class="style8"><strong><span class="style8"><span class="style8"><span class="style8"><a href="projectqa2560/240860/activity240860.html" target="_blank"><span class="style8">à¸à¸£à¸°à¸à¸¸à¸¡à¸à¸µà¹à¹à¸à¸à¹à¸à¸§à¸à¸²à¸à¸à¸²à¸£à¸à¸£à¸°à¹à¸¡à¸´à¸à¸à¸¸à¸à¸ à¸²à¸à¸à¸²à¸£à¸¨à¸¶à¸à¸©à¸²à¸ à¸²à¸¢à¹à¸ à¸£à¸°à¸à¸±à¸à¸à¸à¸°à¸§à¸´à¸à¸² à¹à¸¥à¸°à¸£à¸°à¸à¸±à¸à¸§à¸´à¸à¸¢à¸²à¹à¸à¸ à¸à¸£à¸°à¸à¸³à¸à¸µà¸à¸²à¸£à¸¨à¸¶à¸à¸©à¸² 2559 <br>
+                à¸ªà¸³à¸«à¸£à¸±à¸à¸à¸à¸°à¸à¸£à¸£à¸¡à¸à¸²à¸£à¸à¸£à¸°à¹à¸¡à¸´à¸à¸¯ à¹à¸¥à¸°à¸à¸¹à¹à¹à¸à¹à¸²à¸£à¹à¸§à¸¡à¸ªà¸±à¸à¹à¸à¸à¸à¸²à¸£à¸à¹ à¸£à¸°à¸à¸±à¸à¸à¸à¸°</span></a></span></span></span></strong></span><br>
+               <p class="text-light-blue">à¸§à¸±à¸à¸à¸µà¹ 24 à¸ªà¸´à¸à¸«à¸²à¸à¸¡ 2560 à¹à¸§à¸¥à¸² 09.00-12.00 à¸. à¸ à¸«à¹à¸­à¸à¸à¸£à¸°à¸à¸¸à¸¡à¸à¸³à¸à¸¥ à¸­à¸à¸¸à¸¥à¸§à¸´à¸à¸¢à¹ à¸à¸±à¹à¸ 2 à¸­à¸²à¸à¸²à¸£à¸ªà¸²à¸£à¸à¸´à¹à¸à¸¨ 50 à¸à¸µ à¸¡à¸. <br>
+              	</div>
+                <div> <i class="fa fa-angle-right" aria-hidden="true"></i><span class="style8"><strong><span class="style8"><span class="style8">à¸à¸£à¸°à¸à¸¸à¸¡à¸à¸´à¸à¸²à¸£à¸à¸²à¸à¸´à¸à¸à¸²à¸¡à¸à¸²à¸£à¹à¸à¸µà¸¢à¸à¸£à¸²à¸¢à¸à¸²à¸à¸à¸¥à¸²à¸£à¸à¸³à¹à¸à¸´à¸à¸à¸²à¸à¸à¸£à¸°à¸à¸±à¸à¸à¸¸à¸à¸ à¸²à¸à¸à¸²à¸£à¸¨à¸¶à¸à¸©à¸²à¸ à¸²à¸¢à¹à¸ à¸£à¸°à¸à¸±à¸à¸¡à¸«à¸²à¸§à¸´à¸à¸¢à¸²à¸¥à¸±à¸¢ à¸à¸µà¸à¸²à¸£à¸¨à¸¶à¸à¸©à¸² 2559</span> </span> </strong></span><br>
+               <p class="text-light-blue">à¸§à¸±à¸à¸à¸µà¹ 23 à¸ªà¸´à¸à¸«à¸²à¸à¸¡ 2560 à¹à¸§à¸¥à¸² 13.30-16.00 à¸. à¸ à¸«à¹à¸­à¸à¸à¸£à¸°à¸à¸¸à¸¡à¸à¸µà¸£à¸° à¸ªà¸¹à¸à¸°à¸à¸¸à¸à¸£ à¸à¸±à¹à¸ 2 à¸­à¸²à¸à¸²à¸£à¸ªà¸²à¸£à¸à¸´à¹à¸à¸¨ 50 à¸à¸µ à¸¡à¸.<br>
+              	</div>
+                <div>   <i class="fa fa-angle-right" aria-hidden="true"></i><span class="style8"><strong><span class="style8">à¸à¸²à¸£à¸à¸£à¸°à¸à¸¸à¸¡à¹à¸¥à¸à¹à¸à¸¥à¸µà¹à¸¢à¸à¸à¸§à¸²à¸¡à¸à¸´à¸à¹à¸«à¹à¸à¸£à¹à¸§à¸¡à¸à¸±à¸à¸£à¸­à¸à¸à¸à¸à¸à¸µà¸à¹à¸²à¸¢à¸à¸£à¸°à¸à¸±à¸à¸à¸¸à¸à¸ à¸²à¸ à¸à¸£à¸±à¹à¸à¸à¸µà¹ 4/2560 </span></strong></span><br>
+               <p class="text-light-blue">à¸§à¸±à¸à¸à¸µà¹ 15 à¸ªà¸´à¸à¸«à¸²à¸à¸¡ 2560 à¹à¸§à¸¥à¸² 09.30-12.00 à¸. à¸ à¸«à¹à¸­à¸à¸à¸£à¸°à¸à¸¸à¸¡à¸à¸³à¸à¸¥ à¸­à¸à¸¸à¸¥à¸§à¸´à¸à¸¢à¹ à¸à¸±à¹à¸ 2 à¸­à¸²à¸à¸²à¸£à¸ªà¸²à¸£à¸à¸´à¹à¸à¸¨ 50 à¸à¸µ à¸¡à¸. <span class="style9">&lt;<a href="pdf/meeting150860.zip" target="_blank"><span class="style9">à¹à¸­à¸à¸ªà¸²à¸£à¸à¸£à¸°à¸à¸­à¸à¸à¸²à¸£à¸à¸£à¸°à¸à¸¸à¸¡</span></a>&gt;</span><br>
+               </div>
+              
+              <div>   <i class="fa fa-angle-right" aria-hidden="true"></i><span class="style8"><strong><span class="style8"><span class="style8"><a href="projectqa2560/210760/activity210760.html" target="_blank"><span class="style8">à¸à¸£à¸°à¸à¸¸à¸¡à¸à¸µà¹à¹à¸à¸à¹à¸à¸§à¸à¸²à¸à¸à¸²à¸£à¸à¸£à¸°à¹à¸¡à¸´à¸à¸à¸¸à¸à¸ à¸²à¸à¸à¸²à¸£à¸¨à¸¶à¸à¸©à¸²à¸ à¸²à¸¢à¹à¸ à¸£à¸°à¸à¸±à¸à¸«à¸¥à¸±à¸à¸ªà¸¹à¸à¸£ à¸à¸µà¸à¸²à¸£à¸¨à¸¶à¸à¸©à¸² 2559 à¸ªà¸³à¸«à¸£à¸±à¸à¸à¸à¸°à¸à¸£à¸£à¸¡à¸à¸²à¸£à¸à¸£à¸°à¹à¸¡à¸´à¸à¸¯</span></a></span></span></strong></span><br>
+               <p class="text-light-blue">à¸§à¸±à¸à¸à¸µà¹ 21 à¸à¸£à¸à¸à¸²à¸à¸¡ 2560 à¹à¸§à¸¥à¸² 09.30-12.00 à¸. à¸ à¸«à¹à¸­à¸à¸à¸£à¸°à¸à¸¸à¸¡à¸£à¸§à¸à¸à¹à¸²à¸§ à¸à¸±à¹à¸ 2 à¸­à¸²à¸à¸²à¸£à¸§à¸à¸´à¸£à¸²à¸à¸¸à¸ªà¸£à¸à¹ à¸à¸à¸°à¹à¸à¸©à¸à¸£ <br>
+              	</div>
+              <div> <i class="fa fa-angle-right" aria-hidden="true"></i><span class="style8"><strong><span class="style8"><a href="projectqa2560/190760/activity190760.html" target="_blank"><span class="style8">à¸à¸£à¸°à¸à¸¸à¸¡à¹à¸à¸´à¸à¸à¸à¸´à¸à¸±à¸à¸´à¸à¸²à¸£à¸à¸²à¸£à¹à¸à¹à¸à¸²à¸à¸£à¸°à¸à¸à¸à¸²à¸à¸à¹à¸­à¸¡à¸¹à¸¥à¸à¹à¸²à¸à¸à¸²à¸£à¸à¸£à¸°à¸à¸±à¸à¸à¸¸à¸à¸ à¸²à¸à¸à¸²à¸£à¸¨à¸¶à¸à¸©à¸² à¸£à¸°à¸à¸±à¸à¸­à¸¸à¸à¸¡à¸¨à¸¶à¸à¸©à¸² (che qa online) à¸à¸µà¸à¸²à¸£à¸¨à¸¶à¸à¸©à¸² 2559</span></a> </span> </strong></span><br>
+               <p class="text-light-blue">à¸§à¸±à¸à¸à¸µà¹ 19 à¹à¸¥à¸° 20 à¸à¸£à¸à¸à¸²à¸à¸¡ 2560 à¹à¸§à¸¥à¸² 08.30-16.30 à¸. à¸ à¸«à¹à¸­à¸à¸à¸à¸´à¸à¸±à¸à¸´à¸à¸²à¸£à¸à¸­à¸¡à¸à¸´à¸§à¹à¸à¸­à¸£à¹ 303 à¸à¸±à¹à¸ 3 à¸­à¸²à¸à¸²à¸£à¸à¸£à¸´à¸à¸²à¸£à¸à¸­à¸¡à¸à¸´à¸§à¹à¸à¸­à¸£à¹ à¸§à¸´à¸à¸¢à¸²à¹à¸à¸à¸à¸²à¸à¹à¸à¸<br>
+              	</div>
+               <div>   <i class="fa fa-angle-right" aria-hidden="true"></i><span class="style8"><strong><span class="style8">à¸à¸²à¸£à¸à¸£à¸°à¸à¸¸à¸¡à¹à¸¥à¸à¹à¸à¸¥à¸µà¹à¸¢à¸à¸à¸§à¸²à¸¡à¸à¸´à¸à¹à¸«à¹à¸à¸£à¹à¸§à¸¡à¸à¸±à¸à¸£à¸­à¸à¸à¸à¸à¸à¸µà¸à¹à¸²à¸¢à¸à¸£à¸°à¸à¸±à¸à¸à¸¸à¸à¸ à¸²à¸ à¸à¸£à¸±à¹à¸à¸à¸µà¹ 3/2560 </span></strong></span><br>
+               <p class="text-light-blue">à¸§à¸±à¸à¸à¸µà¹ 6 à¸à¸£à¸à¸à¸²à¸à¸¡ 2560 à¹à¸§à¸¥à¸² 09.30-12.00 à¸. à¸ à¸«à¹à¸­à¸à¸à¸£à¸°à¸à¸¸à¸¡à¸à¸³à¸à¸¥ à¸­à¸à¸¸à¸¥à¸§à¸´à¸à¸¢à¹ à¸à¸±à¹à¸ 2 à¸­à¸²à¸à¸²à¸£à¸ªà¸²à¸£à¸à¸´à¹à¸à¸¨ 50 à¸à¸µ à¸¡à¸. <span class="style9">&lt;<a href="pdf/meeting060760.zip" target="_blank" class="style9">à¹à¸­à¸à¸ªà¸²à¸£à¸à¸£à¸°à¸à¸­à¸à¸à¸²à¸£à¸à¸£à¸°à¸à¸¸à¸¡</a>&gt;</span><br>
+               </div>
+              <div>   <i class="fa fa-angle-right" aria-hidden="true"></i><span class="style8"><strong><a href="https://goo.gl/frcvhb" target="_blank"><span class="style8">à¸à¸²à¸£à¸à¸£à¸°à¸à¸¸à¸¡à¹à¸¥à¸à¹à¸à¸¥à¸µà¹à¸¢à¸à¸à¸§à¸²à¸¡à¸à¸´à¸à¹à¸«à¹à¸à¸à¹à¸²à¸à¸à¸£à¸°à¸à¸±à¸à¸à¸¸à¸à¸ à¸²à¸à¸ªà¸³à¸«à¸£à¸±à¸à¸ªà¹à¸§à¸à¸à¸²à¸à¸ªà¸à¸±à¸à¸ªà¸à¸¸à¸ à¸à¸£à¸±à¹à¸à¸à¸µà¹ 2/2560 </span></a></strong></span><br>
+               <p class="text-light-blue">à¸§à¸±à¸à¸à¸µà¹ 6 à¸à¸£à¸à¸à¸²à¸à¸¡ 2560 à¹à¸§à¸¥à¸² 13.30-16.30 à¸. à¸ à¸«à¹à¸­à¸à¸à¸£à¸°à¸à¸¸à¸¡ 8 à¸à¸±à¹à¸ 2 à¸­à¸²à¸à¸²à¸£à¸ªà¸²à¸£à¸à¸´à¹à¸à¸¨ 50 à¸à¸µ à¸¡à¸.<br>
+              	</div>
+              <div>   <i class="fa fa-angle-right" aria-hidden="true"></i><br> 
+			  </div> 
+   
+    <!--div><i class="fa fa-angle-right" aria-hidden="true"></i> <a target="_blank" href="http://qa.ku.ac.th/download/0799meetingsarku2558.pdf">à¸à¸£à¸°à¸à¸¸à¸¡à¸à¸´à¸à¸à¸²à¸¡à¸à¸²à¸£à¹à¸à¸µà¸¢à¸à¸£à¸²à¸¢à¸à¸²à¸à¸à¸¥à¸à¸²à¸£à¸à¸³à¹à¸à¸´à¸à¸à¸²à¸à¸à¸£à¸°à¸à¸±à¸à¸à¸¸à¸à¸ à¸²à¸à¸à¸²à¸£à¸¨à¸¶à¸à¸©à¸²à¸ à¸²à¸¢à¹à¸ à¸¡à¸«à¸²à¸§à¸´à¸à¸¢à¸²à¸¥à¸±à¸¢à¹à¸à¸©à¸à¸£à¸¨à¸²à¸ªà¸à¸£à¹ à¸à¸µà¸à¸²à¸£à¸¨à¸¶à¸à¸©à¸² 2558 <br><span class="text-warning">
+à¸§à¸±à¸à¸à¸¸à¸à¸à¸µà¹ 17 à¸ªà¸´à¸à¸«à¸²à¸à¸¡ 2559 à¹à¸§à¸¥à¸² 13.00 -16.30 à¸.à¸ à¸«à¹à¸­à¸à¸à¸£à¸°à¸à¸¸à¸¡à¸à¸³à¸à¸¥ à¸­à¸à¸¸à¸¥à¸§à¸´à¸à¸¢à¹ à¸à¸±à¹à¸ 2 à¸­à¸²à¸à¸²à¸£à¸ªà¸²à¸£à¸à¸´à¹à¸à¸¨ 50 à¸à¸µ à¸¡à¸.</span></a></div-->
+					<div class="text-right"><b><a href="html/photoanddocument2560.html" target="_blank">read more</a></b></div>
+<div id="mycarousel2" class="carousel slide">
+							<div>
+								<a class="btn btn-info btn-xs" href="#mycarousel2" data-slide="prev">
+									<i class="fa fa-angle-double-left"></i>								</a>
+								<a class="btn btn-info btn-xs" href="#mycarousel2" data-slide="next">
+									<i class="fa fa-angle-double-right"></i>								</a>							</div>
+							<!-- carousel items -->
+							<div class="carousel-inner">
+								<div class="item active" id="1">
+									<div class="row">
+    								<!-- 1 -->
+										<div class="col-md-4"><a target="_blank" href="pdf/kureport2558.pdf"><img src="images/slide_down1.jpg" class="img-responsive"></a>
+											<div>à¸£à¸²à¸¢à¸à¸²à¸à¸à¸²à¸£à¸à¸£à¸°à¹à¸¡à¸´à¸à¸à¸¸à¸à¸ à¸²à¸à¸¯ à¸¡à¸.à¸à¸µà¸à¸²à¸£à¸¨à¸¶à¸à¸©à¸² 2558</div>
+										</div>
+                                    <!-- 2 -->
+										<div class="col-md-4"><a target="_blank" href="pdf/qaku2017.pdf"><img src="images/slide_down2.jpg" class="img-responsive"></a>
+											<div>à¸à¸à¸«à¸¡à¸²à¸¢à¸à¹à¸²à¸§ à¸à¸à¸±à¸à¸à¸´à¹à¸¨à¸©</div>
+										</div>
+                                    	<!-- 3 -->
+										<div class="col-md-4"><a target="_blank" href="http://www.edpex.org/p/download-edpex.html"><a target="_blank" href="http://www.edpex.org/p/download-edpex.html"><img src="images/slide_down3.jpg" class="img-responsive"></a></a>
+										  <div>edpex</div>
+										</div>
+									</div>
+								</div>
+								<div class="item" id="2">
+									<div class="row">
+                                       <!-- 4 -->
+										<div class="col-md-4"><a target="_blank" href="pdf/activity4.pdf"><img src="images/slide_down4.jpg" class="img-responsive"></a>
+											<div>edpex</div>
+										</div>
+                                     <!-- 5 -->
+										<div class="col-md-4"><a target="_blank" href="http://www.qa.ku.ac.th/menul/isced-fields-of-education-training-2013.pdf"><img src="images/slide_down5.jpg" class="img-responsive"></a>
+											<div>isced</div>
+										</div>
+                                    	<!-- 6 -->
+										<div class="col-md-4"><a target="_blank" href="pdf/iqa_2558.pdf"><img src="images/slide_down6.jpg" class="img-responsive"></a>
+											<div>à¸à¸¹à¹à¸¡à¸·à¸­ à¸ªà¸à¸­.</div>
+										</div>
+                                  </div>
+								</div>
+								<div class="item" id="3">
+									<div class="row">
+                                     <!-- 7 -->
+                                        <div class="col-md-4"><a target="_blank" href="pdf/book2558.zip"><img src="images/slide_down7.jpg" class="img-responsive"></a>
+										  <div>à¸à¸¹à¹à¸¡à¸·à¸­à¸à¸²à¸£à¸à¸£à¸°à¸à¸±à¸à¸à¸¸à¸à¸ à¸²à¸</div>
+										</div>
+                                    <!-- 8 -->
+                                        <div class="col-md-4"><a target="_blank" href="http://www.cheqa.mua.go.th/cheqa3d2557/"><img src="images/slide_down8.jpg" class="img-responsive"></a>
+											<div>che qa</div>
+										</div>
+                                         <!-- 9 -->
+                                        <div class="col-md-4"><a target="_blank" href="http://qais.ku.ac.th/qainput/login.aspx"><img src="images/slide_down9.jpg" class="img-responsive"></a>
+											<div>qais</div>
+										</div>
+                                  </div>
+								</div>
+								<div class="item" id="4">
+									<div class="row">
+                                         <!-- 10 -->
+                                        <div class="col-md-4"><a target="_blank" href="pdf/edpexcriteria58-61.pdf"><img src="images/slide_down10.jpg" class="img-responsive"></a>
+											<div>à¹à¸à¸à¸à¹à¸à¸¸à¸à¸ à¸²à¸à¸à¸²à¸£à¸¨à¸¶à¸à¸©à¸²à¸¯ à¸à¸à¸±à¸à¸à¸µ 2558-2561</div>
+										</div>
+                                           <!-- 11 -->
+                                        <div class="col-md-4"><a target="_blank" href="pdf/booksupport2560.pdf"><img src="images/slide_down11.jpg" class="img-responsive"></a>
+											<div>à¹à¸à¸à¸à¹à¸à¸¸à¸à¸ à¸²à¸à¸à¸²à¸£à¸¨à¸¶à¸à¸©à¸² à¸£à¸°à¸à¸±à¸à¸ªà¹à¸§à¸à¸à¸²à¸à¸ªà¸à¸±à¸à¸ªà¸à¸¸à¸</div>
+                                      </div>
+                                           <!-- 12 -->
+                                        <div class="col-md-4"><a target="_blank" href="pdf/qa10award2016.pdf"><img src="images/slide_down12.jpg" class="img-responsive"></a>
+											<div>à¹à¸¥à¹à¸¡à¸à¸¥à¸à¸²à¸à¸£à¸²à¸à¸§à¸±à¸¥à¸à¸¸à¸à¸ à¸²à¸ à¸à¸£à¸±à¹à¸à¸à¸µà¹ 10</div>
+                                      </div>
+								  </div>
+							  </div>
+				</div>
+			    </div>
+                        <!--/mycarousel-->
+		  </div>
+<div class="tab-pane fade" id="tab7info">
+			  <div><i class="fa fa-angle-right" aria-hidden="true"></i> <a target="_blank" href="http://live.ku.ac.th/?cat=7">à¸£à¸°à¸à¸à¸à¹à¸²à¸¢à¸à¸­à¸à¸ªà¸ nontrilive</a></div>
+                    <div><i class="fa fa-angle-right" aria-hidden="true"></i> <a target="_blank" href="https://sites.google.com/a/ku.th/qaku-training/du-yxn-hlang">vdo qaku activities</a></div>
+					<div><i class="fa fa-angle-right" aria-hidden="true"></i> <a target="_blank" href="https://www.youtube.com/watch?v=dm0bapz4wp8&feature=youtu.be">vdo à¸à¸²à¸£à¹à¸à¹à¸à¸²à¸à¸£à¸°à¸à¸ qais</a></div>
+					<div><i class="fa fa-angle-right" aria-hidden="true"></i> <a target="_blank" href="https://www.youtube.com/playlist?list=pllt1ezhrz04be4lxpxy9b2fd6pjujm9ug">vdo à¸à¸²à¸£à¹à¸à¹à¸à¸²à¸à¸£à¸°à¸à¸ che qa online 3d</a></div>
+				</div>
+				<div class="tab-pane fade" id="tab8info">
+					<div><i class="fa fa-angle-right" aria-hidden="true"></i> <a target="_blank" href="http://www.qa.ku.ac.th/webqaku/kubatko/nisitactivity.html">à¸à¸¹à¹à¸¡à¸·à¸­à¸à¸£à¸°à¸à¸±à¸à¸à¸¸à¸à¸ à¸²à¸  à¸à¸´à¸à¸à¸£à¸£à¸¡à¸à¸´à¸ªà¸´à¸</a></div>
+					<div><i class="fa fa-angle-right" aria-hidden="true"></i> <a target="_blank" href="http://www.qa.ku.ac.th/webqaku/kubatko/nisitactivity2.html">à¹à¸à¸£à¸à¸à¸²à¸£/à¸à¸´à¸à¸à¸£à¸£à¸¡</a></div>
+					<div><i class="fa fa-angle-right" aria-hidden="true"></i> <a target="_blank" href="http://www.qa.ku.ac.th/webqaku/kubatko/nisitactivity3.html">à¸à¸¥à¸à¸²à¸à¸à¸´à¸ªà¸´à¸ à¸à¹à¸²à¸à¸à¸²à¸£à¸à¸£à¸°à¸à¸±à¸à¸à¸¸à¸à¸ à¸²à¸</a></div>
+					<div><i class="fa fa-angle-right" aria-hidden="true"></i> <a target="_blank" href="http://www.qa.ku.ac.th/webqaku/kubatko/nisitactivity4.html">à¸£à¸²à¸¢à¸à¸²à¸à¸à¸¥à¸à¸²à¸£à¸à¸£à¸§à¸à¸à¸£à¸°à¸à¸±à¸à¸à¸¸à¸à¸ à¸²à¸</a></div>
+					<div><i class="fa fa-angle-right" aria-hidden="true"></i> <a target="_blank" href="http://www.qa.ku.ac.th/webqaku/kubatko/nisitactivity5.html">à¸à¸²à¸§à¸à¹à¹à¸«à¸¥à¸à¹à¸à¸à¸à¸­à¸£à¹à¸¡à¸à¹à¸²à¸à¹</a></div>
+				</div>
+				
+				<div class="tab-pane fade" id="tab9info"> 
+                <div><i class="fa fa-angle-right" aria-hidden="true"></i> <a target="_blank" href="pdf/jobnotice2560.pdf">
+à¸à¸£à¸°à¸à¸²à¸¨à¸à¸¥à¸à¸²à¸£à¸ªà¸­à¸à¸à¸±à¸à¹à¸¥à¸·à¸­à¸à¹à¸à¹à¸à¸à¸à¸±à¸à¸à¸²à¸à¸¡à¸«à¸²à¸§à¸´à¸à¸¢à¸²à¸¥à¸±à¸¢à¹à¸à¸´à¸à¸£à¸²à¸¢à¹à¸à¹ à¸à¸³à¹à¸«à¸à¹à¸à¸à¸±à¸à¸§à¸´à¸à¸²à¸à¸²à¸£à¸à¸­à¸¡à¸à¸´à¸§à¹à¸à¸­à¸£à¹  <span class="text-danger"><span class="style5">new!</strong>  <span class="text-danger">(16/08/2560)</span></span></a></div> 
+                  <div><i class="fa fa-angle-right" aria-hidden="true"></i> <a target="_blank" href="pdf/interview150860.pdf">
+à¸à¸£à¸°à¸à¸²à¸¨à¸à¸¥à¸à¸¹à¹à¸à¹à¸²à¸à¸à¸²à¸£à¸ªà¸­à¸à¸à¹à¸­à¹à¸à¸µà¸¢à¸à¹à¸¥à¸°à¸à¸¹à¹à¸¡à¸µà¸ªà¸´à¸à¸à¸´à¹à¸ªà¸­à¸à¸ªà¸±à¸¡à¸ à¸²à¸©à¸à¹à¹à¸à¹à¸²à¸£à¸±à¸à¸à¸²à¸£à¸à¸±à¸à¹à¸¥à¸·à¸­à¸à¹à¸à¹à¸à¸à¸à¸±à¸à¸à¸²à¸à¸¡à¸«à¸²à¸§à¸´à¸à¸¢à¸²à¸¥à¸±à¸¢à¹à¸à¸´à¸à¸£à¸²à¸¢à¹à¸à¹ à¸à¸³à¹à¸«à¸à¹à¸à¸à¸±à¸à¸§à¸´à¸à¸²à¸à¸²à¸£à¸à¸­à¸¡à¸à¸´à¸§à¹à¸à¸­à¸£à¹  <span class="text-danger"><span class="text-danger">  (08/08/2560)</span></a></div> 
+                  <div><i class="fa fa-angle-right" aria-hidden="true"></i> <a target="_blank" href="pdf/qaapp2560.pdf">
+à¸à¸£à¸°à¸à¸²à¸¨à¸£à¸²à¸¢à¸à¸·à¹à¸­à¸à¸¹à¹à¸¡à¸µà¸ªà¸´à¸à¸à¸´à¹à¹à¸à¹à¸²à¸£à¸±à¸à¸à¸²à¸£à¸à¸±à¸à¹à¸¥à¸·à¸­à¸à¸à¹à¸à¸à¸à¸±à¸à¸à¸²à¸à¸¡à¸«à¸²à¸§à¸´à¸à¸¢à¸²à¸¥à¸±à¸¢à¹à¸à¸´à¸à¸£à¸²à¸¢à¹à¸à¹ à¸à¸³à¹à¸«à¸à¹à¸à¸à¸±à¸à¸§à¸´à¸à¸²à¸à¸²à¸£à¸à¸­à¸¡à¸à¸´à¸§à¹à¸à¸­à¸£à¹  <span class="text-danger"><span class="text-danger"> (01/08/2560)</span></a></div>  
+                  <div><i class="fa fa-angle-right" aria-hidden="true"></i> <a target="_blank" href="pdf/qakujob1_2560ext1.pdf">
+à¸à¸¢à¸²à¸¢à¹à¸§à¸¥à¸²à¸£à¸±à¸à¸ªà¸¡à¸±à¸à¸£à¸à¸¸à¸à¸à¸¥à¹à¸à¸·à¹à¸­à¸ªà¸­à¸à¸à¸±à¸à¹à¸¥à¸·à¸­à¸à¸à¹à¸à¸à¸à¸±à¸à¸à¸²à¸à¸¡à¸«à¸²à¸§à¸´à¸à¸¢à¸²à¸¥à¸±à¸¢à¹à¸à¸´à¸à¸£à¸²à¸¢à¹à¸à¹ à¸à¸³à¹à¸«à¸à¹à¸à¸à¸±à¸à¸§à¸´à¸à¸²à¸à¸²à¸£à¸à¸­à¸¡à¸à¸´à¸§à¹à¸à¸­à¸£à¹  <span class="text-danger"><span class="text-danger">(03/07/2560)</span></a></div> 
+                  <div><i class="fa fa-angle-right" aria-hidden="true"></i> <a target="_blank" href="pdf/qakujob1_2560.pdf">à¸à¸£à¸°à¸à¸²à¸¨à¸£à¸±à¸à¸ªà¸¡à¸±à¸à¸£à¸à¸¸à¸à¸à¸¥à¹à¸à¸·à¹à¸­à¸ªà¸­à¸à¸à¸±à¸à¹à¸¥à¸·à¸­à¸à¹à¸à¹à¸à¸à¸à¸±à¸à¸à¸²à¸à¸¡à¸«à¸²à¸§à¸´à¸à¸¢à¸²à¸¥à¸±à¸¢à¹à¸à¸´à¸à¸£à¸²à¸¢à¹à¸à¹ à¸à¸³à¹à¸«à¸à¹à¸à¸à¸±à¸à¸§à¸´à¸à¸²à¸à¸²à¸£à¸à¸­à¸¡à¸à¸´à¸§à¹à¸à¸­à¸£à¹  <span class="text-danger"><span class="text-danger">(30/05/2560)</span></a></div> 
+                  <div><i class="fa fa-angle-right" aria-hidden="true"></i> <a target="_blank" href="pdf/qajob2559.pdf">à¸à¸£à¸°à¸à¸²à¸¨à¸à¸¥à¸à¸²à¸£à¸ªà¸­à¸à¸à¸±à¸à¹à¸¥à¸·à¸­à¸à¸à¸à¸±à¸à¸à¸²à¸à¸¡à¸«à¸²à¸§à¸´à¸à¸¢à¸²à¸¥à¸±à¸¢à¹à¸à¸´à¸à¸£à¸²à¸¢à¹à¸à¹ à¸à¸³à¹à¸«à¸à¹à¸à¸à¸±à¸à¸§à¸´à¸à¸²à¸à¸²à¸£à¸¨à¸¶à¸à¸©à¸² à¹à¸¥à¸°à¸à¸±à¸à¸§à¸´à¸à¸²à¸à¸²à¸£à¸à¸­à¸¡à¸à¸´à¸§à¹à¸à¸­à¸£à¹  <span class="text-danger">(30/11/2559)</span></a></div>    
+                  <div><i class="fa fa-angle-right" aria-hidden="true"></i> <a target="_blank" href="pdf/namejob231159.pdf">à¸à¸£à¸°à¸à¸²à¸¨à¸£à¸²à¸¢à¸à¸·à¹à¸­à¸à¸¹à¹à¸¡à¸µà¸ªà¸´à¸à¸à¸´à¹à¹à¸à¹à¸²à¸£à¸±à¸à¸à¸²à¸£à¸à¸±à¸à¹à¸¥à¸·à¸­à¸à¸à¸à¸à¸±à¸à¸à¸²à¸à¸¡à¸«à¸²à¸§à¸´à¸à¸¢à¸²à¸¥à¸±à¸¢à¹à¸à¸´à¸à¸£à¸²à¸¢à¹à¸à¹ à¸à¸³à¹à¸«à¸à¹à¸à¸à¸±à¸à¸§à¸´à¸à¸²à¸à¸²à¸£à¸¨à¸¶à¸à¸©à¸² à¹à¸¥à¸°à¸à¸±à¸à¸§à¸´à¸à¸²à¸à¸²à¸£à¸à¸­à¸¡à¸à¸´à¸§à¹à¸à¸­à¸£à¹  <span class="text-danger">(23/11/2559)</span></a></div>            
+                  <div><i class="fa fa-angle-right" aria-hidden="true"></i> <a target="_blank" href="http://qa.ku.ac.th/download/job10112559.pdf">à¸à¸¢à¸²à¸¢à¹à¸§à¸¥à¸²à¸£à¸±à¸à¸ªà¸¡à¸±à¸à¸£à¸à¸¸à¸à¸à¸¥à¹à¸à¸·à¹à¸­à¸ªà¸­à¸à¸à¸±à¸à¹à¸¥à¸·à¸­à¸à¹à¸à¹à¸à¸à¸à¸±à¸à¸à¸²à¸à¸¡à¸«à¸²à¸§à¸´à¸à¸¢à¸²à¸¥à¸±à¸¢à¹à¸à¸´à¸à¸£à¸²à¸¢à¹à¸à¹ à¸à¸³à¹à¸«à¸à¹à¸à¸à¸±à¸à¸§à¸´à¸à¸²à¸à¸²à¸£à¸¨à¸¶à¸à¸©à¸² à¹à¸¥à¸°à¸à¸±à¸à¸§à¸´à¸à¸²à¸à¸²à¸£à¸à¸­à¸¡à¸à¸´à¸§à¹à¸à¸­à¸£à¹  <span class="text-danger">(10/11/2559)</span></a></div>
+				  <div><i class="fa fa-angle-right" aria-hidden="true"></i> <a target="_blank" href="http://qa.ku.ac.th/download/job09102559.pdf">à¸à¸£à¸°à¸à¸²à¸¨à¸£à¸±à¸à¸ªà¸¡à¸±à¸à¸£à¸à¸¸à¸à¸à¸¥à¹à¸à¸·à¹à¸­à¸ªà¸­à¸à¸à¸±à¸à¹à¸¥à¸·à¸­à¸à¹à¸à¹à¸à¸à¸à¸±à¸à¸à¸²à¸à¸¡à¸«à¸²à¸§à¸´à¸à¸¢à¸²à¸¥à¸±à¸¢à¹à¸à¸´à¸à¸£à¸²à¸¢à¹à¸à¹ à¸à¸³à¹à¸«à¸à¹à¸à¸à¸±à¸à¸§à¸´à¸à¸²à¸à¸²à¸£à¸¨à¸¶à¸à¸©à¸² à¹à¸¥à¸°à¸à¸±à¸à¸§à¸´à¸à¸²à¸à¸²à¸£à¸à¸­à¸¡à¸à¸´à¸§à¹à¸à¸­à¸£à¹  <span class="text-danger">(09/10/2559)</span></a></div>
+				<div class="text-right"><a target="_blank" href="http://qa.ku.ac.th/webqaku/kubatko/qa_job.html"><b>read more</b></a></div>
+				</div>
+			</div>
+		</div>
+		</div>					   
+      </div>
+		
+		<div class="col-md-3">
+			<div class="list-group">
+				<a class="btn btn-block btn-social btn-twitter submenu" style="font-family: 'designil font', 'helvetica', sans-serif; font-size: 0.85em;" href="https://calendar.google.com/calendar/embed?src=wassana.c%40ku.th&ctz=asia/bangkok">
+					<i class="fa fa-calendar"></i> à¸à¸à¸´à¸à¸´à¸à¹à¸à¸£à¸à¸à¸²à¸£/à¸à¸´à¸à¸à¸£à¸£à¸¡ à¸à¸µ 2560
+				</a>
+				<a class="btn btn-block btn-social btn-twitter submenu" style="font-family: 'designil font', 'helvetica', sans-serif; font-size: 0.85em;" href="http://www.qa.ku.ac.th/webqaku/kubatko/linkkufac.html">
+					<i class="fa fa-edit"></i> à¸à¸²à¸à¸à¸£à¸°à¸à¸±à¸à¸à¸¸à¸à¸ à¸²à¸à¸«à¸à¹à¸§à¸¢à¸à¸²à¸à¹à¸ à¸¡à¸.
+				</a>
+				<a class="btn btn-block btn-social btn-twitter submenu" style="font-family: 'designil font', 'helvetica', sans-serif; font-size: 0.85em;" href="http://www.qa.ku.ac.th/photo_forweb/new%20web/education/edu.html">
+					<i class="fa fa-map"></i> à¸.à¸£.à¸. à¹à¸¥à¸°à¸¡à¸²à¸à¸£à¸à¸²à¸à¸à¸²à¸£à¸¨à¸¶à¸à¸©à¸²
+				</a>
+				<a class="btn btn-block btn-social btn-twitter submenu" style="font-family: 'designil font', 'helvetica', sans-serif; font-size: 0.85em;" href="http://www.qa.ku.ac.th/webqaku/kubatko/linkuniversitykr28052015.html">
+					<i class="fa fa-bank "></i> à¸à¸²à¸à¸à¸£à¸°à¸à¸±à¸à¸à¸¸à¸à¸ à¸²à¸à¸ªà¸à¸²à¸à¸±à¸à¸­à¸¸à¸à¸¡à¸¨à¸¶à¸à¸©à¸²à¸à¹à¸²à¸à¹
+				</a>
+				<a class="btn btn-block btn-social btn-twitter submenu" style="font-family: 'designil font', 'helvetica', sans-serif; font-size: 0.85em;" href="http://qa.ku.ac.th/webqaku/kubatko/qa_internal.html">
+					<i class="fa fa-language"></i> qa à¸à¹à¸²à¸à¸à¸£à¸°à¹à¸à¸¨
+				</a>
+				<a class="btn btn-block btn-social btn-twitter submenu" style="font-family: 'designil font', 'helvetica', sans-serif; font-size: 0.85em;">
+					<i class="fa fa-link"></i> web link
+				</a>
+				<div>
+					<section >
+						<div class="custom-calendar-wrap">
+							<div id="custom-inner" class="custom-inner">
+								<div class="custom-header clearfix">
+									<nav>
+										<span id="custom-prev" class="custom-prev"></span>
+<span id="custom-next" class="custom-next"></span></nav>
+										<h2 id="custom-month" class="custom-month"></h2>
+										<h3 id="custom-year" class="custom-year"></h3>
+								</div>
+								<div id="calendar" class="fc-calendar-container"></div>
+							</div>
+						</div>
+					</section>
+						<!-- clock starts -->
+						<div id="datetime"></div>
+					</div>
+					<div class="box box-solid">
+						<div class="box-header with-border">
+						  <h4 class="box-title">à¸à¸³à¸à¸§à¸à¸à¸¹à¹à¹à¸à¹à¸²à¸à¸¡à¹à¸§à¹à¸à¹à¸à¸à¹</h4>
+						</div>
+						<!-- /.box-header -->
+						<div class="box-body text-center">
+						<script src="https://www.w3counter.com/tracker.js?id=110345"></script>
+						 <a href='https://acadooghostwriter.com/'>https://acadooghostwriter.com</a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=f9230451d09c0cd9412cb86e9d75c73360be80c5'></script>
+<script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/279173/t/0"></script>	
+<!--
+							<script type="text/javascript">
+							var sc_project=11334922; 
+							var sc_invisible=0; 
+							var sc_security="bd79d875"; 
+							var scjshost = (("https:" == document.location.protocol) ?
+							"https://secure." : "http://www.");
+							document.write("<sc"+"ript type='text/javascript' src='" +
+							scjshost+
+							"statcounter.com/counter/counter.js'></"+"script>");
+							</script>
+							<noscript><div class="statcounter"><a title="free hit
+							counter" href="http://statcounter.com/" target="_blank"><img
+							class="statcounter"
+							src="//c.statcounter.com/11334922/0/bd79d875/0/" alt="free
+							hit counter"></a></div></noscript>
+<!-- -->
+						</div>
+					</div>
+				   </div>
+				</div>
+            </div>
+		
+        </div>
+
+<!-- footer -->
+		<footer>
+			<div class="container">
+				<hr />
+				<div class="text-center center-block">
+				<strong> à¸ªà¸³à¸à¸±à¸à¸à¸²à¸à¸à¸£à¸°à¸à¸±à¸à¸à¸¸à¸à¸ à¸²à¸ à¸¡à¸«à¸²à¸§à¸´à¸à¸¢à¸²à¸¥à¸±à¸¢à¹à¸à¸©à¸à¸£à¸¨à¸²à¸ªà¸à¸£à¹ à¸à¸±à¹à¸ 9 à¸­à¸²à¸à¸²à¸£à¸ªà¸²à¸£à¸à¸´à¹à¸à¸¨ 50 à¸à¸µ à¹à¸à¸£à¸¨à¸±à¸à¸à¹ 0 2942 8299 à¸à¹à¸­ 4920-24 email : <a target="_blank" href="mailto:qa@ku.ac.th">qa@ku.ac.th</a></strong><br>quality assurance kasetsart university<br />
+				<a target="_blank" href="https://www.facebook.com/office-of-quality-assurance-kasetsart-unversity-158017037598689/"><i class="fa fa-facebook-square fa-3x social"></i></a>
+				<a target="_blank" href="#"><i class="fa fa-twitter-square fa-3x social"></i></a>
+				<a target="_blank" href="#"><i class="fa fa-google-plus-square fa-3x social"></i></a>
+				<a target="_blank" href="mailto:qa@ku.ac.th"><i class="fa fa-envelope-square fa-3x social"></i></a>
+			</div>
+	    </footer>
+		
+    </div>
+    <!-- /.container -->
+
+
+    <!-- bootstrap core javascript -->
+    <script src="js/bootstrap.min.js"></script>
+	
+    <!-- script to activate the carousel -->
+    <script>
+	$('ul.nav li.dropdown').hover(function() {
+	  $(this).find('.dropdown-menu').stop(true, true).delay(100).fadein(300);
+	}, function() {
+	  $(this).find('.dropdown-menu').stop(true, true).delay(100).fadeout(300);
+	});
+	
+	
+    $('.carousel').carousel({
+        interval: 7000 //changes the speed
+    })
+    </script>
+	
+	<!-- calender -->
+	<script type="text/javascript" src="js/jquery.calendario.js"></script>
+	<script type="text/javascript" src="js/data.js"></script>
+	<script type="text/javascript">	
+		$(function() {
+			
+			var transendeventnames = {
+				'webkittransition' : 'webkittransitionend',
+				'moztransition' : 'transitionend',
+			'otransition' : 'otransitionend',
+						'mstransition' : 'mstransitionend',
+						'transition' : 'transitionend'
+					},
+					transendeventname = transendeventnames[ modernizr.prefixed( 'transition' ) ],
+					$wrapper = $( '#custom-inner' ),
+					$calendar = $( '#calendar' ),
+					cal = $calendar.calendario( {
+						ondayclick : function( $el, $contentel, dateproperties ) {
+
+							if( $contentel.length > 0 ) {
+								showevents( $contentel, dateproperties );
+							}
+
+						},
+						caldata : codropsevents,
+						displayweekabbr : true
+					} ),
+					$month = $( '#custom-month' ).html( cal.getmonthname() ),
+					$year = $( '#custom-year' ).html( cal.getyear() );
+
+				$( '#custom-next' ).on( 'click', function() {
+					cal.gotonextmonth( updatemonthyear );
+				} );
+				$( '#custom-prev' ).on( 'click', function() {
+					cal.gotopreviousmonth( updatemonthyear );
+				} );
+
+				function updatemonthyear() {				
+					$month.html( cal.getmonthname() );
+					$year.html( cal.getyear() );
+				}
+
+				// just an example..
+				function showevents( $contentel, dateproperties ) {
+
+					hideevents();
+					
+					var $events = $( '<div id="custom-content-reveal" class="custom-content-reveal"><h4>events for ' + dateproperties.monthname + ' ' + dateproperties.day + ', ' + dateproperties.year + '</h4></div>' ),
+						$close = $( '<span class="custom-content-close"></span>' ).on( 'click', hideevents );
+
+					$events.append( $contentel.html() , $close ).insertafter( $wrapper );
+					
+					settimeout( function() {
+						$events.css( 'top', '0%' );
+					}, 25 );
+
+				}
+				function hideevents() {
+
+					var $events = $( '#custom-content-reveal' );
+					if( $events.length > 0 ) {
+						
+						$events.css( 'top', '100%' );
+						modernizr.csstransitions ? $events.on( transendeventname, function() { $( this ).remove(); } ) : $events.remove();
+
+					}
+
+				}
+			
+			});
+	</script>
+	<!-- clock -->
+
+	<script type="text/javascript">  
+	$(function(){  
+		moment.locale('th');  
+	});  
+	
+	var datetime = null,
+        date = null;
+
+	var update = function () {
+		date = moment(new date())
+		datetime.html(date.format('dddd, do mmmm yyyy, à¹à¸§à¸¥à¸² h:mm:ss a'));
+	};
+
+	$(document).ready(function(){
+		datetime = $('#datetime')
+		update();
+		setinterval(update, 1000);
+	});
+	</script> 
+</body>
+</html>

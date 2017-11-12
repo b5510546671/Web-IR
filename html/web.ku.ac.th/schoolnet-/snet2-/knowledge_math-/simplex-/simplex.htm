@@ -1,0 +1,192 @@
+<html>
+<head>
+<title> 4/05/1999 ----  คณิตศาสตร์  - วิธีซิมเพล็กซ์ (simplex method)</title>
+</head>
+<body>
+
+<center><table border width=60% cellpadding=7>
+<tr>
+<td bgcolor="#e2e0e0">
+<center><table cellpadding=7 background="bgtd.gif" width=95% border>
+<tr><td><center><font face="ms sans serif" size=+1 color="blue"><b>วิธีซิมเพล็กซ์ (simplex method)</b></center>
+</table></center>
+</table></center>
+<br clear=all>
+<p>
+<center><table width=96%>
+<tr>
+<td><dd><font face="ms sans serif" size=-1 color="brown">การ<wbr>แก้<wbr>ปัญหา<wbr>โปรแกรม<wbr>เชิง<wbr>เส้น สำหรับ<wbr>โมเดล<wbr>คณิต<wbr>ศาสตร์<wbr>ที่<wbr>กำหนด<wbr>ให้<wbr> การ<wbr>มี<wbr>ตัว<wbr>แปร<wbr>ไม่<wbr>มาก<wbr>  เช่น<wbr> จำนวน<wbr>ตัว<wbr>แปร<wbr>เพียง<wbr>สอง<wbr>ตัว<wbr> เพราะ<wbr>สามารถ<wbr>เขียน<wbr>แทน<wbr>บน<wbr>แกน<wbr>ได้<wbr>ง่าย<wbr>  แต่<wbr>หาก<wbr>ตัว<wbr>แปร<wbr>มี<wbr>มาก<wbr>ขึ้น<wbr>  รูป<wbr>แบบ<wbr>วิธี<wbr>การ<wbr>คัด<wbr>จำ<wbr>เป็น<wbr>ต้อง<wbr>ใช้<wbr>วิธี<wbr>อื่น<wbr>  วิธี<wbr>ซิมเพล็กซ์<wbr>เป็น<wbr>วิธี<wbr>การ<wbr>หนึ่ง<wbr>ที่<wbr>ให้<wbr>ผล<wbr>ดี และ<wbr>เข้า<wbr>ใจ<wbr>ได้<wbr>ง่าย
+<p>
+<dd><font color="red"><b>วิธี<wbr>ซิมเพล็กซ์</b><wbr><font color="brown"> เป็น<wbr>วิธี<wbr>ทาง<wbr>พีชคณิต<wbr> ที่<wbr>อาศัย<wbr>หลัก<wbr>การ<wbr>ของ<wbr>แมทริกซ์<wbr>เข้า<wbr>ช่วย<wbr>  ช่วย<wbr>ให้<wbr>สังเกตุ<wbr>การ<wbr>เปลี่ยน<wbr>แปลง<wbr>ของ<wbr>ตัว<wbr>แปร<wbr>ได้<wbr>ง่าย<wbr> และ<wbr>สามารถ<wbr>เข้า<wbr>ใจ<wbr>แนว<wbr>ทาง<wbr>ใน<wbr>การ<wbr>เปลี่ยน<wbr>แปลง<wbr>ตัว<wbr>แปร<wbr>อย่าง<wbr>มี<wbr>เหตุ<wbr>ผล<wbr> วิธี<wbr>การ<wbr>เริ่ม<wbr>จาก<wbr>การ<wbr>เปลี่ยน<wbr>ตัว<wbr>แปร<wbr>  โดย<wbr>ดู<wbr>ให้<wbr>มี<wbr>ผล<wbr>ต่อ<wbr>จุด<wbr>มุ่ง<wbr>หมาย<wbr> โดย<wbr>เน้น<wbr>ให้<wbr>เข้า<wbr>สู่<wbr>เป้า<wbr>หมาย<wbr>ได้<wbr>เร็ว<wbr>ที่<wbr>สุด<wbr>  ผล<wbr>ลัพธ์<wbr>ที่<wbr>ได้<wbr>จึง<wbr>เป็น<wbr>ผล<wbr>ลัพธ์<wbr>ที่<wbr>เป็น<wbr>ไป<wbr>ได้<wbr> (feasible)
+<p>
+<dd>วิธี<wbr>การ<wbr>ซิมเพล็กซ์<wbr> มี<wbr>หลัก<wbr>การ<wbr>ที่<wbr>เกี่ยว<wbr>ข้อง<wbr>กับ<wbr>หลัก<wbr>ความ<wbr>สัมพันธ์<wbr>ต่าง ๆ<wbr> ดัง<wbr>นี้
+<p>
+<dd>1.  ปัญหา<wbr>ที่<wbr>มี<wbr>จุด<wbr>มุ่ง<wbr>หมาย<wbr> หรือ<wbr>สมการ<wbr>เป้า<wbr>หมาย<wbr> ที่<wbr>ต้อง<wbr>การ<wbr>ได้<wbr>ค่า<wbr>สูง<wbr>สุด<wbr> (maximization) มี<wbr>ความ<wbr>สัมพันธ<wbr>์กับ<wbr>สมการ<wbr>การ<wbr>ได้<wbr>ค่า<wbr>ต่ำ<wbr>สุด<wbr> (minimization)  ดัง<wbr>นี้
+</table></center>
+
+<center><table width=55%>
+<tr>
+<td>
+<td><font face="ms sans serif" size=-1 color="#e303e0">max z
+<td><font face="ms sans serif" size=-1 color="#e303e0">=
+<td><font face="ms sans serif" size=-1 color="#e303e0">c<sub>1</sub>x<sub>1</sub> + c<sub>2</sub>x<sub>2</sub> + ....
+
+<tr>
+<td><font face="ms sans serif" size=-1 color="brown">มี<wbr>ผล<wbr>เท่ากับ
+<td><font face="ms sans serif" size=-1 color="#e303e0">min w
+<td><font face="ms sans serif" size=-1 color="#e303e0">&nbsp;&nbsp;=&nbsp;&nbsp;
+<td><font face="ms sans serif" size=-1 color="#e303e0"><b>--</b> max z &nbsp;&nbsp;=&nbsp;&nbsp;<b> -- </b>(  c<sub>1</sub>x<sub>1</sub> + c<sub>2</sub>x<sub>2</sub> + ....)
+</table></center>
+
+<p>
+<center><table width=96%>
+<tr>
+<td colspan=5><dd><font face="ms sans serif" size=-1 color="brown">2.  ใน<wbr>อสมการ<wbr>ใด ๆ<wbr> ถ้า<wbr>คูณ<wbr>เครื่อง<wbr>หมาย<wbr>ลบ<wbr>เข้า<wbr>ไป<wbr> จะ<wbr>ทำ<wbr>ให้<wbr>เปลี่ยน<wbr>เครื่อง<wbr>หมาย<wbr>อสมการ<wbr>ไป<wbr>ใน<wbr>ทาง<wbr>ตรง<wbr>ข้าม<wbr>  เช่น<wbr>
+</table></center>
+
+<center><table width=30%>
+<tr>
+<td>
+<td align=center><font face="ms sans serif" size=-1 color="#e303e0">a<sub>1</sub>x<sub>1</sub>
+<td><font face="ms sans serif" size=-1 color="#e303e0">+
+<td align=center><font face="ms sans serif" size=-1 color="#e303e0">a<sub>2</sub>x<sub>2</sub>
+<td>&nbsp;&nbsp;<font size=3><font face="ms sans serif" size=3 color="#e303e0"><u>></u>
+<td>&nbsp;&nbsp;<font face="ms sans serif" size=-1 color="#e303e0">b
+
+<tr>
+<td><font face="ms sans serif" size=-1 color="brown">มีผลเท่ากับ
+<td align=center><font face="ms sans serif" size=-1 color="#e303e0">-- a<sub>1</sub>x<sub>1</sub>
+<td  valign=absmiddle><font face="ms sans serif" size=-1 color="#e303e0">-- 
+<td align=center><font face="ms sans serif" size=-1 color="#e303e0"> a<sub>2</sub>x<sub>2</sub>
+<td>&nbsp;&nbsp;<font face="ms sans serif" size=3 color="#e303e0"><u><</u>
+<td>&nbsp;&nbsp;<font face="ms sans serif" size=-1 color="#e303e0">-- b
+</table></center>
+
+<p>
+<center><table width=95%>
+<tr>
+<td colspan=3><font face="ms sans serif" size=-1 color="brown"><dd>3.  สมการ<wbr>ใด ๆ อาจ<wbr>แทน<wbr>ได้<wbr>ด้วย<wbr>อสมการ<wbr>สอง<wbr>อสมการ<wbr>ที่<wbr>มีเครื่องหมาย<wbr>ทั้ง<wbr>มาก<wbr>กว่า<wbr>และ<wbr>น้อย<wbr>กว่า  ดัง<wbr>ตัว<wbr>อย่าง
+
+<tr>
+<td width=20%>
+<td width=20%><font face="ms sans serif" size=-1 color="brown">สมการ
+<td><font face="ms sans serif" size=-1 color="#e303e0">a<sub>1</sub>x<sub>1</sub> + a<sub>2</sub>x<sub>2</sub>&nbsp;&nbsp;=&nbsp;&nbsp; b	
+
+<tr>
+<td>
+<td><font face="ms sans serif" size=-1 color="brown">สามารถ<wbr>เขียน<wbr>แทน<wbr>ได้<wbr>ใหม่<wbr>เป็น
+<td>
+<font face="ms sans serif" size=-1 color="#e303e0">a<sub>1</sub>x<sub>1</sub> + a<sub>2</sub>x<sub>2</sub><img src="spacer.gif" width=10><font size=3><u><</u><img src="spacer.gif" width=10><font size=-1> b<img src="spacer.gif" width=20> และ<img src="spacer.gif" width=10>  a<sub>1</sub>x<sub>1</sub> + a<sub>2</sub>x<sub>2</sub><img src="spacer.gif" width=10><font size=3><u>></u><font size=-1><img src="spacer.gif" width=10>b
+
+<tr>
+<td>
+<td><font face="ms sans serif" size=-1 color="brown">หรือ<wbr>เขียน<wbr>ได้<wbr>เป็น
+<td><font face="ms sans serif" size=-1 color="#e303e0">a<sub>1</sub>x<sub>1</sub> + a<sub>2</sub>x<sub>2</sub><img src="spacer.gif" width=10><font size=3><u><</u><font size=-1><img src="spacer.gif" width=10>b<img src="spacer.gif" width=20> และ<img src="spacer.gif" width=10>  -- a<sub>1</sub>x<sub>1</sub> -- a<sub>2</sub>x<sub>2</sub><img src="spacer.gif" width=10><font size=3><u><</u><font size=-1><img src="spacer.gif" width=10>b
+
+<tr>
+<td align=center colspan=3><font face="ms sans serif" size=-1 color="brown">(โดย<wbr>การ<wbr>ใช้<wbr>เครื่อง<wbr>หมาย<wbr>ลบ<wbr>คูณ<wbr>ใน<wbr>สมการ<wbr>หลัง)</center>
+</table></center>
+
+<p>
+<center><table width=95%>
+<tr>
+<td><font face="ms sans serif" size=-1 color="brown"><dd>4. ใน<wbr>บาง<wbr>ครั้ง อสมการ<wbr>มี<wbr>ค่า<wbr>สมบูรณ์ (absolute value) เรา<wbr>จะ<wbr>เปลี่ยน<wbr>เป็น<wbr>อสมการ สอง<wbr>สมการ<wbr>ได้<wbr>เช่น<wbr>เดียว<wbr>กัน  ดัง<wbr>ตัว<wbr>อย่าง
+</table></center>
+ 
+<center><table  cellpadding=0 cellspacing=0 width=25%>
+<tr>
+<td><font face="ms sans serif" size=+1 color="black">|
+<td align=center><font face="ms sans serif" size=-1 color="#e303e0">a<sub>1</sub>x<sub>1</sub> + a<sub>2</sub>x<sub>2</sub>
+<td><font face="ms sans serif" size=+1 color="black">|
+<td><img src="spacer.gif" width=20><font face="ms sans serif" size=3 color="#e303e0"><u><</u><font size=-1><img src="spacer.gif" width=20>b
+</table></center>
+
+<center><table  width=95%>
+<tr>
+<td width=35% align=center><font face="ms sans serif" size=-1 color="brown"><dd>เขียน<wbr>ใหม่<wbr>ได้
+
+<td><font face="ms sans serif" size=-1 color="#e303e0">a<sub>1</sub>x<sub>1</sub> + a<sub>2</sub>x<sub>2</sub><img src="spacer.gif" width=20><font size=3 color="#e303e0"><u>></u><img src="spacer.gif" width=20><font size=-1> -- b <img src="spacer.gif" width=25><font color="brown"> และ<img src="spacer.gif" width=25><font color="#e303e0"> a<sub>1</sub>x<sub>1</sub> + a<sub>2</sub>x<sub>2</sub><img src="spacer.gif" width=20><font size=3><u><</u><img src="spacer.gif" width=20><font size=-1>b
+
+<tr>
+<td colspan=2><font face="ms sans serif" size=-1 color="brown"><br><dd>การ<wbr>คิด<wbr>คำนวณ<wbr>ด้วย<wbr>วิธี<wbr>การ<wbr>ซิมเพล็กซ<wbr>์จึง<wbr>ต้อง<wbr>เปลี่ยน<wbr>ระบบ<wbr>อสมการ<wbr>ใน<wbr>โมเดล<wbr>คณิต<wbr>ศาสตร์<wbr>เชิง<wbr>เส้น<wbr>นี้<wbr>ให้<wbr>อยู่<wbr>ใน<wbr>รูป<wbr>ของ<wbr>สมการ<wbr>  โดย<wbr>อาจ<wbr>มี<wbr>การ<wbr>เพิ่ม<wbr>ตัว<wbr>แปร<wbr>สมมติ (dummy variable)<wbr> ขึ้น<wbr>  รูป<wbr>แบบ<wbr>ของ<wbr>สมการ<wbr>จะ<wbr>ขยาย<wbr>เพิ่ม<wbr>เติม<wbr>ขึ้น<wbr>  ดัง<wbr>ตัว<wbr>อย่าง
+
+<tr>
+<td>
+<td><font face="ms sans serif" size=-1 color="#e303e0">max &nbsp;&nbsp;z <img src="spacer.gif" width=10>=<img src="spacer.gif" width=10> c<sub>1</sub>x<sub>1</sub> + c<sub>2</sub>x<sub>2</sub> +........ + c<sub>n</sub>x<sub>n</sub>  
+
+<tr>
+<td>
+<td><font face="ms sans serif" size=-1 color="#e303e0">a<sub>11</sub>x<sub>1</sub> + a<sub>12</sub>x<sub>2</sub> +........ + a<sub>1n</sub>x<sub>n</sub><img src="spacer.gif" width=40><font  size=3 color="#e303e0"><u><</u><font size=-1><img src="spacer.gif" width=10>b<sub>1</sub> ........(1)
+
+<br>a<sub>21</sub>x<sub>1</sub> + a<sub>22</sub>x<sub>2</sub> +........ + a<sub>2n</sub>x<sub>n</sub><img src="spacer.gif" width=40><font  size=3 color="#e303e0"><u>></u><font size=-1><img src="spacer.gif" width=10>b<sub>2</sub> ........(2)
+
+<br><b>.</b><br><b>.</b><br><b>.</b>
+<br>a<sub>m1</sub>x<sub>1</sub> + a<sub>m2</sub>x<sub>2</sub> +........ + a<sub>mn</sub>x<sub>n</sub><img src="spacer.gif" width=35><font  size=3 color="#e303e0">= <font size=-1><img src="spacer.gif" width=10>b<sub>m</sub> ........(m)
+
+<tr>
+<td  colspan=2><font face="ms sans serif" size=-1 color="brown"><br><dd>รูป<wbr>แบบ<wbr>ที่<wbr>เขียน<wbr>ใหม่<wbr>สำหรับ<wbr>สมการ<wbr>จะ<wbr>เป็น
+ 
+<tr>
+<td>
+<td><font face="ms sans serif" size=-1 color="#e303e0">max &nbsp;&nbsp;z <img src="spacer.gif" width=10>=<img src="spacer.gif" width=10> c<sub>1</sub>x<sub>1</sub> + c<sub>2</sub>x<sub>2</sub> +........c<sub>n</sub>x<sub>n</sub>
+
+<tr>
+<td>
+<td><font face="ms sans serif" size=-1 color="#e303e0">a<sub>11</sub>x<sub>1</sub> + a<sub>12</sub>x<sub>2</sub> +........ + a<sub>1n</sub>x<sub>n</sub>+ x<sub>n+1</sub><img src="spacer.gif" width=90> =<img src="spacer.gif" width=10> b<sub>1</sub> ........(1)
+
+<br>a<sub>21</sub>x<sub>1</sub> + a<sub>22</sub>x<sub>2</sub> +........ + a<sub>2n</sub>x<sub>n</sub><img src="spacer.gif" width=40>-  x<sub>n+2</sub> + x<sub>n+3</sub><img src="spacer.gif" width=18>= <img src="spacer.gif" width=10>b<sub>2</sub> ........(2)
+
+<br><b>.</b><br><b>.</b><br><b>.</b>
+<br>a<sub>m1</sub>x<sub>1</sub> + a<sub>m2</sub>x<sub>2</sub> +........ + a<sub>mn</sub>x<sub>n</sub><img src="spacer.gif">+ x<sub>n+k</sub><img src="spacer.gif" width=15> =<img src="spacer.gif" width=10>  b<sub>m</sub> ........(m)
+</table></center>
+
+<p>
+<dd><font face="ms sans serif" size=-1 color="brown">ตัว<wbr>แปร<wbr>ที่<wbr>เพิ่ม<wbr>เข้า<wbr>มา<wbr>ใน<wbr>โมเดล<wbr>เรียก<wbr>ว่า<wbr> <font color="red">ตัว<wbr>แปร<wbr>สแล็ก (slack variable) 
+
+<p>
+<table align=left border cellpadding=10 cellspacing=5 background="bgtd.gif">
+<tr align=center>
+<td><font face="ms sans serif" size=+1 color="red">หลัก<wbr><font  size=-1 color="#01a101"><b>การ<wbr>เพิ่ม<wbr>ตัว<wbr>แปร<wbr>สแล็ก<wbr> (slack variable)</b>
+</table>
+
+<br clear=all>
+<p><br>
+<center><table  width=95%>
+<tr>
+<td><dd><font face="ms sans serif" size=-1 color="#01a101">1.  <font color="brown">ใน<wbr>อสมการ<wbr>เดิม<wbr>ที่<wbr>อยู่<wbr>ใน<wbr>รูป<wbr>เครื่อง<wbr>หมาย<wbr><font color="#e503e2">น้อย<wbr>กว่า<wbr>หรือ<wbr>เท่ากับ<wbr> <font color="brown">เรา<wbr>จะ<wbr>เปลี่ยน<wbr>เป็น<wbr>เครื่อง<wbr>หมาย<wbr>เท่ากับ<wbr> ดังนั้น<wbr> จึง<wbr>ต้อง<wbr>เพิ่ม<wbr>ส่วน<wbr>ที่<wbr>เหลือ<wbr>โดย<wbr>การ<wbr>เพิ่ม<wbr>ค่า<wbr>เข้า<wbr>ไป<wbr>อีก<wbr>  โดย<wbr>ตัว<wbr>แปร<wbr>ที่<wbr>เพิ่ม<wbr>ค่า<wbr>จึง<wbr>มี<wbr>เครื่อง<wbr>หมาย<wbr><b> +</b> นำ<wbr>หน้า<wbr>  เพื่อ<wbr>ให้<wbr>เหมือน<wbr>กับ<wbr>ว่า<wbr>เพิ่ม<wbr>ค่า<wbr>ให้<wbr>ได้<wbr>เท่า<wbr>กับ
+<p>
+<dd><font color="#01a101">2.  <font color="brown">ใน<wbr>กรณี<wbr>ของ<wbr>อสมการ<wbr>ใน<wbr>โมเดล<wbr>คณิต<wbr>ศาสตร์<wbr>เดิม<wbr>อยู่<wbr>ใน<wbr>รูป<wbr>เครื่อง<wbr>หมาย<wbr><font color="#e503e2">มาก<wbr>กว่า<wbr>หรือ<wbr>เท่ากับ<wbr> <font color="brown">เหมือน<wbr>กับ<wbr>ว่า<wbr>ฝั่ง<wbr>ซ้าย<wbr>มาก<wbr>กว่า<wbr>ฝั่ง<wbr>ขวา<wbr>  ดัง<wbr>นั้น<wbr>การ<wbr>เปลี่ยน<wbr>อสมการ<wbr>ให้<wbr>เป็น<wbr>สมการ<wbr>จึง<wbr>ต้อง<wbr>ลด<wbr>ลง<wbr> ใน<wbr>ที่<wbr>นี้<wbr>ต้อง<wbr>เติม<wbr>ตัว<wbr>แปร<wbr>สแล็ก<wbr> โดย<wbr>มี<wbr>เครื่อง<wbr>หมาย<wbr>ลบ<wbr>นำ<wbr>หน้า<wbr>  แต่<wbr>จาก<wbr>หลัก<wbr>การ<wbr>คำนวณ<wbr>ทาง<wbr>แมทริกซ์<wbr>  ตัว<wbr>แปร<wbr>ที่<wbr>ให้<wbr>ผล<wbr>ลัพธ์<wbr>แต่<wbr>ละ<wbr>ครั้ง<wbr>ที่<wbr>คำนวณ<wbr>หา<wbr> จะ<wbr>มี<wbr>สัมประสิทธิ์<wbr>เท่ากับ<wbr> <b>+</b> 1 ซึ่ง<wbr>เกิด<wbr>เป็น<wbr>แมทริกซ์<wbr>ของ<wbr>สัมประสิทธิ์<wbr>ของ<wbr>ตัว<wbr>แปร<wbr>ที่<wbr>เป็น<wbr>ตัว<wbr>แปร<wbr>พื้น<wbr>ฐาน<wbr> (basic variable)<wbr> ตาม<wbr>ข้อ<wbr>กำหนด<wbr>ของ<wbr>วิธี<wbr>ซิมเพล็กซ์<wbr> กำหนด<wbr>ว่า<wbr> ผล<wbr>ลัพธ์<wbr>เบื้อง<wbr>ต้น<wbr>ที่<wbr>เป็น<wbr>ไป<wbr>ได้<wbr>จะ<wbr>มี<wbr>ค่า<wbr>ตัว<wbr>แปร<wbr>ที่<wbr>เป็น<wbr>ตัว<wbr>แปร<wbr>พื้น<wbr>ฐาน<wbr>มาก<wbr>กว่า<wbr>หรือ<wbr>เท่า<wbr>กับ<wbr>ศูนย์<wbr>  ดัง<wbr>นั้น<wbr> จึง<wbr>ต้อง<wbr>เติม<wbr>ตัว<wbr>แปร<wbr>อีก<wbr>ตัว<wbr>หนึ่ง<wbr>ที่<wbr>มี<wbr>สัมประสิทธิ์<wbr>เป็น<wbr>บวก<wbr>ดัง<wbr>สมการ<wbr>ที่<wbr> 2
+<p>
+<dd><font color="#01a101">3.  <font color="brown">ใน<wbr>กรณี<wbr>ที่<wbr>เป็น<wbr>สมการ<wbr>ที่<wbr>มี<wbr>เครื่อง<wbr>หมาย<wbr> <font color="#e503e2">เท่ากับ<wbr> <b>=</b> <font color="brown">อยู่<wbr>แล้ว<wbr> ให้<wbr>เพิ่ม<wbr>ตัว<wbr>แปรได้<wbr>เลย
+<p><br>
+</table>
+
+<center><table border cellpadding=20 width=55%>
+<tr>
+<td><font face="ms sans serif" size=-1 color="brown"><center><b>โดย<wbr>สรุป สามารถ<wbr>เขียน<wbr>ได้<wbr>เป็น</b></center>
+<br>
+<dd><font  size=+1 color="blue"><u>></u><img src="spacer.gif"><font  size=-1 color="brown">ให้<wbr>เพิ่ม <img src="spacer.gif"><b>+</b> ตัว<wbr>แปร
+
+<dd><font  size=+1 color="blue"><u><</u><img src="spacer.gif"><font  size=-1 color="brown">ให้<wbr>เพิ่ม <img src="spacer.gif"><b>--</b> ตัว<wbr>แปร &nbsp;&nbsp;<b>+</b> ตัว<wbr>แปร
+
+<dd><font  size=+1 color="blue">=<img src="spacer.gif"><font  size=-1 color="brown">ให้<wbr>เพิ่ม 
+<img src="spacer.gif"><b>+</b> ตัว<wbr>แปร
+</table></center>
+
+<p><br>
+<table align=left border cellpadding=10 cellspacing=10 background="bgtd.gif">
+<tr align=center  bgcolor="#ededff">
+<td><font  face="ms sans serif" size=-1 color="red"><b>===></b> <font color="brown"><a href="simplxsq.htm"><b>ลำ<wbr>ดับ<wbr>ขั้น<wbr>ตอน<wbr>การ<wbr>แก้<wbr>ปัญหา<wbr>ด้วย<wbr>วิธี<wbr>ซิมเพล็กซ์</b></a> <font color="red"><b><===</b>
+</table>
+<p><br><br>
+<br clear=all>
+<hr noshade size=2 width=100%>
+<table width=50% align=right>
+<tr> 
+<td bgcolor="#e3e4ff" align=right><font  face="ms sans serif"  color="brown" size=-1>ที่มา: รศ. ยืน ภู่วรวรรณ, สำนักบริการคอมพิวเตอร์  มหาวิทยาลัย<wbr>เกษตรศาสตร์
+</table>
+<br clear=all>
+<hr noshade size=2 width=50% align=right>
+
+</body>
+</html>

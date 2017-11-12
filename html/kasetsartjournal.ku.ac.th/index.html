@@ -1,0 +1,608 @@
+
+
+<!doctype html public "-//w3c//dtd xhtml 1.0 transitional//en" "http://www.w3.org/tr/xhtml1/dtd/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" >
+<head id="ctl00_head1"><title>
+	ku journal
+</title><link href="stylesheet.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+        function m_over(x, bgc){
+            x.style.backgroundcolor = bgc;
+            x.style.cursor = "hand";
+        }
+        function m_out(x, bgc){
+            x.style.backgroundcolor = bgc;
+            x.style.cursor = "default";
+        }
+        function ismaxlen(oo){
+            var maxlength = oo.getattribute? parseint(oo.getattribute('maxlength')) : ''
+            if (oo.getattribute && oo.value.length > maxlength){
+                alert('limit ' + maxlength + ' char.');
+                oo.value = oo.value.substring(0, maxlength);
+            }
+        }
+        function setheight() {          
+            var maintable = window.document.getelementbyid("maintable");
+            var headerheight = 145;
+            var footerheight = 70;
+            maintable.style.height=eval(document.documentelement.offsetheight-headerheight-footerheight)+"px"; 
+        }
+        function window_onresize() {
+            setheight();
+        }
+    </script>
+</head>
+<body onload="javascript:setheight();" onresize="return window_onresize()">
+    <form name="aspnetform" method="post" action="startpage.aspx" id="aspnetform">
+<input type="hidden" name="ctl00_toolkitscriptmanager1_hiddenfield" id="ctl00_toolkitscriptmanager1_hiddenfield" value="" />
+<input type="hidden" name="__viewstate" id="__viewstate" value="/wepdwullte4nzc1ndk4nzypzbyczg9kfgicaw9kfg4caw8pfgiebfrlehqfkllvdsboyxzlied1zxn0igfjy2vzcyb0byblyxnldhnhcnqgsm91cm5hbgrkagupdxychwafh1tnb24sidi4ief1zyaymde3idezoje5ojm3iednvf1kzaildxychgdwaxnpymxlz2qcdq8wah8bagqcdw8wah8bagqceq8wah8bagqcew9kfgicaq88kwanaqapfgqec18hrgf0yujvdw5kzx4lxyfjdgvtq291bnqcgmqwamypzby4zg8pfgifawhkzaibd2qwfaibdw8wch4kq29sdw1uu3bhbgichglgb250x0jvbgrnhglgb3jlq29sb3ikpaefaawaatxhignsyxnzpsjqb3vybmfstgluayigahjlzj0iahr0cdovl2thc2v0c2fydgpuyxrzy2kua2fzzxrzyxj0lm9yzy8ipkfncmljdwx0dxjligfuzcboyxr1cmfsifjlc291cmnlcyatlsbmb3jtzxjsesblyxnldhnhcnqgsm91cm5hbcaotmf0dxjhbcbty2llbmnlktwvyt4ebf8hu0ichbawah4fc3r5bgufkgjhy2tncm91bmqtaw1hz2u6dxjskeltywdlcy9ozwfkqkcuz2lmkttkagipdxyehwafeefncmljdwx0dxjligfuzcboyxr1cmfsifjlc291cmnlcyatlsbmb3jtzxjsesblyxnldhnhcnqgsm91cm5hbcaotmf0dxjhbcbty2llbmnlkxxodhrwoi8va2fzzxrzyxj0am5hdhnjas5ryxnldhnhcnqub3jnlx8bagrkagmpdxyehwafatafawhkzaiedw8wbb8abqymbmjzcdsfawhkzaifdw8wbb8abqewhwfozgqcbg8pfgqfaaubmb8bagrkagcpdxyehwafatafawhkzaiidw8wbb8abqewhwfozgqccq8pfgqfaaubmr8bagrkagopdxychwfozbyeagmpea8wah8cz2rkfgbkagcpzbyczg9kfgycaq8qdxychwjnzgqwagqcaw8qdxychwjnzgqwagqcbq8qdxychwjnzgqwagqcag9kfhqcaq8pfgyecujhy2tdb2xvcgqkar4fv2lkdggbaaaaaaaasuabaaaahwcciajkzaicdw8wbb8abslwb2x1bwugmduxlcbjc3n1zsaxlcagsmfudwfyesatiezlynj1yxj5ib8bagrkagmpdxyehwafatafawhkzaiedw8wbb8abrqynduyltmxnlgomda3ns01mtkykr8bagrkagupdxyehwafaze5nh8bagrkagypdxyehwafazq3nr8bagrkagcpdxyehwafatqfawhkzaiidw8wbb8abqixmb8bagrkagkpdxyehwafatifawhkzaikd2qwcaibdw8wah8abulwb2x1bwugmduxlcbjc3n1zsaxlcagsmfudwfyesatiezlynj1yxj5idxicibcpkltu046idi0ntitmze2wcgwmdc1ltuxotipzgqcaw8qdxyghwjnhg5eyxrhvmfsdwvgawvszauetgfuzx4nrgf0yvrlehrgawvszauetgfuz2qqfqeczw4vaqjlbhqrawfnzgqcbq8pfgifaav+pgjyifw+pgzvbnqgy29sb3i9imdyyxkipkrvd25sb2fkpc9mb250pib8idxhighyzwy9imphdmfzy3jpchq6x19kb1bvc3rcywnrkcdjdgwwmcrjcggkz3ynlcdsbmskmscpij5wawv3ifjlbgf0zwqgqxj0awnszxm8l2e+zgqcbw9kfgjmd2qwbgibdxapfgyfamcfcwuivm9sdw1lsuqfdaugvm9sdw1lzbavmgmwntedmduwaza0oqmwndgdmdq3aza0ngmwndudmdq0aza0mwmwndidmdqxaza0mamwmzkdmdm4azaznwmwmzydmdm1azaznamwmzmdmdmyazazmqmwmzadmdi5azayoamwmjcdmdi2azaynqmwmjqdmdizazaymgmwmjedmdiwazaxoqmwmtgdmde3azaxngmwmtudmde0azaxmgmwmtedmdewazawoqmwmdgdmda3azawngmwmdudmda0azawmwmwmdidmdaxftidmtk2aze5namxotidmtkwaze4mwmxnzkdmtc1aze3mqmxmjicmjubmqiynwi0oaizmai1mai0mqi0nqi0nwi0oqi0naixngi0mwi1nai1oqi2mgi3mqi2mai0mgi2mqi3mgixnaixmwixmgixmqixmae5atgcodacntubnwi5nai4ngi4oai4nai5mwi4nqi5mqi5mai4oqi1obqrazjnz2dnz2dnz2dnz2dnz2dnz2dnz2dnz2dnz2dnz2dnz2dnz2dnz2dnz2dnz2dnz2dnzxybzmqcaw8qdxyghwjnhwsfb0lzc3vlsuqfdaufsxnzdwvkebubatevaqm0nzuukwmbzxybzmqcbq8qdxyghwjnhwsfbexhbmcfdauetgfuz2qqfqeczw4vaqjlbhqrawfnzgqcaw9kfhqcaq8pfgofbaichwvnhwykpaefaawdatxhignsyxnzpsjqb3vybmfstgluayigahjlzj0iahr0cdovl2thc2v0c2fydgpzb2nzy2kua2fzzxrzyxj0lm9yzy8ipkthc2v0c2fydcbkb3vybmfsig9mifnvy2lhbcbty2llbmnlcyatlsbmb3jtzxjsesblyxnldhnhcnqgsm91cm5hbcaou29jawfsifnjawvuy2vzktwvyt4fbwkeebychwgfkgjhy2tncm91bmqtaw1hz2u6dxjskeltywdlcy9ozwfkqkcuz2lmkttkagipdxyehwafe0thc2v0c2fydcbkb3vybmfsig9mifnvy2lhbcbty2llbmnlcyatlsbmb3jtzxjsesblyxnldhnhcnqgsm91cm5hbcaou29jawfsifnjawvuy2vzkxxodhrwoi8va2fzzxrzyxj0annvy3njas5ryxnldhnhcnqub3jnlx8bagrkagmpdxyehwafatafawhkzaiedw8wbb8abqymbmjzcdsfawhkzaifdw8wbb8abqewhwfozgqcbg8pfgqfaaubmb8bagrkagcpdxyehwafatafawhkzaiidw8wbb8abqewhwfozgqccq8pfgqfaaubmx8bagrkagopdxychwfozbyeagmpea8wah8cz2rkfgbkagcpzbyczg9kfgycaq8qdxychwjnzgqwagqcaw8qdxychwjnzgqwagqcbq8qdxychwjnzgqwagqcba9kfhqcaq8pfgyfcqqkar8kgwaaaaaaaelaaqaaab8haogczgqcag8pfgqfaaurvm9sdw1lidazocwgsxnzdwugmiwgie1hesaymde3lsbbdwd1c3qgmjaxnx8bagrkagmpdxyehwafatafawhkzaiedw8wbb8abrqynduyltmxnteomdeyns04mzcwkr8bagrkagupdxyehwafaze5nr8bagrkagypdxyehwafazq3nh8bagrkagcpdxyehwafatufawhkzaiidw8wbb8abqiyob8bagrkagkpdxyehwafatqfawhkzaikd2qwcaibdw8wah8abutwb2x1bwugmdm4lcbjc3n1zsaylcagtwf5idiwmtctief1z3vzdcaymde3pgjyifw+svnttjogmjq1mi0zmtuxkdaxmjutodm3mclkzaiddxapfgyfamcfcwuetgfuzx8mbqrmyw5nzbavaqjlbhubamvufcsdawdkzaifdw8wah8abx48ynigxd48zm9udcbjb2xvcj0iz3jhesi+rg93bmxvywq8l2zvbnq+ihwgpgegahjlzj0iamf2yxnjcmlwddpfx2rvug9zdejhy2soj2n0bdawjgnwacrndicsj2xuayqzjykiplzpzxcgumvsyxrlzcbbcnrpy2xlczwvyt5kzaihd2qwamypzbygagepea8wbh8czx8lbqhwb2x1bwvjrb8mbqzwb2x1bwvkebumazazoamwmzcdmdm2azaznqmwmzqdmdmzazazmgmwmzedmdmwazayoqmwmjgdmdi3azayngmwmjudmdi0azaymwmwmjidmdixazaymamwmtkdmde4azaxnwmwmtydmde1azaxnamwmtmdmdeyazaxmqmwmtadmda5azawoamwmdcdmda2azawnqmwmdqdmdazazawmgmwmdevjgmxotudmtkzaze5mqmxodkdmtg0aze4mamxnzydmtcyaze1ngi5nqiyngiyoaiyoqizmgizmwiznaiznqizngiznwizoaizoqi0mai3mai2oqi2oai2nwi2ngi2nqi2mwi2nai1ngi3oqi3oai3nwi3ngi3nqi3nai3mxqrayznz2dnz2dnz2dnz2dnz2dnz2dnz2dnz2dnz2dnz2dnz2dnz2dnzxybzmqcaw8qdxyghwjnhwsfb0lzc3vlsuqfdaufsxnzdwvkebucatebmhucazq3nam0nzyukwmcz2cwawzkagupea8wbh8czx8lbqrmyw5nhwwfbexhbmdkebubamvufqeczw4ukwmbz2rkagupzbyuagepdxykhwqcah8fzx8gcqqbhwafdzxhignsyxnzpsjqb3vybmfstgluayigahjlzj0iahr0cdovl3d3dy5lbmcua3uuywmudggvam91cm5hbf9lbi8ipkpvdxjuywwgb2ygumvzzwfyy2ggaw4grw5naw5lzxjpbmcgyw5kifrly2hub2xvz3k8l2e+hwcchbawah8ibshiywnrz3jvdw5klwltywdlonvybchjbwfnzxmvagvhzejhlmdpzik7zaicdw8wbb8abvvkb3vybmfsig9mifjlc2vhcmnoigluievuz2luzwvyaw5nigfuzcbuzwnobm9sb2d5fgh0dha6ly93d3cuzw5nlmt1lmfjlnrol2pvdxjuywxfzw4vhwfozgqcaw8pfgqfaaubmb8bagrkagqpdxyehwafbizuynnwox8bagrkagupdxyehwafatafawhkzaigdw8wbb8abqewhwfozgqcbw8pfgqfaaubmb8bagrkaggpdxyehwafatafawhkzaijdw8wbb8abqe1hwfozgqccg8pfgifawhkfgqcaw8qdxychwjnzgqwagqcbw9kfgjmd2qwbgibdxapfgifamdkzbyazaiddxapfgifamdkzbyazaifdxapfgifamdkzbyazaigd2qwfaibdw8wbh8jcqqbhwobaaaaaaaasuabaaaahwcciajkzaicdw8wbb8abrfwb2x1bwugncwgsxnzdwugmh8bagrkagmpdxyehwafatafawhkzaiedw8wbb8abqkxnjg2lte1otafawhkzaifdw8wbb8abqi1mr8bagrkagypdxyehwafazexob8bagrkagcpdxyehwafajexhwfozgqcca8pfgqfaaubmr8bagrkagkpdxyehwafatyfawhkzaikd2qwcaibdw8wah8abszwb2x1bwugncwgsxnzdwugmjxicibcpkltu046ide2odytmtu5mgrkagmpea8wbh8czx8lbqrmyw5nhwwfbexhbmdkebubamvufqeczw4ukwmbz2rkagupdxychwaffjxicibcpjxmb250ignvbg9ypsjncmf5ij5eb3dubg9hzdwvzm9udd4gfca8ysbocmvmpsjqyxzhc2nyaxb0ol9fzg9qb3n0qmfjaygny3rsmdaky3bojgd2jywnbg5rjdunksi+vmlldybszwxhdgvkiefydgljbgvzpc9hpmrkagcpzbyczg9kfgycaq8qdxyghwjnhwsfcfzvbhvtzulehwwfblzvbhvtzwqqfqebnbubajuxfcsdawcwawzkagmpea8wbh8czx8lbqdjc3n1zulehwwfbulzc3vlzbavaqeyfqedmte4fcsdawcwawzkagupea8wbh8czx8lbqrmyw5nhwwfbexhbmdkebubamvufqeczw4ukwmbz2rkagcpzbyuagepdxykhwqcah8fzx8gcqqbhwafutxhignsyxnzpsjqb3vybmfstgluayigahjlzj0iahr0cdovl2t1y29ulmxpyi5rds5hyy50ac8ipkthc2v0c2fydcbdb25mzxjlbmnlpc9hph8haoqqfgifcauoymfja2dyb3vuzc1pbwfnztp1cmwosw1hz2vzl2hlywrcry5nawypo2qcag8pfgqfaauvs2fzzxrzyxj0ienvbmzlcmvuy2v8ahr0cdovl2t1y29ulmxpyi5rds5hyy50ac8fawhkzaiddw8wbb8abqewhwfozgqcba8pfgqfaaugjm5ic3a7hwfozgqcbq8pfgqfaaubmb8bagrkagypdxyehwafatafawhkzaihdw8wbb8abqewhwfozgqcca8pfgqfaaubmb8bagrkagkpdxyehwafatcfawhkzaikdw8wah8bagqwbaiddxapfgifamdkzbyazaihd2qwamypzbygagepea8wah8cz2rkfgbkagmpea8wah8cz2rkfgbkagupea8wah8cz2rkfgbkaggpzbyuagepdxyghwkkpaefchsaaaaaaabjqaeaaaafbwkiamrkagipdxyehwafe1zvbhvtzsa1mswgsxnzdwugndyfawhkzaiddw8wbb8abqewhwfozgqcba8pfgqfaaugjm5ic3a7hwfozgqcbq8pfgqfaaucotyfawhkzaigdw8wbb8abqmymzufawhkzaihdw8wbb8abqixnh8bagrkaggpdxyehwafazuynr8bagrkagkpdxyehwafatgfawhkzaikd2qwcaibdw8wah8abrnwb2x1bwugntesielzc3vlidq2zgqcaw8qdxyghwjnhwsfbexhbmcfdauetgfuz2qqfqiczw4cdggvagjlbgj0abqrawjnz2rkagupdxychwaffjxicibcpjxmb250ignvbg9ypsjncmf5ij5eb3dubg9hzdwvzm9udd4gfca8ysbocmvmpsjqyxzhc2nyaxb0ol9fzg9qb3n0qmfjaygny3rsmdaky3bojgd2jywnbg5rjdcnksi+vmlldybszwxhdgvkiefydgljbgvzpc9hpmrkagcpzbyczg9kfgycaq8qdxyghwjnhwsfcfzvbhvtzulehwwfblzvbhvtzwqqfqecntevaqi5nhqrawfnfgfmzaiddxapfgyfamcfcwuhsxnzdwvjrb8mbqvjc3n1zwqqfqecndyvaqmymzuukwmbzxybzmqcbq8qdxyghwjnhwsfbexhbmcfdauetgfuz2qqfqiczw4cdggvagjlbgj0abqrawjnz2rkagkpzbyuagepdxykhwqcah8fzx8gcqqbhwafazxhignsyxnzpsjqb3vybmfstgluayigahjlzj0iahr0cdovl3d3dy5maxnolmt1lmfjlnroij5lqvnfvfnbulqgvu5jvkvsu0luwsbgsvnirvjjrvmgukvtrufsq0ggqlvmtevusu48l2e+hwcchbawah8ibshiywnrz3jvdw5klwltywdlonvybchjbwfnzxmvagvhzejhlmdpzik7zaicdw8wbb8abullqvnfvfnbulqgvu5jvkvsu0luwsbgsvnirvjjrvmgukvtrufsq0ggqlvmtevusu58ahr0cdovl3d3dy5maxnolmt1lmfjlnrohwfozgqcaw8pfgqfaaubmb8bagrkagqpdxyehwafbizuynnwox8bagrkagupdxyehwafatafawhkzaigdw8wbb8abqewhwfozgqcbw8pfgqfaaubmb8bagrkaggpdxyehwafatafawhkzaijdw8wbb8abqe5hwfozgqccg8pfgifawhkfgqcaw8qdxychwjnzgqwagqcbw9kfgjmd2qwbgibdxapfgifamdkzbyazaiddxapfgifamdkzbyazaifdxapfgifamdkzbyazaikd2qwfaibdw8wbh8jcqqbhwobaaaaaaaasuabaaaahwcciajkzaicdw8wbb8abrlwb2x1bwugoswgmtugsmfudwfyesaxotc3hwfozgqcaw8pfgqfaaubmb8bagrkagqpdxyehwafctaxmjutnzk2wb8bagrkagupdxyehwafazezmh8bagrkagypdxyehwafbizuynnwox8bagrkagcpdxyehwafaje3hwfozgqcca8pfgqfaaubmb8bagrkagkpdxyehwafajewhwfozgqccg9kfggcaq8pfgifaauuvm9sdw1lidkside1iephbnvhcnkgmtk3nzxicibcpkltu046idaxmjutnzk2wgrkagmpea8wbh8czx8lbqrmyw5nhwwfbexhbmdkzgrkagupdxychwafwjxicibcpjxmb250ignvbg9ypsjncmf5ij5eb3dubg9hzdwvzm9udd4gfca8zm9udcbjb2xvcj0iz3jhesi+vmlldybszwxhdgvkiefydgljbgvzpc9mb250pmrkagcpzbyczg9kfggcaq8qdxyghwjnhwsfcfzvbhvtzulehwwfblzvbhvtzwqqfseboqe4atcbnge1atqcmzmcmzicmzecmzabmwiyoqiyoaiynwiyngiynqiynaiymwiymgiymqiymaeyaje5aje4aje3aje2aje1aje0ajezajeyajexajewateviqmxmzidmtmxazezmamxmjkdmti4azeynwmxmdmdmtizaze1namxntmdmti2aze1mgmxntedmtuwaze0oqmxndgdmtq3aze0ngmxndudmtq0aze0mwmxmjudmtqyaze0mqmxndadmtm5azezoamxmzcdmtm2azeznqmxmzqdmtmzazeynbqrayfnz2dnz2dnz2dnz2dnz2dnz2dnz2dnz2dnz2dnz2dnz2cwawzkagmpea8wbh8czx8lbqdjc3n1zulehwwfbulzc3vlzbavabuafcsdabyazaifdxapfgifamdkzgrkagcpdxychgdfbmfibgvkagrkagspzbyuagepdxykhwqcah8fzx8gcqqbhwafqoc4p+c4suc4o+c4quc4suc4oydguitgujpguldgujrgukpgultgukvgullgukpgujjguljgukpguihgultguigfbwkeebychwgfkgjhy2tncm91bmqtaw1hz2u6dxjskeltywdlcy9ozwfkqkcuz2lmkttkagipdxyehwafqec4p+c4suc4o+c4quc4suc4oydguitgujpguldgujrgukpgultgukvgullgukpgujjguljgukpguihgultguih8hwfozgqcaw8pfgqfaaubmb8bagrkagqpdxyehwafbizuynnwox8bagrkagupdxyehwafatafawhkzaigdw8wbb8abqewhwfozgqcbw8pfgqfaaubmb8bagrkaggpdxyehwafatafawhkzaijdw8wbb8abqixmr8bagrkagopdxychwfozbyeagmpea8wah8cz2rkfgbkagcpzbyczg9kfgycaq8qdxychwjnzgqwagqcaw8qdxychwjnzgqwagqcbq8qdxychwjnzgqwagqcda9kfhqcaq8pfgofbaichwvnhwykpaefaau94lin4liy4lij4liq4liy4lijioc4hoc4k+c4soc4oec4mec4uoc4qec4ouc4qoc4suc4quc4lec4o+c5jb8haoqqfgifcauoymfja2dyb3vuzc1pbwfnztp1cmwosw1hz2vzl2hlywrcry5nawypo2qcag8pfgqfaau+4lin4liy4lij4liq4liy4lijioc4hoc4k+c4soc4oec4mec4uoc4qec4ouc4qoc4suc4quc4lec4o+c5jhwfawhkzaiddw8wbb8abqewhwfozgqcba8pfgqfaaugjm5ic3a7hwfozgqcbq8pfgqfaaubmb8bagrkagypdxyehwafatafawhkzaihdw8wbb8abqewhwfozgqcca8pfgqfaaubmb8bagrkagkpdxyehwafajeyhwfozgqccg8pfgifawhkfgqcaw8qdxychwjnzgqwagqcbw9kfgjmd2qwbgibdxapfgifamdkzbyazaiddxapfgifamdkzbyazaifdxapfgifamdkzbyazaind2qwfaibdw8wbh8jcqqbhwobaaaaaaaasuabaaaahwcciajkzaicdw8wbb8abs1wb2x1bwugmde1lcbjc3n1zsaxlcagsmfudwfyesaymda4lsbkdw5lidiwmdgfawhkzaiddw8wbb8abqewhwfozgqcba8pfgqfaaujmdg1os0zndg1hwfozgqcbq8pfgqfaaudmtezhwfozgqcbg8pfgqfaaudmjyzhwfozgqcbw8pfgqfaaucmtkfawhkzaiidw8wbb8abqixmr8bagrkagkpdxyehwafajezhwfozgqccg9kfggcaq8pfgifaavcvm9sdw1lidaxnswgsxnzdwugmswgiephbnvhcnkgmjawoc0gsnvuzsaymda4pgjyifw+svnttjogmdg1os0zndg1zgqcaw8qdxyghwjnhwsfbexhbmcfdauetgfuz2qqfqecdggvaqj0abqrawfnzgqcbq8pfgifaav/pgjyifw+pgzvbnqgy29sb3i9imdyyxkipkrvd25sb2fkpc9mb250pib8idxhighyzwy9imphdmfzy3jpchq6x19kb1bvc3rcywnrkcdjdgwwmcrjcggkz3ynlcdsbmskmtinksi+vmlldybszwxhdgvkiefydgljbgvzpc9hpmrkagcpzbyczg9kfgycaq8qdxyghwjnhwsfcfzvbhvtzulehwwfblzvbhvtzwqqfqedmde1fqedmtezfcsdawcwawzkagmpea8wbh8czx8lbqdjc3n1zulehwwfbulzc3vlzbavaqexfqedmjyzfcsdawcwawzkagupea8wbh8czx8lbqrmyw5nhwwfbexhbmdkebubanrofqecdggukwmbz2rkag4pzbyuagepdxykhwqcah8fzx8gcqqbhwafxdxhignsyxnzpsjqb3vybmfstgluayigahjlzj0iahr0cdovl3d3dy5qb3vybmfslmvjby5rds5hyy50ac8ipkfwcgxpzwqgrwnvbm9tawnziepvdxjuyww8l2e+hwcchbawah8ibshiywnrz3jvdw5klwltywdlonvybchjbwfnzxmvagvhzejhlmdpzik7zaicdw8wbb8abtpbchbsawvkievjb25vbwljcybkb3vybmfsfgh0dha6ly93d3cuam91cm5hbc5ly28ua3uuywmudggvhwfozgqcaw8pfgqfaaubmb8bagrkagqpdxyehwafbizuynnwox8bagrkagupdxyehwafatafawhkzaigdw8wbb8abqewhwfozgqcbw8pfgqfaaubmb8bagrkaggpdxyehwafatafawhkzaijdw8wbb8abqixnb8bagrkagopdxychwfozbyeagmpea8wah8cz2rkfgbkagcpzbyczg9kfgycaq8qdxychwjnzgqwagqcaw8qdxychwjnzgqwagqcbq8qdxychwjnzgqwagqcdw9kfhqcaq8pfgyfcqqkar8kgwaaaaaaaelaaqaaab8haogczgqcag8pfgqfaauwvm9sdw1lidaymcwgsxnzdwugmswgmsbkyw51yxj5idiwmtmtmzagsnvuzsaymdezhwfozgqcaw8pfgqfaaubmb8bagrkagqpdxyehwafcta4ntgtoti5mr8bagrkagupdxyehwafaze4nx8bagrkagypdxyehwafazq0mr8bagrkagcpdxyehwafajiwhwfozgqcca8pfgqfaaubob8bagrkagkpdxyehwafaje1hwfozgqccg9kfggcaq8pfgifaavfvm9sdw1lidaymcwgsxnzdwugmswgmsbkyw51yxj5idiwmtmtmzagsnvuzsaymdezpgjyifw+svnttjogmdg1oc05mjkxzgqcaw8qdxyghwjnhwsfbexhbmcfdauetgfuz2qqfqiczw4cdggvagjlbgj0abqrawjnz2rkagupdxychwaffzxicibcpjxmb250ignvbg9ypsjncmf5ij5eb3dubg9hzdwvzm9udd4gfca8ysbocmvmpsjqyxzhc2nyaxb0ol9fzg9qb3n0qmfjaygny3rsmdaky3bojgd2jywnbg5rjde0jykiplzpzxcgumvsyxrlzcbbcnrpy2xlczwvyt5kzaihd2qwamypzbygagepea8wbh8czx8lbqhwb2x1bwvjrb8mbqzwb2x1bwvkebuuazaymamwmtkdmde4azaxnwmwmtydmde1azaxnamwmtmdmdeyazaxmqmwmtadmda5azawoamwmdcdmda2azawnqmwmdqdmdazazawmgmwmdevfamxodcdmtg2aze4nqmxnzqdmtcwazexngmxmtcdmtixaze1nwmxntgdmtywaze2mqmxnjidmtyzaze2namxnjudmty2aze2nwmxnjgdmty5fcsdfgdnz2dnz2dnz2dnz2dnz2dnz2dnfgfmzaiddxapfgyfamcfcwuhsxnzdwvjrb8mbqvjc3n1zwqqfqebmrubazq0mrqrawfnfgfmzaifdxapfgyfamcfcwuetgfuzx8mbqrmyw5nzbavagjlbgj0abucamvuanrofcsdamdnzgqcea9kfhqcaq8pfgofbaichwvnhwykpaefaawpatxhignsyxnzpsjqb3vybmfstgluayigahjlzj0iahr0cdovl2zyyy5mb3jlc3qua3uuywmudggvzgf0ywjhc2uvsm91cm5hbc9qb3vybmfslmh0bwwipuc4p+c4suc4o+c4quc4suc4oydguitgujpguldgukfgujngukjgullgukrgujxgukpguyw8l2e+hwcchbawah8ibshiywnrz3jvdw5klwltywdlonvybchjbwfnzxmvagvhzejhlmdpzik7zaicdw8wbb8abw3gukfgullgukpgukrgullgukmg4lie4lit4liw4lin4liz4lio4liy4liq4liv4lij4lmmfgh0dha6ly9mcmmuzm9yzxn0lmt1lmfjlnrol2rhdgfiyxnll0pvdxjuywwvam91cm5hbc5odg1shwfozgqcaw8pfgqfaaubmb8bagrkagqpdxyehwafbizuynnwox8bagrkagupdxyehwafatafawhkzaigdw8wbb8abqewhwfozgqcbw8pfgqfaaubmb8bagrkaggpdxyehwafatafawhkzaijdw8wbb8abqixnh8bagrkagopdxychwfozbyeagmpea8wah8cz2rkfgbkagcpzbyczg9kfgycaq8qdxychwjnzgqwagqcaw8qdxychwjnzgqwagqcbq8qdxychwjnzgqwagqceq9kfhqcaq8pfgyfcqqkar8kgwaaaaaaaelaaqaaab8haogczgqcag8pfgqfaauovm9sdw1lidayniwgmsbkdwx5idiwmdctmzegrgvjzw1izxigmjawnx8bagrkagmpdxyehwafbdmznjgfawhkzaiedw8wbb8abqkwodu3lte3mjqfawhkzaifdw8wbb8abqmxmtufawhkzaigdw8wbb8abqymbmjzcdsfawhkzaihdw8wbb8abqiymr8bagrkaggpdxyehwafatafawhkzaijdw8wbb8abqixnx8bagrkagopzbyiagepdxychwafpvzvbhvtzsawmjysidegsnvsesaymda3ltmxierly2vtymvyidiwmdc8ynigxd5ju1nooiawodu3lte3mjrkzaiddxapfgyfamcfcwuetgfuzx8mbqrmyw5nzgrkzaifdw8wah8aba8bpgjyifw+pgegahjlzj0izg93bmxvywrgawxllmfzchg/cgfyyw09zg05c2rxmwxtvve5tvrfmwzhbhpjm1zsu1vrouptnwljm0e3zkcxbfphbghtvve5txpnmk9iehfim1z5ym1gc1nvutlnaku9ij5eb3dubg9hzdwvyt4gfca8zm9udcbjb2xvcj0iz3jhesi+vmlldybszwxhdgvkiefydgljbgvzpc9mb250pmrkagcpzbyczg9kfggcaq8qdxyghwjnhwsfcfzvbhvtzulehwwfblzvbhvtzwqqfqedmdi2fqedmte1fcsdawcwawzkagmpea8wbh8czx8lbqdjc3n1zulehwwfbulzc3vlzbavabuafcsdabyazaifdxapfgifamdkzgrkagcpdxychw1ozgqceg9kfhqcaq8pfgofbaichwvnhwykpaefaau94lin4liy4lij4liq4liy4lijioc4hoc4k+c4soc4quc4sec4h+c4hoc4oec4qoc4suc4quc4lec4o+c5jb8haoqqfgifcauoymfja2dyb3vuzc1pbwfnztp1cmwosw1hz2vzl2hlywrcry5nawypo2qcag8pfgqfaau+4lin4liy4lij4liq4liy4lijioc4hoc4k+c4soc4quc4sec4h+c4hoc4oec4qoc4suc4quc4lec4o+c5jhwfawhkzaiddw8wbb8abqewhwfozgqcba8pfgqfaaugjm5ic3a7hwfozgqcbq8pfgqfaaubmb8bagrkagypdxyehwafatafawhkzaihdw8wbb8abqewhwfozgqcca8pfgqfaaubmb8bagrkagkpdxyehwafaje4hwfozgqccg8pfgifawhkfgqcaw8qdxychwjnzgqwagqcbw9kfgjmd2qwbgibdxapfgifamdkzbyazaiddxapfgifamdkzbyazaifdxapfgifamdkzbyazaitd2qwfaibdw8wch8eagifbwcfbgqkar8abwvgukfgullgukpgukrgullgukmg4lie4lit4liw4liq4lix4liv4lin4lmb4lie4lix4lii4lio4liy4liq4liv4lij4lmmkepvdxjuywwgb2ygiethc2v0c2fydcbwzxrlcmluyxjpyw5zkr8haoqqfgifcauoymfja2dyb3vuzc1pbwfnztp1cmwosw1hz2vzl2hlywrcry5nawypo2qcag8pfgqfaavs4lin4liy4lij4liq4liy4lijioc4hoc4k+c4soc4quc4sec4lec4p+c5gec4nuc4l+c4ouc4qoc4suc4quc4lec4o+c5jchkb3vybmfsig9micblyxnldhnhcnqgvmv0zxjpbmfyawfucyl8hwfozgqcaw8pfgqfaaubmb8bagrkagqpdxyehwafbizuynnwox8bagrkagupdxyehwafatafawhkzaigdw8wbb8abqewhwfozgqcbw8pfgqfaaubmb8bagrkaggpdxyehwafatafawhkzaijdw8wbb8abqixor8bagrkagopdxychwfozbyeagmpea8wah8cz2rkfgbkagcpzbyczg9kfgycaq8qdxychwjnzgqwagqcaw8qdxychwjnzgqwagqcbq8qdxychwjnzgqwagqcfa9kfhqcaq8pfgyfcqqkar8kgwaaaaaaaelaaqaaab8haogczgqcag8pfgqfaau2vm9sdw1lidaymiwgsxnzdwugmywgmsbtzxb0zw1izxigmjaxmi0zmsbezwnlbwjlciaymdeyhwfozgqcaw8pfgqfaaubmb8bagrkagqpdxyehwafctaxmjutnte2or8bagrkagupdxyehwafaze4ob8bagrkagypdxyehwafazq0mx8bagrkagcpdxyehwafajizhwfozgqcca8pfgqfaaubmb8bagrkagkpdxyehwafajiwhwfozgqccg9kfggcaq8pfgifaavlvm9sdw1lidaymiwgsxnzdwugmywgmsbtzxb0zw1izxigmjaxmi0zmsbezwnlbwjlciaymdeypgjyifw+svnttjogmdeyns01mty5zgqcaw8qdxyghwjnhwsfbexhbmcfdauetgfuz2qqfqavabqrawbkzaifdw8wah8abvo8ynigxd48zm9udcbjb2xvcj0iz3jhesi+rg93bmxvywq8l2zvbnq+ihwgpgzvbnqgy29sb3i9imdyyxkiplzpzxcgumvsyxrlzcbbcnrpy2xlczwvzm9udd5kzaihd2qwamypzbyiagepea8wbh8czx8lbqhwb2x1bwvjrb8mbqzwb2x1bwvkebunazaymgmwmjedmdiwazaxoqmwmtgdmde3azaxngmwmtudmde0azaxmwmwmtidmdexazaxmbunaze4oamxnzgdmtc3aze1nqmxmtidmtexazexmamxmdkdmta4azewnwmxmdydmta1azewnbqraw1nz2dnz2dnz2dnz2dnfgfmzaiddxapfgyfamcfcwuhsxnzdwvjrb8mbqvjc3n1zwqqfqebmxubazq0mxqrawfnfgfmzaifdxapfgyfamcfcwuetgfuzx8mbqrmyw5nzbavabuafcsdagrkagcpdxychw1ozgqcfq9kfhqcaq8pfgofbaichwvnhwykpaefaau04lin4liy4lij4liq4liy4lijioc4quc4luc4suc4muc4sec4mec4rec4suc4q+c4suc4ox8haoqqfgifcauoymfja2dyb3vuzc1pbwfnztp1cmwosw1hz2vzl2hlywrcry5nawypo2qcag8pfgqfaau14lin4liy4lij4liq4liy4lijioc4quc4luc4suc4muc4sec4mec4rec4suc4q+c4suc4o3wfawhkzaiddw8wbb8abqewhwfozgqcba8pfgqfaaugjm5ic3a7hwfozgqcbq8pfgqfaaubmb8bagrkagypdxyehwafatafawhkzaihdw8wbb8abqewhwfozgqcca8pfgqfaaubmb8bagrkagkpdxyehwafajixhwfozgqccg8pfgifawhkfgqcaw8qdxychwjnzgqwagqcbw9kfgjmd2qwbgibdxapfgifamdkzbyazaiddxapfgifamdkzbyazaifdxapfgifamdkzbyazaiwd2qwfaibdw8wch8eagifbwcfbgqkar8abyqbpgegy2xhc3m9impvdxjuywxmaw5riibocmvmpsjodhrwoi8vd3d3lnjkas5rchmua3uuywmudggvd2vilwpvdxjuywwvaw5kzxguahrtij7gukfgultgujfguklgullgukrgullgukpguihgulpguyhguj7guifguyhgukrgujk8l2e+hwcchbawah8ibshiywnrz3jvdw5klwltywdlonvybchjbwfnzxmvagvhzejhlmdpzik7zaicdw8wbb8abwlgukfgultgujfguklgullgukrgullgukpguihgulpguyhguj7guifguyhgukrgujl8ahr0cdovl3d3dy5yzgkua3bzlmt1lmfjlnrol3dlyi1qb3vybmfsl2luzgv4lmh0br8bagrkagmpdxyehwafatafawhkzaiedw8wbb8abqymbmjzcdsfawhkzaifdw8wbb8abqewhwfozgqcbg8pfgqfaaubmb8bagrkagcpdxyehwafatafawhkzaiidw8wbb8abqewhwfozgqccq8pfgqfaaucmjifawhkzaikdw8wah8bagqwbaiddxapfgifamdkzbyazaihd2qwamypzbygagepea8wah8cz2rkfgbkagmpea8wah8cz2rkfgbkagupea8wah8cz2rkfgbkahcpzbyuagepdxyghwkkpaefchsaaaaaaabjqaeaaaafbwkiamrkagipdxyehwafmvzvbhvtzsawmdysielzc3vlidmsicbkyw51yxj5idiwmdgtierly2vtymvyidiwmdgfawhkzaiddw8wbb8abqewhwfozgqcba8pfgqfaaujmty4ns05mze2hwfozgqcbq8pfgqfaaudmtayhwfozgqcbg8pfgqfaaudmjm4hwfozgqcbw8pfgqfaaucmjufawhkzaiidw8wbb8abqe5hwfozgqccq8pfgqfaaucmjmfawhkzaikd2qwcaibdw8wah8abuzwb2x1bwugmda2lcbjc3n1zsazlcagsmfudwfyesaymda4lsbezwnlbwjlciaymda4pgjyifw+svnttjogmty4ns05mze2zgqcaw8qdxyghwjnhwsfbexhbmcfdauetgfuz2qqfqeczw4vaqjlbhqrawfnzgqcbq8pfgifaav/pgjyifw+pgzvbnqgy29sb3i9imdyyxkipkrvd25sb2fkpc9mb250pib8idxhighyzwy9imphdmfzy3jpchq6x19kb1bvc3rcywnrkcdjdgwwmcrjcggkz3ynlcdsbmskmjinksi+vmlldybszwxhdgvkiefydgljbgvzpc9hpmrkagcpzbyczg9kfgycaq8qdxyghwjnhwsfcfzvbhvtzulehwwfblzvbhvtzwqqfqydmda2azawnqmwmdqdmdazazawmgmwmdevbgmxmdidmtaxazewmai5oqi5oai5nxqrawznz2dnz2cwawzkagmpea8wbh8czx8lbqdjc3n1zulehwwfbulzc3vlzbavawexatibmxudazizngmymzcdmjm4fcsda2dnzxybzmqcbq8qdxyghwjnhwsfbexhbmcfdauetgfuz2qqfqeczw4vaqjlbhqrawfnzgqcga9kfhqcaq8pfgofbaichwvnhwykpaefaav04lin4liy4lij4liq4liy4lijioc4hoc4k+c4soc4p+c4toc4l+c4ouc4suc4gec4suc4o+c4ioc4sec4loc4gec4suc4oydgukfgultgujfguklgullguydguilgujxgukjgukpgulxgukpgullguirgulifbwkeebychwgfkgjhy2tncm91bmqtaw1hz2u6dxjskeltywdlcy9ozwfkqkcuz2lmkttkagipdxyehwafdec4p+c4suc4o+c4quc4suc4oydguitgujpguldgukfgultgujfguklgullguihgullgukpguijgulhgujtguihgullgukmg4lin4li04lix4lii4liy4lma4lic4liv4lio4lij4li14lij4liy4lik4liyfb8bagrkagmpdxyehwafatafawhkzaiedw8wbb8abqymbmjzcdsfawhkzaifdw8wbb8abqewhwfozgqcbg8pfgqfaaubmb8bagrkagcpdxyehwafatafawhkzaiidw8wbb8abqewhwfozgqccq8pfgqfaaucmjqfawhkzaikdw8wah8bagqwbaiddxapfgifamdkzbyazaihd2qwamypzbygagepea8wah8cz2rkfgbkagmpea8wah8cz2rkfgbkagupea8wah8cz2rkfgbkahkpzbyuagepdxykhwqcah8fzx8gcqqbhwafiwe8ysbjbgfzcz0iam91cm5hbexpbmsiighyzwy9imh0dha6ly9kzm0uzm9yzxn0lmt1lmfjlnrol2rmbwpvdxjuywwuahrtij7gukfgullgukpgukrgullgukpguihgullgukpguijgulhgujtguihgullgukpgujvguyjgullguytgukhguyk8l2e+hwcchbawah8ibshiywnrz3jvdw5klwltywdlonvybchjbwfnzxmvagvhzejhlmdpzik7zaicdw8wbb8abwngukfgullgukpgukrgullgukpguihgullgukpguijgulhgujtguihgullgukpgujvguyjgullguytgukhguyl8ahr0cdovl2rmbs5mb3jlc3qua3uuywmudggvzgztam91cm5hbc5odg0fawhkzaiddw8wbb8abqewhwfozgqcba8pfgqfaaugjm5ic3a7hwfozgqcbq8pfgqfaaubmb8bagrkagypdxyehwafatafawhkzaihdw8wbb8abqewhwfozgqcca8pfgqfaaubmb8bagrkagkpdxyehwafaji1hwfozgqccg8pfgifawhkfgqcaw8qdxychwjnzgqwagqcbw9kfgjmd2qwbgibdxapfgifamdkzbyazaiddxapfgifamdkzbyazaifdxapfgifamdkzbyazaiad2qwfaibdw8wbh8jcqqbhwobaaaaaaaasuabaaaahwcciajkzaicdw8wbb8absvwb2x1bwugoswgmsbkyw51yxj5idiwmtetmzagsnvuzsaymdexhwfozgqcaw8pfgqfaauentm0ob8bagrkagqpdxyehwafcde5mdywmjj4hwfozgqcbq8pfgqfaaudmtgyhwfozgqcbg8pfgqfaaugjm5ic3a7hwfozgqcbw8pfgqfaaucmjcfawhkzaiidw8wbb8abqewhwfozgqccq8pfgqfaaucmjyfawhkzaikd2qwcaibdw8wah8abtlwb2x1bwugoswgmsbkyw51yxj5idiwmtetmzagsnvuzsaymdexpgjyifw+svnttjogmtkwnjaymnhkzaiddxapfgyfamcfcwuetgfuzx8mbqrmyw5nzgrkzaifdw8wah8aba8bpgjyifw+pgegahjlzj0izg93bmxvywrgawxllmfzchg/cgfyyw09zg05c2rxmwxtvve5tvrnewzhbhpjm1zsu1vrouptnwljm0e3zkcxbfphbghtvve5tlrnme9iehfim1z5ym1gc1nvutlnamm9ij5eb3dubg9hzdwvyt4gfca8zm9udcbjb2xvcj0iz3jhesi+vmlldybszwxhdgvkiefydgljbgvzpc9mb250pmrkagcpzbyczg9kfggcaq8qdxyghwjnhwsfcfzvbhvtzulehwwfblzvbhvtzwqqfqcboqe4atybnaezatibmruhaze4mgmxodedmtczaze1oqmxmjadmte5azexobqrawdnz2dnz2dnfgfmzaiddxapfgyfamcfcwuhsxnzdwvjrb8mbqvjc3n1zwqqfqavabqrawawagqcbq8qdxychwjnzgrkzaihdw8wah8nagrkahspdxychwfozgqyaguex19db250cm9sc1jlcxvpcmvqb3n0qmfja0tlev9ffgefegn0bdawjfjlbwvtymvytwufdgn0bdawjgnwacrndg88kwakaqgcawsumhwhlezzpayozx4aferduddfgg==" />
+
+
+<script src="/scriptresource.axd?d=jouvgwxbezlxhaduxhwvdtdnej7ujcxsd-aqs1omj8pbgw6f2_xik36nboo9yytvp_xoybhfshp-2z0anz0fhbs3cxrc0bc_czjx9t9mq9luwaytrpyhqg0_qsqbiq--qyym6zktcawho6jbqp0x-a_zizxupzu4bqdxkfym3vhaitdz0&amp;t=634187597185937500" type="text/javascript"></script>
+<input type="hidden" name="__viewstategenerator" id="__viewstategenerator" value="c8125695" />
+<input type="hidden" name="__eventvalidation" id="__eventvalidation" value="/wew+wecninzza4c+brhpgmctamj0aecjuvjzqccgck5lakmp+vlbal0rio8arq13lekaq70idqcarj5idqcaqzhlp0datxjlpydaqdt6asgapggtsmkarxy7kydarty7kydasjm2f8oaptewmucasqyvpmoaodh+zgfavbptcybaqwimoydarosvnkoau/dmtgeapv2k7mpaodh3zgfatgoypegatcotpigatgo0pegatoolpigatko9pegatso9pegatoo+pegatooypegatoo0pegatoompigatooxpegatcozpegatoowpegatsoxpegatsompigatwo/pegatao+pegatwo9pegatoo/pegatwo+pegatao/pegatcoxpegatcowpegatco/pegatco+pegatco9pegasiotpigaseotpigaseo9pegatsoypegataotpigasioxpegaseozpegaseolpigaseoxpegasiowpegaseoypegasio+pegasio9pegaseompigatsolpigavdpu70darzqhqmgao+lhl4jarfy7kydarby7kydasjmgb8oau/dyp8faqwi9secapv2s/qoarosqj4pasqy0lqpavbp2qeclmtqggmcgohz3wqclmtyggmcyi6i1gcc0y6m1gcc0y7+1qcc0y7y1qcc0o6w1gcc0o6q1gcc0o6u1gcc0o6i1gcc0o6m1gcc0o661gcc0o7+1qcc0o7y1qcc046e1gcc1o6e1gcc1y7y1qcc1y7+1qcc1y661gcc1y6m1gcc1y6i1gcc1y6q1gcc1y6u1gcc1i6m1gcc1o7y1qcc1o7+1qcc1o661gcc1o6m1gcc1o6i1gcc1o6u1gcc1o6q1gccz4b91wkclfcx4aucvndo5accj6wmggocqflspgmcqplspgmcyobpwa0c1i7q9gycjlg3qaycvncwhaucj6xukakcq/lspgmcqvlspgmcyobriamcv+apiamcyi72vgqc8unt1aqcvncezaqcy9dmzaqcj6xczaccrflspgmcrplspgmcgem52amcmv6b8wkc98efhgccsqswmqgcj42sraycuofs8g4cpidixqucpidaxqucy7r0sggcpidwxquclcy8hqqcgemx2amcmv6t8wkc98f9hqccsqsomqgcj42kraycuofk8g4clcy0hqqc7twwmaicy7rwsggcpidsxquc7twemaicgem92amcmv6f8wkc98f5hqccsqs0mqgcj42wraycuofw8g4clcywhqqc7twsmaicy7r8sggcpidexqucy7r4sggckk38gqsctpkspwmctpkopwmctpkkpwmcvv6l3w4cpidc5qicp7spwaqcyqjygwyckk2aoaoctpkgpwmctplcuamcyf6fhwwcvv79hwwcuoegnqsclcyy6gec7tw69wccy7qq3q0c98ej6giclcze6gecuoeinqscmv7bnawcuoeynqscj43ywwmc98en6gicmv7rnawcgenjtwycpic2kglluptddqlu1fl3bwkvzndqaqk4576dcwkpjf7dawkypnz2dqkfyok+dgk9qlllbqlkqmrlbqkqryjccak08ti4awk08ts4awlu1y6fbakqrdducak08tc4awk08sy4awk08si4awlu27qsbglu24asbgljscbydgk1g4qyaglav8hyawlbqkpzcqksky2gbwlp8rizcalu25qsbgljsdrydglomssfbak1g6ayagkq7iczcala2vogbwkj+fubcwk38qynawk38qinawk38qsnawkminzfdglav+n4balbqivtdgkska0maplqpvihaplqqvihaplq7vehav2w9yafatk9k/cpaufx06khaorziomgaon5/58karfyokcdarfy3lgdarfy2lgdatq/5f8fasgox9qpav/wxuidaunypl4oaqyriaebaunytl4oattblgscifntkakdlcytgn+eoa/iefoarna4bhfecw==" />
+    
+    <table border="0" cellpadding="0" cellspacing="0" style="width: 100%;">
+        <tr>
+            <td>
+                 <table border="0" cellpadding="0" cellspacing="0" style="width: 100%;">
+                    <tr>
+                        <td style="padding-left: 0.2em; white-space: nowrap; width: 30%;"><img src="images/head.gif" alt="logo" height="66" width="224" /></td>
+                        <td align="center"><span id="ctl00_lblmmberinfo" class="smallfont"><font color="gray">you have guest access to kasetsart journal</font></span></td>
+                        <td style="width: 37%; white-space: nowrap; text-align: right;">
+                        <span id="ctl00_lbtime" class="loginfont"><font color="silver">[mon, 28 aug 2017 13:19:37 gmt]</font></span></td>
+                    </tr>
+                </table>
+           </td>
+        </tr>
+        <tr>
+            <td>
+                <table border="0" style="width: 100%; border-top: #329c24 1px solid; padding-bottom: 5px; padding-top: 5px; border-bottom: #329c24 1px solid;" cellspacing="0">
+                    <tr style="background-color: #c5f1c9">
+                        <td>
+                            <div id="ctl00_p1">
+	
+                            <div id="ctl00_masterupdatepanel2">
+		
+                                <table border="0" cellspacing="0">
+                                    <tr>
+                                       <td style="white-space: nowrap; background-color: #c5f1c9;" align="center">&nbsp;<span id="ctl00_label1" class="boldfont">search</span>&nbsp;</td>
+                                       <td style="white-space: nowrap; background-color: #c5f1c9;" align="right">&nbsp;&nbsp;<span id="ctl00_label2" class="searchfont">title, abstract, keywords</span></td>
+                                       <td style="background-color: #c5f1c9">
+                                           <input name="ctl00$tbtak" type="text" maxlength="450" id="ctl00_tbtak" tabindex="1" class="searchtbstyle" /></td>
+                                       <td align="right" style="background-color: #c5f1c9">&nbsp;&nbsp;<span id="ctl00_label3" class="searchfont">author </span></td>
+                                       <td style="background-color: #c5f1c9;">
+                                           <input name="ctl00$tbauthor" type="text" maxlength="450" id="ctl00_tbauthor" tabindex="2" class="searchtbstyle" /></td>
+                                       <td rowspan="2" style="background-color: #c5f1c9" valign="middle"><input type="submit" name="ctl00$btgo" value="go" id="ctl00_btgo" class="searchbtstyle" /><br />
+                                           <input type="submit" name="ctl00$btclear" value="clear" id="ctl00_btclear" class="searchbtstyle" /></td>
+                                    </tr>
+                                    <tr>
+                                       <td style="background-color: #c5f1c9"></td>
+                                       <td align="right" style="background-color: #c5f1c9"><span id="ctl00_label4" class="searchfont">journal title </span></td>
+                                       <td style="background-color: #c5f1c9"><input name="ctl00$tbtitle" type="text" maxlength="400" id="ctl00_tbtitle" tabindex="3" class="searchtbstyle" /></td>
+                                       <td align="right" style="background-color: #c5f1c9">&nbsp;<span id="ctl00_label5" class="searchfont">volume </span></td>
+                                       <td style="white-space: nowrap; background-color: #c5f1c9;"><input name="ctl00$tbvol" type="text" maxlength="10" id="ctl00_tbvol" tabindex="4" class="searchtbstyle" />&nbsp;<span id="ctl00_label6" class="searchfont">issue</span>&nbsp;<input name="ctl00$tbissue" type="text" maxlength="10" id="ctl00_tbissue" tabindex="5" class="searchtbstyle" />&nbsp;<span id="ctl00_label7" class="searchfont">page</span>&nbsp;<input name="ctl00$tbspage" type="text" maxlength="10" id="ctl00_tbspage" tabindex="6" class="searchtbstyle" />&nbsp;<span id="ctl00_label8" class="searchfont">-</span>&nbsp;<input name="ctl00$tbepage" type="text" maxlength="10" id="ctl00_tbepage" tabindex="6" class="searchtbstyle" />&nbsp;</td>
+                                       </tr>
+                                </table>
+                            
+	</div>
+                            
+</div>
+                        </td>
+                        <td align="right">
+                            <div id="ctl00_p2">
+	
+                            <div id="ctl00_masterupdatepanel1">
+		
+                                <table id="ctl00_login1" cellpadding="0" border="0" bgcolor="#e6e2d8">
+			<tr>
+				<td nowrap="nowrap"><font color="black"><span id="ctl00_usernamelabel" class="loginfont">user name: </span></font></td><td nowrap="nowrap"><font color="black"><input name="ctl00$username" type="text" maxlength="20" size="11" id="ctl00_username" title="please enter your user name here" class="logintbstyle" />&nbsp;</font></td><td nowrap="nowrap"><font color="black"><span id="ctl00_passwordlabel" class="loginfont">password: </span></font></td><td nowrap="nowrap"><font color="black"><input name="ctl00$password" type="password" maxlength="20" size="11" id="ctl00_password" title="please enter your password here" class="logintbstyle" />&nbsp;</font></td><td><font color="black"><input type="submit" name="ctl00$btlogin" value="log in" onclick="javascript:webform_dopostbackwithoptions(new webform_postbackoptions(&quot;ctl00$btlogin&quot;, &quot;&quot;, true, &quot;ctl00$login1&quot;, &quot;&quot;, false, false))" id="ctl00_btlogin" class="loginbtstyle" /></font></td>
+			</tr><tr align="left" valign="bottom">
+				<td colspan="3"><font color="black"><span class="loginfont"><input id="ctl00_rememberme" type="checkbox" name="ctl00$rememberme" /><label for="ctl00_rememberme">remember me next time.</label></span></font></td><td colspan="2"><font color="black"><a class="loginlink" href="forgotpsw.aspx" target="forgotpsw" title="click here for help in recovering your kasetsart journal access" onclick="window.open('','forgotpsw','scrollbars=yes,resizeable=yes,directories=no,toolbar=no,menubar=no,status=no,width=650,height=300');">forgotten&nbsp;password?</a></font></td>
+			</tr><tr align="left" valign="bottom">
+				<td class="smallfont" colspan="5"><font color="red"></font></td>
+			</tr>
+		</table>
+                                
+                            
+	</div>
+                            
+</div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table id="ctl00_guestmenu" width="100%" cellpadding="2" cellspacing="0" rules="all" style="border-collapse: collapse;">
+	<tr class="menutd">
+		<td style="width: 80px; position: static; white-space: nowrap;" onmouseover="m_over(this, '#effff0')" onmouseout="m_out(this,'#339933')" onclick="window.location.href='startpage.aspx'">home</td>
+		<td style="width: 120px; position: static; white-space: nowrap;" onmouseover="m_over(this, '#effff0')" onmouseout="m_out(this,'#339933')" onclick="window.location.href='register.aspx?_mode=11'">registration</td>
+		<td style="width: 80px; position: static; white-space: nowrap;" onmouseover="m_over(this, '#effff0')" onmouseout="m_out(this,'#339933')" onclick="javascript:window.open('onlinehelp/userhelp.htm',null,'scrollbars=yes,resizable=yes,directories=no,toolbar=n,menubar=no,status=no,width=700,height=500')">help</td>
+		<td></td>
+	</tr>
+</table>
+
+                
+                
+                
+            </td>
+        </tr>
+    </table>
+    <table border="0" cellpadding="0" cellspacing="0" style="width: 100%; height: 100%">
+        <tr>
+            <td>
+                <table id="maintable" border="0" cellpadding="0" cellspacing="0" style="width: 100%; height: 100%">
+                    <tr valign="top">
+                        <td>
+<table cellpadding="0" cellspacing="0" style="width: 100%; margin: 20px 0px 20px 0px; padding-left: 80px; line-height: 18px;">
+    <tr>
+        <td style="width: 975px">
+            <div>
+	<table class="normalfont" cellspacing="0" cellpadding="5" border="0" id="ctl00_cph_gv" width="761">
+		<tr align="left">
+			<td class="hidden"><font color="#333333"><a href="javascript:__dopostback('ctl00$cph$gv','lnk$0')"><font color="#333333">button</font></a></font></td><td colspan="2" style="background-image:url(images/headbg.gif);"><font color="white"><b><a class="journallink" href="http://kasetsartjnatsci.kasetsart.org/">agriculture and natural resources -- formerly kasetsart journal (natural science)</a></b></font></td>
+		</tr><tr align="left">
+			<td class="hidden"><font color="#333333"><a href="javascript:__dopostback('ctl00$cph$gv','lnk$1')"><font color="#333333">button</font></a></font></td><td bgcolor="white" width="50"><font color="#333333"></font></td><td><font color="#333333">
+                            <span id="ctl00_cph_gv_ctl03_lbdetail">volume 051, issue 1,  january - february <br \>issn: 2452-316x(0075-5192)</span><br />
+                            lang:&nbsp;<select name="ctl00$cph$gv$ctl03$ddllang1" id="ctl00_cph_gv_ctl03_ddllang1" class="normalfont">
+				<option value="en">en</option>
+
+			</select><br /><span id="ctl00_cph_gv_ctl03_lbdetail2"><br \><font color="gray">download</font> | <a href="javascript:__dopostback('ctl00$cph$gv','lnk$1')">view related articles</a></span><br /><br />
+                            <div id="ctl00_cph_gv_ctl03_updatepanel2">
+				
+                                    browse volume:&nbsp;<select name="ctl00$cph$gv$ctl03$ddlvolume" id="ctl00_cph_gv_ctl03_ddlvolume" class="normalfont">
+					<option selected="selected" value="196">051</option>
+					<option value="194">050</option>
+					<option value="192">049</option>
+					<option value="190">048</option>
+					<option value="183">047</option>
+					<option value="179">046</option>
+					<option value="175">045</option>
+					<option value="171">044</option>
+					<option value="122">043</option>
+					<option value="25">042</option>
+					<option value="1">041</option>
+					<option value="27">040</option>
+					<option value="48">039</option>
+					<option value="30">038</option>
+					<option value="50">037</option>
+					<option value="41">036</option>
+					<option value="45">035</option>
+					<option value="47">034</option>
+					<option value="49">033</option>
+					<option value="44">032</option>
+					<option value="16">031</option>
+					<option value="43">030</option>
+					<option value="54">029</option>
+					<option value="59">028</option>
+					<option value="62">027</option>
+					<option value="71">026</option>
+					<option value="60">025</option>
+					<option value="42">024</option>
+					<option value="61">023</option>
+					<option value="72">022</option>
+					<option value="14">021</option>
+					<option value="13">020</option>
+					<option value="12">019</option>
+					<option value="11">018</option>
+					<option value="10">017</option>
+					<option value="9">016</option>
+					<option value="8">015</option>
+					<option value="80">014</option>
+					<option value="55">012</option>
+					<option value="7">011</option>
+					<option value="94">010</option>
+					<option value="86">009</option>
+					<option value="88">008</option>
+					<option value="84">007</option>
+					<option value="93">006</option>
+					<option value="85">005</option>
+					<option value="91">004</option>
+					<option value="90">003</option>
+					<option value="89">002</option>
+					<option value="58">001</option>
+
+				</select>&nbsp;issue:&nbsp;<select name="ctl00$cph$gv$ctl03$ddlissue" id="ctl00_cph_gv_ctl03_ddlissue" class="normalfont">
+					<option selected="selected" value="475">1</option>
+
+				</select>&nbsp;lang:&nbsp;<select name="ctl00$cph$gv$ctl03$ddllang" id="ctl00_cph_gv_ctl03_ddllang" class="normalfont">
+					<option value="en">en</option>
+
+				</select>&nbsp;&nbsp;<input type="submit" name="ctl00$cph$gv$ctl03$btview" value="view related articles" id="ctl00_cph_gv_ctl03_btview" class="btstyle" />
+                                
+			</div>
+                        </font></td>
+		</tr><tr align="left">
+			<td class="hidden"><font color="#333333"><a href="javascript:__dopostback('ctl00$cph$gv','lnk$2')"><font color="#333333">button</font></a></font></td><td colspan="2" style="background-image:url(images/headbg.gif);"><font color="white"><b><a class="journallink" href="http://kasetsartjsocsci.kasetsart.org/">kasetsart journal of social sciences -- formerly kasetsart journal (social sciences)</a></b></font></td>
+		</tr><tr align="left">
+			<td class="hidden"><font color="#333333"><a href="javascript:__dopostback('ctl00$cph$gv','lnk$3')"><font color="#333333">button</font></a></font></td><td bgcolor="white" width="50"><font color="#333333"></font></td><td><font color="#333333">
+                            <span id="ctl00_cph_gv_ctl05_lbdetail">volume 038, issue 2,  may 2017- august 2017<br \>issn: 2452-3151(0125-8370)</span><br />
+                            lang:&nbsp;<select name="ctl00$cph$gv$ctl05$ddllang1" id="ctl00_cph_gv_ctl05_ddllang1" class="normalfont">
+				<option value="en">en</option>
+
+			</select><br /><span id="ctl00_cph_gv_ctl05_lbdetail2"><br \><font color="gray">download</font> | <a href="javascript:__dopostback('ctl00$cph$gv','lnk$3')">view related articles</a></span><br /><br />
+                            <div id="ctl00_cph_gv_ctl05_updatepanel2">
+				
+                                    browse volume:&nbsp;<select name="ctl00$cph$gv$ctl05$ddlvolume" id="ctl00_cph_gv_ctl05_ddlvolume" class="normalfont">
+					<option selected="selected" value="195">038</option>
+					<option value="193">037</option>
+					<option value="191">036</option>
+					<option value="189">035</option>
+					<option value="184">034</option>
+					<option value="180">033</option>
+					<option value="176">032</option>
+					<option value="172">031</option>
+					<option value="156">030</option>
+					<option value="95">029</option>
+					<option value="26">028</option>
+					<option value="28">027</option>
+					<option value="29">026</option>
+					<option value="32">025</option>
+					<option value="33">024</option>
+					<option value="34">023</option>
+					<option value="35">022</option>
+					<option value="36">021</option>
+					<option value="37">020</option>
+					<option value="38">019</option>
+					<option value="39">018</option>
+					<option value="40">017</option>
+					<option value="70">016</option>
+					<option value="69">015</option>
+					<option value="68">014</option>
+					<option value="67">013</option>
+					<option value="66">012</option>
+					<option value="65">011</option>
+					<option value="63">010</option>
+					<option value="64">009</option>
+					<option value="56">008</option>
+					<option value="79">007</option>
+					<option value="78">006</option>
+					<option value="77">005</option>
+					<option value="76">004</option>
+					<option value="75">003</option>
+					<option value="74">002</option>
+					<option value="73">001</option>
+
+				</select>&nbsp;issue:&nbsp;<select name="ctl00$cph$gv$ctl05$ddlissue" id="ctl00_cph_gv_ctl05_ddlissue" class="normalfont">
+					<option selected="selected" value="474">1</option>
+					<option value="476">2</option>
+
+				</select>&nbsp;lang:&nbsp;<select name="ctl00$cph$gv$ctl05$ddllang" id="ctl00_cph_gv_ctl05_ddllang" class="normalfont">
+					<option value="en">en</option>
+
+				</select>&nbsp;&nbsp;<input type="submit" name="ctl00$cph$gv$ctl05$btview" value="view related articles" id="ctl00_cph_gv_ctl05_btview" class="btstyle" />
+                                
+			</div>
+                        </font></td>
+		</tr><tr align="left">
+			<td class="hidden"><font color="#333333"><a href="javascript:__dopostback('ctl00$cph$gv','lnk$4')"><font color="#333333">button</font></a></font></td><td colspan="2" style="background-image:url(images/headbg.gif);"><font color="white"><b><a class="journallink" href="http://www.eng.ku.ac.th/journal_en/">journal of research in engineering and technology</a></b></font></td>
+		</tr><tr align="left">
+			<td class="hidden"><font color="#333333"><a href="javascript:__dopostback('ctl00$cph$gv','lnk$5')"><font color="#333333">button</font></a></font></td><td bgcolor="white" width="50"><font color="#333333"></font></td><td><font color="#333333">
+                            <span id="ctl00_cph_gv_ctl07_lbdetail">volume 4, issue 2<br \>issn: 1686-1590</span><br />
+                            lang:&nbsp;<select name="ctl00$cph$gv$ctl07$ddllang1" id="ctl00_cph_gv_ctl07_ddllang1" class="normalfont">
+				<option value="en">en</option>
+
+			</select><br /><span id="ctl00_cph_gv_ctl07_lbdetail2"><br \><font color="gray">download</font> | <a href="javascript:__dopostback('ctl00$cph$gv','lnk$5')">view related articles</a></span><br /><br />
+                            <div id="ctl00_cph_gv_ctl07_updatepanel2">
+				
+                                    browse volume:&nbsp;<select name="ctl00$cph$gv$ctl07$ddlvolume" id="ctl00_cph_gv_ctl07_ddlvolume" class="normalfont">
+					<option selected="selected" value="51">4</option>
+
+				</select>&nbsp;issue:&nbsp;<select name="ctl00$cph$gv$ctl07$ddlissue" id="ctl00_cph_gv_ctl07_ddlissue" class="normalfont">
+					<option selected="selected" value="118">2</option>
+
+				</select>&nbsp;lang:&nbsp;<select name="ctl00$cph$gv$ctl07$ddllang" id="ctl00_cph_gv_ctl07_ddllang" class="normalfont">
+					<option value="en">en</option>
+
+				</select>&nbsp;&nbsp;<input type="submit" name="ctl00$cph$gv$ctl07$btview" value="view related articles" id="ctl00_cph_gv_ctl07_btview" class="btstyle" />
+                                
+			</div>
+                        </font></td>
+		</tr><tr align="left">
+			<td class="hidden"><font color="#333333"><a href="javascript:__dopostback('ctl00$cph$gv','lnk$6')"><font color="#333333">button</font></a></font></td><td colspan="2" style="background-image:url(images/headbg.gif);"><font color="white"><b><a class="journallink" href="http://kucon.lib.ku.ac.th/">kasetsart conference</a></b></font></td>
+		</tr><tr align="left">
+			<td class="hidden"><font color="#333333"><a href="javascript:__dopostback('ctl00$cph$gv','lnk$7')"><font color="#333333">button</font></a></font></td><td bgcolor="white" width="50"><font color="#333333"></font></td><td><font color="#333333">
+                            <span id="ctl00_cph_gv_ctl09_lbdetail">volume 51, issue 46</span><br />
+                            lang:&nbsp;<select name="ctl00$cph$gv$ctl09$ddllang1" id="ctl00_cph_gv_ctl09_ddllang1" class="normalfont">
+				<option value="en">en</option>
+				<option value="th">th</option>
+
+			</select><br /><span id="ctl00_cph_gv_ctl09_lbdetail2"><br \><font color="gray">download</font> | <a href="javascript:__dopostback('ctl00$cph$gv','lnk$7')">view related articles</a></span><br /><br />
+                            <div id="ctl00_cph_gv_ctl09_updatepanel2">
+				
+                                    browse volume:&nbsp;<select name="ctl00$cph$gv$ctl09$ddlvolume" id="ctl00_cph_gv_ctl09_ddlvolume" class="normalfont">
+					<option selected="selected" value="96">51</option>
+
+				</select>&nbsp;issue:&nbsp;<select name="ctl00$cph$gv$ctl09$ddlissue" id="ctl00_cph_gv_ctl09_ddlissue" class="normalfont">
+					<option selected="selected" value="235">46</option>
+
+				</select>&nbsp;lang:&nbsp;<select name="ctl00$cph$gv$ctl09$ddllang" id="ctl00_cph_gv_ctl09_ddllang" class="normalfont">
+					<option value="en">en</option>
+					<option value="th">th</option>
+
+				</select>&nbsp;&nbsp;<input type="submit" name="ctl00$cph$gv$ctl09$btview" value="view related articles" id="ctl00_cph_gv_ctl09_btview" class="btstyle" />
+                                
+			</div>
+                        </font></td>
+		</tr><tr align="left">
+			<td class="hidden"><font color="#333333"><a href="javascript:__dopostback('ctl00$cph$gv','lnk$8')"><font color="#333333">button</font></a></font></td><td colspan="2" style="background-image:url(images/headbg.gif);"><font color="white"><b><a class="journallink" href="http://www.fish.ku.ac.th">kasetsart university fisheries research bulletin</a></b></font></td>
+		</tr><tr align="left">
+			<td class="hidden"><font color="#333333"><a href="javascript:__dopostback('ctl00$cph$gv','lnk$9')"><font color="#333333">button</font></a></font></td><td bgcolor="white" width="50"><font color="#333333"></font></td><td><font color="#333333">
+                            <span id="ctl00_cph_gv_ctl11_lbdetail">volume 9, 15 january 1977<br \>issn: 0125-796x</span><br />
+                            lang:&nbsp;<select name="ctl00$cph$gv$ctl11$ddllang1" id="ctl00_cph_gv_ctl11_ddllang1" class="normalfont">
+
+			</select><br /><span id="ctl00_cph_gv_ctl11_lbdetail2"><br \><font color="gray">download</font> | <font color="gray">view related articles</font></span><br /><br />
+                            <div id="ctl00_cph_gv_ctl11_updatepanel2">
+				
+                                    browse volume:&nbsp;<select name="ctl00$cph$gv$ctl11$ddlvolume" id="ctl00_cph_gv_ctl11_ddlvolume" class="normalfont">
+					<option selected="selected" value="132">9</option>
+					<option value="131">8</option>
+					<option value="130">7</option>
+					<option value="129">6</option>
+					<option value="128">5</option>
+					<option value="127">4</option>
+					<option value="103">33</option>
+					<option value="123">32</option>
+					<option value="154">31</option>
+					<option value="153">30</option>
+					<option value="126">3</option>
+					<option value="152">29</option>
+					<option value="151">28</option>
+					<option value="150">27</option>
+					<option value="149">26</option>
+					<option value="148">25</option>
+					<option value="147">24</option>
+					<option value="146">23</option>
+					<option value="145">22</option>
+					<option value="144">21</option>
+					<option value="143">20</option>
+					<option value="125">2</option>
+					<option value="142">19</option>
+					<option value="141">18</option>
+					<option value="140">17</option>
+					<option value="139">16</option>
+					<option value="138">15</option>
+					<option value="137">14</option>
+					<option value="136">13</option>
+					<option value="135">12</option>
+					<option value="134">11</option>
+					<option value="133">10</option>
+					<option value="124">1</option>
+
+				</select>&nbsp;issue:&nbsp;<select name="ctl00$cph$gv$ctl11$ddlissue" id="ctl00_cph_gv_ctl11_ddlissue" class="normalfont">
+
+				</select>&nbsp;lang:&nbsp;<select name="ctl00$cph$gv$ctl11$ddllang" id="ctl00_cph_gv_ctl11_ddllang" class="normalfont">
+
+				</select>&nbsp;&nbsp;<input type="submit" name="ctl00$cph$gv$ctl11$btview" value="view related articles" id="ctl00_cph_gv_ctl11_btview" disabled="disabled" class="btstyle" />
+                                
+			</div>
+                        </font></td>
+		</tr><tr align="left">
+			<td class="hidden"><font color="#333333"><a href="javascript:__dopostback('ctl00$cph$gv','lnk$10')"><font color="#333333">button</font></a></font></td><td colspan="2" style="background-image:url(images/headbg.gif);"><font color="white"><b>วารสาร คณะบริหารธุรกิจ</b></font></td>
+		</tr><tr align="left">
+			<td class="hidden"><font color="#333333"><a href="javascript:__dopostback('ctl00$cph$gv','lnk$11')"><font color="#333333">button</font></a></font></td><td colspan="2" style="background-image:url(images/headbg.gif);"><font color="white"><b>วารสาร คณะมนุษยศาสตร์</b></font></td>
+		</tr><tr align="left">
+			<td class="hidden"><font color="#333333"><a href="javascript:__dopostback('ctl00$cph$gv','lnk$12')"><font color="#333333">button</font></a></font></td><td bgcolor="white" width="50"><font color="#333333"></font></td><td><font color="#333333">
+                            <span id="ctl00_cph_gv_ctl14_lbdetail">volume 015, issue 1,  january 2008- june 2008<br \>issn: 0859-3485</span><br />
+                            lang:&nbsp;<select name="ctl00$cph$gv$ctl14$ddllang1" id="ctl00_cph_gv_ctl14_ddllang1" class="normalfont">
+				<option value="th">th</option>
+
+			</select><br /><span id="ctl00_cph_gv_ctl14_lbdetail2"><br \><font color="gray">download</font> | <a href="javascript:__dopostback('ctl00$cph$gv','lnk$12')">view related articles</a></span><br /><br />
+                            <div id="ctl00_cph_gv_ctl14_updatepanel2">
+				
+                                    browse volume:&nbsp;<select name="ctl00$cph$gv$ctl14$ddlvolume" id="ctl00_cph_gv_ctl14_ddlvolume" class="normalfont">
+					<option selected="selected" value="113">015</option>
+
+				</select>&nbsp;issue:&nbsp;<select name="ctl00$cph$gv$ctl14$ddlissue" id="ctl00_cph_gv_ctl14_ddlissue" class="normalfont">
+					<option selected="selected" value="263">1</option>
+
+				</select>&nbsp;lang:&nbsp;<select name="ctl00$cph$gv$ctl14$ddllang" id="ctl00_cph_gv_ctl14_ddllang" class="normalfont">
+					<option value="th">th</option>
+
+				</select>&nbsp;&nbsp;<input type="submit" name="ctl00$cph$gv$ctl14$btview" value="view related articles" id="ctl00_cph_gv_ctl14_btview" class="btstyle" />
+                                
+			</div>
+                        </font></td>
+		</tr><tr align="left">
+			<td class="hidden"><font color="#333333"><a href="javascript:__dopostback('ctl00$cph$gv','lnk$13')"><font color="#333333">button</font></a></font></td><td colspan="2" style="background-image:url(images/headbg.gif);"><font color="white"><b><a class="journallink" href="http://www.journal.eco.ku.ac.th/">applied economics journal</a></b></font></td>
+		</tr><tr align="left">
+			<td class="hidden"><font color="#333333"><a href="javascript:__dopostback('ctl00$cph$gv','lnk$14')"><font color="#333333">button</font></a></font></td><td bgcolor="white" width="50"><font color="#333333"></font></td><td><font color="#333333">
+                            <span id="ctl00_cph_gv_ctl16_lbdetail">volume 020, issue 1, 1 january 2013-30 june 2013<br \>issn: 0858-9291</span><br />
+                            lang:&nbsp;<select name="ctl00$cph$gv$ctl16$ddllang1" id="ctl00_cph_gv_ctl16_ddllang1" class="normalfont">
+				<option value="en">en</option>
+				<option value="th">th</option>
+
+			</select><br /><span id="ctl00_cph_gv_ctl16_lbdetail2"><br \><font color="gray">download</font> | <a href="javascript:__dopostback('ctl00$cph$gv','lnk$14')">view related articles</a></span><br /><br />
+                            <div id="ctl00_cph_gv_ctl16_updatepanel2">
+				
+                                    browse volume:&nbsp;<select name="ctl00$cph$gv$ctl16$ddlvolume" id="ctl00_cph_gv_ctl16_ddlvolume" class="normalfont">
+					<option selected="selected" value="187">020</option>
+					<option value="186">019</option>
+					<option value="185">018</option>
+					<option value="174">017</option>
+					<option value="170">016</option>
+					<option value="116">015</option>
+					<option value="117">014</option>
+					<option value="121">013</option>
+					<option value="157">012</option>
+					<option value="158">011</option>
+					<option value="160">010</option>
+					<option value="161">009</option>
+					<option value="162">008</option>
+					<option value="163">007</option>
+					<option value="164">006</option>
+					<option value="165">005</option>
+					<option value="166">004</option>
+					<option value="167">003</option>
+					<option value="168">002</option>
+					<option value="169">001</option>
+
+				</select>&nbsp;issue:&nbsp;<select name="ctl00$cph$gv$ctl16$ddlissue" id="ctl00_cph_gv_ctl16_ddlissue" class="normalfont">
+					<option selected="selected" value="441">1</option>
+
+				</select>&nbsp;lang:&nbsp;<select name="ctl00$cph$gv$ctl16$ddllang" id="ctl00_cph_gv_ctl16_ddllang" class="normalfont">
+					<option value="en">en</option>
+					<option value="th">th</option>
+
+				</select>&nbsp;&nbsp;<input type="submit" name="ctl00$cph$gv$ctl16$btview" value="view related articles" id="ctl00_cph_gv_ctl16_btview" class="btstyle" />
+                                
+			</div>
+                        </font></td>
+		</tr><tr align="left">
+			<td class="hidden"><font color="#333333"><a href="javascript:__dopostback('ctl00$cph$gv','lnk$15')"><font color="#333333">button</font></a></font></td><td colspan="2" style="background-image:url(images/headbg.gif);"><font color="white"><b><a class="journallink" href="http://frc.forest.ku.ac.th/database/journal/journal.html">วารสาร คณะวนศาสตร์</a></b></font></td>
+		</tr><tr align="left">
+			<td class="hidden"><font color="#333333"><a href="javascript:__dopostback('ctl00$cph$gv','lnk$16')"><font color="#333333">button</font></a></font></td><td bgcolor="white" width="50"><font color="#333333"></font></td><td><font color="#333333">
+                            <span id="ctl00_cph_gv_ctl18_lbdetail">volume 026, 1 july 2007-31 december 2007<br \>issn: 0857-1724</span><br />
+                            lang:&nbsp;<select name="ctl00$cph$gv$ctl18$ddllang1" id="ctl00_cph_gv_ctl18_ddllang1" class="normalfont">
+
+			</select><br /><span id="ctl00_cph_gv_ctl18_lbdetail2"><br \><a href="downloadfile.aspx?param=dm9sdw1lsuq9mte1fglzc3vlsuq9jm5ic3a7fg1lzglhsuq9mzm2ohxqb3vybmfssuq9mje=">download</a> | <font color="gray">view related articles</font></span><br /><br />
+                            <div id="ctl00_cph_gv_ctl18_updatepanel2">
+				
+                                    browse volume:&nbsp;<select name="ctl00$cph$gv$ctl18$ddlvolume" id="ctl00_cph_gv_ctl18_ddlvolume" class="normalfont">
+					<option selected="selected" value="115">026</option>
+
+				</select>&nbsp;issue:&nbsp;<select name="ctl00$cph$gv$ctl18$ddlissue" id="ctl00_cph_gv_ctl18_ddlissue" class="normalfont">
+
+				</select>&nbsp;lang:&nbsp;<select name="ctl00$cph$gv$ctl18$ddllang" id="ctl00_cph_gv_ctl18_ddllang" class="normalfont">
+
+				</select>&nbsp;&nbsp;<input type="submit" name="ctl00$cph$gv$ctl18$btview" value="view related articles" id="ctl00_cph_gv_ctl18_btview" disabled="disabled" class="btstyle" />
+                                
+			</div>
+                        </font></td>
+		</tr><tr align="left">
+			<td class="hidden"><font color="#333333"><a href="javascript:__dopostback('ctl00$cph$gv','lnk$17')"><font color="#333333">button</font></a></font></td><td colspan="2" style="background-image:url(images/headbg.gif);"><font color="white"><b>วารสาร คณะสังคมศาสตร์</b></font></td>
+		</tr><tr align="left">
+			<td class="hidden"><font color="#333333"><a href="javascript:__dopostback('ctl00$cph$gv','lnk$18')"><font color="#333333">button</font></a></font></td><td colspan="2" style="background-image:url(images/headbg.gif);"><font color="white"><b>วารสาร คณะสัตวแพทยศาสตร์(journal of  kasetsart veterinarians)</b></font></td>
+		</tr><tr align="left">
+			<td class="hidden"><font color="#333333"><a href="javascript:__dopostback('ctl00$cph$gv','lnk$19')"><font color="#333333">button</font></a></font></td><td bgcolor="white" width="50"><font color="#333333"></font></td><td><font color="#333333">
+                            <span id="ctl00_cph_gv_ctl21_lbdetail">volume 022, issue 3, 1 september 2012-31 december 2012<br \>issn: 0125-5169</span><br />
+                            lang:&nbsp;<select name="ctl00$cph$gv$ctl21$ddllang1" id="ctl00_cph_gv_ctl21_ddllang1" class="normalfont">
+
+			</select><br /><span id="ctl00_cph_gv_ctl21_lbdetail2"><br \><font color="gray">download</font> | <font color="gray">view related articles</font></span><br /><br />
+                            <div id="ctl00_cph_gv_ctl21_updatepanel2">
+				
+                                    browse volume:&nbsp;<select name="ctl00$cph$gv$ctl21$ddlvolume" id="ctl00_cph_gv_ctl21_ddlvolume" class="normalfont">
+					<option selected="selected" value="188">022</option>
+					<option value="178">021</option>
+					<option value="177">020</option>
+					<option value="155">019</option>
+					<option value="112">018</option>
+					<option value="111">017</option>
+					<option value="110">016</option>
+					<option value="109">015</option>
+					<option value="108">014</option>
+					<option value="107">013</option>
+					<option value="106">012</option>
+					<option value="105">011</option>
+					<option value="104">010</option>
+
+				</select>&nbsp;issue:&nbsp;<select name="ctl00$cph$gv$ctl21$ddlissue" id="ctl00_cph_gv_ctl21_ddlissue" class="normalfont">
+					<option selected="selected" value="443">3</option>
+
+				</select>&nbsp;lang:&nbsp;<select name="ctl00$cph$gv$ctl21$ddllang" id="ctl00_cph_gv_ctl21_ddllang" class="normalfont">
+
+				</select>&nbsp;&nbsp;<input type="submit" name="ctl00$cph$gv$ctl21$btview" value="view related articles" id="ctl00_cph_gv_ctl21_btview" disabled="disabled" class="btstyle" />
+                                
+			</div>
+                        </font></td>
+		</tr><tr align="left">
+			<td class="hidden"><font color="#333333"><a href="javascript:__dopostback('ctl00$cph$gv','lnk$20')"><font color="#333333">button</font></a></font></td><td colspan="2" style="background-image:url(images/headbg.gif);"><font color="white"><b>วารสาร สถาบันอาหาร</b></font></td>
+		</tr><tr align="left">
+			<td class="hidden"><font color="#333333"><a href="javascript:__dopostback('ctl00$cph$gv','lnk$21')"><font color="#333333">button</font></a></font></td><td colspan="2" style="background-image:url(images/headbg.gif);"><font color="white"><b><a class="journallink" href="http://www.rdi.kps.ku.ac.th/web-journal/index.htm">วิทยาสารกำแพงแสน</a></b></font></td>
+		</tr><tr align="left">
+			<td class="hidden"><font color="#333333"><a href="javascript:__dopostback('ctl00$cph$gv','lnk$22')"><font color="#333333">button</font></a></font></td><td bgcolor="white" width="50"><font color="#333333"></font></td><td><font color="#333333">
+                            <span id="ctl00_cph_gv_ctl24_lbdetail">volume 006, issue 3,  january 2008- december 2008<br \>issn: 1685-9316</span><br />
+                            lang:&nbsp;<select name="ctl00$cph$gv$ctl24$ddllang1" id="ctl00_cph_gv_ctl24_ddllang1" class="normalfont">
+				<option value="en">en</option>
+
+			</select><br /><span id="ctl00_cph_gv_ctl24_lbdetail2"><br \><font color="gray">download</font> | <a href="javascript:__dopostback('ctl00$cph$gv','lnk$22')">view related articles</a></span><br /><br />
+                            <div id="ctl00_cph_gv_ctl24_updatepanel2">
+				
+                                    browse volume:&nbsp;<select name="ctl00$cph$gv$ctl24$ddlvolume" id="ctl00_cph_gv_ctl24_ddlvolume" class="normalfont">
+					<option selected="selected" value="102">006</option>
+					<option value="101">005</option>
+					<option value="100">004</option>
+					<option value="99">003</option>
+					<option value="98">002</option>
+					<option value="97">001</option>
+
+				</select>&nbsp;issue:&nbsp;<select name="ctl00$cph$gv$ctl24$ddlissue" id="ctl00_cph_gv_ctl24_ddlissue" class="normalfont">
+					<option selected="selected" value="236">1</option>
+					<option value="237">2</option>
+					<option value="238">3</option>
+
+				</select>&nbsp;lang:&nbsp;<select name="ctl00$cph$gv$ctl24$ddllang" id="ctl00_cph_gv_ctl24_ddllang" class="normalfont">
+					<option value="en">en</option>
+
+				</select>&nbsp;&nbsp;<input type="submit" name="ctl00$cph$gv$ctl24$btview" value="view related articles" id="ctl00_cph_gv_ctl24_btview" class="btstyle" />
+                                
+			</div>
+                        </font></td>
+		</tr><tr align="left">
+			<td class="hidden"><font color="#333333"><a href="javascript:__dopostback('ctl00$cph$gv','lnk$23')"><font color="#333333">button</font></a></font></td><td colspan="2" style="background-image:url(images/headbg.gif);"><font color="white"><b>วารสาร คณะวิทยาการจัดการ วิทยาเขตศรีราชา</b></font></td>
+		</tr><tr align="left">
+			<td class="hidden"><font color="#333333"><a href="javascript:__dopostback('ctl00$cph$gv','lnk$24')"><font color="#333333">button</font></a></font></td><td colspan="2" style="background-image:url(images/headbg.gif);"><font color="white"><b><a class="journallink" href="http://dfm.forest.ku.ac.th/dfmjournal.htm">วารสารการจัดการป่าไม้</a></b></font></td>
+		</tr><tr align="left">
+			<td class="hidden"><font color="#333333"><a href="javascript:__dopostback('ctl00$cph$gv','lnk$25')"><font color="#333333">button</font></a></font></td><td bgcolor="white" width="50"><font color="#333333"></font></td><td><font color="#333333">
+                            <span id="ctl00_cph_gv_ctl27_lbdetail">volume 9, 1 january 2011-30 june 2011<br \>issn: 1906022x</span><br />
+                            lang:&nbsp;<select name="ctl00$cph$gv$ctl27$ddllang1" id="ctl00_cph_gv_ctl27_ddllang1" class="normalfont">
+
+			</select><br /><span id="ctl00_cph_gv_ctl27_lbdetail2"><br \><a href="downloadfile.aspx?param=dm9sdw1lsuq9mtgyfglzc3vlsuq9jm5ic3a7fg1lzglhsuq9ntm0ohxqb3vybmfssuq9mjc=">download</a> | <font color="gray">view related articles</font></span><br /><br />
+                            <div id="ctl00_cph_gv_ctl27_updatepanel2">
+				
+                                    browse volume:&nbsp;<select name="ctl00$cph$gv$ctl27$ddlvolume" id="ctl00_cph_gv_ctl27_ddlvolume" class="normalfont">
+					<option selected="selected" value="182">9</option>
+					<option value="181">8</option>
+					<option value="173">6</option>
+					<option value="159">4</option>
+					<option value="120">3</option>
+					<option value="119">2</option>
+					<option value="118">1</option>
+
+				</select>&nbsp;issue:&nbsp;<select name="ctl00$cph$gv$ctl27$ddlissue" id="ctl00_cph_gv_ctl27_ddlissue" class="normalfont">
+
+				</select>&nbsp;lang:&nbsp;<select name="ctl00$cph$gv$ctl27$ddllang" id="ctl00_cph_gv_ctl27_ddllang" class="normalfont">
+
+				</select>&nbsp;&nbsp;<input type="submit" name="ctl00$cph$gv$ctl27$btview" value="view related articles" id="ctl00_cph_gv_ctl27_btview" disabled="disabled" class="btstyle" />
+                                
+			</div>
+                        </font></td>
+		</tr>
+	</table>
+</div></td>
+    </tr>
+</table>
+</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" style="width: 100%; height: 50px; text-align: center; line-height: 18px; border-top: #329c24 1px solid; padding-top: 8px;"><p class="normalfont">copyright © 2008 kurdi<br />
+            kasetsart journal<br />contact: <a href="mailto:kj_rdi@ku.ac.th" class="normalfont">kj_rdi@ku.ac.th</a></p>
+            </td>
+        </tr>
+    </table>
+    
+
+<script type="text/javascript">
+//<![cdata[
+sys.application.initialize();
+//]]>
+</script>
+</form>
+<script type="text/javascript">
+    var gajshost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3cscript src='" + gajshost + "google-analytics.com/ga.js' type='text/javascript'%3e%3c/script%3e"));
+</script>
+<script type="text/javascript">
+    try {
+        var pagetracker = _gat._gettracker("ua-11836381-1");
+        pagetracker._trackpageview();
+    } catch(err) {}
+</script>
+</body>
+</html>

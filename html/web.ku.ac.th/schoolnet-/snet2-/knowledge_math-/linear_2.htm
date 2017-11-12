@@ -1,0 +1,111 @@
+<html>
+<head>
+<title>การหาคำตอบของปัญหาการโปรแกรมเชิงเส้น</title>
+</head>
+<body  bgcolor = white>
+<center><font face="ms sans serif"><font color="#0000ff"><font ><b>การ<wbr>หา<wbr>คำ<wbr>ตอบ<wbr>ของ<wbr>ปัญหา<wbr>การ<wbr>โปรแกรม<wbr>เชิง<wbr>เส้น</b></font></font></font></center>
+
+<p>
+<font face="ms sans serif" color="#ebadad"><dd><b>วิธี<wbr>กราฟ&nbsp;</b></font><font face="ms sans serif" size=-1>
+การ<wbr>แก้<wbr>ปัญหา<wbr>การ<wbr>โปรแกรม<wbr>เชิง<wbr>เส้น<wbr>ด้วย<wbr>วิธี<wbr>กราฟ<wbr>เหมาะ<wbr>ที่<wbr>จะ<wbr>ใช้<w
+br>ใน<wbr>กรณี<wbr>ที่<wbr>ตัว<wbr>แปรของ<wbr>ปัญหา<wbr>ไม่<wbr><wbr>เกิน 3 ตัว<wbr>แปร แต่<wbr>ที่<wbr>ใช้<wbr>มาก<wbr>ได้<wbr>แก่<wbr>ปัญหา 2 ตัว<wbr>แปร โดย<wbr>มี<wbr>วิธี<wbr>การ
+<ul>
+<dd><li> 	นำ<wbr>ชุด<wbr>เงื่อนไข<wbr>บังคับ<wbr>ไป<wbr>เขียน<wbr>กราฟ
+<dd><li> 	เลือก<wbr>พื้น<wbr>ที่<wbr>ให้<wbr>สม<wbr>จริงกับเงื่อน<wbr>ไข<wbr>บังคับ
+<dd><li> 	หา<wbr>จุด<wbr>ยอด<wbr>และ<wbr>พิกัด<wbr>ของ<wbr>จุด<wbr>ยอด<wbr>ของ<wbr>พื้น<wbr>ที่<wbr>สม<wbr>จริงกับชุด<wbr>เงื่อน<wbr>ไข<wbr>บังคับ
+<dd><li> 	สร้าง<wbr>ตา<wbr>ราง<wbr>หา<wbr>ค่า<wbr>เป้า<wbr>หมาย<wbr>ตาม<wbr>จุด<wbr>ยอด
+<dd><li>  	เลือก<wbr>ค่า<wbr>เป้า<wbr>หมาย<wbr>ที่<wbr>เหมาะ<wbr>สม (optimum) 
+</ul>
+<p><dd>เรา<wbr>จะ<wbr>ได้<wbr>ค่า<wbr>พิกัด<wbr>ของ<wbr>จุด<wbr>ยอด<wbr>ที่<wbr>ตรงกับค่า<wbr>เป้า<wbr>หมาย<wbr>ที่<wbr>เหมาะ<wbr>สม<wbr>เป็น<wbr>คำ<wbr>ตอบ<wbr>ของ<wbr>ปัญหา
+<p><dd><i>จากตัวอย่างต่อไปนี้.....</i>
+<p><center><table border=0>
+<tr><td bgcolor="#f7dddd"><font face="ms sans serif" size=-1>&nbsp;&nbsp;  <b>ตัว<wbr>แปร</b> </td><td bgcolor="#fbf5f5"><font face="ms sans serif" size=-1>&nbsp;&nbsp;     :&nbsp;&nbsp;  x<sub>1</sub> , x<sub>2</sub>&nbsp;&nbsp;<img src="greater.gif">&nbsp;&nbsp; 0 </td><td><font face="ms sans serif" size=-1>&nbsp;&nbsp;              …<wbr><font color = brown>(1)</font>&nbsp;&nbsp;</td></tr>
+
+<tr><td rowspan=3 bgcolor="#f7dddd" valign=top><font face="ms sans serif" size=-1>&nbsp;&nbsp;  <b>เงื่อน<wbr>ไข<wbr>บังคับ</b> </td><td bgcolor="#fbf5f5"><font face="ms sans serif" size=-1>&nbsp;&nbsp;     :&nbsp;&nbsp;  6x<sub>1</sub> + 6x<sub>2</sub>&nbsp;&nbsp;<img src="less.gif">&nbsp;&nbsp; 420</td></tr>
+
+<tr><td bgcolor="#fbf5f5"><font face="ms sans serif" size=-1>&nbsp;&nbsp;     :&nbsp;&nbsp;  3x<sub>1</sub> +6x<sub>2</sub> &nbsp;&nbsp;<img src="less.gif">&nbsp;&nbsp; 300</td><td><font face="ms sans serif" size=-1>&nbsp;&nbsp;              …<wbr><font color = brown>(2)</font>&nbsp;&nbsp;</td></tr>
+
+<tr><td bgcolor="#fbf5f5"><font face="ms sans serif" size=-1>&nbsp;&nbsp;     :&nbsp;&nbsp;  4x<sub>1</sub> +2x<sub>2</sub> &nbsp;&nbsp;<img src="less.gif">&nbsp;&nbsp; 240</td></tr>
+
+<tr><td bgcolor="#f7dddd"><font face="ms sans serif" size=-1>&nbsp;&nbsp;  <b>เป้า<wbr>หมาย</b> </td><td bgcolor="#fbf5f5"><font face="ms sans serif" size=-1>&nbsp;&nbsp;     :&nbsp;&nbsp;  p &nbsp;=&nbsp; 300x<sub>1</sub> + 200x<sub>2</sub>      &nbsp;&nbsp; =&nbsp;&nbsp;   <b> max</b>&nbsp;&nbsp;</td><td><font face="ms sans serif" size=-1>&nbsp;&nbsp;              …<wbr><font color = brown>(3)</font>&nbsp;&nbsp;</td></tr>
+</table></center>
+<p><dd>
+	ก่อน<wbr>ที่<wbr>จะ<wbr>นำ<wbr>อสมการ<wbr>ไป<wbr>เขียน<wbr>กราฟ เรา<wbr>จะ<wbr>ต้อง<wbr>หา<wbr>จุด<wbr>ผ่าน<wbr>ของ<wbr>กราฟ<wbr>เสีย<wbr>ก่อน<wbr>โดย<wbr>จะ<wbr>ต้อง<wbr>เปลี่ยน อสมการ<wbr>เป็น สมการ<wbr>แล้ว<wbr>เขียน<wbr>กราฟ 
+<p>
+<center><table>
+<tr><td bgcolor="#fbf5f5"><font face="ms sans serif" size=-1>&nbsp;&nbsp; 6x<sub>1</sub>+6x<sub>2</sub>   = 420&nbsp;&nbsp;</td></tr> 
+<tr><td bgcolor="#fbf5f5"><font face="ms sans serif" size=-1>&nbsp;&nbsp; 3x<sub>1</sub>+6x<sub>2</sub>   = 300&nbsp;&nbsp;</td></tr> 
+<tr><td bgcolor="#fbf5f5"><font face="ms sans serif" size=-1>&nbsp;&nbsp; 4x<sub>1</sub>+2x<sub>2</sub>   = 240&nbsp;&nbsp;</td></tr> 
+</table></center>	
+<p><dd>
+เขียน<wbr>กราฟ<wbr>และ<wbr>เลือก<wbr>พื้น<wbr>ที่<wbr>ที่<wbr>สม<wbr>จริงกับอ<wbr>สมการ<wbr>ของ<wbr>ชุด<wbr>เงื่อน<wbr>ไข<wbr>บังคับ<wbr>ได้ ดัง<wbr>นี้ 
+<p>
+<center><img src="linear_1.gif"></center>
+<p><dd>
+	พิกัด<wbr>ของ<wbr>จุด<wbr>ยอด<wbr>ต่างๆเรา<wbr>รู้<wbr>ได้<wbr>เฉพาะ<wbr>จุด<wbr><wbr>p<sub>0</sub>, p<sub>1</sub> และ p<sub>4</sub> ส่วน<wbr>จุด p<sub>2</sub> และ p<sub>3</sub> เรา<wbr>ต้อง<wbr>แก้<wbr>สมการ<wbr>คู่<wbr>ที่<wbr>ก่อ<wbr>ให้<wbr>เกิด<wbr>จุด<wbr>ตัด<wbr>ของ<wbr>จุด<wbr>ยอด<wbr>นั้นๆก้จะ<wbr>ได้<wbr>พิกัด<wbr>ของ<wbr>จุด p<sub>2</sub>(50,20) และ p<sub>3</sub>(40,30)
+<p><dd>	ต่อ<wbr>ไป<wbr>สร้าง<wbr>ตา<wbr>ราง<wbr>หา<wbr>ค่า<wbr>เป้า<wbr>หมาย<wbr>ตาม<wbr>จุด<wbr>ยอด<wbr>จาก p = 300x<sub>1</sub> + 200x<sub>2</sub>   ได้<wbr>ดัง<wbr>นี้
+<p>  
+<center><table border=0 width=50%>
+<tr bgcolor="#f7dddd"><th><img src="linear_hd3.gif"></th><th><font face="ms sans serif" size=-1>&nbsp;&nbsp;&nbsp;p<sub>0</sub>&nbsp;&nbsp;</th><th><font face="ms sans serif" size=-1>p<sub>1</sub></th><th><font face="ms sans serif" size=-1>p<sub>2</sub></th><th><font face="ms sans serif" size=-1>p<sub>3</sub></th><th><font face="ms sans serif" size=-1>p<sub>4</sub></th></tr>
+<tr bgcolor="#fbf5f5" align=center><td><font face="ms sans serif" size=-1><b>x<sub>1</sub></b></td><td><font face="ms sans serif" size=-1>0</td><td><font face="ms sans serif" size=-1>60</td><td><font face="ms sans serif" size=-1>50</td><td><font face="ms sans serif" size=-1>40</td><td><font face="ms sans serif" size=-1>0</td></tr>
+<tr bgcolor="#fbf5f5" align=center><td><font face="ms sans serif" size=-1><b>x<sub>2</sub></b></td><td><font face="ms sans serif" size=-1>0</td><td><font face="ms sans serif" size=-1>0</td><td><font face="ms sans serif" size=-1>20</td><td><font face="ms sans serif" size=-1>30</td><td><font face="ms sans serif" size=-1>50</td></tr>
+<tr bgcolor="#f8e6e6" align=center><td><font face="ms sans serif" size=-1><b>p</b></td><td><font face="ms sans serif" size=-1>0</td><td><font face="ms sans serif" size=-1>18,000</td><td><font face="ms sans serif" size=-1>19,000 = max</td><td><font face="ms sans serif" size=-1>18,000</td><td><font face="ms sans serif" size=-1>10,000</td></tr>
+</table></center>
+<p><dd> จาก<wbr>ตา<wbr>ราง p มี<wbr>ค่า<wbr>สูง<wbr>สุด<wbr>ที่<wbr>จุด p<sub>2</sub> คือ p<sub>max</sub>  = 19,000 บาท 
+ดัง<wbr>นั้น<wbr>บริษัท<wbr>อุตสาหกรรม<wbr>จะ<wbr>ต้อง<wbr>ผลิต<wbr>ผลิต<wbr>ภัณฑ์<wbr>ทั้ง<wbr>สอง<wbr>ชนิด ดัง<wbr>นี้ 
+<p><center>
+<table width=30%>
+<tr bgcolor="#fbf5f5" align=center><td><font face="ms sans serif" size=-1>ผลิต<wbr>ภัณฑ์<wbr>ชนิด<wbr>ที่ 1จำนวน 50 หน่วย</td></tr>
+<tr bgcolor="#fbf5f5" align=center><td><font face="ms sans serif" size=-1>ผลิต<wbr>ภัณฑ์<wbr>ชนิด<wbr>ที่ 2 จำนวน 20 หน่วย</td></tr>
+<tr bgcolor="#fbf5f5" align=center><td><font face="ms sans serif" size=-1>กำไร<wbr>สูง<wbr>สุด<wbr>เท่ากับ 19,000 บาท</td></tr>
+</table></center>
+<p><dd><i>ดูอีกตัวอย่างหนึ่ง........</i>
+<p><center><table border=0>
+<tr><td bgcolor="#f7dddd"><font face="ms sans serif" size=-1>&nbsp;&nbsp;  <b>ตัว<wbr>แปร</b> </td><td bgcolor="#fbf5f5"><font face="ms sans serif" size=-1>&nbsp;&nbsp;     :&nbsp;&nbsp;  x<sub>1</sub> , x<sub>2</sub>&nbsp;&nbsp;<img src="greater.gif">&nbsp;&nbsp; 0 </td><td><font face="ms sans serif" size=-1>&nbsp;&nbsp;              …<wbr><font color = brown>(1)</font>&nbsp;&nbsp;</td></tr>
+
+<tr><td rowspan=3 bgcolor="#f7dddd" valign=top><font face="ms sans serif" size=-1>&nbsp;&nbsp;  <b>เงื่อน<wbr>ไข<wbr>บังคับ</b> </td><td bgcolor="#fbf5f5"><font face="ms sans serif" size=-1>&nbsp;&nbsp;     :&nbsp;&nbsp;  6x<sub>1</sub> + 2x<sub>2</sub>&nbsp;&nbsp;<img src="greater.gif">&nbsp;&nbsp; 12</td></tr>
+
+<tr><td bgcolor="#fbf5f5"><font face="ms sans serif" size=-1>&nbsp;&nbsp;     :&nbsp;&nbsp;  2x<sub>1</sub> + 2x<sub>2</sub> &nbsp;&nbsp;<img src="greater.gif">&nbsp;&nbsp; 8</td><td><font face="ms sans serif" size=-1>&nbsp;&nbsp;              …<wbr><font color = brown>(2)</font>&nbsp;&nbsp;</td></tr>
+
+<tr><td bgcolor="#fbf5f5"><font face="ms sans serif" size=-1>&nbsp;&nbsp;     :&nbsp;&nbsp;  4x<sub>1</sub> + 12x<sub>2</sub> &nbsp;&nbsp;<img src="greater.gif">&nbsp;&nbsp; 24</td></tr>
+
+<tr><td bgcolor="#f7dddd"><font face="ms sans serif" size=-1>&nbsp;&nbsp;  <b>เป้า<wbr>หมาย</b> </td><td bgcolor="#fbf5f5"><font face="ms sans serif" size=-1>&nbsp;&nbsp;     :&nbsp;&nbsp;  c &nbsp;=&nbsp; 40,000x<sub>1</sub> + 32,000x<sub>2</sub>      &nbsp;&nbsp; =&nbsp;&nbsp;   <b> min</b>&nbsp;&nbsp;</td><td><font face="ms sans serif" size=-1>&nbsp;&nbsp;              …<wbr><font color = brown>(3)</font>&nbsp;&nbsp;</td></tr>
+</table></center>
+<p><dd>
+                 จาก<wbr>ชุด<wbr>อสมการ<wbr>ของ<wbr>เงื่อน<wbr>ไข<wbr>บังคับ เรา<wbr>หา<wbr>จุด<wbr>ผ่าน<wbr>ของ<wbr>กราฟ<wbr>ใน<wbr>รูป<wbr>ของ<wbr>สมการ ดัง<wbr>นี้ 
+<p>
+<center><table>
+<tr><td bgcolor="#fbf5f5"><font face="ms sans serif" size=-1>&nbsp;&nbsp; 6x<sub>1</sub> + 2x<sub>2</sub>   = 12&nbsp;&nbsp;</td></tr> 
+<tr><td bgcolor="#fbf5f5"><font face="ms sans serif" size=-1>&nbsp;&nbsp; 2x<sub>1</sub> + 2x<sub>2</sub>   = 8&nbsp;&nbsp;</td></tr> 
+<tr><td bgcolor="#fbf5f5"><font face="ms sans serif" size=-1>&nbsp;&nbsp; 4x<sub>1</sub> + 12x<sub>2</sub>   = 24&nbsp;&nbsp;</td></tr> 
+</table></center>	
+<p><dd>
+  เขียน<wbr>กราฟ<wbr>และ<wbr>เลือก<wbr>พื้น<wbr>ที่<wbr>ที่<wbr>สม<wbr>จริง<wbr>ได้<wbr>ดัง<wbr>รูป
+<p>
+<center><img src="linear_2.gif"></center>
+<p><dd>  เรา<wbr>ได้<wbr>จุด<wbr>ยอด<wbr>พร้อม<wbr>ด้วย<wbr>พิกัด<wbr>เป็น p<sub>1</sub>	(6,2), p<sub>2</sub>(3,1), p<sub>3</sub>(1,3)และ p<sub>4</sub>(0,6) นำ<wbr>จุด<wbr>ยอด<wbr>ไป<wbr>ทด<wbr>สอบ<wbr>หา<wbr>ค่า<wbr>ต่ำ<wbr>สุด<wbr>และ<wbr>เป้า<wbr>หมาย<wbr>ของ<wbr>อสมการ   c = 40,000x<sub>1</sub> + 32,000x<sub>2</sub>   ได้<wbr>ดัง<wbr>ตา<wbr>ราง<wbr>ต่อ<wbr>ไป<wbr>นี้  
+<p>  
+<center><table border=0 width=50%>
+<tr bgcolor="#f7dddd"><th><img src="linear_hd3.gif"></th><th><font face="ms sans serif" size=-1>p<sub>1</sub></th><th><font face="ms sans serif" size=-1>p<sub>2</sub></th><th><font face="ms sans serif" size=-1>p<sub>3</sub></th><th><font face="ms sans serif" size=-1>p<sub>4</sub></th></tr>
+
+<tr bgcolor="#fbf5f5" align=center><td><font face="ms sans serif" size=-1><b>x<sub>1</sub></b></td><td><font face="ms sans serif" size=-1>6</td><td><font face="ms sans serif" size=-1>3</td><td><font face="ms sans serif" size=-1>1</td><td><font face="ms sans serif" size=-1>0</td></tr>
+
+<tr bgcolor="#fbf5f5" align=center><td><font face="ms sans serif" size=-1><b>x<sub>2</sub></b></td><td><font face="ms sans serif" size=-1>0</td><td><font face="ms sans serif" size=-1>1</td><td><font face="ms sans serif" size=-1>3</td><td><font face="ms sans serif" size=-1>6</td></tr>
+
+<tr bgcolor="#f8e6e6" align=center><td><font face="ms sans serif" size=-1><b>c</b></td><td><font face="ms sans serif" size=-1>240,000</td><td><font face="ms sans serif" size=-1>152,000</td><td><font face="ms sans serif" size=-1>136,000 = min</td><td><font face="ms sans serif" size=-1>192,000</td></tr>
+</table></center>
+<p><dd>                               
+จาก<wbr>ตา<wbr>ราง<wbr>ค่า<wbr>ต่ำ<wbr>สุด<wbr>ที่<wbr>จุด  p<sub>3</sub> คือ c <sub>min</sub> = 136,000 บาท
+<p><dd>   ดัง<wbr>นั้น บริษัท<wbr>จะ<wbr>ต้อง<wbr>จัด<wbr>การ<wbr>ผลิต<wbr>แร่<wbr>ดัง<wbr>นี้ 
+<p><center>
+<table width=35%>
+<tr bgcolor="#fbf5f5" align=center><td><font face="ms sans serif" size=-1>เหมือง a  ทำ<wbr>งาน 1 วัน /สัปดาห์</td></tr>
+<tr bgcolor="#fbf5f5" align=center><td><font face="ms sans serif" size=-1>เหมือง b ทำ<wbr>งาน 3 วัน<wbr><wbr>/ สัปดาห์</td></tr>
+<tr bgcolor="#fbf5f5" align=center><td><font face="ms sans serif" size=-1>ต้น<wbr>ทุน<wbr>การ<wbr>ผลิต<wbr>ต่ำ<wbr>สุด<wbr>เป็น  136,000 บาท / สัปดาห์</td></tr>
+</table></center>
+<p>
+<hr>
+ที่มา : เอกสารคณิตศาสตร์ กข. brand's summer camp ปี 1998                                                                                
+
+</body>
+</html>

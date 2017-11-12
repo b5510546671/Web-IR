@@ -1,0 +1,343 @@
+<html>
+<head>
+<title>ภาควิชาจิตวิทยาการศึกษาและการแนะแนว</title>
+<script langquage='javascript'>
+window.location="http://edupsy.edu.ku.ac.th/new";
+</script>
+<script language="javascript">
+dcol='yellow';// สีของวัน
+fcol='red';// สีของตัวเลขเวลา
+scol='white';// สีของเข็มวินาที
+mcol='white';// สีของเข็มนาที
+hcol='white';// สีของเข็มชั่วโมง
+clockheight=40;
+clockwidth=40;
+clockfrommousey=0;
+clockfrommousex=100;
+d=new array("sunday","monday","tuesday","wednesday","thursday","friday","saturday");
+m=new array("january","february","march","april","may","june","july","august","september","october","november","december");
+date=new date();
+day=date.getdate();
+year=date.getyear();
+if (year < 2000) year=year+1900;  
+todaysdate=" "+d[date.getday()]+" "+day+" "+m[date.getmonth()]+" "+year;
+d=todaysdate.split('');
+h='...';
+h=h.split('');
+m='....';
+m=m.split('');
+s='.....';
+s=s.split('');
+face='1 2 3 4 5 6 7 8 9 10 11 12';
+font='arial';
+size=1;
+speed=0.6;
+ns=(document.layers);
+ie=(document.all);
+face=face.split(' ');
+n=face.length;  
+a=size*10;
+ymouse=0;
+xmouse=0;
+scrll=0;
+props="<font face="+font+" size="+size+" color="+fcol+"><b>";
+props2="<font face="+font+" size="+size+" color="+dcol+"><b>";
+split=360/n;
+dsplit=360/d.length;
+handheight=clockheight/4.5
+handwidth=clockwidth/4.5
+handy=-7;
+handx=-2.5;
+scrll=0;
+step=0.06;
+currstep=0;
+y=new array();x=new array();y=new array();x=new array();
+for (i=0; i < n; i++){y[i]=0;x[i]=0;y[i]=0;x[i]=0}
+dy=new array();dx=new array();dy=new array();dx=new array();
+for (i=0; i < d.length; i++){dy[i]=0;dx[i]=0;dy[i]=0;dx[i]=0}
+if (ns){
+for (i=0; i < d.length; i++)
+document.write('<layer name="nsdate'+i+'" top=0 left=0 height='+a+' width='+a+'><center>'+props2+d[i]+'</font></center></layer>');
+for (i=0; i < n; i++)
+document.write('<layer name="nsface'+i+'" top=0 left=0 height='+a+' width='+a+'><center>'+props+face[i]+'</font></center></layer>');
+for (i=0; i < s.length; i++)
+document.write('<layer name=nsseconds'+i+' top=0 left=0 width=15 height=15><font face=arial size=3 color='+scol+'><center><b>'+s[i]+'</b></center></font></layer>');
+for (i=0; i < m.length; i++)
+document.write('<layer name=nsminutes'+i+' top=0 left=0 width=15 height=15><font face=arial size=3 color='+mcol+'><center><b>'+m[i]+'</b></center></font></layer>');
+for (i=0; i < h.length; i++)
+document.write('<layer name=nshours'+i+' top=0 left=0 width=15 height=15><font face=arial size=3 color='+hcol+'><center><b>'+h[i]+'</b></center></font></layer>');
+}
+if (ie){
+document.write('<div id="od" style="position:absolute;top:0px;left:0px"><div style="position:relative">');
+for (i=0; i < d.length; i++)
+document.write('<div id="iedate" style="position:absolute;top:0px;left:0;height:'+a+';width:'+a+';text-align:center">'+props2+d[i]+'</b></font></div>');
+document.write('</div></div>');
+document.write('<div id="of" style="position:absolute;top:0px;left:0px"><div style="position:relative">');
+for (i=0; i < n; i++)
+document.write('<div id="ieface" style="position:absolute;top:0px;left:0;height:'+a+';width:'+a+';text-align:center">'+props+face[i]+'</b></font></div>');
+document.write('</div></div>');
+document.write('<div id="oh" style="position:absolute;top:0px;left:0px"><div style="position:relative">');
+for (i=0; i < h.length; i++)
+document.write('<div id="iehours" style="position:absolute;width:16px;height:16px;font-family:arial;font-size:16px;color:'+hcol+';text-align:center;font-weight:bold">'+h[i]+'</div>');
+document.write('</div></div>');
+document.write('<div id="om" style="position:absolute;top:0px;left:0px"><div style="position:relative">');
+for (i=0; i < m.length; i++)
+document.write('<div id="ieminutes" style="position:absolute;width:16px;height:16px;font-family:arial;font-size:16px;color:'+mcol+';text-align:center;font-weight:bold">'+m[i]+'</div>');
+document.write('</div></div>')
+document.write('<div id="os" style="position:absolute;top:0px;left:0px"><div style="position:relative">');
+for (i=0; i < s.length; i++)
+document.write('<div id="ieseconds" style="position:absolute;width:16px;height:16px;font-family:arial;font-size:16px;color:'+scol+';text-align:center;font-weight:bold">'+s[i]+'</div>');
+document.write('</div></div>')
+}
+(ns)?window.captureevents(event.mousemove):0;
+function mouse(evnt){
+ymouse = (ns)?evnt.pagey+clockfrommousey-(window.pageyoffset):event.y+clockfrommousey;
+xmouse = (ns)?evnt.pagex+clockfrommousex:event.x+clockfrommousex;
+}
+(ns)?window.onmousemove=mouse:document.onmousemove=mouse;
+function clockandassign(){
+time = new date ();
+secs = time.getseconds();
+sec = -1.57 + math.pi * secs/30;
+mins = time.getminutes();
+min = -1.57 + math.pi * mins/30;
+hr = time.gethours();
+hrs = -1.575 + math.pi * hr/6+math.pi*parseint(time.getminutes())/360;
+if (ie){
+od.style.top=window.document.body.scrolltop;
+of.style.top=window.document.body.scrolltop;
+oh.style.top=window.document.body.scrolltop;
+om.style.top=window.document.body.scrolltop;
+os.style.top=window.document.body.scrolltop;
+}
+for (i=0; i < n; i++){
+ var f=(ns)?document.layers['nsface'+i]:ieface[i].style;  
+ f.top=y[i] + clockheight*math.sin(-1.0471 + i*split*math.pi/180)+scrll;
+ f.left=x[i] + clockwidth*math.cos(-1.0471 + i*split*math.pi/180);
+ }
+for (i=0; i < h.length; i++){
+ var hl=(ns)?document.layers['nshours'+i]:iehours[i].style;
+ hl.top=y[i]+handy+(i*handheight)*math.sin(hrs)+scrll;
+ hl.left=x[i]+handx+(i*handwidth)*math.cos(hrs);
+ }
+for (i=0; i < m.length; i++){
+ var ml=(ns)?document.layers['nsminutes'+i]:ieminutes[i].style;
+ ml.top=y[i]+handy+(i*handheight)*math.sin(min)+scrll;
+ ml.left=x[i]+handx+(i*handwidth)*math.cos(min);
+ }
+for (i=0; i < s.length; i++){
+ var sl=(ns)?document.layers['nsseconds'+i]:ieseconds[i].style;
+ sl.top=y[i]+handy+(i*handheight)*math.sin(sec)+scrll;
+ sl.left=x[i]+handx+(i*handwidth)*math.cos(sec);
+ }
+for (i=0; i < d.length; i++){
+ var dl=(ns)?document.layers['nsdate'+i]:iedate[i].style;  
+ dl.top=dy[i] + clockheight*1.5*math.sin(currstep+i*dsplit*math.pi/180)+scrll;
+ dl.left=dx[i] + clockwidth*1.5*math.cos(currstep+i*dsplit*math.pi/180);
+ }
+currstep-=step;
+}
+function delay(){
+scrll=(ns)?window.pageyoffset:0;
+dy[0]=math.round(dy[0]+=((ymouse)-dy[0])*speed);
+dx[0]=math.round(dx[0]+=((xmouse)-dx[0])*speed);
+for (i=1; i < d.length; i++){
+dy[i]=math.round(dy[i]+=(dy[i-1]-dy[i])*speed);
+dx[i]=math.round(dx[i]+=(dx[i-1]-dx[i])*speed);
+}
+y[0]=math.round(y[0]+=((ymouse)-y[0])*speed);
+x[0]=math.round(x[0]+=((xmouse)-x[0])*speed);
+for (i=1; i < n; i++){
+y[i]=math.round(y[i]+=(y[i-1]-y[i])*speed);
+x[i]=math.round(x[i]+=(x[i-1]-x[i])*speed);
+}
+clockandassign();
+settimeout('delay()',30); // ความเร็วในการเลื่อนตาม mouse ของนาฬิกา
+}
+if (ns||ie)window.onload=delay;
+</script>
+
+<meta http-equiv="content-type" content="text/html; charset=windows-874">
+<style type="text/css">
+<!--
+body {  margin: 0px  0px; padding: 0px  0px}
+a:link { color: #005ca2; text-decoration: none}
+a:visited { color: #005ca2; text-decoration: none}
+a:active { color: #0099ff; text-decoration: underline}
+a:hover { color: #0099ff; text-decoration: underline}
+-->
+</style>
+<script language="javascript">
+<!--
+<!--
+function mm_reloadpage(init) {  //reloads the window if nav4 resized
+  if (init==true) with (navigator) {if ((appname=="netscape")&&(parseint(appversion)==4)) {
+    document.mm_pgw=innerwidth; document.mm_pgh=innerheight; onresize=mm_reloadpage; }}
+  else if (innerwidth!=document.mm_pgw || innerheight!=document.mm_pgh) location.reload();
+}
+mm_reloadpage(true);
+// -->
+
+function mm_swapimgrestore() { //v3.0
+  var i,x,a=document.mm_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.osrc;i++) x.src=x.osrc;
+}
+
+function mm_preloadimages() { //v3.0
+  var d=document; if(d.images){ if(!d.mm_p) d.mm_p=new array();
+    var i,j=d.mm_p.length,a=mm_preloadimages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexof("#")!=0){ d.mm_p[j]=new image; d.mm_p[j++].src=a[i];}}
+}
+
+function mm_findobj(n, d) { //v4.0
+  var p,i,x;  if(!d) d=document; if((p=n.indexof("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=mm_findobj(n,d.layers[i].document);
+  if(!x && document.getelementbyid) x=document.getelementbyid(n); return x;
+}
+
+function mm_swapimage() { //v3.0
+  var i,j=0,x,a=mm_swapimage.arguments; document.mm_sr=new array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=mm_findobj(a[i]))!=null){document.mm_sr[j++]=x; if(!x.osrc) x.osrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+</head>
+
+<body topmargin="0" leftmargin="0" bgcolor="#000000" onload="mm_preloadimages('button/b11.gif','button/b22.gif','button/b33.gif','button/b44.gif','button/b55.gif','button/b66.gif','button/b77.gif','button/b88.gif','button/b99.gif','button/b1011.gif','button/bpsy1.gif','button/mail1.gif','button/b13.gif','button/b15.gif')">
+<script language="javascript1.2">
+
+  //configure below to change url path to the snow image
+  var snowsrc="bgflower.gif"
+  // configure below to change number of snow to render
+  var no = 10;
+
+  var ns4up = (document.layers) ? 1 : 0;  // browser sniffer
+  var ie4up = (document.all) ? 1 : 0;
+
+  var dx, xp, yp;    // coordinate and position variables
+  var am, stx, sty;  // amplitude and step variables
+  var i, doc_width = 800, doc_height = 600;
+  
+  if (ns4up) {
+    doc_width = self.innerwidth;
+    doc_height = self.innerheight;
+  } else if (ie4up) {
+    doc_width = document.body.clientwidth;
+    doc_height = document.body.clientheight;
+  }
+
+  dx = new array();
+  xp = new array();
+  yp = new array();
+  am = new array();
+  stx = new array();
+  sty = new array();
+  
+  for (i = 0; i < no; ++ i) {  
+    dx[i] = 0;                        // set coordinate variables
+    xp[i] = math.random()*(doc_width-50);  // set position variables
+    yp[i] = math.random()*doc_height;
+    am[i] = math.random()*20;         // set amplitude variables
+    stx[i] = 0.02 + math.random()/10; // set step variables
+    sty[i] = 0.7 + math.random();     // set step variables
+    if (ns4up) {                      // set layers
+      if (i == 0) {
+        document.write("<layer name=\"dot"+ i +"\" left=\"15\" top=\"15\" visibility=\"show\"><a href=\"http://a.com/\"><img src='"+snowsrc+"' border=\"0\"></a></layer>");
+      } else {
+        document.write("<layer name=\"dot"+ i +"\" left=\"15\" top=\"15\" visibility=\"show\"><img src='"+snowsrc+"' border=\"0\"></layer>");
+      }
+    } else if (ie4up) {
+      if (i == 0) {
+        document.write("<div id=\"dot"+ i +"\" style=\"position: absolute; z-index: "+ i +"; visibility: visible; top: 15px; left: 15px;\"><a href=\"http://b.com\"><img src='"+snowsrc+"' border=\"0\"></a></div>");
+      } else {
+        document.write("<div id=\"dot"+ i +"\" style=\"position: absolute; z-index: "+ i +"; visibility: visible; top: 15px; left: 15px;\"><img src='"+snowsrc+"' border=\"0\"></div>");
+      }
+    }
+  }
+  
+  function snowns() {  // netscape main animation function
+    for (i = 0; i < no; ++ i) {  // iterate for every dot
+      yp[i] += sty[i];
+      if (yp[i] > doc_height-50) {
+        xp[i] = math.random()*(doc_width-am[i]-30);
+        yp[i] = 0;
+        stx[i] = 0.02 + math.random()/10;
+        sty[i] = 0.7 + math.random();
+        doc_width = self.innerwidth;
+        doc_height = self.innerheight;
+      }
+      dx[i] += stx[i];
+      document.layers["dot"+i].top = yp[i];
+      document.layers["dot"+i].left = xp[i] + am[i]*math.sin(dx[i]);
+    }
+    settimeout("snowns()", 10);
+  }
+
+  function snowie() {  // ie main animation function
+    for (i = 0; i < no; ++ i) {  // iterate for every dot
+      yp[i] += sty[i];
+      if (yp[i] > doc_height-50) {
+        xp[i] = math.random()*(doc_width-am[i]-30);
+        yp[i] = 0;
+        stx[i] = 0.02 + math.random()/10;
+        sty[i] = 0.7 + math.random();
+        doc_width = document.body.clientwidth;
+        doc_height = document.body.clientheight;
+      }
+      dx[i] += stx[i];
+      document.all["dot"+i].style.pixeltop = yp[i];
+      document.all["dot"+i].style.pixelleft = xp[i] + am[i]*math.sin(dx[i]);
+    }
+    settimeout("snowie()", 10);
+  }
+
+  if (ns4up) {
+    snowns();
+  } else if (ie4up) {
+    snowie();
+  }
+
+</script>
+
+
+
+<div id="layer1" style="position:absolute; left:12px; top:100px; width:210px; height:366px; z-index:1"> 
+  <div align="center"> 
+    <p><a href="history.html" onmouseout="mm_swapimgrestore()" onmouseover="mm_swapimage('image13','','button/b11.gif',1)"><img name="image13" border="0" src="button/b1.gif" width="126" height="32"></a><a href="objective.html" onmouseout="mm_swapimgrestore()" onmouseover="mm_swapimage('image14','','button/b22.gif',1)"><img name="image14" border="0" src="button/b2.gif" width="126" height="32"></a><a href="pic.html" onmouseout="mm_swapimgrestore()" onmouseover="mm_swapimage('image12','','button/b33.gif',1)"><img name="image12" border="0" src="button/b3.gif" width="126" height="32"></a><a href="research.html" onmouseout="mm_swapimgrestore()" onmouseover="mm_swapimage('image25','','button/b15.gif',1)"><img name="image25" border="0" src="button/b14.gif" width="120" height="28"></a><a href="pic.html" onmouseout="mm_swapimgrestore()" onmouseover="mm_swapimage('image12','','button/b33.gif',1)"><br>
+      </a><a href="struc.html" onmouseout="mm_swapimgrestore()" onmouseover="mm_swapimage('image15','','button/b44.gif',1)"><img name="image15" border="0" src="button/b4.gif" width="126" height="32"></a> 
+      <a href="cur.html" onmouseout="mm_swapimgrestore()" onmouseover="mm_swapimage('image16','','button/b55.gif',1)"><img name="image16" border="0" src="button/b5.gif" width="126" height="32"></a><a href="course1.html" onmouseout="mm_swapimgrestore()" onmouseover="mm_swapimage('image17','','button/b66.gif',1)"><img name="image17" border="0" src="button/b6.gif" width="126" height="32"></a><a href="course2.html" onmouseout="mm_swapimgrestore()" onmouseover="mm_swapimage('image18','','button/b77.gif',1)"><img name="image18" border="0" src="button/b7.gif" width="126" height="32"></a><a href="activity.html" onmouseout="mm_swapimgrestore()" onmouseover="mm_swapimage('image19','','button/b88.gif',1)"><img name="image19" border="0" src="button/b8.gif" width="126" height="32"></a><a href="reward.html" onmouseout="mm_swapimgrestore()" onmouseover="mm_swapimage('image24','','button/b13.gif',1)"><img name="image24" border="0" src="button/b12.gif" width="126" height="32"></a><a href="curact.html" onmouseout="mm_swapimgrestore()" onmouseover="mm_swapimage('image20','','button/b99.gif',1)"><img name="image20" border="0" src="button/b9.gif" width="126" height="32"></a><a href="name.htm" onmouseout="mm_swapimgrestore()" onmouseover="mm_swapimage('image21','','button/b1011.gif',1)"><img name="image21" border="0" src="button/b101.gif" width="126" height="32"></a> 
+    </p>
+    <p>&nbsp; </p>
+    <p>&nbsp;</p>
+  </div>
+  <p>&nbsp;</p>
+</div>
+<div align="center"> 
+  <p align="left"><a href="http://www.edu.ku.ac.th"><img src="deplogo2.gif" width="766" height="59" border="0"></a></p>
+  <table width="100%" border="0">
+    <tr> 
+      <td width="28%"> 
+        <blockquote>&nbsp;</blockquote>
+        <ul>
+          <li> 
+            <div align="left"></div>
+          </li>
+        </ul>
+        </td>
+      <td width="72%"> 
+        <div align="right"> 
+          <p align="center"><a href="psy.html" onmouseout="mm_swapimgrestore()" onmouseover="mm_swapimage('image23','','button/bpsy1.gif',1)"><img name="image23" border="0" src="button/bpsy.gif" width="404" height="42"></a></p>
+          <p align="center"><img src="image3/mixdepart2.gif" width="567" height="425"></p>
+          <p align="center">&nbsp;</p>
+          <p align="center"><a href="mailto:edupsy@ku.ac.th" onmouseout="mm_swapimgrestore()" onmouseover="mm_swapimage('image22','','button/mail1.gif',1)"><img name="image22" border="0" src="button/mail.gif" width="71" height="28"></a><a href="mailto:edupsy@ku.ac.th"></a></p>
+          <p>&nbsp;</p>
+        </div>
+      </td>
+    </tr>
+  </table>
+  <p align="right">&nbsp;</p>
+  <p>&nbsp;</p>
+  </div>
+</body>
+</html>

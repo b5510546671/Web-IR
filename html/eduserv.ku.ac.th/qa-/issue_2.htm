@@ -1,0 +1,138 @@
+<?php require_once('connections/qa_51.php'); ?>
+<?php
+$colname_fac_id = "-1";
+if (isset($_get['loginid'])) {
+  $colname_fac_id = (get_magic_quotes_gpc()) ? $_get['loginid'] : addslashes($_get['loginid']);
+}
+mysql_select_db($database_qa_51, $qa_51);
+$query_fac_id = sprintf("select name, auth, id from member where loginid = '%s'", $colname_fac_id);
+$fac_id = mysql_query($query_fac_id, $qa_51) or die(mysql_error());
+$row_fac_id = mysql_fetch_assoc($fac_id);
+$totalrows_fac_id = mysql_num_rows($fac_id);
+?><!doctype html public "-//w3c//dtd xhtml 1.0 transitional//en" "http://www.w3.org/tr/xhtml1/dtd/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>มีกระบวนการเรียนรู้ที่เน้นผู้เรียนเป็นสำคัญ</title>
+<style type="text/css">
+<!--
+body,td,th {
+	font-family: ms sans serif, tahoma;
+	font-size: 10pt;
+}
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+a:link {
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+a:active {
+	text-decoration: none;
+}
+.style1 {font-size: 12pt}
+-->
+</style></head>
+<?php 
+
+
+
+?>
+
+<body>
+<div align="center">
+  <table width="1004" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <th scope="col"><img src="http://eduserv.ku.ac.th/qa/images/db_head.jpg" width="1004" height="132" /></th>
+    </tr>
+    <tr>
+      <th height="30" valign="bottom" background="images/db_body.jpg" scope="col"><span class="style1">ประจำปีการศึกษา 2553 </span></th>
+    </tr>
+    
+    <tr>
+      <td height="39" align="center" valign="middle" background="images/db_body.jpg"><table width="1000" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <th scope="col">&nbsp;&nbsp;
+            <div align="right">&nbsp; &nbsp; &nbsp; </div></th>
+        </tr>
+      </table></td>
+    </tr>
+    <tr>
+      <td align="center" background="images/db_body.jpg">| <a href="http://eduserv.ku.ac.th/qa/"> หน้าหลัก </a> |<br />
+	  
+	  <input name="loginid" type="hidden" value="<?php echo $_get['loginid']; ?>" />
+      <table width="935" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td align="center" scope="col"><table width="747" border="1" cellpadding="0" cellspacing="0" bordercolor="#cccccc">
+                <tr>
+                  <th width="74" bgcolor="#99cccc" scope="col">&nbsp;</th>
+                  <th width="575" bgcolor="#99cccc" scope="col">รายการดัชนีประเมินมีกระบวนการเรียนรู้ที่เน้นผู้เรียนเป็นสำคัญ</th>
+                  <th width="90" bgcolor="#99cccc" scope="col"><p align="center">แสดงข้อมูล</p>             </th>
+                </tr>
+				<?php $i=1; ?>
+                  				<tr>
+                                  <td colspan="3" valign="top" scope="col"><div align="center"></div>                                    <div align="left"></div></td>
+                                <tr>
+                                  <th valign="top" scope="col">ประเด็นที่ 1 </th>
+                                  <td valign="top" scope="col"><div align="left">คณะ/วิทยาเขตมีการส่งเสริมให้คณาจารย์ประจำส่วนใหญ่ไม่น้อยกว่าร้อยละ 75   มีความรู้ความเข้าใจ รู้เป้าหมายของการจัดการศึกษา   และหลักสูตรอุดมศึกษาและดำเนินการได้ตามแนวทางที่กำหนด</div></td>
+                                  <th valign="top" scope="col"><a href="issue_2_1.php" target="_blank"><img src="images/circle-check.png" width="22" height="22"  border="0"/></a></th>
+                                <tr>
+                                  <th valign="top" scope="col">ประเด็นที่ 2</th>
+                                  <td valign="top" scope="col"><div align="left"> คณะ/วิทยาเขตมีมาตราการให้อาจารย์มีการวิเคราะห์ศักยภาพของผู้เรียนเป็นรายบุคคล   และมีการปรับปรุงประมวลการสอนให้มีความเหมาะสม</div></td>
+                                  <th valign="top" scope="col"><a href="issue_2_2.php" target="_blank"><img src="images/circle-check.png" width="22" height="22"  border="0"/></a></th>
+                                <tr>
+                                  <th valign="top" scope="col">ประเด็นที่ 3</th>
+                                  <td valign="top" scope="col"><div align="left"> คณะ/วิทยาเขตมีการสำรวจ/วิจัยหรือการประเมินประสิทธิภาพการสอน   และนำข้อมูลปรับปรุงการสอน หรือลดสัดส่วนการบรรยายและเพิ่มสัดส่วนการปฏิบัติ</div></td>
+                                  <th valign="top" scope="col"><a href="issue_2_3.php" target="_blank"><img src="images/circle-check.png" width="22" height="22"  border="0"/></a></th>
+                                <tr>
+                                  <th valign="top" scope="col">ประเด็นที่ 4</th>
+                                  <td valign="top" scope="col"><div align="left"> คณะ/วิทยาเขตมีการส่งเสริมและสนับสนุนทำให้คณาจารย์   มีการพัฒนาความสามารถในการใช้เทคโนโลยีเพื่อพัฒนาการเรียนรู้ของอาจารย์และนิสิต</div></td>
+                                  <th valign="top" scope="col"><a href="issue_2_4.php" target="_blank"><img src="images/circle-check.png" width="22" height="22"  border="0"/></a></th>
+                                <tr>
+                                  <th valign="top" scope="col">ประเด็นที่ 5</th>
+                                  <td valign="top" scope="col"><div align="left"> คณะ/วิทยาเขตมีการส่งเสริมให้อาจารย์ประเมินผลการเรียนการสอน   โดยคำนึงถึงความแตกต่างของผู้เรียน และนำผลมาปรับเปลี่ยนการสอน   เพื่อพัฒนาผู้เรียนให้เต็มศักยภาพ</div></td>
+                                  <th valign="top" scope="col"><a href="issue_2_5.php" target="_blank"><img src="images/circle-check.png" width="22" height="22"  border="0"/></a></th>
+                                <tr>
+                                  <th valign="top" scope="col">ประเด็นที่ 6</th>
+                                  <td valign="top" scope="col"><div align="left"> คณะ/วิทยาเขตมีการส่งเสริมสนับสนุนให้คณาจารย์ทำวิจัยเพื่อพัฒนาสื่อและการเรียนรู้ของผู้เรียน   โดยนำผลการวิจัยไปใช้เพื่อพัฒนาผู้เรียน</div></td>
+                                  <th valign="top" scope="col"><a href="issue_2_6.php" target="_blank"><img src="images/circle-check.png" width="22" height="22"  border="0"/></a></th>
+                                <tr>
+                                  <th valign="top" scope="col">ประเด็นที่ 7</th>
+                                  <td valign="top" scope="col"><div align="left"> คณะ/วิทยาเขตมีการส่งเสริมสนับสนุนให้คณาจารย์มีการนำผลการประเมินการเรียนการสอนไปใช้ใน<br />
+                                    การพัฒนาศักยภาพผู้เรียน</div></td>
+                                  <th valign="top" scope="col"><a href="issue_2_7.php" target="_blank"><img src="images/circle-check.png" width="22" height="22"  border="0"/></a></th>
+                                </table>
+            <p>&nbsp;</p></td>
+          </tr>
+      </table>      </td>
+ 
+	</tr>
+    <tr>
+      <td align="center" background="images/db_body.jpg"><br /></td>
+    </tr>
+    <tr>
+      <td><img src="http://eduserv.ku.ac.th/qa/images/db_bottom.jpg" width="1004" height="34" /></td>
+    </tr>
+  </table>
+
+
+
+
+
+    <table width="500" border="1">
+
+  </table>
+</div>
+</body>
+</html>
+<?php
+mysql_free_result($fac_id);
+?>

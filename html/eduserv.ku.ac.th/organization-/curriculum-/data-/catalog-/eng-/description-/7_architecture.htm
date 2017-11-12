@@ -1,0 +1,2063 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns="http://www.w3.org/tr/rec-html40">
+
+<head>
+<meta http-equiv=content-type content="text/html; charset=windows-874">
+<meta name=progid content=word.document>
+<meta name=generator content="microsoft word 11">
+<meta name=originator content="microsoft word 11">
+<link rel=file-list href="7_architecture_files/filelist.xml">
+<title>��ѡ�ٵ�����ʶһѵ¡�����ʵúѳ�ե</title>
+<!--[if gte mso 9]><xml>
+ <o:documentproperties>
+  <o:author>architecture of kasetsart university</o:author>
+  <o:template>normal</o:template>
+  <o:lastauthor>eduserv</o:lastauthor>
+  <o:revision>2</o:revision>
+  <o:totaltime>349</o:totaltime>
+  <o:lastprinted>2004-03-26t02:43:00z</o:lastprinted>
+  <o:created>2004-07-27t09:00:00z</o:created>
+  <o:lastsaved>2004-07-27t09:00:00z</o:lastsaved>
+  <o:pages>1</o:pages>
+  <o:words>4341</o:words>
+  <o:characters>24747</o:characters>
+  <o:company>compaq</o:company>
+  <o:lines>206</o:lines>
+  <o:paragraphs>58</o:paragraphs>
+  <o:characterswithspaces>29030</o:characterswithspaces>
+  <o:version>11.5703</o:version>
+ </o:documentproperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:worddocument>
+  <w:displayhorizontaldrawinggridevery>0</w:displayhorizontaldrawinggridevery>
+  <w:displayverticaldrawinggridevery>0</w:displayverticaldrawinggridevery>
+  <w:usemarginsfordrawinggridorigin/>
+  <w:validateagainstschemas/>
+  <w:saveifxmlinvalid>false</w:saveifxmlinvalid>
+  <w:ignoremixedcontent>false</w:ignoremixedcontent>
+  <w:alwaysshowplaceholdertext>false</w:alwaysshowplaceholdertext>
+  <w:compatibility>
+   <w:footnotelayoutlikeww8/>
+   <w:shapelayoutlikeww8/>
+   <w:aligntablesrowbyrow/>
+   <w:forgetlasttabalignment/>
+   <w:layoutrawtablewidth/>
+   <w:layouttablerowsapart/>
+   <w:useword97linebreakingrules/>
+   <w:selectentirefieldwithstartorend/>
+   <w:applybreakingrules/>
+   <w:useword2002tablestylerules/>
+  </w:compatibility>
+  <w:browserlevel>microsoftinternetexplorer4</w:browserlevel>
+ </w:worddocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:latentstyles deflockedstate="false" latentstylecount="156">
+ </w:latentstyles>
+</xml><![endif]-->
+<style>
+<!--
+ /* font definitions */
+ @font-face
+	{font-family:"angsana new";
+	panose-1:2 2 6 3 5 4 5 2 3 4;
+	mso-font-charset:0;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:16777219 0 0 0 65537 0;}
+@font-face
+	{font-family:"cordia new";
+	panose-1:2 11 3 4 2 2 2 2 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:16777219 0 0 0 65537 0;}
+@font-face
+	{font-family:angsanaupc;
+	panose-1:2 2 6 3 5 4 5 2 3 4;
+	mso-font-charset:222;
+	mso-generic-font-family:roman;
+	mso-font-pitch:variable;
+	mso-font-signature:16777219 0 0 0 65536 0;}
+ /* style definitions */
+ p.msonormal, li.msonormal, div.msonormal
+	{mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:14.0pt;
+	font-family:"cordia new";
+	mso-fareast-font-family:"cordia new";
+	mso-bidi-font-family:"angsana new";}
+h1
+	{mso-style-next:normal;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:1;
+	font-size:16.0pt;
+	font-family:angsanaupc;
+	mso-ascii-font-family:angsanaupc;
+	mso-hansi-font-family:angsanaupc;
+	mso-font-kerning:0pt;}
+h2
+	{mso-style-next:normal;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:2;
+	font-size:14.0pt;
+	font-family:angsanaupc;
+	mso-ascii-font-family:angsanaupc;
+	mso-hansi-font-family:angsanaupc;}
+h3
+	{mso-style-next:normal;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:3;
+	font-size:14.0pt;
+	font-family:angsanaupc;
+	mso-ascii-font-family:angsanaupc;
+	mso-hansi-font-family:angsanaupc;}
+h4
+	{mso-style-next:normal;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:4;
+	font-size:14.0pt;
+	font-family:"cordia new";
+	mso-bidi-font-family:"angsana new";
+	font-weight:normal;
+	text-decoration:underline;
+	text-underline:single;}
+h5
+	{mso-style-next:normal;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:-5.4pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:5;
+	font-size:14.0pt;
+	font-family:"cordia new";
+	mso-bidi-font-family:"angsana new";
+	font-weight:normal;
+	text-decoration:underline;
+	text-underline:single;}
+h6
+	{mso-style-next:normal;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:6;
+	font-size:16.0pt;
+	font-family:angsanaupc;
+	mso-ascii-font-family:angsanaupc;
+	mso-hansi-font-family:angsanaupc;
+	font-weight:normal;}
+p.msoheading7, li.msoheading7, div.msoheading7
+	{mso-style-next:normal;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:7;
+	font-size:14.0pt;
+	font-family:"cordia new";
+	mso-fareast-font-family:"cordia new";
+	mso-bidi-font-family:"angsana new";
+	text-decoration:underline;
+	text-underline:single;}
+p.msoheading8, li.msoheading8, div.msoheading8
+	{mso-style-next:normal;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:8;
+	tab-stops:54.0pt 175.5pt;
+	font-size:16.0pt;
+	font-family:angsanaupc;
+	mso-ascii-font-family:angsanaupc;
+	mso-fareast-font-family:"cordia new";
+	mso-hansi-font-family:angsanaupc;
+	text-decoration:underline;
+	text-underline:single;}
+p.msoheading9, li.msoheading9, div.msoheading9
+	{mso-style-next:normal;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	page-break-after:avoid;
+	mso-outline-level:9;
+	tab-stops:54.0pt 175.5pt;
+	font-size:16.0pt;
+	font-family:angsanaupc;
+	mso-ascii-font-family:angsanaupc;
+	mso-fareast-font-family:"cordia new";
+	mso-hansi-font-family:angsanaupc;
+	text-decoration:underline;
+	text-underline:single;}
+p.msofootnotetext, li.msofootnotetext, div.msofootnotetext
+	{mso-style-noshow:yes;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:14.0pt;
+	font-family:"cordia new";
+	mso-fareast-font-family:"cordia new";
+	mso-bidi-font-family:"angsana new";}
+p.msoheader, li.msoheader, div.msoheader
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	tab-stops:center 216.0pt right 432.0pt;
+	font-size:14.0pt;
+	font-family:"cordia new";
+	mso-fareast-font-family:"cordia new";
+	mso-bidi-font-family:"angsana new";}
+p.msofooter, li.msofooter, div.msofooter
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	tab-stops:center 216.0pt right 432.0pt;
+	font-size:14.0pt;
+	font-family:"cordia new";
+	mso-fareast-font-family:"cordia new";
+	mso-bidi-font-family:"angsana new";}
+span.msofootnotereference
+	{mso-style-noshow:yes;
+	mso-bidi-language:th;
+	vertical-align:super;}
+p.msotitle, li.msotitle, div.msotitle
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	font-size:16.0pt;
+	font-family:"angsana new";
+	mso-fareast-font-family:"cordia new";}
+p.msobodytext, li.msobodytext, div.msobodytext
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:16.0pt;
+	font-family:"angsana new";
+	mso-fareast-font-family:"cordia new";}
+p.msobodytextindent, li.msobodytextindent, div.msobodytextindent
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	margin-bottom:.0001pt;
+	text-indent:36.0pt;
+	mso-pagination:widow-orphan;
+	font-size:14.0pt;
+	font-family:"cordia new";
+	mso-fareast-font-family:"cordia new";
+	mso-bidi-font-family:"angsana new";}
+p.msosubtitle, li.msosubtitle, div.msosubtitle
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:center;
+	mso-pagination:widow-orphan;
+	font-size:14.0pt;
+	font-family:angsanaupc;
+	mso-ascii-font-family:angsanaupc;
+	mso-fareast-font-family:"cordia new";
+	mso-hansi-font-family:angsanaupc;
+	font-weight:bold;}
+p.msobodytext2, li.msobodytext2, div.msobodytext2
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:16.0pt;
+	font-family:"angsana new";
+	mso-fareast-font-family:"cordia new";}
+p.msobodytext3, li.msobodytext3, div.msobodytext3
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	mso-pagination:widow-orphan;
+	tab-stops:35.45pt 99.0pt 216.0pt 310.5pt 328.5pt 360.0pt;
+	font-size:14.0pt;
+	font-family:"cordia new";
+	mso-fareast-font-family:"cordia new";
+	mso-bidi-font-family:"angsana new";
+	color:black;}
+p.msobodytextindent2, li.msobodytextindent2, div.msobodytextindent2
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:36.0pt;
+	mso-pagination:widow-orphan;
+	font-size:16.0pt;
+	font-family:"angsana new";
+	mso-fareast-font-family:"cordia new";}
+p.msobodytextindent3, li.msobodytextindent3, div.msobodytextindent3
+	{margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:36.0pt;
+	margin-bottom:.0001pt;
+	text-align:justify;
+	text-indent:36.0pt;
+	mso-pagination:widow-orphan;
+	font-size:14.0pt;
+	font-family:"cordia new";
+	mso-fareast-font-family:"cordia new";
+	mso-bidi-font-family:"angsana new";}
+p.definitionlist, li.definitionlist, div.definitionlist
+	{mso-style-name:"definition list";
+	mso-style-next:normal;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:18.0pt;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"times new roman";
+	mso-fareast-font-family:"cordia new";
+	mso-bidi-font-family:"angsana new";
+	mso-fareast-language:th;
+	layout-grid-mode:line;}
+ /* page definitions */
+ @page
+	{mso-footnote-separator:url("7_architecture_files/header.htm") fs;
+	mso-footnote-continuation-separator:url("7_architecture_files/header.htm") fcs;
+	mso-endnote-separator:url("7_architecture_files/header.htm") es;
+	mso-endnote-continuation-separator:url("7_architecture_files/header.htm") ecs;}
+@page section1
+	{size:612.0pt 792.0pt;
+	margin:99.35pt 86.4pt 128.15pt 93.6pt;
+	mso-header-margin:36.0pt;
+	mso-footer-margin:36.0pt;
+	mso-page-numbers:442;
+	mso-even-footer:url("7_architecture_files/header.htm") ef1;
+	mso-footer:url("7_architecture_files/header.htm") f1;
+	mso-paper-source:0;}
+div.section1
+	{page:section1;}
+ /* list definitions */
+ ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* style definitions */
+ table.msonormaltable
+	{mso-style-name:"table normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"cordia new";
+	mso-bidi-font-family:"angsana new";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="2050"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+<body lang=en-us style='tab-interval:36.0pt'>
+
+<div class=section1>
+
+<p class=msonormal align=center style='text-align:center'><b><span
+style='font-family:"times new roman";color:black'>faculty of architecture<o:p></o:p></span></b></p>
+
+<p class=msonormal align=center style='text-align:center'><b><span
+style='font-family:"times new roman";color:black'>(240xxx - 241xxx)<o:p></o:p></span></b></p>
+
+<p class=msonormal align=center style='text-align:center'><b><span
+style='font-family:"times new roman";color:black'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=msonormal align=center style='text-align:center'><b><span
+style='font-size:13.0pt;font-family:"times new roman";color:black'>bachelor of
+landscape architecture <o:p></o:p></span></b></p>
+
+<p class=msonormal align=center style='text-align:center'><b><span
+style='font-size:12.0pt;font-family:"times new roman";color:black'>(240xxx)<o:p></o:p></span></b></p>
+
+<p class=msonormal align=center style='text-align:center'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'>240111<span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+design fundamentals</span></b><b><span lang=th style='font-size:11.0pt;
+font-family:"angsana new";mso-ascii-font-family:"times new roman";mso-hansi-font-family:
+"times new roman";color:black'><span style='mso-tab-count:8'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;</span><span
+style='mso-spacerun:yes'>&nbsp;</span></span></b><b><span style='font-size:
+11.0pt;font-family:"times new roman";color:black'>2(2-0)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster;
+text-indent:35.45pt'><span style='font-size:11.0pt;font-family:"times new roman";
+color:black'><span style='mso-spacerun:yes'>&nbsp;</span>characteristics and
+relationships of visual art work; basic elements, principles and techniques in
+the arrangement of composition in two, three and four dimensions, from space
+and structure through natural forms, and the design philosophy of designers in
+various branches of art in brief.<o:p></o:p></span></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'>240112<span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+architectural design fundamentals <span style='mso-tab-count:6'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;</span>2(2-0)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster;
+text-indent:35.45pt'><span style='font-size:11.0pt;font-family:"times new roman";
+color:black'><span style='mso-spacerun:yes'>&nbsp;</span>an introduction to
+architectural design, human dimensions, horizontal and vertical movement, human
+behavior in habitation and living space requirements; basic influences and
+development of vernacular and domestic architecture; the study of design
+concepts, programming and principles of design for domestic architecture.<o:p></o:p></span></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'>240113<span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+studio in design</span></b><b><span lang=th style='font-size:11.0pt;font-family:
+"angsana new";mso-ascii-font-family:"times new roman";mso-hansi-font-family:
+"times new roman";color:black'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-tab-count:7'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></b><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span>4(0-8)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster;
+text-indent:36.0pt'><span style='font-size:11.0pt;font-family:"times new roman";
+color:black'><span style='mso-spacerun:yes'>&nbsp;</span>projects on the design
+of visual art works, composition of forms and spaces in two, three or four
+dimensions; design applicable to arts, architecture, industrial design and landscape
+architecture.<o:p></o:p></span></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'>240114<span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+architectural design <span style='mso-spacerun:yes'>&nbsp;</span>i<span
+style='mso-tab-count:6'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp; </span>4(0-8)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;</span>pre</span><span lang=th style='font-size:
+11.0pt;font-family:"angsana new";mso-ascii-font-family:"times new roman";
+mso-hansi-font-family:"times new roman";color:black'> </span><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'>:
+240113<span style='mso-spacerun:yes'>&nbsp; </span><o:p></o:p></span></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster;
+text-indent:36.0pt'><span style='font-size:11.0pt;font-family:"times new roman";
+color:black'><span style='mso-spacerun:yes'>&nbsp;</span>practice in basic
+architectural design with the employment of human dimension and behavior in
+designing parts of residential building: design of a wooden one-story house,
+emphasizing site planning and space arrangement appropriate for tropical
+environment, building structure and aesthetics.<o:p></o:p></span></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=msonormal style='margin-left:36.0pt;text-align:justify;text-justify:
+inter-cluster;text-indent:-36.0pt'><b><span style='font-size:11.0pt;font-family:
+"times new roman";color:black'>240115<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+architectural drawing <span style='mso-tab-count:7'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;</span>2(1-3)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster;
+text-indent:36.0pt'><span style='font-size:11.0pt;font-family:"times new roman";
+color:black'><span style='mso-spacerun:yes'>&nbsp;</span>an introduction to
+instruments and material used in architectural drawing; the representation of
+objects by various method, including the orthographic, isometric and
+axonometric projections; to acquaint the students to the method of presentation
+of architectural forms through light, shade and shadow of simple and complex
+geometrical forms; the theory and practice of perspective drawing<span
+style='mso-spacerun:yes'>&nbsp; </span>of various forms used in architectural
+presentation, including the search for basic techniques and methods of drawing
+exterior and interior perspective, shade and shadow of architectural forms from
+natural to artificial sources of light; problems dealing with various methods
+and techniques of architectural perspective presentation.<o:p></o:p></span></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'>240116<span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+architectural presentation <span style='mso-tab-count:7'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;</span>2(1-3)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster;
+text-indent:36.0pt'><span style='font-size:11.0pt;font-family:"times new roman";
+color:black'>techniques of drawing with pencil, ink and water color or other
+presentation media, <o:p></o:p></span></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster;
+text-indent:36.0pt'><span style='font-size:11.0pt;font-family:"times new roman";
+color:black'>practice sketching of buildings, both interior and exterior,
+drawing of products, art works and natural scenes in order to develop ability
+in architectural and artistic presentation.<o:p></o:p></span></p>
+
+<p class=msonormal style='margin-left:36.0pt;text-align:justify;text-justify:
+inter-cluster;text-indent:36.0pt'><span style='font-size:11.0pt;font-family:
+"times new roman";color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'>240121<span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+building technology i<span style='mso-tab-count:7'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span>3(2-3)<o:p></o:p></span></b></p>
+
+<p class=msobodytextindent style='margin-left:0cm;text-align:justify;
+text-justify:inter-cluster'><span style='font-size:11.0pt;font-family:"times new roman";
+color:black'><span style='mso-spacerun:yes'>&nbsp;</span>an examination of
+basic building materials and investigation on building assemblies related to
+the production process, properties, applications and maintenance; drawing
+practice emphasizing architectural details and materials of basic wood frame
+house.<o:p></o:p></span></p>
+
+<p class=msobodytextindent style='margin-left:0cm;text-align:justify;
+text-justify:inter-cluster;text-indent:0cm'><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=msobodytextindent style='margin-left:0cm;text-align:justify;
+text-justify:inter-cluster;text-indent:0cm'><b><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'>240122 building technology ii<span
+style='mso-tab-count:7'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span>3(2-3)<o:p></o:p></span></b></p>
+
+<p class=msobodytextindent style='margin-left:0cm;text-align:justify;
+text-justify:inter-cluster;text-indent:0cm'><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;</span>pre : 240121<o:p></o:p></span></p>
+
+<p class=msobodytextindent style='margin-left:0cm;text-align:justify;
+text-justify:inter-cluster;text-indent:0cm'><b><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'><span
+style='mso-spacerun:yes'>&nbsp;</span>building materials for structure and
+building components in various aspects: material production, properties,
+selection, and maintenance to develop working drawings, emphasizing the
+building components of small domestic buildings in wooden frame with partial
+concrete and steel structure. basic sanitary system.<o:p></o:p></span></p>
+
+<p class=msobodytextindent style='margin-left:0cm;text-align:justify;
+text-justify:inter-cluster;text-indent:0cm'><b><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=msobodytextindent style='margin-left:0cm;text-align:justify;
+text-justify:inter-cluster;text-indent:0cm'><b><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'>240131 structural mechanics in
+architecture<span style='mso-tab-count:6'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span>2(2-0)<o:p></o:p></span></b></p>
+
+<p class=msobodytextindent style='margin-left:0cm;text-align:justify;
+text-justify:inter-cluster;text-indent:0cm'><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;</span>fundamental concepts based on static
+equilibrium of materials under external force, the strength of materials:
+internal tresses, power performance: deformation of materials under force.<o:p></o:p></span></p>
+
+<p class=msobodytextindent style='margin-left:0cm;text-align:justify;
+text-justify:inter-cluster;text-indent:0cm'><b><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=msobodytextindent style='margin-left:0cm;text-align:justify;
+text-justify:inter-cluster;text-indent:0cm'><b><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'>240211 <span style='mso-tab-count:
+1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>architectural
+design criteria and concepts i<span style='mso-tab-count:5'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span>2(2-0)<o:p></o:p></span></b></p>
+
+<p class=msobodytextindent style='margin-left:0cm;text-align:justify;
+text-justify:inter-cluster;text-indent:0cm'><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;</span>influences and concepts of architectural
+design in the past; design criteria in various environment: design process and
+systematic design development: spaces and forms including analysis of
+composition in architecture.<o:p></o:p></span></p>
+
+<p class=msobodytextindent style='text-align:justify;text-justify:inter-cluster'><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'>240213 <span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>architectural
+design ii<span style='mso-tab-count:6'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span>4(0-8)<o:p></o:p></span></b></p>
+
+<p class=msobodytextindent style='margin-left:0cm;text-align:justify;
+text-justify:inter-cluster'><span style='font-size:11.0pt;font-family:"times new roman";
+color:black'><span style='mso-spacerun:yes'>&nbsp;</span>practice in the design
+of a small residential building and small public buildings: a house, a clinic
+and a school, emphasizing design concepts, site planning, and space arrangement
+suitable for a tropical environment, also taking structure, aesthetics and
+building utilities into consideration.<o:p></o:p></span></p>
+
+<p class=msobodytextindent style='margin-left:0cm;text-align:justify;
+text-justify:inter-cluster;text-indent:0cm'><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=msobodytextindent style='margin-left:0cm;text-align:justify;
+text-justify:inter-cluster;text-indent:0cm'><b><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'>240214 <span style='mso-tab-count:
+1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>architectural
+design iii<span style='mso-tab-count:3'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-tab-count:4'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span>4(0-8)<o:p></o:p></span></b></p>
+
+<p class=msobodytextindent style='margin-left:0cm;text-align:justify;
+text-justify:inter-cluster;text-indent:0cm'><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;</span>practice in the design of residential
+building with more complex requirements, public buildings: a small commercial
+building emphasizing design concepts; site planning, and space planning
+suitable for a tropical environment, also taking structure, aesthetics and
+building utilities into consideration.<o:p></o:p></span></p>
+
+<p class=msobodytextindent style='margin-left:0cm;text-align:justify;
+text-justify:inter-cluster;text-indent:0cm'><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=msobodytextindent style='margin-left:0cm;text-align:justify;
+text-justify:inter-cluster;text-indent:0cm'><b><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'>240217<span style='mso-tab-count:
+1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span> sketch
+design i<span style='mso-tab-count:7'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span>2(0-6)<o:p></o:p></span></b></p>
+
+<p class=msobodytextindent style='margin-left:0cm;text-align:justify;
+text-justify:inter-cluster'><span style='font-size:11.0pt;font-family:"times new roman";
+color:black'><span style='mso-spacerun:yes'>&nbsp;</span>practical studio work
+at level i, suitable for limited working time, to train students in sketch
+design and expression of fundamental design concepts, the design of
+architectural elements, temporary buildings, small scale.<o:p></o:p></span></p>
+
+<p class=msobodytextindent style='margin-left:0cm;text-align:justify;
+text-justify:inter-cluster'><span style='font-size:11.0pt;font-family:"times new roman";
+color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=msobodytextindent style='margin-left:0cm;text-align:justify;
+text-justify:inter-cluster;text-indent:0cm'><b><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'>240218 sketch design ii<span
+style='mso-tab-count:8'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span>2(0-6)<o:p></o:p></span></b></p>
+
+<p class=msobodytextindent style='margin-left:0cm;text-align:justify;
+text-justify:inter-cluster;text-indent:0cm'><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;</span>practical studio work at level ii,
+suitable for limited working time, to train students in sketch design and
+expression of fundamental design concepts, the design of architectural
+elements, temporary building, small scale building, landscape architectural
+elements, interior and graphic work.<o:p></o:p></span></p>
+
+<p class=msobodytextindent style='margin-left:0cm;text-align:justify;
+text-justify:inter-cluster;text-indent:0cm'><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=msobodytextindent style='margin-left:0cm;text-align:justify;
+text-justify:inter-cluster;text-indent:0cm'><b><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'>240221 building environmental
+technology i<span style='mso-tab-count:6'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span>3(2-3)<o:p></o:p></span></b></p>
+
+<p class=msobodytextindent style='margin-left:0cm;text-align:justify;
+text-justify:inter-cluster;text-indent:0cm'><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;</span>pre : 240122<o:p></o:p></span></p>
+
+<p class=msobodytextindent style='margin-left:0cm;text-align:justify;
+text-justify:inter-cluster;text-indent:0cm'><b><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;</span></span></b><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'>relationship of building technology
+and the built environment in small scale buildings. site checking and
+preparation. sanitary system design, water supply equipments design and
+installation. drainage system, waste water treatment, fire protection, hot
+water supply and<b> </b>electrical system design corporation with architectural
+design of residential and public buildings. practice in working drawings for
+sanitary and electrical system related to architectural drawings.<o:p></o:p></span></p>
+
+<p class=msobodytextindent style='margin-left:0cm;text-align:justify;
+text-justify:inter-cluster;text-indent:0cm'><b><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=msobodytextindent style='margin-left:0cm;text-align:justify;
+text-justify:inter-cluster;text-indent:0cm'><b><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'>240222 building technology iii<span
+style='mso-tab-count:7'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span>3(2-3)<o:p></o:p></span></b></p>
+
+<p class=msobodytextindent style='margin-left:0cm;text-align:justify;
+text-justify:inter-cluster;text-indent:0cm'><b><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;</span></span></b><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'>pre : 240221<o:p></o:p></span></p>
+
+<p class=msobodytextindent style='margin-left:0cm;text-align:justify;
+text-justify:inter-cluster;text-indent:0cm'><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;</span>the use of wood, steel and reinforced
+concrete for medium scale and public building. physical environment; system of
+foundation, floor, wall, roof and moisture protection standardized working
+drawings for architectural and related engineering systems.<o:p></o:p></span></p>
+
+<p class=msobodytextindent style='margin-left:0cm;text-align:justify;
+text-justify:inter-cluster;text-indent:0cm'><b><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=msobodytextindent style='margin-left:0cm;text-align:justify;
+text-justify:inter-cluster;text-indent:0cm'><b><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'>240231 structural system in
+architecture<span style='mso-tab-count:6'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span>2(2-0)<o:p></o:p></span></b></p>
+
+<p class=msobodytextindent style='margin-left:0cm;text-align:justify;
+text-justify:inter-cluster;text-indent:0cm'><b><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;</span></span></b><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'>concepts in designing and selecting
+architectural structure, including principles of force, materials, shape and
+deformation resulting from the force.<o:p></o:p></span></p>
+
+<p class=msobodytextindent style='margin-left:0cm;text-align:justify;
+text-justify:inter-cluster;text-indent:0cm'><b><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=msobodytextindent style='margin-left:0cm;text-align:justify;
+text-justify:inter-cluster;text-indent:0cm'><b><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'>240232 timber &amp; steel design for
+architecture<span style='mso-tab-count:5'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span>2(2-0)<o:p></o:p></span></b></p>
+
+<p class=msobodytextindent style='margin-left:0cm;text-align:justify;
+text-justify:inter-cluster;text-indent:0cm'><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;</span>mechanics and properties of timbers,
+design of beams, compression member, tension member, member under combined
+stress and joints; steel design code and specification, design of beam,
+compression members, tension members, member under combined stress and welding
+joints.<o:p></o:p></span></p>
+
+<p class=msobodytextindent style='margin-left:0cm;text-align:justify;
+text-justify:inter-cluster;text-indent:0cm'><b><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=msobodytextindent style='margin-left:0cm;text-align:justify;
+text-justify:inter-cluster;text-indent:0cm'><b><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'>240241 thai architecture<span
+style='mso-tab-count:8'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span>2(2-0)<o:p></o:p></span></b></p>
+
+<p class=msobodytextindent style='margin-left:0cm;text-align:justify;
+text-justify:inter-cluster;text-indent:0cm'><b><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'><span
+style='mso-spacerun:yes'>&nbsp;</span>the origin influence and evaluation of
+elements of traditional thai architecture, study and practice the various thai
+traditional pattern, elements of thai architecture. study the development of
+idea in the design of building and site planning, including the functional
+requirement of thai architecture. analysis of the forms and the utilization of
+space in thai architecture. field study is required.<o:p></o:p></span></p>
+
+<p class=msobodytextindent style='margin-left:0cm;text-align:justify;
+text-justify:inter-cluster;text-indent:0cm'><b><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=msobodytextindent style='margin-left:0cm;text-align:justify;
+text-justify:inter-cluster;text-indent:0cm'><b><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'>240244 history of architecture ii<span
+style='mso-tab-count:7'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+<span style='mso-spacerun:yes'>&nbsp;&nbsp;</span>3(3-0)<o:p></o:p></span></b></p>
+
+<p class=msobodytextindent style='margin-left:0cm;text-align:justify;
+text-justify:inter-cluster;text-indent:0cm'><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;</span>history of early christian architectural
+development up to the gothic period, emphasizing an analysis of structural
+systems and comparative examples of gothic architecture in central europe
+countries: general conditions of europe in the 15<sup>th </sup><span
+style='mso-spacerun:yes'>&nbsp;</span>century and architecture transition to
+the renaissance period, including renaissance architecture and its individual
+architects in italy, france, england, and other countries; conditions in
+various aspects of the western world and architectural development at the end
+of the renaissance period together with the influence of the industrial
+revolution on culture and modern architecture, concepts, philosophy and work of
+the world�s leading architects. <o:p></o:p></span></p>
+
+<p class=msobodytextindent style='margin-left:0cm;text-align:justify;
+text-justify:inter-cluster;text-indent:0cm'><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'>240243 history
+of architecture i<span style='mso-tab-count:6'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span>3(3-0)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster;
+text-indent:36.0pt'><span style='font-size:11.0pt;font-family:"times new roman";
+color:black'><span style='mso-spacerun:yes'>&nbsp;</span>an introduction to
+historical study of architectural development characterized by various
+influences; general survey of the evolution of building types, structures and
+methods of construction as the result of cultural and technological development
+of architecture in thailand and neighboring countries: investigation of
+individual building. building complexes and human settlement in north africa,
+western asia and southern europe from prehistoric times to the roman era.<o:p></o:p></span></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'>240261 design
+for tropical environment <span style='mso-tab-count:6'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;</span>2(2-0)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster;
+text-indent:36.0pt'><span style='font-size:11.0pt;font-family:"times new roman";
+color:black'><span style='mso-spacerun:yes'>&nbsp;</span>man and environment.
+climate and geographical zoning, comfort zone, annual analysis: selection of
+building form, and orientation, solar controls, wind controls. daily data
+analysis: thermal control, climatical approach to selection of forms, materials
+and structural details. site layout, rain, deterioration, noise, lighting and
+pest control in tropics, sequence and design process in the tropics.<o:p></o:p></span></p>
+
+<p class=msonormal style='margin-left:36.0pt;text-align:justify;text-justify:
+inter-cluster;text-indent:36.0pt'><span style='font-size:11.0pt;font-family:
+"times new roman";color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'>240271 computer
+applications in architecture<span style='mso-tab-count:3'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-tab-count:2'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span>2(1-2)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;</span>the requirement for hardware and software
+for architectural design, the use of other related software; word processor,
+illustrator, the making of artwork, graphic, the making of two-dimension
+drawing and three-dimension visualization; the integration of different basic
+knowledge in use of software in order to prepare architectural portfolio; the
+making of homepage to display architectural work. <o:p></o:p></span></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'>240311
+architectural design criteria and concepts ii<span style='mso-tab-count:4'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span>2(2-0)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'><span
+style='mso-spacerun:yes'>&nbsp;</span>history, trends and design philosophies
+of leading architects in the late nineteenth century through the early
+twentieth century; criteria and concept in designing different building types;
+space, expressions, distinctive characteristics and aesthetic values in
+architecture works.<o:p></o:p></span></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'>240313
+architectural design iv<span style='mso-tab-count:7'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span>4(0-8)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;</span></span></b><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'>practice in the design of a grouped
+or a multi-unit residential building and building and public buildings and a
+medium scale wide span building, emphasizing design concepts site planning, and
+plan arrangement suitable for a tropical environment, also taking structure,
+aesthetics and building utilities into consideration.<o:p></o:p></span></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'>240314
+architectural design v<span style='mso-tab-count:7'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span>4(0-8)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;</span></span></b><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'>practice in the design of public
+buildings: a terminal, and office building, and a government office,
+emphasizing design concepts, site planning, plan arrangement suitable for a
+tropical environment, also taking structure, aesthetics an building utilities
+into consideration.<o:p></o:p></span></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'>240317
+sketch design iii<span style='mso-tab-count:8'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span>2(0-6)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;</span>practical studio work at level iii,
+suitable for limited working time, to train students in sketch design and
+expression of fundamental design concepts, the design of architectural
+elements, temporary building, small scale building, landscape architectural
+elements, interior and graphic work.<o:p></o:p></span></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'>240318
+sketch design iv<span style='mso-tab-count:8'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span>2(0-6)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;</span></span></b><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'>practical studio work at level iv,
+suitable for limited working time, to train students in sketch design and
+expression of fundamental design, concepts, the design of architectural
+elements, temporary building, and medium scale building, landscape architectural
+elements, interior and graphic work.<b><o:p></o:p></b></span></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'>240321
+building environmental technology ii<span style='mso-tab-count:5'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span>3(2-3)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;</span></span></b><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'>pre : 240222<o:p></o:p></span></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;</span>relationship between building technology
+and the built environment for wide span buildings of medium scale. structural
+system; the design of wall components and architectural detail related to
+theory of acoustic and sound control. theory of vision and lighting design. practice
+in experimentation, modeling and working drawings.<o:p></o:p></span></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'>240322
+building technology iv<span style='mso-tab-count:7'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span>3(2-3)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;</span></span></b><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'>pre : 240321<o:p></o:p></span></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;</span>reinforces concrete and steel
+construction in residential buildings and public buildings with high standard
+including wide span buildings or buildings with prefabricated components
+emphasizing the use of structural systems, structure elements, structural materials
+and other related engineering systems. <o:p></o:p></span></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'>240331
+reinforced concrete design for architecture<span style='mso-tab-count:5'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span>3(3-0)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;</span></span></b><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'>properties of concrete and
+reinforcing steel: behavior of reinforced concrete beams at various conditions
+of loading: working and ultimate strength design methods: analysis and of
+rectangular beams and t-beams with tension and compression, reinforcement;
+design to two-way slabs; concentrically and eccentrically loaded columns,
+footings.<o:p></o:p></span></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'>240334 site
+planning and architectural survey</span></b><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'><span style='mso-tab-count:5'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span><b>2(2-0)<o:p></o:p></b></span></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;</span></span></b><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'>the method of site planning, data
+collection in architectural survey, topography, mapping from survey data, site
+planning design that respond to the environment, different types of site
+planning design and case studies.<o:p></o:p></span></p>
+
+<p class=msobodytextindent style='margin-left:0cm;text-align:justify;
+text-justify:inter-cluster;text-indent:0cm'><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'>240341 interior
+architecture <span style='mso-tab-count:3'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-tab-count:5'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;</span>2(1-3)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster;
+text-indent:36.0pt'><span style='font-size:11.0pt;font-family:"times new roman";
+color:black'><span style='mso-spacerun:yes'>&nbsp;</span>considerations of
+interior space volume harmonizing to furniture planning, convenient to the
+architectural design for high efficiency of function.<o:p></o:p></span></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'>240361
+landscape architecture<span style='mso-tab-count:7'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span>2(1-3)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;</span></span></b><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'>brief history of landscape
+architecture, man-made and natural landscape characteristics, basic design
+criteria, outdoor spatial design, plant materials and structures in landscape
+architecture.<o:p></o:p></span></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'>240371
+advanced computer applications in architecture<span style='mso-tab-count:4'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span>2(1-2)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;</span></span></b><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'>the use of software for three-dimension
+visualization different methods of three-dimension viewing, rendering, texture,
+light and shadow. the animation technique for walking through or fly around the
+building. the integration of all techniques to create advanced architectural
+homepage with animation and sound. <o:p></o:p></span></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'>240411
+architecture design criteria and concepts iii<span style='mso-tab-count:4'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span>2(2-0)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;</span></span></b><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'>design processes, design theories in
+a comparative study of works of contemporary architects: development of
+concepts ad trends in contemporary and future architectural work: types and
+sequential arrangement of spaces, including methods of linking spaces for
+various activities.<o:p></o:p></span></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'>240413
+architecture design vi<span style='mso-tab-count:7'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span>4(0-8)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;</span></span></b><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'>practice in the design of commercial
+and medium scale public buildings: a shopping center, a hotel a cultural
+center, a museums and a building for religious functions emphasizing design
+concepts site planning, and plan arrangement suitable for a tropical
+environment, also taking structure, aesthetics and building utilities in to
+consideration.<o:p></o:p></span></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'>240414 architecture
+design vii<span style='mso-tab-count:7'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span>4(0-8)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;</span></span></b><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'>practice in the design of a
+general<span style='mso-spacerun:yes'>&nbsp; </span>hospital and buildings with
+widespan construction: a theatre, a convention hall, and an exhibition center,
+emphasizing design concepts, site planning, and plan arrangement suitable for a
+tropical environment, also taking structure, aesthetics and building utilities
+into consideration.<o:p></o:p></span></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'>240417
+sketch design v<span style='mso-tab-count:8'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span>2(0-6)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'>practical
+studio work at level v, suitable for limited working time, to train students in
+sketch design and expression of fundamental design concepts, the design of
+architectural elements, temporary building, medium scale building, landscape
+architectural elements, interior and graphic work.<o:p></o:p></span></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'>240418
+sketch design vi<span style='mso-tab-count:8'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span>2(0-6)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;</span></span></b><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'>practical studio work at level vi,
+suitable for limited working time, to train students in sketch design and
+expression of fundamental design concepts, the design of architectural
+elements, temporary building, medium scale building, landscape architectural
+elements, interior and graphic work.<o:p></o:p></span></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'>240421<span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+building environmental technology iii<span style='mso-tab-count:5'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span>3(2-3)<span style='mso-tab-count:
+1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;</span></span></b><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'>design concept for comfort zone.
+heat transfer reduction, heat load calculation, overall thermal transmission
+value, roof thermal transmission<span style='mso-spacerun:yes'>&nbsp;
+</span>value environmental management system for large scale buildings,
+building facility management, laboratory testing by equipment models and
+drawings.<b><span style='mso-tab-count:2'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><o:p></o:p></b></span></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'>240422
+building technology v<span style='mso-tab-count:8'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span>3(2-3)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'><span
+style='mso-spacerun:yes'>&nbsp;</span>high rise building system; the
+construction methodology of reinforced concrete building and steel design
+structure including prefabrication system, engineering system relating to
+energy saving, fire-protection systems for large scale public buildings,
+practice of working drawing and specification.<o:p></o:p></span></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'>240441<sup> </sup><span
+style='mso-spacerun:yes'>&nbsp;</span>introduction to urban and regional planning
+<span style='mso-tab-count:4'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;</span>2(2-0)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster;
+text-indent:36.0pt'><span style='font-size:11.0pt;font-family:"times new roman";
+color:black'><span style='mso-spacerun:yes'>&nbsp;</span>human settlement
+evolution emphasizing on situation changes. problems and solutions in relation
+to the environments of thailand at different levels: community, town, region
+and nation.<o:p></o:p></span></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'>240451
+architectural project management i<span style='mso-tab-count:6'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span>3(3-0)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;</span></span></b><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'>construction industry organization
+in various example. to start a construction as a team leaders architect.
+feasibility study and cashflow.<o:p></o:p></span></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'>240452
+architectural project management ii<span style='mso-tab-count:6'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span>3(3-0)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;</span></span></b><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'>office management and construction
+project planning for the highest target. study method of improvement and
+various management and/or planning theories.<o:p></o:p></span></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'>240453
+quantity survey and cost estimation<span style='mso-tab-count:6'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span>2(1-2)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;</span></span></b><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'>estimation by unifrmat and csi
+method calculation of material and labor. quantities separated by building
+system.<o:p></o:p></span></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'>240461
+sustainable architecture<span style='mso-tab-count:7'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span>3(3-0)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;</span></span></b><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'>the quest for sustainability due to
+environmental crises, the lessons from vernacular architecture that were
+climate responsive and environmental concerned which will lead to the new
+generation of architecture that will have part in saving energy for our planet<o:p></o:p></span></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'>240462
+energy conservation in architecture<span style='mso-tab-count:6'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span>3(3-0)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;</span></span></b><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'>the energy conscious design
+including both passive and active method, the analysis and management of energy
+use in large scale building.<o:p></o:p></span></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'>240496
+selected topics in architecture <span style='mso-tab-count:6'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>1-3<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;</span></span></b><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'>selected topics in architecture at
+the bachelor�s degree level. topics are subject to change each semester.<o:p></o:p></span></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'>240551
+professional practice<span style='mso-tab-count:8'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span>2(2-0)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;</span></span></b><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'>systematic exposure to different
+steps in the process of professional architectural practice: the initial
+process of client contact, preliminary programming, feasibility study, detailes
+requirements and budget co-ordination with engineering disciplines, preliminary
+design presentation and drawing process, organization and management of an
+architectural office, municipal and professional<span
+style='mso-spacerun:yes'>&nbsp; </span>regulations, professional ethics,
+bidding process, construction supervision, project acceptance and follow-up
+process. each step of the process will expose both the theoretical procedure
+and the<span style='mso-spacerun:yes'>&nbsp; </span>pragmatic construction of
+professional architectural practice.<o:p></o:p></span></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'>240561
+evaluation of building environment<span style='mso-tab-count:6'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+<span style='mso-spacerun:yes'>&nbsp;</span><span
+style='mso-spacerun:yes'>&nbsp;</span>2(2-0)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;</span></span></b><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'>pre : 240414 and 240441<o:p></o:p></span></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;</span>basic of building environment evaluation
+relating to the design regarding the value of balance between environment and
+architectural work, to complete the architectural design responding sustainable
+use in parallel with the value; generally giving to urban and environment.<o:p></o:p></span></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'>240597
+architectural design seminar<span style='mso-tab-count:7'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span>2(2-0)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;</span></span></b><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'>seminar on evaluation of large scale
+projects, their related problems in terms of design management and marketing
+feasibility; study of design concepts and philosophies: various impacts of projects
+in progress in the environment.<o:p></o:p></span></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'>240598
+thesis proposal<span style='mso-tab-count:8'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span>3(1-4)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;</span></span></b><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'>a study and design of a specific
+building or building group, the selection of which must be approved by the
+faculty�s thesis committee. intensive research to establish optimum
+requirements is mandatory. the thesis will consist of a comprehensive report on
+the scope of work, environmental and economic feasibility considerations,
+building law and regulations, site selection, evaluation, of similar building
+types, details programme requirements, architectural concept including
+engineering and landscaping considerations and the solutions, to arising
+problems.<o:p></o:p></span></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'>240599
+thesis<span style='mso-tab-count:9'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>9<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span></b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'><span
+style='mso-spacerun:yes'>&nbsp;</span>establishment of architectural and
+engineering criteria. development of architectural concept and presentation.
+modification of the concept under critical of thesis committee. architectural
+presentation in both graphic and<span style='mso-spacerun:yes'>&nbsp;
+</span>model form.<o:p></o:p></span></p>
+
+<p class=msonormal align=center style='text-align:center'><b><span
+style='font-size:13.0pt;font-family:"times new roman";color:black'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=msonormal align=center style='text-align:center'><b><span
+style='font-size:13.0pt;font-family:"times new roman";color:black'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=msonormal align=center style='text-align:center'><b><span
+style='font-size:13.0pt;font-family:"times new roman";color:black'>landscape
+architecture<o:p></o:p></span></b></p>
+
+<p class=msonormal align=center style='text-align:center'><b><span
+style='font-size:13.0pt;font-family:"times new roman";color:black'>(241xxx)<o:p></o:p></span></b></p>
+
+<p class=msonormal><b><span style='font-size:11.0pt;font-family:"times new roman";
+color:black'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=msonormal><b><span style='font-size:11.0pt;font-family:"times new roman";
+color:black'>241211<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>landscape
+architectural design i<span style='mso-tab-count:6'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span>4(0-8)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster;
+text-indent:36.0pt'><span style='font-size:11.0pt;font-family:"times new roman";
+color:black'>pre</span><span lang=th style='font-size:11.0pt;font-family:"angsana new";
+mso-ascii-font-family:"times new roman";mso-hansi-font-family:"times new roman";
+color:black'> </span><span style='font-size:11.0pt;font-family:"times new roman";
+color:black'>: 240213<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><o:p></o:p></span></p>
+
+<p class=msonormal><span style='font-size:11.0pt;font-family:"times new roman";
+color:black'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>practice
+in fundamental level of landscape architectural design with the employment of
+natural form, fundamental design theories and human behavior in designing small
+environments.<o:p></o:p></span></p>
+
+<p class=msonormal style='margin-left:18.0pt;text-indent:9.0pt;tab-stops:18.0pt 36.0pt'><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=msonormal><b><span style='font-size:11.0pt;font-family:"times new roman";
+color:black'>241212<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>landscape
+architectural sketch design i<span style='mso-tab-count:5'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span>1(0-3)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='margin-left:18.0pt'><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>pre
+: 240217 <o:p></o:p></span></p>
+
+<p class=msonormal style='text-align:justify;text-indent:36.0pt'><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'>practical
+studio work at fundamental level in small environment by applying fundamental
+design theories and natural form.&nbsp; conveying ideas into graphic
+presentation in designated time.<o:p></o:p></span></p>
+
+<p class=msonormal><span style='font-size:11.0pt;font-family:"times new roman";
+color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'>241231<span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>landscape
+architectural construction design i<span style='mso-tab-count:4'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span>3(2-3)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>pre
+: 240121 <o:p></o:p></span></p>
+
+<p class=msonormal style='text-align:justify;text-indent:36.0pt'><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'>structural mechanics;
+timber, concrete and steel structures. principles of construction design and
+drawing in landscape architecture and small residential building structures.
+standard construction drawing symbol. <o:p></o:p></span></p>
+
+<p class=msonormal style='margin-left:18.0pt;text-align:justify;text-indent:
+18.0pt;tab-stops:18.0pt'><span style='font-size:11.0pt;font-family:"times new roman";
+color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster'><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'>241232<span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>landscape
+architectural construction design ii<span style='mso-tab-count:4'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span>3(2-3)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='margin-left:18.0pt'><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>pre
+: 241231 <o:p></o:p></span></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster;
+text-indent:36.0pt'><span style='font-size:11.0pt;font-family:"times new roman";
+color:black'>site survey and construction design in site planning. grading,
+designing surface and underground drainage systems.<o:p></o:p></span></p>
+
+<p class=msonormal style='tab-stops:378.0pt'><b><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'>241241 history of landscape
+architecture<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span>3(3-0)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster;
+text-indent:36.0pt'><span style='font-size:11.0pt;font-family:"times new roman";
+color:black'>evolution and development of landscape architecture in various
+cultures under influences of geography, history, society, philosophy, believes,
+and architectural expression from the ancient time to the 19<sup>th</sup>
+century. comparative analysis in design concepts, appearances, and influences
+of styles. field trips required.<o:p></o:p></span></p>
+
+<p class=msonormal><span style='font-size:11.0pt;font-family:"times new roman";
+color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=msonormal><b><span style='font-size:11.0pt;font-family:"times new roman";
+color:black'>241311<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>landscape
+architectural design ii<span style='mso-tab-count:6'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span>4(0-8)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster;
+text-indent:36.0pt'><span style='font-size:11.0pt;font-family:"times new roman";
+color:black'>pre : 241211 <o:p></o:p></span></p>
+
+<p class=msonormal style='text-align:justify;text-indent:36.0pt'><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'>practice in
+fundamental level of landscape architectural design in uncomplicated
+environment. collecting data for site and user analysis. designing circulation
+system and environment for institute, academic institute, commercial project,
+community center, community park and industrial project. design principles in
+tropical environment.<o:p></o:p></span></p>
+
+<p class=msonormal style='text-align:justify;text-justify:inter-cluster;
+text-indent:36.0pt'><span style='font-size:11.0pt;font-family:"times new roman";
+color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=msobodytext style='tab-stops:378.0pt'><b><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'>241312 landscape architectural
+design iii<span style='mso-tab-count:2'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span>4(0-8)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='margin-left:18.0pt;text-indent:18.0pt'><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'>pre : 241311
+<o:p></o:p></span></p>
+
+<p class=msonormal style='text-align:justify;text-indent:35.45pt'><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'>practice in
+intermediate</span><span lang=fr style='font-size:11.0pt;font-family:"times new roman";
+color:black;mso-ansi-language:fr'> level of</span><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'> landscape architectural design in </span><span
+lang=fr style='font-size:11.0pt;font-family:"times new roman";color:black;
+mso-ansi-language:fr'>co</span><span style='font-size:11.0pt;font-family:"times new roman";
+color:black'>mplicated environment. circulation system design, grading,
+drainage design, housing project planning, laws, regulations and model of land
+subdivision layout. special<span style='mso-spacerun:yes'>&nbsp;
+</span>requirements in designing and planning resort , golf course, sport
+complex, theme park, zoological park, botanical garden, arboretum, airport and
+mass transit station.<span style='mso-spacerun:yes'>&nbsp; </span><o:p></o:p></span></p>
+
+<p class=msonormal><span style='font-size:11.0pt;font-family:"times new roman";
+color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=msonormal><b><span style='font-size:11.0pt;font-family:"times new roman";
+color:black'>241313<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>landscape
+architectural sketch design ii<span style='mso-tab-count:5'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span>1(0-3)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='margin-left:18.0pt;text-indent:18.0pt'><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'>pre : 241212
+<o:p></o:p></span></p>
+
+<p class=msonormal style='text-align:justify;text-indent:36.0pt'><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'>practical
+studio work at fundamental level. designing and planning landscape details in
+uncomplicated environment: institute, academic institute, commercial project,
+community center, community park and industrial project. conveying ideas into
+graphic presentation in designate time.<o:p></o:p></span></p>
+
+<p class=msonormal><b><span style='font-size:11.0pt;font-family:"times new roman";
+color:black'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=msonormal><b><span style='font-size:11.0pt;font-family:"times new roman";
+color:black'>241314<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>landscape
+architecture sketch design iii<span style='mso-tab-count:5'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span>1(0-3)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-indent:36.0pt'><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'>pre : 241313 <o:p></o:p></span></p>
+
+<p class=msobodytextindent2 style='margin-left:0cm'><span style='font-size:
+11.0pt;font-family:"times new roman";color:black'>practical studio work at
+intermediate level. designing and landscape details in complicated environment:
+planning and designing landscape elements: housing project, resort, golf
+course, sport complex, theme park, zoological park, botanical garden,
+arboretum, airport and mass transit station. conveying ideas into graphic
+presentation in designate time.<o:p></o:p></span></p>
+
+<p class=msonormal style='text-indent:36.0pt'><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=msonormal><b><span style='font-size:11.0pt;font-family:"times new roman";
+color:black'>241331<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>landscape
+architectural construction design iii<span style='mso-tab-count:4'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span>3(2-3)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-indent:36.0pt'><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'>pre : 241232 <o:p></o:p></span></p>
+
+<p class=msonormal style='text-align:justify;text-indent:36.0pt'><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'>construction
+design of infrastructure: irrigation system for landscape architecture,
+electrical and lighting systems, construction of pond, fountain, cascade, and
+roof garden. <o:p></o:p></span></p>
+
+<p class=msonormal style='text-align:justify'><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=msonormal style='text-align:justify'><b><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'>241332<span style='mso-tab-count:
+1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>landscape
+architectural construction </span></b><b><span lang=fr style='font-size:11.0pt;
+font-family:"times new roman";color:black;mso-ansi-language:fr'>design </span></b><b><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'>iv<span
+style='mso-tab-count:4'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span>3(2-3)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-indent:36.0pt'><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'>pre : 241331 <o:p></o:p></span></p>
+
+<p class=msonormal style='text-align:justify;text-indent:36.0pt'><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'>design of
+landscape architectural construction: retaining wall, stairs, ramp, finishing
+work, circulation system. soil structure and quality. land improvement.<o:p></o:p></span></p>
+
+<p class=msonormal><b><span style='font-size:11.0pt;font-family:"times new roman";
+color:black'>241361<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>site
+analysis <span style='mso-tab-count:9'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;</span>3(2-3)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-indent:36.0pt'><span lang=fr
+style='font-size:11.0pt;font-family:"times new roman";color:black;mso-ansi-language:
+fr'>priciples of site </span><span style='font-size:11.0pt;font-family:"times new roman";
+color:black'>analysis. influences of natural, cultural and aesthetic factors. resource
+inventories, site assessment and land use suitability.<o:p></o:p></span></p>
+
+<p class=msonormal><span style='font-size:11.0pt;font-family:"times new roman";
+color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=msonormal><b><span style='font-size:11.0pt;font-family:"times new roman";
+color:black'>241362<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>landscape
+ecology <span style='mso-tab-count:8'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;</span>3(3-0)<o:p></o:p></span></b></p>
+
+<p class=msobodytextindent3 style='margin-left:0cm'><span style='font-size:
+11.0pt;font-family:"times new roman";color:black'>structure, functioning and
+change of a heterogeneous of ecosystem: forests, wetlands, fields, corridors
+and villages. focus on spatial patterns; flow of fauna, flora, energy, mineral
+nutrient and water among ecosystems; and ecological changes in the landscape
+mosaic over time.<o:p></o:p></span></p>
+
+<p class=msonormal><span style='font-size:11.0pt;font-family:"times new roman";
+color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=msonormal><b><span style='font-size:11.0pt;font-family:"times new roman";
+color:black'>241363<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>landscape
+analysis techniques <span style='mso-tab-count:6'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;</span>3(2-3)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-indent:36.0pt'><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'>concepts and
+skills of reading, interpreting, and making maps. applications of aerial
+photography, satellite imageries and global positioning system for landscape
+architecture.<o:p></o:p></span></p>
+
+<p class=msonormal><span style='font-size:11.0pt;font-family:"times new roman";
+color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=msonormal><b><span style='font-size:11.0pt;font-family:"times new roman";
+color:black'>241371<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>computer
+applications in landscape architecture <span style='mso-tab-count:4'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;</span><span
+style='mso-spacerun:yes'>&nbsp;</span>2(1-2)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-indent:36.0pt'><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'>pre : 240271 <o:p></o:p></span></p>
+
+<p class=msobodytextindent2 style='margin-left:0cm'><span style='font-size:
+11.0pt;font-family:"times new roman";color:black'>microcomputer for landscape
+architectural design, landform modeling, 3-d modeling, landscape construction
+and engineering, and cost estimation<o:p></o:p></span></p>
+
+<p class=msonormal style='margin-left:36.0pt;text-indent:36.0pt'><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=msonormal><b><span style='font-size:11.0pt;font-family:"times new roman";
+color:black'>241411<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>landscape
+architectural design iv<span style='mso-tab-count:5'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span>4(0-8)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-indent:36.0pt'><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'>pre : 241312 <o:p></o:p></span></p>
+
+<p class=msonormal style='text-indent:36.0pt'><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'>practice in intermediate </span><span
+lang=fr style='font-size:11.0pt;font-family:"times new roman";color:black;
+mso-ansi-language:fr'>level of </span><span style='font-size:11.0pt;font-family:
+"times new roman";color:black'>landscape architectural design. site analysis
+conforms to landscape ecology approach. geographic information system for
+decision making. sustainable design, visual landscape quality analysis and
+assessment. designing and planning of regional landscape, green open space
+system, highway landscape, national park and forest park. coastal conservation,
+agricultural land conservation, degraded land rehabilitation, and planning for
+eco-tourism.<o:p></o:p></span></p>
+
+<p class=msonormal style='margin-left:36.0pt'><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=msonormal><b><span style='font-size:11.0pt;font-family:"times new roman";
+color:black'>241412<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>landscape
+architectural design v<span style='mso-tab-count:6'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span>4(0-8)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-indent:36.0pt'><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'>pre : 241411 <o:p></o:p></span></p>
+
+<p class=msobodytextindent style='margin-left:0cm'><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'>practice in advance</span><span
+lang=fr style='font-size:11.0pt;font-family:"times new roman";color:black;
+mso-ansi-language:fr'>d</span><span style='font-size:11.0pt;font-family:"times new roman";
+color:black'> level of landscape architectural design. designing and planning
+urban landscape, waterfront landscape and historical area. visual landscape
+quality analysis and assessment. conservation, restoration and rehabilitation
+of urban environment following sustainable development concept.<o:p></o:p></span></p>
+
+<p class=msonormal><span style='font-size:11.0pt;font-family:"times new roman";
+color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=msonormal><b><span style='font-size:11.0pt;font-family:"times new roman";
+color:black'>241413<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>landscape
+architectural sketch design iv<span style='mso-tab-count:5'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span>1(0-3)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-indent:36.0pt'><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'>pre : 241314 <o:p></o:p></span></p>
+
+<p class=msonormal style='text-align:justify;text-indent:36.0pt'><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'>practical
+studio work at advanced. designing and planning landscape detail of
+recreational open space.<span style='mso-spacerun:yes'>&nbsp; </span>natural
+and cultural conservation. historical value preservation.<span
+style='mso-spacerun:yes'>&nbsp; </span>green open space system, route for eco-tourism,
+pedestrian way, greenway, and highway landscape. conveying ideas into graphic
+presentation in a designated time.<o:p></o:p></span></p>
+
+<p class=msonormal style='text-align:justify'><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=msonormal style='text-align:justify'><b><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'>241414 landscape architectural
+sketch design v<span style='mso-tab-count:5'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp; </span>1(0-3)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify'><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>pre
+: 241413<o:p></o:p></span></p>
+
+<p class=msonormal style='text-align:justify'><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>practical
+studio work at advanced level. designing and planning landscape details of
+urban landscape, waterfront landscape, and landscape in urban rehabilitated
+area. conveying ideas into graphic presentation in a designated time.<o:p></o:p></span></p>
+
+<p class=msonormal><span style='font-size:11.0pt;font-family:"times new roman";
+color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=msonormal><b><span style='font-size:11.0pt;font-family:"times new roman";
+color:black'>241415<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>plant
+and design <span style='mso-tab-count:8'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;</span>2(1-3)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-indent:36.0pt'><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'>design
+theory and plant material in composition mass, form, color, and texture.
+specific use of plant and influence on ecological system. planting plan,
+technical specification and landscape construction as related to plant
+material.<o:p></o:p></span></p>
+
+<p class=msonormal style='text-align:justify'><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=msonormal style='text-align:justify'><b><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'>241416<span style='mso-tab-count:
+1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>garden
+design <span style='mso-tab-count:8'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;</span>3(2-3)<o:p></o:p></span></b></p>
+
+<p class=msobodytextindent2 style='margin-left:0cm'><span style='font-size:
+11.0pt;font-family:"times new roman";color:black'>theory and practice in garden
+design. history and evolution of garden design, knowledge of horticulture,
+plant material selection, landscaping technique and garden maintenance.<o:p></o:p></span></p>
+
+<p class=msonormal style='text-align:justify'><b><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify'><b><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'>241441<span style='mso-tab-count:
+1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>concepts
+in landscape architecture <span style='mso-tab-count:6'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;</span>2(2-0)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-indent:36.0pt'><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'>pre : 241241 <o:p></o:p></span></p>
+
+<p class=msonormal style='text-indent:36.0pt'><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'>theory<span
+style='mso-spacerun:yes'>&nbsp; </span>and concept formation in landscape
+architecture, arts, architecture, urban planning, ecology, geography from 19<sup>th</sup>
+century until present.<o:p></o:p></span></p>
+
+<p class=msonormal style='tab-stops:108.0pt'><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=msonormal style='text-align:justify'><b><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'>241442<span style='mso-tab-count:
+1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>historical
+landscape architecture conservation<span style='mso-tab-count:3'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span>2(2-0)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-indent:36.0pt'><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'>conservation
+and restoration of historical and cultural landscape architecture. the
+important laws, regulations, and international conventions including
+organizations involving in conservation activities.<o:p></o:p></span></p>
+
+<p class=msonormal><span style='font-size:11.0pt;font-family:"times new roman";
+color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=msonormal><b><span style='font-size:11.0pt;font-family:"times new roman";
+color:black'>241443<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>community
+planning for landscape architecture <span style='mso-tab-count:2'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-tab-count:2'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;</span>3(2-3)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='margin-left:36.0pt;text-align:justify'><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'>theory and
+practice in community planning. physical, economic and social factors. <o:p></o:p></span></p>
+
+<p class=msonormal><span style='font-size:11.0pt;font-family:"times new roman";
+color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=msonormal><b><span style='font-size:11.0pt;font-family:"times new roman";
+color:black'>241444<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>vernacular
+landscape architecture <span style='mso-tab-count:6'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;</span>2(2-0)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-indent:36.0pt'><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'>origins of
+concepts, philosophies, and styles in vernacular landscape architectures of
+thailand and southeast asian countries. comparison and analysis of influences
+of environment, society, belief, religion, and culture affecting to images and
+expression of landscape architecture in each locale.<o:p></o:p></span></p>
+
+<p class=msonormal><span style='font-size:11.0pt;font-family:"times new roman";
+color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=msonormal><b><span style='font-size:11.0pt;font-family:"times new roman";
+color:black'>241451<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>landscape
+architectural cost estimation <span style='mso-tab-count:5'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;</span>2(1-2)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-indent:36.0pt'><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'>principles
+and methods of cost estimation for landscape architectural projects in the
+process of preparation, design and construction. calculation of material,
+labor, equipment, tax, profit, construction and miscellaneous expense.<o:p></o:p></span></p>
+
+<p class=msonormal><span style='font-size:11.0pt;font-family:"times new roman";
+color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=msonormal><b><span style='font-size:11.0pt;font-family:"times new roman";
+color:black'>241452 landscape architectural professional practice<span
+style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-tab-count:3'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp; </span>2(2-0)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-indent:36.0pt'><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'>professional
+practice, professional ethics, environmental concerns, laws and orders, office
+arrangement. contract, bidding and construction document preparations, project
+management and research.<o:p></o:p></span></p>
+
+<p class=msonormal><span style='font-size:11.0pt;font-family:"times new roman";
+color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=msonormal><b><span style='font-size:11.0pt;font-family:"times new roman";
+color:black'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=msonormal><b><span style='font-size:11.0pt;font-family:"times new roman";
+color:black'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=msonormal><b><span style='font-size:11.0pt;font-family:"times new roman";
+color:black'>241461<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>field
+ecology for landscape architecture <span style='mso-tab-count:5'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;</span>1(0-3)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-indent:36.0pt'><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'>the exploration of natural sites.
+the significance of ecosystem and biodiversity to landscape architecture.<o:p></o:p></span></p>
+
+<p class=msonormal><span style='font-size:11.0pt;font-family:"times new roman";
+color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=msonormal><b><span style='font-size:11.0pt;font-family:"times new roman";
+color:black'>241462<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>ecological
+planning <span style='mso-tab-count:8'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;</span>3(1-4)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-indent:36.0pt'><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'>pre : 241362 <o:p></o:p></span></p>
+
+<p class=msobodytextindent style='margin-left:7.1pt;text-indent:28.9pt'><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'>designing
+and planning environment with landscape ecology approach. land potential,
+potential natural resource and human need.<o:p></o:p></span></p>
+
+<p class=msonormal><span style='font-size:11.0pt;font-family:"times new roman";
+color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=msonormal><b><span style='font-size:11.0pt;font-family:"times new roman";
+color:black'>241463<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>visual
+landscape quality analysis and assessment <span style='mso-tab-count:4'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;</span>3(3-0)<o:p></o:p></span></b></p>
+
+<p class=msobodytextindent2 style='margin-left:0cm'><span style='font-size:
+11.0pt;font-family:"times new roman";color:black'>visual landscape quality and
+applications of analytical process conforming to the context of physical,
+cultural and social environment. principles, theories and techniques in visual
+quality analysis and assessment.<o:p></o:p></span></p>
+
+<p class=msonormal><span style='font-size:11.0pt;font-family:"times new roman";
+color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=msonormal><b><span style='font-size:11.0pt;font-family:"times new roman";
+color:black'>241471<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>geographic
+information system for landscape architecture <span style='mso-tab-count:3'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;</span>3(2-3)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-indent:36.0pt'><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'>pre : 241363 <o:p></o:p></span></p>
+
+<p class=msobodytextindent2 style='margin-left:0cm'><span style='font-size:
+11.0pt;font-family:"times new roman";color:black'>concept and application of
+geographic information system. management, analysis and presentation of data
+for planning and designing in landscape architecture.<o:p></o:p></span></p>
+
+<p class=msonormal style='text-align:justify'><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=msonormal style='text-align:justify'><b><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'>241597<span style='mso-tab-count:
+1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>seminar
+<span style='mso-tab-count:9'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>1<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-align:justify;text-indent:36.0pt'><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'>presentation
+and discussion on current interesting topics in landscape architecture at the
+bachelor degree level.<o:p></o:p></span></p>
+
+<p class=msonormal><b><span style='font-size:11.0pt;font-family:"times new roman";
+color:black'><o:p>&nbsp;</o:p></span></b></p>
+
+<p class=msonormal><b><span style='font-size:11.0pt;font-family:"times new roman";
+color:black'>241598 thesis proposal <span style='mso-tab-count:8'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;</span>3(1-4)<o:p></o:p></span></b></p>
+
+<p class=msonormal style='text-indent:36.0pt'><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'>pre : 241332 and <span
+style='mso-spacerun:yes'>&nbsp;</span>241412 <o:p></o:p></span></p>
+
+<p class=msonormal style='text-indent:36.0pt'><span style='font-size:11.0pt;
+font-family:"times new roman";color:black'>project and site selection. project
+requirement and scope of work. project feasibility, laws and regulations and
+case studies. data analysis and conclusion.<o:p></o:p></span></p>
+
+<p class=msonormal><span style='font-size:11.0pt;font-family:"times new roman";
+color:black'><o:p>&nbsp;</o:p></span></p>
+
+<p class=msonormal><b><span style='font-size:11.0pt;font-family:"times new roman";
+color:black'>241599<span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>thesis<span
+style='mso-tab-count:7'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-tab-count:3'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='mso-spacerun:yes'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>9<o:p></o:p></span></b></p>
+
+<p class=msonormal><span style='font-size:11.0pt;font-family:"times new roman";
+color:black'><span style='mso-tab-count:1'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>pre
+: 241598<span style='mso-spacerun:yes'>&nbsp; </span><o:p></o:p></span></p>
+
+<p class=msonormal style='text-align:justify;text-indent:36.0pt'><span
+style='font-size:11.0pt;font-family:"times new roman";color:black'>landscape
+architectural design criteria and concepts from the conclusion of prerequisite
+course: 241598 thesis proposal.<span style='mso-spacerun:yes'>&nbsp;
+</span>design and submit final work to the committee under thesis regulations.<o:p></o:p></span></p>
+
+</div>
+
+</body>
+
+</html>

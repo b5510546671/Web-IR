@@ -1,0 +1,250 @@
+<!doctype html public "-//w3c//dtd html 4.01 transitional//en">
+<html>
+<head>
+<title>p1100109.jpg</title>
+<meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+<meta name="generator" content="arles image web page creator 8.0.4">
+<meta http-equiv="imagetoolbar" content="no">
+<link rel="stylesheet" type="text/css" href="image.css">
+<script type="text/javascript">
+// copyright 2001-2008 digital dutch (www.digitaldutch.com)
+
+function gotonewpage(what) {
+  value = what.options[what.selectedindex].value;
+  if (value == "") return;
+  window.location.href = value;
+}
+
+var secondsleft   = 5;
+var running       = true;
+var showstatus    = true;
+var oldstatus     = "";
+var nextimagepage = "";
+
+function setstatusbar(statustext) {
+  if ((oldstatus == "") && (showstatus == true)){
+    window.status = statustext;
+  }
+  else {
+    oldstatus = statustext;
+  }
+}
+
+function startslideshow() {
+  running = true;
+  setstatusbar("slideshow started");
+  writecookie("slideshowstopped", false);
+}
+
+function stopslideshow() {
+  running = false;
+  setstatusbar("slideshow stopped");
+  writecookie("slideshowstopped", true);
+}
+
+function startstop() {
+  if (running == false) {
+    startslideshow();
+  }
+  else {
+    stopslideshow();
+  }
+}
+
+function countdown() {
+  if (running == true) {
+
+    if (secondsleft > 0) {
+      secondsleft = secondsleft - 1;
+    }
+    else {
+      running = false;
+      document.location = nextimagepage;
+    }
+
+    if (secondsleft == 0) {
+      setstatusbar("next image will automatically load in " + (secondsleft + 1) + " second");
+    }
+    else {
+      setstatusbar("next image will automatically load in " + (secondsleft + 1) + " seconds");
+    }
+  }
+
+  settimeout("countdown()",1000);
+}
+
+function readcookie(name, defaultvalue) {
+  var cookievalue = escape(defaultvalue);
+  var search = name + "=";
+
+  if(document.cookie.length > 0) {
+
+    offset = document.cookie.indexof(search);
+
+    if (offset != -1) {
+
+      offset += search.length;
+      end = document.cookie.indexof(";", offset);
+
+      if (end == -1) end = document.cookie.length;
+
+      cookievalue = unescape(document.cookie.substring(offset, end))
+    }
+
+  }
+
+  return cookievalue;
+}
+
+function writecookie(name, value) {
+  document.cookie = name + "=" + escape(value);
+}
+
+
+function initslideshow() {
+
+  nextimagepage = "image35.html";
+
+  if (readcookie("slideshowstopped", "false") == "true") {
+    stopslideshow();
+  }
+  else {
+    startslideshow();
+  };
+
+  countdown();
+}
+
+function pageloaded() {
+  initslideshow();
+
+  imagepreload = new image;
+  imagepreload.src = "../images/p1100113.jpg";
+}
+
+window.onload=pageloaded;
+</script>
+
+</head>
+
+<body>
+<!-- this page was generated with arles image web page creator -->
+<!-- for more information go to: www.digitaldutch.com          -->
+
+
+
+
+
+<!-- beginnavigationtop -->
+<table width="100%">
+  <tr>
+    <td align="center"><!-- beginnavigationgroup -->
+<table cellpadding="3" cellspacing="0" border="0">
+  <tr>
+    <!-- beginnavigationelement --><td><a class="navigationtext" href="javascript:startstop();" onmouseover="oldstatus=window.status; window.status='start/stop slideshow'; return true;" onmouseout="window.status=oldstatus; oldstatus=''; return true;"><img src="../arlesimages/tsign_purple_startstop.gif" border="0" width="30" height="30" alt="start/stop" title="start/stop"></a></td><!-- endnavigationelement -->
+    
+    
+    <!-- beginnavigationelement --><td><a href="../index2.html"><img src="../arlesimages/tsign_purple_index.gif" border="0" width="30" height="30" alt="index page" title="index page"></a></td><!-- endnavigationelement -->
+    <!-- beginnavigationelement --><td><a href="image1.html"><img src="../arlesimages/tsign_purple_first.gif" border="0" width="30" height="30" alt="[&lt;&lt; first]" title="[&lt;&lt; first]"></a></td><!-- endnavigationelement -->
+    <!-- beginnavigationelement --><td><a href="image33.html"><img src="../arlesimages/tsign_purple_previous.gif" border="0" width="30" height="30" alt="[&lt; previous]" title="[&lt; previous]"></a></td><!-- endnavigationelement -->
+    <!-- beginnavigationelement --><td><a href="image35.html"><img src="../arlesimages/tsign_purple_next.gif" border="0" width="30" height="30" alt="[next &gt;]" title="[next &gt;]"></a></td><!-- endnavigationelement -->
+    <!-- beginnavigationelement --><td><a href="image53.html"><img src="../arlesimages/tsign_purple_last.gif" border="0" width="30" height="30" alt="[last &gt;&gt;]" title="[last &gt;&gt;]"></a></td><!-- endnavigationelement -->
+  </tr>
+</table>
+<!-- endnavigationgroup -->
+
+<!-- beginnavigationgroup -->
+<table cellpadding="3" cellspacing="0" border="0">
+  <tr>
+    <!-- beginnavigationelement --><td><form style="margin-bottom:0;" name="form1" action=""><select name="imagelist" class="imagequicklist" onchange="gotonewpage(this)">
+  <option value="image1.html">1 p1100001.jpg</option>
+  <option value="image2.html">2 p1100004.jpg</option>
+  <option value="image3.html">3 p1100012.jpg</option>
+  <option value="image4.html">4 p1100015.jpg</option>
+  <option value="image5.html">5 p1100017.jpg</option>
+  <option value="image6.html">6 p1100019.jpg</option>
+  <option value="image7.html">7 p1100023.jpg</option>
+  <option value="image8.html">8 p1100027.jpg</option>
+  <option value="image9.html">9 p1100030.jpg</option>
+  <option value="image10.html">10 p1100032.jpg</option>
+  <option value="image11.html">11 p1100036.jpg</option>
+  <option value="image12.html">12 p1100041.jpg</option>
+  <option value="image13.html">13 p1100043.jpg</option>
+  <option value="image14.html">14 p1100046.jpg</option>
+  <option value="image15.html">15 p1100051.jpg</option>
+  <option value="image16.html">16 p1100056.jpg</option>
+  <option value="image17.html">17 p1100059.jpg</option>
+  <option value="image18.html">18 p1100060.jpg</option>
+  <option value="image19.html">19 p1100068.jpg</option>
+  <option value="image20.html">20 p1100069.jpg</option>
+  <option value="image21.html">21 p1100071.jpg</option>
+  <option value="image22.html">22 p1100084.jpg</option>
+  <option value="image23.html">23 p1100086.jpg</option>
+  <option value="image24.html">24 p1100090.jpg</option>
+  <option value="image25.html">25 p1100091.jpg</option>
+  <option value="image26.html">26 p1100092.jpg</option>
+  <option value="image27.html">27 p1100093.jpg</option>
+  <option value="image28.html">28 p1100095.jpg</option>
+  <option value="image29.html">29 p1100100.jpg</option>
+  <option value="image30.html">30 p1100104.jpg</option>
+  <option value="image31.html">31 p1100105.jpg</option>
+  <option value="image32.html">32 p1100107.jpg</option>
+  <option value="image33.html">33 p1100108.jpg</option>
+  <option selected="selected" value="image34.html">34 p1100109.jpg</option>
+  <option value="image35.html">35 p1100113.jpg</option>
+  <option value="image36.html">36 p1100117.jpg</option>
+  <option value="image37.html">37 p1100118.jpg</option>
+  <option value="image38.html">38 p1100124.jpg</option>
+  <option value="image39.html">39 p1100125.jpg</option>
+  <option value="image40.html">40 p1100126.jpg</option>
+  <option value="image41.html">41 p1100128.jpg</option>
+  <option value="image42.html">42 p1100131.jpg</option>
+  <option value="image43.html">43 p1100132.jpg</option>
+  <option value="image44.html">44 p1100137.jpg</option>
+  <option value="image45.html">45 p1100141.jpg</option>
+  <option value="image46.html">46 p1100143.jpg</option>
+  <option value="image47.html">47 p1100148.jpg</option>
+  <option value="image48.html">48 p1100157.jpg</option>
+  <option value="image49.html">49 p1100158.jpg</option>
+  <option value="image50.html">50 p1100160.jpg</option>
+  <option value="image51.html">51 p1100162.jpg</option>
+  <option value="image52.html">52 p1100175.jpg</option>
+  <option value="image53.html">53 p1100210.jpg</option>
+</select></form></td><!-- endnavigationelement -->
+    <!-- beginnavigationsubgroup --><td>
+      
+      <!-- beginnavigationelement --> <span class="navigationtext">of&nbsp;53</span><!-- endnavigationelement -->
+    </td><!-- endnavigationsubgroup -->
+  </tr>
+</table>
+<!-- endnavigationgroup -->
+</td>
+  </tr>
+</table>
+<!-- endnavigationtop -->
+
+<div align="center">
+<table cellspacing="0" cellpadding="0" border="0">
+  <tr align="center">
+    <td>
+      <a href="image35.html"><img src="../images/p1100109.jpg" alt="p1100109.jpg" title="p1100109.jpg" width="378" height="500" border="0"></a>
+    </td>
+  </tr>
+  <tr align="center">
+    <td>
+      <div class="imagetitle">p1100109.jpg</div>
+    </td>
+  </tr>
+</table>
+</div>
+
+
+
+
+
+<p align="center"><br>
+<a href="http://www.digitaldutch.com/arles/" target="_top" style="font-size: 10pt;">generated with arles image web page creator</a></p>
+
+
+</body>
+</html>

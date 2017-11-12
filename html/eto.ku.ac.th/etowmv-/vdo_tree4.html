@@ -1,0 +1,427 @@
+<html>
+<head>
+<title>วีดิทัศน์การศึกษา สาขาการเกษตร(พืช)</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta name="author" content="extension and training office , kasetsart university,thailand,bangkok">
+<meta name="keywords" lang="en"  content="digital video, vdo, video - cd" >
+<meta name="keywords" lang="th"  content="การปลูกข้าวโพดหวานแบบครบวงจร,  ดีวีดี, วิดีโอซีดี, สื่อวีดิทัศน์" >
+<meta name="description" content="สำนักส่งเสริมและฝึกอบรม  ทำหน้าที่เผยแพร่ความรู้ บริการวิชาการด้านสื่อรูปแบบต่างๆ แก่ประชาชนทั้งในระดับชาติและนานาชาติ เพื่อพัฒนาทรัพยากรมนุษย์สู่ความยั่งยืน" >
+
+<script type="text/javascript">
+<!--
+function mm_swapimgrestore() { //v3.0
+  var i,x,a=document.mm_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.osrc;i++) x.src=x.osrc;
+}
+
+function mm_preloadimages() { //v3.0
+  var d=document; if(d.images){ if(!d.mm_p) d.mm_p=new array();
+    var i,j=d.mm_p.length,a=mm_preloadimages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexof("#")!=0){ d.mm_p[j]=new image; d.mm_p[j++].src=a[i];}}
+}
+
+function mm_findobj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexof("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=mm_findobj(n,d.layers[i].document);
+  if(!x && d.getelementbyid) x=d.getelementbyid(n); return x;
+}
+
+function mm_swapimage() { //v3.0
+  var i,j=0,x,a=mm_swapimage.arguments; document.mm_sr=new array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=mm_findobj(a[i]))!=null){document.mm_sr[j++]=x; if(!x.osrc) x.osrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+<script language=javascript>
+var rate = 20; // increase amount(the degree of the transmutation)
+var obj; // the object which event occured in
+var act = 0; // flag during the action
+var elmh = 0; // hue
+var elms = 128; // saturation
+var elmv = 255; // value
+var clrorg; // a color before the change
+var timerid; // timer id
+if (navigator.appname.indexof("microsoft",0) != -1 && parseint(navigator.appversion) >= 4) {
+browser = true;
+} else {
+browser = false;
+}
+if (browser) {
+document.onmouseover = dorainbowanchor;
+document.onmouseout = stoprainbowanchor;
+}
+function dorainbow()
+{
+if (browser && act != 1) {
+act = 1;
+obj = event.srcelement;
+clrorg = obj.style.color;
+timerid = setinterval("changecolor()",100);
+}
+}
+function stoprainbow()
+{
+if (browser && act != 0) {
+obj.style.color = clrorg;
+clearinterval(timerid);
+act = 0;
+}
+}
+function dorainbowanchor()
+{
+if (browser && act != 1) {
+obj = event.srcelement;
+while (obj.tagname != 'a' && obj.tagname != 'body') {
+obj = obj.parentelement;
+if (obj.tagname == 'a' || obj.tagname == 'body')
+break;
+}
+if (obj.tagname == 'a' && obj.href != '') {
+act = 1;
+clrorg = obj.style.color;
+timerid = setinterval("changecolor()",100);
+}
+}
+}
+function stoprainbowanchor()
+{
+if (browser && act != 0) {
+if (obj.tagname == 'a') {
+obj.style.color = clrorg;
+clearinterval(timerid);
+act = 0;
+}
+}
+}
+function changecolor()
+{
+obj.style.color = makecolor();
+}
+function makecolor()
+{
+if (elms == 0) {
+elmr = elmv; elmg = elmv; elmb = elmv;
+}
+else {
+t1 = elmv;
+t2 = (255 - elms) * elmv / 255;
+t3 = elmh % 60;
+t3 = (t1 - t2) * t3 / 60;
+if (elmh < 60) {
+elmr = t1; elmb = t2; elmg = t2 + t3;
+}
+else if (elmh < 120) {
+elmg = t1; elmb = t2; elmr = t1 - t3;
+}
+else if (elmh < 180) {
+elmg = t1; elmr = t2; elmb = t2 + t3;
+}
+else if (elmh < 240) {
+elmb = t1; elmr = t2; elmg = t1 - t3;
+}
+else if (elmh < 300) {
+elmb = t1; elmg = t2; elmr = t2 + t3;
+}
+else if (elmh < 360) {
+elmr = t1; elmg = t2; elmb = t1 - t3;
+}
+else {
+elmr = 0; elmg = 0; elmb = 0;
+}
+}
+elmr = math.floor(elmr);
+elmg = math.floor(elmg);
+elmb = math.floor(elmb);
+clrrgb = '#' + elmr.tostring(16) + elmg.tostring(16) + elmb.tostring(16);
+elmh = elmh + rate;
+if (elmh >= 360)
+elmh = 0;
+return clrrgb;
+}
+</script>
+<style type="text/css">
+<!--
+body {background-color: #cccccc;}
+.style15 {font-family: th sarabunpsk, cordiaupc;	font-size: 15pt;}
+.style16 {font-family: freesiaupc; font-size: 24px;	font-weight: bold;	color: #009900;}
+.style11 {font-family: th sarabunpsk, cordiaupc; font-size: 16pt;}
+.style17 {font-size: 14pt}
+a:link {color: #006699;	text-decoration: none;}
+a:visited {color: #006699;	text-decoration: none;}
+a:hover {color: #006699; text-decoration: none;}
+a:active {text-decoration: none;}
+-->
+</style>
+<script src="scripts/ac_runactivecontent.js" type="text/javascript"></script>
+</head>
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onload="mm_preloadimages('images/index_over_02.jpg','images/index_over_06.jpg','images/index_over_07.jpg','images/index_over_08.jpg','images/index_over_09.jpg','images/index_over_10.jpg','images/index_over_11.jpg','images/index_over_12.jpg','images/index_over_14.jpg','images/index_over_15.jpg','images/index_over_16.jpg','images/index_over_17.jpg','images/index_over_18.jpg','images/index_over_19.jpg','images/index_over_20.jpg','images/index_over_21.jpg','images/index_over_22.jpg')">
+<!-- imageready slices (eto_video_index2.psd) -->
+<table width="1001" height="837" border="0" align="center" cellpadding="0" cellspacing="0" id="table_01">
+	<tr>
+		<td colspan="3"><script type="text/javascript">
+ac_fl_runcontent( 'codebase','http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0','width','1000','height','160','src','images/header_eto_plant','quality','high','pluginspage','http://www.adobe.com/shockwave/download/download.cgi?p1_prod_version=shockwaveflash','movie','images/header_eto_plant' ); //end ac code
+        </script>
+		  <noscript>
+		  <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0" width="1000" height="160">
+            <param name="movie" value="images/header_eto_plant.swf">
+            <param name="quality" value="high">
+            <embed src="images/header_eto_plant.swf" quality="high" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?p1_prod_version=shockwaveflash" type="application/x-shockwave-flash" width="1000" height="160"></embed>
+          </object>
+		  </noscript>	    </td>
+<td>
+			<img src="images/spacer.gif" width="1" height="160" alt=""></td>
+	</tr>
+	<tr>
+		<td rowspan="24" valign="top" background="images/index_27.jpg"><a href="index.html" onmouseout="mm_swapimgrestore()" onmouseover="mm_swapimage('image60','','images/index_over_02.jpg',1)"><img src="images/index_02.jpg" alt="หมวดวีดิทัศน์" name="image60" width="258" height="37" border="0"></a><br>
+		<a href="vdo_edu.html" onmouseout="mm_swapimgrestore()" onmouseover="mm_swapimage('image61','','images/index_over_06.jpg',1)"><img src="images/index_06.jpg" alt="หมวดการศึกษา" name="image61" width="258" height="38" border="0"></a><br>
+		<a href="vdo_tree.html" onmouseout="mm_swapimgrestore()" onmouseover="mm_swapimage('image62','','images/index_over_07.jpg',1)"><img src="images/index_07.jpg" alt="สาขาการเกษตร(พืช)" name="image62" width="258" height="25" border="0"></a><br>
+		<a href="vdo_animal.html" onmouseout="mm_swapimgrestore()" onmouseover="mm_swapimage('image63','','images/index_over_08.jpg',1)"><img src="images/index_08.jpg" alt="สาขาการเกษตร(สัตว์)" name="image63" width="258" height="24" border="0"></a><br>
+		<a href="vdo_fish.html" onmouseout="mm_swapimgrestore()" onmouseover="mm_swapimage('image64','','images/index_over_09.jpg',1)"><img src="images/index_09.jpg" alt="สาขาประมง" name="image64" width="258" height="24" border="0"></a><br>
+		<a href="vdo_he.html" onmouseout="mm_swapimgrestore()" onmouseover="mm_swapimage('image65','','images/index_over_10.jpg',1)"><img src="images/index_10.jpg" alt="สาขาคหกรรมศาสตร์" name="image65" width="258" height="26" border="0"></a><br>
+		<a href="vdo_wityakan.html" onmouseout="mm_swapimgrestore()" onmouseover="mm_swapimage('image66','','images/index_over_11.jpg',1)"><img src="images/index_11.jpg" alt="สาขาวิทยาการเกษตร" name="image66" width="258" height="24" border="0"></a><br>
+		<a href="vdo_ttt.html" onmouseout="mm_swapimgrestore()" onmouseover="mm_swapimage('image67','','images/index_over_12.jpg',1)"><img src="images/index_12.jpg" alt="ความร่วมมือกับ ททท." name="image67" width="258" height="23" border="0"></a><br>
+		<img src="images/index_13.jpg" width="258" height="1" alt=""><br>
+		<a href="e_book.html" onmouseout="mm_swapimgrestore()" onmouseover="mm_swapimage('image68','','images/index_over_14.jpg',1)"><img src="images/index_14.jpg" alt="หมวดเอกสาร e-book" name="image68" width="258" height="61" border="0"></a><br>
+		<a href="ebook_rice.html" onmouseout="mm_swapimgrestore()" onmouseover="mm_swapimage('image69','','images/index_over_15.jpg',1)"><img src="images/index_15.jpg" alt="ข้าวและธัญพืช" name="image69" width="258" height="24" border="0"></a><br>
+		<a href="ebook_veget.html" onmouseout="mm_swapimgrestore()" onmouseover="mm_swapimage('image70','','images/index_over_16.jpg',1)"><img src="images/index_16.jpg" alt="พืชผักสมุนไพร" name="image70" width="258" height="24" border="0"></a><br>
+		<a href="ebook_flower.html" onmouseout="mm_swapimgrestore()" onmouseover="mm_swapimage('image71','','images/index_over_17.jpg',1)"><img src="images/index_17.jpg" alt="ไม้ดอกไม้ประดับ" name="image71" width="258" height="25" border="0"></a><br>
+		<a href="ebook_tree.html" onmouseout="mm_swapimgrestore()" onmouseover="mm_swapimage('image72','','images/index_over_18.jpg',1)"><img src="images/index_18.jpg" alt="ไม้ยืนต้น" name="image72" width="258" height="24" border="0"></a><br>
+		<a href="ebook_fish.html" onmouseout="mm_swapimgrestore()" onmouseover="mm_swapimage('image73','','images/index_over_19.jpg',1)"><img src="images/index_19.jpg" alt="ประมง สัตว์น้ำ" name="image73" width="258" height="26" border="0"></a><br>
+		<a href="ebook_animal.html" onmouseout="mm_swapimgrestore()" onmouseover="mm_swapimage('image74','','images/index_over_20.jpg',1)"><img src="images/index_20.jpg" alt="สัตว์บก - สัตว์ปีก" name="image74" width="258" height="24" border="0"></a><br>
+		<a href="ebook_wityakan.html" onmouseout="mm_swapimgrestore()" onmouseover="mm_swapimage('image75','','images/index_over_21.jpg',1)"><img src="images/index_21.jpg" alt="วิทยาการอื่น ๆ" name="image75" width="258" height="22" border="0"></a><br>
+		<a href="ebook_tamkin.html" onmouseout="mm_swapimgrestore()" onmouseover="mm_swapimage('image76','','images/index_over_22.jpg',1)"><img src="images/index_22.jpg" alt="แนะนำทำกิน" name="image76" width="258" height="30" border="0"></a><br>
+				<a href="ebook_radio.html" onmouseout="mm_swapimgrestore()" onmouseover="mm_swapimage('image77','','images/index_radio1.jpg',1)"><img src="images/index_radio.jpg" alt="รายการวิทยุ" name="image77" width="258" height="61" border="0"></a><br>
+		<a href="radio58.html" onmouseout="mm_swapimgrestore()" onmouseover="mm_swapimage('image78','','images/index_radio581.jpg',1)"><img src="images/index_radio58.jpg" alt="สื่อเสียงปี2558" name="image78" width="258" height="31" border="0"></a><br>
+		<a href="radio57.html" onmouseout="mm_swapimgrestore()" onmouseover="mm_swapimage('image79','','images/index_radio571.jpg',1)"><img src="images/index_radio57.jpg" alt="สื่อเสียงปี2557" name="image79" width="258" height="31" border="0"></a><br>
+		<a href="radio56.html" onmouseout="mm_swapimgrestore()" onmouseover="mm_swapimage('image80','','images/index_radio561.jpg',1)"><img src="images/index_radio56.jpg" alt="สื่อเสียงปี2557" name="image80" width="258" height="31" border="0"></a><br>
+		<img src="images/index_24.jpg" width="258" height="75" alt=""><br>
+						<a href="http://lib.ku.ac.th" target="_blank" onmouseover="mm_swapimage('image55','','images/office_lib2.jpg',1)" onmouseout="mm_swapimgrestore()"><img src="images/office_lib1.jpg" alt="สำนักหอสมุด ม.เกษตรศาสตร์" name="image55" width="258" height="51" border="0"></a><br>
+		<a href="http://www.moac.go.th/builder/moac02/index.php" target="_blank" onmouseover="mm_swapimage('image56','','images/office_magr2.jpg',1)" onmouseout="mm_swapimgrestore()"><img src="images/office_magr1.jpg" alt="กระทรวงเกษตรและสหกรณ์" name="image56" width="258" height="51" border="0"></a><br>
+		<a href="http://extension.fisheries.go.th/audio_visualeq/vdo/index.html" target="_blank" onmouseover="mm_swapimage('image57','','images/office_mfisher2.jpg',1)" onmouseout="mm_swapimgrestore()"><img src="images/office_mfisher1.jpg" alt="ประมง กระทรวงเกษตรและสหกรณ์" name="image57" width="258" height="51" border="0"></a></td>
+</td>
+		<td colspan="2">
+			<img src="images/index_03.jpg" width="742" height="14" alt=""></td>
+		<td>
+			<img src="images/spacer.gif" width="1" height="14" alt=""></td>
+	</tr>
+	<tr>
+		<td width="720" rowspan="23" valign="top" bgcolor="#ffffff"><table cellspacing=0 cellpadding=0 width="630" align=center border=0>
+          <tbody>
+            <tr>
+              <td><div align="center"><span class="style16">วีดิทัศน์ สาขาการเกษตร (พืช)</span></div></td>
+            </tr>
+            <tr>
+              <td></td>
+            </tr>
+            <tr>
+              <td background=images/form_04.jpg height=24>&nbsp;</td>
+            </tr>
+            <tr>
+              <td valign=top background=images/form_05.jpg><table cellspacing=0 cellpadding=0 width="90%" align=center border=0>
+                  <tbody>
+                    <tr>
+                      <td height="152"  valign=top><table width="98%"  border="0" align="center" bgcolor="#ffffff">
+                        <tr>
+                          <td width="50%"><div align="center"><span class="style15"> หน้าที่ <img src="images/num4.gif" width="14" height="16">&nbsp;&nbsp;</span></div></td>
+                          <td width="50%">
+						    
+                          <span class="style15">ไปหน้าที่ <a href="vdo_tree.html" onmouseout="mm_swapimgrestore()" onmouseover="mm_swapimage('999','','images/number1.gif',1)"><img src="images/num1.gif" alt="ไปหน้าที่ 1" name="image84" width="14" height="16" border="0"></a> <a href="vdo_tree2.html" onmouseout="mm_swapimgrestore()" onmouseover="mm_swapimage('999','','images/number2.gif',1)"><img src="images/num2.gif" alt="ไปหน้าที่ 2" name="image85" width="14" height="16" border="0"> </a> <a href="vdo_tree3.html" onmouseout="mm_swapimgrestore()" onmouseover="mm_swapimage('999','','images/number3.gif',1)"><img src="images/num3.gif" alt="ไปหน้าที่ 3" name="image86" width="14" height="16" border="0"> </a> <a href="vdo_tree4.html" onmouseout="mm_swapimgrestore()" onmouseover="mm_swapimage('999','','images/number4.gif',1)"><img src="images/num4.gif" alt="ไปหน้าที่ 4" name="image87" width="14" height="16" border="0"> </a></span>						  </td>
+                        </tr>
+                        <tr>
+                          <td colspan="2"> <form action="http://www.google.com/search" method="get" name="formsearch">
+                      <table width="600" height="24" border="0" align="left" cellpadding="0" cellspacing="0">
+                        <tr>
+                          <td width="245"><div align="right"><img src="images/edit-find.png" width="24" height="24"></div></td>
+                          <td width="328" background="../images53/search02.jpg">
+                            <div align="left">
+                              <input type=text onfocus="document.getelementbyid('q').value='';"  size=50 maxlength=255 value="ค้นหาเรื่องที่ต้องการในเว็บไซต์นี้" name="q" id="q" class="boxnotline">
+                              <input type=hidden name=ie value=utf-8>
+                              <input type=hidden name=domains value="www.eto.ku.ac.th/wmvweb">
+                              <input type=hidden name=sitesearch value="www.eto.ku.ac.th/wmvweb">
+                          </div></td>
+                          <td width="27" align="left"><div align="left">
+                              <input  type="image" alt="ค้นหาข้อมูล" src="../images53/search03.jpg" width="25" height="24" name="image"  align="middle">
+                          </div></td>
+                        </tr>
+                      </table>
+                    </form></td>
+                        </tr>
+                        
+                        <tr bgcolor="#cccccc">
+                          <td height="30px"><span class="style15"><img src="images/v_bullet.gif" width="14" height="13">    <a href="#" onclick="window.open('http://www.eto.ku.ac.th/wmvweb/vcag139.html','new1','location=0,toolbar=0,directories=0,status=0,menubar=0,scrollbars=1,resizable=0,width=650,height=580'); ">การปลูกข้าวโพดหวานแบบครบวงจร</a></span></td>
+                          <td height="30px"><span class="style15"><img src="images/v_bullet.gif" width="14" height="13"> <a href="#" onclick="window.open('http://www.eto.ku.ac.th/wmvweb/vcag140.html','new1','location=0,toolbar=0,directories=0,status=0,menubar=0,scrollbars=1,resizable=0,width=650,height=580'); ">กาแฟอาราบิกา</a></span></td>
+                        </tr>
+                        <tr>
+                          <td height="30px" bgcolor="#fcfcfc"><span class="style15"><img src="images/v_bullet.gif" width="14" height="13"> <a href="#" onclick="window.open('http://www.eto.ku.ac.th/wmvweb/vcag141.html','new1','location=0,toolbar=0,directories=0,status=0,menubar=0,scrollbars=1,resizable=0,width=650,height=580'); ">สารละลายธาตุอาหารสำหรับ<br>
+                          การปลูกพืช โดยไม่ใช้ดิน</a></span></td>
+                          <td height="30px" bgcolor="#fcfcfc"><span class="style15"><img src="images/v_bullet.gif" width="14" height="13"> <a href="#" onclick="window.open('http://www.eto.ku.ac.th/wmvweb/vcag142.html','new1','location=0,toolbar=0,directories=0,status=0,menubar=0,scrollbars=1,resizable=0,width=650,height=580'); ">ชาสมุนไพรเจียวกู้หลาน</a></span></td>
+                        </tr>
+                        <tr bgcolor="#cccccc">
+                          <td height="30px"><span class="style15"><img src="images/v_bullet.gif" width="14" height="13"> <a href="#" onclick="window.open('http://www.eto.ku.ac.th/wmvweb/vcag143.html','new1','location=0,toolbar=0,directories=0,status=0,menubar=0,scrollbars=1,resizable=0,width=650,height=580'); ">การปลูกคาล่าลิลลี่เชิงการค้า</a></span></td>
+                          <td height="30px"><span class="style15"><img src="images/v_bullet.gif" width="14" height="13">   <a href="#" onclick="window.open('http://www.eto.ku.ac.th/wmvweb/vcag145.html','new1','location=0,toolbar=0,directories=0,status=0,menubar=0,scrollbars=1,resizable=0,width=650,height=580'); ">สมุนไพรในการกำจัดปลวก</a></span> </td>
+                        </tr>
+                        <tr>
+                          <td height="30px" bgcolor="#fcfcfc"><span class="style15"><img src="images/v_bullet.gif" width="14" height="13"> <a href="#" onclick="window.open('http://www.eto.ku.ac.th/wmvweb/vcag148.html','new1','location=0,toolbar=0,directories=0,status=0,menubar=0,scrollbars=1,resizable=0,width=650,height=580'); ">การปลูกส้มเขียวหวานแบบมืออาชีพ</a></span></td>
+                          <td height="30px" bgcolor="#fcfcfc"><span class="style15"><img src="images/v_bullet.gif" width="14" height="13"> <a href="#" onclick="window.open('http://www.eto.ku.ac.th/wmvweb/vcag149.html','new1','location=0,toolbar=0,directories=0,status=0,menubar=0,scrollbars=1,resizable=0,width=650,height=580'); ">การปลูกกล้วยไข่เชิงการค้า<br> 
+                          เกษตรศาสตร์ 2</a></span></td>
+                        </tr>
+                        <tr bgcolor="#cccccc">
+                          <td height="30px"><span class="style15"><img src="images/v_bullet.gif" width="14" height="13"> <a href="#" onclick="window.open('http://www.eto.ku.ac.th/wmvweb/vcag150.html','new1','location=0,toolbar=0,directories=0,status=0,menubar=0,scrollbars=1,resizable=0,width=650,height=580'); ">การปลูกและการขยายพันธุ์ผักหวานป่า</a></span></td>
+                          <td height="30px"><span class="style15"><img src="images/v_bullet.gif" width="14" height="13"> <a href="#" onclick="window.open('http://www.eto.ku.ac.th/wmvweb/vcag151.html','new1','location=0,toolbar=0,directories=0,status=0,menubar=0,scrollbars=1,resizable=0,width=650,height=580'); ">การปลูกและการขยายพันธุ์<br> 
+                          ลูกปัดออสเตรเลีย เป็นไม้ประดับกระถาง</a></span></td>
+                        </tr>
+                        <tr>
+                          <td height="30px" bgcolor="#fcfcfc"><span class="style15"><img src="images/v_bullet.gif" width="14" height="13"> <a href="#" onclick="window.open('http://www.eto.ku.ac.th/wmvweb/vcag152.html','new1','location=0,toolbar=0,directories=0,status=0,menubar=0,scrollbars=1,resizable=0,width=650,height=580'); ">เทคโนโลยีการปลูกองุ่นครบวงจร</a></span></td>
+                          <td height="30px" bgcolor="#fcfcfc"><span class="style15"><img src="images/v_bullet.gif" width="14" height="13"> <a href="#" onclick="window.open('http://www.eto.ku.ac.th/wmvweb/vcag153.html','new1','location=0,toolbar=0,directories=0,status=0,menubar=0,scrollbars=1,resizable=0,width=650,height=580'); ">การปลูกหญ้าแพงโกล่าในการ<br>
+                          เลี้ยงสัตว์ เคี้ยวเอื้อง</a></span></td>
+                        </tr>
+                        <tr bgcolor="#cccccc">
+                          <td height="30px" bgcolor="#cccccc"><span class="style15"><img src="images/v_bullet.gif" width="14" height="13"> <a href="#" onclick="window.open('http://www.eto.ku.ac.th/wmvweb/vcag154.html','new1','location=0,toolbar=0,directories=0,status=0,menubar=0,scrollbars=1,resizable=0,width=650,height=580'); ">การพัฒนาคุณภาพพลับพันธุ์ไฮยาคัม<br> 
+                          เพื่อการจำหน่ายแบบพลับหวาน</a></span></td>
+                          <td height="30px"><span class="style15"><img src="images/v_bullet.gif" width="14" height="13"> <a href="#" onclick="window.open('http://www.eto.ku.ac.th/wmvweb/vcag155.html','new1','location=0,toolbar=0,directories=0,status=0,menubar=0,scrollbars=1,resizable=0,width=650,height=580'); ">การปลูกพืชโดยไม่ใช้ดิน<br> 
+                          ด้วยเทคนิควัสดุปลูก</a></span></td>
+                        </tr>
+                        <tr>
+                          <td height="30px" bgcolor="#fcfcfc"><span class="style15"><img src="images/v_bullet.gif" width="14" height="13"> <a href="#" onclick="window.open('http://www.eto.ku.ac.th/wmvweb/vcag156.html','new1','location=0,toolbar=0,directories=0,status=0,menubar=0,scrollbars=1,resizable=0,width=650,height=580'); ">การขยายพันธุ์สำรอง และการแปรรูป</a></span></td>
+                          <td height="30px" bgcolor="#fcfcfc"><span class="style15"><img src="images/v_bullet.gif" width="14" height="13"> <a href="#" onclick="window.open('http://www.eto.ku.ac.th/wmvweb/vcag157.html','new1','location=0,toolbar=0,directories=0,status=0,menubar=0,scrollbars=1,resizable=0,width=650,height=580'); ">การปลูกมะม่วงหิมพานต์ และการแปรรูป</a></span></td>
+                        </tr>
+                        <tr bgcolor="#cccccc">
+                          <td height="30px"><span class="style15"><img src="images/v_bullet.gif" width="14" height="13"> <a href="#" onclick="window.open('http://www.eto.ku.ac.th/wmvweb/vcag158.html','new1','location=0,toolbar=0,directories=0,status=0,menubar=0,scrollbars=1,resizable=0,width=650,height=580'); ">การกำจัดขยะอินทรีย์ โดยใช้ไส้เดือนดิน</a></span></td>
+                          <td height="30px"><span class="style15"><img src="images/v_bullet.gif" width="14" height="13"> <a href="#" onclick="window.open('http://www.eto.ku.ac.th/wmvweb/vcag159.html','new1','location=0,toolbar=0,directories=0,status=0,menubar=0,scrollbars=1,resizable=0,width=650,height=580'); ">การผลิตปุ๋ยหมัก ระบบกองเติมอากาศ</a></span></td>
+                        </tr>
+                        <tr>
+                          <td height="30px" bgcolor="#fcfcfc"><span class="style15"><img src="images/v_bullet.gif" width="14" height="13"> <a href="#" onclick="window.open('http://www.eto.ku.ac.th/wmvweb/vcag160.html','new1','location=0,toolbar=0,directories=0,status=0,menubar=0,scrollbars=1,resizable=0,width=650,height=580'); ">การผลิตลำไยนอกฤดูให้มีคุณภาพ</a></span></td>
+                          <td height="30px" bgcolor="#fcfcfc"><span class="style15"><img src="images/v_bullet.gif" width="14" height="13"> <a href="#" onclick="window.open('http://www.eto.ku.ac.th/wmvweb/vcag161.html','new1','location=0,toolbar=0,directories=0,status=0,menubar=0,scrollbars=1,resizable=0,width=650,height=580'); ">การเพาะเห็ดฟาง</a></span></td>
+                        </tr>
+                        <tr bgcolor="#cccccc">
+                          <td height="30px"><span class="style15"><img src="images/v_bullet.gif" width="14" height="13"> <a href="#" onclick="window.open('http://www.eto.ku.ac.th/wmvweb/vcag162.html','new1','location=0,toolbar=0,directories=0,status=0,menubar=0,scrollbars=1,resizable=0,width=650,height=580'); ">การเพาะเห็ดนางฟ้า นางรม ภูฐาน</a></span></td>
+                          <td height="30px"><span class="style15"><img src="images/v_bullet.gif" width="14" height="13"> <a href="#" onclick="window.open('http://www.eto.ku.ac.th/wmvweb/vcag163.html','new1','location=0,toolbar=0,directories=0,status=0,menubar=0,scrollbars=1,resizable=0,width=650,height=580'); ">การเพาะเห็ดโคนญี่ปุ่น</a></span></td>
+                        </tr>
+                        <tr>
+                          <td height="30px" bgcolor="#fcfcfc"><span class="style15"><img src="images/v_bullet.gif" width="14" height="13"> <a href="#" onclick="window.open('http://www.eto.ku.ac.th/wmvweb/vcag164.html','new1','location=0,toolbar=0,directories=0,status=0,menubar=0,scrollbars=1,resizable=0,width=650,height=580'); ">การเพาะเห็ดหอม</a></span></td>
+                          <td height="30px" bgcolor="#fcfcfc"><span class="style15"><img src="images/v_bullet.gif" width="14" height="13"> <a href="#" onclick="window.open('http://www.eto.ku.ac.th/wmvweb/vcag177.html','new1','location=0,toolbar=0,directories=0,status=0,menubar=0,scrollbars=1,resizable=0,width=650,height=580'); ">มะพร้าวกะทิ</a></span>                          </td>
+                        </tr>
+                        <tr bgcolor="#cccccc">
+                          <td height="30px"><span class="style15"><img src="images/v_bullet.gif" width="14" height="13"> <a href="#" onclick="window.open('http://www.eto.ku.ac.th/wmvweb/vcag175.html','new1','location=0,toolbar=0,directories=0,status=0,menubar=0,scrollbars=1,resizable=0,width=650,height=580'); ">การผลิตกล้ายางพาราคุณภาพดี</a></span></td>
+                          <td height="30px">&nbsp;</td>
+                        </tr>
+                        
+                        
+                        
+                        
+                        <tr>
+                          <td><div align="center"><span class="style15"> หน้าที่ <img src="images/num4.gif" width="14" height="16">&nbsp;&nbsp;</span></div></td>
+                          <td><span class="style15">ไปหน้าที่ <a href="vdo_tree.html" onmouseout="mm_swapimgrestore()" onmouseover="mm_swapimage('999','','images/number1.gif',1)"><img src="images/num1.gif" alt="ไปหน้าที่ 1" name="image84" width="14" height="16" border="0"></a> <a href="vdo_tree2.html" onmouseout="mm_swapimgrestore()" onmouseover="mm_swapimage('999','','images/number2.gif',1)"><img src="images/num2.gif" alt="ไปหน้าที่ 2" name="image85" width="14" height="16" border="0"> </a> <a href="vdo_tree3.html" onmouseout="mm_swapimgrestore()" onmouseover="mm_swapimage('999','','images/number3.gif',1)"><img src="images/num3.gif" alt="ไปหน้าที่ 3" name="image86" width="14" height="16" border="0"> </a> <a href="vdo_tree4.html" onmouseout="mm_swapimgrestore()" onmouseover="mm_swapimage('999','','images/number4.gif',1)"><img src="images/num4.gif" alt="ไปหน้าที่ 4" name="image87" width="14" height="16" border="0"> </a> </span></td>
+                        </tr>
+                      </table></td>
+                    </tr>
+                  </tbody>
+              </table></td>
+            </tr>
+            <tr>
+              <td height=24><img src="images/form_07.jpg" width="354" height="82"><img src="images/form_09_02.gif" name="image2" width="276" height="82" border="0"></td>
+            </tr>
+          </tbody>
+        </table>		  </td>
+		<td width="22" rowspan="22" background="images/index_25.jpg">&nbsp;</td>
+		<td>
+			<img src="images/spacer.gif" width="1" height="23" alt=""></td>
+	</tr>
+	<tr>
+		<td>
+			<img src="images/spacer.gif" width="1" height="38" alt=""></td>
+	</tr>
+	<tr>
+		<td>
+			<img src="images/spacer.gif" width="1" height="25" alt=""></td>
+	</tr>
+	<tr>
+		<td>
+			<img src="images/spacer.gif" width="1" height="24" alt=""></td>
+	</tr>
+	<tr>
+		<td>
+			<img src="images/spacer.gif" width="1" height="24" alt=""></td>
+	</tr>
+	<tr>
+		<td>
+			<img src="images/spacer.gif" width="1" height="26" alt=""></td>
+	</tr>
+	<tr>
+		<td>
+			<img src="images/spacer.gif" width="1" height="24" alt=""></td>
+	</tr>
+	<tr>
+		<td>
+			<img src="images/spacer.gif" width="1" height="23" alt=""></td>
+	</tr>
+	<tr>
+		<td>
+			<img src="images/spacer.gif" width="1" height="1" alt=""></td>
+	</tr>
+	<tr>
+		<td>
+			<img src="images/spacer.gif" width="1" height="61" alt=""></td>
+	</tr>
+	<tr>
+		<td>
+			<img src="images/spacer.gif" width="1" height="24" alt=""></td>
+	</tr>
+	<tr>
+		<td>
+			<img src="images/spacer.gif" width="1" height="24" alt=""></td>
+	</tr>
+	<tr>
+		<td>
+			<img src="images/spacer.gif" width="1" height="25" alt=""></td>
+	</tr>
+	<tr>
+		<td>
+			<img src="images/spacer.gif" width="1" height="24" alt=""></td>
+	</tr>
+	<tr>
+		<td>
+			<img src="images/spacer.gif" width="1" height="26" alt=""></td>
+	</tr>
+	<tr>
+		<td>
+			<img src="images/spacer.gif" width="1" height="24" alt=""></td>
+	</tr>
+	<tr>
+		<td>
+			<img src="images/spacer.gif" width="1" height="22" alt=""></td>
+	</tr>
+	<tr>
+		<td>
+			<img src="images/spacer.gif" width="1" height="11" alt=""></td>
+	</tr>
+	<tr>
+		<td>
+			<img src="images/spacer.gif" width="1" height="19" alt=""></td>
+	</tr>
+	<tr>
+		<td>
+			<img src="images/spacer.gif" width="1" height="19" alt=""></td>
+	</tr>
+	<tr>
+		<td>
+			<img src="images/spacer.gif" width="1" height="27" alt=""></td>
+	</tr>
+	<tr>
+		<td>
+			<img src="images/spacer.gif" width="1" height="29" alt=""></td>
+	</tr>
+	<tr>
+		<td background="images/index_29.jpg">&nbsp;</td>
+		<td>
+			<img src="images/spacer.gif" width="1" height="32" alt=""></td>
+	</tr>
+	<tr>	</tr>
+	<tr>
+		<td>	</td>
+	</tr>
+</table>
+<!-- end imageready slices -->
+</body>
+</html>

@@ -1,0 +1,73 @@
+<html>
+<head>
+<title>วิธีการหาค่าเฉลี่ย</title>
+</head>
+<body bgcolor=white>
+<table width=100%>
+<tr><td align=right><font size = -1  face="ms sans serif" color="#b0d1d6"><<<a href="method_math.htm">วิธี<wbr>การ<wbr>สร้างโมเดล<wbr>เชิง<wbr>เส้น<wbr>ทางคณิต<wbr>ศาสตร์</a>>></td></tr>
+<tr><td align=center><font  face="ms sans serif" color=blue size=><b>วิธี<wbr>การ least squares</b></td><tr>
+</table>
+<p><font  face="ms sans serif">
+<dd>เมื่อ</font><font  face="ms sans serif" size=-1>ทราบ<wbr>ค่า<wbr>ข้อ<wbr>มูล<wbr>เส้น<wbr>ตรง เรา<wbr>สามารถ<wbr>ใช้<wbr>วิธี least square วิธี<wbr>นี้<wbr>อาจ<wbr>ยุ่ง<wbr>ยาก<wbr>กว่า<wbr>วิธี<wbr>ก่อน โดย<wbr>เริ่ม<wbr>จาก<wbr>สมการ<wbr>ที่<wbr>ได้
+
+<p><center><table><tr><td align=center bgcolor = "#faf874">	<font  face="ms sans serif" size=-1 color=brown>	&nbsp;<img src="sum2.gif">y&nbsp; - &nbsp;m<img src="sum2.gif">x&nbsp; - &nbsp;nc&nbsp; =&nbsp; 0 &nbsp; </td></tr></table></center>
+<p>
+<table align=center>
+<tr><td><font  face="ms sans serif" size=-1>เมื่อ &nbsp;<img src="sum2.gif">y คือ ค่า<wbr>ผล<wbr>บวก<wbr>ของ<wbr>จำนวน y ทุก<wbr>ตัว<wbr>ที่<wbr>มี (n ตัว)</td></tr>
+<tr><td><font  face="ms sans serif" size=-1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="sum2.gif">x คือ ค่า<wbr>ผล<wbr>บวก<wbr>ของ<wbr>จำนวน x ทุก<wbr>ตัว<wbr>ที่<wbr>มี (n ตัว)</td></tr>
+</table>
+
+<p><dd>		เรา<wbr>ต้อง<wbr>การ<wbr>หา<wbr>ค่า m และ c &nbsp;&nbsp;&nbsp;
+		สมการ<wbr>ของ<wbr>กราฟ<wbr>ที่<wbr>ได้
+<p><center><table><tr><td align=center bgcolor = "#faf874">	<font  face="ms sans serif" size=-1 color=brown>	&nbsp;y = mx + c</td></tr>
+<tr><td><font  face="ms sans serif" size=-1 >เมื่อ<wbr>นำ<wbr>ค่า x คูณ<wbr>ทั้ง<wbr>สอง<wbr>ข้าง</td></tr>
+<tr><td align=center bgcolor = "#faf874"><font  face="ms sans serif" size=-1 color=brown> xy = mx<sup>2</sup> + cx
+</table></center>
+<p><dd>		ถ้า<wbr>เราพล็อตค่า<wbr>ที่<wbr>จุด ( x<sub>n</sub> , y<sub>n</sub> ) บน<wbr>เส้น<wbr>ตรง<wbr>เรา<wbr>จะ<wbr>ได้
+
+<p><center><table><tr><td align=center bgcolor = "#faf874">	<font  face="ms sans serif" size=-1 color=brown>	&nbsp;x<sub>n</sub>y<sub>n</sub> - mx<sub>n</sub> - cx<sub>n</sub> = r<sub>n</sub> &nbsp; </td></tr></table></center>
+<p><dd>		
+		เมื่อ r<sub>n</sub> คือ<wbr>ค่า residual และ<wbr>ถ้า<wbr>ตัว<wbr>ที่<wbr>ได้<wbr>ดี<wbr>ที่<wbr>สุด<wbr>เมื่อ r<sub>n</sub> = 0 ดัง<wbr>นั้น
+<p><center><table><tr><td align=center bgcolor = "#faf874">	<font  face="ms sans serif" size=-1 color=brown>	&nbsp;( x<sub>1</sub>y<sub>1</sub> + x<sub>2</sub>y<sub>2</sub> +  ...+x<sub>n</sub>y<sub>n</sub> ) - m( x<sub>1</sub><sup>2</sup> + x<sub>2</sub><sup>2</sup> + ...+x<sub>n</sub><sup>2</sup> ) - c( x<sub>1</sub> + x<sub>2</sub> +...+ x<sub>n</sub> ) = 0 &nbsp; </td></tr></table></center>
+<p><dd>		เขียน<wbr>ใหม่<wbr>ได้<wbr>เป็น
+<p><center><table><tr><td align=center bgcolor = "#faf874">	<font  face="ms sans serif" size=-1 color=brown>	&nbsp;<img src="sum2.gif">xy - m<img src="sum2.gif">x<sup>2</sup> - c<img src="sum2.gif">x = 0&nbsp; </td></tr></table></center>
+<p><dd>ดัง<wbr>นั้น<wbr>เรา<wbr>ต้อง<wbr>หา<wbr>ค่า  <img src="sum2.gif">xy , <img src="sum2.gif">x<sup>2</sup>  และ <img src="sum2.gif">x  เพื่อ<wbr>หา<wbr>ตัว<wbr>แปร m และ c
+<p><dd>ตัว<wbr>อย่าง
+<p><center>
+<table border=0>
+<tr bgcolor = "#faf874"><th><font  face="ms sans serif" size=-1 color=brown>x</th><th><font  face="ms sans serif" size=-1 color=brown>y</th><th><font  face="ms sans serif" size=-1 color=brown>xy</th><th><font  face="ms sans serif" size=-1 color=brown>x<sup>2</sup></th></tr>
+
+<tr align=center bgcolor="#fde5fd"><td><font  face="ms sans serif" size=-1>0</td><td><font  face="ms sans serif" size=-1>5</td><td><font  face="ms sans serif" size=-1>0</td><td><font  face="ms sans serif" size=-1>0</td></tr>
+
+<tr align=center bgcolor="#d7d8fd"><td><font  face="ms sans serif" size=-1>1</td><td><font  face="ms sans serif" size=-1>4.8</td><td><font  face="ms sans serif" size=-1>4.8</td><td><font  face="ms sans serif" size=-1>1</td></tr>
+
+<tr align=center bgcolor="#dcfcfc"><td><font  face="ms sans serif" size=-1>2</td><td><font  face="ms sans serif" size=-1>3.6</td><td><font  face="ms sans serif" size=-1>7.2</td><td><font  face="ms sans serif" size=-1>4</td></tr>
+
+<tr align=center bgcolor="#eafcea"><td><font  face="ms sans serif" size=-1>3</td><td><font  face="ms sans serif" size=-1>3.2</td><td><font  face="ms sans serif" size=-1>9.6</td><td><font  face="ms sans serif" size=-1>9</td></tr>
+
+<tr align=center bgcolor="#fcfce6"><td><font  face="ms sans serif" size=-1>4</td><td><font  face="ms sans serif" size=-1>1.8</td><td><font  face="ms sans serif" size=-1>7.2</td><td><font  face="ms sans serif" size=-1>46</td></tr>
+
+<tr align=center bgcolor="#f8d8d8"><td><font  face="ms sans serif" size=-1>5</td><td><font  face="ms sans serif" size=-1>1.6</td><td><font  face="ms sans serif" size=-1>8.0</td><td><font  face="ms sans serif" size=-1>25</td></tr>
+
+<tr align=center bgcolor="#f8d8f7"><td><font  face="ms sans serif" size=-1>6</td><td><font  face="ms sans serif" size=-1>1.1</td><td><font  face="ms sans serif" size=-1>6.6</td><td><font  face="ms sans serif" size=-1>36</td></tr>
+
+<tr align=center bgcolor="#f8e0d8"><td><font  face="ms sans serif" size=-1>7</td><td><font  face="ms sans serif" size=-1>0.1</td><td><font  face="ms sans serif" size=-1>0.7</td><td><font  face="ms sans serif" size=-1>49</td></tr>
+
+<tr bgcolor = "#faf874"><th><font  face="ms sans serif" size=-1 color=brown><img src="sum2.gif">x = 28</th><th><font  face="ms sans serif" size=-1 color=brown><img src="sum2.gif">y = 20.8</th><th><font  face="ms sans serif" size=-1 color=brown><img src="sum2.gif">xy = 43.7</th><th><font  face="ms sans serif" size=-1 color=brown><img src="sum2.gif">x<sup>2</sup> = 140</th></tr>
+</table></center>
+<p><dd>เมื่อ<wbr>นำ<wbr>มา<wbr>แทน<wbr>สมการเดิม
+<p><center><table><tr><td align=center bgcolor = "#faf874">	<font  face="ms sans serif" size=-1 color=brown>	&nbsp;		<img src="sum2.gif">y - m<img src="sum2.gif"> x - 8c  = 0 <br><br>
+&nbsp;&nbsp;20.8  - 28m - 8c   = 0 &nbsp; </td></tr></table></center>
+<p><dd>		
+	และ<wbr>จาก<wbr>ค่า &nbsp;<img src="sum2.gif">xy&nbsp; และ &nbsp;<img src="sum2.gif">x<sup>2</sup>&nbsp; แทน<wbr>ค่า<wbr>ได้
+<p><center><table><tr><td align=center bgcolor = "#faf874">	<font  face="ms sans serif" size=-1 color=brown>	&nbsp;72.8  - 98m - 28c = 0 &nbsp; </td></tr></table></center>
+<p><dd>		
+            จาก<wbr>สมการ<wbr>ทั้ง<wbr>สอง<wbr>หา<wbr>ค่า
+<p><center><table><tr><td align=center bgcolor = "#faf874">	<font  face="ms sans serif" size=-1 color=brown>	&nbsp;                           m = - 0.693 &nbsp;<br><br>
+                           c =   5.02 &nbsp; </td></tr></table></center>
+<p>&nbsp;
+<hr width="100%">
+<i>ที่มา : รศ. ยืน ภู่วรวรรณ, สำนักบริการคอมพิวเตอร์ มหาวิทยาลัยเกษตรศาสตร์</i>
+
+</body>
+</html>

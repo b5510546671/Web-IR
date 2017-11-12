@@ -1,0 +1,151 @@
+<html> 
+<head>
+<title>คณิตศาสตร์ - ความสัมพันธ์ในข้อมูลสองตัวแปร : การถดถอยและการคาดคะเนค่า - 26  กค. 42</title>
+</head>
+<style>a {text-decoration: none}</style>
+<body>
+<p>
+<table border=7  width=30% cellpadding=7 align=right>
+<tr><td bgcolor=#808040><a href="relate.htm#relation"><font face="ms sans serif" size=-1 color=white><center><b>ความ<wbr>สัมพันธ์<wbr>ใน<wbr>ข้อ<wbr>มูล<wbr>สอง<wbr>ตัว<wbr>แปร<wbr></b></center></a>
+</table>
+<br clear=all>
+
+<p>
+<table border=7  width=60% cellpadding=7 align=left>
+<tr><td bgcolor=#ffffe7><a href="relate3.htm#create"><font face="ms sans serif" size=-1 color=#c80040><center><b>การ<wbr>ถด<wbr>ถอย<wbr>และ<wbr>การ<wbr>คาด<wbr>คะเน<wbr>ค่า</a> - <font color=#0080ff>สมการ<wbr>ถด<wbr>ถอย<wbr>กับ<wbr>ขอบ<wbr>เขต<wbr>การ<wbr>ใช้<wbr>งาน</b></center>
+</table>
+<br clear=all>
+<p><br>
+<center><table width=90%>
+<tr>
+<td><font face="ms sans serif" size=-1 color=black><dd>ใน<wbr>ขณะ<wbr>ที่<wbr>สัมประสิทธิ์<wbr>สหสัมพันธ์<wbr>ที่<wbr>ใช้<wbr>วัด<wbr>ระดับ<wbr>ความ<wbr>สัมพันธ์<wbr>ระหว่าง<wbr>ตัว<wbr>แ
+ปร<wbr>มี<wbr>ค่า<wbr>ไม่<wbr>ขึ้น<wbr>กับ<wbr>การ<wbr>กำหนด<wbr>ว่า<wbr>ตัว<wbr>แปร<wbr>ใด<wbr>เป็น<wbr> x และ<wbr>ตัว<wbr>แปร<wbr>ใด<wbr>เป็น<wbr> y กล่าว<wbr>คือ<wbr> ค่า<wbr>สัมประสิทธิ์<wbr>สหสัมพันธ์<wbr>ระหว่าง<wbr> x และ<wbr> y จะ<wbr>เท่า<wbr>กับ<wbr>ค่า<wbr>สัมประสิทธิ์<wbr>สหสัมพันธ์<wbr>ระหว่าง<wbr> y และ<wbr> x แต่<wbr>ใน<wbr>เรื่อง<wbr>การ<wbr>ถด<wbr>ถอย<wbr>จะ<wbr>มี<wbr>การ<wbr>แยก<wbr>ตัว<wbr>แปร<wbr>เป็น<wbr>ตัว<wbr>แปร<wbr>อิสระ<wbr> x และ<wbr>ตัว<wbr>แปร<wbr>ตาม<wbr> y ทั้ง<wbr>นี้<wbr>ใน<wbr>บาง<wbr>เรื่อง<wbr>จะ<wbr>มี<wbr>ความ<wbr>ชัด<wbr>เจน<wbr>ว่า<wbr>ตัว<wbr>แปร<wbr>ใด<wbr>เป็น<wbr>ตัว<wbr>แปร<wbr>ตาม<wbr> และ<wbr>ตัว<wbr>แปร<wbr>ใด<wbr>เป็น<wbr>ตัว<wbr>แปร<wbr>อิสระ<wbr> เช่น<wbr> ค่า<wbr>บำรุง<wbr>รักษา<wbr>รถ<wbr>ยนต์<wbr>แปร<wbr>ตาม<wbr>อายุ<wbr>การ<wbr>ใช้<wbr>งาน<wbr>ของ<wbr>รถ<wbr> แต่<wbr>อายุ<wbr>การ<wbr>ใช้<wbr>งาน<wbr>ไม่<wbr>แปร<wbr>ตาม<wbr>ค่า<wbr>บำรุง<wbr>รักษา<wbr> เป็น<wbr>ต้น<wbr> แต่<wbr>ก็<wbr>มี<wbr>บาง<wbr>เรื่อง<wbr>ที่<wbr>ตัว<wbr>แปร<wbr>สอง<wbr>ตัว<wbr>สลับ<wbr>บท<wbr>บาท<wbr>การ<wbr>เป็น<wbr>ตัว<wbr>แปร<wbr>ตาม<wbr>และ<wbr>ตัว<wbr>แปร<wbr>อิสระ<wbr>ได้<wbr> เช่น<wbr> อายุ<wbr>ของ<wbr>สามี<wbr>และ<wbr>อายุ<wbr>ของ<wbr>ภรรยา<wbr> อย่าง<wbr>ไร<wbr>ก็<wbr>ตาม<wbr> การ<wbr>กำหนด<wbr>ตัว<wbr>แปร<wbr> x หรือ<wbr> y สลับ<wbr>กัน<wbr> ทำ<wbr>ให้<wbr>สมการ<wbr>ถด<wbr>ถอย<wbr>ต่าง<wbr>ไป<wbr>  สมการ<wbr>ถด<wbr>ถอย<wbr>ที่<wbr>มี<wbr> y เป็น<wbr>ตัว<wbr>แปร<wbr>ตาม<wbr>ใช้<wbr>คาด<wbr>คะเน<wbr>ค่า<wbr> y เมื่อ<wbr>กำหนด<wbr>ค่า<wbr> x แต่<wbr>จะ<wbr>ใช้<wbr>สมการ<wbr>เดียว<wbr>กัน<wbr>นี้<wbr>คาด<wbr>คะเน<wbr>ค่า<wbr> x เมื่อ<wbr>กำหนด<wbr>ค่า<wbr> y ไม่<wbr>ได้<wbr> จำ<wbr>เป็น<wbr>ต้อง<wbr>สร้าง<wbr>สมการ<wbr>คาด<wbr>คะเน<wbr>ขึ้น<wbr>ใหม่<wbr>
+</table></center>
+<p>
+<table width=10% border=3>
+<tr align=center bgcolor=#cfcfcf>
+<td><b><font face="ms sans serif" size=-1 color=#00a35f><center>ตัว<wbr>อย่าง</b></center>
+</table>
+<p>
+<center><table width=90%>
+<tr>
+<td><font face="ms sans serif" size=-1 color=brown><dd>จาก<wbr>ตัว<wbr>อย่าง<wbr>เรื่อง<wbr>ความ<wbr>ถนัด<wbr>ทาง<wbr>คอมพิวเตอร์<wbr>กับ<wbr>ความ<wbr>สามารถ<wbr>ทาง<wbr>คณิต<wbr>ศาสตร์<wbr> 
+หาก<wbr>ทราบ<wbr>คะแนน<wbr>ความ<wbr>ถนัด<wbr>ทาง<wbr>คอมพิวเตอร์<wbr>ของ<wbr>นิสิต<wbr>คน<wbr>หนึ่ง<wbr>และ<wbr>ต้อง<wbr>การ<wbr>คาด<wbr>คะเน<wbr>คะแนน<wbr>ด้าน<wbr>คณิต<wbr>ศาสตร์<wbr>ของ<wbr>เขา<wbr> คะแนน<wbr>ด้าน<wbr>คอมพิวเตอร์<wbr>จะ<wbr>เป็น<wbr>ตัว<wbr>แปร<wbr>อิสระ<wbr> และ<wbr>คะแนน<wbr>ด้าน<wbr>คณิต<wbr>ศาสตร์<wbr>เป็น<wbr>ตัว<wbr>แปร<wbr>ตาม<wbr> สัมประสิทธิ์<wbr>สหสัมพันธ์<wbr>ระหว่าง<wbr>คะแนน<wbr>ทด<wbr>สอบ<wbr>สอง<wbr>ด้าน<wbr>มี<wbr>ค่า<wbr>เท่า<wbr>เดิม<wbr> คือ<wbr> 0.9102 แต่<wbr>สมการ<wbr>ถด<wbr>ถอย<wbr>ใหม่<wbr> คือ
+<p>
+<center><img src="picc7.gif"></center>
+<p><br>
+<img src="picc8.gif" align=left hspace=20 vspace=15><dd><font color=black>เมื่อ<wbr> &nbsp;x&nbsp; เป็น<wbr>คะแนน<wbr>ทด<wbr>สอบ<wbr>ด้าน<wbr>คอมพิวเตอร์<wbr>  และ<wbr> &nbsp;&nbsp;<img src="y_hat.gif" align=texttop>&nbsp;&nbsp; เป็น<wbr>ค่า<wbr>ประมาณ<wbr>ของ<wbr>คะแนน<wbr>ทด<wbr>สอบ<wbr>ด้าน<wbr>คณิต<wbr>ศาสตร์<wbr> &nbsp;&nbsp;เส้น<wbr>ถด<wbr>ถอย<wbr>จาก<wbr>สมการ<wbr>นี้<wbr>แสดง<wbr>ใน<wbr>ภาพ<wbr> 4 
+<p>
+<font color=black><dd>สมการ<wbr>ถด<wbr>ถอย<wbr>ชี้<wbr>ว่า<wbr> คะแนน<wbr>ทด<wbr>สอบ<wbr>ด้าน<wbr>คณิต<wbr>ศาสตร์<wbr>เพิ่ม<wbr>ขึ้น<wbr> (ลด<wbr>ลง)<wbr> 0.86 คะแนน<wbr> ต่อ<wbr>แต่<wbr>ละ<wbr>คะแนน<wbr>ที่<wbr>เพิ่ม<wbr>ขึ้น<wbr> (ลด<wbr>ลง)<wbr> ของ<wbr>การ<wbr>ทด<wbr>สอบ<wbr>ด้าน<wbr>คอมพิวเตอร์<wbr> และ<wbr>ถ้า<wbr>นิสิต<wbr>ทำ<wbr>คะแนน<wbr>คอมพิวเตอร์<wbr>ได้<wbr> 18 คะแนน<wbr> ก็<wbr>คาด<wbr>ว่า<wbr>คะแนน<wbr>คณิต<wbr>ศาสตร์<wbr>ของ<wbr>เขา<wbr> คือ<wbr> 40.17 (= 24.69 + 0.86 (18) ) คะแนน
+<br clear=all>
+<font color=brown><dd>ใน<wbr>การ<wbr>นำ<wbr>สมการ<wbr>ถด<wbr>ถอย<wbr>ไป<wbr>ใช้<wbr>ใน<wbr>สถาน<wbr>การณ์<wbr>ชีวิต<wbr>จริง<wbr> ควร<wbr>ทราบ<wbr>ว่า<wbr>สมการ<wbr>ถด<wbr>ถอย<wbr>อาจ<wbr>เหมาะ<wbr>หรือ<wbr>เข้า<wbr>กับ<wbr>ข้อ<wbr>มูล<wbr>ที่<wbr>นำ<wbr>มา<wbr>สร้าง<wbr>สมการ<wbr>ดี<wbr>มาก<wbr> แต่<wbr>ไม่<wbr>ได้<wbr>หมาย<wbr>ความ<wbr>ว่า<wbr>จะ<wbr>นำ<wbr>ไป<wbr>ใช้<wbr>คาด<wbr>คะเน<wbr>ค่า<wbr>ต่าง ๆ<wbr> ได้<wbr>ดี<wbr>มาก<wbr>ด้วย<wbr> ทั้ง<wbr>นี้<wbr>เพราะ<wbr>สมการ<wbr>นั้น<wbr>สร้าง<wbr>ขึ้น<wbr>จาก<wbr>ข้อ<wbr>มูล<wbr>ตัว<wbr>อย่าง<wbr>ชุด<wbr>หนึ่ง<wbr>ที่<wbr>รวบ<wbr>รวม<wbr>มา<wbr> ข้อ<wbr>มูล<wbr>ต่าง<wbr>ชุด<wbr>หรือ<wbr>การ<wbr>เก็บ<wbr>ข้อ<wbr>มูล<wbr>เพิ่ม<wbr>ขึ้น<wbr>จะ<wbr>ให้<wbr>สมการ<wbr>ที่<wbr>ต่าง<wbr>ไป<wbr>ได้<wbr> 
+<p>
+<font color=black><dd>โดย<wbr>ปกติ<wbr>สมการ<wbr>ที่<wbr>สร้าง<wbr>จาก<wbr>ข้อ<wbr>มูล<wbr>จำนวน<wbr>มาก<wbr>จะ<wbr>มี<wbr>ความ<wbr>น่า<wbr>เชื่อ<w
+br>ถือ<wbr>มาก<wbr>กว่า<wbr> แต่<wbr>อย่าง<wbr>ไร<wbr>ก็<wbr>ตาม<wbr>สิ่ง<wbr>สำคัญ<wbr>คือ<wbr>ต้อง<wbr>มี<wbr>การ<wbr>อนุมาน<wbr>สมการ<wbr>ที่<wbr>ได้<wbr>จาก<wbr>ตัว<wbr>อย่าง<wbr> เพื่อ<wbr>ให้<wbr>ใช้<wbr>ได้<wbr>กับ<wbr>ประชากร<wbr>ทั่ว<wbr>ไป<wbr> เรื่อง<wbr>การ<wbr>อนุมาน<wbr>ต้อง<wbr>อาศัย<wbr>ความ<wbr>รู้<wbr>ทาง<wbr>ทฤษฎี<wbr>สถิติ<wbr>จึง<wbr>จะ<wbr>ไม่<wbr>กล่าว<wbr>ถึง<wbr>ใน<wbr>ที่<wbr>นี้
+<p>
+<font color=brown><dd>การ<wbr>นำ<wbr>สมการ<wbr>ถด<wbr>ถอย<wbr>ไป<wbr>ใช้<wbr>คาด<wbr>คะเน<wbr>ค่า<wbr> y สำหรับ<wbr>ค่า<wbr> x ต่าง ๆ<wbr> ควร<wbr>หลีก<wbr>เลี่ยง<wbr>กรณี<wbr>ที่<wbr>ค่า<wbr> x นั้น<wbr>เป็น<wbr>ค่า<wbr>ที่<wbr>ออก<wbr>นอก<wbr>ช่วง<wbr>ข้อ<wbr>มูล<wbr>ของ<wbr> x ที่<wbr>เก็บ<wbr>มา<wbr>มาก<wbr> เพราะ<wbr>ค่า<wbr>คาด<wbr>คะเน<wbr>ของ<wbr> y มี<wbr>โอกาส<wbr>ผิด<wbr>พลาด<wbr>ได้<wbr>สูง<wbr> 
+<p>
+<dd>กรณี<wbr>พิเศษ<wbr>ที่<wbr>มี<wbr>การ<wbr>ใช้<wbr>บ่อย<wbr>คือ<wbr> <font color=black>เมื่อ<wbr>ตัว<wbr>แปร<wbr>อิสระ<wbr> x เป็น<wbr>เวลา<wbr> 
+ตัว<wbr>แปร<wbr>ตาม<wbr> y อาจ<wbr>จะ<wbr>ได้<wbr>แก่<wbr> จำนวน<wbr>ประชากร<wbr> ราคา<wbr>หุ้น<wbr> ยอด<wbr>ขาย<wbr>สิน<wbr>ค้า<wbr> ตัว<wbr>แปร<wbr>เหล่า<wbr>นี้<wbr>มี<wbr>ค่า<wbr>แปร<wbr>ตาม<wbr>เวลา<wbr> การ<wbr>คาด<wbr>คะเน<wbr>หรือ<wbr>พยากรณ์<wbr>ค่า<wbr> y ต้อง<wbr>อาศัย<wbr>การ<wbr>วิเคราะห์<wbr>ข้อ<wbr>มูล<wbr>ใน<wbr>อดีต<wbr>ที่<wbr>ผ่าน<wbr>มา<wbr> สร้าง<wbr>เป็น<wbr>สมการ<wbr>ที่<wbr>อธิบาย<wbr>ความ<wbr>สัมพันธ์<wbr>ระหว่าง<wbr> y และ<wbr> x แล้ว<wbr>ใช้<wbr>พยากรณ์<wbr>ค่า<wbr> y ต่อ<wbr>ไป<wbr>ใน<wbr>อนาคต<wbr> นั่น<wbr>หมาย<wbr>ถึง<wbr> ความ<wbr>สัมพันธ์<wbr>ระหว่าง<wbr> y และ<wbr> x ใน<wbr>อนาคต<wbr>ต้อง<wbr>มี<wbr>รูป<wbr>แบบ<wbr>เหมือน<wbr>กับ<wbr>ที่<wbr>ผ่าน<wbr>มา<wbr>ใน<wbr>อดีต<wbr> จึง<wbr>จะ<wbr>ใช้<wbr>สมการ<wbr>ถด<wbr>ถอย<wbr>นั้น<wbr>คาด<wbr>คะเน<wbr>อนาคต<wbr>ได้<wbr>
+<p>
+<dd>อีก<wbr>เรื่อง<wbr>หนึ่ง<wbr>ที่<wbr>เกี่ยว<wbr>ข้อง<wbr>กับ<wbr>ปัญหา<wbr>การ<wbr>คาด<wbr>คะเน<wbr>ค่า<wbr>ออก<wbr>นอก<wbr>ช่วง<wbr> คือ<wbr> การ<wbr>แปล<wbr>ความ<wbr>หมาย<wbr>ของ<wbr>ค่า<wbr>จุด<wbr>ตัด<wbr>แกน<wbr>ตั้ง<wbr> (intercept) ใน<wbr>สมการ<wbr>ถด<wbr>ถอย<wbr>  โดย<wbr>ปกติ<wbr>ค่า<wbr>ความ<wbr>ชัน<wbr>ใน<wbr>สมการ<wbr>ถด<wbr>ถอย<wbr>มี<wbr>ความ<wbr>สำคัญ<wbr>มาก<wbr>กว่า<wbr>ค่า<wbr>จุด<wbr>ตัด<wbr>แกน<wbr>ตั้ง<wbr> (intercept) เพราะ<wbr>ความ<wbr>ชัน<wbr>บอก<wbr>ให้<wbr>ทราบ<wbr>ว่า<wbr> ตัว<wbr>แปร<wbr>อิสระ<wbr>มี<wbr>ผล<wbr>ให้<wbr>ตัว<wbr>แปร<wbr>ตาม<wbr>มี<wbr>ค่า<wbr>เปลี่ยน<wbr>แปลง<wbr>ไป<wbr>หรือ<wbr>ไม่<wbr>และ<wbr>อย่าง<wbr>ไร<wbr>  ส่วน<wbr>ของ<wbr>ค่า<wbr>จุด<wbr>ตัด<wbr><wbr>แกน<wbr>ตั้ง<wbr> (intercept) จะ<wbr>เป็น<wbr>ค่า<wbr>คาด<wbr>คะเน<wbr>ของ<wbr>ตัว<wbr>แปร<wbr>ตาม<wbr> y หรือ<wbr>ค่า<wbr>&nbsp;&nbsp;<img src="y_hat.gif">&nbsp;&nbsp;   เมื่อ<wbr>ตัว<wbr>แปร<wbr>อิสระ<wbr> x มี<wbr>ค่า<wbr>เป็น<wbr> 0 เช่น<wbr> สมการ<wbr>แสดง<wbr>ความ<wbr>สัมพันธ์<wbr>ระหว่าง<wbr>เงิน<wbr>เดือน<wbr> (y) กับ<wbr>ประสบการณ์<wbr>ที่<wbr>วัด<wbr>เป็น<wbr>จำนวน<wbr>ปี<wbr>ที่<wbr>เคย<wbr>ทำ<wbr>งาน<wbr> (x) จุด<wbr>ตัด<wbr>แกน<wbr>ตั้ง<wbr> (intercept) คือ<wbr> เงิน<wbr>เดือน<wbr>ของ<wbr>ผู้<wbr>ที่<wbr>ยัง<wbr>ไม่<wbr>เคย<wbr>มี<wbr>ประสบการณ์<wbr>ใน<wbr>การ<wbr>ทำ<wbr>งาน<wbr> 
+<dd>ตัว<wbr>อย่าง<wbr>นี้<wbr>เป็น<wbr>กรณี<wbr>ที่<wbr>สามารถ<wbr>แปล<wbr>ความ<wbr>หมาย<wbr>ของ<wbr>ค่า<wbr>จุด<wbr>ตัด<wbr>แกน<wbr>ตั้ง (intercept) ได้<wbr> แต่<wbr>ทว่า<wbr>มี<wbr>อยู่<wbr>บ่อย<wbr>ครั้ง<wbr>ที่<wbr>ค่า<wbr>จุด<wbr>ตัด<wbr>แกน<wbr>ตั้ง<wbr> (intercept) ไม่<wbr>มี<wbr>ความ<wbr>หมาย<wbr> โดย<wbr>เฉพาะ<wbr>อย่าง<wbr>ยิ่ง<wbr>เมื่อ<wbr>ค่า<wbr> 
+x = 0 อยู่<wbr>ห่าง<wbr>จาก<wbr>ค่า<wbr> x ใน<wbr>ข้อ<wbr>มูล<wbr>ที่<wbr>นำ<wbr>มา<wbr>วิเคราะห์<wbr>มาก<wbr> การ<wbr>แปล<wbr>ความ<wbr>หมาย<wbr>ของ<wbr>จุด<wbr>ตัด<wbr>แกน<wbr>ตั้ง<wbr> (intercept) ก็<wbr>เหมือน<wbr>กับ<wbr>การ<wbr>คาด<wbr>คะเน<wbr>ค่า<wbr> y ออก<wbr>นอก<wbr>ช่วง<wbr>กลุ่ม<wbr>ข้อ<wbr>มูล<wbr>นั่น<wbr>เอง<wbr> ซึ่ง<wbr>ทำ<wbr>ให้<wbr>ได้<wbr>ความ<wbr>หมาย<wbr>ที่<wbr>ไม่<wbr>สมเหตุ<wbr>สมผล<wbr> เช่น<wbr> ใน<wbr>ตัว<wbr>อย่าง<wbr>ก่อน<wbr>ที่<wbr>ได้<wbr>ค่า<wbr>จุด<wbr>ตัด<wbr>แกน<wbr>ตั้ง<wbr> (intercept) เป็น<wbr>ลบ<wbr> แต่<wbr>เป็น<wbr>ไป<wbr>ไม่<wbr>ได้<wbr>ที่<wbr>คะแนน<wbr>ทด<wbr>สอบ<wbr>จะ<wbr>ติด<wbr>ลบ<wbr> เป็นต้น
+</table></center>
+
+<p>
+<table width=10% border=3>
+<tr align=center bgcolor=#cfcfcf>
+<td><b><font face="ms sans serif" size=-1 color=#00a35f><center>ตัว<wbr>อย่าง</b></center>
+</table>
+<p>
+<center><table width=90%>
+<tr>
+<td><font face="ms sans serif" size=-1 color=brown><dd>อาจารย์<wbr>ผู้<wbr>หนึ่ง<wbr>รวบ<wbr>รวม<wbr>ข้อ<wbr>มูล<wbr>จำนวน<wbr>ชั่ว<wbr>โมง<wbr>ที่<wbr>นิสิต<wbr>ทบ<wbr>ทวน<wbr>บท<wbr>เรียน<wbr>ก่อน<wbr>สอบ<wbr> (x) 
+และ<wbr>คะแนน<wbr>ที่<wbr>นิสิต<wbr>ทำ<wbr>ได้<wbr>ใน<wbr>การ<wbr>สอบ<wbr> (y) ข้อ<wbr>มูล<wbr>และ<wbr>แผน<wbr>ภาพ<wbr>การ<wbr>กระจาย<wbr>เป็น<wbr>ดัง<wbr>นี้
+</table></center>
+
+<p>
+<table width=30% border=3  bgcolor=#c0c0c0 align=left>
+<tr align=center bgcolor=#ffffd5>
+<td><font face="ms sans serif" size=-1 color=black><b>ชั่ว<wbr>โมง<wbr>ทบ<wbr>ทวน</b>
+<td><font face="ms sans serif" size=-1 color=black><b>คะแนน<wbr>สอบ</b>
+<tr align=center>
+<td><font face="ms sans serif" size=-1 color=black>2
+<td><font face="ms sans serif" size=-1 color=black>59
+<tr align=center>
+<td><font face="ms sans serif" size=-1 color=black>3
+<td><font face="ms sans serif" size=-1 color=black>69
+<tr align=center>
+<td><font face="ms sans serif" size=-1 color=black>4
+<td><font face="ms sans serif" size=-1 color=black>62
+<tr align=center>
+<td><font face="ms sans serif" size=-1 color=black>4
+<td><font face="ms sans serif" size=-1 color=black>71
+<tr align=center>
+<td><font face="ms sans serif" size=-1 color=black>5
+<td><font face="ms sans serif" size=-1 color=black>79
+<tr align=center>
+<td><font face="ms sans serif" size=-1 color=black>6
+<td><font face="ms sans serif" size=-1 color=black>75
+<tr align=center>
+<td><font face="ms sans serif" size=-1 color=black>6
+<td><font face="ms sans serif" size=-1 color=black>88
+<tr align=center>
+<td><font face="ms sans serif" size=-1 color=black>7
+<td><font face="ms sans serif" size=-1 color=black>82
+<tr align=center>
+<td><font face="ms sans serif" size=-1 color=black>8
+<td><font face="ms sans serif" size=-1 color=black>90
+</table>
+<img src="picc9.gif" align=right>
+<br clear=all>
+<p><br>
+<center><table width=90%>
+<tr>
+<td><font face="ms sans serif" size=-1 color=black><dd>แผน<wbr>ภาพ<wbr>การ<wbr>กระจาย<wbr>ชี้<wbr>ให้<wbr>เห็น<wbr>ความ<wbr>สัมพันธ์<wbr>เชิง<wbr>เส้น<wbr>ตรง<wbr>ระหว่าง<wbr>คะแนน<wbr>สอบ<wbr> กับ<wbr>จำนวน<wbr>ชั่วโมง<wbr>ที่<wbr>ใช้<wbr>ทบ<wbr>ทวน<wbr>บท<wbr>เรียน<wbr> สมการ<wbr>ถด<wbr>ถอย<wbr>ที่<wbr>ประมาณ<wbr>ได้<wbr>คือ<wbr>
+<p>
+<center><img src="picc10.gif"></center>
+<p>
+<dd>จะ<wbr>เห็น<wbr>ว่า เมื่อ<wbr>ทบ<wbr>ทวน<wbr>บท<wbr>เรียน<wbr>เพิ่ม<wbr>ขึ้น 1 ชั่ว<wbr>โมง คะแนน<wbr>สอบ<wbr>จะ<wbr>เพิ่ม<wbr>ขึ้น 4.97 คะแนน และ<wbr>ถ้า<wbr>คาด<wbr>คะเน<wbr>คะแนน<wbr>สอบ<wbr>จาก<wbr>สมการ<wbr>ถด<wbr>ถอย จะ<wbr>ได้<wbr>ดัง<wbr>นี้
+</table></center>
+<p>
+<center><table border=2  width=40% bgcolor=#d5d1d1>
+<tr align=center bgcolor=#c7ecff>
+<td><font face="ms sans serif" size=-1 color=black><b>ชั่ว<wbr>โมง<wbr>ทบ<wbr>ทวน</b>
+<td><font face="ms sans serif" size=-1 color=black><b>คะแนน<wbr>สอบ<wbr>ที่<wbr>คาด<wbr>ว่า<wbr>จะ<wbr>ได้</b>
+<tr align=center>
+<td><font face="ms sans serif" size=-1 color=black>7
+<td><font face="ms sans serif" size=-1 color=black>84.96
+<tr align=center>
+<td><font face="ms sans serif" size=-1 color=black>8
+<td><font face="ms sans serif" size=-1 color=black>89.93
+<tr align=center>
+<td><font face="ms sans serif" size=-1 color=black>9
+<td><font face="ms sans serif" size=-1 color=black>94.90
+<tr align=center>
+<td><font face="ms sans serif" size=-1 color=black>10
+<td><font face="ms sans serif" size=-1 color=black>99.87
+<tr align=center>
+<td><font face="ms sans serif" size=-1 color=black>11
+<td><font face="ms sans serif" size=-1 color=black>104.84
+</table></center>
+<p>
+<center><table width=90%>
+<tr>
+<td><font face="ms sans serif" size=-1 color=black><dd>เมื่อ<wbr>นิสิต<wbr>คน<wbr>หนึ่ง<wbr>พิจารณา<wbr>ผล<wbr>ข้าง<wbr>ต้น<wbr> อาจ<wbr>สรุป<wbr>ว่า<wbr> ถ้า<wbr>เขา<wbr>ต้อง<wbr>การ<wbr>สอบ<wbr>ให้<wbr>ได้<wbr>คะแนน<wbr>เต็ม<wbr> 100 คะแนน<wbr> ก็<wbr>ต้อง<wbr>ทบ<wbr>ทวน<wbr>บท<wbr>เรียน<wbr>ประมาณ<wbr> 10 ชั่ว<wbr>โมง<wbr> นิสิต<wbr>อีก<wbr>คน<wbr>หนึ่ง<wbr>อาจ<wbr>บอก<wbr>ว่า<wbr> เขา<wbr>ไม่<wbr>จำ<wbr>เป็น<wbr>ต้อง<wbr>อ่าน<wbr>หนังสือ<wbr>ก่อน<wbr>สอบ<wbr>เลย<wbr> (x = 0) ก็<wbr>สามารถ<wbr>สอบ<wbr>ผ่าน<wbr>ได้<wbr>เพราะ<wbr>ค่า<wbr> intercept เท่ากับ<wbr> 50.17 การ<wbr>สรุป<wbr>ต่าง ๆ<wbr> ใน<wbr>ลักษณะ<wbr>นี้<wbr>ไม่<wbr>ถูก<wbr>ต้อง<wbr>นัก<wbr> เนื่อง<wbr>จาก<wbr>ว่า<wbr>สมการ<wbr>ถด<wbr>ถอย<wbr>สร้าง<wbr>ขึ้น<wbr>จาก<wbr>ข้อ<wbr>มูล<wbr>ของ<wbr>นิสิต<wbr>ที่<wbr>มี<wbr>จำนวน<wbr>ชั่ว<wbr>โมง<wbr>ทบ<wbr>ทวน<wbr>อยู่<wbr>ใน<wbr>ช่วง<wbr> 2 ถึง<wbr> 8 ชั่ว<wbr>โมง	
+</table></center>
+<p>
+<hr noshade size=3 width=95% align=right>
+
+<table width=60% align=right>
+<tr> 
+<td bgcolor="#ffffdf"  align=left><font  face="ms sans serif"   color="c000c0" size=-1>ที่มา: 
+<font color="brown">เอกสาร<wbr>ประกอบ<wbr>การ<wbr>สอน<wbr> มหาวิทยาลัย<wbr>เกษตรศาสตร์ <wbr>2542, วิชา<wbr>บูรณาการ<wbr> <dd>หมวด<wbr>การ<wbr>ศึกษา<wbr>ทั่ว<wbr>ไป<wbr> รหัส<wbr>วิชา<wbr> 999211 คณิต<wbr>ศาสตร์<wbr>และ<wbr>คอม<wbr>พิว<wbr>เตอร์<wbr>ใน<wbr>ชีวิต<wbr>ประจำ<wbr>วัน
+</table></center>
+
+<br clear=all>
+<hr noshade size=3 width=60% align=right>
+
+</body>
+</html>

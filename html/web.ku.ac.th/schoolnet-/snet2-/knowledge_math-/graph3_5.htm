@@ -1,0 +1,41 @@
+<html>
+<head>
+<title>การประยุกต์ใช้กราฟในชีวิตประจำวัน</title>
+</head>
+<body bgcolor=white>
+<center><img src="graph3_1.gif" alt="การประยุกต์ใช้กราฟในชีวิตประจำวัน"></center>
+<p><table border=1 width=50%><tr bgcolor = "#cae6e6" align=center><td><font  face="ms sans serif" size=-1 color = "#635f5f"><b>การ<wbr>หา<wbr>เส้น<wbr>ทางสั้น<wbr>ที่<wbr>สุด (shortest path problems)</b></td></tr></table>
+<font  face="ms sans serif" size=-1>
+<p><dd>	เทคนิค<wbr>การ<wbr>หา<wbr>เส้น<wbr>ทางที่<wbr>สั้น<wbr>ที่<wbr>สุด<wbr>เป็น<wbr>เรื่อง<wbr>ที่<wbr>มี<wbr>ผู้<wbr>สน<wbr>ใจ<wbr>เป็น<wbr>จำนวน<wbr>มาก มี<wbr>ผู้<wbr>พัฒนา<wbr>วิธี<wbr>การ<wbr>หา<wbr>เส้น<wbr>ทางสั้น<wbr>ที่<wbr>สุด<wbr>หลาย<wbr>วิธี<wbr>การ อย่าง<wbr>ไร<wbr>ก็<wbr>ดี<wbr>วิธี<wbr>การ<wbr>ต่าง เหล่า<wbr>นี้<wbr>เป็น<wbr>วิธี<wbr>การ<wbr>ทางคณิต<wbr>ศาสตร์
+<p><dd><font  face="ms sans serif" size=-1 color = "#990957">ตัว<wbr>อย่าง</font>
+<p><center>
+<table>
+<tr><td align=center><font  face="ms sans serif" size=-1><img src="g15.jpg"></td></tr>
+<tr><td align=center><font  face="ms sans serif" size=-1>ต้อง<wbr>การ<wbr>หา<wbr>ทางเดิน<wbr>ที่<wbr>สิ้น<wbr>ที่<wbr>สุด<wbr>ระหว่าง<wbr>โหนด 1 กับ โหนด 5</td></tr>
+</table></center>
+<p><dd><font color = "#990957">วิธี<wbr>การ<wbr>แก้<wbr>ปัญหา</font>
+<p><dd>
+	ใน<wbr>การ<wbr>แก้<wbr>ปัญหา<wbr>มี<wbr>หลาย<wbr>วิธี แต่<wbr>วิธี<wbr>หนึ่ง เรา<wbr>เริ่ม<wbr>จาก<wbr>จุด<wbr>ปลาย<wbr>ทาง โดย<wbr>ทำ<wbr>ให้<wbr>เหมือน<wbr>เป็น<wbr>จุด<wbr>ต้น<wbr>ทาง และ<wbr>หา<wbr>ทางย้อน<wbr>กลับ<wbr>มา<wbr>ที่<wbr>จุด<wbr>ต้น<wbr>ทางโดย<wbr>ใช้ (x,y) 
+<p><ul>
+<dd><li>x &nbsp;หมาย<wbr>ถึง&nbsp;&nbsp;<wbr>เส้น<wbr>ทางโหนดจาก<wbr>จุด<wbr>ปลาย<wbr>ทางมา<wbr>ถึง<wbr>จุด<wbr>นั้น 
+<dd><li>y &nbsp;หมาย<wbr>ถึง&nbsp;&nbsp;<wbr>ระยะ<wbr>ทางจาก<wbr>จุด<wbr>ปลาย<wbr>ทางผ่าน<wbr>เส้น<wbr>ทางมา<wbr>ทาง x
+</ul>
+<p><center>
+<table width=80%><tr><td><font  face="ms sans serif" size=-1 color = "#990957">เริ่มต้น</td></tr>
+<tr><td align=center><font  face="ms sans serif" size=-1><img src="g16.jpg"></td></tr>
+<tr><td align=center><font  face="ms sans serif" size=-1>จาก<wbr>โหนด 4 และ 10 ที่<wbr>ลาก<wbr>ไป<wbr>ถึง<wbr>ปลาย<wbr>ทางคือ<wbr>โหนด 5 จาก<wbr>นั้น<wbr>หา<wbr>ทางต่อ<br>&nbsp;</td></tr>
+<tr><td align=center><font  face="ms sans serif" size=-1><img src="g17.jpg"></td></tr>
+<tr><td align=center><font  face="ms sans serif" size=-1>ทำ<wbr>การ<wbr>ขยาย<wbr>โหนดต่อ<wbr>ไป โดย<wbr>หา<wbr>ทางที่<wbr>ดี<wbr>ที่<wbr>สุด<wbr>ได้<wbr>ดัง<wbr>นี้<br>&nbsp;</td></tr>
+<tr><td align=center><font  face="ms sans serif" size=-1><img src="g18.jpg"></td></tr>
+<tr><td align=center><font  face="ms sans serif" size=-1>จุด<wbr>ปลาย<wbr>ทางคือ<wbr>จุด<wbr>ต้น<wbr>ทางที่<wbr>ปัญหา<wbr>กำหนด ซึ่ง<wbr>สา<wbr>มารภคำนวน<wbr>หา<wbr>ระยะ<wbr>ทางสั้น<wbr>ที่<wbr>สุด<wbr>ได้ 14 มา<wbr>จาก<wbr>เส้น<wbr>ทางโหนด 2<br>&nbsp;</td></tr>
+<tr><td align=center><font  face="ms sans serif" size=-1><img src="g19.jpg"></td></tr>
+<tr><td align=center><font  face="ms sans serif" size=-1>ระยะ<wbr>ทางจาก<wbr>โหนด 1 ไป<wbr>โหนด 2 โหนด 3 โหนด 4 และ<wbr>โหนด 5 เป็น<wbr>เส้น<wbr>ทางที่<wbr>สั้น<wbr>ที่<wbr>สุด มี<wbr>ระยะ<wbr>ทาง 14
+</td></tr>
+</table></center>
+<p><hr>
+<i>ที่มา : รศ. ยืน  ภู่วรวรรณ,  สำนักบริการคอมพิวเตอร์ มหาวิทยาลัยเกษตรศาสตร์</i>
+</body>
+</html>
+
+
+	

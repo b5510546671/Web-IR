@@ -1,0 +1,199 @@
+
+<html>
+<head>
+   <title>fdisk</title>
+</head>
+<body>
+
+<center><table cols=1 width="95%" bgcolor="#ffcc99" >
+<tr>
+<td align=center><b><font face="ms sans serif"><font color="#000099"><font size=-1>แผ่น<wbr>บัน<wbr>ทึก
+(floopy disk)</font></font></font></b></td>
+</tr>
+</table></center>
+<font face="ms sans serif"></font>
+<center><table cols=1 width="90%" >
+<tr>
+<td><b><font face="ms sans serif"><font size=-1>ลักษณะ<wbr>ทั่ว<wbr>ไป</font></font></b><wbr><wbr>
+<ul>
+<center><img src="fd2.jpg" height=281 width=284></center>
+</ul>
+<font face="ms sans serif"><font size=-1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ขนาด<wbr>โดย<wbr>ทั่ว<wbr>ไป<wbr>ของ disks คือ 8 นิ้ว<wbr><wbr>, 5.25 นิ้ว
+และ 3.5 นิ้ว ตัว disk ถูก<wbr>ทำ<wbr>จาก mylar และ<wbr>ฉาบ<wbr>ด้วย<wbr>สาร<wbr>แม่<wbr>เหล็ก
+เมื่อ disk ถูก<wbr>ใส่<wbr>ใน drive unit ใน spindle clampsที่<wbr>อยู่<wbr>ส่วน<wbr>กลาง<wbr>ของ<wbr>ช่อง<wbr>ว่าง<wbr>จะ<wbr>ถูก<wbr>หมุน
+ด้วย<wbr>ความ<wbr>เร็ว<wbr>คง<wbr>ที่ อาจ<wbr>จะ 300 หรือ 360 รอบ<wbr>ต่อ<wbr>นาที
+ข้อ<wbr>มูล<wbr>จะ<wbr>ถูก<wbr>เก็บ<wbr>บน disk ใน circular tracks หัว<wbr>อ่าน<wbr><wbr>/เขียน
+จะ<wbr>ติด<wbr>ต่อกับ disk ผ่าน<wbr>ทาง racetrack-shaped slot เพื่อ<wbr>อ่าน<wbr>หรือ<wbr>เขียน<wbr>ลง<wbr>ไป<wbr>บน
+disk</font></font>
+<ul>
+<center><img src="fd1.jpg" height=300 width=300></center>
+</ul>
+<font face="ms sans serif"><font size=-1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ใน<wbr>การ<wbr>เขียน กระแส<wbr>ไฟ<wbr>ฟ้า<wbr>จะ<wbr>ไหล<wbr>ผ่าน<wbr>ไป<wbr>ที่<wbr>ขด<wbr>ลวด<wbr>ใน<wbr>หัว<wbr>อ่าน
+และ<wbr>จะ<wbr>สร้างฟลักซ์แม่<wbr>เหล็ก<wbr>ใน<wbr>แกน<wbr>เหล็ก ของ<wbr>หัว<wbr>อ่าน<wbr><wbr>/เขียน
+ช่อง<wbr>ว่าง<wbr>ใน<wbr>แกน<wbr>เหล็ก<wbr>จะ<wbr>ยอม<wbr>ให้ฟลักซ์แม่<wbr>เหล็ก<wbr>ไหล<wbr>ผ่าน<wbr>ออก<wbr>มา
+และ<wbr>ทำ<wbr>ให้<wbr>สาร<wbr>แม่<wbr>เหล็ก<wbr>บน disk เป็น<wbr>แม่<wbr>เหล็ก<wbr>ขึ้น
+พื้น<wbr>ที่<wbr>บน disk ถูก<wbr>ทำ<wbr>ให้<wbr>เป็น<wbr>แม่<wbr>เหล็ก<wbr>โดย<wbr>เป็น<wbr>อนุภาค<wbr>ที่<wbr>มี<wbr>ทิศ<wbr>ทางและ<wbr>คง<wbr>สถานะ
+แม่<wbr>เหล็ก<wbr>ไว้ ั้วของ<wbr>พื้น<wbr>ที่<wbr>ที่<wbr>ทำ<wbr>เป็น<wbr>แม่<wbr>เหล็ก<wbr>จะ<wbr>พิจารณา<wbr>โดย<wbr>ใช้<wbr>ทิศ<wbr>ทางการ<wbr>ไหล<wbr>ของ<wbr>กระแส<wbr>ผ่าน<wbr>ขด<wbr>ลวด
+ข้อ<wbr>มูล<wbr>ก็<wbr>สามารถ<wbr>อ่าน<wbr>จาก disk ด้วย<wbr>หัว<wbr>อ่าน<wbr><wbr>/เขียน<wbr>เช่น<wbr>เดียว<wbr>กัน
+โ่ดยเมื่อ<wbr>ขั้ว<wbr>ของ<wbr>แม่<wbr>เหล็ก<wbr>เปลี่ยน<wbr>เพราะ track
+ผ่าน<wbr>ไป<wbr>บน<wbr>ช่อง<wbr>ว่าง<wbr>ใน<wbr>หัว<wbr>อ่าน<wbr><wbr>/เขียน
+ศักย์<wbr>ไฟ<wbr>ฟ้า<wbr>เล็ก ๆ เป็น มิลลิ<wbr>โวลต<wbr>์ จะ<wbr>ถูก<wbr>เหนี่ยว<wbr>นำ<wbr>ใน<wbr>ขด<wbr>ลวด
+amplifier และ comparator ถูก<wbr>ใช้<wbr>เป็น<wbr>ตัว<wbr>เปลี่ยน<wbr>สัญญาณ<wbr>เล็ก
+ๆ เป็น<wbr>ระดับ logic มาตรา<wbr>ฐาน<wbr>ร่อง write-protect ใน<wbr>ซอง
+floppy disk สามารถ<wbr>ใช้<wbr>ป้อง<wbr>กัน<wbr>การ<wbr>เก็บ<wbr>ข้อ<wbr>มูล<wbr>จาก<wbr>การ<wbr>เขียน<wbr>ทับ<wbr>เหมือนกั<wbr>บ
+knock-out plastic บน<wbr>ตลับ<wbr>เทปคลาสเซ็ท led และ phototransistor สามารถ<wbr>ชี้<wbr>ว่า<wbr>ร่อง<wbr>นี้<wbr>มี<wbr>หรือ<wbr>ไม่
+และ<wbr>จะ<wbr>เขียน<wbr>เมื่อ<wbr>พบ<wbr>ว่า<wbr>มี<wbr>ร่อง<wbr>นี้<wbr>อยู่
+index hole ที่<wbr>เจาะ<wbr>บน<wbr>แผ่น disk จะ<wbr>ชี้<wbr>จุด<wbr>เริ่ม<wbr>ของ
+record tracks จะ<wbr>ใช้ led และ phototransistor ใน<wbr>การ<wbr>ตรวจ<wbr>สอบ<wbr>หา
+index hole</font></font><font face="ms sans serif"></font>
+<p><b><font face="ms sans serif"><font size=-1>รูป<wbr>แบบ<wbr>การ<wbr>บัน<wbr>ทึก<wbr>บิท
+(recorded bit formats - fm and mfm)</font></font></b>
+<br><font face="ms sans serif"><font size=-1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+บิท 1 แทน<wbr>ด้วย<wbr>การ<wbr>เปลี่ยน<wbr>ขั้ว<wbr>ของ<wbr>แม่<wbr>เหล็ก<wbr>บน
+track บิท 0 แทน<wbr>ด้วย<wbr>การ<wbr>ไม่<wbr>เปลี่ยน<wbr>ขั้ว<wbr>ของ<wbr>แม่<wbr>เหล็ก
+รูป<wbr>แบบ<wbr>การ<wbr>บัน<wbr>ทึก<wbr>นี้<wbr>มัก<wbr>เรียก<wbr>ว่า non-return-to-zero
+หรือ<wbr>การ<wbr>บัน<wbr>ทึก<wbr>แบบ nrz เพราะ<wbr>มีสนาม<wbr>แม่<wbr>เหล็ก
+บน track เสมอ<wbr>อาจ<wbr>มี<wbr>ขั้ว<wbr>เป็น<wbr>หนึ่ง<wbr>ทิศ<wbr>ทางหรือ<wbr>หลาย<wbr>ทิศ<wbr>ทาง
+หัว<wbr>อ่าน<wbr>จะ<wbr>สร้าง<wbr>สัญญาณ<wbr>เมื่อ<wbr>พื้น<wbr>ที่<wbr>ที่<wbr>มีสนาม<wbr>แม่<wbr>เหล็ก<wbr>เปลี่ยน<wbr>ผ่าน<wbr>บน<wbr>หัว<wbr>อ่าน</font></font><wbr><wbr>
+<ul>
+<ul><img src="fd3.jpg" height=261 width=553></ul>
+</ul>
+<font face="ms sans serif"><font size=-1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+จาก<wbr>รูป<wbr>แสดง<wbr>การ<wbr>เก็บ<wbr>บิ<wbr>ทบน track ใน<wbr>รูป<wbr>แบบ
+single-density รูป<wbr>แบบ<wbr>นี้<wbr>มัก<wbr>เรียก<wbr>ว่า การ<wbr>บัน<wbr>ทึก
+frequency modulation, fm, หรือ f2f สังเกต<wbr>จะ<wbr>มี clock pulse, c
+ที่<wbr>จุด<wbr>เริ่ม<wbr>ของ<wbr>แต่<wbr>ละ bit cell ใน<wbr>รูป<wbr>แบบ<wbr>นี้
+pulse เหล่า<wbr>นี้<wbr>จะ<wbr>แทน<wbr>ความ<wbr>ถี่<wbr>พื้น<wbr>ฐาน บิท
+1 จะ<wbr>ถูก<wbr>เขียน<wbr>ใน bit cell โดย<wbr>ใส่<wbr>ใน pulse, d ระหว่าง
+clock pulse บิท 0 จะ<wbr>ถูก<wbr>แทน<wbr>โดย<wbr>การ<wbr>ไม่<wbr>มี pulse
+ระหว่าง clock pulse</font></font>
+<br><font face="ms sans serif"><font size=-1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ข้อ<wbr>ดี<wbr>ของ การ<wbr>บัน<wbr>ทึก<wbr>แบบ f2f คือ clock pulse และ
+data bit ถูก<wbr>ใช้<wbr>เพื่อ<wbr>แทน<wbr>แต่<wbr>ละ data bit เพราะ<wbr>ว่า
+bits สามารถ<wbr>เก็บ<wbr>ใกล้ ๆ กัน<wbr>บน disk track โดย<wbr>ไม่<wbr>เชื่อม<wbr>ต่อ<wbr>กัน
+การ<wbr>เก็บ<wbr>รูป<wbr>แบบ<wbr>นี้<wbr> มี<wbr>ข้อ<wbr>จำกัด<wbr>ใน<wbr>ด้าน<wbr>จำนวน<wbr>ของ<wbr>ข้อ<wbr>มูล<wbr>ที่<wbr>สามารถ<wbr>เก็บ<wbr>บน
+track เพื่อ<wbr>ใน<wbr>จำนวน<wbr>ของ<wbr>ข้อ<wbr>มูล<wbr>ที่<wbr>สามารถ<wbr>เก็บ<wbr>บน
+track มี<wbr>เป็น<wbr>สอง<wbr>เท่า<wbr>เรา<wbr>จะ<wbr>ใช้<wbr>การ<wbr>จัด<wbr>เก็บ<wbr>แบบ
+modified frequency modulation หรือ mfm แสดง<wbr>ดัง<wbr>รูป<wbr>ข้าง<wbr>ต้น</font></font><wbr><wbr>
+<br><font face="ms sans serif"><font size=-1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+หลัก<wbr>เบื้อง<wbr>ต้น<wbr>ของ<wbr>รูป<wbr>แบบ<wbr>นี้<wbr>คือ ทั้ง clock
+pulses และ "1" data pulses ถูก<wbr>ใช้<wbr>เพื่อ<wbr>เก็บ phase-locked
+loop และ<wbr>อ่าน circuitry synchronized โดย clock pulse จะ<wbr>ไม่<wbr>ถูก<wbr>นำ<wbr>ไป<wbr>ใส่<wbr>ถ้า
+data pulse ไม่<wbr>เกิด<wbr>ขึ้น<wbr>สม่ำเสมอ<wbr>พอ<wbr>ใน data bytes
+เพื่อ<wbr>เก็บ phase-locked loop clock bits ถูก<wbr>เก็บ<wbr>ที่<wbr>จุด<wbr>เริ่ม<wbr>ต้น<wbr>ของ
+bit cell และ data bits ถูก<wbr>เก็บ<wbr>ใน<wbr>ส่วน<wbr>กลาง<wbr>ของ bit
+cell time clock bits จะ<wbr>ถูก<wbr>เก็บ<wbr>ลง<wbr>ถ้า data bit ใน cell
+ก่อน<wbr>หน้า<wbr>เป็น 0 และ data bit ใน bit cell ขณะ<wbr>นั้น<wbr>เป็น
+0 ด้วย เพราะ<wbr>ว่า<wbr>รูป<wbr>แบบ<wbr>นี้<wbr>มี<wbr>ทุก<wbr>กรณี<wbr>เพียง
+1 pulse ต่อ bit cell , bit cell สามารถ<wbr>มี<wbr>ความ<wbr>ยาว<wbr>ครึ่ง<wbr>หนึ่ง
+หรือ มาก<wbr>เป็น 2 เท่า ที่<wbr>สามารถ<wbr>เก็บ<wbr>ลง<wbr>ใน track วิธี<wbr>นี้<wbr>เป็น<wbr>การ<wbr>บัน<wbr>ทึก<wbr>แบบ
+double-density มี<wbr>ใน ibm pc และ microcomputers ธรรม<wbr>ดา<wbr>อื่น
+ๆ</font></font><wbr><font face="ms sans serif"></font>
+<p><b><font face="ms sans serif"><font size=-1>floppy disk controller -
+the intel 8272a</font></font></b>
+<br><font face="ms sans serif"><font size=-1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+จาก<wbr>การ<wbr>พิจารณา<wbr>เรื่อง<wbr>ก่อน<wbr>หน้า<wbr>นี้<wbr>เรา<wbr>สามารถ<wbr>บอก<wbr>ได้<wbr>ว่า
+การ<wbr>เขียน<wbr>ข้อ<wbr>มูล<wbr>ไป<wbr>ที่ floppy disk และ<wbr>การ<wbr>อ่าน<wbr>ข้อ<wbr>มูล<wbr>กลับ<wbr>มา<wbr>ต้อง<wbr>การ<wbr>ความ<wbr>พร้อม<wbr>เพียง<wbr>หลาย<wbr>ระดับ
+ระดับ<wbr>หนึ่ง<wbr>คือ<wbr>มอเตอร์<wbr>และ<wbr>สัญญาณ<wbr>ของ<wbr>หัว<wbr>อ่าน
+ระดับ<wbr>อื่น ๆ คือ การ<wbr>เขียน<wbr>และ<wbr>การ<wbr>อ่าน<wbr>ระดับ<wbr>บิทจริง
+ๆ การ<wbr>ทำ<wbr>ทุก ๆ สิ่ง<wbr>ของ<wbr>ความ<wbr>พร้อม<wbr>เพียง<wbr>นี้<wbr>เป็น<wbr>งาน<wbr>หลัก
+ดัง<wbr>นั้น<wbr>เรา<wbr>ต้อง<wbr>ออก<wbr>แบบ floppy disk controller เป็น<wbr>พิเศษ
+ตัว<wbr>อย่าง<wbr>ใน<wbr>ที่<wbr>นี้ เรา<wbr>ใช้ intel 8272a controller
+ซึ่ง<wbr>เทียบ<wbr>เท่า<wbr>กัน nec upd765a controller ที่<wbr>ใช้<wbr>ใน
+ibm pc 8272 signals and circuit connectiions</font></font>
+<ul>
+<center><img src="fd4.jpg" height=308 width=433></center>
+</ul>
+<font face="ms sans serif"><font size=-1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+เริ่ม<wbr>แรก<wbr>ให้<wbr>มอง<wbr>ที่<wbr>แผน<wbr>ผัง<wbr>ของ 8272a ตาม<wbr>รูป
+สัญญาณ<wbr>ตาม<wbr>ด้าน<wbr>ซ้าย<wbr>ของ<wbr>แผน<wbr>ผัง สาย data bus,
+rd, wr, a0, reset, ละ cs เป็น<wbr>สัญญาณ peripheral interface มาตรา<wbr>ฐาน
+สัญญาณ drq, dack, และ int ถูก<wbr>ใช้<wbr>สำหรับ dma transfer ของ<wbr>ข้อ<wbr>มูล<wbr>ระหว่าง
+controller เมื่อ<wbr>โปรแกรม<wbr>ทางคอมพิวเตอร์<wbr>ต้อง<wbr>การ<wbr>ข้อ<wbr>มูล<wbr>จาก
+disk มัน<wbr>จะ<wbr>ส่ง<wbr>ชุด<wbr>คำ<wbr>สั่ง<wbr>ไป<wbr>ที่ registers
+ภาย<wbr>ใน controller, controller ก็<wbr>จะ<wbr>ทำ<wbr>ขบวน<wbr>การ<wbr>เพื่อ<wbr>อ่าน<wbr>ข้อ<wbr>มูล<wbr>จาก
+track และ sector บน disk เมื่อ controller อ่าน byte แรก<wbr>ของ<wbr>ข้อ<wbr>มูล<wbr>จาก
+sector มัน<wbr>จะ<wbr>ส่ง<wbr>สัญญาณ dma request, drq ไป<wbr>ที่ dma controller,
+dma controller จะ<wbr>ส่ง<wbr>ตำแหน่ง<wbr>แรก<wbr>ของ<wbr>การ<wbr>เคลื่อน<wbr>ย้าย<wbr>ไป<wbr>บน
+bus และ<wbr>แสดง dack input ของ 8272 เพื่อ<wbr>บอก<wbr>ว่า dma transfer
+ก้าว<wbr>หน้า<wbr>แล้ว เมื่อ<wbr>จำนวน<wbr>ของ bytes ที่<wbr>ระบุ<wbr>ใน
+dma initialization ถูก<wbr>เคลื่อน<wbr>ย้าย dma controller จะ<wbr>แสดง
+terminal count input ของ 8272 ด้วย<wbr>เหตุ<wbr>นี้ 8272 จะ<wbr>แสดง<wbr>สัญญาณ
+interrupt output, int สัญญาณ int สามารถ<wbr>ติด<wbr>ต่อ<wbr>ไป<wbr>ยัง
+cpu เพื่อ<wbr>บอก<wbr>ให้ cpu ทราบ<wbr>ว่า<wbr>ต้อง<wbr>การ<wbr>ชุด<wbr>ของ<wbr>ข้อ<wbr>มูล<wbr>ที่<wbr>ถูก<wbr>อ่าน<wbr>จาก
+disk ไป<wbr>ไว้<wbr>ที่ buffer ใน<wbr>หน่วย<wbr>ความ<wbr>จำ</font></font><wbr><wbr><font face="ms sans serif"></font>
+<p><b><font face="ms sans serif"><font size=-1>สัญญาณ<wbr>ต่าง ๆ ใน<wbr>การ<wbr>ติด<wbr>ต่อกั<wbr>บ
+disk drive hardware</font></font></b>
+<br><font face="ms sans serif"><font size=-1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+สัญญาณ ready จาก disk drive จะ<wbr>เป็น high ถ้า drive มี<wbr>ไฟ<wbr>ฟ้า<wbr>อยู่<wbr>และ<wbr>พร้อม<wbr>ที่<wbr>จะ<wbr>ทำ<wbr>งาน
+ถ้า<wbr>เรา<wbr>ลืม<wbr>ปิด<wbr>ตะ<wbr>ปู disk drive สัญญาณ ready ก็<wbr>จะ<wbr>ไม่<wbr>แสดง</font></font><wbr><wbr>
+<br><font face="ms sans serif"><font size=-1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+สัญญาณ write protect/two side สัญญาณ<wbr>นี้<wbr>จะ<wbr>ชี้<wbr>ว่า write
+protect notch ถูก<wbr>ปิด หรือ<wbr>ไม่<wbr>เมื่อ drive อยู่<wbr>ใน<wbr>ภาวะ<wbr>อ่าน<wbr>หรือ<wbr>เขียน
+เมื่อ drive ทำ<wbr>ขบวน<wbr>การ<wbr>ใน<wbr>ภาวะ track-seek สัญญาณ<wbr>นี้<wbr>ก็<wbr>จะ<wbr>ชี้<wbr>ว่า
+drive เป็น two-sided หรือ one-sided</font></font>
+<br><font face="ms sans serif"><font size=-1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+สัญญาณ index จะ<wbr>เป็นจัวหวะ<wbr>เมื่อ index hole ใน disk ผ่าน<wbr>ระหว่าง
+led และ phototran sistor detector</font></font>
+<br><font face="ms sans serif"><font size=-1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+สัญญาณ fault/track 0 ชี้<wbr>เงื่อน<wbr>ไข<wbr>ของ<wbr>ปัญหา<wbr>ที่<wbr>เกิด<wbr>ขึ้นกับ
+disk drive ระหว่าง<wbr>ทำ<wbr>ขบวน<wbr>การ อ่าน<wbr><wbr>/เขียน ส่วน<wbr>ใน<wbr>ระหว่าง
+ทำ<wbr>ขบวน<wbr>การ track-seek สัญญาณ<wbr>จะ<wbr>แสดง<wbr>เมื่อ หัว<wbr>อ่าน<wbr>อยู่<wbr>เหนือ
+track 0</font></font>
+<br><font face="ms sans serif"><font size=-1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+สัญญาณ drive select ,ds0 และ ds1 จาก controller ถูก<wbr>ส่ง<wbr>ไป<wbr>ที่<wbr>ตัว<wbr>แปล<wbr>ข้อ<wbr>มูล<wbr>ภาย<wbr>นอก
+ซึ่ง<wbr>ใช้<wbr>สัญญาณ<wbr>นี้<wbr>สร้าง<wbr>สัญญาณ enable สำหรับ<wbr><wbr>1
+ถึง 4 drives</font></font>
+<br><font face="ms sans serif"><font size=-1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+สัญญาณ mfm จะ<wbr>แสดง high ถ้า controller ถูก<wbr>โปรแกรม<wbr>สำหรับ modified
+frequency moduration และ low ถ้า controller ถูก<wbr>โปรแกรม<wbr>สำหรับ
+standard frequency modulation(fm)</font></font>
+<br><font face="ms sans serif"><font size=-1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+สัญญาณ rw/seek ถูก<wbr>ใช้<wbr>เพื่อ<wbr>บอก drive ให้<wbr>ทำ<wbr>ขบวน<wbr>การ<wbr>ใน<wbr>ภาวะ<wbr>อ่าน<wbr><wbr>/เขียน
+หรือ ภาวะ track-seek</font></font>
+<br><font face="ms sans serif"><font size=-1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+สัญญาณ head load จะ<wbr>แสดง<wbr>โดย controller เพื่อ<wbr>บอก drive hardware
+ให้<wbr>นำ<wbr>หัว<wbr>อ่าน<wbr><wbr>/เขียน<wbr>ไป<wbr>ติด<wbr>ต่อกั<wbr>บ
+disk เมื่อ<wbr>การ<wbr>เชื่อม<wbr>ต่อ<wbr>ไป double-sided drive ,head select
+จาก controller ถูก<wbr>ใช้กับสัญญาณ<wbr>นี้<wbr>เพื่อ<wbr>ชี้<wbr>ว่า<wbr>หัว<wbr>อ่าน<wbr>ทั้ง<wbr>สอง<wbr>ควร<wbr>ถูก
+loaded ระหว่าง<wbr>ขบวน<wbr>การ<wbr>เขียน<wbr>บน track ด้าน<wbr>ใน<wbr>ของ
+disk สัญญาณ low current/direction</font></font>
+<br><font face="ms sans serif"><font size=-1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+จะ<wbr>แสดง<wbr>โดย controller เพราะ<wbr>ว่า bit บน track ด้าน<wbr>ใน<wbr>จะ<wbr>อยู่<wbr>ใกล้<wbr>กัน<wbr>มาก
+กระแส<wbr>ที่<wbr>ใช้<wbr>ใน<wbr>การ<wbr>เขียน<wbr>ต้อง<wbr>ถูก<wbr>ลด<wbr>ลง<wbr>เพื่อ<wbr>ป้อง<wbr>กัน<wbr>การ<wbr>เขียน<wbr>ทับ<wbr>กัน
+เมื่อ<wbr>ทำ<wbr>คำ<wbr>สั่ง seek-track สัญญาณ<wbr>นี้<wbr>ก็<wbr>จะ<wbr>ใช้<wbr>บอก
+drive ว่า ก้าว<wbr>ออก<wbr>นอก<wbr>ขอบ<wbr>ของ disk หรือ อยู่<wbr>ภาย<wbr>ใน<wbr>ตรง<wbr>ศูนย์<wbr>กลาง</font></font><wbr><wbr>
+<ul>
+<center><img src="fd5.jpg" height=278 width=348></center>
+<font face="ms sans serif"></font></ul>
+<font face="ms sans serif"><font size=-1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+จาก<wbr>รูป เรา<wbr>จะ<wbr>มอง<wbr>สัญญาณ<wbr>ที่<wbr>ใช้<wbr>อ่าน<wbr>และ<wbr>เขียน
+clock และ data bit บน track ตาม<wbr>รูป<wbr>จะ<wbr>แสดง<wbr>สัญญาณ<wbr>ไฟ<wbr>ฟ้า<wbr>ระหว่าง<wbr>ขา<wbr>และ<wbr>หัว<wbr>อ่าน<wbr><wbr>/เขียน
+ใน<wbr>การ<wbr>บัน<wbr>ทึก<wbr>นั้น<wbr>ข้อ<wbr>มูล clock จะ<wbr>ถูก<wbr>เก็บ<wbr>บน
+track พร้อมกับข้อ<wbr>มูล data เรา<wbr>ใช้ clock bits เพื่อ<wbr>บอก<wbr>เรา<wbr>เมื่อ<wbr>อ่าน
+data bits , สัญญาณ vcosync จาก controller จะ<wbr>บอก<wbr>วง<wbr>จร phase-locked
+loop ภาย<wbr>นอก เพื่อ synchronize ความถื่ , output จาก<wbr>วง<wbr>จร phase-locked
+loop คือ สัญญาณ data window สัญญาณ<wbr>นี้<wbr>จะ<wbr>ถูก<wbr>ส่ง<wbr>ไป<wbr>ยัง
+controller เพื่อ<wbr>บอก<wbr>ว่า<wbr>จะ<wbr>หา data pulse ที่<wbr>ไหน<wbr>ใน
+data stream ที่<wbr>มา<wbr>ใน read data input external circuitry supplies
+ที่<wbr>เป็น<wbr>พื้น<wbr>ฐาน<wbr>ของ<wbr>สัญญาณ wr clock จะ<wbr>ใช้<wbr>ความ<wbr>ถี่
+500 khzสำหรับ<wbr>แบบ fm และ 1 mhz สำหรับ<wbr>แบบ mfm , output ของ 8272
+ที่<wbr>เป็น<wbr><wbr>clock bits และ data bits จะ<wbr>ถูก<wbr>เขียน<wbr>ลง
+disk โดย<wbr>ขา<wbr>ของ wr data ระหว่าง<wbr>ขบวน<wbr>การ<wbr>เขียน 8272
+จะ<wbr>แสดง<wbr>สัญญาณ wr enable เพื่อ<wbr>เปิด วง<wbr>จร<wbr>ภาย<wbr>นอก
+ซึ่ง<wbr>ส่ง<wbr>ข้อ<wbr>มูล<wbr>ให้กับหัว<wbr>อ่าน<wbr><wbr>/เขียน สัญญาณ<wbr><wbr>pre-shift
+0 และ pre-shift 1 จาก controller จะ<wbr>ไป<wbr>ที่<wbr>วง<wbr>จร<wbr>ภาย<wbr>นอก<wbr>ซึ่ง
+shift bits ไป<wbr>ข้าง<wbr>หน้า<wbr>หรือ<wbr>ถอย<wbr>หลัง<wbr>เมื่อ<wbr>จะ<wbr>มี<wbr>การ<wbr>เขียน
+bit ก็<wbr>จะ<wbr>มี<wbr>ตำแหน่ง<wbr>ที่<wbr>ถูก<wbr>ต้อง<wbr>เมื่อ<wbr>อ่าน<wbr>ออก<wbr>มา</font></font><wbr><wbr>
+<p>
+<hr width="100%">
+<i><font face="ms sans serif"><font size=-2>รวบรวมจาก บทเรียน online วิชา 204323 ไมโครโปรเซสเซอร์และการออกแบบไมโครคอมพิวเตอร์ รศ.ยืน ภู่วรวรรณ </font></font></i>
+
+</td>
+</tr>
+</table></center>
+
+</body>
+</html>
